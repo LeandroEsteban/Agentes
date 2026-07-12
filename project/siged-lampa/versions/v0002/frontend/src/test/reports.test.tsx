@@ -121,8 +121,7 @@ describe('OirsManagementPage', () => {
 
   it('muestra lista de casos OIRS', async () => {
     ;(getResource as ReturnType<typeof vi.fn>).mockResolvedValue({
-      ok: true, data: [{ id: 1, category: 'solicitud', subject: 'Caso test', status: 'pending', created_at: '2025-01-01', citizen_name: 'Ciudadano' }],
-      pagination: { page: 1, size: 20, total: 1, pages: 1 },
+      ok: true, data: { items: [{ id: 1, uuid: 'u1', tracking_code: 'OIRS-1', category: 'solicitud', subject: 'Caso test', status: 'submitted', citizen_account_id: 1, anonymous_name: null, anonymous_email: null, anonymous_phone: null, assigned_department_id: null, assigned_user_id: null, submitted_at: '2025-01-01', closed_at: null }], page: 1, size: 20, total: 1 },
     })
     await renderPage()
     await waitFor(() => expect(screen.getByText('Caso test')).toBeInTheDocument())
@@ -131,8 +130,7 @@ describe('OirsManagementPage', () => {
 
   it('gestiona un caso OIRS', async () => {
     ;(getResource as ReturnType<typeof vi.fn>).mockResolvedValue({
-      ok: true, data: [{ id: 1, category: 'reclamo', subject: 'Reclamo test', status: 'open', created_at: '2025-01-01', citizen_name: 'Ciudadano' }],
-      pagination: { page: 1, size: 20, total: 1, pages: 1 },
+      ok: true, data: { items: [{ id: 1, uuid: 'u1', tracking_code: 'OIRS-1', category: 'reclamo', subject: 'Reclamo test', status: 'submitted', citizen_account_id: 1, anonymous_name: null, anonymous_email: null, anonymous_phone: null, assigned_department_id: null, assigned_user_id: null, submitted_at: '2025-01-01', closed_at: null }], page: 1, size: 20, total: 1 },
     })
     const { request } = await import('../api/client')
     ;(request as ReturnType<typeof vi.fn>).mockResolvedValue({ ok: true, data: {} })
@@ -140,14 +138,13 @@ describe('OirsManagementPage', () => {
     await waitFor(() => expect(screen.getByText('Gestionar')).toBeInTheDocument())
     const user = userEvent.setup()
     await user.click(screen.getByText('Gestionar'))
-    await waitFor(() => expect(screen.getByText(/Caso #1/)).toBeInTheDocument())
-    expect(screen.getAllByText('Ciudadano').length).toBeGreaterThan(0)
+    await waitFor(() => expect(screen.getByText('Caso OIRS-1')).toBeInTheDocument())
+    expect(screen.getAllByText('Ciudadano autenticado').length).toBeGreaterThan(0)
   })
 
   it('cambia estado de caso OIRS', async () => {
     ;(getResource as ReturnType<typeof vi.fn>).mockResolvedValue({
-      ok: true, data: [{ id: 1, category: 'sugerencia', subject: 'Sugerencia test', status: 'open', created_at: '2025-01-01' }],
-      pagination: { page: 1, size: 20, total: 1, pages: 1 },
+      ok: true, data: { items: [{ id: 1, uuid: 'u1', tracking_code: 'OIRS-1', category: 'sugerencia', subject: 'Sugerencia test', status: 'submitted', citizen_account_id: null, anonymous_name: 'Contacto', anonymous_email: 'contacto@test.cl', anonymous_phone: null, assigned_department_id: null, assigned_user_id: null, submitted_at: '2025-01-01', closed_at: null }], page: 1, size: 20, total: 1 },
     })
     const { request } = await import('../api/client')
     ;(request as ReturnType<typeof vi.fn>).mockResolvedValue({ ok: true, data: {} })
@@ -155,10 +152,10 @@ describe('OirsManagementPage', () => {
     await waitFor(() => expect(screen.getByText('Gestionar')).toBeInTheDocument())
     const user = userEvent.setup()
     await user.click(screen.getByText('Gestionar'))
-    await waitFor(() => expect(screen.getByText('En progreso')).toBeInTheDocument())
-    await user.click(screen.getByText('Resuelto'))
+    await waitFor(() => expect(screen.getByRole('button', { name: 'En proceso' })).toBeInTheDocument())
+    await user.click(screen.getByRole('button', { name: 'En proceso' }))
     await waitFor(() => {
-      expect(request).toHaveBeenCalledWith('/api/v1/oirs/1', expect.objectContaining({ method: 'PATCH', body: { status: 'resolved' } }))
+      expect(request).toHaveBeenCalledWith('/api/v1/oirs/1/status', expect.objectContaining({ method: 'PATCH', body: { status: 'in_process' } }))
     })
   })
 })

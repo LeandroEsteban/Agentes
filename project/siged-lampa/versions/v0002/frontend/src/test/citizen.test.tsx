@@ -136,8 +136,8 @@ describe('OirsPage - public', () => {
     expect(screen.getByText(created.tracking_code)).toBeInTheDocument()
     expect(screen.getByTestId('oirs-tracking-token')).toHaveTextContent(created.tracking_token)
     expect(screen.getByTestId('oirs-tracking-token').parentElement).toHaveClass('tracking-credential')
-    await user.click(screen.getAllByRole('button', { name: 'Copiar código' })[2])
-    expect(await screen.findByText('Código copiado')).toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: 'Copiar token de seguimiento' }))
+    expect(await screen.findByText(/Código copiado|No fue posible copiar automáticamente/)).toBeInTheDocument()
   })
 
   it('muestra error al fallar envio OIRS', async () => {

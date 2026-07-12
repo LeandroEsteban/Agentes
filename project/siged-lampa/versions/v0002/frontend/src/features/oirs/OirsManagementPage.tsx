@@ -6,135 +6,20 @@ import { DataTable, StatusBadge, Pagination, SearchInput, FilterBar, DateCell, T
 import { LoadingState, EmptyState, ErrorState } from '../../components/feedback'
 import { PageHeader, DetailSection } from '../../components/domain'
 
-interface OirsCase {
-  id: number
-  category: string
-  subject: string
-  status: string
-  created_at: string
-  citizen_name?: string
-  description?: string
-}
+interface OirsCase { id: number; uuid: string; tracking_code: string; category: string; subject: string; status: string; citizen_account_id: number | null; anonymous_name: string | null; anonymous_email: string | null; anonymous_phone: string | null; assigned_department_id: number | null; assigned_user_id: number | null; submitted_at: string; closed_at: string | null }
+interface OirsListResponse { items: OirsCase[]; page: number; size: number; total: number }
+const statuses = ['submitted', 'in_review', 'in_process', 'responded', 'closed', 'cancelled']
+const transitions: Record<string, string[]> = { submitted: ['in_review', 'in_process', 'cancelled'], in_review: ['in_process', 'responded', 'cancelled'], in_process: ['responded', 'closed', 'cancelled'], responded: ['closed'], closed: [], cancelled: [] }
 
 export function OirsManagementPage() {
-  const [data, setData] = useState<OirsCase[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<Error>()
-  const [page, setPage] = useState(1)
-  const [pages, setPages] = useState(1)
-  const [selectedCase, setSelectedCase] = useState<OirsCase | null>(null)
-  const [replyBody, setReplyBody] = useState('')
-  const [replying, setReplying] = useState(false)
-  const [replyError, setReplyError] = useState<Error>()
-  const [search, setSearch] = useState('')
-
-  const load = useCallback(() => {
-    setLoading(true)
-    setError(undefined)
-    getResource<OirsCase[]>('API-SUP-046', { page: String(page), size: '20' })
-      .then((res) => {
-        setData(res.data)
-        if (res.pagination) setPages(res.pagination.pages)
-      })
-      .catch((cause) => setError(cause as Error))
-      .finally(() => setLoading(false))
-  }, [page])
-
+  const [data, setData] = useState<OirsCase[]>([]); const [total, setTotal] = useState(0); const [page, setPage] = useState(1); const [pageSize, setPageSize] = useState(20); const [pages, setPages] = useState(1); const [status, setStatus] = useState(''); const [loading, setLoading] = useState(true); const [error, setError] = useState<Error>(); const [selectedCase, setSelectedCase] = useState<OirsCase | null>(null); const [replyBody, setReplyBody] = useState(''); const [closeAfterReply, setCloseAfterReply] = useState(false); const [replying, setReplying] = useState(false); const [actionError, setActionError] = useState<Error>(); const [notice, setNotice] = useState(''); const [search, setSearch] = useState('')
+  const load = useCallback(() => { setLoading(true); setError(undefined); getResource<OirsListResponse>('API-SUP-046', { page: String(page), size: String(pageSize), ...(status ? { status } : {}) }).then(({ data: result }) => { setData(result.items); setTotal(result.total); setPage(result.page); setPageSize(result.size); setPages(Math.max(1, Math.ceil(result.total / result.size))) }).catch((cause) => setError(cause as Error)).finally(() => setLoading(false)) }, [page, pageSize, status])
   useEffect(() => { void load() }, [load])
-
-  const selectCase = (item: OirsCase) => {
-    setSelectedCase(item)
-    setReplyBody('')
-    setReplyError(undefined)
-  }
-
-  const sendReply = async () => {
-    if (!selectedCase || !replyBody.trim()) return
-    setReplying(true)
-    setReplyError(undefined)
-    try {
-      await request<ApiEnvelope<void>>(`/api/v1/oirs/${selectedCase.id}/reply`, {
-        method: 'POST',
-        body: { body: replyBody }
-      })
-      setReplyBody('')
-      void load()
-    } catch (cause) {
-      setReplyError(cause as Error)
-    } finally {
-      setReplying(false)
-    }
-  }
-
-  const updateStatus = async (status: string) => {
-    if (!selectedCase) return
-    setReplyError(undefined)
-    try {
-      await request<ApiEnvelope<void>>(`/api/v1/oirs/${selectedCase.id}`, {
-        method: 'PATCH',
-        body: { status }
-      })
-      setSelectedCase({ ...selectedCase, status })
-      void load()
-    } catch (cause) {
-      setReplyError(cause as Error)
-    }
-  }
-
-  const columns: Column<OirsCase>[] = [
-    { key: 'id', label: 'ID' },
-    { key: 'category', label: 'Categoría' },
-    { key: 'subject', label: 'Asunto' },
-    { key: 'status', label: 'Estado', render: (v) => <StatusBadge value={String(v)} /> },
-    { key: 'created_at', label: 'Creado', render: (value) => <DateCell value={String(value)} /> },
-    { key: 'citizen_name', label: 'Ciudadano' },
-    { key: 'id', label: 'Acciones', render: (_v, row) => (
-      <TableActions><button onClick={(e) => { e.stopPropagation(); selectCase(row) }}>Gestionar</button></TableActions>
-    )}
-  ]
-
-  return (
-    <>
-       <PageHeader title="Gestión OIRS" description="Oficina de Informaciones, Reclamos y Sugerencias." />
-       <div className="page-actions"><span className="page-summary">{data.length} caso{data.length === 1 ? '' : 's'} en esta pagina</span></div>
-
-      <FilterBar>
-        <SearchInput placeholder="Buscar casos..." value={search} onChange={(event) => setSearch(event.target.value)} />
-        <button type="button" onClick={() => setSearch('')}>Limpiar filtros</button>
-      </FilterBar>
-
-      {selectedCase && (
-         <DetailSection title={`Caso #${selectedCase.id}: ${selectedCase.subject}`}>
-           <dl className="metadata-grid"><div><dt>Categoría</dt><dd>{selectedCase.category}</dd></div><div><dt>Estado</dt><dd><StatusBadge value={selectedCase.status} /></dd></div><div><dt>Ciudadano</dt><dd>{selectedCase.citizen_name || 'Anónimo'}</dd></div><div><dt>Fecha</dt><dd><DateCell value={selectedCase.created_at} /></dd></div><div><dt>Descripción</dt><dd>{selectedCase.description || selectedCase.subject}</dd></div></dl>
-
-          <div>
-            <strong>Cambiar estado:</strong>
-            <button onClick={() => { void updateStatus('in_progress') }}>En progreso</button>
-            <button onClick={() => { void updateStatus('resolved') }}>Resuelto</button>
-            <button onClick={() => { void updateStatus('closed') }}>Cerrado</button>
-          </div>
-
-          <label className="field">
-            Responder
-            <textarea value={replyBody} onChange={(e) => setReplyBody(e.target.value)} rows={4} />
-          </label>
-          <button disabled={replying || !replyBody.trim()} onClick={() => { void sendReply() }}>
-            {replying ? 'Enviando...' : 'Enviar respuesta'}
-          </button>
-          {replyError && <ErrorState error={replyError} />}
-          <button onClick={() => setSelectedCase(null)}>Cerrar detalle</button>
-        </DetailSection>
-      )}
-
-      {error && <ErrorState error={error} onRetry={load} />}
-      {loading && <LoadingState />}
-       {!loading && !error && !data.length && <EmptyState title="No hay casos OIRS" message="No existen casos que coincidan con los filtros." />}
-      {!loading && !error && data.length > 0 && (
-        <>
-           <DataTable columns={columns} rows={data.filter((item) => !search || `${item.subject} ${item.category} ${item.citizen_name || ''}`.toLowerCase().includes(search.toLowerCase()))} caption="Casos OIRS" />
-          <Pagination page={page} pages={pages} onChange={setPage} />
-        </>
-      )}
-    </>
-  )
+  const selectCase = (item: OirsCase) => { setSelectedCase(item); setReplyBody(''); setCloseAfterReply(false); setActionError(undefined); setNotice('') }
+  const updateStatus = async (next: string) => { if (!selectedCase || !transitions[selectedCase.status]?.includes(next)) return; setActionError(undefined); setNotice(''); try { const response = await request<ApiEnvelope<OirsCase>>(`/api/v1/oirs/${selectedCase.id}/status`, { method: 'PATCH', body: { status: next } }); setSelectedCase({ ...selectedCase, ...response.data }); setNotice('Estado actualizado correctamente.'); void load() } catch (cause) { setActionError(cause as Error) } }
+  const sendReply = async () => { if (!selectedCase || !replyBody.trim() || ['closed', 'cancelled'].includes(selectedCase.status)) return; setReplying(true); setActionError(undefined); setNotice(''); try { const response = await request<ApiEnvelope<OirsCase>>(`/api/v1/oirs/${selectedCase.id}/reply`, { method: 'POST', body: { body: replyBody.trim(), close_case: closeAfterReply } }); setSelectedCase({ ...selectedCase, ...response.data }); setReplyBody(''); setCloseAfterReply(false); setNotice('Respuesta enviada correctamente.'); void load() } catch (cause) { setActionError(cause as Error) } finally { setReplying(false) } }
+  const filtered = data.filter((item) => [item.tracking_code, item.subject, item.category, item.anonymous_name, item.anonymous_email, item.anonymous_phone, item.uuid].filter(Boolean).join(' ').toLowerCase().includes(search.toLowerCase()))
+  const columns: Column<OirsCase>[] = [{ key: 'tracking_code', label: 'Código' }, { key: 'category', label: 'Categoría' }, { key: 'subject', label: 'Asunto' }, { key: 'citizen_account_id', label: 'Origen', render: (value) => value !== null ? <span className="badge badge-info">Cuenta ciudadana</span> : <span className="badge badge-neutral">Ingreso público</span> }, { key: 'anonymous_name', label: 'Ciudadano o contacto', render: (_, row) => row.citizen_account_id !== null ? 'Ciudadano autenticado' : <span>{row.anonymous_name || 'Sin nombre'}<small>{row.anonymous_email || ''}{row.anonymous_phone ? ` · ${row.anonymous_phone}` : ''}</small></span> }, { key: 'status', label: 'Estado', render: (value) => <StatusBadge value={String(value)} /> }, { key: 'submitted_at', label: 'Fecha de ingreso', render: (value) => <DateCell value={String(value)} /> }, { key: 'id', label: 'Acciones', render: (_, row) => <TableActions><button onClick={() => selectCase(row)}>Gestionar</button></TableActions> }]
+  const detail = selectedCase && <DetailSection title={`Caso ${selectedCase.tracking_code}`}><dl className="metadata-grid"><div><dt>UUID</dt><dd className="long-value">{selectedCase.uuid}</dd></div><div><dt>Categoría</dt><dd>{selectedCase.category}</dd></div><div><dt>Estado</dt><dd><StatusBadge value={selectedCase.status} /></dd></div><div><dt>Fecha de ingreso</dt><dd><DateCell value={selectedCase.submitted_at} /></dd></div><div><dt>Fecha de cierre</dt><dd><DateCell value={selectedCase.closed_at} /></dd></div><div><dt>Origen</dt><dd>{selectedCase.citizen_account_id !== null ? 'Ciudadano autenticado' : 'Ingreso público'}</dd></div><div><dt>Contacto</dt><dd>{selectedCase.citizen_account_id !== null ? 'Ciudadano autenticado' : `${selectedCase.anonymous_name || 'Sin nombre'} ${selectedCase.anonymous_email || ''} ${selectedCase.anonymous_phone || ''}`}</dd></div><div><dt>Departamento asignado</dt><dd>{selectedCase.assigned_department_id || '-'}</dd></div><div><dt>Usuario asignado</dt><dd>{selectedCase.assigned_user_id || '-'}</dd></div></dl><p>El historial detallado no está disponible en esta vista.</p>{transitions[selectedCase.status]?.length > 0 && <div className="table-actions">{transitions[selectedCase.status].map((next) => <button key={next} onClick={() => void updateStatus(next)}>{next === 'in_review' ? 'En revisión' : next === 'in_process' ? 'En proceso' : next === 'responded' ? 'Respondido' : next === 'closed' ? 'Cerrar' : 'Cancelar'}</button>)}</div>}<label className="field">Responder<textarea value={replyBody} onChange={(event) => setReplyBody(event.target.value)} disabled={['closed', 'cancelled'].includes(selectedCase.status) || replying} /></label><label><input type="checkbox" checked={closeAfterReply} onChange={(event) => setCloseAfterReply(event.target.checked)} disabled={replying} /> Cerrar el caso después de enviar la respuesta</label><button disabled={replying || !replyBody.trim() || ['closed', 'cancelled'].includes(selectedCase.status)} onClick={() => void sendReply()}>{replying ? 'Enviando...' : 'Enviar respuesta'}</button>{actionError && <ErrorState error={actionError} />}{notice && <p role="status">{notice}</p>}<button onClick={() => setSelectedCase(null)}>Cerrar detalle</button></DetailSection>
+  return <><PageHeader title="Gestión OIRS" description="Oficina de Informaciones, Reclamos y Sugerencias." /><div className="page-actions"><span className="page-summary">{total} casos registrados</span><span className="page-summary">Mostrando {data.length} casos en esta página</span></div><FilterBar><SearchInput placeholder="Buscar casos..." value={search} onChange={(event) => setSearch(event.target.value)} /><select aria-label="Filtrar por estado" value={status} onChange={(event) => { setStatus(event.target.value); setPage(1) }}><option value="">Todos los estados</option>{statuses.map((value) => <option key={value} value={value}>{value === 'submitted' ? 'Ingresado' : value === 'in_review' ? 'En revisión' : value === 'in_process' ? 'En proceso' : value === 'responded' ? 'Respondido' : value === 'closed' ? 'Cerrado' : 'Cancelado'}</option>)}</select><button type="button" onClick={() => { setSearch(''); setStatus(''); setPage(1) }}>Limpiar filtros</button></FilterBar>{detail}{error && <ErrorState error={error} onRetry={load} />}{loading && <LoadingState />}{!loading && !error && !data.length && <EmptyState title="No hay casos OIRS registrados" message="Aún no existen casos para gestionar." />}{!loading && !error && data.length > 0 && !filtered.length && <EmptyState title="No se encontraron casos" message="Prueba ajustando la búsqueda o los filtros." />}{!loading && !error && filtered.length > 0 && <><DataTable columns={columns} rows={filtered} caption="Casos OIRS" /><Pagination page={page} pages={pages} onChange={setPage} /></>}</>
 }

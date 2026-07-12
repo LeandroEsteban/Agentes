@@ -61,6 +61,7 @@ describe('LoginPage - citizen', () => {
     expect(screen.getByLabelText('Correo electrónico')).toBeInTheDocument()
     expect(screen.getByLabelText('Contraseña')).toBeInTheDocument()
     expect(document.querySelector('.login-container form')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Volver a la página principal' })).toHaveAttribute('href', '/')
     expect(screen.getByText('Ingresar')).toBeInTheDocument()
   })
 
@@ -132,6 +133,7 @@ describe('LoginPage - internal', () => {
   it('muestra formulario de login interno', async () => {
     await renderInternalLogin()
     expect(screen.getByText('Acceso intranet')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Volver a la página principal' })).toHaveAttribute('href', '/')
   })
 
   it('redirige a /intranet tras login exitoso interno', async () => {

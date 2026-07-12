@@ -24,6 +24,7 @@ export function LoginPage({ actor }: { actor: 'citizen' | 'internal' }) {
   return (
     <main className="login">
       <section className="login-container">
+      <Link className="login-back-link" to="/"><i className="bi bi-arrow-left" aria-hidden="true" />Volver a la página principal</Link>
       <PageHeader title={actor === 'citizen' ? 'Acceso ciudadano' : 'Acceso intranet'} description={actor === 'citizen' ? 'Ingrese para revisar sus solicitudes y trámites.' : 'Acceso exclusivo para funcionarios municipales.'} />
       <form onSubmit={submit}>
         <FormField

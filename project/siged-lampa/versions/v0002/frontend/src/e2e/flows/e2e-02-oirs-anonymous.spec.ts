@@ -6,12 +6,12 @@ test.describe('@E2E-02: OIRS anonima', () => {
     await expect(page.getByRole('heading')).toContainText('Oficina de Informaciones');
     await page.getByLabel('Tipo de caso').selectOption('consulta');
     await page.getByLabel('Asunto').fill('E2E-02 seguimiento publico');
-    await page.getByLabel('Descripcion').fill('Descripcion de prueba para comprobar el seguimiento publico OIRS.');
+    await page.getByLabel('Descripción').fill('Descripcion de prueba para comprobar el seguimiento publico OIRS.');
     await page.getByLabel('Nombre').fill('Usuario QA');
-    await page.getByLabel('Correo electronico').fill(`e2e02-${Date.now()}@example.test`);
-    await page.getByLabel('Acepto el tratamiento de mis datos para responder esta OIRS').check();
-    await page.getByRole('button', { name: 'Enviar caso' }).click();
-    await expect(page.getByText('Tu solicitud OIRS fue registrada. Guarda este codigo de seguimiento para consultar su estado.')).toBeVisible();
+    await page.getByLabel('Correo electrónico').fill(`e2e02-${Date.now()}@example.test`);
+    await page.getByLabel('Acepto el tratamiento de mis datos para gestionar y responder esta solicitud OIRS').check();
+    await page.getByRole('button', { name: 'Enviar solicitud' }).click();
+    await expect(page.getByText('Solicitud OIRS registrada')).toBeVisible();
     await expect(page.getByTestId('oirs-tracking-token')).not.toBeEmpty();
     await page.getByRole('button', { name: 'Consultar seguimiento' }).click();
     await expect(page.getByTestId('oirs-status')).toBeVisible();

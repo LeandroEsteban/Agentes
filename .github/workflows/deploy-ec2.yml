@@ -4,7 +4,13 @@ on:
   push:
     branches:
       - main
+
   workflow_dispatch:
+    inputs:
+      ref:
+        description: Branch, tag, or commit SHA to deploy
+        required: false
+        default: main
 
 concurrency:
   group: siged-lampa-production
@@ -16,18 +22,61 @@ permissions:
 env:
   PROJECT_DIR: project/siged-lampa/versions/v0002
   EC2_DIR: /opt/siged-lampa
+
   RELEASE_ID: ${{ github.run_number }}-${{ github.sha }}
   ARTIFACT_NAME: siged-lampa-release-${{ github.run_number }}
   ARCHIVE_NAME: siged-lampa-release-${{ github.run_number }}.tar.gz
 
 jobs:
+  # =========================================================
+  # VALIDACIÓN
+  # =========================================================
   validate:
     name: Validate application
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      # PostgreSQL temporal de GitHub Actions.
+      # Estas NO son credenciales de producción.
+      POSTGRES_DB: siged_lampa_qa
+      POSTGRES_USER: siged
+      POSTGRES_PASSWORD: siged_ci_password
+      POSTGRES_PORT: 55432
+
+      DATABASE_URL: postgresql://siged:siged_ci_password@127.0.0.1:55432/siged_lampa_qa
+
+      APP_ENV: test
+      NODE_ENV: test
+      PERSISTENCE_MODE: postgres
+      PORT: 3100
+
+      JWT_SECRET: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+      JWT_EXPIRES_IN: 1h
+
+      BODY_LIMIT: 10mb
+
+      DB_POOL_MIN: 0
+      DB_POOL_MAX: 10
+      DB_CONNECTION_TIMEOUT_MS: 5000
+      DB_QUERY_TIMEOUT_MS: 10000
+
+      DOCUMENT_MAX_FILE_BYTES: 10485760
+      DOCUMENT_STORAGE_DIR: /tmp/siged-documents
+
+      OIRS_TRACKING_TOKEN_TTL: 90d
+
+      VITE_API_BASE_URL: /api
+      VITE_REQUEST_TIMEOUT_MS: 12000
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: >-
+            ${{ github.event_name == 'workflow_dispatch'
+                && inputs.ref
+                || github.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -38,25 +87,131 @@ jobs:
             project/siged-lampa/versions/v0002/frontend/package-lock.json
             project/siged-lampa/versions/v0002/backend/package-lock.json
 
-      - name: Validate frontend
+      - name: Prepare CI environment
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          mkdir -p /tmp/siged-documents
+
+          # Archivo temporal por si los scripts QA usan --env-file.
+          cat > "${PROJECT_DIR}/.env.qa.local" <<'EOF'
+          APP_ENV=test
+          NODE_ENV=test
+          PERSISTENCE_MODE=postgres
+
+          POSTGRES_DB=siged_lampa_qa
+          POSTGRES_USER=siged
+          POSTGRES_PASSWORD=siged_ci_password
+          POSTGRES_PORT=55432
+
+          DATABASE_URL=postgresql://siged:siged_ci_password@127.0.0.1:55432/siged_lampa_qa
+
+          PORT=3100
+          JWT_SECRET=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+          JWT_EXPIRES_IN=1h
+
+          BODY_LIMIT=10mb
+
+          DB_POOL_MIN=0
+          DB_POOL_MAX=10
+          DB_CONNECTION_TIMEOUT_MS=5000
+          DB_QUERY_TIMEOUT_MS=10000
+
+          DOCUMENT_MAX_FILE_BYTES=10485760
+          DOCUMENT_STORAGE_DIR=/tmp/siged-documents
+
+          OIRS_TRACKING_TOKEN_TTL=90d
+          EOF
+
+          chmod 600 "${PROJECT_DIR}/.env.qa.local"
+
+      # -----------------------------------------------------
+      # FRONTEND
+      # -----------------------------------------------------
+      - name: Install frontend dependencies
         working-directory: project/siged-lampa/versions/v0002/frontend
-        run: |
-          npm ci
-          npm run lint
-          npm test
-          npm run build
+        run: npm ci
 
-      - name: Validate backend
+      - name: Frontend lint
+        working-directory: project/siged-lampa/versions/v0002/frontend
+        run: npm run lint
+
+      - name: Frontend tests
+        working-directory: project/siged-lampa/versions/v0002/frontend
+        run: npm test
+
+      - name: Frontend build
+        working-directory: project/siged-lampa/versions/v0002/frontend
+        env:
+          NODE_ENV: production
+          VITE_API_BASE_URL: /api
+          VITE_REQUEST_TIMEOUT_MS: 12000
+        run: npm run build
+
+      # -----------------------------------------------------
+      # BACKEND Y POSTGRESQL QA
+      # -----------------------------------------------------
+      - name: Install backend dependencies
         working-directory: project/siged-lampa/versions/v0002/backend
-        run: |
-          npm ci
-          npm run check
-          npm test
+        run: npm ci
 
-      - name: Validate deployment files
-        working-directory: project/siged-lampa/versions/v0002/infra/deployment
+      - name: Install root dependencies when present
+        working-directory: project/siged-lampa/versions/v0002
+        shell: bash
         run: |
+          set -Eeuo pipefail
+
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            echo "No root package-lock.json; skipping root npm ci"
+          fi
+
+      - name: Start PostgreSQL QA
+        working-directory: project/siged-lampa/versions/v0002
+        run: npm run qa:start
+
+      - name: Wait for PostgreSQL QA
+        working-directory: project/siged-lampa/versions/v0002
+        run: npm run qa:wait
+
+      - name: Apply QA migrations
+        working-directory: project/siged-lampa/versions/v0002
+        run: npm run qa:migrate
+
+      - name: Apply QA seeds
+        working-directory: project/siged-lampa/versions/v0002
+        run: npm run qa:seed
+
+      - name: Verify QA database
+        working-directory: project/siged-lampa/versions/v0002
+        run: npm run qa:verify
+
+      - name: Backend check
+        working-directory: project/siged-lampa/versions/v0002/backend
+        run: npm run check
+
+      - name: Backend tests with PostgreSQL
+        working-directory: project/siged-lampa/versions/v0002/backend
+        env:
+          APP_ENV: test
+          NODE_ENV: test
+          PERSISTENCE_MODE: postgres
+          DATABASE_URL: postgresql://siged:siged_ci_password@127.0.0.1:55432/siged_lampa_qa
+        run: npm test
+
+      # -----------------------------------------------------
+      # ARCHIVOS DE DEPLOYMENT
+      # -----------------------------------------------------
+      - name: Validate deployment scripts
+        working-directory: project/siged-lampa/versions/v0002/infra/deployment
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
           test -f docker-compose.production.yml
+
           test -f scripts/validate-environment.sh
           test -f scripts/deploy-release.sh
           test -f scripts/run-migrations.sh
@@ -73,21 +228,41 @@ jobs:
           bash -n scripts/rollback.sh
           bash -n scripts/cleanup-releases.sh
 
+      - name: Destroy PostgreSQL QA
+        if: always()
+        working-directory: project/siged-lampa/versions/v0002
+        shell: bash
+        run: |
+          npm run qa:destroy || true
+
+          rm -f .env.qa.local
+
+  # =========================================================
+  # EMPAQUETADO DE V0002
+  # =========================================================
   package:
     name: Package release
     runs-on: ubuntu-latest
     needs: validate
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: >-
+            ${{ github.event_name == 'workflow_dispatch'
+                && inputs.ref
+                || github.ref }}
 
       - name: Create V2 release tarball
+        shell: bash
         run: |
           set -Eeuo pipefail
 
           test -d "${PROJECT_DIR}/backend"
           test -d "${PROJECT_DIR}/frontend"
+          test -d "${PROJECT_DIR}/database"
           test -d "${PROJECT_DIR}/infra"
 
           tar \
@@ -98,11 +273,14 @@ jobs:
             --exclude='.env.local' \
             --exclude='.env.production' \
             --exclude='.env.qa.local' \
+            --exclude='.env.test' \
             --exclude='coverage' \
             --exclude='playwright-report' \
             --exclude='test-results' \
             --exclude='runs' \
             --exclude='*.log' \
+            --exclude='*.pem' \
+            --exclude='*.key' \
             -czf "/tmp/${ARCHIVE_NAME}" \
             -C "${PROJECT_DIR}" \
             .
@@ -112,7 +290,8 @@ jobs:
           echo "Release archive created:"
           ls -lh "/tmp/${ARCHIVE_NAME}"
 
-      - name: Verify release structure
+      - name: Verify release structure and secrets
+        shell: bash
         run: |
           set -Eeuo pipefail
 
@@ -120,12 +299,18 @@ jobs:
 
           grep -q '^\./backend/' /tmp/release-files.txt
           grep -q '^\./frontend/' /tmp/release-files.txt
+          grep -q '^\./database/' /tmp/release-files.txt
           grep -q '^\./infra/deployment/' /tmp/release-files.txt
 
-          if grep -Eq '(^|/)\.env\.production$|\.pem$|\.key$' /tmp/release-files.txt; then
+          if grep -Eiq \
+            '(^|/)\.env($|\.)|\.pem$|\.key$|id_rsa$' \
+            /tmp/release-files.txt
+          then
             echo "FATAL: Release contains a secret or private-key file"
             exit 1
           fi
+
+          echo "Release structure verified"
 
       - name: Upload release artifact
         uses: actions/upload-artifact@v4
@@ -135,6 +320,9 @@ jobs:
           retention-days: 7
           if-no-files-found: error
 
+  # =========================================================
+  # DESPLIEGUE A EC2
+  # =========================================================
   deploy:
     name: Deploy release to EC2
     runs-on: ubuntu-latest
@@ -150,12 +338,15 @@ jobs:
           path: /tmp
 
       - name: Verify downloaded artifact
+        shell: bash
         run: |
           set -Eeuo pipefail
+
           test -s "/tmp/${ARCHIVE_NAME}"
           ls -lh "/tmp/${ARCHIVE_NAME}"
 
       - name: Setup SSH
+        shell: bash
         run: |
           set -Eeuo pipefail
 
@@ -167,16 +358,20 @@ jobs:
 
           chmod 600 ~/.ssh/ec2_key
 
-          ssh-keyscan -T 15 -H "${{ secrets.EC2_HOST }}" \
+          ssh-keyscan \
+            -T 15 \
+            -H "${{ secrets.EC2_HOST }}" \
             >> ~/.ssh/known_hosts 2>/dev/null
 
           chmod 600 ~/.ssh/known_hosts
 
       - name: Verify EC2 environment
+        shell: bash
         run: |
           set -Eeuo pipefail
 
-          ssh -i ~/.ssh/ec2_key \
+          ssh \
+            -i ~/.ssh/ec2_key \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "
               set -Eeuo pipefail
@@ -202,10 +397,12 @@ jobs:
             "
 
       - name: Record current release and prepare directory
+        shell: bash
         run: |
           set -Eeuo pipefail
 
-          ssh -i ~/.ssh/ec2_key \
+          ssh \
+            -i ~/.ssh/ec2_key \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "
               set -Eeuo pipefail
@@ -224,33 +421,40 @@ jobs:
             "
 
       - name: Transfer release to EC2
+        shell: bash
         run: |
           set -Eeuo pipefail
 
-          scp -i ~/.ssh/ec2_key \
+          scp \
+            -i ~/.ssh/ec2_key \
             "/tmp/${ARCHIVE_NAME}" \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/${ARCHIVE_NAME}"
 
-          ssh -i ~/.ssh/ec2_key \
+          ssh \
+            -i ~/.ssh/ec2_key \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "
               set -Eeuo pipefail
 
-              tar -xzf '/tmp/${ARCHIVE_NAME}' \
+              tar \
+                -xzf '/tmp/${ARCHIVE_NAME}' \
                 -C '${EC2_DIR}/releases/${RELEASE_ID}'
 
               rm -f '/tmp/${ARCHIVE_NAME}'
 
               test -d '${EC2_DIR}/releases/${RELEASE_ID}/backend'
               test -d '${EC2_DIR}/releases/${RELEASE_ID}/frontend'
+              test -d '${EC2_DIR}/releases/${RELEASE_ID}/database'
               test -d '${EC2_DIR}/releases/${RELEASE_ID}/infra/deployment'
             "
 
       - name: Link shared production environment
+        shell: bash
         run: |
           set -Eeuo pipefail
 
-          ssh -i ~/.ssh/ec2_key \
+          ssh \
+            -i ~/.ssh/ec2_key \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "
               set -Eeuo pipefail
@@ -263,11 +467,13 @@ jobs:
                 '${EC2_DIR}/releases/${RELEASE_ID}/infra/deployment/.env.production'
             "
 
-      - name: Validate environment
+      - name: Validate production environment
+        shell: bash
         run: |
           set -Eeuo pipefail
 
-          ssh -i ~/.ssh/ec2_key \
+          ssh \
+            -i ~/.ssh/ec2_key \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "
               set -Eeuo pipefail
@@ -280,10 +486,12 @@ jobs:
             "
 
       - name: Deploy release
+        shell: bash
         run: |
           set -Eeuo pipefail
 
-          ssh -i ~/.ssh/ec2_key \
+          ssh \
+            -i ~/.ssh/ec2_key \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "
               set -Eeuo pipefail
@@ -296,10 +504,12 @@ jobs:
             "
 
       - name: Run database migrations
+        shell: bash
         run: |
           set -Eeuo pipefail
 
-          ssh -i ~/.ssh/ec2_key \
+          ssh \
+            -i ~/.ssh/ec2_key \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "
               set -Eeuo pipefail
@@ -312,10 +522,12 @@ jobs:
             "
 
       - name: Health check
+        shell: bash
         run: |
           set -Eeuo pipefail
 
-          ssh -i ~/.ssh/ec2_key \
+          ssh \
+            -i ~/.ssh/ec2_key \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "
               set -Eeuo pipefail
@@ -328,10 +540,12 @@ jobs:
             "
 
       - name: Smoke test
+        shell: bash
         run: |
           set -Eeuo pipefail
 
-          ssh -i ~/.ssh/ec2_key \
+          ssh \
+            -i ~/.ssh/ec2_key \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "
               set -Eeuo pipefail
@@ -346,10 +560,12 @@ jobs:
 
       - name: Finalize release
         if: success()
+        shell: bash
         run: |
           set -Eeuo pipefail
 
-          ssh -i ~/.ssh/ec2_key \
+          ssh \
+            -i ~/.ssh/ec2_key \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "
               set -Eeuo pipefail
@@ -368,8 +584,10 @@ jobs:
 
       - name: Rollback on failure
         if: failure()
+        shell: bash
         run: |
-          ssh -i ~/.ssh/ec2_key \
+          ssh \
+            -i ~/.ssh/ec2_key \
             "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "
               set -u
@@ -402,5 +620,6 @@ jobs:
 
       - name: Remove temporary SSH key
         if: always()
+        shell: bash
         run: |
           rm -f ~/.ssh/ec2_key

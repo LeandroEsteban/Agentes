@@ -72,17 +72,17 @@ export function DepartmentsPage() {
 
   return (
     <>
-      <PageHeader title="Departamentos" description="Gestión de departamentos" />
-      <button onClick={() => setShowCreate(!showCreate)}>
+      <PageHeader title="Departamentos" description="Catálogo de unidades municipales responsables." />
+      <div className="page-actions"><span className="page-summary">{data.length} departamento{data.length === 1 ? '' : 's'} registrado{data.length === 1 ? '' : 's'}</span><button onClick={() => setShowCreate(!showCreate)}>
         {showCreate ? 'Cancelar' : 'Nuevo departamento'}
-      </button>
+      </button></div>
 
       {showCreate && (
         <DetailSection title="Nuevo departamento">
-          <form onSubmit={submitCreate}>
+          <form onSubmit={submitCreate}><p className="section-copy">Agregue los antecedentes básicos de la unidad municipal.</p><div className="form-grid">
             <FormField label="Código *" {...form.register('code')} error={form.formState.errors.code?.message} />
             <FormField label="Nombre *" {...form.register('name')} error={form.formState.errors.name?.message} />
-            <FormField label="Descripción" {...form.register('description')} />
+            <FormField label="Descripción" {...form.register('description')} /></div>
             <button disabled={form.formState.isSubmitting}>
               {form.formState.isSubmitting ? 'Creando...' : 'Crear departamento'}
             </button>
@@ -92,8 +92,8 @@ export function DepartmentsPage() {
 
       {error && <ErrorState error={error} onRetry={load} />}
       {loading && <LoadingState />}
-      {!loading && !error && !data.length && <EmptyState />}
-      {!loading && !error && data.length > 0 && <DataTable columns={columns} rows={data} />}
+       {!loading && !error && !data.length && <EmptyState title="No hay departamentos" message="Aún no se han registrado unidades municipales." />}
+       {!loading && !error && data.length > 0 && <DataTable columns={columns} rows={data} caption="Departamentos registrados" />}
     </>
   )
 }

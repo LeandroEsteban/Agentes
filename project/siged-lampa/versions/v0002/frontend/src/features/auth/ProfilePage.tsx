@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { getResource, mutateResource } from '../../api/resources'
-import { PageHeader } from '../../components/domain'
+import { DetailSection, PageHeader } from '../../components/domain'
 import { FormField } from '../../components/forms'
 import { ErrorState, LoadingState, EmptyState } from '../../components/feedback'
 
@@ -44,13 +44,13 @@ export function ProfilePage() {
       setError(cause as Error)
     }
   })
-  if (loading) return <LoadingState />
-  if (error && !form.formState.isDirty) return <ErrorState error={error} onRetry={load} />
+  if (loading) return <><PageHeader title="Mi perfil" description="Información personal y de contacto." /><LoadingState /></>
+  if (error && !form.formState.isDirty) return <><PageHeader title="Mi perfil" description="Información personal y de contacto." /><ErrorState error={error} onRetry={load} /></>
   if (!form.getValues().full_name && !form.getValues().email && !error) return <><PageHeader title="Mi perfil" /><EmptyState message="No hay informacion de perfil disponible." /></>
   return (
     <>
-      <PageHeader title="Mi perfil" />
-      <form onSubmit={submit}>
+      <PageHeader title="Mi perfil" description="Información personal y de contacto." />
+      <DetailSection title="Información personal"><form onSubmit={submit}>
         <FormField
           label="Nombre completo"
           {...form.register('full_name')}
@@ -67,7 +67,7 @@ export function ProfilePage() {
         <button disabled={form.formState.isSubmitting}>
           {form.formState.isSubmitting ? 'Guardando...' : 'Guardar cambios'}
         </button>
-      </form>
+      </form></DetailSection>
     </>
   )
 }

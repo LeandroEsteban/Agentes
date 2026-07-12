@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { getResource, mutateResource } from '../../api/resources';
 import { ErrorState, LoadingState } from '../../components/feedback';
 import { FormField, SelectField } from '../../components/forms';
-import { PageHeader } from '../../components/domain';
+import { PageHeader, DetailSection } from '../../components/domain';
 import type { DocumentType, Department } from './types';
 
 const schema = z.object({
@@ -67,10 +67,12 @@ export function DocumentCreatePage() {
 
   return (
     <>
-      <PageHeader title="Crear documento" />
+      <PageHeader title="Crear documento" description="Complete los antecedentes requeridos para iniciar el flujo documental." />
       <form onSubmit={submit}>
-        <FormField label="Titulo" {...form.register('title')} error={form.formState.errors.title?.message} />
-        <SelectField label="Tipo documental" {...form.register('document_type_id')} error={form.formState.errors.document_type_id?.message}>
+        <DetailSection title="Informacion general"><p className="section-copy">Identifique el documento con un titulo claro y su contenido.</p><div className="form-grid"><FormField label="Titulo" {...form.register('title')} error={form.formState.errors.title?.message} />
+        <label className="field field-wide">Resumen<textarea {...form.register('summary')} aria-invalid={Boolean(form.formState.errors.summary)} />{form.formState.errors.summary && <span role="alert">{form.formState.errors.summary.message}</span>}</label>
+        <label className="field field-wide">Contenido<textarea {...form.register('content')} aria-invalid={Boolean(form.formState.errors.content)} />{form.formState.errors.content && <span role="alert">{form.formState.errors.content.message}</span>}</label></div></DetailSection>
+        <DetailSection title="Clasificacion y responsables"><div className="form-grid"><SelectField label="Tipo documental" {...form.register('document_type_id')} error={form.formState.errors.document_type_id?.message}>
           <option value="">Seleccione</option>
           {docTypes.map((dt) => <option key={dt.id} value={dt.id}>{dt.name}</option>)}
         </SelectField>
@@ -78,16 +80,13 @@ export function DocumentCreatePage() {
           <option value="">Seleccione</option>
           {departments.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
         </SelectField>
-        <label className="field">Resumen<textarea {...form.register('summary')} aria-invalid={Boolean(form.formState.errors.summary)} />{form.formState.errors.summary && <span role="alert">{form.formState.errors.summary.message}</span>}</label>
-        <label className="field">Contenido<textarea {...form.register('content')} aria-invalid={Boolean(form.formState.errors.content)} />{form.formState.errors.content && <span role="alert">{form.formState.errors.content.message}</span>}</label>
         <SelectField label="Nivel de confidencialidad" {...form.register('confidentiality_level')}>
           <option value="">Seleccione</option>
           <option value="public">Publico</option>
           <option value="internal">Interno</option>
           <option value="confidential">Confidencial</option>
           <option value="restricted">Restringido</option>
-        </SelectField>
-        <FormField label="Fecha de vencimiento" type="date" {...form.register('due_date')} />
+        </SelectField><FormField label="Fecha de vencimiento" type="date" {...form.register('due_date')} /></div></DetailSection>
         {error && <ErrorState error={error} />}
         <button disabled={form.formState.isSubmitting}>{form.formState.isSubmitting ? 'Creando...' : 'Crear documento'}</button>
       </form>

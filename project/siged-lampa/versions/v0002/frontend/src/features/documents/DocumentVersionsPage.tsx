@@ -7,6 +7,7 @@ import { getResource, mutateResource } from '../../api/resources';
 import { EmptyState, ErrorState, LoadingState } from '../../components/feedback';
 import { PageHeader } from '../../components/domain';
 import type { Version } from './types';
+import { formatDate } from '../../utils/presentation';
 
 const schema = z.object({
   summary: z.string().min(1, 'El resumen es requerido').max(500),
@@ -54,19 +55,19 @@ export function DocumentVersionsPage() {
 
   return (
     <>
-      <PageHeader title="Versiones del documento" />
+      <PageHeader title="Versiones del documento" description="Historial de cambios y contenido registrado." />
       {!versions.length ? <EmptyState message="Sin versiones registradas." /> : (
-        <ul>{versions.map((v) => (
+        <ul className="timeline">{versions.map((v) => (
           <li key={v.id}>
             <strong>v{v.version_number}</strong> - {v.summary || (v as Version & { change_summary?: string }).change_summary || ''}
-            <br /><span>{v.created_by_name || ''} - {v.created_at}</span>
+            <br /><span>{v.created_by_name || ''} - {formatDate(v.created_at)}</span>
           </li>
         ))}</ul>
       )}
       <section className="card">
         <h2>Nueva version</h2>
         <form onSubmit={submit}>
-          <label className="field">Resumen<input {...form.register('summary')} aria-invalid={Boolean(form.formState.errors.summary)} />{form.formState.errors.summary && <span role="alert">{form.formState.errors.summary.message}</span>}</label>
+          <p className="section-copy">Describa el cambio para facilitar la trazabilidad del documento.</p><label className="field">Resumen<input {...form.register('summary')} aria-invalid={Boolean(form.formState.errors.summary)} />{form.formState.errors.summary && <span role="alert">{form.formState.errors.summary.message}</span>}</label>
           <label className="field">Contenido<textarea {...form.register('content')} aria-invalid={Boolean(form.formState.errors.content)} />{form.formState.errors.content && <span role="alert">{form.formState.errors.content.message}</span>}</label>
           {error && <ErrorState error={error} />}
           <button disabled={form.formState.isSubmitting}>{form.formState.isSubmitting ? 'Creando...' : 'Crear version'}</button>

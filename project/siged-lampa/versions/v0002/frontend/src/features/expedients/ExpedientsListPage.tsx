@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getResource, mutateResource } from '../../api/resources'
-import { DataTable, StatusBadge, Pagination, SearchInput, FilterBar, type Column } from '../../components/tables'
+import { DataTable, StatusBadge, Pagination, SearchInput, FilterBar, DateCell, TableActions, type Column } from '../../components/tables'
 import { LoadingState, EmptyState, ErrorState } from '../../components/feedback'
 import { PageHeader, DetailSection } from '../../components/domain'
 import { FormField } from '../../components/forms'
@@ -82,20 +82,19 @@ export function ExpedientsListPage() {
     { key: 'subject', label: 'Asunto' },
     { key: 'status', label: 'Estado', render: (value) => <StatusBadge value={String(value)} /> },
     { key: 'department_name', label: 'Departamento' },
-    { key: 'created_at', label: 'Creado' },
+    { key: 'created_at', label: 'Creado', render: (value) => <DateCell value={String(value)} /> },
     { key: 'id', label: 'Acciones', render: (_v, row) => (
-      <button onClick={(e) => { e.stopPropagation(); navigate(`/intranet/expedients/${row.id}`) }}>Ver</button>
+      <TableActions><button onClick={(e) => { e.stopPropagation(); navigate(`/intranet/expedients/${row.id}`) }}>Ver detalle</button></TableActions>
     )}
   ]
 
   return (
     <>
-      <PageHeader title="Expedientes" description="Bandeja de expedientes" />
+      <PageHeader title="Expedientes" description="Organice, consulte y gestione los expedientes institucionales." />
+      <div className="page-actions"><span className="page-summary">{data.length} expediente{data.length === 1 ? '' : 's'} en esta pagina</span><button onClick={() => setShowCreate(!showCreate)}>{showCreate ? 'Cancelar' : 'Nuevo expediente'}</button></div>
       <FilterBar>
         <SearchInput value={search} onChange={(e) => { setSearch(e.target.value); setPage(1) }} />
-        <button onClick={() => setShowCreate(!showCreate)}>
-          {showCreate ? 'Cancelar' : 'Nuevo expediente'}
-        </button>
+        <button type="button" onClick={() => { setSearch(''); setPage(1) }}>Limpiar filtros</button>
       </FilterBar>
 
       {showCreate && (
@@ -122,7 +121,7 @@ export function ExpedientsListPage() {
 
       {error && <ErrorState error={error} onRetry={load} />}
       {loading && <LoadingState />}
-      {!loading && !error && !data.length && <EmptyState />}
+       {!loading && !error && !data.length && <EmptyState title="No hay expedientes" message="No hay registros para mostrar." />}
       {!loading && !error && data.length > 0 && (
         <>
           <DataTable columns={columns} rows={data} />

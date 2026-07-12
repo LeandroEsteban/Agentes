@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { getResource } from '../../api/resources'
 import { request } from '../../api/client'
 import type { ApiEnvelope } from '../../api/types'
-import { DataTable, StatusBadge, type Column } from '../../components/tables'
+import { DataTable, StatusBadge, TableActions, type Column } from '../../components/tables'
 import { LoadingState, EmptyState, ErrorState } from '../../components/feedback'
 import { PageHeader, DetailSection } from '../../components/domain'
 import { FormField } from '../../components/forms'
@@ -117,20 +117,20 @@ export function ProcedureTypesPage() {
     { key: 'department_name', label: 'Departamento' },
     { key: 'status', label: 'Estado', render: (v) => <StatusBadge value={String(v)} /> },
     { key: 'id', label: 'Acciones', render: (_v, row) => (
-      <button onClick={() => startEdit(row)}>Editar</button>
+      <TableActions><button onClick={() => startEdit(row)}>Editar</button></TableActions>
     )}
   ]
 
   return (
     <>
-      <PageHeader title="Tipos de trámites" description="Catálogo de tipos de trámites" />
-      <button onClick={() => setShowCreate(!showCreate)}>
+      <PageHeader title="Tipos de trámites" description="Catálogo de trámites y departamentos responsables." />
+      <div className="page-actions"><span className="page-summary">{data.length} tipo{data.length === 1 ? '' : 's'} de trámite</span><button onClick={() => setShowCreate(!showCreate)}>
         {showCreate ? 'Cancelar' : 'Nuevo tipo de trámite'}
-      </button>
+      </button></div>
 
       {showCreate && (
         <DetailSection title="Nuevo tipo de trámite">
-          <form onSubmit={submitCreate}>
+          <form onSubmit={submitCreate}><div className="form-grid">
             <FormField label="Nombre *" {...form.register('name')} error={form.formState.errors.name?.message} />
             <FormField label="Código *" {...form.register('code')} error={form.formState.errors.code?.message} />
             <label className="field">Departamento *
@@ -139,10 +139,10 @@ export function ProcedureTypesPage() {
                 {departments.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
               </select>
             </label>
-            <label className="field">
+            <label className="field field-wide">
               Requisitos (HTML)
               <textarea {...form.register('requirements_html')} rows={4} />
-            </label>
+            </label></div>
             <button disabled={form.formState.isSubmitting}>
               {form.formState.isSubmitting ? 'Creando...' : 'Crear tipo de trámite'}
             </button>
@@ -152,7 +152,7 @@ export function ProcedureTypesPage() {
 
       {editing && (
         <DetailSection title={`Editar: ${editing.name}`}>
-          <form onSubmit={submitEdit}>
+          <form onSubmit={submitEdit}><div className="form-grid">
             <FormField label="Nombre *" {...editForm.register('name')} error={editForm.formState.errors.name?.message} />
             <FormField label="Código *" {...editForm.register('code')} error={editForm.formState.errors.code?.message} />
             <label className="field">Departamento *
@@ -161,10 +161,10 @@ export function ProcedureTypesPage() {
                 {departments.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
               </select>
             </label>
-            <label className="field">
+            <label className="field field-wide">
               Requisitos (HTML)
               <textarea {...editForm.register('requirements_html')} rows={4} />
-            </label>
+            </label></div>
             <button disabled={editForm.formState.isSubmitting}>
               {editForm.formState.isSubmitting ? 'Guardando...' : 'Guardar cambios'}
             </button>
@@ -175,8 +175,8 @@ export function ProcedureTypesPage() {
 
       {error && <ErrorState error={error} onRetry={load} />}
       {loading && <LoadingState />}
-      {!loading && !error && !data.length && <EmptyState />}
-      {!loading && !error && data.length > 0 && <DataTable columns={columns} rows={data} />}
+       {!loading && !error && !data.length && <EmptyState title="No hay tipos de trámites" message="Cree un tipo para habilitar su gestión en línea." />}
+       {!loading && !error && data.length > 0 && <DataTable columns={columns} rows={data} caption="Tipos de trámites" />}
     </>
   )
 }

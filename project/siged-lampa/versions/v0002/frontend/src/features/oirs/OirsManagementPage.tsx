@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { getResource } from '../../api/resources'
 import { request } from '../../api/client'
 import type { ApiEnvelope } from '../../api/types'
-import { DataTable, StatusBadge, Pagination, SearchInput, FilterBar, type Column } from '../../components/tables'
+import { DataTable, StatusBadge, Pagination, SearchInput, FilterBar, DateCell, TableActions, type Column } from '../../components/tables'
 import { LoadingState, EmptyState, ErrorState } from '../../components/feedback'
 import { PageHeader, DetailSection } from '../../components/domain'
 
@@ -26,6 +26,7 @@ export function OirsManagementPage() {
   const [replyBody, setReplyBody] = useState('')
   const [replying, setReplying] = useState(false)
   const [replyError, setReplyError] = useState<Error>()
+  const [search, setSearch] = useState('')
 
   const load = useCallback(() => {
     setLoading(true)
@@ -85,28 +86,26 @@ export function OirsManagementPage() {
     { key: 'category', label: 'Categoría' },
     { key: 'subject', label: 'Asunto' },
     { key: 'status', label: 'Estado', render: (v) => <StatusBadge value={String(v)} /> },
-    { key: 'created_at', label: 'Creado' },
+    { key: 'created_at', label: 'Creado', render: (value) => <DateCell value={String(value)} /> },
     { key: 'citizen_name', label: 'Ciudadano' },
     { key: 'id', label: 'Acciones', render: (_v, row) => (
-      <button onClick={(e) => { e.stopPropagation(); selectCase(row) }}>Gestionar</button>
+      <TableActions><button onClick={(e) => { e.stopPropagation(); selectCase(row) }}>Gestionar</button></TableActions>
     )}
   ]
 
   return (
     <>
-      <PageHeader title="Gestión OIRS" description="Oficina de Informaciones, Reclamos y Sugerencias" />
+       <PageHeader title="Gestión OIRS" description="Oficina de Informaciones, Reclamos y Sugerencias." />
+       <div className="page-actions"><span className="page-summary">{data.length} caso{data.length === 1 ? '' : 's'} en esta pagina</span></div>
 
       <FilterBar>
-        <SearchInput placeholder="Buscar casos..." />
+        <SearchInput placeholder="Buscar casos..." value={search} onChange={(event) => setSearch(event.target.value)} />
+        <button type="button" onClick={() => setSearch('')}>Limpiar filtros</button>
       </FilterBar>
 
       {selectedCase && (
-        <DetailSection title={`Caso #${selectedCase.id}: ${selectedCase.subject}`}>
-          <p><strong>Categoría:</strong> {selectedCase.category}</p>
-          <p><strong>Estado:</strong> <StatusBadge value={selectedCase.status} /></p>
-          <p><strong>Ciudadano:</strong> {selectedCase.citizen_name || 'Anónimo'}</p>
-          <p><strong>Fecha:</strong> {selectedCase.created_at}</p>
-          <p><strong>Descripción:</strong> {selectedCase.description || selectedCase.subject}</p>
+         <DetailSection title={`Caso #${selectedCase.id}: ${selectedCase.subject}`}>
+           <dl className="metadata-grid"><div><dt>Categoría</dt><dd>{selectedCase.category}</dd></div><div><dt>Estado</dt><dd><StatusBadge value={selectedCase.status} /></dd></div><div><dt>Ciudadano</dt><dd>{selectedCase.citizen_name || 'Anónimo'}</dd></div><div><dt>Fecha</dt><dd><DateCell value={selectedCase.created_at} /></dd></div><div><dt>Descripción</dt><dd>{selectedCase.description || selectedCase.subject}</dd></div></dl>
 
           <div>
             <strong>Cambiar estado:</strong>
@@ -129,10 +128,10 @@ export function OirsManagementPage() {
 
       {error && <ErrorState error={error} onRetry={load} />}
       {loading && <LoadingState />}
-      {!loading && !error && !data.length && <EmptyState />}
+       {!loading && !error && !data.length && <EmptyState title="No hay casos OIRS" message="No existen casos que coincidan con los filtros." />}
       {!loading && !error && data.length > 0 && (
         <>
-          <DataTable columns={columns} rows={data} />
+           <DataTable columns={columns} rows={data.filter((item) => !search || `${item.subject} ${item.category} ${item.citizen_name || ''}`.toLowerCase().includes(search.toLowerCase()))} caption="Casos OIRS" />
           <Pagination page={page} pages={pages} onChange={setPage} />
         </>
       )}

@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { getResource, mutateResource } from '../../api/resources';
 import { ConfirmDialog, EmptyState, ErrorState, LoadingState } from '../../components/feedback';
 import { DetailSection, PageHeader } from '../../components/domain';
-import { StatusBadge } from '../../components/tables';
+import { DataTable, DateCell, StatusBadge, TableActions } from '../../components/tables';
 import type { Document, Approval } from './types';
 
 const decisionSchema = z.object({
@@ -78,18 +78,13 @@ export function ApprovalsPage() {
 
   return (
     <>
-      <PageHeader title="Flujo de aprobacion" />
+      <PageHeader title="Flujo de aprobacion" description="Documentos que requieren una decision formal." />
       {!documents.length ? <EmptyState message="No hay documentos pendientes de aprobacion." /> : (
-        <ul>{documents.map((doc) => (
-          <li key={doc.id}>
-            {doc.title} - <StatusBadge value={doc.status} /> - {doc.created_by_name || ''} - {doc.created_at}
-            <button onClick={() => void handleSelect(doc)}>Aprobar / Rechazar</button>
-          </li>
-        ))}</ul>
+        <DataTable columns={[{ key: 'title', label: 'Documento' }, { key: 'status', label: 'Estado', render: (value) => <StatusBadge value={String(value)} /> }, { key: 'created_by_name', label: 'Solicitante' }, { key: 'created_at', label: 'Fecha', render: (value) => <DateCell value={String(value)} /> }, { key: 'id', label: 'Accion', render: (_value, doc) => <TableActions><button onClick={() => void handleSelect(doc)}>Aprobar / Rechazar</button></TableActions> }]} rows={documents} caption="Documentos pendientes de aprobacion" />
       )}
       {selectedDoc && (
         <DetailSection title={`Decision: ${selectedDoc.title}`}>
-          <form onSubmit={submit}>
+          <form onSubmit={submit}><p className="section-copy">Esta decision quedara registrada en el historial del documento.</p>
             <label className="field">
               <input type="radio" value="approved" {...form.register('decision')} /> Aprobar
             </label>

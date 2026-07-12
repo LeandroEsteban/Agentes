@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { getResource } from '../../api/resources'
 import { request } from '../../api/client'
 import type { ApiEnvelope } from '../../api/types'
-import { DataTable, StatusBadge, type Column } from '../../components/tables'
+import { DataTable, FilterBar, SearchInput, StatusBadge, TableActions, type Column } from '../../components/tables'
 import { LoadingState, EmptyState, ErrorState } from '../../components/feedback'
 import { PageHeader, DetailSection } from '../../components/domain'
 import { FormField } from '../../components/forms'
@@ -55,6 +55,7 @@ export function UsersPage() {
   const [departments, setDepartments] = useState<Department[]>([])
   const [roles, setRoles] = useState<Role[]>([])
   const [editingId, setEditingId] = useState<number | null>(null)
+  const [search, setSearch] = useState('')
 
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
@@ -133,20 +134,20 @@ export function UsersPage() {
     { key: 'status', label: 'Estado', render: (v) => <StatusBadge value={String(v)} /> },
     { key: 'roles', label: 'Roles', render: (_v, row) => <span>{row.roles?.join(', ') || '-'}</span> },
     { key: 'id', label: 'Acciones', render: (_v, row) => (
-      <button onClick={() => startEdit(row)}>Editar</button>
+      <TableActions><button onClick={() => startEdit(row)}>Editar</button></TableActions>
     )}
   ]
 
   return (
     <>
-      <PageHeader title="Usuarios" description="Gestión de usuarios del sistema" />
-      <button onClick={() => setShowCreate(!showCreate)}>
+      <PageHeader title="Usuarios" description="Gestión de cuentas, roles y departamentos del sistema." />
+      <div className="page-actions"><span className="page-summary">{data.length} usuario{data.length === 1 ? '' : 's'} registrado{data.length === 1 ? '' : 's'}</span><button onClick={() => setShowCreate(!showCreate)}>
         {showCreate ? 'Cancelar' : 'Nuevo usuario'}
-      </button>
+      </button></div><FilterBar><SearchInput value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar por nombre, usuario o correo" /><button type="button" onClick={() => setSearch('')}>Limpiar filtros</button></FilterBar>
 
       {showCreate && (
         <DetailSection title="Nuevo usuario">
-          <form onSubmit={submitCreate}>
+          <form onSubmit={submitCreate}><div className="form-grid">
             <FormField label="Usuario *" {...form.register('username')} error={form.formState.errors.username?.message} />
             <FormField label="Correo *" type="email" {...form.register('email')} error={form.formState.errors.email?.message} />
             <FormField label="Contraseña *" type="password" {...form.register('password')} error={form.formState.errors.password?.message} />
@@ -161,7 +162,7 @@ export function UsersPage() {
               <select multiple {...form.register('role_ids')}>
                 {roles.map((r) => <option key={r.id} value={r.id}>{r.name}</option>)}
               </select>
-            </label>
+            </label></div>
             <button disabled={form.formState.isSubmitting}>
               {form.formState.isSubmitting ? 'Creando...' : 'Crear usuario'}
             </button>
@@ -171,7 +172,7 @@ export function UsersPage() {
 
       {editingId && (
         <DetailSection title="Editar usuario">
-          <form onSubmit={submitEdit}>
+          <form onSubmit={submitEdit}><div className="form-grid">
             <FormField label="Usuario *" {...editForm.register('username')} error={editForm.formState.errors.username?.message} />
             <FormField label="Correo *" type="email" {...editForm.register('email')} error={editForm.formState.errors.email?.message} />
             <FormField label="Contraseña (dejar vacío para no cambiar)" type="password" {...editForm.register('password')} />
@@ -181,7 +182,7 @@ export function UsersPage() {
                 <option value="">Seleccione</option>
                 {departments.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
               </select>
-            </label>
+            </label></div>
             <button disabled={editForm.formState.isSubmitting}>
               {editForm.formState.isSubmitting ? 'Guardando...' : 'Guardar cambios'}
             </button>
@@ -192,8 +193,8 @@ export function UsersPage() {
 
       {error && <ErrorState error={error} onRetry={load} />}
       {loading && <LoadingState />}
-      {!loading && !error && !data.length && <EmptyState />}
-      {!loading && !error && data.length > 0 && <DataTable columns={columns} rows={data} />}
+       {!loading && !error && !data.length && <EmptyState title="No hay usuarios" message="No hay registros para mostrar." />}
+       {!loading && !error && data.length > 0 && <DataTable columns={columns} rows={data.filter((user) => `${user.full_name} ${user.username} ${user.email}`.toLowerCase().includes(search.toLowerCase()))} caption="Usuarios del sistema" />}
     </>
   )
 }

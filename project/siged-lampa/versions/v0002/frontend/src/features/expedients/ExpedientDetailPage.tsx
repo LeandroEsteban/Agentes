@@ -8,6 +8,7 @@ import { LoadingState, EmptyState, ErrorState, ConfirmDialog } from '../../compo
 import { PageHeader, DetailSection, Timeline } from '../../components/domain'
 import { FormField } from '../../components/forms'
 import { useForm } from 'react-hook-form'
+import { formatDate } from '../../utils/presentation'
 
 interface Expedient {
   id: number
@@ -110,8 +111,8 @@ export function ExpedientDetailPage() {
 
   return (
     <>
-      <PageHeader title={`Expediente ${data.code}`} description={data.subject} />
-      <button onClick={() => navigate('/intranet/expedients')}>Volver</button>
+       <PageHeader title={`Expediente ${data.code}`} description={data.subject} />
+       <div className="page-actions"><button onClick={() => navigate('/intranet/expedients')}>Volver a expedientes</button></div>
 
       <div className="tabs">
         <button onClick={() => setActiveTab('detail')} className={activeTab === 'detail' ? 'active' : ''}>Detalle</button>
@@ -122,14 +123,7 @@ export function ExpedientDetailPage() {
 
       {activeTab === 'detail' && (
         <DetailSection title="Información del expediente">
-          <p><strong>Código:</strong> {data.code}</p>
-          <p><strong>Asunto:</strong> {data.subject}</p>
-          <p><strong>Estado:</strong> <StatusBadge value={data.status} /></p>
-          <p><strong>Departamento:</strong> {data.department_name || '-'}</p>
-          <p><strong>Creado:</strong> {data.created_at}</p>
-          <p><strong>Actualizado:</strong> {data.updated_at || '-'}</p>
-          {data.closed_at && <p><strong>Cerrado:</strong> {data.closed_at}</p>}
-          <p><strong>Descripción:</strong> {data.description || '-'}</p>
+          <dl className="metadata-grid"><div><dt>Código</dt><dd>{data.code}</dd></div><div><dt>Estado</dt><dd><StatusBadge value={data.status} /><span className="sr-only">{data.status}</span></dd></div><div><dt>Departamento</dt><dd>{data.department_name || '-'}</dd></div><div><dt>Creado</dt><dd>{formatDate(data.created_at)}</dd></div><div><dt>Actualizado</dt><dd>{formatDate(data.updated_at)}</dd></div>{data.closed_at && <div><dt>Cerrado</dt><dd>{formatDate(data.closed_at)}</dd></div>}<div><dt>Descripción</dt><dd>{data.description || '-'}</dd></div></dl>
 
           <form onSubmit={submitEdit}>
             <FormField label="Asunto *" {...form.register('subject', { required: true })}

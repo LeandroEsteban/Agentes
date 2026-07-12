@@ -72,17 +72,17 @@ export function DocumentTypesPage() {
 
   return (
     <>
-      <PageHeader title="Tipos documentales" description="Catálogo de tipos de documentos" />
-      <button onClick={() => setShowCreate(!showCreate)}>
+      <PageHeader title="Tipos documentales" description="Catálogo para clasificar documentos institucionales." />
+      <div className="page-actions"><span className="page-summary">{data.length} tipo{data.length === 1 ? '' : 's'} documental{data.length === 1 ? '' : 'es'}</span><button onClick={() => setShowCreate(!showCreate)}>
         {showCreate ? 'Cancelar' : 'Nuevo tipo documental'}
-      </button>
+      </button></div>
 
       {showCreate && (
         <DetailSection title="Nuevo tipo documental">
-          <form onSubmit={submitCreate}>
+          <form onSubmit={submitCreate}><div className="form-grid">
             <FormField label="Nombre *" {...form.register('name')} error={form.formState.errors.name?.message} />
             <FormField label="Código *" {...form.register('code')} error={form.formState.errors.code?.message} />
-            <FormField label="Descripción" {...form.register('description')} />
+            <FormField label="Descripción" {...form.register('description')} /></div>
             <button disabled={form.formState.isSubmitting}>
               {form.formState.isSubmitting ? 'Creando...' : 'Crear tipo documental'}
             </button>
@@ -92,8 +92,8 @@ export function DocumentTypesPage() {
 
       {error && <ErrorState error={error} onRetry={load} />}
       {loading && <LoadingState />}
-      {!loading && !error && !data.length && <EmptyState />}
-      {!loading && !error && data.length > 0 && <DataTable columns={columns} rows={data} />}
+       {!loading && !error && !data.length && <EmptyState title="No hay tipos documentales" message="Cree un tipo para clasificar nuevos documentos." />}
+       {!loading && !error && data.length > 0 && <DataTable columns={columns} rows={data} caption="Tipos documentales" />}
     </>
   )
 }

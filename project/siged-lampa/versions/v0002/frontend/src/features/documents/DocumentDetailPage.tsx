@@ -5,6 +5,7 @@ import { EmptyState, ErrorState, LoadingState } from '../../components/feedback'
 import { DetailSection, PageHeader, Timeline } from '../../components/domain';
 import { StatusBadge } from '../../components/tables';
 import type { Document, Attachment, Comment, HistoryEvent } from './types';
+import { formatDate } from '../../utils/presentation';
 
 export function DocumentDetailPage() {
   const { documentId } = useParams<{ documentId: string }>();
@@ -84,16 +85,10 @@ export function DocumentDetailPage() {
 
   return (
     <>
-      <PageHeader title={doc.title} />
-      <StatusBadge value={doc.status} />
+      <PageHeader title={doc.title} description={`Documento #${doc.id}`} />
+      <div className="page-actions"><StatusBadge value={doc.status} /><div><Link className="button" to={`/intranet/documents/${documentId}/versions`}>Versiones</Link> <Link className="button" to={`/intranet/documents/${documentId}/signature`}>Firma academica</Link></div></div>
       <DetailSection title="Informacion del documento">
-        <p><strong>Descripcion:</strong> {doc.description || 'Sin descripcion'}</p>
-        <p><strong>Tipo:</strong> {doc.document_type_name || '-'}</p>
-        <p><strong>Departamento:</strong> {doc.department_name || '-'}</p>
-        <p><strong>Creado por:</strong> {doc.created_by_name || '-'}</p>
-        <p><strong>Fecha de creacion:</strong> {doc.created_at}</p>
-        {doc.due_date && <p><strong>Vencimiento:</strong> {doc.due_date}</p>}
-        {doc.confidentiality_level && <p><strong>Confidencialidad:</strong> {doc.confidentiality_level}</p>}
+        <dl className="metadata-grid"><div><dt>Descripcion</dt><dd>{doc.description || 'Sin descripcion'}</dd></div><div><dt>Tipo</dt><dd>{doc.document_type_name || '-'}</dd></div><div><dt>Departamento</dt><dd>{doc.department_name || '-'}</dd></div><div><dt>Creado por</dt><dd>{doc.created_by_name || '-'}</dd></div><div><dt>Fecha de creacion</dt><dd>{formatDate(doc.created_at)}</dd></div>{doc.due_date && <div><dt>Vencimiento</dt><dd>{formatDate(doc.due_date)}</dd></div>}{doc.confidentiality_level && <div><dt>Confidencialidad</dt><dd>{doc.confidentiality_level}</dd></div>}</dl>
       </DetailSection>
 
       <DetailSection title="Historial">
@@ -102,7 +97,7 @@ export function DocumentDetailPage() {
 
       <DetailSection title="Adjuntos">
         {!attachments.length ? <EmptyState message="Sin adjuntos." /> : (
-          <ul>{attachments.map((att) => (
+          <ul className="file-list">{attachments.map((att) => (
             <li key={att.id}>
               {att.file_name}
               <a href={operationPath('API-SUP-033', { documentId: documentId!, attachmentId: String(att.id) })} download>Descargar</a>
@@ -117,8 +112,8 @@ export function DocumentDetailPage() {
 
       <DetailSection title="Comentarios">
         {!comments.length ? <EmptyState message="Sin comentarios." /> : (
-          <ul>{comments.map((c) => (
-            <li key={c.id}><strong>{c.author_name || 'Anonimo'}:</strong> {c.content} <em>{c.created_at}</em></li>
+          <ul className="comment-list">{comments.map((c) => (
+            <li key={c.id}><strong>{c.author_name || 'Anonimo'}:</strong> {c.content}<small>{formatDate(c.created_at)}</small></li>
           ))}</ul>
         )}
         <div>
@@ -129,8 +124,6 @@ export function DocumentDetailPage() {
 
       {error && <ErrorState error={error} />}
 
-      <Link className="button" to={`/intranet/documents/${documentId}/versions`}>Versiones</Link>
-      <Link className="button" to={`/intranet/documents/${documentId}/signature`}>Firma academica</Link>
     </>
   );
 }

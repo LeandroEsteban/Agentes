@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { getResource, mutateResource } from '../../api/resources';
-import { DataTable } from '../../components/tables';
+import { DataTable, DateCell, TableActions } from '../../components/tables';
 import { EmptyState, ErrorState, LoadingState } from '../../components/feedback';
 import { DetailSection, PageHeader } from '../../components/domain';
 import { StatusBadge } from '../../components/tables';
@@ -78,21 +78,21 @@ export function ReviewsPage() {
 
   return (
     <>
-      <PageHeader title="Revision pendiente" />
-      {!documents.length ? <EmptyState message="No hay documentos pendientes de revision." /> : (
+      <PageHeader title="Revision pendiente" description="Documentos asignados para revisar y responder." />
+      {!documents.length ? <EmptyState title="Sin revisiones pendientes" message="No hay documentos pendientes de revision." /> : (
         <DataTable<Document>
           columns={[
             { key: 'title', label: 'Documento' },
             { key: 'status', label: 'Estado', render: (value) => <StatusBadge value={String(value)} /> },
-            { key: 'created_at', label: 'Fecha' },
-            { key: 'id', label: 'Accion', render: (_, row) => <button onClick={() => void handleSelect(row)}>Revisar</button> },
+            { key: 'created_at', label: 'Fecha', render: (value) => <DateCell value={String(value)} /> },
+            { key: 'id', label: 'Accion', render: (_, row) => <TableActions><button onClick={() => void handleSelect(row)}>Revisar</button></TableActions> },
           ]}
           rows={documents}
         />
       )}
       {selectedDoc && (
         <DetailSection title={`Revisar: ${selectedDoc.title}`}>
-          <form onSubmit={submit}>
+          <form onSubmit={submit}><p className="section-copy">Registre una decision y sus observaciones para dejar trazabilidad.</p>
             <SelectField label="Decision" {...form.register('decision')} error={form.formState.errors.decision?.message}>
               <option value="">Seleccione</option>
               <option value="approved">Aprobado</option>

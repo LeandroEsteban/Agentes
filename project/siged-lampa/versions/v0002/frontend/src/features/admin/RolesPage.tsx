@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { getResource } from '../../api/resources'
 import { request } from '../../api/client'
 import type { ApiEnvelope } from '../../api/types'
-import { DataTable, type Column } from '../../components/tables'
+import { DataTable, TableActions, type Column } from '../../components/tables'
 import { LoadingState, EmptyState, ErrorState } from '../../components/feedback'
 import { PageHeader, DetailSection } from '../../components/domain'
 
@@ -88,17 +88,18 @@ export function RolesPage() {
     { key: 'description', label: 'Descripción' },
     { key: 'permission_count', label: 'Permisos' },
     { key: 'id', label: 'Acciones', render: (_v, row) => (
-      <button onClick={() => startEdit(row)}>Editar permisos</button>
+      <TableActions><button onClick={() => startEdit(row)}>Editar permisos</button></TableActions>
     )}
   ]
 
   return (
     <>
-      <PageHeader title="Roles y permisos" description="Gestión de roles del sistema" />
+      <PageHeader title="Roles y permisos" description="Configure los permisos agrupados por módulo funcional." />
+      <div className="page-actions"><span className="page-summary">{data.length} rol{data.length === 1 ? '' : 'es'} disponible{data.length === 1 ? '' : 's'}</span></div>
 
       {editingRole && (
         <DetailSection title={`Permisos: ${editingRole.name}`}>
-          {moduleNames.map((mod) => (
+          <p className="section-copy">Seleccione los permisos que este rol puede utilizar.</p>{moduleNames.map((mod) => (
             <fieldset key={mod}>
               <legend>{moduleLabels[mod] || mod}</legend>
               {allPermissions[mod].map((perm) => (
@@ -122,8 +123,8 @@ export function RolesPage() {
 
       {error && <ErrorState error={error} onRetry={load} />}
       {loading && <LoadingState />}
-      {!loading && !error && !data.length && <EmptyState />}
-      {!loading && !error && data.length > 0 && <DataTable columns={columns} rows={data} />}
+       {!loading && !error && !data.length && <EmptyState title="No hay roles disponibles" message="No existen roles configurados para administrar permisos." />}
+       {!loading && !error && data.length > 0 && <DataTable columns={columns} rows={data} caption="Roles del sistema" />}
     </>
   )
 }

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getResource } from '../../api/resources'
-import { DataTable, StatusBadge, Pagination, SearchInput, FilterBar, type Column } from '../../components/tables'
+import { DataTable, StatusBadge, Pagination, SearchInput, FilterBar, DateCell, type Column } from '../../components/tables'
 import { LoadingState, EmptyState, ErrorState } from '../../components/feedback'
 import { PageHeader } from '../../components/domain'
 
@@ -46,20 +46,21 @@ export function CorrespondenceListPage() {
     { key: 'recipient_name', label: 'Destinatario' },
     { key: 'direction', label: 'Dirección', render: (value) => <StatusBadge value={value === 'incoming' ? 'Entrada' : 'Salida'} /> },
     { key: 'status', label: 'Estado', render: (value) => <StatusBadge value={String(value)} /> },
-    { key: 'created_at', label: 'Creado' }
+    { key: 'created_at', label: 'Creado', render: (value) => <DateCell value={String(value)} /> }
   ]
 
   return (
     <>
-      <PageHeader title="Correspondencia" description="Seguimiento de correspondencia" />
+      <PageHeader title="Correspondencia" description="Registro y seguimiento de correspondencia entrante y saliente." />
+      <div className="page-actions"><span className="page-summary">{data.length} registro{data.length === 1 ? '' : 's'} en esta pagina</span><button onClick={() => navigate('/intranet/correspondence/new')}>Nueva correspondencia</button></div>
       <FilterBar>
         <SearchInput value={search} onChange={(e) => { setSearch(e.target.value); setPage(1) }} />
-        <button onClick={() => navigate('/intranet/correspondence/new')}>Nueva correspondencia</button>
+        <button type="button" onClick={() => { setSearch(''); setPage(1) }}>Limpiar filtros</button>
       </FilterBar>
 
       {error && <ErrorState error={error} onRetry={load} />}
       {loading && <LoadingState />}
-      {!loading && !error && !data.length && <EmptyState />}
+      {!loading && !error && !data.length && <EmptyState title="Sin correspondencia" message="No hay registros para mostrar." />}
       {!loading && !error && data.length > 0 && (
         <>
           <DataTable columns={columns} rows={data} />

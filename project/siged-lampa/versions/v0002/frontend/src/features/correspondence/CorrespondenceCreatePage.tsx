@@ -70,25 +70,23 @@ export function CorrespondenceCreatePage() {
 
   return (
     <>
-      <PageHeader title="Nueva correspondencia" description="Registro de correspondencia" />
-      <DetailSection title="Formulario">
+      <PageHeader title="Nueva correspondencia" description="Registre los antecedentes para asegurar una trazabilidad completa." />
+      <DetailSection title="Datos de la correspondencia">
         <form onSubmit={submit}>
-          <FormField label="Asunto *" {...form.register('subject')} error={form.formState.errors.subject?.message} />
-          <SelectField label="Dirección *" {...form.register('direction')} error={form.formState.errors.direction?.message}>
+          <div className="form-grid"><SelectField label="Dirección *" {...form.register('direction')} error={form.formState.errors.direction?.message}>
             <option value="incoming">Entrada</option>
             <option value="outgoing">Salida</option>
-          </SelectField>
+          </SelectField><FormField label="Asunto *" {...form.register('subject')} error={form.formState.errors.subject?.message} />
           <FormField label="Remitente *" {...form.register('sender_name')} error={form.formState.errors.sender_name?.message} />
           <FormField label="Destinatario *" {...form.register('recipient_name')} error={form.formState.errors.recipient_name?.message} />
           <SelectField label="Entidad externa" {...form.register('external_entity_id')}>
             <option value="">Sin entidad</option>
             {entities.map((e) => <option key={e.id} value={e.id}>{e.name}</option>)}
-          </SelectField>
-          <label className="field">
+          </SelectField><FormField label="Fecha de vencimiento" type="date" {...form.register('due_date')} />
+          <label className="field field-wide">
             Descripción
             <textarea {...form.register('description')} />
-          </label>
-          <FormField label="Fecha de vencimiento" type="date" {...form.register('due_date')} />
+          </label></div>
           <button disabled={form.formState.isSubmitting}>
             {form.formState.isSubmitting ? 'Guardando...' : 'Guardar correspondencia'}
           </button>

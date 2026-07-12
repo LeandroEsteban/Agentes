@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { getResource } from '../../api/resources'
 import { LoadingState, EmptyState, ErrorState } from '../../components/feedback'
 import { PageHeader, DetailSection, MetricCard } from '../../components/domain'
+import { DataTable } from '../../components/tables'
 
 interface DashboardData {
   documents_by_status?: Record<string, number>
@@ -31,12 +32,12 @@ export function ReportsPage() {
   useEffect(() => { void load() }, [load])
 
   if (loading) return <><PageHeader title="Reportes" description="Dashboard de reportes" /><LoadingState /></>
-  if (error) return <><PageHeader title="Reportes" /><ErrorState error={error} onRetry={load} /></>
-  if (!data) return <><PageHeader title="Reportes" /><EmptyState /></>
+   if (error) return <><PageHeader title="Reportes" description="Indicadores consolidados con datos operativos actuales." /><ErrorState error={error} onRetry={load} /></>
+  if (!data) return <><PageHeader title="Reportes" /><EmptyState title="Sin indicadores disponibles" message="No hay registros para mostrar." /></>
 
   return (
     <>
-      <PageHeader title="Reportes" description="Dashboard de reportes" />
+       <PageHeader title="Reportes" description="Indicadores consolidados con datos operativos actuales." />
 
       <section className="metrics-grid">
         {data.total_documents !== undefined && <MetricCard label="Total documentos" value={data.total_documents} />}
@@ -46,32 +47,20 @@ export function ReportsPage() {
       </section>
 
       {data.documents_by_status && Object.keys(data.documents_by_status).length > 0 && (
-        <DetailSection title="Documentos por estado">
-          <table><thead><tr><th>Estado</th><th>Cantidad</th></tr></thead><tbody>
-            {Object.entries(data.documents_by_status).map(([status, count]) => (
-              <tr key={status}><td>{status}</td><td>{count}</td></tr>
-            ))}
-          </tbody></table>
+         <DetailSection title="Documentos por estado">
+           <DataTable rows={Object.entries(data.documents_by_status).map(([status, count], id) => ({ id, status, count }))} columns={[{ key: 'status', label: 'Estado' }, { key: 'count', label: 'Cantidad' }]} />
         </DetailSection>
       )}
 
       {data.requests_by_status && Object.keys(data.requests_by_status).length > 0 && (
-        <DetailSection title="Solicitudes por estado">
-          <table><thead><tr><th>Estado</th><th>Cantidad</th></tr></thead><tbody>
-            {Object.entries(data.requests_by_status).map(([status, count]) => (
-              <tr key={status}><td>{status}</td><td>{count}</td></tr>
-            ))}
-          </tbody></table>
+         <DetailSection title="Solicitudes por estado">
+           <DataTable rows={Object.entries(data.requests_by_status).map(([status, count], id) => ({ id, status, count }))} columns={[{ key: 'status', label: 'Estado' }, { key: 'count', label: 'Cantidad' }]} />
         </DetailSection>
       )}
 
       {data.correspondence_volume && Object.keys(data.correspondence_volume).length > 0 && (
-        <DetailSection title="Volumen de correspondencia">
-          <table><thead><tr><th>Período</th><th>Cantidad</th></tr></thead><tbody>
-            {Object.entries(data.correspondence_volume).map(([period, count]) => (
-              <tr key={period}><td>{period}</td><td>{count}</td></tr>
-            ))}
-          </tbody></table>
+         <DetailSection title="Volumen de correspondencia">
+           <DataTable rows={Object.entries(data.correspondence_volume).map(([period, count], id) => ({ id, period, count }))} columns={[{ key: 'period', label: 'Período' }, { key: 'count', label: 'Cantidad' }]} />
         </DetailSection>
       )}
     </>

@@ -1,6 +1,6 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 export const LoadingState = () => <div role="status" aria-live="polite" className="state"><span>Cargando informacion...</span><span className="loading-skeleton" aria-hidden="true"><span /><span /><span /></span></div>;
-export const EmptyState = ({ message = 'No hay registros para mostrar.' }: { message?: string }) => <p className="state">{message}</p>;
+export const EmptyState = ({ message = 'No hay registros para mostrar.', title = 'Sin resultados', action }: { message?: string; title?: string; action?: ReactNode }) => <section className="state empty-state"><i className="bi bi-inbox" aria-hidden="true" /><div><h2>{title}</h2><p>{message}</p></div>{action}</section>;
 export const ErrorState = ({ error, onRetry }: { error: Error; onRetry?: () => void }) => <div role="alert" className="state error">{error.message}{onRetry && <button onClick={onRetry}>Reintentar</button>}</div>;
 export const PermissionDenied = () => <main className="state error"><h1>Acceso restringido</h1><p>No cuenta con el permiso requerido para esta accion.</p></main>;
 export const DemoModeBanner = ({ enabled }: { enabled: boolean }) => enabled ? <aside className="demo" role="status">Modo demostracion</aside> : null;

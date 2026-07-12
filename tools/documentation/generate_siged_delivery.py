@@ -449,7 +449,7 @@ El resultado es un producto con módulos y contratos trazables, {counts['tables'
 
 ### 10.6 Anexos
 
-Los catálogos completos de tablas, endpoints, pantallas, reglas y validaciones están en las secciones 8.1 a 8.5. El inventario de evidencias independiente se encuentra en [01_Inventario_Evidencias.md](01_Inventario_Evidencias.md) y la evaluación resumida en [01_Matriz_Cumplimiento_Rubrica.md](01_Matriz_Cumplimiento_Rubrica.md).
+Los catálogos completos de tablas, endpoints, pantallas, reglas y validaciones están en las secciones 8.1 a 8.5. El inventario de evidencias independiente se encuentra en [01_Inventario_Evidencias.pdf](01_Inventario_Evidencias.pdf) y la evaluación resumida en [01_Matriz_Cumplimiento_Rubrica.pdf](01_Matriz_Cumplimiento_Rubrica.pdf).
 """
 
 
@@ -490,7 +490,7 @@ Este inventario resume las fuentes de la documentación principal. Se priorizan 
 
 
 def rubric_document(meta: dict[str, str], counts: dict[str, int]) -> str:
-    rows = [["Documentación", "5%", "Cumple", "01_Documentacion_Proyecto_SIGED_Lampa.md", "Trazabilidad y métricas verificadas."], ["Código fuente", "5%", "Cumple", f"{REF['openapi']}; {REF['screens']}", "Código, contratos y catálogos presentes."], ["Sistema online en Linux EC2", "40%", "Pendiente de verificación", f"{REF['phase8']}", "Preparación aprobada; workflow no ejecutado en evidencia local."], ["Diseño y plan de pruebas", "10%", "Cumple", REF["tests"], "394 pruebas aprobadas reportadas; cobertura no total."], ["Video", "40%", "Pendiente de verificación", "No se encontró evidencia versionada", "Pendiente de producción audiovisual."]]
+    rows = [["Documentación", "5%", "Cumple", "01_Documentacion_Proyecto_SIGED_Lampa.pdf", "Trazabilidad y métricas verificadas."], ["Código fuente", "5%", "Cumple", f"{REF['openapi']}; {REF['screens']}", "Código, contratos y catálogos presentes."], ["Sistema online en Linux EC2", "40%", "Pendiente de verificación", f"{REF['phase8']}", "Preparación aprobada; workflow no ejecutado en evidencia local."], ["Diseño y plan de pruebas", "10%", "Cumple", REF["tests"], "394 pruebas aprobadas reportadas; cobertura no total."], ["Video", "40%", "Pendiente de verificación", "No se encontró evidencia versionada", "Pendiente de producción audiovisual."]]
     checklist = [["Documento de especificación", "6 páginas", "Documento extenso", "Cumple", "Documento principal"], ["Casos de uso", "10", "12", "Cumple", "Sección 6.3"], ["Funcionalidades o flujos", "30", counts['screens'], "Cumple", REF['screens']], ["Tablas", "40", counts['tables'], "Cumple", REF['migrations']], ["Endpoints API", "40", counts['endpoints'], "Cumple", REF['endpoints']], ["Pantallas", "30", counts['screens'], "Cumple", REF['screens']], ["Reglas de negocio", "60", counts['rules'], "Cumple", REF['rules']], ["Validaciones y restricciones", "100", counts['validations'], "Cumple", REF['validations']], ["Pruebas automatizadas", "Sí", "394 aprobadas reportadas", "Cumple", REF['tests']], ["Cobertura del 100%", "100%", "87,72% FE; 80,84% BE líneas", "No cumple", REF['tests']], ["Sistema online en Linux EC2", "Sí", "No verificable localmente", "Pendiente de verificación", REF['phase8']], ["Video de 6 a 9 minutos", "Sí", "Pendiente", "Pendiente de verificación", "No se encontró evidencia"]]
     return f"""# Matriz de Cumplimiento de Rúbrica - SIGED-Lampa v0002
 

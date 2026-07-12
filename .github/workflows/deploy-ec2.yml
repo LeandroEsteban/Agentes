@@ -29,7 +29,7 @@ env:
 
 jobs:
   # =========================================================
-  # VALIDACIÓN
+  # VALIDACIÓN CI
   # =========================================================
   validate:
     name: Validate application
@@ -155,7 +155,7 @@ jobs:
         run: npm run build
 
       # -----------------------------------------------------
-      # POSTGRESQL QA
+      # BASE DE DATOS QA
       # -----------------------------------------------------
       - name: Install V2 root dependencies
         working-directory: project/siged-lampa/versions/v0002
@@ -235,7 +235,7 @@ jobs:
             exit 1
           fi
 
-      - name: Apply QA migrations with migration ledger
+      - name: Apply QA migrations
         working-directory: project/siged-lampa/versions/v0002
         shell: bash
         run: |
@@ -251,7 +251,7 @@ jobs:
 
           node database/scripts/seed.js
 
-      - name: Verify QA schema and migration ledger
+      - name: Verify QA schema
         working-directory: project/siged-lampa/versions/v0002
         shell: bash
         run: |
@@ -299,7 +299,7 @@ jobs:
         run: npm test
 
       # -----------------------------------------------------
-      # ARCHIVOS DE DEPLOYMENT
+      # ARCHIVOS DE DESPLIEGUE
       # -----------------------------------------------------
       - name: Validate deployment files
         working-directory: project/siged-lampa/versions/v0002/infra/deployment
@@ -385,7 +385,8 @@ jobs:
         run: |
           set -Eeuo pipefail
 
-          tar -tzf "/tmp/${ARCHIVE_NAME}" > /tmp/release-files.txt
+          tar -tzf "/tmp/${ARCHIVE_NAME}" \
+            > /tmp/release-files.txt
 
           grep -q '^\./backend/' /tmp/release-files.txt
           grep -q '^\./frontend/' /tmp/release-files.txt
@@ -411,14 +412,14 @@ jobs:
           if-no-files-found: error
 
   # =========================================================
-  # DESPLIEGUE
+  # DESPLIEGUE A EC2
   # =========================================================
   deploy:
     name: Deploy release to EC2
     runs-on: ubuntu-latest
     needs: package
     environment: production
-    timeout-minutes: 40
+    timeout-minutes: 45
 
     steps:
       - name: Download release artifact
@@ -507,26 +508,33 @@ jobs:
           rm -f "$PREVIOUS_FILE"
 
           if [ -L "$CURRENT_LINK" ]; then
-            CURRENT_RELEASE="$(readlink -f "$CURRENT_LINK" || true)"
+            CURRENT_RELEASE="$(
+              readlink -f "$CURRENT_LINK" || true
+            )"
 
             case "$CURRENT_RELEASE" in
               "$EC2_DIR"/releases/*)
                 if [ -d "$CURRENT_RELEASE" ]; then
-                  basename "$CURRENT_RELEASE" > "$PREVIOUS_FILE"
+                  basename "$CURRENT_RELEASE" \
+                    > "$PREVIOUS_FILE"
+
                   echo "Previous release: $(cat "$PREVIOUS_FILE")"
                 fi
                 ;;
+
               *)
                 echo "WARN: current symlink does not point to releases"
                 ;;
             esac
+
           elif [ -e "$CURRENT_LINK" ]; then
             INVALID_CURRENT="$EC2_DIR/current.invalid.$(date +%s)"
 
-            echo "WARN: current exists but is not a symlink."
+            echo "WARN: current exists but is not a symlink"
             echo "Moving it to: $INVALID_CURRENT"
 
             mv "$CURRENT_LINK" "$INVALID_CURRENT"
+
           else
             echo "First deployment: no previous release recorded"
           fi
@@ -568,6 +576,10 @@ jobs:
           test -d "$RELEASE_DIR/frontend"
           test -d "$RELEASE_DIR/database"
           test -d "$RELEASE_DIR/infra/deployment"
+
+          test -f "$RELEASE_DIR/database/scripts/migrate.js"
+          test -f "$RELEASE_DIR/database/scripts/seed.js"
+          test -f "$RELEASE_DIR/database/scripts/verify-schema.js"
 
           echo "Release extracted successfully"
           REMOTE
@@ -647,7 +659,10 @@ jobs:
 
           echo "ready=true" >> "$GITHUB_OUTPUT"
 
-      - name: Build and start production stack
+      # -----------------------------------------------------
+      # CONSTRUCCIÓN DE IMÁGENES
+      # -----------------------------------------------------
+      - name: Build production images
         shell: bash
         run: |
           set -Eeuo pipefail
@@ -671,12 +686,42 @@ jobs:
             -f "$COMPOSE_FILE" \
             pull postgres
 
-          echo "Building and starting production services..."
+          echo "Building backend and frontend images..."
 
           docker compose \
             --env-file "$ENV_FILE" \
             -f "$COMPOSE_FILE" \
-            up -d --build --remove-orphans
+            build backend frontend
+
+          echo "Production images built successfully"
+          REMOTE
+
+      # -----------------------------------------------------
+      # LEVANTAR SOLO POSTGRESQL
+      # -----------------------------------------------------
+      - name: Start production database
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          ssh \
+            -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "EC2_DIR='${EC2_DIR}' RELEASE_ID='${RELEASE_ID}' bash -s" <<'REMOTE'
+          set -Eeuo pipefail
+
+          RELEASE_DIR="$EC2_DIR/releases/$RELEASE_ID"
+          COMPOSE_FILE="$RELEASE_DIR/infra/deployment/docker-compose.production.yml"
+          ENV_FILE="$RELEASE_DIR/infra/deployment/.env.production"
+
+          cd "$RELEASE_DIR"
+
+          echo "Starting PostgreSQL only..."
+
+          docker compose \
+            --env-file "$ENV_FILE" \
+            -f "$COMPOSE_FILE" \
+            up -d postgres
 
           echo "Waiting for PostgreSQL..."
 
@@ -685,7 +730,10 @@ jobs:
               --env-file "$ENV_FILE" \
               -f "$COMPOSE_FILE" \
               exec -T postgres \
-              pg_isready -U siged -d siged_lampa --quiet
+              pg_isready \
+                -U siged \
+                -d siged_lampa \
+                --quiet
             then
               echo "PostgreSQL is ready"
               exit 0
@@ -700,17 +748,21 @@ jobs:
           docker compose \
             --env-file "$ENV_FILE" \
             -f "$COMPOSE_FILE" \
-            ps
+            ps || true
 
           docker compose \
             --env-file "$ENV_FILE" \
             -f "$COMPOSE_FILE" \
-            logs --tail=100 postgres
+            logs --tail=100 postgres || true
 
           exit 1
           REMOTE
 
-      - name: Run production migrations
+      # -----------------------------------------------------
+      # COMPUERTA DE BASE DE DATOS
+      # -----------------------------------------------------
+      - name: Migrate, seed and verify production database
+        id: production_database_gate
         shell: bash
         run: |
           set -Eeuo pipefail
@@ -724,12 +776,46 @@ jobs:
           RELEASE_DIR="$EC2_DIR/releases/$RELEASE_ID"
           COMPOSE_FILE="$RELEASE_DIR/infra/deployment/docker-compose.production.yml"
           ENV_FILE="$RELEASE_DIR/infra/deployment/.env.production"
+
           BACKUP_DIR="$EC2_DIR/backups"
           BACKUP_FILE="$BACKUP_DIR/pre-migration-${RELEASE_ID}.sql"
 
+          cd "$RELEASE_DIR"
+
           mkdir -p "$BACKUP_DIR"
 
-          echo "Creating pre-migration backup..."
+          MIGRATION_FILES="$(
+            find "$RELEASE_DIR/database/migrations" \
+              -maxdepth 1 \
+              -type f \
+              -name '*.sql' \
+              | wc -l \
+              | tr -d '[:space:]'
+          )"
+
+          SEED_FILES="$(
+            find "$RELEASE_DIR/database/seeds" \
+              -maxdepth 1 \
+              -type f \
+              -name '*.sql' \
+              | wc -l \
+              | tr -d '[:space:]'
+          )"
+
+          echo "Migration files: $MIGRATION_FILES"
+          echo "Seed files: $SEED_FILES"
+
+          if [ "$MIGRATION_FILES" -ne 17 ]; then
+            echo "FATAL: Production release does not contain 17 migrations"
+            exit 1
+          fi
+
+          if [ "$SEED_FILES" -ne 5 ]; then
+            echo "FATAL: Production release does not contain 5 seeds"
+            exit 1
+          fi
+
+          echo "Creating database backup..."
 
           docker compose \
             --env-file "$ENV_FILE" \
@@ -742,27 +828,233 @@ jobs:
               --if-exists \
             > "$BACKUP_FILE"
 
-          echo "Backup saved to: $BACKUP_FILE"
+          test -s "$BACKUP_FILE" || {
+            echo "FATAL: Database backup was not created"
+            exit 1
+          }
 
-          echo "Running migrations..."
+          echo "Backup created: $BACKUP_FILE"
+
+          echo "Applying production migrations..."
 
           docker compose \
             --env-file "$ENV_FILE" \
             -f "$COMPOSE_FILE" \
-            exec -T backend \
+            run \
+            --rm \
+            --no-deps \
+            backend \
             node database/scripts/migrate.js
 
-          echo "Running seeds..."
+          echo "Applying production seeds..."
 
           docker compose \
             --env-file "$ENV_FILE" \
             -f "$COMPOSE_FILE" \
-            exec -T backend \
+            run \
+            --rm \
+            --no-deps \
+            backend \
             node database/scripts/seed.js
 
-          echo "Production migrations completed"
+          echo "Running complete schema verification..."
+
+          docker compose \
+            --env-file "$ENV_FILE" \
+            -f "$COMPOSE_FILE" \
+            run \
+            --rm \
+            --no-deps \
+            backend \
+            node database/scripts/verify-schema.js
+
+          APPLIED_MIGRATIONS="$(
+            docker compose \
+              --env-file "$ENV_FILE" \
+              -f "$COMPOSE_FILE" \
+              exec -T postgres \
+              psql \
+                -U siged \
+                -d siged_lampa \
+                -Atc "SELECT COUNT(*) FROM schema_migrations;" \
+              | tr -d '[:space:]'
+          )"
+
+          INVALID_LEDGER_ENTRIES="$(
+            docker compose \
+              --env-file "$ENV_FILE" \
+              -f "$COMPOSE_FILE" \
+              exec -T postgres \
+              psql \
+                -U siged \
+                -d siged_lampa \
+                -Atc "
+                  SELECT COUNT(*)
+                  FROM schema_migrations
+                  WHERE version IS NULL
+                     OR checksum_sha256 IS NULL;
+                " \
+              | tr -d '[:space:]'
+          )"
+
+          CRITICAL_TABLES="$(
+            docker compose \
+              --env-file "$ENV_FILE" \
+              -f "$COMPOSE_FILE" \
+              exec -T postgres \
+              psql \
+                -U siged \
+                -d siged_lampa \
+                -Atc "
+                  SELECT COUNT(*)
+                  FROM (
+                    VALUES
+                      ('users'),
+                      ('roles'),
+                      ('sessions'),
+                      ('citizen_accounts'),
+                      ('citizen_profiles'),
+                      ('citizen_sessions'),
+                      ('audit_events'),
+                      ('schema_migrations')
+                  ) AS required_table(table_name)
+                  WHERE to_regclass(
+                    'public.' || required_table.table_name
+                  ) IS NOT NULL;
+                " \
+              | tr -d '[:space:]'
+          )"
+
+          FUNCTIONAL_TABLES="$(
+            docker compose \
+              --env-file "$ENV_FILE" \
+              -f "$COMPOSE_FILE" \
+              exec -T postgres \
+              psql \
+                -U siged \
+                -d siged_lampa \
+                -Atc "
+                  SELECT COUNT(*)
+                  FROM information_schema.tables
+                  WHERE table_schema = 'public'
+                    AND table_type = 'BASE TABLE'
+                    AND table_name <> 'schema_migrations';
+                " \
+              | tr -d '[:space:]'
+          )"
+
+          DEMO_CITIZEN_ACCOUNTS="$(
+            docker compose \
+              --env-file "$ENV_FILE" \
+              -f "$COMPOSE_FILE" \
+              exec -T postgres \
+              psql \
+                -U siged \
+                -d siged_lampa \
+                -Atc "
+                  SELECT COUNT(*)
+                  FROM citizen_accounts
+                  WHERE lower(email) = lower('ciudadano@email.com')
+                    AND status = 'active'
+                    AND deleted_at IS NULL;
+                " \
+              | tr -d '[:space:]'
+          )"
+
+          ADMIN_ACCOUNTS="$(
+            docker compose \
+              --env-file "$ENV_FILE" \
+              -f "$COMPOSE_FILE" \
+              exec -T postgres \
+              psql \
+                -U siged \
+                -d siged_lampa \
+                -Atc "
+                  SELECT COUNT(*)
+                  FROM users
+                  WHERE username = 'admin'
+                    AND status = 'active'
+                    AND deleted_at IS NULL;
+                " \
+              | tr -d '[:space:]'
+          )"
+
+          echo "Applied migrations: $APPLIED_MIGRATIONS"
+          echo "Invalid ledger entries: $INVALID_LEDGER_ENTRIES"
+          echo "Critical tables found: $CRITICAL_TABLES"
+          echo "Functional tables found: $FUNCTIONAL_TABLES"
+          echo "Active demo citizen accounts: $DEMO_CITIZEN_ACCOUNTS"
+          echo "Active admin accounts: $ADMIN_ACCOUNTS"
+
+          if [ "$APPLIED_MIGRATIONS" -ne "$MIGRATION_FILES" ]; then
+            echo "FATAL: Production migration ledger is incomplete"
+            exit 1
+          fi
+
+          if [ "$INVALID_LEDGER_ENTRIES" -ne 0 ]; then
+            echo "FATAL: Invalid schema_migrations entries detected"
+            exit 1
+          fi
+
+          if [ "$CRITICAL_TABLES" -ne 8 ]; then
+            echo "FATAL: One or more critical production tables are missing"
+            exit 1
+          fi
+
+          if [ "$FUNCTIONAL_TABLES" -lt 40 ]; then
+            echo "FATAL: Fewer than 40 functional tables were found"
+            exit 1
+          fi
+
+          if [ "$DEMO_CITIZEN_ACCOUNTS" -ne 1 ]; then
+            echo "FATAL: Demo citizen account was not seeded correctly"
+            exit 1
+          fi
+
+          if [ "$ADMIN_ACCOUNTS" -ne 1 ]; then
+            echo "FATAL: Admin account was not seeded correctly"
+            exit 1
+          fi
+
+          echo "PRODUCTION_DATABASE_GATE_PASS"
           REMOTE
 
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+
+      # -----------------------------------------------------
+      # LEVANTAR BACKEND Y FRONTEND
+      # -----------------------------------------------------
+      - name: Start production application
+        if: ${{ steps.production_database_gate.outputs.ready == 'true' }}
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          ssh \
+            -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "EC2_DIR='${EC2_DIR}' RELEASE_ID='${RELEASE_ID}' bash -s" <<'REMOTE'
+          set -Eeuo pipefail
+
+          RELEASE_DIR="$EC2_DIR/releases/$RELEASE_ID"
+          COMPOSE_FILE="$RELEASE_DIR/infra/deployment/docker-compose.production.yml"
+          ENV_FILE="$RELEASE_DIR/infra/deployment/.env.production"
+
+          cd "$RELEASE_DIR"
+
+          echo "Starting backend and frontend..."
+
+          docker compose \
+            --env-file "$ENV_FILE" \
+            -f "$COMPOSE_FILE" \
+            up -d backend frontend --remove-orphans
+
+          echo "Production application started"
+          REMOTE
+
+      # -----------------------------------------------------
+      # HEALTH CHECK
+      # -----------------------------------------------------
       - name: Production health check
         shell: bash
         run: |
@@ -814,7 +1106,7 @@ jobs:
             docker compose \
               --env-file "$ENV_FILE" \
               -f "$COMPOSE_FILE" \
-              logs --tail=100 || true
+              logs --tail=150 "$container_name" || true
 
             return 1
           }
@@ -823,24 +1115,57 @@ jobs:
           wait_for_container siged-api-production 24
           wait_for_container siged-web-production 12
 
-          HTTP_CODE="$(
+          echo "Verifying schema from running backend..."
+
+          docker compose \
+            --env-file "$ENV_FILE" \
+            -f "$COMPOSE_FILE" \
+            exec -T backend \
+            node database/scripts/verify-schema.js
+
+          API_HEALTH_BODY="$(
+            curl \
+              -fsS \
+              http://127.0.0.1/api/health
+          )"
+
+          echo "$API_HEALTH_BODY"
+
+          echo "$API_HEALTH_BODY" \
+            | grep -Eq '"status"[[:space:]]*:[[:space:]]*"healthy"' || {
+                echo "FATAL: API health response is not healthy"
+                exit 1
+              }
+
+          DATABASE_HEALTH_CODE="$(
             curl \
               -s \
-              -o /dev/null \
+              -o /tmp/database-health.json \
               -w '%{http_code}' \
-              http://127.0.0.1/health \
+              http://127.0.0.1/api/health/database \
               || echo "000"
           )"
 
-          if [ "$HTTP_CODE" != "200" ]; then
-            echo "FATAL: /health returned $HTTP_CODE"
+          cat /tmp/database-health.json || true
+
+          if [ "$DATABASE_HEALTH_CODE" != "200" ]; then
+            echo "FATAL: Database health returned $DATABASE_HEALTH_CODE"
             exit 1
           fi
 
-          echo "/health: 200"
+          grep -Eq \
+            '"migrations"[[:space:]]*:[[:space:]]*"up_to_date"' \
+            /tmp/database-health.json || {
+              echo "FATAL: Database migrations are not up to date"
+              exit 1
+            }
+
           echo "Production health check passed"
           REMOTE
 
+      # -----------------------------------------------------
+      # SMOKE TEST REAL
+      # -----------------------------------------------------
       - name: Production smoke test
         shell: bash
         run: |
@@ -886,36 +1211,51 @@ jobs:
 
           echo "/api/health: $API_CODE"
 
-          API_BODY="$(curl -fsS "$BASE_URL/api/health")"
+          CITIZEN_LOGIN_FILE="/tmp/citizen-login-response.json"
 
-          echo "$API_BODY" |
-            grep -Eq '"status"[[:space:]]*:[[:space:]]*"healthy"' || {
-              echo "SMOKE FAIL: /api/health body is not healthy"
-              echo "$API_BODY"
-              exit 1
-            }
-
-          AUTH_CODE="$(
+          CITIZEN_LOGIN_CODE="$(
             curl \
-              -s \
-              -o /dev/null \
+              -sS \
+              -o "$CITIZEN_LOGIN_FILE" \
               -w '%{http_code}' \
               -X POST \
               -H 'Content-Type: application/json' \
-              -d '{}' \
-              "$BASE_URL/api/auth/login" \
+              -d '{
+                "email": "ciudadano@email.com",
+                "password": "ciudadano123"
+              }' \
+              "$BASE_URL/api/api/v1/auth/citizen-login" \
               || echo "000"
           )"
 
-          if [ "$AUTH_CODE" = "000" ] || [ "$AUTH_CODE" = "503" ]; then
-            echo "SMOKE FAIL: /api/auth/login returned $AUTH_CODE"
+          cat "$CITIZEN_LOGIN_FILE" || true
+
+          if [ "$CITIZEN_LOGIN_CODE" != "200" ]; then
+            echo "SMOKE FAIL: citizen login returned $CITIZEN_LOGIN_CODE"
             exit 1
           fi
 
-          echo "/api/auth/login: $AUTH_CODE"
+          grep -Eq \
+            '"email"[[:space:]]*:[[:space:]]*"ciudadano@email.com"' \
+            "$CITIZEN_LOGIN_FILE" || {
+              echo "SMOKE FAIL: citizen login response is invalid"
+              exit 1
+            }
+
+          grep -Eq \
+            '"(token|access_token)"[[:space:]]*:' \
+            "$CITIZEN_LOGIN_FILE" || {
+              echo "SMOKE FAIL: citizen login did not return a token"
+              exit 1
+            }
+
+          echo "Citizen login: 200"
           echo "Production smoke test passed"
           REMOTE
 
+      # -----------------------------------------------------
+      # FINALIZAR RELEASE
+      # -----------------------------------------------------
       - name: Finalize release
         shell: bash
         run: |
@@ -947,14 +1287,19 @@ jobs:
 
           if [ "${#RELEASES[@]}" -gt 3 ]; then
             for OLD_RELEASE in "${RELEASES[@]:3}"; do
-              echo "Removing old release: $OLD_RELEASE"
-              rm -rf "$OLD_RELEASE"
+              if [ "$OLD_RELEASE" != "$RELEASE_DIR" ]; then
+                echo "Removing old release: $OLD_RELEASE"
+                rm -rf "$OLD_RELEASE"
+              fi
             done
           fi
 
           echo "Release finalized successfully"
           REMOTE
 
+      # -----------------------------------------------------
+      # ROLLBACK
+      # -----------------------------------------------------
       - name: Rollback on failure
         if: ${{ failure() && steps.deployment_gate.outputs.ready == 'true' }}
         shell: bash
@@ -1000,8 +1345,8 @@ jobs:
           PREVIOUS_ENV="$PREVIOUS_DIR/infra/deployment/.env.production"
 
           if [ ! -f "$PREVIOUS_COMPOSE" ]; then
-            echo "WARN: Previous Compose file is missing."
-            echo "Rollback skipped."
+            echo "WARN: Previous Compose file is missing"
+            echo "Rollback skipped"
             exit 0
           fi
 
@@ -1011,14 +1356,18 @@ jobs:
             "$EC2_DIR/shared/.env.production" \
             "$PREVIOUS_ENV"
 
-          if [ -f "$FAILED_RELEASE_DIR/infra/deployment/docker-compose.production.yml" ]; then
+          if [ -f "$FAILED_RELEASE_DIR/infra/deployment/docker-compose.production.yml" ] \
+            && [ -f "$FAILED_RELEASE_DIR/infra/deployment/.env.production" ]
+          then
             docker compose \
               --env-file "$FAILED_RELEASE_DIR/infra/deployment/.env.production" \
               -f "$FAILED_RELEASE_DIR/infra/deployment/docker-compose.production.yml" \
               down --timeout 30 || true
           fi
 
-          echo "Rolling back to: $PREVIOUS_ID"
+          echo "Rolling back application to: $PREVIOUS_ID"
+
+          cd "$PREVIOUS_DIR"
 
           docker compose \
             --env-file "$PREVIOUS_ENV" \

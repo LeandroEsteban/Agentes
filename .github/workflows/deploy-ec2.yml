@@ -104,6 +104,7 @@ jobs:
           node-version: 24
           cache: npm
           cache-dependency-path: |
+            project/siged-lampa/versions/v0002/package-lock.json
             project/siged-lampa/versions/v0002/frontend/package-lock.json
             project/siged-lampa/versions/v0002/backend/package-lock.json
 
@@ -156,6 +157,10 @@ jobs:
       # -----------------------------------------------------
       # POSTGRESQL QA
       # -----------------------------------------------------
+      - name: Install V2 root dependencies
+        working-directory: project/siged-lampa/versions/v0002
+        run: npm ci
+
       - name: Wait for PostgreSQL QA
         shell: bash
         run: |
@@ -185,114 +190,107 @@ jobs:
         run: |
           set -Eeuo pipefail
 
-          mapfile -t MIGRATIONS < <(
+          MIGRATION_COUNT="$(
+            find database/migrations \
+              -maxdepth 1 \
+              -type f \
+              -name '*.sql' \
+              | wc -l \
+              | tr -d '[:space:]'
+          )"
+
+          SEED_COUNT="$(
+            find database/seeds \
+              -maxdepth 1 \
+              -type f \
+              -name '*.sql' \
+              | wc -l \
+              | tr -d '[:space:]'
+          )"
+
+          echo "Migrations found: ${MIGRATION_COUNT}"
+          echo "Seeds found: ${SEED_COUNT}"
+
+          if [ "${MIGRATION_COUNT}" -ne 17 ]; then
+            echo "FATAL: Expected 17 migration files"
             find database/migrations \
               -maxdepth 1 \
               -type f \
               -name '*.sql' \
               | sort
-          )
+            exit 1
+          fi
 
-          mapfile -t SEEDS < <(
+          if [ "${SEED_COUNT}" -ne 5 ]; then
+            echo "FATAL: Expected 5 seed files"
             find database/seeds \
               -maxdepth 1 \
               -type f \
               -name '*.sql' \
               | sort
-          )
-
-          echo "Migrations found: ${#MIGRATIONS[@]}"
-          echo "Seeds found: ${#SEEDS[@]}"
-
-          if [ "${#MIGRATIONS[@]}" -ne 17 ]; then
-            echo "FATAL: Expected 17 migration files"
-            printf '%s\n' "${MIGRATIONS[@]}"
             exit 1
           fi
 
-          if [ "${#SEEDS[@]}" -ne 5 ]; then
-            echo "FATAL: Expected 5 seed files"
-            printf '%s\n' "${SEEDS[@]}"
-            exit 1
-          fi
-
-      - name: Apply QA migrations
+      - name: Apply QA migrations with migration ledger
         working-directory: project/siged-lampa/versions/v0002
         shell: bash
+        env:
+          DATABASE_URL: postgresql://siged:siged_ci_password@127.0.0.1:5432/siged_lampa_qa
         run: |
           set -Eeuo pipefail
 
-          mapfile -t MIGRATIONS < <(
-            find database/migrations \
-              -maxdepth 1 \
-              -type f \
-              -name '*.sql' \
-              | sort
-          )
-
-          for migration in "${MIGRATIONS[@]}"; do
-            echo "Applying migration: ${migration}"
-
-            psql \
-              "${DATABASE_URL}" \
-              -v ON_ERROR_STOP=1 \
-              -f "${migration}"
-          done
-
-          echo "Applied ${#MIGRATIONS[@]} migrations"
+          node database/scripts/migrate.js
 
       - name: Apply QA seeds
         working-directory: project/siged-lampa/versions/v0002
         shell: bash
+        env:
+          DATABASE_URL: postgresql://siged:siged_ci_password@127.0.0.1:5432/siged_lampa_qa
         run: |
           set -Eeuo pipefail
 
-          mapfile -t SEEDS < <(
-            find database/seeds \
-              -maxdepth 1 \
-              -type f \
-              -name '*.sql' \
-              | sort
-          )
+          node database/scripts/seed.js
 
-          for seed in "${SEEDS[@]}"; do
-            echo "Applying seed: ${seed}"
-
-            psql \
-              "${DATABASE_URL}" \
-              -v ON_ERROR_STOP=1 \
-              -f "${seed}"
-          done
-
-          echo "Applied ${#SEEDS[@]} seed files"
-
-      - name: Verify QA database
+      - name: Verify QA schema and migration ledger
+        working-directory: project/siged-lampa/versions/v0002
         shell: bash
+        env:
+          DATABASE_URL: postgresql://siged:siged_ci_password@127.0.0.1:5432/siged_lampa_qa
         run: |
           set -Eeuo pipefail
 
-          TABLE_COUNT="$(
-            psql \
-              "${DATABASE_URL}" \
-              -Atc "
-                SELECT COUNT(*)
-                FROM information_schema.tables
-                WHERE table_schema = 'public'
-                  AND table_type = 'BASE TABLE';
-              "
+          node database/scripts/verify-schema.js
+
+          MIGRATION_COUNT="$(
+            psql "${DATABASE_URL}" \
+              -Atc "SELECT COUNT(*) FROM schema_migrations;" \
+              | tr -d '[:space:]'
           )"
 
-          echo "Public tables found: ${TABLE_COUNT}"
+          FUNCTIONAL_TABLE_COUNT="$(
+            psql "${DATABASE_URL}" -Atc "
+              SELECT COUNT(*)
+              FROM information_schema.tables
+              WHERE table_schema = 'public'
+                AND table_type = 'BASE TABLE'
+                AND table_name <> 'schema_migrations';
+            " | tr -d '[:space:]'
+          )"
 
-          if [ "${TABLE_COUNT}" -lt 40 ]; then
-            echo "FATAL: Expected at least 40 public tables"
+          echo "Migration ledger entries: ${MIGRATION_COUNT}"
+          echo "Functional tables: ${FUNCTIONAL_TABLE_COUNT}"
+
+          if [ "${MIGRATION_COUNT}" -ne 17 ]; then
+            echo "FATAL: Expected 17 entries in schema_migrations"
+            psql "${DATABASE_URL}" \
+              -c "SELECT version FROM schema_migrations ORDER BY version;"
             exit 1
           fi
 
-          psql \
-            "${DATABASE_URL}" \
-            -v ON_ERROR_STOP=1 \
-            -c "SELECT current_database(), current_user;"
+          if [ "${FUNCTIONAL_TABLE_COUNT}" -ne 40 ]; then
+            echo "FATAL: Expected 40 functional tables"
+            exit 1
+          fi
 
       # -----------------------------------------------------
       # BACKEND

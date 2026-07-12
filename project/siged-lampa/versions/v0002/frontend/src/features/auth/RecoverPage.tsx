@@ -6,6 +6,7 @@ import { mutateResource } from '../../api/resources'
 import { PageHeader } from '../../components/domain'
 import { FormField } from '../../components/forms'
 import { ErrorState } from '../../components/feedback'
+import { Link } from 'react-router-dom'
 
 const recoverSchema = z.object({
   email: z.string().email('Ingrese un correo electronico valido')
@@ -31,7 +32,7 @@ export function RecoverPage() {
     }
   })
   return (
-    <>
+    <main className="login">
       <PageHeader title="Recuperacion de acceso" description="Ingrese su correo electronico para restablecer su contrasena" />
       <form onSubmit={submit}>
         <FormField
@@ -45,7 +46,8 @@ export function RecoverPage() {
         <button disabled={form.formState.isSubmitting}>
           {form.formState.isSubmitting ? 'Enviando...' : 'Enviar instrucciones'}
         </button>
+        <p className="text-muted"><Link to="/login">Volver al acceso ciudadano</Link></p>
       </form>
-    </>
+    </main>
   )
 }

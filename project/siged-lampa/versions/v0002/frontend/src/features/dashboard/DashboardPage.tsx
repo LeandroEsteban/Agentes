@@ -23,14 +23,15 @@ export function DashboardPage() {
   useEffect(() => { load() }, [])
   if (loading) return <LoadingState />
   if (error) return <ErrorState error={error} onRetry={load} />
-  if (!data || !Object.keys(data).length) return <><PageHeader title="Dashboard" /><EmptyState message="No hay datos disponibles." /></>
+  const greeting = new Date().getHours() < 12 ? 'Buenos dias' : new Date().getHours() < 19 ? 'Buenas tardes' : 'Buenas noches'
+  if (!data || !Object.keys(data).length) return <><PageHeader title="Inicio" description={`${greeting}. Revise el estado de la gestion municipal.`} /><EmptyState message="No hay datos disponibles." /></>
   const metrics: DashboardMetric[] = Object.entries(data).filter(([, v]) => typeof v === 'number' || typeof v === 'string').map(([key, value]) => ({
     label: key.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
     value
   }))
   return (
     <>
-      <PageHeader title="Dashboard" description="Resumen de actividad" />
+      <PageHeader title="Inicio" description={`${greeting}. Este es el resumen actualizado de la gestion documental.`} />
       <div className="metrics-grid">
         {metrics.map((metric, i) => (
           <MetricCard key={i} label={metric.label} value={metric.value} />

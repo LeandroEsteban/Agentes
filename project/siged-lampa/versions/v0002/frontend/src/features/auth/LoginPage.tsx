@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 import { PageHeader } from '../../components/domain'
 import { FormField } from '../../components/forms'
 import { ErrorState } from '../../components/feedback'
@@ -22,7 +23,7 @@ export function LoginPage({ actor }: { actor: 'citizen' | 'internal' }) {
   })
   return (
     <main className="login">
-      <PageHeader title={actor === 'citizen' ? 'Acceso ciudadano' : 'Acceso intranet'} />
+      <PageHeader title={actor === 'citizen' ? 'Acceso ciudadano' : 'Acceso intranet'} description={actor === 'citizen' ? 'Ingrese para revisar sus solicitudes y tramites.' : 'Acceso exclusivo para funcionarios municipales.'} />
       <form onSubmit={submit}>
         <FormField
           label={actor === 'citizen' ? 'Correo electronico' : 'Usuario'}
@@ -39,6 +40,7 @@ export function LoginPage({ actor }: { actor: 'citizen' | 'internal' }) {
         <button disabled={form.formState.isSubmitting}>
           {form.formState.isSubmitting ? 'Ingresando...' : 'Ingresar'}
         </button>
+        <p className="text-muted">{actor === 'citizen' ? <><Link to="/intranet/login">Soy funcionario municipal</Link> · <Link to="/recover">Recuperar acceso</Link></> : <><Link to="/login">Acceso ciudadano</Link> · <Link to="/recover">Recuperar acceso</Link></>}</p>
       </form>
     </main>
   )

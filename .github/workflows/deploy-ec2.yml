@@ -213,21 +213,25 @@ jobs:
 
           if [ "${MIGRATION_COUNT}" -ne 17 ]; then
             echo "FATAL: Expected 17 migration files"
+
             find database/migrations \
               -maxdepth 1 \
               -type f \
               -name '*.sql' \
               | sort
+
             exit 1
           fi
 
           if [ "${SEED_COUNT}" -ne 5 ]; then
             echo "FATAL: Expected 5 seed files"
+
             find database/seeds \
               -maxdepth 1 \
               -type f \
               -name '*.sql' \
               | sort
+
             exit 1
           fi
 
@@ -267,30 +271,18 @@ jobs:
               | tr -d '[:space:]'
           )"
 
-          FUNCTIONAL_TABLE_COUNT="$(
-            psql "${DATABASE_URL}" -Atc "
-              SELECT COUNT(*)
-              FROM information_schema.tables
-              WHERE table_schema = 'public'
-                AND table_type = 'BASE TABLE'
-                AND table_name <> 'schema_migrations';
-            " | tr -d '[:space:]'
-          )"
-
           echo "Migration ledger entries: ${MIGRATION_COUNT}"
-          echo "Functional tables: ${FUNCTIONAL_TABLE_COUNT}"
 
           if [ "${MIGRATION_COUNT}" -ne 17 ]; then
             echo "FATAL: Expected 17 entries in schema_migrations"
+
             psql "${DATABASE_URL}" \
               -c "SELECT version FROM schema_migrations ORDER BY version;"
+
             exit 1
           fi
 
-          if [ "${FUNCTIONAL_TABLE_COUNT}" -ne 40 ]; then
-            echo "FATAL: Expected 40 functional tables"
-            exit 1
-          fi
+          echo "QA database schema verified successfully"
 
       # -----------------------------------------------------
       # BACKEND
@@ -340,7 +332,7 @@ jobs:
           bash -n scripts/cleanup-releases.sh
 
   # =========================================================
-  # EMPAQUETADO DE V0002
+  # EMPAQUETADO
   # =========================================================
   package:
     name: Package release

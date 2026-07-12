@@ -6,9 +6,9 @@ import { DataTable, Pagination } from '../components/tables';
 import { screenCatalog } from '../config/screen-catalog';
 
 describe('catalogo de pantallas y rutas', () => {
-  it('mapea las 30 pantallas documentadas sin rutas principales duplicadas', () => {
-    expect(screenCatalog).toHaveLength(30);
-    expect(new Set(screenCatalog.map((item) => item.route)).size).toBe(30);
+  it('mapea las pantallas documentadas sin rutas principales duplicadas', () => {
+    expect(screenCatalog).toHaveLength(35);
+    expect(new Set(screenCatalog.map((item) => item.route)).size).toBe(35);
     expect(screenCatalog.every((item) => item.allowed_actors.length > 0 && item.component)).toBe(true);
   });
   it('resuelve P-30 con ambas rutas canonicas', () => {

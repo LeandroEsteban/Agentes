@@ -17,6 +17,7 @@ vi.mock('react-router-dom', async () => {
 import { getResource, mutateResource } from '../api/resources'
 import { api } from '../api/endpoints'
 import { oirsApi } from '../api/oirs.api'
+import { request } from '../api/client'
 
 describe('CitizenRequestsPage', () => {
   beforeEach(() => { vi.clearAllMocks() })
@@ -27,31 +28,27 @@ describe('CitizenRequestsPage', () => {
   }
 
   it('muestra loading inicial', async () => {
-    ;(getResource as ReturnType<typeof vi.fn>).mockReturnValue(new Promise(() => {}))
+    ;(request as ReturnType<typeof vi.fn>).mockReturnValue(new Promise(() => {}))
     await renderPage()
     expect(screen.getByText('Mis solicitudes')).toBeInTheDocument()
   })
 
   it('muestra lista de solicitudes', async () => {
-    ;(getResource as ReturnType<typeof vi.fn>).mockResolvedValue({
-      ok: true, data: [
-        { id: 1, subject: 'Solicitud 1', status: 'pending', created_at: '2025-01-01' },
-        { id: 2, subject: 'Solicitud 2', status: 'approved', created_at: '2025-02-01' },
-      ],
-    })
+    ;(request as ReturnType<typeof vi.fn>).mockResolvedValue({ ok: true, data: { items: [{ id: 1, uuid: 'u1', tracking_code: 'SOL-1', published_procedure_id: 1, status: 'submitted', submitted_at: '2025-01-01', resolved_at: null }, { id: 2, uuid: 'u2', tracking_code: 'SOL-2', published_procedure_id: 2, status: 'completed', submitted_at: '2025-02-01', resolved_at: null }], page: 1, size: 20, total: 2 } })
     await renderPage()
-    await waitFor(() => expect(screen.getByText('Solicitud 1')).toBeInTheDocument())
-    expect(screen.getByText('Solicitud 2')).toBeInTheDocument()
+    await waitFor(() => expect(screen.getByText('SOL-1')).toBeInTheDocument())
+    expect(screen.getByText('SOL-2')).toBeInTheDocument()
+    expect(screen.getByText('Ingresada')).toBeInTheDocument()
   })
 
   it('muestra empty cuando no hay solicitudes', async () => {
-    ;(getResource as ReturnType<typeof vi.fn>).mockResolvedValue({ ok: true, data: [] })
+    ;(request as ReturnType<typeof vi.fn>).mockResolvedValue({ ok: true, data: { items: [], page: 1, size: 20, total: 0 } })
     await renderPage()
-    await waitFor(() => expect(screen.getByText('No tiene solicitudes registradas.')).toBeInTheDocument())
+    await waitFor(() => expect(screen.getByText('Aún no tienes solicitudes')).toBeInTheDocument())
   })
 
   it('muestra error al fallar carga', async () => {
-    ;(getResource as ReturnType<typeof vi.fn>).mockRejectedValue(new Error('Error de red'))
+    ;(request as ReturnType<typeof vi.fn>).mockRejectedValue(new Error('Error de red'))
     await renderPage()
     expect(await screen.findByText('Error de red')).toBeInTheDocument()
   })
@@ -179,7 +176,7 @@ describe('OirsPage - public', () => {
     await user.type(screen.getByLabelText('Identificador del caso'), created.uuid)
     await user.type(screen.getByLabelText('Código de seguimiento'), created.tracking_token)
     await user.click(screen.getByRole('button', { name: 'Consultar estado' }))
-    expect(await screen.findByTestId('oirs-status')).toHaveTextContent('Ingresado')
+    expect(await screen.findByTestId('oirs-status')).toHaveTextContent('Ingresada')
     expect(screen.getByText('Categoría')).toBeInTheDocument()
     expect(screen.getByText('Aún no hay mensajes')).toBeInTheDocument()
   })
@@ -206,7 +203,7 @@ describe('OirsPage - public', () => {
 
   it('bloquea mensajes en un caso cancelado', async () => {
     ;(oirsApi.detail as ReturnType<typeof vi.fn>).mockResolvedValue({ ok: true, data: { ...tracked, status: 'cancelled' } }); ;(oirsApi.history as ReturnType<typeof vi.fn>).mockResolvedValue({ ok: true, data: [] })
-    await renderPage(); const user = userEvent.setup(); await user.click(screen.getByRole('tab', { name: 'Consultar seguimiento' })); await user.type(screen.getByLabelText('Identificador del caso'), created.uuid); await user.type(screen.getByLabelText('Código de seguimiento'), created.tracking_token); await user.click(screen.getByRole('button', { name: 'Consultar estado' })); await screen.findByText('Cancelado')
+    await renderPage(); const user = userEvent.setup(); await user.click(screen.getByRole('tab', { name: 'Consultar seguimiento' })); await user.type(screen.getByLabelText('Identificador del caso'), created.uuid); await user.type(screen.getByLabelText('Código de seguimiento'), created.tracking_token); await user.click(screen.getByRole('button', { name: 'Consultar estado' })); await screen.findByText('Cancelada')
     expect(screen.getByLabelText('Nuevo mensaje')).toBeDisabled(); expect(screen.getByRole('button', { name: 'Enviar mensaje' })).toBeDisabled()
   })
 

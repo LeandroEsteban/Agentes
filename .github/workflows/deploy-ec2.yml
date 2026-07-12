@@ -37,8 +37,7 @@ jobs:
     timeout-minutes: 30
 
     env:
-      # PostgreSQL temporal de GitHub Actions.
-      # Estas NO son credenciales de producción.
+      # PostgreSQL temporal utilizado solamente en GitHub Actions.
       POSTGRES_DB: siged_lampa_qa
       POSTGRES_USER: siged
       POSTGRES_PASSWORD: siged_ci_password
@@ -76,7 +75,7 @@ jobs:
           ref: >-
             ${{ github.event_name == 'workflow_dispatch'
                 && inputs.ref
-                || github.ref }}
+                || github.sha }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -87,6 +86,33 @@ jobs:
             project/siged-lampa/versions/v0002/frontend/package-lock.json
             project/siged-lampa/versions/v0002/backend/package-lock.json
 
+      # Los scripts QA invocan "powershell", pero ubuntu-latest
+      # proporciona PowerShell Core mediante el comando "pwsh".
+      - name: Configure PowerShell Core compatibility
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          PWSH_PATH="$(command -v pwsh)"
+
+          if [ -z "${PWSH_PATH}" ]; then
+            echo "FATAL: pwsh is not installed on the GitHub Actions runner"
+            exit 1
+          fi
+
+          echo "PowerShell Core found at: ${PWSH_PATH}"
+          pwsh --version
+
+          mkdir -p "${RUNNER_TEMP}/powershell-bin"
+
+          ln -sfn \
+            "${PWSH_PATH}" \
+            "${RUNNER_TEMP}/powershell-bin/powershell"
+
+          echo "${RUNNER_TEMP}/powershell-bin" >> "${GITHUB_PATH}"
+
+          "${RUNNER_TEMP}/powershell-bin/powershell" --version
+
       - name: Prepare CI environment
         shell: bash
         run: |
@@ -94,7 +120,6 @@ jobs:
 
           mkdir -p /tmp/siged-documents
 
-          # Archivo temporal por si los scripts QA usan --env-file.
           cat > "${PROJECT_DIR}/.env.qa.local" <<'EOF'
           APP_ENV=test
           NODE_ENV=test
@@ -108,6 +133,7 @@ jobs:
           DATABASE_URL=postgresql://siged:siged_ci_password@127.0.0.1:55432/siged_lampa_qa
 
           PORT=3100
+
           JWT_SECRET=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
           JWT_EXPIRES_IN=1h
 
@@ -234,7 +260,6 @@ jobs:
         shell: bash
         run: |
           npm run qa:destroy || true
-
           rm -f .env.qa.local
 
   # =========================================================
@@ -253,7 +278,7 @@ jobs:
           ref: >-
             ${{ github.event_name == 'workflow_dispatch'
                 && inputs.ref
-                || github.ref }}
+                || github.sha }}
 
       - name: Create V2 release tarball
         shell: bash
@@ -269,11 +294,7 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             --exclude='node_modules' \
-            --exclude='.env' \
-            --exclude='.env.local' \
-            --exclude='.env.production' \
-            --exclude='.env.qa.local' \
-            --exclude='.env.test' \
+            --exclude='.env*' \
             --exclude='coverage' \
             --exclude='playwright-report' \
             --exclude='test-results' \
@@ -352,7 +373,7 @@ jobs:
 
           mkdir -p ~/.ssh
 
-          printf '%s' "${{ secrets.EC2_SSH_KEY }}" \
+          printf '%s\n' "${{ secrets.EC2_SSH_KEY }}" \
             | tr -d '\r' \
             > ~/.ssh/ec2_key
 

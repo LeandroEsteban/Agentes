@@ -97,6 +97,7 @@ También se conservan las fuentes originales en la raíz: [especificación](./Es
 - [Documentación completa del proyecto SIGED-Lampa](./docs/ENTREGA_FINAL/01_Documentacion_Proyecto_SIGED_Lampa.pdf)
 - [Matriz de cumplimiento de rúbrica](./docs/ENTREGA_FINAL/01_Matriz_Cumplimiento_Rubrica.pdf)
 - [Inventario de evidencias](./docs/ENTREGA_FINAL/01_Inventario_Evidencias.pdf)
+- [Diseño, plan y resultados de pruebas](./docs/ENTREGA_FINAL/02_Diseno_Plan_y_Resultados_de_Pruebas_SIGED_Lampa.pdf)
 
 | Documento | Formato | Contenido |
 | --- | --- | --- |

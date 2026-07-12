@@ -23,17 +23,18 @@ export function LoginPage({ actor }: { actor: 'citizen' | 'internal' }) {
   })
   return (
     <main className="login">
-      <PageHeader title={actor === 'citizen' ? 'Acceso ciudadano' : 'Acceso intranet'} description={actor === 'citizen' ? 'Ingrese para revisar sus solicitudes y tramites.' : 'Acceso exclusivo para funcionarios municipales.'} />
+      <section className="login-container">
+      <PageHeader title={actor === 'citizen' ? 'Acceso ciudadano' : 'Acceso intranet'} description={actor === 'citizen' ? 'Ingrese para revisar sus solicitudes y trámites.' : 'Acceso exclusivo para funcionarios municipales.'} />
       <form onSubmit={submit}>
         <FormField
-          label={actor === 'citizen' ? 'Correo electronico' : 'Usuario'}
+          label={actor === 'citizen' ? 'Correo electrónico' : 'Usuario'}
           {...form.register('identifier', { required: 'Ingrese su identificador' })}
           error={form.formState.errors.identifier?.message}
         />
         <FormField
-          label="Contrasena"
+          label="Contraseña"
           type="password"
-          {...form.register('password', { required: 'Ingrese su contrasena', minLength: { value: 8, message: 'Minimo 8 caracteres' } })}
+          {...form.register('password', { required: 'Ingrese su contraseña', minLength: { value: 8, message: 'Mínimo 8 caracteres' } })}
           error={form.formState.errors.password?.message}
         />
         {error && <ErrorState error={error} />}
@@ -42,6 +43,7 @@ export function LoginPage({ actor }: { actor: 'citizen' | 'internal' }) {
         </button>
         <p className="text-muted">{actor === 'citizen' ? <><Link to="/intranet/login">Soy funcionario municipal</Link> · <Link to="/recover">Recuperar acceso</Link></> : <><Link to="/login">Acceso ciudadano</Link> · <Link to="/recover">Recuperar acceso</Link></>}</p>
       </form>
+      </section>
     </main>
   )
 }

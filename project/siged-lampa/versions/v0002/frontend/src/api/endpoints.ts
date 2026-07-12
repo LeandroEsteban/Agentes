@@ -1,5 +1,5 @@
 import { request } from './client';
-import type { ApiEnvelope, ExternalEntity, Procedure } from './types';
+import type { ApiEnvelope, ExternalEntity, Procedure, PublicCalendarEvent, PublicNews, PublicNotice } from './types';
 export const api = {
   procedures: () => request<ApiEnvelope<Procedure[]>>('/api/v1/public/tramites'),
   procedure: (id: string) => request<ApiEnvelope<Procedure>>(`/api/v1/public/tramites/${id}`),
@@ -9,5 +9,5 @@ export const api = {
   notifications: () => request<ApiEnvelope<Array<{ id: number; title: string; message: string; is_read: boolean }>>>('/api/v1/notifications'),
   createCitizenRequest: (procedureId: string) => request<ApiEnvelope<{ id: number }>>(`/api/v1/public/tramites/${encodeURIComponent(procedureId)}/requests`, { method: 'POST', body: { form_data: {}, attachments: [] } }),
   citizenRequests: () => request<ApiEnvelope<unknown>>('/api/v1/citizen/requests'),
-  publicContent: (kind: 'news' | 'notices' | 'calendar') => request<ApiEnvelope<unknown>>(`/api/v1/public/${kind}`)
+  publicContent: (kind: 'news' | 'notices' | 'calendar') => request<ApiEnvelope<PublicNews[] | PublicNotice[] | PublicCalendarEvent[]>>(`/api/v1/public/${kind}`)
 };

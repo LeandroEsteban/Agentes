@@ -58,8 +58,9 @@ describe('LoginPage - citizen', () => {
   it('muestra formulario de login ciudadano con campos', async () => {
     await renderLogin()
     expect(screen.getByText('Acceso ciudadano')).toBeInTheDocument()
-    expect(screen.getByLabelText('Correo electronico')).toBeInTheDocument()
-    expect(screen.getByLabelText('Contrasena')).toBeInTheDocument()
+    expect(screen.getByLabelText('Correo electrónico')).toBeInTheDocument()
+    expect(screen.getByLabelText('Contraseña')).toBeInTheDocument()
+    expect(document.querySelector('.login-container form')).toBeInTheDocument()
     expect(screen.getByText('Ingresar')).toBeInTheDocument()
   })
 
@@ -68,14 +69,14 @@ describe('LoginPage - citizen', () => {
     const user = userEvent.setup()
     await user.click(screen.getByText('Ingresar'))
     expect(await screen.findByText('Ingrese su identificador')).toBeInTheDocument()
-    expect(await screen.findByText('Ingrese su contrasena')).toBeInTheDocument()
+    expect(await screen.findByText('Ingrese su contraseña')).toBeInTheDocument()
   })
 
   it('llama a signIn con credenciales validas', async () => {
     await renderLogin()
     const user = userEvent.setup()
-    await user.type(screen.getByLabelText('Correo electronico'), 'test@test.cl')
-    await user.type(screen.getByLabelText('Contrasena'), 'password123')
+    await user.type(screen.getByLabelText('Correo electrónico'), 'test@test.cl')
+    await user.type(screen.getByLabelText('Contraseña'), 'password123')
     await user.click(screen.getByText('Ingresar'))
     await waitFor(() => {
       expect(request).toHaveBeenCalledWith('/api/v1/auth/citizen-login', {
@@ -89,8 +90,8 @@ describe('LoginPage - citizen', () => {
     ;(request as ReturnType<typeof vi.fn>).mockRejectedValue(new Error('Credenciales invalidas'))
     await renderLogin()
     const user = userEvent.setup()
-    await user.type(screen.getByLabelText('Correo electronico'), 'bad@test.cl')
-    await user.type(screen.getByLabelText('Contrasena'), 'password123')
+    await user.type(screen.getByLabelText('Correo electrónico'), 'bad@test.cl')
+    await user.type(screen.getByLabelText('Contraseña'), 'password123')
     await user.click(screen.getByText('Ingresar'))
     expect(await screen.findByText('Credenciales invalidas')).toBeInTheDocument()
   })
@@ -98,8 +99,8 @@ describe('LoginPage - citizen', () => {
   it('redirige a /portal tras login exitoso ciudadano', async () => {
     await renderLogin()
     const user = userEvent.setup()
-    await user.type(screen.getByLabelText('Correo electronico'), 'test@test.cl')
-    await user.type(screen.getByLabelText('Contrasena'), 'password123')
+    await user.type(screen.getByLabelText('Correo electrónico'), 'test@test.cl')
+    await user.type(screen.getByLabelText('Contraseña'), 'password123')
     await user.click(screen.getByText('Ingresar'))
     await waitFor(() => {
       expect(window.location.assign).toHaveBeenCalledWith('/portal')
@@ -137,7 +138,7 @@ describe('LoginPage - internal', () => {
     await renderInternalLogin()
     const user = userEvent.setup()
     await user.type(screen.getByLabelText('Usuario'), 'admin')
-    await user.type(screen.getByLabelText('Contrasena'), 'password123')
+    await user.type(screen.getByLabelText('Contraseña'), 'password123')
     await user.click(screen.getByText('Ingresar'))
     await waitFor(() => {
       expect(window.location.assign).toHaveBeenCalledWith('/intranet')

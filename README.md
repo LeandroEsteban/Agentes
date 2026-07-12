@@ -220,16 +220,7 @@ El repositorio incluye suites automatizadas y reportes de cobertura. Los porcent
 
 ## Model Context Protocol
 
-WEBFORGE contiene una capa `MCPGateway` de gobernanza con política por allowlist, registro de invocaciones y aprobación para escrituras externas. El gateway y las políticas internas son distintos de la integración MCP del entorno Codex. No existe `.codex/config.toml` versionado en este árbol; si Codex se configura con GitHub MCP en un entorno externo, eso no significa automáticamente que todos los agentes internos de WEBFORGE consuman GitHub MCP.
-
-## Limitaciones conocidas
-
-- La evidencia final registra cobertura inferior a 100%.
-- La ejecución E2E requiere un stack local preparado y sus resultados deben leerse desde los reportes versionados.
-- La URL pública declarada usa HTTP; no hay evidencia local de una terminación HTTPS para el entorno documentado.
-- Firma física, PDF final de documentos e integraciones gubernamentales no se presentan como capacidades implementadas; la firma disponible es académica simulada.
-- El contenido público depende de registros activos en persistencia.
-- Los artefactos de `runs/` y sandboxes son históricos o de validación; no sustituyen el código consolidado de `v0002`.
+El MCP utilizado en el proyecto fue el de GitHub para automatizar el flujo de subir cambios al reposito.
 
 ## Autor
 

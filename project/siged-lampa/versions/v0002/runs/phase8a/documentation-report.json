@@ -1,0 +1,37 @@
+{
+  "phase": "8A",
+  "documents": [
+    {
+      "path": "docs/DEPLOYMENT_GITHUB_ACTIONS.md",
+      "size_bytes": null,
+      "covers": ["architecture", "release structure", "concurrency", "triggers", "required secrets", "security"],
+      "complete": true
+    },
+    {
+      "path": "docs/GITHUB_SECRETS.md",
+      "size_bytes": null,
+      "covers": ["GitHub Secrets (EC2_HOST, EC2_USER, EC2_SSH_KEY)", "EC2 env vars (not in GitHub)", "security rules", "env vars table"],
+      "complete": true
+    },
+    {
+      "path": "docs/EC2_INITIAL_SETUP.md",
+      "size_bytes": null,
+      "covers": ["Docker install", "Docker Compose install", "directory creation", "env file generation", "security groups", "SSH verification"],
+      "complete": true
+    },
+    {
+      "path": "docs/ROLLBACK.md",
+      "size_bytes": null,
+      "covers": ["automatic rollback", "manual rollback", "migration recovery", "database restore", "persistence notes"],
+      "complete": true
+    },
+    {
+      "path": "docs/RUNBOOK_OPERACIONAL.md",
+      "size_bytes": null,
+      "covers": ["deployment verification", "monitoring (logs, stats, disk)", "backup/restore", "common incidents", "maintenance (vacuum, cleanup, log rotation)"],
+      "complete": true
+    }
+  ],
+  "total": 5,
+  "status": "COMPLETE"
+}

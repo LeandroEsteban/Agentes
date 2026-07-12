@@ -1,0 +1,82 @@
+{
+  "schema_version": "webforge.phase5c_report.v1",
+  "status": "blocked",
+  "phase5_status": "blocked",
+  "initial_state": {
+    "phase5b_status": "pass_with_open_findings",
+    "phase5c_status": "in_progress",
+    "phase5_status": "blocked"
+  },
+  "endpoints": {
+    "original": {
+      "total": 40,
+      "implemented": 40
+    },
+    "supplemental": {
+      "total": 9,
+      "implemented": 0
+    },
+    "legacy": {
+      "total": 1,
+      "implemented": 1,
+      "deprecated": 1
+    },
+    "technical": {
+      "total": 2,
+      "implemented": 2
+    }
+  },
+  "openapi": {
+    "valid": false,
+    "operations": 15,
+    "router_match": 9
+  },
+  "rules": {
+    "total": 60,
+    "implemented": 35,
+    "deferred": 0,
+    "pending": 25
+  },
+  "validations": {
+    "total": 100,
+    "implemented": 55,
+    "deferred": 2,
+    "pending": 43
+  },
+  "tests": {
+    "passed": 132,
+    "failed": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "coverage": {
+    "lines": 80.35,
+    "statements": 80.35,
+    "functions": 85.34,
+    "branches": 83.5
+  },
+  "postgresql": {
+    "healthy": true,
+    "functional_tables": 40,
+    "migrations_pending": 0
+  },
+  "gates": {
+    "pass": 3,
+    "pass_with_limitation": 5,
+    "blocked": 4
+  },
+  "handoffs": {
+    "backend_frontend": "rejected",
+    "backend_qa": "rejected"
+  },
+  "critical_blockers": [
+    "F5-OPEN-001",
+    "F5-OPEN-002",
+    "F5-OPEN-003",
+    "F5-OPEN-004",
+    "F5-OPEN-005"
+  ],
+  "accepted_limitations": [
+    "F5-OPEN-006"
+  ]
+}

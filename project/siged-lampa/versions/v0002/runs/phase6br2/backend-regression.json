@@ -1,0 +1,8 @@
+{
+  "schema": "webforge.backend_regression.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "methodology": "Backend regression requires PostgreSQL QA stack. Not available in this session.",
+  "status": "not_executed",
+  "note": "Backend regression deferred to Phase 7 when QA stack is available",
+  "expected_checks": ["npm run check", "npm test", "npm run test:coverage", "GET /health", "GET /health/database"]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "defect_id": "QA-DEF-AUTH-001",
+  "checks": [
+    "POST /api/v1/auth/internal-login successful",
+    "GET /api/v1/profile/me successful",
+    "URL excludes /intranet/login",
+    "authenticated-user visible",
+    "actor username and permissions verified from real session"
+  ],
+  "actors": [
+    "internalDocumentUser",
+    "reviewer",
+    "approver",
+    "signer",
+    "internalUserWithoutPermission"
+  ]
+}

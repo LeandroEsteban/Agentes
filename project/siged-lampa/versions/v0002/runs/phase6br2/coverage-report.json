@@ -1,0 +1,23 @@
+{
+  "schema": "webforge.coverage_report.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "coverage": {
+    "lines": 87.19,
+    "statements": 87.19,
+    "functions": 65.59,
+    "branches": 76.58
+  },
+  "thresholds": {
+    "lines": { "required": 70, "actual": 87.19, "pass": true },
+    "statements": { "required": 70, "actual": 87.19, "pass": true },
+    "functions": { "required": 65, "actual": 65.59, "pass": true },
+    "branches": { "required": 65, "actual": 76.58, "pass": true }
+  },
+  "files_improved": [
+    { "file": "src/features/auth/ProfilePage.tsx", "before": "19.11%", "after": "100%", "status": "covered" },
+    { "file": "src/api/client.ts", "before": "18.51%", "after": "96.29%", "status": "covered" },
+    { "file": "src/auth/require-auth.tsx", "before": "100% lines/0% funcs", "after": "100%/100%", "status": "covered" },
+    { "file": "src/auth/require-actor.tsx", "before": "100% lines/0% funcs", "after": "100%/100%", "status": "covered" },
+    { "file": "src/auth/require-permission.tsx", "before": "100% lines/0% funcs", "after": "100%/100%", "status": "covered" }
+  ]
+}

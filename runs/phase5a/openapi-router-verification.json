@@ -1,0 +1,7 @@
+{
+  "status": "blocked",
+  "documented_operations": 15,
+  "mounted_normalized_operations": 40,
+  "result": "OpenAPI requires a complete operation, schema, security and response update before consistency can pass.",
+  "missing_or_incomplete": 25
+}

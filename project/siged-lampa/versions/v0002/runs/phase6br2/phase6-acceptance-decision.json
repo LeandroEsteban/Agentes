@@ -1,0 +1,18 @@
+{
+  "phase": "6",
+  "status": "pass_with_limitations",
+  "gates": {
+    "pass": 11,
+    "pass_with_limitation": 3,
+    "blocked": 0
+  },
+  "critical_blockers": [],
+  "accepted_limitations": [
+    "FE-LIM-003: E2E full suite (10 flows) not executed against QA stack",
+    "FE-LIM-004: React key warnings in DataTable (non-blocking)",
+    "FE-LIM-005: Backend regression not executed (no QA stack available)",
+    "FE-LIM-006: Baseline histórico unverifiable per Phase 6A"
+  ],
+  "handoff_status": "accepted_with_limitations",
+  "recommended_next_phase": "7"
+}

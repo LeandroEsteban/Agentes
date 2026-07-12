@@ -1,0 +1,18 @@
+﻿{
+    "defects":  [
+                    {
+                        "id":  "QA-DEF-E2E-08",
+                        "status":  "resolved"
+                    },
+                    {
+                        "id":  "QA-DEF-E2E-09",
+                        "status":  "resolved"
+                    },
+                    {
+                        "id":  "QA-DEF-E2E-10",
+                        "status":  "resolved"
+                    }
+                ],
+    "open_high":  0,
+    "open_critical":  0
+}

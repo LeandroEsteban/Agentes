@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ERP Aurora</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell" data-ready="false">
+      <aside class="sidebar" aria-label="Navegacion principal">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">ERP</span>
+          <div>
+            <strong>ERP Aurora</strong>
+            <small>Gestión empresarial</small>
+          </div>
+        </div>
+        <div class="sidebar-search">
+          <input id="screen-filter" placeholder="Buscar módulo" autocomplete="off" />
+        </div>
+        <nav id="nav-list" class="nav-list" aria-label="Pantallas ERP"></nav>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <button id="mobile-menu" class="icon-button" aria-label="Abrir navegacion">☰</button>
+          <div>
+            <p class="kicker" id="screen-module">ERP</p>
+            <h1 id="screen-title">Cargando</h1>
+          </div>
+          <div class="topbar-actions">
+            <span id="session-status" class="pill">Sesion publica</span>
+            <span id="sync-status" class="pill success">Operativo</span>
+          </div>
+        </header>
+
+        <main id="screen-root" aria-live="polite"></main>
+        <div id="coverage-markers" hidden></div>
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+    <script type="module" src="./assets/app.js"></script>
+  </body>
+</html>

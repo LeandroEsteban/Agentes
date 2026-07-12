@@ -1,0 +1,93 @@
+{
+  "phase": "8A",
+  "traceability": [
+    {
+      "step": "validate",
+      "workflow_job": "validate",
+      "scripts": ["npm ci, npm run lint, npm test, npm run build (frontend)", "npm ci, npm run check, npm test (backend)"],
+      "artifacts": [],
+      "verification": "exit code 0",
+      "expected_evidence": "frontend lint: 0 errors, 166/166 tests PASS; backend: 134/134 tests PASS"
+    },
+    {
+      "step": "package",
+      "workflow_job": "package",
+      "scripts": ["tar czf with exclusions"],
+      "artifacts": ["siged-lampa-release-<run_number>.tar.gz"],
+      "verification": "exit code 0, artifact uploaded",
+      "expected_evidence": "tarball exists, size < 10MB, 0 secrets included"
+    },
+    {
+      "step": "SSH setup",
+      "workflow_job": "deploy",
+      "scripts": ["ssh-keyscan", "chmod 600"],
+      "artifacts": ["~/.ssh/ec2_key"],
+      "verification": "SSH connection successful",
+      "expected_evidence": "known_hosts updated, key loaded"
+    },
+    {
+      "step": "transfer",
+      "workflow_job": "deploy",
+      "scripts": ["scp", "tar xzf"],
+      "artifacts": ["/opt/siged-lampa/releases/<release-id>/"],
+      "verification": "exit code 0, dir exists",
+      "expected_evidence": "release directory populated"
+    },
+    {
+      "step": "validate environment",
+      "workflow_job": "deploy",
+      "scripts": ["infra/deployment/scripts/validate-environment.sh"],
+      "artifacts": [],
+      "verification": "VALIDATE_ENVIRONMENT_PASS",
+      "expected_evidence": "shared .env.production exists, compose config valid"
+    },
+    {
+      "step": "deploy",
+      "workflow_job": "deploy",
+      "scripts": ["infra/deployment/scripts/deploy-release.sh"],
+      "artifacts": ["Docker images built"],
+      "verification": "DEPLOY_COMPLETE",
+      "expected_evidence": "all 3 containers running, postgres healthy"
+    },
+    {
+      "step": "migrations",
+      "workflow_job": "deploy",
+      "scripts": ["infra/deployment/scripts/run-migrations.sh"],
+      "artifacts": ["/opt/siged-lampa/backups/pre-migration-<release>.sql"],
+      "verification": "MIGRATIONS_COMPLETE",
+      "expected_evidence": "17 migrations applied, 5 seeds applied"
+    },
+    {
+      "step": "health check",
+      "workflow_job": "deploy",
+      "scripts": ["infra/deployment/scripts/health-check.sh"],
+      "artifacts": [],
+      "verification": "HEALTH_CHECK_PASS",
+      "expected_evidence": "postgres=healthy, backend=healthy, frontend=healthy"
+    },
+    {
+      "step": "smoke test",
+      "workflow_job": "deploy",
+      "scripts": ["infra/deployment/scripts/smoke-test.sh"],
+      "artifacts": [],
+      "verification": "SMOKE_TEST_PASS",
+      "expected_evidence": "5 smoke checks PASS, all HTTP 200"
+    },
+    {
+      "step": "finalize",
+      "workflow_job": "deploy",
+      "scripts": ["symlink update", "infra/deployment/scripts/cleanup-releases.sh"],
+      "artifacts": ["current symlink updated"],
+      "verification": "exit code 0",
+      "expected_evidence": "current → <release-id>, old releases cleaned"
+    },
+    {
+      "step": "rollback",
+      "workflow_job": "deploy",
+      "scripts": ["infra/deployment/scripts/rollback.sh"],
+      "artifacts": ["failed release preserved"],
+      "verification": "ROLLBACK_COMPLETE",
+      "expected_evidence": "previous release restored, health verified"
+    }
+  ]
+}

@@ -1,0 +1,353 @@
+{
+  "status": "blocked",
+  "openapi_operations": 15,
+  "router_operations": 87,
+  "undocumented_router_operations": [
+    {
+      "method": "GET",
+      "path": "/api/v1/citizen/oirs/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/citizen/oirs/:id/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/citizen/requests"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/citizen/requests/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/citizen/requests/:id/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/correspondence"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/correspondence/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/correspondence/:id/details"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/correspondence/:id/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/departments"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/document-types"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents/:id/approvals"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents/:id/attachments"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents/:id/attachments/:attachmentId/download"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents/:id/comments"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents/:id/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents/:id/reviews"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents/:id/signatures"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents/:id/versions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/expedients"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/expedients/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/expedients/:id/details"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/expedients/:id/events"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/expedients/:id/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/oirs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/profile/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/public/calendar"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/public/news"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/public/news/:slug"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/public/notices"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/public/oirs/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/public/oirs/:id/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/public/tramites/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/dashboard"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/roles"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/users"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/correspondence/:id"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/expedients/:id"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/notifications/:id/read"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/oirs/:id/route"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/oirs/:id/status"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/approvals/:id/decision"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/recover"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/citizen/oirs/:id/messages"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/citizen/requests"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/citizen/requests/:id/cancel"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/correspondence"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/correspondence/:id/close"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/correspondence/:id/link-response"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/correspondence/:id/route"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/departments"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/document-types"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/documents"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/documents/:id/approvals"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/documents/:id/attachments"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/documents/:id/comments"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/documents/:id/signatures"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/documents/:id/submit-review"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/documents/:id/versions"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/expedients"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/expedients/:id/close"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/expedients/:id/documents"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/expedients/:id/events"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/oirs/:id/reply"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/public/oirs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/public/oirs/:id/messages"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/public/tramites/:id/requests"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/reviews/:id/reply"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/users"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/admin/external-entities/:id"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/admin/procedure-types/:id"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/documents/:id"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/profile/me"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/roles/:id/permissions"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/users/:id"
+    }
+  ],
+  "documented_without_router": [
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/health"
+    },
+    {
+      "method": "GET",
+      "path": "/health/database"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/notifications/{id}/read"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/admin/external-entities/{id}"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/admin/procedure-types/{id}"
+    }
+  ],
+  "duplicate_codes": [],
+  "legacy_deprecated": true,
+  "operation_schema_gaps": [
+    "OpenAPI response/request schemas are incomplete."
+  ],
+  "security_gaps": [
+    "Internal and citizen schemes are not differentiated."
+  ]
+}

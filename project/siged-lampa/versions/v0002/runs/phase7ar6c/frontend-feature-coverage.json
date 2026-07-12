@@ -1,0 +1,55 @@
+﻿{
+    "features":  [
+                     {
+                         "name":  "auth",
+                         "coverage_pct":  100
+                     },
+                     {
+                         "name":  "ciudadano",
+                         "coverage_pct":  89.14
+                     },
+                     {
+                         "name":  "OIRS",
+                         "coverage_pct":  84.07
+                     },
+                     {
+                         "name":  "documentos",
+                         "coverage_pct":  80.5
+                     },
+                     {
+                         "name":  "revisiones",
+                         "coverage_pct":  96.9
+                     },
+                     {
+                         "name":  "aprobaciones",
+                         "coverage_pct":  98.98
+                     },
+                     {
+                         "name":  "firma",
+                         "coverage_pct":  98.55
+                     },
+                     {
+                         "name":  "expedientes",
+                         "coverage_pct":  88.26
+                     },
+                     {
+                         "name":  "correspondencia",
+                         "coverage_pct":  100
+                     },
+                     {
+                         "name":  "administracion",
+                         "coverage_pct":  93.28
+                     },
+                     {
+                         "name":  "contenido publico",
+                         "coverage_pct":  100
+                     },
+                     {
+                         "name":  "reportes",
+                         "coverage_pct":  87.27
+                     }
+                 ],
+    "zero_coverage_features":  [
+
+                               ]
+}

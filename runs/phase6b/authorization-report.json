@@ -1,0 +1,9 @@
+{
+  "status": "partial",
+  "guards": [
+    "RequireAuth",
+    "RequireActor",
+    "RequirePermission"
+  ],
+  "evidence": "catalog guards are present; route integration tests missing"
+}

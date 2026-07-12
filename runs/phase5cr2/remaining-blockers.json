@@ -1,0 +1,20 @@
+{
+  "phase5cr1": "pass",
+  "phase5c": "blocked",
+  "phase5": "blocked",
+  "blockers": [
+    {
+      "finding_id": "F5-COVERAGE-001",
+      "category": "coverage",
+      "description": "Lines/statements coverage is below the 85% target.",
+      "severity": "medium",
+      "status": "open",
+      "resolution_phase": "7",
+      "blocks_phase5_acceptance": false
+    }
+  ],
+  "pending_rules": [],
+  "pending_validations": [],
+  "coverage_below_85": true,
+  "handoffs": "not accepted"
+}

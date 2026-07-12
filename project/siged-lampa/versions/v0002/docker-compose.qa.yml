@@ -1,0 +1,45 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: siged-db-qa
+    environment:
+      POSTGRES_DB: siged_lampa_qa
+      POSTGRES_USER: siged_qa
+      POSTGRES_PASSWORD: siged_qa_2026_secret
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata_qa:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U siged_qa -d siged_lampa_qa"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+    restart: unless-stopped
+    networks:
+      - siged-qa-net
+
+  migrator:
+    image: node:20-alpine
+    container_name: siged-migrator-qa
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://siged_qa:siged_qa_2026_secret@postgres:5432/siged_lampa_qa
+      APP_ENV: qa
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: >
+      sh -c "npm ci --ignore-scripts && cd /app/database && node scripts/migrate.js && node scripts/seed.js"
+    networks:
+      - siged-qa-net
+
+networks:
+  siged-qa-net:
+    driver: bridge
+
+volumes:
+  pgdata_qa:

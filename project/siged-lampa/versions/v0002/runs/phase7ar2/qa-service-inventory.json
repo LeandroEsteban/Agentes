@@ -1,0 +1,18 @@
+{
+    "postgresql":  {
+                       "port":  55432,
+                       "host":  "127.0.0.1",
+                       "healthy":  true,
+                       "container":  "siged-lampa-qa-db"
+                   },
+    "backend":  {
+                    "healthy":  true,
+                    "url":  "http://127.0.0.1:3100",
+                    "pid":  17604
+                },
+    "frontend":  {
+                     "healthy":  true,
+                     "url":  "http://127.0.0.1:4173",
+                     "pid":  14544
+                 }
+}

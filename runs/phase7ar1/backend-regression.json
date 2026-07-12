@@ -1,0 +1,13 @@
+{
+  "runner": "node:test",
+  "environment": "qa",
+  "database": "postgresql",
+  "suites": {
+    "unit": { "passed": 5, "failed": 0, "skipped": 0, "todo": 0 },
+    "api": { "passed": 122, "failed": 0, "skipped": 0, "todo": 0 },
+    "integration": { "passed": 2, "failed": 0, "skipped": 0, "todo": 0 },
+    "smoke": { "passed": 3, "failed": 0, "skipped": 0, "todo": 0 }
+  },
+  "total": { "passed": 132, "failed": 0, "skipped": 0, "todo": 0 },
+  "generated_at": "2026-07-11T19:25:00.000Z"
+}

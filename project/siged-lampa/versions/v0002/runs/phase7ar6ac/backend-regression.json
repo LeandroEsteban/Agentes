@@ -1,0 +1,1 @@
+{"status":"pass","commands":["npm.cmd run check","npm.cmd test"],"postgresql":"qa Docker PostgreSQL","tests":{"passed":134,"failed":0,"skipped":0,"todo":0}}

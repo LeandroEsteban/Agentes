@@ -1,0 +1,17 @@
+{
+  "schema": "webforge.frontend_regression.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "lint": { "status": "pass", "errors": 0, "warnings": 0 },
+  "typescript": { "status": "pass", "errors": 0 },
+  "build": { "status": "pass", "modules": 156, "duration": "3.01s" },
+  "tests": { "passed": 158, "failed": 0, "files": 12, "duration": "10.51s" },
+  "coverage": {
+    "lines": 87.19,
+    "statements": 87.19,
+    "functions": 65.59,
+    "branches": 76.58,
+    "thresholds_met": true
+  },
+  "regression": "none",
+  "status": "pass"
+}

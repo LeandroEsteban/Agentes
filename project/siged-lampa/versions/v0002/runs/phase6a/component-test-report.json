@@ -1,0 +1,1 @@
+{"runner":"vitest","status":"pass","tests":2,"components":["LoadingState","EmptyState","ErrorState","DataTable","Pagination","Timeline","ConfirmDialog"],"limitations":"Faltan pruebas de formularios y cliente API."}

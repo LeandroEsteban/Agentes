@@ -1,0 +1,20 @@
+{
+  "schema": "webforge.validation_scope_resolution.v1",
+  "total_deferred_validations": 2,
+  "resolved": 2,
+  "pending": 0,
+  "resolutions": [
+    {
+      "validation_id": "VAL-030",
+      "resolution": "not_applicable_to_frontend",
+      "responsible_phase": "7",
+      "blocks_phase6b": false
+    },
+    {
+      "validation_id": "VAL-038",
+      "resolution": "superseded_by_accepted_architecture",
+      "responsible_phase": "7",
+      "blocks_phase6b": false
+    }
+  ]
+}

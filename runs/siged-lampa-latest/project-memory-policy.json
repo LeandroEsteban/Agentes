@@ -1,0 +1,13 @@
+{
+  "factory_learning_write_allowed": false,
+  "factory_memory_read_allowed": false,
+  "mode": "project_scoped_propose_only",
+  "project_id": "siged-lampa",
+  "project_learning_root": "project/siged-lampa/learning",
+  "project_memory_root": "project/siged-lampa/memory",
+  "sandbox_memory_roots": {
+    "DEV": "project/siged-lampa/sandboxes/DEV/memory",
+    "QA": "project/siged-lampa/sandboxes/QA/memory"
+  },
+  "shared_with_factory": false
+}

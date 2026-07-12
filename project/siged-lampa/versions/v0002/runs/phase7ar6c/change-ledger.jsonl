@@ -1,0 +1,26 @@
+﻿[
+    {
+        "reason":  "build TS error",
+        "timestamp":  "2026-07-12T01:13:19.7703668-04:00",
+        "file":  "correspondence-fixtures.ts",
+        "change":  "Fixed departments type to include code/name fields"
+    },
+    {
+        "reason":  "Python test fixture update",
+        "timestamp":  "2026-07-12T01:13:19.7703668-04:00",
+        "file":  "test_migrations.py",
+        "change":  "Updated expected migration count 13-\u003e17, ordering, content check"
+    },
+    {
+        "reason":  "Python test fixture update",
+        "timestamp":  "2026-07-12T01:13:19.7703668-04:00",
+        "file":  "test_seeds.py",
+        "change":  "Updated expected seed count 4-\u003e5"
+    },
+    {
+        "reason":  "Python test fixture update",
+        "timestamp":  "2026-07-12T01:13:19.7703668-04:00",
+        "file":  "test_persistence.py",
+        "change":  "Updated async function detection, repository pattern check"
+    }
+]

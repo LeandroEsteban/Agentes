@@ -1,0 +1,90 @@
+﻿{
+    "flows":  [
+                  {
+                      "tests":  [
+                                    "login ciudadano, listar tramites, abrir detalle, crear solicitud, consultar, verificar notificacion, logout"
+                                ],
+                      "status":  "pass",
+                      "id":  "E2E-01",
+                      "feature":  "ciudadano y solicitudes"
+                  },
+                  {
+                      "tests":  [
+                                    "crear OIRS anonima, consultar tracking y agregar mensaje"
+                                ],
+                      "status":  "pass",
+                      "id":  "E2E-02",
+                      "feature":  "OIRS"
+                  },
+                  {
+                      "tests":  [
+                                    "crea documento, version y anexo mediante UI real"
+                                ],
+                      "status":  "pass",
+                      "id":  "E2E-03",
+                      "feature":  "documentos"
+                  },
+                  {
+                      "tests":  [
+                                    "responde revision asignada y aprueba solicitud pendiente"
+                                ],
+                      "status":  "pass",
+                      "id":  "E2E-04",
+                      "feature":  "revision y aprobacion"
+                  },
+                  {
+                      "tests":  [
+                                    "firma un documento aprobado con perfil academico real"
+                                ],
+                      "status":  "pass",
+                      "id":  "E2E-05",
+                      "feature":  "firma"
+                  },
+                  {
+                      "tests":  [
+                                    "crear expediente por UI, asociar documento via API, timeline, cerrar",
+                                    "negativo: asunto vacio muestra error"
+                                ],
+                      "status":  "pass",
+                      "id":  "E2E-06",
+                      "feature":  "expedientes"
+                  },
+                  {
+                      "tests":  [
+                                    "crear via API, ver listado, ruta y cierre",
+                                    "negativo: remitente vacio falla"
+                                ],
+                      "status":  "pass",
+                      "id":  "E2E-07",
+                      "feature":  "correspondencia"
+                  },
+                  {
+                      "tests":  [
+                                    "admin crea tipo tramite y entidad externa via API, navega listados UI",
+                                    "negativo: codigo duplicado 409"
+                                ],
+                      "status":  "pass",
+                      "id":  "E2E-08",
+                      "feature":  "administracion"
+                  },
+                  {
+                      "tests":  [
+                                    "noticia: borrador no visible, publicar visible, archivar no visible",
+                                    "negativo: slug invalido 400"
+                                ],
+                      "status":  "pass",
+                      "id":  "E2E-09",
+                      "feature":  "contenido publico"
+                  },
+                  {
+                      "tests":  [
+                                    "visitante redirigido a login, 404, funcionario sin permiso bloqueado",
+                                    "ciudadano navega portal sin login",
+                                    "portada publica carga sin autenticacion"
+                                ],
+                      "status":  "pass",
+                      "id":  "E2E-10",
+                      "feature":  "guards y permisos"
+                  }
+              ]
+}

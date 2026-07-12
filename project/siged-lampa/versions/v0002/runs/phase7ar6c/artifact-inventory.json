@@ -1,0 +1,30 @@
+﻿{
+    "generated_at":  "2026-07-12T01:13:11.0967002-04:00",
+    "reports":  [
+                    "phase7ar6c-report.json",
+                    "phase7ar6c-summary.md",
+                    "r6b-close-verification.json",
+                    "recent-fix-contract-review.json",
+                    "qa-service-inventory.json",
+                    "postgres-verification.json",
+                    "health-report.json",
+                    "infrastructure-test-report.json",
+                    "e2e-flow-matrix.json",
+                    "e2e-execution-report.json",
+                    "e2e-stability-report.json",
+                    "console-network-report.json",
+                    "frontend-regression.json",
+                    "frontend-coverage.json",
+                    "frontend-feature-coverage.json",
+                    "backend-regression.json",
+                    "backend-coverage.json",
+                    "contract-verification.json",
+                    "security-regression.json",
+                    "webforge-verification.json",
+                    "traceability-report.json",
+                    "phase7a-defect-register.json",
+                    "final-gates.json",
+                    "phase7a-acceptance-decision.json",
+                    "blockers-for-phase7b.json"
+                ]
+}

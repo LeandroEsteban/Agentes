@@ -1,0 +1,439 @@
+{
+  "generated_at": "2026-07-11T15:46:18Z",
+  "items": [
+    {
+      "code": "FF-01",
+      "description": "Login intranet",
+      "module": "M01",
+      "name": "Login intranet",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 283,
+        "line_start": 283,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-02",
+      "description": "Login portal ciudadano",
+      "module": "M01",
+      "name": "Login portal ciudadano",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 284,
+        "line_start": 284,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-03",
+      "description": "Recuperacion de acceso",
+      "module": "M01",
+      "name": "Recuperacion de acceso",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 285,
+        "line_start": 285,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-04",
+      "description": "Gestion de usuarios",
+      "module": "M02",
+      "name": "Gestion de usuarios",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 286,
+        "line_start": 286,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-05",
+      "description": "Gestion de roles y permisos",
+      "module": "M02",
+      "name": "Gestion de roles y permisos",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 287,
+        "line_start": 287,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-06",
+      "description": "Gestion de departamentos",
+      "module": "M02",
+      "name": "Gestion de departamentos",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 288,
+        "line_start": 288,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-07",
+      "description": "Gestion de entidades externas",
+      "module": "M02",
+      "name": "Gestion de entidades externas",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 289,
+        "line_start": 289,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-08",
+      "description": "Gestion de tipos documentales",
+      "module": "M02",
+      "name": "Gestion de tipos documentales",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 290,
+        "line_start": 290,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-09",
+      "description": "Creacion de documento",
+      "module": "M03",
+      "name": "Creacion de documento",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 291,
+        "line_start": 291,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-10",
+      "description": "Edicion de documento en borrador",
+      "module": "M03",
+      "name": "Edicion de documento en borrador",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 292,
+        "line_start": 292,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-11",
+      "description": "Adjuntar anexos",
+      "module": "M03",
+      "name": "Adjuntar anexos",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 293,
+        "line_start": 293,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-12",
+      "description": "Versionar documento",
+      "module": "M03",
+      "name": "Versionar documento",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 294,
+        "line_start": 294,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-13",
+      "description": "Solicitar revision",
+      "module": "M04",
+      "name": "Solicitar revision",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 295,
+        "line_start": 295,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-14",
+      "description": "Responder revision",
+      "module": "M04",
+      "name": "Responder revision",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 296,
+        "line_start": 296,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-15",
+      "description": "Solicitar visto bueno",
+      "module": "M04",
+      "name": "Solicitar visto bueno",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 297,
+        "line_start": 297,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-16",
+      "description": "Ejecutar firma simulada",
+      "module": "M04",
+      "name": "Ejecutar firma simulada",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 298,
+        "line_start": 298,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-17",
+      "description": "Cerrar documento finalizado",
+      "module": "M04",
+      "name": "Cerrar documento finalizado",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 299,
+        "line_start": 299,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-18",
+      "description": "Crear expediente",
+      "module": "M05",
+      "name": "Crear expediente",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 300,
+        "line_start": 300,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-19",
+      "description": "Vincular documento a expediente",
+      "module": "M05",
+      "name": "Vincular documento a expediente",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 301,
+        "line_start": 301,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-20",
+      "description": "Consultar timeline de expediente",
+      "module": "M05",
+      "name": "Consultar timeline de expediente",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 302,
+        "line_start": 302,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-21",
+      "description": "Registrar correspondencia",
+      "module": "M06",
+      "name": "Registrar correspondencia",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 303,
+        "line_start": 303,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-22",
+      "description": "Derivar correspondencia",
+      "module": "M06",
+      "name": "Derivar correspondencia",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 304,
+        "line_start": 304,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-23",
+      "description": "Vincular respuesta documental",
+      "module": "M06",
+      "name": "Vincular respuesta documental",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 305,
+        "line_start": 305,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-24",
+      "description": "Publicar tramite ciudadano",
+      "module": "M07",
+      "name": "Publicar tramite ciudadano",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 306,
+        "line_start": 306,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-25",
+      "description": "Iniciar solicitud ciudadana",
+      "module": "M07",
+      "name": "Iniciar solicitud ciudadana",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 307,
+        "line_start": 307,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-26",
+      "description": "Consultar estado ciudadano",
+      "module": "M07",
+      "name": "Consultar estado ciudadano",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 308,
+        "line_start": 308,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-27",
+      "description": "Registrar OIRS",
+      "module": "M08",
+      "name": "Registrar OIRS",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 309,
+        "line_start": 309,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-28",
+      "description": "Gestionar respuesta OIRS",
+      "module": "M08",
+      "name": "Gestionar respuesta OIRS",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 310,
+        "line_start": 310,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-29",
+      "description": "Visualizar dashboard",
+      "module": "M09",
+      "name": "Visualizar dashboard",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 311,
+        "line_start": 311,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    },
+    {
+      "code": "FF-30",
+      "description": "Emitir notificaciones y alertas",
+      "module": "M10",
+      "name": "Emitir notificaciones y alertas",
+      "normalization_status": "parsed",
+      "relations": {},
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 312,
+        "line_start": 312,
+        "section": "10. Catalogo de flujos funcionales"
+      }
+    }
+  ],
+  "project_id": "siged-lampa",
+  "schema_version": "webforge.catalog.workflows.v1",
+  "source_documents": [
+    "Especificacion_Funcional_SIGED_Lampa.md",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "Inventario_Endpoints_SIGED_Lampa.md",
+    "Modelo_ER_Detallado_SIGED_Lampa.md"
+  ],
+  "source_hashes": {
+    "Especificacion_Funcional_SIGED_Lampa.md": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24",
+    "Inventario_Endpoints_SIGED_Lampa.md": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d",
+    "Modelo_ER_Detallado_SIGED_Lampa.md": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282"
+  }
+}

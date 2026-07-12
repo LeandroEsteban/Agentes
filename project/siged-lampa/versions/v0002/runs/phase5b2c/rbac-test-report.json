@@ -1,0 +1,14 @@
+{
+  "status": "sufficient",
+  "verified_permissions": [
+    "expedients.view",
+    "expedients.create",
+    "expedients.edit",
+    "correspondence.view",
+    "correspondence.create",
+    "correspondence.edit",
+    "reports.view",
+    "public.content.manage"
+  ],
+  "gap": "No missing RBAC for phase 5B.2C scope"
+}

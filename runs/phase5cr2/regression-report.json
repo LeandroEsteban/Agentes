@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "runner": "npm test",
+  "postgresql": {
+    "persistence_mode": "postgres",
+    "database_url_configured": true
+  },
+  "exit_code": 0,
+  "suites": [
+    "unit",
+    "api",
+    "integration",
+    "smoke",
+    "5B.2A",
+    "5B.2B",
+    "5B.2C",
+    "5B.2D",
+    "5B.3",
+    "5C-R1",
+    "5C-R2"
+  ]
+}

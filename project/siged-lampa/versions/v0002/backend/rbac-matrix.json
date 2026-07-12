@@ -1,0 +1,402 @@
+{
+  "permissions": [
+    {
+      "permission": "admin.access",
+      "endpoints": [
+        "API-006"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "admin.access",
+      "endpoints": [
+        "API-007"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "admin.access",
+      "endpoints": [
+        "API-008"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "admin.access",
+      "endpoints": [
+        "API-009"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "admin.access",
+      "endpoints": [
+        "API-010"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "departments.view",
+      "endpoints": [
+        "API-011"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "departments.view",
+      "endpoints": [
+        "API-012"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.view",
+      "endpoints": [
+        "API-013"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.view",
+      "endpoints": [
+        "API-014"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.view",
+      "endpoints": [
+        "API-015"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.view",
+      "endpoints": [
+        "API-016"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.view",
+      "endpoints": [
+        "API-017"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.view",
+      "endpoints": [
+        "API-018"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.view",
+      "endpoints": [
+        "API-019"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.view",
+      "endpoints": [
+        "API-020"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.review",
+      "endpoints": [
+        "API-021"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.review",
+      "endpoints": [
+        "API-022"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.review",
+      "endpoints": [
+        "API-023"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "documents.sign",
+      "endpoints": [
+        "API-024"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "expedients.view",
+      "endpoints": [
+        "API-025"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "expedients.view",
+      "endpoints": [
+        "API-026"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "expedients.view",
+      "endpoints": [
+        "API-027"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "expedients.view",
+      "endpoints": [
+        "API-028"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "correspondence.view",
+      "endpoints": [
+        "API-029"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "correspondence.view",
+      "endpoints": [
+        "API-030"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "correspondence.view",
+      "endpoints": [
+        "API-031"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "correspondence.view",
+      "endpoints": [
+        "API-032"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    },
+    {
+      "permission": "reports.view",
+      "endpoints": [
+        "API-039"
+      ],
+      "allowed_roles": [],
+      "denied_roles": [
+        "citizen",
+        "no-token"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "missing"
+    }
+  ],
+  "phase5b2a_runtime_evidence": {
+    "source": "backend/tests/api/phase5b2a-admin-rbac.api.test.js",
+    "verified": ["users.view", "departments.view"],
+    "partial": ["users.create", "users.edit", "roles.view", "roles.edit", "departments.edit", "documents.view", "admin.access", "tramites.edit", "oirs.respond"],
+    "note": "Permisos efectivos se recuperan desde user_roles, roles, role_permissions y permissions; la matriz heredada no es autoridad para los permisos de router."
+  }
+}

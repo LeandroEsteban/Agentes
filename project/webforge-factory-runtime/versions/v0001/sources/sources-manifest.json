@@ -1,0 +1,43 @@
+{
+  "policy_id": "webforge.source_mirror.v1",
+  "project_id": "webforge-factory-runtime",
+  "source_count": 5,
+  "sources": [
+    {
+      "original_path": "C:/Users/lmata/Documents/Universidad/Agentes/Nueva Fabrica Software Web/CheckList_Implementaci\u00f3n_software-2.md",
+      "project_copy": "project/webforge-factory-runtime/sources/CheckList_Implementaci\u00f3n_software-2.md",
+      "sha256": "sha256:48d6bb22d8b419784f42d16631df7f4844512d41e0c96c7cd983b4deae3f0902",
+      "source_name": "CheckList_Implementaci\u00f3n_software-2.md",
+      "version_copy": "project/webforge-factory-runtime/versions/v0001/sources/CheckList_Implementaci\u00f3n_software-2.md"
+    },
+    {
+      "original_path": "C:/Users/lmata/Documents/Universidad/Agentes/Nueva Fabrica Software Web/Diseno_detallado_agentes_y_skills_software-2.md",
+      "project_copy": "project/webforge-factory-runtime/sources/Diseno_detallado_agentes_y_skills_software-2.md",
+      "sha256": "sha256:6992d9a88abec5e01ea4877aa65de57944645cfe0a60ad467d964e53e42512df",
+      "source_name": "Diseno_detallado_agentes_y_skills_software-2.md",
+      "version_copy": "project/webforge-factory-runtime/versions/v0001/sources/Diseno_detallado_agentes_y_skills_software-2.md"
+    },
+    {
+      "original_path": "C:/Users/lmata/Documents/Universidad/Agentes/Nueva Fabrica Software Web/Diseno_detallado_arnes_dev_legacy-2.md",
+      "project_copy": "project/webforge-factory-runtime/sources/Diseno_detallado_arnes_dev_legacy-2.md",
+      "sha256": "sha256:7294065a69b1830d5b1501eb48d6a1539b0385c392f8ed088eec6597c3c5f4fd",
+      "source_name": "Diseno_detallado_arnes_dev_legacy-2.md",
+      "version_copy": "project/webforge-factory-runtime/versions/v0001/sources/Diseno_detallado_arnes_dev_legacy-2.md"
+    },
+    {
+      "original_path": "C:/Users/lmata/Documents/Universidad/Agentes/Nueva Fabrica Software Web/Diseno_detallado_fabrica_software_SDD-2.md",
+      "project_copy": "project/webforge-factory-runtime/sources/Diseno_detallado_fabrica_software_SDD-2.md",
+      "sha256": "sha256:d13332a4c12638499469dd8c9de2fb24cc69e9d98e19d88252d6bb7c6e284247",
+      "source_name": "Diseno_detallado_fabrica_software_SDD-2.md",
+      "version_copy": "project/webforge-factory-runtime/versions/v0001/sources/Diseno_detallado_fabrica_software_SDD-2.md"
+    },
+    {
+      "original_path": "C:/Users/lmata/Documents/Universidad/Agentes/Nueva Fabrica Software Web/Diseno_detallado_orquestador_maestro_SDD-2.md",
+      "project_copy": "project/webforge-factory-runtime/sources/Diseno_detallado_orquestador_maestro_SDD-2.md",
+      "sha256": "sha256:ef1fd9279eef0dc8ffb83afc8b710324c09a6c64b1c143101813697544aa710e",
+      "source_name": "Diseno_detallado_orquestador_maestro_SDD-2.md",
+      "version_copy": "project/webforge-factory-runtime/versions/v0001/sources/Diseno_detallado_orquestador_maestro_SDD-2.md"
+    }
+  ],
+  "version": "v0001"
+}

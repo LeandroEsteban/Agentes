@@ -1,0 +1,11 @@
+{
+  "status": "partial",
+  "qa_verify": {
+    "tables": 40,
+    "migrations": 17,
+    "pending": 0
+  },
+  "infra_01": "not_executed",
+  "infra_02": "not_executed",
+  "infra_03": "not_executed"
+}

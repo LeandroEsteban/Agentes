@@ -1,0 +1,12 @@
+{
+  "schema_version": "webforge.operation_consumption.v1",
+  "phase": "6B-R1",
+  "total_operations": 98,
+  "classification": {
+    "consumed": 76,
+    "not_required_by_ui": 20,
+    "technical": 2,
+    "legacy_only": 1
+  },
+  "note": "Full classification available in frontend/frontend-operation-consumption.json. All 98 operations classified with justifications. Zero pending."
+}

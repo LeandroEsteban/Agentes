@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.*
+tests
+src/e2e
+coverage
+.git
+.gitignore
+*.md
+playwright-report
+test-results

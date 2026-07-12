@@ -1,0 +1,25 @@
+{
+  "phase": "7A",
+  "task": "console-network-errors",
+  "status": "pass_with_limitations",
+  "timestamp": "2026-07-11T19:17:00Z",
+  "errors": [
+    {
+      "severity": "high",
+      "source": "network",
+      "url": "/tramites",
+      "error": "Failed to fetch /api/v1/... - backend not running",
+      "impact": "E2E-R1-01 fails - ProceduresPage cannot load data",
+      "root_cause": "Backend server requires PostgreSQL which is not installed"
+    },
+    {
+      "severity": "high",
+      "source": "network",
+      "url": "/login",
+      "error": "Failed to fetch /api/v1/auth/... - backend not running",
+      "impact": "E2E-R1-02 fails - Login page cannot authenticate",
+      "root_cause": "Backend server requires PostgreSQL which is not installed"
+    }
+  ],
+  "resolution": "Both failures are infrastructure-related (no PostgreSQL). No code defects. Requires PostgreSQL installation to resolve."
+}

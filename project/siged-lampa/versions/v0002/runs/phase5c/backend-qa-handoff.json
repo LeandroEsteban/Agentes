@@ -1,0 +1,18 @@
+{
+  "run_id": "phase5c",
+  "from_agent": "agent.backend",
+  "status": "rejected",
+  "limitations": [
+    "F5-OPEN-001",
+    "F5-OPEN-002",
+    "F5-OPEN-003",
+    "F5-OPEN-004",
+    "F5-OPEN-005"
+  ],
+  "artifacts": {
+    "openapi.yaml": "324c0fc4b975f365d2954c8b25a3ce5616f286b1357c48eadf1de142c5011cc7",
+    "operational-endpoint-catalog.json": "bc9754f9ff2083a710c3108e779d18171ac5293049dee19b2ffc54736b57ed32"
+  },
+  "generated_at": "2026-07-11T20:48:47.232018+00:00",
+  "to_agent": "agent.qa_release"
+}

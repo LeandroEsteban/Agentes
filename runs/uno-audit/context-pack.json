@@ -1,0 +1,17 @@
+{
+  "agent_id": "agent.context_rag",
+  "context_pack_hash": "sha256:bcc03a6669a407ae221beb3bc80ae0ae183cf87c6945c2d3371caeb13815ee66",
+  "context_pack_id": "CTX-CONTEXT",
+  "mode": "minimal_snippets_only",
+  "phase": "context",
+  "source_count": 1,
+  "sources": [
+    {
+      "evidence_id": "EV-SRC-001",
+      "path": "projects/uno/especificacion_requerimientos_funcionales-2.md",
+      "redactions": 0,
+      "sha256": "sha256:8486a1e13c1a86f0f4b55d013aba9fc575966ea4c6003fa07ba02e12eeb5ee6a",
+      "snippet": "# Especificaci\u00f3n de Requerimientos Funcionales\n\n## Control de generaci\u00f3n\n\n* status: complete\n* documentos_analizados: 7 documentos cargados por el usuario, inventariados como S01-S07.\n* ciclos_ejecutados: 4 ciclos de identificaci\u00f3n/especificaci\u00f3n; C1 inventario y extracci\u00f3n inicial; C2 clasificaci\u00f3n CU/FUN/FT/RN/CH/EX/OT y deduplicaci\u00f3n; C3 recuperaci\u00f3n complementaria desde bases t\u00e9cnicas, anexos e im\u00e1genes; C4 revisi\u00f3n final sin candidatos nuevos recuperables.\n* criterios_de_exclusion: stack tecnol\u00f3gico omitido\n* convenciones_id: CU_### caso de uso; FUN_### funcionalidad; FT_### flujo/procedi"
+    }
+  ]
+}

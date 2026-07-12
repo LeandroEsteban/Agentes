@@ -1,0 +1,61 @@
+﻿{
+    "failed":  0,
+    "migrations":  [
+                       {
+                           "version":  "001_extensions",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "002_organization",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "003_security",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "004_document_catalogs",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "005_documents",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "006_document_workflows",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "007_expedients",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "008_correspondence",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "009_citizen_portal",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "010_oirs",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "011_public_content",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "012_notifications_audit",
+                           "status":  "applied"
+                       },
+                       {
+                           "version":  "013_deferred_foreign_keys",
+                           "status":  "applied"
+                       }
+                   ],
+    "total":  13,
+    "applied":  13,
+    "skipped":  0,
+    "status":  "pass"
+}

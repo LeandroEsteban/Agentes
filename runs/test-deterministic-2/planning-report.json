@@ -1,0 +1,109 @@
+{
+  "schema_version": "webforge.planning_report.v1",
+  "project_id": "siged-lampa",
+  "project_version": "v0002",
+  "status": "pass",
+  "decisions": {
+    "total": 16,
+    "accepted": 16,
+    "deferred": 0,
+    "proposed": 0
+  },
+  "agents": {
+    "total": 6,
+    "valid": 6
+  },
+  "tasks": {
+    "total": 59,
+    "by_agent": {
+      "agent.refinement": 3,
+      "agent.architecture": 8,
+      "agent.database": 19,
+      "agent.backend": 12,
+      "agent.frontend": 10,
+      "agent.qa_release": 7
+    },
+    "by_phase": {
+      "normalization": 3,
+      "architecture": 8,
+      "database": 19,
+      "backend": 12,
+      "frontend": 10,
+      "qa": 6,
+      "release": 1
+    },
+    "by_priority": {
+      "critical": 17,
+      "high": 35,
+      "medium": 7
+    }
+  },
+  "dag": {
+    "acyclic": true,
+    "nodes": 59,
+    "edges": 76,
+    "orphan_nodes": []
+  },
+  "handoffs": {
+    "total": 10,
+    "valid": 10
+  },
+  "gates": [
+    {
+      "gate_id": "GATE-ARCH-001",
+      "name": "Sources Normalized",
+      "passed": true,
+      "message": "All sources normalized with 0 blocking findings"
+    },
+    {
+      "gate_id": "GATE-ARCH-002",
+      "name": "Critical Decisions Accepted",
+      "passed": true,
+      "message": "All 16 critical decisions accepted"
+    },
+    {
+      "gate_id": "GATE-ARCH-003",
+      "name": "Agents Valid",
+      "passed": true,
+      "message": "All 6 agents valid"
+    },
+    {
+      "gate_id": "GATE-ARCH-004",
+      "name": "Tasks Valid",
+      "passed": true,
+      "message": "All 59 tasks valid"
+    },
+    {
+      "gate_id": "GATE-ARCH-005",
+      "name": "DAG Acyclic",
+      "passed": true,
+      "message": "DAG is acyclic with all dependencies valid"
+    },
+    {
+      "gate_id": "GATE-ARCH-006",
+      "name": "Handoffs Valid",
+      "passed": true,
+      "message": "All 10 handoffs valid"
+    },
+    {
+      "gate_id": "GATE-ARCH-007",
+      "name": "Baseline Preserved",
+      "passed": true,
+      "message": "Baseline preserved"
+    }
+  ],
+  "baseline_preserved": true,
+  "generated_files": [
+    "decisions.json",
+    "architecture.json",
+    "agents.json",
+    "contracts.json",
+    "tasks.json",
+    "task-dag.json",
+    "handoff-plan.json",
+    "gate-results.json",
+    "agent-ledger.jsonl",
+    "handoff-ledger.jsonl",
+    "planning-ledger.jsonl"
+  ]
+}

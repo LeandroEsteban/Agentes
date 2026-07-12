@@ -1,0 +1,13 @@
+{
+  "schema": "webforge.administration_report.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "pages": {
+    "users": { "tested": true, "pass": true, "tests": 5 },
+    "roles": { "tested": true, "pass": true, "tests": 3 },
+    "departments": { "tested": true, "pass": true, "tests": 3 },
+    "document_types": { "tested": true, "pass": true, "tests": 2 },
+    "procedure_types": { "tested": true, "pass": true, "tests": 4 },
+    "external_entities": { "tested": true, "pass": true, "tests": 1 }
+  },
+  "status": "pass"
+}

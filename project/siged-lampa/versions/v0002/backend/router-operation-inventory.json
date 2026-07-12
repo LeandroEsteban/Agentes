@@ -1,0 +1,1552 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/v1/admin/external-entities",
+    "router_path": "modules/external-entities/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/external-entities/controller.js",
+    "handler": "list",
+    "module": "external-entities"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/admin/external-entities",
+    "router_path": "modules/external-entities/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/external-entities/controller.js",
+    "handler": "create",
+    "module": "external-entities"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/admin/external-entities/{id}",
+    "router_path": "modules/external-entities/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/external-entities/controller.js",
+    "handler": "update",
+    "module": "external-entities"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/admin/procedure-types",
+    "router_path": "modules/procedures/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "tramites.edit"
+    ],
+    "controller": "modules/procedures/controller.js",
+    "handler": "listProcedureTypes",
+    "module": "procedures"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/admin/procedure-types",
+    "router_path": "modules/procedures/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "tramites.edit"
+    ],
+    "controller": "modules/procedures/controller.js",
+    "handler": "createProcedureType",
+    "module": "procedures"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/admin/procedure-types/{id}",
+    "router_path": "modules/procedures/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "tramites.edit"
+    ],
+    "controller": "modules/procedures/controller.js",
+    "handler": "updateProcedureType",
+    "module": "procedures"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/calendar",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/public-content/controller.js",
+    "handler": "adminList",
+    "module": "public-content"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/calendar",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/public-content/controller.js",
+    "handler": "create",
+    "module": "public-content"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/calendar/{id}",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/public-content/controller.js",
+    "handler": "update",
+    "module": "public-content"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/news",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/public-content/controller.js",
+    "handler": "adminList",
+    "module": "public-content"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/news",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/public-content/controller.js",
+    "handler": "create",
+    "module": "public-content"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/news/{id}",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/public-content/controller.js",
+    "handler": "update",
+    "module": "public-content"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/notices",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/public-content/controller.js",
+    "handler": "adminList",
+    "module": "public-content"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/notices",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/public-content/controller.js",
+    "handler": "create",
+    "module": "public-content"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/notices/{id}",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/public-content/controller.js",
+    "handler": "update",
+    "module": "public-content"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/approvals/{id}/decision",
+    "router_path": "modules/document-approvals/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.review"
+    ],
+    "controller": "modules/document-approvals/controller.js",
+    "handler": "decide",
+    "module": "document-approvals"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/auth/citizen-login",
+    "router_path": "modules/auth/router.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "modules/auth/controller.js",
+    "handler": "citizenLogin",
+    "module": "auth"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/auth/internal-login",
+    "router_path": "modules/auth/router.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "modules/auth/controller.js",
+    "handler": "login",
+    "module": "auth"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/auth/login",
+    "router_path": "modules/auth/router.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "modules/auth/controller.js",
+    "handler": "login",
+    "module": "auth"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/auth/logout",
+    "router_path": "modules/auth/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "internal",
+    "permissions": [],
+    "controller": "modules/auth/controller.js",
+    "handler": "logout",
+    "module": "auth"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/auth/recover",
+    "router_path": "modules/auth/router.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "modules/auth/controller.js",
+    "handler": "recover",
+    "module": "auth"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/citizen/oirs/{id}",
+    "router_path": "modules/oirs/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "controller": "modules/oirs/controller.js",
+    "handler": "citizenDetail",
+    "module": "oirs"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/citizen/oirs/{id}/history",
+    "router_path": "modules/oirs/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "controller": "modules/oirs/controller.js",
+    "handler": "citizenHistory",
+    "module": "oirs"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/citizen/oirs/{id}/messages",
+    "router_path": "modules/oirs/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "controller": "modules/oirs/controller.js",
+    "handler": "citizenMessage",
+    "module": "oirs"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/citizen/requests",
+    "router_path": "modules/citizen-requests/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "controller": "modules/citizen-requests/controller.js",
+    "handler": "list",
+    "module": "citizen-requests"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/citizen/requests",
+    "router_path": "modules/citizen-requests/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "controller": "",
+    "handler": "",
+    "module": "citizen-requests"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/citizen/requests/{id}",
+    "router_path": "modules/citizen-requests/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "controller": "modules/citizen-requests/controller.js",
+    "handler": "detail",
+    "module": "citizen-requests"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/citizen/requests/{id}/cancel",
+    "router_path": "modules/citizen-requests/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "controller": "modules/citizen-requests/controller.js",
+    "handler": "cancel",
+    "module": "citizen-requests"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/citizen/requests/{id}/history",
+    "router_path": "modules/citizen-requests/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "controller": "modules/citizen-requests/controller.js",
+    "handler": "history",
+    "module": "citizen-requests"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/correspondence",
+    "router_path": "modules/correspondence/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.view"
+    ],
+    "controller": "modules/correspondence/controller.js",
+    "handler": "list",
+    "module": "correspondence"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/correspondence",
+    "router_path": "modules/correspondence/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.create"
+    ],
+    "controller": "modules/correspondence/controller.js",
+    "handler": "create",
+    "module": "correspondence"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}",
+    "router_path": "modules/correspondence/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.view"
+    ],
+    "controller": "modules/correspondence/controller.js",
+    "handler": "details",
+    "module": "correspondence"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/correspondence/{id}",
+    "router_path": "modules/correspondence/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.edit"
+    ],
+    "controller": "modules/correspondence/controller.js",
+    "handler": "update",
+    "module": "correspondence"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/correspondence/{id}/close",
+    "router_path": "modules/correspondence/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.edit"
+    ],
+    "controller": "modules/correspondence/controller.js",
+    "handler": "close",
+    "module": "correspondence"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}/details",
+    "router_path": "modules/correspondence/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.view"
+    ],
+    "controller": "modules/correspondence/controller.js",
+    "handler": "details",
+    "module": "correspondence"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}/history",
+    "router_path": "modules/correspondence/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.view"
+    ],
+    "controller": "modules/correspondence/controller.js",
+    "handler": "history",
+    "module": "correspondence"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/correspondence/{id}/link-response",
+    "router_path": "modules/correspondence/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.edit"
+    ],
+    "controller": "modules/correspondence/controller.js",
+    "handler": "linkResponse",
+    "module": "correspondence"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/correspondence/{id}/route",
+    "router_path": "modules/correspondence/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.edit"
+    ],
+    "controller": "modules/correspondence/controller.js",
+    "handler": "route",
+    "module": "correspondence"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/departments",
+    "router_path": "modules/departments/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "departments.view"
+    ],
+    "controller": "modules/departments/controller.js",
+    "handler": "list",
+    "module": "departments"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/departments",
+    "router_path": "modules/departments/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "departments.edit"
+    ],
+    "controller": "modules/departments/controller.js",
+    "handler": "create",
+    "module": "departments"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/document-types",
+    "router_path": "modules/procedures/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "controller": "modules/procedures/controller.js",
+    "handler": "listDocumentTypes",
+    "module": "procedures"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/document-types",
+    "router_path": "modules/procedures/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "controller": "modules/procedures/controller.js",
+    "handler": "createDocumentType",
+    "module": "procedures"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "list",
+    "module": "documents"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/documents",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.create"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "create",
+    "module": "documents"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "detail",
+    "module": "documents"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/documents/{id}",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.edit"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "update",
+    "module": "documents"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/approvals",
+    "router_path": "modules/document-approvals/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "controller": "modules/document-approvals/controller.js",
+    "handler": "list",
+    "module": "document-approvals"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/approvals",
+    "router_path": "modules/document-approvals/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.edit"
+    ],
+    "controller": "modules/document-approvals/controller.js",
+    "handler": "request",
+    "module": "document-approvals"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/attachments",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "attachments",
+    "module": "documents"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/attachments",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.edit"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "addAttachment",
+    "module": "documents"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/attachments/{attachmentId}/download",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "download",
+    "module": "documents"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/comments",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "comments",
+    "module": "documents"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/comments",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.review"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "addComment",
+    "module": "documents"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/history",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "history",
+    "module": "documents"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/reviews",
+    "router_path": "modules/document-reviews/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "controller": "modules/document-reviews/controller.js",
+    "handler": "list",
+    "module": "document-reviews"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/signatures",
+    "router_path": "modules/document-signatures/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "controller": "modules/document-signatures/controller.js",
+    "handler": "list",
+    "module": "document-signatures"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/signatures",
+    "router_path": "modules/document-signatures/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.sign"
+    ],
+    "controller": "modules/document-signatures/controller.js",
+    "handler": "sign",
+    "module": "document-signatures"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/submit-review",
+    "router_path": "modules/document-reviews/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.edit"
+    ],
+    "controller": "modules/document-reviews/controller.js",
+    "handler": "submit",
+    "module": "document-reviews"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/versions",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "versions",
+    "module": "documents"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/versions",
+    "router_path": "modules/documents/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.edit"
+    ],
+    "controller": "modules/documents/controller.js",
+    "handler": "createVersion",
+    "module": "documents"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/expedients",
+    "router_path": "modules/expedients/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "controller": "modules/expedients/controller.js",
+    "handler": "list",
+    "module": "expedients"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/expedients",
+    "router_path": "modules/expedients/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.create"
+    ],
+    "controller": "modules/expedients/controller.js",
+    "handler": "create",
+    "module": "expedients"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}",
+    "router_path": "modules/expedients/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "controller": "modules/expedients/controller.js",
+    "handler": "details",
+    "module": "expedients"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/expedients/{id}",
+    "router_path": "modules/expedients/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.edit"
+    ],
+    "controller": "modules/expedients/controller.js",
+    "handler": "update",
+    "module": "expedients"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/close",
+    "router_path": "modules/expedients/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.edit"
+    ],
+    "controller": "modules/expedients/controller.js",
+    "handler": "close",
+    "module": "expedients"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/details",
+    "router_path": "modules/expedients/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "controller": "modules/expedients/controller.js",
+    "handler": "details",
+    "module": "expedients"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/documents",
+    "router_path": "modules/expedients/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.edit"
+    ],
+    "controller": "modules/expedients/controller.js",
+    "handler": "linkDocument",
+    "module": "expedients"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/events",
+    "router_path": "modules/expedients/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "controller": "modules/expedients/controller.js",
+    "handler": "events",
+    "module": "expedients"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/events",
+    "router_path": "modules/expedients/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.edit"
+    ],
+    "controller": "modules/expedients/controller.js",
+    "handler": "addEvent",
+    "module": "expedients"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/history",
+    "router_path": "modules/expedients/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "controller": "modules/expedients/controller.js",
+    "handler": "events",
+    "module": "expedients"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notifications",
+    "router_path": "modules/notifications/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "internal_or_citizen",
+    "permissions": [],
+    "controller": "modules/notifications/controller.js",
+    "handler": "list",
+    "module": "notifications"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/notifications/{id}/read",
+    "router_path": "modules/notifications/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "internal_or_citizen",
+    "permissions": [],
+    "controller": "modules/notifications/controller.js",
+    "handler": "markRead",
+    "module": "notifications"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/oirs",
+    "router_path": "modules/oirs/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "oirs.view"
+    ],
+    "controller": "modules/oirs/controller.js",
+    "handler": "list",
+    "module": "oirs"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/oirs/{id}/reply",
+    "router_path": "modules/oirs/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "oirs.respond"
+    ],
+    "controller": "modules/oirs/controller.js",
+    "handler": "reply",
+    "module": "oirs"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/oirs/{id}/route",
+    "router_path": "modules/oirs/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "oirs.respond"
+    ],
+    "controller": "modules/oirs/controller.js",
+    "handler": "route",
+    "module": "oirs"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/oirs/{id}/status",
+    "router_path": "modules/oirs/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "oirs.respond"
+    ],
+    "controller": "modules/oirs/controller.js",
+    "handler": "status",
+    "module": "oirs"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/profile/me",
+    "router_path": "modules/auth/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "internal",
+    "permissions": [],
+    "controller": "modules/auth/controller.js",
+    "handler": "me",
+    "module": "auth"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/profile/me",
+    "router_path": "modules/auth/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "internal",
+    "permissions": [],
+    "controller": "modules/auth/controller.js",
+    "handler": "updateMe",
+    "module": "auth"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/calendar",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "modules/public-content/controller.js",
+    "handler": "list",
+    "module": "public-content"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/news",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "modules/public-content/controller.js",
+    "handler": "list",
+    "module": "public-content"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/news/{slug}",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "modules/public-content/controller.js",
+    "handler": "news",
+    "module": "public-content"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/notices",
+    "router_path": "modules/public-content/router.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "modules/public-content/controller.js",
+    "handler": "list",
+    "module": "public-content"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/public/oirs",
+    "router_path": "modules/oirs/router.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "modules/oirs/controller.js",
+    "handler": "create",
+    "module": "oirs"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/oirs/{id}",
+    "router_path": "modules/oirs/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "anonymous_tracking",
+    "permissions": [],
+    "controller": "modules/oirs/controller.js",
+    "handler": "publicDetail",
+    "module": "oirs"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/oirs/{id}/history",
+    "router_path": "modules/oirs/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "anonymous_tracking",
+    "permissions": [],
+    "controller": "modules/oirs/controller.js",
+    "handler": "publicHistory",
+    "module": "oirs"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/public/oirs/{id}/messages",
+    "router_path": "modules/oirs/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "anonymous_tracking",
+    "permissions": [],
+    "controller": "modules/oirs/controller.js",
+    "handler": "publicMessage",
+    "module": "oirs"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/tramites",
+    "router_path": "modules/procedures/router.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "modules/procedures/controller.js",
+    "handler": "listPublished",
+    "module": "procedures"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/tramites/{id}",
+    "router_path": "modules/procedures/router.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "modules/procedures/controller.js",
+    "handler": "getPublished",
+    "module": "procedures"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/public/tramites/{id}/requests",
+    "router_path": "modules/citizen-requests/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "controller": "modules/citizen-requests/controller.js",
+    "handler": "create",
+    "module": "citizen-requests"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reports/dashboard",
+    "router_path": "modules/reports/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "reports.view"
+    ],
+    "controller": "modules/reports/controller.js",
+    "handler": "dashboard",
+    "module": "reports"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/reviews/{id}/reply",
+    "router_path": "modules/document-reviews/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.review"
+    ],
+    "controller": "modules/document-reviews/controller.js",
+    "handler": "reply",
+    "module": "document-reviews"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/roles",
+    "router_path": "modules/users/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "roles.view"
+    ],
+    "controller": "modules/users/controller.js",
+    "handler": "roles",
+    "module": "users"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/roles/{id}/permissions",
+    "router_path": "modules/users/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "roles.edit"
+    ],
+    "controller": "modules/users/controller.js",
+    "handler": "replacePermissions",
+    "module": "users"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/users",
+    "router_path": "modules/users/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "users.view"
+    ],
+    "controller": "modules/users/controller.js",
+    "handler": "list",
+    "module": "users"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/users",
+    "router_path": "modules/users/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "users.create"
+    ],
+    "controller": "modules/users/controller.js",
+    "handler": "create",
+    "module": "users"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/users/{id}",
+    "router_path": "modules/users/router.js",
+    "router_base_path": "/",
+    "middleware": [
+      "authenticate",
+      "authorize"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "users.edit"
+    ],
+    "controller": "modules/users/controller.js",
+    "handler": "update",
+    "module": "users"
+  },
+  {
+    "method": "GET",
+    "path": "/health",
+    "router_path": "routes/index.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "",
+    "handler": "health",
+    "module": "health"
+  },
+  {
+    "method": "GET",
+    "path": "/health/database",
+    "router_path": "routes/index.js",
+    "router_base_path": "/",
+    "middleware": [],
+    "authentication": "public",
+    "permissions": [],
+    "controller": "",
+    "handler": "healthCheck",
+    "module": "health"
+  }
+]

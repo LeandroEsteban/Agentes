@@ -1,0 +1,46 @@
+{
+  "name": "v0002",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend/src/server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "check:backend": "node backend/scripts/check-backend.js",
+    "check": "npm run check:backend",
+    "test": "node backend/scripts/run-tests.js all",
+    "test:unit": "node backend/scripts/run-tests.js unit",
+    "test:api": "node backend/scripts/run-tests.js api",
+    "test:integration": "node backend/scripts/run-tests.js integration",
+    "test:smoke": "node backend/scripts/run-tests.js smoke",
+    "test:coverage": "node backend/scripts/run-tests.js coverage",
+    "test:traceability": "node backend/scripts/generate-traceability.js",
+    "test:phase5b2a": "node backend/scripts/generate-phase5b2a-report.js",
+    "test:phase5b3": "node backend/scripts/generate-phase5b3-report.js",
+    "qa:start": "powershell -ExecutionPolicy Bypass -File infra/qa/scripts/qa-start.ps1",
+    "qa:wait": "powershell -ExecutionPolicy Bypass -File infra/qa/scripts/qa-wait.ps1",
+    "qa:migrate": "powershell -ExecutionPolicy Bypass -File infra/qa/scripts/qa-migrate.ps1",
+    "qa:seed": "powershell -ExecutionPolicy Bypass -File infra/qa/scripts/qa-seed.ps1",
+    "qa:verify": "powershell -ExecutionPolicy Bypass -File infra/qa/scripts/qa-verify.ps1",
+    "qa:reset": "powershell -ExecutionPolicy Bypass -File infra/qa/scripts/qa-reset.ps1",
+    "qa:stop": "powershell -ExecutionPolicy Bypass -File infra/qa/scripts/qa-stop.ps1",
+    "qa:stack:start": "powershell -ExecutionPolicy Bypass -File infra/qa/scripts/qa-stack-start.ps1",
+    "qa:destroy": "powershell -ExecutionPolicy Bypass -File infra/qa/scripts/qa-destroy.ps1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.22.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "c8": "^11.0.0"
+  }
+}

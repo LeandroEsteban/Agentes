@@ -1,0 +1,8 @@
+﻿{
+    "blockers":  [
+                     "infrastructure",
+                     "regression final",
+                     "WebForge",
+                     "acceptance"
+                 ]
+}

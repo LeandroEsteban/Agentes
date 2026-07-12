@@ -1,0 +1,35 @@
+{
+  "schema_version": "webforge.phase7ar5_report.v1",
+  "status": "blocked",
+  "phase7a_status": "blocked",
+  "phase7_status": "blocked",
+  "tests": {
+    "python_passed": 0,
+    "backend_passed": 0,
+    "backend_failed": 0,
+    "frontend_passed": 0,
+    "frontend_failed": 0,
+    "functional_e2e_planned": 10,
+    "functional_e2e_executed": 10,
+    "functional_e2e_passed": 2,
+    "functional_e2e_failed": 6,
+    "functional_e2e_skipped": 0,
+    "infrastructure_e2e_planned": 3,
+    "infrastructure_e2e_passed": 0
+  },
+  "coverage": {
+    "backend": {},
+    "frontend": {}
+  },
+  "gates": {
+    "pass": 0,
+    "pass_with_limitation": 1,
+    "blocked": 11
+  },
+  "critical_blockers": [
+    "Open high-severity E2E defect and incomplete functional flows."
+  ],
+  "blockers_for_phase7b": [
+    "Phase 7A is blocked."
+  ]
+}

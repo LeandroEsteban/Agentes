@@ -1,0 +1,10 @@
+{
+  "schema": "webforge.operation_consumption.v1",
+  "total_operations": 98,
+  "consumed": 32,
+  "not_required_by_ui": 63,
+  "legacy_only": 1,
+  "technical": 2,
+  "pending_classification": 0,
+  "fully_classified": true
+}

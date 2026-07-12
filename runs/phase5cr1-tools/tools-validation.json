@@ -1,0 +1,104 @@
+{
+  "findings": [],
+  "registry_version": "toolreg.webforge.v1",
+  "status": "valid",
+  "tools": [
+    {
+      "allowed_agents": [
+        "agent.database"
+      ],
+      "allowed_operations": [],
+      "description": "Run database migrations",
+      "max_stderr_bytes": 100000,
+      "max_stdout_bytes": 100000,
+      "network_policy": "localhost_only",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 120,
+      "tool_id": "tool.db.migrate",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.database",
+        "agent.backend",
+        "agent.qa_release"
+      ],
+      "allowed_operations": [],
+      "description": "Verify database schema",
+      "max_stderr_bytes": 100000,
+      "max_stdout_bytes": 100000,
+      "network_policy": "localhost_only",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 120,
+      "tool_id": "tool.db.verify_schema",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.database"
+      ],
+      "allowed_operations": [],
+      "description": "Seed database",
+      "max_stderr_bytes": 100000,
+      "max_stdout_bytes": 100000,
+      "network_policy": "localhost_only",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 120,
+      "tool_id": "tool.db.seed",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.database",
+        "agent.backend",
+        "agent.qa_release"
+      ],
+      "allowed_operations": [],
+      "description": "Stop database",
+      "max_stderr_bytes": 100000,
+      "max_stdout_bytes": 100000,
+      "network_policy": "localhost_only",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 120,
+      "tool_id": "tool.db.stop",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.database",
+        "agent.backend",
+        "agent.qa_release"
+      ],
+      "allowed_operations": [],
+      "description": "Start database",
+      "max_stderr_bytes": 100000,
+      "max_stdout_bytes": 100000,
+      "network_policy": "localhost_only",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 120,
+      "tool_id": "tool.db.start",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.database"
+      ],
+      "allowed_operations": [],
+      "description": "Reset database",
+      "max_stderr_bytes": 100000,
+      "max_stdout_bytes": 100000,
+      "network_policy": "localhost_only",
+      "requires_approval": true,
+      "requires_snapshot": true,
+      "timeout_seconds": 120,
+      "tool_id": "tool.db.reset",
+      "writes_workspace": false
+    }
+  ],
+  "tools_registered": 6
+}

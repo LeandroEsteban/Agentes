@@ -1,0 +1,27 @@
+{
+  "schema": "webforge.e2e_smoke_report.v1",
+  "generated_at": "2026-07-11T18:28:00Z",
+  "status": "not_executed",
+  "reason": "E2E tests require QA stack (PostgreSQL + backend + frontend dev server). Not available in this session.",
+  "config": {
+    "framework": "playwright",
+    "testDir": "./src/e2e",
+    "specs": 3,
+    "baseURL": "http://localhost:5173"
+  },
+  "specs": [
+    {
+      "name": "E2E-R1-01: Cargar portada",
+      "description": "Load homepage, navigate to tramites, open detail"
+    },
+    {
+      "name": "E2E-R1-02: Login ciudadano",
+      "description": "Citizen login with email/password, expect error"
+    },
+    {
+      "name": "E2E-R1-03: Login funcionario",
+      "description": "Load intranet login page, verify form fields"
+    }
+  ],
+  "verification": "E2E test definitions exist in src/e2e/infrastructure.spec.ts (3 specs). Playwright config ready. Full execution deferred to Phase 7 when QA stack is available."
+}

@@ -1,0 +1,20 @@
+{
+  "current": {
+    "lines": 80.4,
+    "statements": 80.4,
+    "functions": 85.34,
+    "branches": 83.51
+  },
+  "target": {
+    "lines": 85,
+    "statements": 85,
+    "functions": 80,
+    "branches": 80
+  },
+  "status": "accepted_limitation",
+  "critical_modules_without_tests": [],
+  "resolution_phase": "7",
+  "backlog": [
+    "Raise lines and statements coverage from the measured value to 85% with focused tests for services and error paths."
+  ]
+}

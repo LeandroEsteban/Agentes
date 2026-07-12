@@ -1,0 +1,1741 @@
+{
+  "source": "projects/uno/especificacion_requerimientos_funcionales-2.md",
+  "counts": {
+    "OBJ": 7,
+    "ACT": 10,
+    "CU": 21,
+    "FUN": 40,
+    "FT": 26,
+    "RN": 27,
+    "CH": 19,
+    "EX": 10,
+    "OT": 16,
+    "VAC": 10,
+    "IMG": 14
+  },
+  "implementable_requirement_count": 159,
+  "implemented_requirement_count": 0,
+  "implementation_coverage_pct": 0,
+  "blocker_count": 10,
+  "current_project_files": [
+    "project/proyecto-uno/frontend-template-manifest.json",
+    "project/proyecto-uno/project-manifest.json",
+    "project/proyecto-uno/project-memory-policy.json",
+    "project/proyecto-uno/learning/Aprendizaje.md",
+    "project/proyecto-uno/memory/memory-report.json",
+    "project/proyecto-uno/sandboxes/DEV/frontend-template-manifest.json",
+    "project/proyecto-uno/sandboxes/DEV/sandbox-manifest.json",
+    "project/proyecto-uno/sandboxes/QA/frontend-template-manifest.json",
+    "project/proyecto-uno/sandboxes/QA/sandbox-manifest.json",
+    "project/proyecto-uno/sandboxes/DEV/learning/Aprendizaje.md",
+    "project/proyecto-uno/sandboxes/DEV/memory/README.md",
+    "project/proyecto-uno/sandboxes/DEV/workspace/PLANTILLA_FRONTEND.md",
+    "project/proyecto-uno/sandboxes/DEV/workspace/README.md",
+    "project/proyecto-uno/sandboxes/QA/learning/Aprendizaje.md",
+    "project/proyecto-uno/sandboxes/QA/memory/README.md",
+    "project/proyecto-uno/sandboxes/QA/workspace/PLANTILLA_FRONTEND.md",
+    "project/proyecto-uno/sandboxes/QA/workspace/README.md",
+    "project/proyecto-uno/versions/v0001/README.md",
+    "project/proyecto-uno/versions/v0001/version-manifest.json",
+    "project/proyecto-uno/versions/v0001/frontend/frontend-template-manifest.json",
+    "project/proyecto-uno/versions/v0001/frontend/PLANTILLA_FRONTEND.md"
+  ],
+  "current_app_like_files": [
+    "project/proyecto-uno/versions/v0001/frontend/frontend-template-manifest.json",
+    "project/proyecto-uno/versions/v0001/frontend/PLANTILLA_FRONTEND.md"
+  ],
+  "requirements": [
+    {
+      "id": "CU_001",
+      "type": "CU",
+      "name": "Consultar portal público de ClaveÚnica",
+      "acceptance": "Se muestran accesos a activar, autenticarse y recuperar; se muestra información de ayuda y novedades; la navegación pública es clara.",
+      "evidence": "E08/S06:p.1:HU01; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_002",
+      "type": "CU",
+      "name": "Cambiar datos personales con factor de seguridad",
+      "acceptance": "El sistema solicita segundo factor/preguntas antes del cambio; teléfono o correo no cambian si no se responde la validación; el resultado del cambio queda reflejado en la sección.",
+      "evidence": "E08/S06:p.1:HU02; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_003",
+      "type": "CU",
+      "name": "Gestionar segundo factor de autenticación para login",
+      "acceptance": "El usuario puede activar 2FA en configuración o posteriormente; si lo activa, el login solicita segundo factor en cada uso; si no está activo, no se exige por esta regla.",
+      "evidence": "E08/S06:p.1:HU03; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_004",
+      "type": "CU",
+      "name": "Gestionar sesión segura y multisesión",
+      "acceptance": "Se documentan alternativas con pros y contras; se implementa el comportamiento aprobado para multisesión; se consideran alertas o controles para mal uso según definición del proyecto.",
+      "evidence": "E08/S06:p.1-p.2:HU04; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_005",
+      "type": "CU",
+      "name": "Configurar DDU desde login de ClaveÚnica",
+      "acceptance": "Se identifica que no tiene DDU; se muestra modal con continuar/cancelar; al continuar se activa la derivación a la pasarela.",
+      "evidence": "E09/S06:p.2:HU05; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_006",
+      "type": "CU",
+      "name": "No configurar DDU desde modal de login",
+      "acceptance": "La opción cancelar no deriva a la pasarela; se retorna a CU; la sección Domicilio Digital muestra alerta pendiente.",
+      "evidence": "E09/S06:p.2:HU06.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_007",
+      "type": "CU",
+      "name": "Retornar a portal ClaveÚnica luego de configurar DDU",
+      "acceptance": "Al terminar configuración se despliega modal de retorno; el control vuelve al portal que invocó el flujo; el estado del usuario queda con DDU configurado.",
+      "evidence": "E09/S06:p.2:HU07; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_008",
+      "type": "CU",
+      "name": "Cancelar activación de DDU y retornar sin configurar",
+      "acceptance": "El sistema solicita confirmar cancelación o continuar; si confirma cancelar, retorna a CU; DDU permanece sin configurar.",
+      "evidence": "E10/S06:p.3:HU08; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_009",
+      "type": "CU",
+      "name": "Visualizar sección de notificaciones en portal ClaveÚnica",
+      "acceptance": "Sin DDU: sección muestra alerta pendiente e inicia activación al acceder; con DDU: sección permite acceder al listado de pendientes de lectura.",
+      "evidence": "E10/S06:p.3:HU09; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_010",
+      "type": "CU",
+      "name": "Visualizar listado de notificaciones pendientes",
+      "acceptance": "El listado incluye los campos requeridos; sólo presenta notificaciones pendientes de lectura; el listado se ubica en la sección de acceso a información de la plataforma de notificaciones.",
+      "evidence": "E10/S06:p.3:HU10; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_011",
+      "type": "CU",
+      "name": "Acceder al detalle de una notificación desde ClaveÚnica",
+      "acceptance": "El usuario puede seleccionar una notificación; CU deriva a la plataforma de notificaciones; el detalle se visualiza en CasillaÚnica.",
+      "evidence": "E11/S06:p.4:HU11; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_012",
+      "type": "CU",
+      "name": "Configurar DDU desde acceso del portal ClaveÚnica",
+      "acceptance": "La sección muestra DDU pendiente; al acceder permite iniciar activación; la derivación ingresa a la pasarela de configuración.",
+      "evidence": "E11/S06:p.4-p.5:HU12; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_013",
+      "type": "CU",
+      "name": "Visualizar gestión e historial de autorizaciones de uso de datos sensibles",
+      "acceptance": "Se muestran estados aprobadas, rechazadas, pendientes y revocadas; cada estado presenta los campos definidos; la sección permite concentrar el historial en un solo lugar.",
+      "evidence": "E12/S06:p.5:HU13; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_014",
+      "type": "CU",
+      "name": "Visualizar historial de datos sensibles compartidos",
+      "acceptance": "La tabla contiene las columnas requeridas; los registros corresponden a datos previamente autorizados; el usuario puede distinguir instituciones proveedoras y solicitantes.",
+      "evidence": "E13/S06:p.6:HU14.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_015",
+      "type": "CU",
+      "name": "Aprobar o rechazar autorizaciones pendientes",
+      "acceptance": "El historial muestra solicitudes pendientes; cada pendiente dispone de botón para aprobar y botón para rechazar; la acción seleccionada actualiza el estado.",
+      "evidence": "E13/S06:p.6:HU15; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_016",
+      "type": "CU",
+      "name": "Revocar autorizaciones vigentes",
+      "acceptance": "Las autorizaciones aprobadas muestran datos requeridos; existe acción de revocación; al revocar, el estado/historial se actualiza a revocada.",
+      "evidence": "E13/S06:p.6-p.7:HU16; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_017",
+      "type": "CU",
+      "name": "Consultar configuración, historial de acciones e información personal",
+      "acceptance": "Sección de configuración disponible; sección de historial de acciones disponible; sección de información personal en poder del Estado disponible con categorías definidas por el alcance.",
+      "evidence": "E05/S01:p.39; E02/S01:p.35.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_018",
+      "type": "CU",
+      "name": "Consultar vista de expedientes electrónicos",
+      "acceptance": "La sección existe en el diseño de pantallas; la vista permite acceso a expedientes electrónicos de la persona; se consideran estados vacíos si no hay expedientes.",
+      "evidence": "E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_019",
+      "type": "CU",
+      "name": "Gestionar poderes y representaciones",
+      "acceptance": "La sección se contempla en la estructura y diseño de pantallas; se definen flujos de usuario asociados; se consideran casos de borde definidos por el proyecto.",
+      "evidence": "E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_020",
+      "type": "CU",
+      "name": "Acceder a ayuda pública y contenidos informativos del portal",
+      "acceptance": "Existen centros de ayuda; existen preguntas frecuentes y contacto; se contemplan secciones informativas de transparencia, participación ciudadana e información de trámites.",
+      "evidence": "E05/S01:p.39; E08/S06:p.1:HU01.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CU_021",
+      "type": "CU",
+      "name": "Acceder a ayuda institucional y gestionar integración",
+      "acceptance": "Sección de ayuda institucional pública/privada definida; centro de ayuda renovado disponible; funcionalidad para gestionar credenciales; funcionalidad para consultar estado de solicitudes de integración.",
+      "evidence": "E03/S01:p.36; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_001",
+      "type": "FUN",
+      "name": "Mostrar accesos principales del portal público",
+      "acceptance": "Se muestran activar, autenticarse y recuperar; las opciones son visibles y distinguibles; los enlaces/acciones conducen al flujo correspondiente.",
+      "evidence": "E08/S06:p.1:HU01.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_002",
+      "type": "FUN",
+      "name": "Publicar novedades e información de ayuda",
+      "acceptance": "Existe sección o acceso de ayuda; existe sección o acceso de novedades; los contenidos se despliegan en el portal.",
+      "evidence": "E08/S06:p.1:HU01; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_003",
+      "type": "FUN",
+      "name": "Organizar navegación pública clara",
+      "acceptance": "La estructura soporta centros de ayuda, contacto, preguntas frecuentes e información pública; la navegación es consistente; se consideran pantallas de distintas dimensiones.",
+      "evidence": "E08/S06:p.1:HU01; E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_004",
+      "type": "FUN",
+      "name": "Solicitar cambio de datos de contacto",
+      "acceptance": "El cambio se inicia desde datos personales; el sistema distingue teléfono y correo; el cambio queda condicionado a validación.",
+      "evidence": "E08/S06:p.1:HU02.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_005",
+      "type": "FUN",
+      "name": "Ejecutar validación personal previa al cambio",
+      "acceptance": "La pregunta o preguntas se presentan antes de cambiar; si no se responden correctamente no se modifica teléfono/correo; si se cumple validación se permite continuar.",
+      "evidence": "E08/S06:p.1:HU02.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_006",
+      "type": "FUN",
+      "name": "Administrar preferencia de segundo factor",
+      "acceptance": "El usuario puede activar el segundo factor; el usuario puede revisar la configuración posteriormente; el sistema registra estado activo/inactivo.",
+      "evidence": "E08/S06:p.1:HU03; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_007",
+      "type": "FUN",
+      "name": "Solicitar segundo factor en login cuando esté activo",
+      "acceptance": "El segundo factor se solicita en cada login con 2FA activo; sin completar el segundo factor no se finaliza el acceso; el flujo informa el paso requerido.",
+      "evidence": "E08/S06:p.1:HU03.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_008",
+      "type": "FUN",
+      "name": "Identificar escenario de multisesión",
+      "acceptance": "Se documentan escenarios de multisesión; se evalúan pros y contras de opciones; el comportamiento final queda definido antes de implementar.",
+      "evidence": "E08/S06:p.1-p.2:HU04; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_009",
+      "type": "FUN",
+      "name": "Aplicar control de sesión segura definido",
+      "acceptance": "El comportamiento implementado corresponde a la decisión aprobada; se consideran alertas de uso indebido o anómalo; se registran casos de borde definidos.",
+      "evidence": "E08/S06:p.1-p.2:HU04; E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_010",
+      "type": "FUN",
+      "name": "Consultar estado de DDU después del login",
+      "acceptance": "El estado se consulta antes de derivar o mostrar notificaciones; el resultado diferencia configurado/no configurado; el flujo usa ese resultado.",
+      "evidence": "E09/S06:p.2:HU05-HU06; E10/S06:p.3:HU09; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_011",
+      "type": "FUN",
+      "name": "Desplegar modal de confirmación para configuración DDU",
+      "acceptance": "El modal se muestra antes de la pasarela; incluye opción continuar; incluye opción cancelar; el flujo respeta la decisión.",
+      "evidence": "E09/S06:p.2:HU05-HU06.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_012",
+      "type": "FUN",
+      "name": "Derivar a pasarela de configuración DDU",
+      "acceptance": "La derivación se ejecuta sólo tras confirmación; el destino es la pasarela de configuración; el retorno posterior queda contemplado.",
+      "evidence": "E09/S06:p.2:HU05; E11/S06:p.4-p.5:HU12; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_013",
+      "type": "FUN",
+      "name": "Cancelar configuración DDU desde modal posterior al login",
+      "acceptance": "La opción cancelar está disponible; al cancelar no se deriva a CasillaÚnica; el portal conserva al usuario en CU.",
+      "evidence": "E09/S06:p.2:HU06.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_014",
+      "type": "FUN",
+      "name": "Mostrar alerta de DDU pendiente en portal ClaveÚnica",
+      "acceptance": "La alerta aparece en la sección Domicilio Digital o notificaciones; indica configuración pendiente; permite iniciar activación cuando el usuario accede a la sección.",
+      "evidence": "E09/S06:p.2:HU06; E10/S06:p.3:HU09; E11/S06:p.4-p.5:HU12.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_015",
+      "type": "FUN",
+      "name": "Recibir retorno desde pasarela tras configuración DDU",
+      "acceptance": "Se muestra modal de aviso de retorno; el control retorna al portal invocador; el usuario puede continuar en el entorno de CU.",
+      "evidence": "E09/S06:p.2:HU07; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_016",
+      "type": "FUN",
+      "name": "Cancelar proceso de activación DDU en pasarela",
+      "acceptance": "La opción cancelar está disponible durante activación; no abandona sin confirmar; se ofrece continuar con el proceso.",
+      "evidence": "E10/S06:p.3:HU08.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_017",
+      "type": "FUN",
+      "name": "Confirmar cancelación de activación DDU",
+      "acceptance": "El modal ofrece confirmar cancelación; el modal ofrece continuar; el resultado de la decisión guía el flujo siguiente.",
+      "evidence": "E10/S06:p.3:HU08.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_018",
+      "type": "FUN",
+      "name": "Retornar a ClaveÚnica con DDU sin configurar",
+      "acceptance": "El control vuelve a CU; el estado DDU permanece sin configurar; la sección asociada mantiene alerta o estado pendiente.",
+      "evidence": "E10/S06:p.3:HU08; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_019",
+      "type": "FUN",
+      "name": "Mostrar sección de acceso a notificaciones",
+      "acceptance": "La sección existe en el portal; identifica la relación con CasillaÚnica; su comportamiento cambia según estado de DDU.",
+      "evidence": "E10/S06:p.3:HU09; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_020",
+      "type": "FUN",
+      "name": "Resolver comportamiento de notificaciones según DDU",
+      "acceptance": "Sin DDU se muestra alerta e inicio de activación; con DDU se accede al listado pendiente; no se mezcla ambos comportamientos.",
+      "evidence": "E10/S06:p.3:HU09; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_021",
+      "type": "FUN",
+      "name": "Listar notificaciones pendientes de lectura",
+      "acceptance": "Cada fila muestra fecha de recepción; cada fila muestra institución remitente; cada fila muestra título; el listado corresponde a pendientes de lectura.",
+      "evidence": "E10/S06:p.3:HU10; E11/S06:p.4:HU11.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_022",
+      "type": "FUN",
+      "name": "Seleccionar notificación para lectura",
+      "acceptance": "La selección de una notificación está disponible; la selección identifica la notificación deseada; el flujo continúa hacia CasillaÚnica.",
+      "evidence": "E11/S06:p.4:HU11.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_023",
+      "type": "FUN",
+      "name": "Derivar a CasillaÚnica para detalle de notificación",
+      "acceptance": "CU deriva a la plataforma de notificaciones; el detalle se consulta en CasillaÚnica; el flujo conserva la relación con la notificación seleccionada.",
+      "evidence": "E11/S06:p.4:HU11; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_024",
+      "type": "FUN",
+      "name": "Iniciar configuración DDU desde alerta del portal",
+      "acceptance": "La alerta indica pendiente; el acceso inicia activación; la pasarela de configuración se abre desde el portal.",
+      "evidence": "E11/S06:p.4-p.5:HU12; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_025",
+      "type": "FUN",
+      "name": "Mostrar historial de autorizaciones por estado",
+      "acceptance": "Incluye aprobadas; incluye rechazadas; incluye pendientes; incluye revocadas; cada registro se asocia a un estado.",
+      "evidence": "E12/S06:p.5:HU13; E13/S06:p.6-p.7:HU15-HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_026",
+      "type": "FUN",
+      "name": "Mostrar datos de autorización según estado",
+      "acceptance": "Pendientes muestran fecha solicitud, institución solicitante, procedimiento, datos involucrados e instituciones proveedoras; aprobadas agregan fecha de aprobación; rechazadas agregan fecha de rechazo; revocadas agregan fecha de aprobación y fecha de revocación.",
+      "evidence": "E12/S06:p.5:HU13; E13/S06:p.6-p.7:HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_027",
+      "type": "FUN",
+      "name": "Mostrar historial de datos sensibles compartidos",
+      "acceptance": "La tabla incluye institución proveedora; incluye institución solicitante/consumidora; incluye fecha y hora; incluye procedimiento administrativo involucrado.",
+      "evidence": "E13/S06:p.6:HU14.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_028",
+      "type": "FUN",
+      "name": "Aprobar autorización pendiente",
+      "acceptance": "Existe botón/acción aprobar; sólo aplica a pendientes; la solicitud cambia de estado y queda en historial.",
+      "evidence": "E13/S06:p.6:HU15.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_029",
+      "type": "FUN",
+      "name": "Rechazar autorización pendiente",
+      "acceptance": "Existe botón/acción rechazar; sólo aplica a pendientes; la solicitud cambia de estado y queda en historial.",
+      "evidence": "E13/S06:p.6:HU15.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_030",
+      "type": "FUN",
+      "name": "Revocar autorización aprobada o vigente",
+      "acceptance": "Existe acción de revocación; la autorización pasa a estado revocado; se refleja fecha de revocación en el historial cuando corresponda.",
+      "evidence": "E13/S06:p.6-p.7:HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_031",
+      "type": "FUN",
+      "name": "Mostrar configuración de ClaveÚnica",
+      "acceptance": "La sección está contemplada en las pantallas privadas; la gestión de segundos factores está disponible; los cambios respetan validaciones definidas.",
+      "evidence": "E05/S01:p.39; E08/S06:p.1:HU03.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_032",
+      "type": "FUN",
+      "name": "Mostrar historial de acciones",
+      "acceptance": "La sección está contemplada en diseño; los registros se presentan al usuario; si no hay registros se muestra estado vacío.",
+      "evidence": "E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_033",
+      "type": "FUN",
+      "name": "Mostrar información personal en poder del Estado",
+      "acceptance": "La sección existe en diseño; se consideran categorías mencionadas; se muestran estados vacíos o falta de información cuando aplique.",
+      "evidence": "E05/S01:p.39; E02/S01:p.35; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_034",
+      "type": "FUN",
+      "name": "Mostrar vista de expedientes electrónicos",
+      "acceptance": "La vista está incorporada en las pantallas; se despliegan expedientes o estado vacío; se mantiene navegación consistente con el portal.",
+      "evidence": "E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_035",
+      "type": "FUN",
+      "name": "Gestionar poderes y representaciones",
+      "acceptance": "La sección está contemplada; se definen flujos asociados; se consideran casos de borde y estados vacíos.",
+      "evidence": "E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_036",
+      "type": "FUN",
+      "name": "Mostrar centro de ayuda pública, preguntas frecuentes y contacto",
+      "acceptance": "Centro de ayuda disponible; preguntas frecuentes disponibles; contacto disponible; atención de emergencias contemplada como sección pública.",
+      "evidence": "E05/S01:p.39; E08/S06:p.1:HU01.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_037",
+      "type": "FUN",
+      "name": "Mostrar contenidos informativos y de vinculación",
+      "acceptance": "Se contemplan secciones de transparencia; se contempla participación ciudadana; se contempla información de trámites.",
+      "evidence": "E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_038",
+      "type": "FUN",
+      "name": "Mostrar ayuda para instituciones integradas",
+      "acceptance": "Existe ayuda pública institucional; existe ayuda privada institucional; el centro de ayuda se mejora/renueva conforme al alcance.",
+      "evidence": "E03/S01:p.36; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_039",
+      "type": "FUN",
+      "name": "Gestionar credenciales de acceso institucional",
+      "acceptance": "La funcionalidad se contempla en la sección privada; el usuario institucional puede acceder a credenciales; se definen validaciones de acceso institucional.",
+      "evidence": "E03/S01:p.36.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FUN_040",
+      "type": "FUN",
+      "name": "Consultar estado de solicitudes de integración",
+      "acceptance": "La funcionalidad está contemplada; se muestra estado de solicitud; se mantiene información de ayuda pertinente al proceso.",
+      "evidence": "E03/S01:p.36; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_001",
+      "type": "FT",
+      "name": "Navegación pública de activación, autenticación, recuperación y ayuda",
+      "acceptance": "Opciones principales visibles; ayuda/novedades accesibles; navegación consistente entre secciones; se contemplan pantallas de distintas dimensiones.",
+      "evidence": "E08/S06:p.1:HU01; E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_002",
+      "type": "FT",
+      "name": "Cambio de teléfono o correo con validación personal",
+      "acceptance": "La validación ocurre antes de cambiar; si falla o no se responde no se modifica el dato; si se supera se permite continuar/guardar.",
+      "evidence": "E08/S06:p.1:HU02.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_003",
+      "type": "FT",
+      "name": "Configuración de segundo factor",
+      "acceptance": "Opción de activar disponible; preferencia editable posteriormente según diseño; estado activo/inactivo persistido.",
+      "evidence": "E08/S06:p.1:HU03.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_004",
+      "type": "FT",
+      "name": "Login con segundo factor activo",
+      "acceptance": "Solicitud de segundo factor en cada login; no se permite acceso sin completar el segundo factor activo; el flujo informa acción requerida.",
+      "evidence": "E08/S06:p.1:HU03.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_005",
+      "type": "FT",
+      "name": "Definición y aplicación del manejo multisesión",
+      "acceptance": "Se documentan pros/contras; se define comportamiento; se consideran alertas de uso indebido/anómalo; el control implementado coincide con la definición.",
+      "evidence": "E08/S06:p.1-p.2:HU04; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_006",
+      "type": "FT",
+      "name": "Derivación a configuración DDU después de login",
+      "acceptance": "Consulta estado DDU; modal antes de pasarela; continuar ejecuta derivación; control de retorno considerado.",
+      "evidence": "E09/S06:p.2:HU05; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_007",
+      "type": "FT",
+      "name": "Cancelación de configuración DDU desde modal de login",
+      "acceptance": "No se deriva a pasarela; se retorna al entorno CU; la sección Domicilio Digital indica pendiente.",
+      "evidence": "E09/S06:p.2:HU06.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_008",
+      "type": "FT",
+      "name": "Retorno a CU tras configuración exitosa de DDU",
+      "acceptance": "Modal de retorno desplegado; retorno al portal inicial; DDU queda configurado para comportamiento posterior.",
+      "evidence": "E09/S06:p.2:HU07; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_009",
+      "type": "FT",
+      "name": "Cancelación de activación DDU durante la pasarela",
+      "acceptance": "Modal confirma cancelación; opción continuar disponible; confirmación de cancelación retorna a CU; DDU no se configura.",
+      "evidence": "E10/S06:p.3:HU08; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_010",
+      "type": "FT",
+      "name": "Resolución de sección de notificaciones según estado DDU",
+      "acceptance": "Sin DDU muestra alerta y permite iniciar activación; con DDU muestra/accede a pendientes; comportamiento consistente con estado.",
+      "evidence": "E10/S06:p.3:HU09; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_011",
+      "type": "FT",
+      "name": "Consulta de listado de notificaciones pendientes",
+      "acceptance": "Campos fecha de recepción, institución remitente y título; sólo pendientes de lectura; se considera estado vacío si no existen registros.",
+      "evidence": "E10/S06:p.3:HU10; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_012",
+      "type": "FT",
+      "name": "Acceso al detalle de notificación en CasillaÚnica",
+      "acceptance": "Selección habilitada; derivación a CasillaÚnica; detalle corresponde a notificación seleccionada.",
+      "evidence": "E11/S06:p.4:HU11; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_013",
+      "type": "FT",
+      "name": "Inicio de activación DDU desde sección del portal",
+      "acceptance": "Alerta pendiente visible; acceso inicia activación; derivación a pasarela realizada.",
+      "evidence": "E11/S06:p.4-p.5:HU12; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_014",
+      "type": "FT",
+      "name": "Consulta de historial de autorizaciones por estado",
+      "acceptance": "Estados requeridos visibles; datos por estado completos; revocadas incluyen fecha de revocación cuando aplique.",
+      "evidence": "E12/S06:p.5:HU13; E13/S06:p.6-p.7:HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_015",
+      "type": "FT",
+      "name": "Consulta de historial de datos compartidos",
+      "acceptance": "Incluye proveedor, solicitante/consumidora, fecha y hora, procedimiento; los registros son datos previamente autorizados.",
+      "evidence": "E13/S06:p.6:HU14.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_016",
+      "type": "FT",
+      "name": "Decisión de autorización pendiente",
+      "acceptance": "Botón aprobar disponible; botón rechazar disponible; acción sólo sobre pendientes; historial actualiza estado.",
+      "evidence": "E13/S06:p.6:HU15.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_017",
+      "type": "FT",
+      "name": "Revocación de autorización vigente",
+      "acceptance": "Acción revocar disponible; registro cambia a revocado; se conserva fecha de solicitud/aprobación y fecha de revocación cuando aplique.",
+      "evidence": "E13/S06:p.6-p.7:HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_018",
+      "type": "FT",
+      "name": "Consulta de secciones privadas personales",
+      "acceptance": "Configuración visible; historial de acciones visible; información personal en poder del Estado contemplada; estados vacíos/alertas diseñados.",
+      "evidence": "E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_019",
+      "type": "FT",
+      "name": "Consulta de expedientes electrónicos",
+      "acceptance": "Vista disponible; navegación consistente; estado vacío diseñado si no hay expedientes.",
+      "evidence": "E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_020",
+      "type": "FT",
+      "name": "Gestión de poderes y representaciones",
+      "acceptance": "Sección incluida; flujos definidos y prototipados; casos de borde considerados.",
+      "evidence": "E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_021",
+      "type": "FT",
+      "name": "Consulta de ayuda pública y contenidos informativos",
+      "acceptance": "Centro de ayuda disponible; FAQ/contacto disponibles; secciones informativas definidas; contenidos alineados al diseño de portal público.",
+      "evidence": "E05/S01:p.39; E08/S06:p.1:HU01.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_022",
+      "type": "FT",
+      "name": "Ayuda institucional y gestión de integración",
+      "acceptance": "Ayuda pública y privada contemplada; credenciales gestionables; estado de integración visible.",
+      "evidence": "E03/S01:p.36; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_023",
+      "type": "FT",
+      "name": "Investigación de usuarios y necesidades",
+      "acceptance": "Metodología propuesta; perfiles/necesidades definidos; evidencia cualitativa/cuantitativa analizada.",
+      "evidence": "E03/S01:p.36.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_024",
+      "type": "FT",
+      "name": "Ideación, arquitectura de información y prototipos de baja fidelidad",
+      "acceptance": "Flujos de usuario estructurados; mapa de navegación o similar; prototipos de baja fidelidad disponibles; sesiones tempranas consideradas.",
+      "evidence": "E03/S01:p.36.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_025",
+      "type": "FT",
+      "name": "Prototipado de alta fidelidad y testeo con usuarios",
+      "acceptance": "Prototipos navegables; testeos definidos en etapas; informe de correcciones de usabilidad/accesibilidad; mejoras incorporadas.",
+      "evidence": "E03/S01:p.36; E04/S01:p.37-p.38.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "FT_026",
+      "type": "FT",
+      "name": "Implementación priorizada y pruebas de interfaces definidas",
+      "acceptance": "Prioridades 1 y 2 implementadas como mínimo; historias de usuario asociadas definidas; pruebas ejecutadas y evidenciadas; pruebas de prototipo y accesibilidad consideradas.",
+      "evidence": "E03/S01:p.36; E07/S05:ANEXO6.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_001",
+      "type": "RN",
+      "name": "Accesos obligatorios del portal público",
+      "acceptance": "Las tres opciones están presentes; están ubicadas en el portal público; son comprensibles para el usuario.",
+      "evidence": "E08/S06:p.1:HU01.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_002",
+      "type": "RN",
+      "name": "Bloqueo de cambio de teléfono/correo sin validación personal",
+      "acceptance": "Sin respuesta válida no hay cambio; con respuesta válida se permite continuar; aplica a teléfono y correo.",
+      "evidence": "E08/S06:p.1:HU02.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_003",
+      "type": "RN",
+      "name": "Segundo factor opcional y obligatorio si está activo",
+      "acceptance": "Activación voluntaria; obligatoriedad en cada login si activo; registro de estado activo/inactivo.",
+      "evidence": "E08/S06:p.1:HU03.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_004",
+      "type": "RN",
+      "name": "Evaluación obligatoria de multisesión",
+      "acceptance": "Alternativas evaluadas; pros/contras documentados; comportamiento aprobado antes de implementación.",
+      "evidence": "E08/S06:p.1-p.2:HU04.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_005",
+      "type": "RN",
+      "name": "Consulta de estado DDU después de autenticación",
+      "acceptance": "Estado configurado/no configurado identificado; resultado usado para modal, alerta o listado; no se deriva sin conocer estado.",
+      "evidence": "E09/S06:p.2:HU05-HU06; E10/S06:p.3:HU09; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_006",
+      "type": "RN",
+      "name": "Modal obligatorio antes de pasarela DDU desde login",
+      "acceptance": "Modal previo; opción continuar; opción cancelar; derivación sólo si continúa.",
+      "evidence": "E09/S06:p.2:HU05-HU06.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_007",
+      "type": "RN",
+      "name": "Cancelación desde modal mantiene DDU pendiente",
+      "acceptance": "No hay configuración DDU; retorno a CU; alerta pendiente visible.",
+      "evidence": "E09/S06:p.2:HU06.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_008",
+      "type": "RN",
+      "name": "Retorno al portal invocador tras completar DDU",
+      "acceptance": "Modal de aviso; retorno al portal inicial; usuario puede continuar en CU.",
+      "evidence": "E09/S06:p.2:HU07; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_009",
+      "type": "RN",
+      "name": "Cancelación durante activación conserva DDU sin configurar",
+      "acceptance": "Confirmación solicitada; retorno a CU; estado DDU sin configurar.",
+      "evidence": "E10/S06:p.3:HU08.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_010",
+      "type": "RN",
+      "name": "Comportamiento dual de sección notificaciones",
+      "acceptance": "Sin DDU: alerta e inicio activación; con DDU: acceso al listado; el usuario no queda sin orientación.",
+      "evidence": "E10/S06:p.3:HU09.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_011",
+      "type": "RN",
+      "name": "Campos mínimos del listado de notificaciones",
+      "acceptance": "Fecha de recepción visible; institución remitente visible; título visible.",
+      "evidence": "E10/S06:p.3:HU10; E11/S06:p.4:HU11.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_012",
+      "type": "RN",
+      "name": "Detalle de notificación en plataforma de notificaciones",
+      "acceptance": "Selección disponible; derivación a CasillaÚnica; detalle consultable.",
+      "evidence": "E11/S06:p.4:HU11.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_013",
+      "type": "RN",
+      "name": "Estados del historial de autorizaciones",
+      "acceptance": "Los cuatro estados están representados; cada solicitud tiene estado; estado visible para el usuario.",
+      "evidence": "E12/S06:p.5:HU13; E13/S06:p.6:HU15-HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_014",
+      "type": "RN",
+      "name": "Datos de solicitudes pendientes",
+      "acceptance": "Todos los campos requeridos visibles; datos asociados a la solicitud correcta; estado pendiente visible.",
+      "evidence": "E12/S06:p.5:HU13; E13/S06:p.6:HU15.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_015",
+      "type": "RN",
+      "name": "Datos de solicitudes aprobadas",
+      "acceptance": "Fecha de solicitud visible; fecha de aprobación visible; institución solicitante, procedimiento, datos e instituciones proveedoras visibles.",
+      "evidence": "E12/S06:p.5:HU13; E13/S06:p.6-p.7:HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_016",
+      "type": "RN",
+      "name": "Datos de solicitudes rechazadas",
+      "acceptance": "Fecha de rechazo visible; datos mínimos visibles; estado rechazado visible.",
+      "evidence": "E12/S06:p.5:HU13.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_017",
+      "type": "RN",
+      "name": "Datos de solicitudes revocadas",
+      "acceptance": "Fecha de revocación visible; fechas de solicitud/aprobación visibles; datos e instituciones visibles.",
+      "evidence": "E12/S06:p.5:HU13; E13/S06:p.7:HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_018",
+      "type": "RN",
+      "name": "Campos del historial de datos compartidos",
+      "acceptance": "Cuatro columnas mínimas presentes; registros verifican datos previamente autorizados; fecha y hora visibles.",
+      "evidence": "E13/S06:p.6:HU14.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_019",
+      "type": "RN",
+      "name": "Acciones de aprobación y rechazo para pendientes",
+      "acceptance": "Botón/acción aprobar visible; botón/acción rechazar visible; acción aplica sólo a la solicitud pendiente.",
+      "evidence": "E13/S06:p.6:HU15.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_020",
+      "type": "RN",
+      "name": "Acción de revocación para autorizaciones vigentes",
+      "acceptance": "Acción revocar disponible; estado cambia a revocado; historial conserva trazabilidad.",
+      "evidence": "E13/S06:p.6-p.7:HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_021",
+      "type": "RN",
+      "name": "Datos compartidos deben ser previamente autorizados",
+      "acceptance": "Cada registro se asocia a autorización previa; la tabla permite identificar proveedor/solicitante/procedimiento; no se presenta intercambio sin referencia funcional a autorización.",
+      "evidence": "E13/S06:p.6:HU14.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_022",
+      "type": "RN",
+      "name": "Secciones privadas ampliadas del portal",
+      "acceptance": "Secciones contempladas en estructura y pantallas; navegación clara; casos de borde/estados vacíos diseñados.",
+      "evidence": "E05/S01:p.39; E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_023",
+      "type": "RN",
+      "name": "Secciones públicas de ayuda e información",
+      "acceptance": "Cada tipo de sección se contempla en diseño; contenidos publicados; navegación coherente.",
+      "evidence": "E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_024",
+      "type": "RN",
+      "name": "Ayuda institucional pública y privada",
+      "acceptance": "Ayuda pública institucional; ayuda privada institucional; centro de ayuda renovado.",
+      "evidence": "E03/S01:p.36; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_025",
+      "type": "RN",
+      "name": "Gestión institucional de credenciales e integración",
+      "acceptance": "Función de credenciales disponible; función de estado de integración disponible; acceso institucional controlado según definición.",
+      "evidence": "E03/S01:p.36.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_026",
+      "type": "RN",
+      "name": "Requerimientos referenciales no exhaustivos",
+      "acceptance": "Se complementan historias referenciales; nuevos hallazgos mantienen alcance; se asigna evidencia y decisión de contraparte.",
+      "evidence": "E08/S06:p.1:introducción; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "RN_027",
+      "type": "RN",
+      "name": "Diseño de casos de borde y alertas",
+      "acceptance": "Errores de sistema considerados; estados vacíos considerados; falta de información considerada; errores de ingreso/carga considerados.",
+      "evidence": "E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_001",
+      "type": "CH",
+      "name": "Verificar disponibilidad de opciones públicas",
+      "acceptance": "Las tres opciones están presentes; son accionables; se registra evidencia de prueba.",
+      "evidence": "E08/S06:p.1:HU01; E07/S05:plan_pruebas.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_002",
+      "type": "CH",
+      "name": "Validar preguntas personales antes de cambio de contacto",
+      "acceptance": "Sin respuesta no cambia; respuesta inválida no cambia; respuesta válida permite cambio.",
+      "evidence": "E08/S06:p.1:HU02.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_003",
+      "type": "CH",
+      "name": "Verificar persistencia de preferencia 2FA",
+      "acceptance": "Estado activo/inactivo persistente; cambio visible en administración; comportamiento de login usa ese estado.",
+      "evidence": "E08/S06:p.1:HU03.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_004",
+      "type": "CH",
+      "name": "Validar exigencia de segundo factor en login",
+      "acceptance": "Se solicita segundo factor; no se accede si no se supera; se accede si se supera.",
+      "evidence": "E08/S06:p.1:HU03.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_005",
+      "type": "CH",
+      "name": "Verificar consulta de estado DDU",
+      "acceptance": "Usuario sin DDU activa modal/alerta; usuario con DDU accede a notificaciones; resultados son reproducibles.",
+      "evidence": "E09/S06:p.2:HU05-HU06; E10/S06:p.3:HU09; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_006",
+      "type": "CH",
+      "name": "Validar modal de DDU antes de pasarela",
+      "acceptance": "Modal aparece antes de derivación; continuar deriva; cancelar no deriva.",
+      "evidence": "E09/S06:p.2:HU05-HU06.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_007",
+      "type": "CH",
+      "name": "Validar alerta DDU pendiente tras cancelar",
+      "acceptance": "Alerta aparece en sección; indica configuración pendiente; permite iniciar activación cuando corresponde.",
+      "evidence": "E09/S06:p.2:HU06; E10/S06:p.3:HU09; E11/S06:p.4-p.5:HU12.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_008",
+      "type": "CH",
+      "name": "Confirmar cancelación durante activación DDU",
+      "acceptance": "Modal de confirmación visible; continuar mantiene proceso; cancelar retorna a CU con DDU sin configurar.",
+      "evidence": "E10/S06:p.3:HU08.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_009",
+      "type": "CH",
+      "name": "Validar retorno desde pasarela DDU",
+      "acceptance": "Modal de retorno visible; portal invocador recupera control; estado DDU actualizado a configurado.",
+      "evidence": "E09/S06:p.2:HU07; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_010",
+      "type": "CH",
+      "name": "Validar listado de notificaciones pendientes",
+      "acceptance": "Fecha de recepción visible; institución remitente visible; título visible; registros son pendientes.",
+      "evidence": "E10/S06:p.3:HU10.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_011",
+      "type": "CH",
+      "name": "Validar derivación a detalle de notificación",
+      "acceptance": "La selección inicia derivación; el detalle corresponde a la notificación seleccionada; el usuario llega a CasillaÚnica.",
+      "evidence": "E11/S06:p.4:HU11; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_012",
+      "type": "CH",
+      "name": "Validar campos del historial de autorizaciones",
+      "acceptance": "Pendiente muestra campos RN_014; aprobada RN_015; rechazada RN_016; revocada RN_017.",
+      "evidence": "E12/S06:p.5:HU13; E13/S06:p.6-p.7:HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_013",
+      "type": "CH",
+      "name": "Validar acciones por estado de autorización",
+      "acceptance": "Pendiente muestra aprobar y rechazar; aprobada/vigente muestra revocar; la acción actualiza historial.",
+      "evidence": "E13/S06:p.6-p.7:HU15-HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_014",
+      "type": "CH",
+      "name": "Validar tabla de datos sensibles compartidos",
+      "acceptance": "Columnas proveedor, solicitante, fecha/hora y procedimiento; relación con autorización previa; datos mostrados corresponden al usuario.",
+      "evidence": "E13/S06:p.6:HU14.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_015",
+      "type": "CH",
+      "name": "Validar diseño de estados vacíos y errores",
+      "acceptance": "Estado vacío definido; alerta de error definida; falta de información definida; error de ingreso/carga definido.",
+      "evidence": "E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_016",
+      "type": "CH",
+      "name": "Validar accesibilidad de interfaces",
+      "acceptance": "Tipografía legible; contraste revisado; texto alternativo considerado; alineación de texto revisada; correcciones registradas.",
+      "evidence": "E05/S01:p.38; E07/S05:aseguramiento_calidad.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_017",
+      "type": "CH",
+      "name": "Validar usabilidad con usuarios",
+      "acceptance": "Pruebas moderadas o no moderadas definidas; resultados analizados; informe de correcciones; mejoras integradas en prototipos.",
+      "evidence": "E04/S01:p.37-p.38; E03/S01:p.36.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_018",
+      "type": "CH",
+      "name": "Validar pruebas y evidencia de aseguramiento de calidad",
+      "acceptance": "Plan de pruebas entregado; evidencia de ejecución entregada; cantidad y tipo de testeos informados; pruebas de prototipo y accesibilidad incluidas.",
+      "evidence": "E07/S05:aseguramiento_calidad.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "CH_019",
+      "type": "CH",
+      "name": "Validar implementación priorizada",
+      "acceptance": "Prioridad 1 implementada; prioridad 2 implementada; historias de usuario asociadas definidas; pruebas de componentes/interfaz ejecutadas.",
+      "evidence": "E03/S01:p.36.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "EX_001",
+      "type": "EX",
+      "name": "Cancelación del modal DDU posterior al login",
+      "acceptance": "Cancelación disponible; no se configura DDU; alerta pendiente visible.",
+      "evidence": "E09/S06:p.2:HU06.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "EX_002",
+      "type": "EX",
+      "name": "Cancelación durante activación DDU",
+      "acceptance": "Confirmación solicitada; al confirmar retorna; DDU conserva estado no configurado.",
+      "evidence": "E10/S06:p.3:HU08.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "EX_003",
+      "type": "EX",
+      "name": "Usuario con DDU no configurado no ve listado de notificaciones",
+      "acceptance": "No se muestra listado de pendientes; se muestra alerta; se puede iniciar activación.",
+      "evidence": "E10/S06:p.3:HU09; E11/S06:p.4-p.5:HU12.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "EX_004",
+      "type": "EX",
+      "name": "Usuario con DDU configurado accede a listado en vez de pasarela",
+      "acceptance": "No se muestra alerta de pendiente como flujo principal; listado accesible; campos requeridos visibles.",
+      "evidence": "E10/S06:p.3:HU09-HU10; E14/S07:p.1.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "EX_005",
+      "type": "EX",
+      "name": "Segundo factor activo bloquea login si no se completa",
+      "acceptance": "Se solicita segundo factor; no hay sesión final sin factor; sesión final sólo con factor superado.",
+      "evidence": "E08/S06:p.1:HU03.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "EX_006",
+      "type": "EX",
+      "name": "Estados vacíos en secciones y listados",
+      "acceptance": "Estado vacío explícito; no se muestran datos incorrectos; se orienta al usuario según sección.",
+      "evidence": "E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "EX_007",
+      "type": "EX",
+      "name": "Errores al ingresar o cargar información",
+      "acceptance": "Error detectado; alerta/mensaje diseñado; el sistema evita estados inconsistentes.",
+      "evidence": "E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "EX_008",
+      "type": "EX",
+      "name": "Falta de información disponible",
+      "acceptance": "Falta de información identificada; mensaje/estado definido; no se inventan datos en pantalla.",
+      "evidence": "E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "EX_009",
+      "type": "EX",
+      "name": "Mal uso o comportamiento anómalo de ClaveÚnica",
+      "acceptance": "Comportamiento anómalo definido; alerta/control especificado; casos de sesión considerados.",
+      "evidence": "E05/S01:p.39; E08/S06:p.1-p.2:HU04.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "EX_010",
+      "type": "EX",
+      "name": "Diferencia terminológica en revocación",
+      "acceptance": "Conflicto listado; no se cambia el alcance por intuición; se solicita aclaración en vacíos.",
+      "evidence": "E13/S06:p.6-p.7:HU16.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_001",
+      "type": "OT",
+      "name": "Metodología de investigación de usuarios",
+      "acceptance": "Perfiles identificados; métricas y necesidades documentadas; análisis cualitativo/cuantitativo registrado.",
+      "evidence": "E03/S01:p.36.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_002",
+      "type": "OT",
+      "name": "Estrategia de pruebas de usabilidad",
+      "acceptance": "Estrategia temprana definida; estrategia final definida; hallazgos asociados a decisiones.",
+      "evidence": "E03/S01:p.36; E04/S01:p.37-p.38.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_003",
+      "type": "OT",
+      "name": "Arquitectura de información y flujos de usuario",
+      "acceptance": "Flujos documentados; mapa de navegación o equivalente; secciones públicas/privadas contempladas.",
+      "evidence": "E03/S01:p.36; E05/S01:p.38-p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_004",
+      "type": "OT",
+      "name": "Prototipos de baja y alta fidelidad",
+      "acceptance": "Prototipos de baja fidelidad disponibles; prototipos de alta fidelidad disponibles; contenido real o cercano incorporado cuando aplique.",
+      "evidence": "E03/S01:p.36.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_005",
+      "type": "OT",
+      "name": "Pruebas con usuarios e informe de correcciones",
+      "acceptance": "Pruebas ejecutadas; resultados analizados; informe de correcciones producido; mejoras integradas en prototipos.",
+      "evidence": "E04/S01:p.37-p.38.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_006",
+      "type": "OT",
+      "name": "Implementación priorizada de interfaces definidas",
+      "acceptance": "Tres prioridades definidas; prioridades 1 y 2 implementadas como mínimo; historias asociadas definidas; pruebas ejecutadas.",
+      "evidence": "E03/S01:p.36.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_007",
+      "type": "OT",
+      "name": "Diseño adaptable para tamaños de pantalla",
+      "acceptance": "Pantallas móviles consideradas; tablet/escritorio considerados; navegación y contenidos se adaptan sin perder función.",
+      "evidence": "E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_008",
+      "type": "OT",
+      "name": "Componentes reutilizables y navegación consistente",
+      "acceptance": "Componentes reutilizables; navegación clara; consistencia visual; edición facilitada.",
+      "evidence": "E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_009",
+      "type": "OT",
+      "name": "Casos de borde y sistema de alertas",
+      "acceptance": "Errores de sistema; estados vacíos; falta de información; errores de ingreso/carga; alertas definidas.",
+      "evidence": "E04/S01:p.37.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_010",
+      "type": "OT",
+      "name": "Accesibilidad de interfaz",
+      "acceptance": "Tipografía revisada; contraste revisado; textos alternativos considerados; legibilidad y uso evaluados.",
+      "evidence": "E05/S01:p.38; E07/S05:aseguramiento_calidad.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_011",
+      "type": "OT",
+      "name": "Plan de aseguramiento de calidad",
+      "acceptance": "Plan de pruebas; evidencia de ejecución; cantidad y tipo de testeos; prototipo y accesibilidad cubiertos.",
+      "evidence": "E07/S05:aseguramiento_calidad; E05/S01:p.38.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_012",
+      "type": "OT",
+      "name": "Garantía funcional del software",
+      "acceptance": "Garantía mínima de 6 meses; cubre funcionamiento y cumplimiento funcional; apoyo técnico disponible; comunicación dentro del plazo de garantía.",
+      "evidence": "E06/S01:p.42-p.43; E07/S05:garantia_software.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_013",
+      "type": "OT",
+      "name": "Contenido mínimo de propuesta técnica y entregables",
+      "acceptance": "Antecedentes generales incluidos; objeto y alcance explicitados; entregables definidos; plan de trabajo y calidad incluidos; garantía informada.",
+      "evidence": "E07/S05:ANEXO6.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_014",
+      "type": "OT",
+      "name": "Plan de versiones del portal",
+      "acceptance": "Versión o versiones propuestas; plazos corto/mediano/largo definidos; alcance de cada etapa documentado.",
+      "evidence": "E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_015",
+      "type": "OT",
+      "name": "Propuesta de contenidos del portal público",
+      "acceptance": "Contenidos de ayuda; contenidos de contacto/FAQ; secciones informativas; consistencia editorial revisada.",
+      "evidence": "E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "OT_016",
+      "type": "OT",
+      "name": "Trazabilidad de nuevos requerimientos",
+      "acceptance": "Nuevo requerimiento registrado; evidencia asociada; decisión de incluir/excluir; no se excede alcance documental.",
+      "evidence": "E08/S06:p.1:introducción; E05/S01:p.39.",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "VAC_001",
+      "type": "VAC",
+      "name": "",
+      "acceptance": "",
+      "evidence": "E10/S06:p.3; E11/S06:p.4-p.5; E14/S07:p.1",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "VAC_002",
+      "type": "VAC",
+      "name": "",
+      "acceptance": "",
+      "evidence": "E08/S06:p.1-p.2:HU04; E05/S01:p.39",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "VAC_003",
+      "type": "VAC",
+      "name": "",
+      "acceptance": "",
+      "evidence": "E08/S06:p.1:HU03",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "VAC_004",
+      "type": "VAC",
+      "name": "",
+      "acceptance": "",
+      "evidence": "E08/S06:p.1:HU02",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "VAC_005",
+      "type": "VAC",
+      "name": "",
+      "acceptance": "",
+      "evidence": "E13/S06:p.6-p.7:HU16",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "VAC_006",
+      "type": "VAC",
+      "name": "",
+      "acceptance": "",
+      "evidence": "E05/S01:p.39",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "VAC_007",
+      "type": "VAC",
+      "name": "",
+      "acceptance": "",
+      "evidence": "E03/S01:p.36; E05/S01:p.39",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "VAC_008",
+      "type": "VAC",
+      "name": "",
+      "acceptance": "",
+      "evidence": "E14/S07:p.1",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "VAC_009",
+      "type": "VAC",
+      "name": "",
+      "acceptance": "",
+      "evidence": "E08/S06:p.1:introducción; E05/S01:p.39",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    },
+    {
+      "id": "VAC_010",
+      "type": "VAC",
+      "name": "",
+      "acceptance": "",
+      "evidence": "E09-E11; E14",
+      "implementation_status": "not_implemented",
+      "implementation_evidence": [],
+      "qa_status": "blocked_no_application_code"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "resources": 6,
+  "unverified": [
+    "citizen_request_attachments",
+    "oirs_messages"
+  ],
+  "missing_horizontal_negative": [
+    "citizen_request_attachments",
+    "oirs_messages"
+  ],
+  "status": "blocked"
+}

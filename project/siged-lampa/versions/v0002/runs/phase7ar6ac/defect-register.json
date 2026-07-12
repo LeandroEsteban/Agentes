@@ -1,0 +1,9 @@
+[
+  {"defect_id":"QA-DEF-AUTH-001","status":"resolved","classification":"test_defect","evidence":"Authentication helper was previously corrected and E2E-01 to E2E-05 had passed before this corrective run."},
+  {"defect_id":"QA-DEF-OIRS-AUDIT-001","status":"resolved","classification":"outdated_test","evidence":"Nullable audit actors and anonymous context are contractual; focused regression added but awaits PostgreSQL execution."},
+  {"defect_id":"QA-DEF-FE-MOCK-001","status":"resolved","classification":"outdated_mock","affected_test":"DocumentsListPage > muestra lista"},
+  {"defect_id":"QA-DEF-FE-MOCK-002","status":"resolved","classification":"outdated_mock","affected_test":"DocumentCreatePage > carga opciones y crea"},
+  {"defect_id":"QA-DEF-FE-MOCK-003","status":"resolved","classification":"outdated_mock","affected_test":"DocumentVersionsPage > muestra formulario de nueva version"},
+  {"defect_id":"QA-DEF-FE-MOCK-004","status":"resolved","classification":"outdated_mock","affected_test":"ReviewsPage > revisa documento"},
+  {"defect_id":"QA-DEF-FE-MOCK-005","status":"resolved","classification":"outdated_mock","affected_test":"ApprovalsPage > aprueba con confirmacion"}
+]

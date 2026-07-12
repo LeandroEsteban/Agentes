@@ -1,0 +1,12 @@
+{
+  "status": "partial",
+  "implemented": [
+    "internal login",
+    "citizen login",
+    "internal profile restore",
+    "logout"
+  ],
+  "gaps": [
+    "citizen backend profile refresh"
+  ]
+}

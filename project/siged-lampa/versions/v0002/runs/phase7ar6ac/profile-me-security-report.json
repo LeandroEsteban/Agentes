@@ -1,0 +1,1 @@
+{"status":"pass","operation":"GET /api/v1/profile/me","checks":["document user permissions","reviewer permissions","approver permissions","simulated signer profile","unprivileged user lacks restricted capabilities","password_hash absent","no secrets","server-side permission enforcement"],"implementation":"backend/tests/api/phase5b2a-auth-profile.api.test.js"}

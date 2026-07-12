@@ -1,0 +1,15 @@
+{
+  "endpoint_code": "API-LEG-001",
+  "method": "POST",
+  "path": "/api/v1/citizen/requests",
+  "canonical_endpoint": "POST /api/v1/public/tramites/{id}/requests",
+  "source_decision": "ADR-005",
+  "retirement_phase": "v0003",
+  "deprecation_headers": [
+    "Deprecation",
+    "Sunset",
+    "Link"
+  ],
+  "delegates_to": "modules/citizen-requests/service.js:create",
+  "delegation_test": "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "sufficient",
+  "covered": [
+    "expedient_created",
+    "expedient_updated",
+    "expedient_closed",
+    "expedient_document_linked",
+    "expedient_event_created",
+    "correspondence_created",
+    "correspondence_updated",
+    "correspondence_routed",
+    "correspondence_closed",
+    "public_content_created",
+    "public_content_updated"
+  ],
+  "missing": []
+}

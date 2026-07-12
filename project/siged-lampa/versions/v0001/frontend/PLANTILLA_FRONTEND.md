@@ -1,0 +1,5 @@
+# PLANTILLA_FRONTEND
+
+Frontend obligatorio para esta version.
+Source: `PLANTILLA_FRONTEND`
+Hash: `sha256:d3ada78b3c20c5961f1ab992a78059450520858f2ad30c01bdcb9dd08857126d`

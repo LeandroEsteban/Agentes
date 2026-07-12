@@ -1,0 +1,18 @@
+{
+  "phase": "8A",
+  "health_checks": {
+    "postgres": {"script": "infra/deployment/scripts/health-check.sh", "type": "docker ps --format json + pg_isready", "retries": 20, "interval_sec": 5},
+    "backend": {"script": "infra/deployment/scripts/health-check.sh", "type": "wget --spider http://127.0.0.1:3000/health", "retries": 24, "interval_sec": 5},
+    "frontend": {"script": "infra/deployment/scripts/health-check.sh", "type": "curl -f http://127.0.0.1/", "retries": 12, "interval_sec": 5}
+  },
+  "smoke_tests": {
+    "SMOKE-01": {"endpoint": "GET /", "expected": "200", "description": "frontend responds"},
+    "SMOKE-02": {"endpoint": "GET /api/health", "expected": "200", "description": "backend health endpoint"},
+    "SMOKE-03": {"endpoint": "GET /api/health (body)", "expected": "status=healthy, service=siged-lampa-api", "description": "backend health body validation"},
+    "SMOKE-04": {"endpoint": "POST /api/auth/login (empty body)", "expected": "401 (not 503)", "description": "auth router mounted, rejects unauthenticated"},
+    "SMOKE-05": {"endpoint": "GET /api/procedures (public listing)", "expected": "200", "description": "public procedures available"}
+  },
+  "failure_behavior": "workflow stops with error, rollback triggered",
+  "script": "infra/deployment/scripts/smoke-test.sh",
+  "e2e_note": "Full E2E (19 cases) not executed per deployment — requires Docker and ~15min. Run manually or in separate CI pipeline."
+}

@@ -1,0 +1,97 @@
+{
+  "normalized_original": 40,
+  "supplemental": 9,
+  "legacy": 1,
+  "technical": 2,
+  "implemented": 0,
+  "partial": 40,
+  "missing": 0,
+  "by_module": {
+    "auth": {
+      "implemented": 0,
+      "partial": 5,
+      "missing": 0
+    },
+    "users": {
+      "implemented": 0,
+      "partial": 5,
+      "missing": 0
+    },
+    "departments": {
+      "implemented": 0,
+      "partial": 2,
+      "missing": 0
+    },
+    "procedures": {
+      "implemented": 0,
+      "partial": 3,
+      "missing": 0
+    },
+    "documents": {
+      "implemented": 0,
+      "partial": 6,
+      "missing": 0
+    },
+    "document-reviews": {
+      "implemented": 0,
+      "partial": 2,
+      "missing": 0
+    },
+    "document-approvals": {
+      "implemented": 0,
+      "partial": 1,
+      "missing": 0
+    },
+    "document-signatures": {
+      "implemented": 0,
+      "partial": 1,
+      "missing": 0
+    },
+    "expedients": {
+      "implemented": 0,
+      "partial": 4,
+      "missing": 0
+    },
+    "correspondence": {
+      "implemented": 0,
+      "partial": 4,
+      "missing": 0
+    },
+    "citizen-requests": {
+      "implemented": 0,
+      "partial": 3,
+      "missing": 0
+    },
+    "oirs": {
+      "implemented": 0,
+      "partial": 2,
+      "missing": 0
+    },
+    "reports": {
+      "implemented": 0,
+      "partial": 1,
+      "missing": 0
+    },
+    "notifications": {
+      "implemented": 0,
+      "partial": 1,
+      "missing": 0
+    }
+  },
+  "supplemental_routes": [
+    "POST /api/v1/auth/internal-login",
+    "POST /api/v1/auth/logout",
+    "GET /api/v1/admin/procedure-types",
+    "POST /api/v1/admin/procedure-types",
+    "PUT /api/v1/admin/procedure-types/{id}",
+    "GET /api/v1/admin/public-content/{kind}",
+    "POST /api/v1/admin/public-content/{kind}",
+    "PATCH /api/v1/admin/public-content/{kind}/{id}",
+    "PATCH /api/v1/notifications/{id}/read"
+  ],
+  "technical_routes": [
+    "GET /health",
+    "GET /health/database"
+  ],
+  "missing_endpoints": []
+}

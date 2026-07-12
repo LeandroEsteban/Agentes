@@ -1,0 +1,6 @@
+﻿{
+    "flow":  "E2E-10",
+    "tests_fail":  0,
+    "name":  "guards y permisos",
+    "tests_pass":  3
+}

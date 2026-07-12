@@ -1,0 +1,18 @@
+{
+  "autonomous": "true",
+  "clone_mode": "independent_local_clone",
+  "clone_source": "project/siged-lampa/versions/v0001",
+  "factory_learning_write_allowed": "false",
+  "factory_memory_read_allowed": "false",
+  "frontend_template": "PLANTILLA_FRONTEND",
+  "frontend_template_hash": "sha256:d3ada78b3c20c5961f1ab992a78059450520858f2ad30c01bdcb9dd08857126d",
+  "frontend_template_required": "true",
+  "frontend_template_source": "PLANTILLA_FRONTEND",
+  "learning_path": "project/siged-lampa/sandboxes/DEV/learning",
+  "memory_path": "project/siged-lampa/sandboxes/DEV/memory",
+  "name": "DEV",
+  "path": "project/siged-lampa/sandboxes/DEV",
+  "sandbox_id": "siged-lampa-dev-v0001",
+  "shared_with_factory": "false",
+  "version": "v0001"
+}

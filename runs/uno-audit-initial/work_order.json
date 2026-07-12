@@ -1,0 +1,22 @@
+{
+  "acceptance_criteria": [
+    "P01-P12 pass at 100 percent",
+    "Required artifacts are generated"
+  ],
+  "approvals": {},
+  "authorized_sources": [
+    "especificacion_requerimientos_funcionales-2.md"
+  ],
+  "budget": {
+    "cost_usd": 0,
+    "mcp_calls": 0,
+    "tool_calls": 200
+  },
+  "metadata": {},
+  "objective": "Auditar y planificar Proyecto UNO desde especificaciones reales",
+  "project_id": "proyecto-uno",
+  "project_version": "v0001",
+  "scope": "local_artifacts_only",
+  "side_effects": "no_external_writes_no_deploy",
+  "type": "factory_runtime"
+}

@@ -1,0 +1,61 @@
+﻿{
+    "pass":  11,
+    "details":  [
+                    {
+                        "gate":  "GATE-R6B-001",
+                        "name":  "R6B E2E-01 a E2E-05",
+                        "status":  "pass"
+                    },
+                    {
+                        "gate":  "GATE-R6B-002",
+                        "name":  "R6B E2E-06 expediente",
+                        "status":  "pass"
+                    },
+                    {
+                        "gate":  "GATE-R6B-003",
+                        "name":  "R6B E2E-07 correspondencia",
+                        "status":  "pass"
+                    },
+                    {
+                        "gate":  "GATE-R6B-004",
+                        "name":  "R6B E2E-08 admin",
+                        "status":  "pass"
+                    },
+                    {
+                        "gate":  "GATE-R6B-005",
+                        "name":  "R6B E2E-09 contenido publico",
+                        "status":  "pass"
+                    },
+                    {
+                        "gate":  "GATE-R6B-006",
+                        "name":  "R6B E2E-10 guards",
+                        "status":  "pass"
+                    },
+                    {
+                        "gate":  "GATE-R6B-007",
+                        "name":  "R6B frontend no regresion",
+                        "status":  "pass"
+                    },
+                    {
+                        "gate":  "GATE-R6B-008",
+                        "name":  "R6B backend no regresion",
+                        "status":  "pass"
+                    },
+                    {
+                        "gate":  "GATE-R6B-009",
+                        "name":  "R6B contrato",
+                        "status":  "pass"
+                    },
+                    {
+                        "gate":  "GATE-R6B-010",
+                        "name":  "R6B consola/red",
+                        "status":  "pass"
+                    },
+                    {
+                        "gate":  "GATE-R6B-011",
+                        "name":  "R6B defectos 0 critical/high",
+                        "status":  "pass"
+                    }
+                ],
+    "fail":  0
+}

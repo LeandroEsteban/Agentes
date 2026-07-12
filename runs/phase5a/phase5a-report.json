@@ -1,0 +1,27 @@
+{
+  "schema_version": "webforge.phase5a_report.v1",
+  "status": "blocked",
+  "phase5_status": "blocked",
+  "endpoints": {
+    "normalized": 40,
+    "supplemental": 9,
+    "legacy": 1,
+    "technical": 2,
+    "implemented": 0,
+    "partial": 40,
+    "missing": 0
+  },
+  "postgresql": {
+    "used": true,
+    "healthy": true,
+    "migrations_up_to_date": true
+  },
+  "smoke_tests": {
+    "passed": 1,
+    "failed": 0
+  },
+  "partial_gates": ["GATE-API-IMPL-001", "GATE-API-IMPL-002", "GATE-API-IMPL-004", "GATE-API-IMPL-005", "GATE-API-IMPL-006", "GATE-API-IMPL-007"],
+  "pending_for_phase5b": ["Smoke PostgreSQL por endpoint", "pruebas negativas de autorización y propiedad", "cobertura", "reglas y validaciones exhaustivas"],
+  "pending_for_phase5c": ["gates finales", "reportes finales", "trazabilidad final", "handoffs"],
+  "baseline_preserved": true
+}

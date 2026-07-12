@@ -1,0 +1,76 @@
+{
+  "schema_version": "webforge.phase5b2d.remaining_gaps.v1",
+  "generated_at": "2026-07-11T20:00:00Z",
+  "scope": "API-015 through API-024 gap closure",
+  "gaps": [
+    {
+      "gap_id": "GAP-CLASSIFICATION-001",
+      "description": "endpoint-implementation-status.json marks API-015 to API-024 as partial",
+      "severity": "high",
+      "resolution": "Update endpoint-implementation-status.json status from partial to implemented and clear missing_components",
+      "endpoints": ["API-015", "API-016", "API-017", "API-018", "API-019", "API-020", "API-021", "API-022", "API-023", "API-024"],
+      "files_to_modify": ["backend/endpoint-implementation-status.json"]
+    },
+    {
+      "gap_id": "GAP-CLASSIFICATION-002",
+      "description": "openapi-router-map.json marks API-015 to API-024 as partial",
+      "severity": "high",
+      "resolution": "Update openapi-router-map.json status from partial to implemented and clear missing_components",
+      "endpoints": ["API-015", "API-016", "API-017", "API-018", "API-019", "API-020", "API-021", "API-022", "API-023", "API-024"],
+      "files_to_modify": ["backend/openapi-router-map.json"]
+    },
+    {
+      "gap_id": "GAP-COVERAGE-001",
+      "description": "endpoint-coverage.json missing entries for API-015 to API-024",
+      "severity": "high",
+      "resolution": "Add coverage entries for API-015 to API-024 with positive and negative test references",
+      "endpoints": ["API-015", "API-016", "API-017", "API-018", "API-019", "API-020", "API-021", "API-022", "API-023", "API-024"],
+      "files_to_modify": ["backend/endpoint-coverage.json"]
+    },
+    {
+      "gap_id": "GAP-SUMMARY-001",
+      "description": "endpoint-implementation-summary.json needs to reflect 40 original endpoints",
+      "severity": "medium",
+      "resolution": "Update endpoint-implementation-summary.json with original total and implemented count",
+      "files_to_modify": ["backend/endpoint-implementation-summary.json"]
+    },
+    {
+      "gap_id": "GAP-RULES-001",
+      "description": "Business rules BR-013 to BR-036 lack backend evidence links to the document modules",
+      "severity": "medium",
+      "resolution": "Update business-rule-map.json with file/symbol/constraint references for document-related pending rules",
+      "related_rules": ["BR-013", "BR-015", "BR-016", "BR-018", "BR-020", "BR-022", "BR-023", "BR-024", "BR-025", "BR-027", "BR-028", "BR-029", "BR-030", "BR-031", "BR-032", "BR-033", "BR-034", "BR-035", "BR-036"],
+      "files_to_modify": ["backend/business-rule-map.json"]
+    },
+    {
+      "gap_id": "GAP-VALIDATIONS-001",
+      "description": "Validations for documents lack backend evidence links",
+      "severity": "medium",
+      "resolution": "Update validation-map.json with file/symbol/constraint references for document-related pending validations",
+      "related_validations": ["VAL-013", "VAL-015", "VAL-016", "VAL-018", "VAL-022", "VAL-025", "VAL-026", "VAL-028", "VAL-029", "VAL-030", "VAL-032", "VAL-033", "VAL-034", "VAL-035", "VAL-036", "VAL-037", "VAL-038", "VAL-039", "VAL-040", "VAL-041", "VAL-042", "VAL-043", "VAL-044", "VAL-045"],
+      "files_to_modify": ["backend/validation-map.json"]
+    },
+    {
+      "gap_id": "GAP-SECURITY-001",
+      "description": "Security-specific tests for document endpoints (SQL injection, mass assignment, traversal) need dedicated tests",
+      "severity": "medium",
+      "resolution": "Create phase5b2d-security.api.test.js with SQL injection, mass assignment, error sanitization tests for document endpoints",
+      "endpoints": ["API-015", "API-016", "API-017", "API-018", "API-019", "API-020", "API-021", "API-022", "API-023", "API-024"],
+      "files_to_create": ["backend/tests/phase5b2d/phase5b2d-security.api.test.js"]
+    },
+    {
+      "gap_id": "GAP-INTEGRATION-001",
+      "description": "Integration test for full document lifecycle needs to be added as dedicated integration test",
+      "severity": "medium",
+      "resolution": "Create phase5b2d-lifecycle.integration.test.js covering full document workflow with rollback",
+      "files_to_create": ["backend/tests/phase5b2d/phase5b2d-lifecycle.integration.test.js"]
+    },
+    {
+      "gap_id": "GAP-MIGRATION-001",
+      "description": "Migration 017 verification report needed",
+      "severity": "low",
+      "resolution": "Create migration-verification.json verifying 017_add_deleted_at_to_reports_tables.sql",
+      "files_to_create": ["runs/phase5b2d/migration-verification.json"]
+    }
+  ]
+}

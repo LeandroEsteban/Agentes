@@ -1,0 +1,98 @@
+[
+  {
+    "path": "projects/uno/ANEXO_N°3.docx",
+    "name": "ANEXO_N°3.docx",
+    "bytes": 21338,
+    "sha256": "sha256:4d01581e61ba287491439fa43bff015f8d2257d8b87b05eeab34b25c95adbd6c",
+    "pages": null,
+    "paragraphs": 5,
+    "text_chars": 798,
+    "approx_tokens": 200,
+    "extraction": "python-docx",
+    "sample": "ANEXO N° 3. – OFERTA ECONÓMICA\nANEXO Nº 3\nOFERTA ECONÓMICA\nFecha: ____________________\nNOTA 1: En caso de que el oferente no presente la oferta económica antes indicada, que la modifique en todo o parte, no complete íntegramente la información requerida, o que señale un precio superior al máximo disponible en estas bases, correspondiente a $141.000.000.- (ciento cuarenta y un millones de pesos), impuestos incluidos, si correspondiere, su oferta será declarada inadmisible, quedando excluida del p"
+  },
+  {
+    "path": "projects/uno/ANEXO_N°4.docx",
+    "name": "ANEXO_N°4.docx",
+    "bytes": 23580,
+    "sha256": "sha256:8e6bdaaaaa2cdee938f2099b7b79fedbf108322ebd510cef39df7e705d1e9e43",
+    "pages": null,
+    "paragraphs": 9,
+    "text_chars": 1077,
+    "approx_tokens": 269,
+    "extraction": "python-docx",
+    "sample": "ANEXO N° 4. – PRESENTACIÓN EQUIPO DE TRABAJO DEL OFERENTE\nSe deberá acompañar, como medio de verificación de las columnas Formación y Experiencia, los siguientes documentos: \nCurrículum vitae, en formato libre.\nCopia simple del documento que respalda el nivel profesional indicado. El Ministerio se reserva el derecho a exigir copias autorizadas de los mismos cuando lo estime pertinente.\nAdemás, para la verificación del perfil Jefe de Proyecto Senior, deberá presentar certificados o diplomas que a"
+  },
+  {
+    "path": "projects/uno/ANEXO_N°5.docx",
+    "name": "ANEXO_N°5.docx",
+    "bytes": 24241,
+    "sha256": "sha256:6732d1fa6559ae4759511057f3326c91aa3a9b42ad7f5db7186f4354a69992bb",
+    "pages": null,
+    "paragraphs": 11,
+    "text_chars": 1855,
+    "approx_tokens": 464,
+    "extraction": "python-docx",
+    "sample": "ANEXO N° 5. – EXPERIENCIA Y VALORACIÓN POSITIVA/SATISFACTORIA EN EL DESARROLLO DE PROYECTOS DEL OFERENTE\nSe deberán acompañar los siguientes medios de verificación:\n      Para la evaluación de la experiencia:\n- Instituciones públicas regidas por la ley de compras: orden de compra en estado aceptada; contrato o acuerdo complementario, en ambos casos, debidamente aprobados por el correspondiente acto administrativo.\n- Demás instituciones o empresas: contrato debidamente suscrito por las partes o c"
+  },
+  {
+    "path": "projects/uno/ANEXO_N°6.docx",
+    "name": "ANEXO_N°6.docx",
+    "bytes": 23724,
+    "sha256": "sha256:f2f91b7ac7f46f176d0deea560abc73dc972422d335301f84b7f7472d442294b",
+    "pages": null,
+    "paragraphs": 29,
+    "text_chars": 3475,
+    "approx_tokens": 869,
+    "extraction": "python-docx",
+    "sample": "ANEXO N° 6. – PRESENTACIÓN OFERTA TÉCNICA (CONTENIDO DE LA OFERTA TÉCNICA)\nEn esta sección el organismo comprador podrá definir cuáles son los requerimientos mínimos de los servicios a contratar. \nEl oferente deberá adjuntar un documento técnico que detalle la propuesta de solución de acuerdo con los requerimientos establecidos en las bases de licitación. Este documento podrá ser elaborado en formato libre, sin límite de páginas, y además deberá incorporar al menos el siguiente contenido:\nAntece"
+  },
+  {
+    "path": "projects/uno/ANEXO_N°7.pdf",
+    "name": "ANEXO_N°7.pdf",
+    "bytes": 176530,
+    "sha256": "sha256:75fb2d981e94cebfef0584cfd2ada51f09ae3ed2584d248596bcc14a6385cd64",
+    "pages": 7,
+    "paragraphs": null,
+    "text_chars": 12314,
+    "approx_tokens": 3078,
+    "extraction": "pypdf",
+    "sample": "ANEXO N° 7.  – HISTORIAS DE USUARIO REFERENCIALES. \nA continuación, se presenta una identificación de las historias de usuario involucradas en los \nescenarios identificados a la fecha. Estas historias comprenden una primera versión, la que debe ser \ncomplementada con el trabajo de la presente contratación por parte del adjudicatario. \n \nN° Ámbito Épica Usuario Título Historia de Usuario \n1 ClaveÚnica Portal público Todos (con o \nsin CU \nactivada) \nMejora \nusabilidad del \nsitio público \ndel porta"
+  },
+  {
+    "path": "projects/uno/ANEXO_N°8.pdf",
+    "name": "ANEXO_N°8.pdf",
+    "bytes": 256387,
+    "sha256": "sha256:937ceea03c672d9d8519ec2a7792ded17745307de403d7ff57ae31ae220e4f62",
+    "pages": 1,
+    "paragraphs": null,
+    "text_chars": 1343,
+    "approx_tokens": 336,
+    "extraction": "pypdf",
+    "sample": "ANEXO N° 8.  – FLUJO REFERENCIAL DE INTEGRACIÓN DE CLAVEÚNICA Y PLATAFORMA DE \nNOTIFICACIONES \nFlujo de integración entre portal de clave única y plataforma de notificaciones: \nEn el siguiente diagrama se presenta el flujo de integración entre un portal institucional, que, para \nefectos de la presente adquisición, se refiere al portal de ClaveÚnica y la plataforma de \nNotificaciones (CasillaÚnica). \n \nCuando el usuario inicia sesión con ClaveÚnica, el servicio de ClaveÚnica tiene la potestad de "
+  },
+  {
+    "path": "projects/uno/Rex._N°997-2023_aprueba_bases-mp.pdf",
+    "name": "Rex._N°997-2023_aprueba_bases-mp.pdf",
+    "bytes": 12679631,
+    "sha256": "sha256:ffe3eeb0b02ff64633b2d40c8b46a23d2fc19acab7e663a2e2b2be4bc861dfd3",
+    "pages": 64,
+    "paragraphs": null,
+    "text_chars": 63,
+    "approx_tokens": 16,
+    "extraction": "pypdf",
+    "sample": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  },
+  {
+    "path": "projects/uno/especificacion_requerimientos_funcionales-2.md",
+    "name": "especificacion_requerimientos_funcionales-2.md",
+    "bytes": 140221,
+    "sha256": "sha256:8486a1e13c1a86f0f4b55d013aba9fc575966ea4c6003fa07ba02e12eeb5ee6a",
+    "pages": null,
+    "paragraphs": 1647,
+    "text_chars": 138091,
+    "approx_tokens": 34523,
+    "extraction": "text",
+    "sample": "# Especificación de Requerimientos Funcionales\n\n## Control de generación\n\n* status: complete\n* documentos_analizados: 7 documentos cargados por el usuario, inventariados como S01-S07.\n* ciclos_ejecutados: 4 ciclos de identificación/especificación; C1 inventario y extracción inicial; C2 clasificación CU/FUN/FT/RN/CH/EX/OT y deduplicación; C3 recuperación complementaria desde bases técnicas, anexos e imágenes; C4 revisión final sin candidatos nuevos recuperables.\n* criterios_de_exclusion: stack te"
+  }
+]

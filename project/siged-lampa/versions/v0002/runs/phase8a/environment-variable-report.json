@@ -1,0 +1,37 @@
+{
+  "phase": "8A",
+  "method": "grep process.env and import.meta.env across backend/src, frontend/src, database/scripts",
+  "variables_consumed": {
+    "backend": [
+      {"var": "APP_ENV", "default": "dev", "source": "config/env.js, database/pool.js"},
+      {"var": "PORT", "default": "3000", "source": "config/env.js"},
+      {"var": "DATABASE_URL", "default": "postgresql://siged:siged2026@localhost:5432/siged_lampa", "source": "database/pool.js, health.js, migrate.js, seed.js, reset.js, verify-schema.js"},
+      {"var": "QA_DATABASE_URL", "default": "none", "source": "database/pool.js"},
+      {"var": "DEV_DATABASE_URL", "default": "none", "source": "database/pool.js"},
+      {"var": "JWT_SECRET", "default": "development-only-change-me", "source": "config/env.js"},
+      {"var": "JWT_EXPIRES_IN", "default": "1h", "source": "config/env.js"},
+      {"var": "BODY_LIMIT", "default": "1mb", "source": "config/env.js"},
+      {"var": "PERSISTENCE_MODE", "default": "postgres", "source": "config/env.js, database/health.js"},
+      {"var": "DB_POOL_MIN", "default": "0", "source": "database/pool.js"},
+      {"var": "DB_POOL_MAX", "default": "10", "source": "database/pool.js"},
+      {"var": "DB_CONNECTION_TIMEOUT_MS", "default": "5000", "source": "database/pool.js"},
+      {"var": "DB_QUERY_TIMEOUT_MS", "default": "10000", "source": "database/pool.js"},
+      {"var": "OIRS_TRACKING_TOKEN_TTL", "default": "90d", "source": "modules/oirs/tracking.js"},
+      {"var": "DOCUMENT_MAX_FILE_BYTES", "default": "10485760", "source": "modules/storage/service.js"},
+      {"var": "DOCUMENT_STORAGE_DIR", "default": "./storage/documents", "source": "modules/storage/service.js"}
+    ],
+    "frontend": [
+      {"var": "VITE_API_BASE_URL", "default": "''", "source": "api/client.ts"},
+      {"var": "VITE_REQUEST_TIMEOUT_MS", "default": "12000", "source": "api/client.ts"}
+    ]
+  },
+  "env_file_location": "/opt/siged-lampa/shared/.env.production",
+  "variables_not_consumed_not_added": [
+    "SESSION_SECRET — not found in codebase",
+    "CORS_ALLOWED_ORIGINS — not found in codebase",
+    "PUBLIC_BASE_URL — not found in codebase",
+    "BACKEND_PORT — not used (overlaps with PORT)",
+    "FRONTEND_PORT — not found in codebase",
+    "ATTACHMENT_MAX_BYTES — not found in codebase (DOCUMENT_MAX_FILE_BYTES used instead)"
+  ]
+}

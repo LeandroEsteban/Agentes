@@ -1,0 +1,6 @@
+{"tool":"docker compose -f docker-compose.qa.yml run --rm migrator","result":"pass","detail":"PostgreSQL QA migrations through 016 applied"}
+{"tool":"npm.cmd run test:smoke","result":"pass","detail":"1 PostgreSQL QA smoke passed"}
+{"tool":"python -m pytest","result":"pass","detail":"149 passed"}
+{"tool":"python -m webforge normalize","result":"pass"}
+{"tool":"python -m webforge plan","result":"pass"}
+{"tool":"python -m webforge tools validate","result":"pass"}

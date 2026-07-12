@@ -1,0 +1,11 @@
+{
+  "total": 100,
+  "duplicate_ids": [],
+  "missing_ids": [],
+  "pending": 0,
+  "statuses": {
+    "deferred_to_frontend": 2,
+    "implemented": 65,
+    "implemented_in_database": 33
+  }
+}

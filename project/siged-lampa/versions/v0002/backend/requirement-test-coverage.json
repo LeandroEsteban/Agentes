@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-07-11T20:00:00.000Z",
+  "business_rules": {
+    "total": 60,
+    "implemented": 35,
+    "tested_positive": 28,
+    "tested_negative": 6,
+    "deferred_frontend": 0,
+    "pending": 25
+  },
+  "validations": {
+    "total": 100,
+    "implemented": 55,
+    "tested_positive": 40,
+    "tested_negative": 7,
+    "deferred_frontend": 2,
+    "pending": 43
+  },
+  "phase5b2d_scope": {
+    "business_rules": {
+      "related": 25,
+      "implemented": 25,
+      "pending": 0
+    },
+    "validations": {
+      "related": 24,
+      "implemented": 24,
+      "pending": 0
+    }
+  }
+}

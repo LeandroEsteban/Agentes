@@ -1,0 +1,11 @@
+{
+  "engine": "postgresql",
+  "version": "16",
+  "provisioning": "docker",
+  "database": "siged_lampa_qa",
+  "tables": 40,
+  "migrations_applied": 17,
+  "migrations_pending": 0,
+  "seeds_applied": 5,
+  "healthy": true
+}

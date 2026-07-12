@@ -1,0 +1,225 @@
+{
+  "schema": "webforge.handoff_plan.v1",
+  "generated_at": "2026-07-11T21:33:40.325958+00:00",
+  "handoffs": [
+    {
+      "handoff_id": "HO-REF-ARCH",
+      "from_agent": "agent.refinement",
+      "to_agent": "agent.architecture",
+      "artifacts": [
+        "normalization-report.json",
+        "normalization-findings.md",
+        "catalogs/*.json"
+      ],
+      "required_gates": [
+        "GATE-ARCH-001"
+      ],
+      "acceptance_criteria": [
+        "Normalization has 0 blocking findings",
+        "All catalogs are present"
+      ],
+      "rejection_reasons_possible": [
+        "Blocking findings unresolved",
+        "Missing catalogs"
+      ]
+    },
+    {
+      "handoff_id": "HO-ARCH-DB",
+      "from_agent": "agent.architecture",
+      "to_agent": "agent.database",
+      "artifacts": [
+        "architecture.json",
+        "tasks.json",
+        "task-dag.json"
+      ],
+      "required_gates": [
+        "GATE-ARCH-002",
+        "GATE-ARCH-003",
+        "GATE-ARCH-004",
+        "GATE-ARCH-005",
+        "GATE-ARCH-006"
+      ],
+      "acceptance_criteria": [
+        "Architecture approved",
+        "DB tasks defined"
+      ],
+      "rejection_reasons_possible": [
+        "Architecture not approved",
+        "DB tasks incomplete"
+      ]
+    },
+    {
+      "handoff_id": "HO-ARCH-BE",
+      "from_agent": "agent.architecture",
+      "to_agent": "agent.backend",
+      "artifacts": [
+        "architecture.json",
+        "endpoints.json",
+        "business-rules.json",
+        "validations.json",
+        "contracts.json"
+      ],
+      "required_gates": [
+        "GATE-ARCH-002",
+        "GATE-ARCH-003",
+        "GATE-ARCH-004",
+        "GATE-ARCH-005"
+      ],
+      "acceptance_criteria": [
+        "Architecture approved",
+        "API tasks defined"
+      ],
+      "rejection_reasons_possible": [
+        "Architecture not approved"
+      ]
+    },
+    {
+      "handoff_id": "HO-ARCH-FE",
+      "from_agent": "agent.architecture",
+      "to_agent": "agent.frontend",
+      "artifacts": [
+        "architecture.json",
+        "screens.json",
+        "endpoints.json",
+        "contracts.json"
+      ],
+      "required_gates": [
+        "GATE-ARCH-002",
+        "GATE-ARCH-003"
+      ],
+      "acceptance_criteria": [
+        "Architecture approved",
+        "UI tasks defined"
+      ],
+      "rejection_reasons_possible": [
+        "Architecture not approved"
+      ]
+    },
+    {
+      "handoff_id": "HO-ARCH-QA",
+      "from_agent": "agent.architecture",
+      "to_agent": "agent.qa_release",
+      "artifacts": [
+        "architecture.json",
+        "tasks.json",
+        "contracts.json"
+      ],
+      "required_gates": [
+        "GATE-ARCH-002",
+        "GATE-ARCH-003",
+        "GATE-ARCH-004",
+        "GATE-ARCH-005",
+        "GATE-ARCH-006"
+      ],
+      "acceptance_criteria": [
+        "Architecture approved",
+        "QA tasks defined"
+      ],
+      "rejection_reasons_possible": [
+        "Architecture not approved"
+      ]
+    },
+    {
+      "handoff_id": "HO-DB-BE",
+      "from_agent": "agent.database",
+      "to_agent": "agent.backend",
+      "artifacts": [
+        "database/migrations/*.sql",
+        "database/seeds/*.sql",
+        "database/schema.sql"
+      ],
+      "required_gates": [
+        "GATE-DB-001"
+      ],
+      "acceptance_criteria": [
+        "All 40 tables created",
+        "FK constraints defined",
+        "Seeds load successfully"
+      ],
+      "rejection_reasons_possible": [
+        "Missing migrations",
+        "FK constraints missing"
+      ]
+    },
+    {
+      "handoff_id": "HO-BE-FE",
+      "from_agent": "agent.backend",
+      "to_agent": "agent.frontend",
+      "artifacts": [
+        "openapi.yaml",
+        "backend/src/controllers/*.js"
+      ],
+      "required_gates": [
+        "GATE-API-001"
+      ],
+      "acceptance_criteria": [
+        "OpenAPI contract complete",
+        "All 40+ endpoints implemented"
+      ],
+      "rejection_reasons_possible": [
+        "OpenAPI incomplete",
+        "Endpoints missing"
+      ]
+    },
+    {
+      "handoff_id": "HO-DB-QA",
+      "from_agent": "agent.database",
+      "to_agent": "agent.qa_release",
+      "artifacts": [
+        "database/migrations/*.sql",
+        "database/test-results.xml"
+      ],
+      "required_gates": [
+        "GATE-DB-001"
+      ],
+      "acceptance_criteria": [
+        "Migration from zero passes",
+        "All DB tests pass"
+      ],
+      "rejection_reasons_possible": [
+        "Migration fails",
+        "DB tests fail"
+      ]
+    },
+    {
+      "handoff_id": "HO-BE-QA",
+      "from_agent": "agent.backend",
+      "to_agent": "agent.qa_release",
+      "artifacts": [
+        "openapi.yaml",
+        "backend/test-results.xml"
+      ],
+      "required_gates": [
+        "GATE-API-001"
+      ],
+      "acceptance_criteria": [
+        "All API tests pass",
+        "Coverage threshold met"
+      ],
+      "rejection_reasons_possible": [
+        "API tests fail",
+        "Coverage below threshold"
+      ]
+    },
+    {
+      "handoff_id": "HO-FE-QA",
+      "from_agent": "agent.frontend",
+      "to_agent": "agent.qa_release",
+      "artifacts": [
+        "frontend/src/routes.js",
+        "frontend/test-results.xml"
+      ],
+      "required_gates": [
+        "GATE-UI-001"
+      ],
+      "acceptance_criteria": [
+        "All 30 routes render",
+        "E2E tests pass"
+      ],
+      "rejection_reasons_possible": [
+        "Routes missing",
+        "E2E failures"
+      ]
+    }
+  ]
+}

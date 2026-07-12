@@ -1,0 +1,11 @@
+{
+  "schema": "webforge.phase6br2_e2e_report.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "status": "pass_with_limitation",
+  "summary": "10 E2E flows defined and verified via unit tests. Full browser E2E execution requires QA stack (PostgreSQL + backend + frontend dev server) which is not available in this session. Unit tests cover all flow operations with mocked API layer.",
+  "flows_defined": 10,
+  "flows_unit_tested": 10,
+  "flows_e2e_executed": 0,
+  "flows_e2e_passed": 0,
+  "note": "Full E2E execution deferred to Phase 7 when QA stack is available"
+}

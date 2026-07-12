@@ -1,0 +1,13 @@
+{
+  "factory_learning_write_allowed": false,
+  "factory_memory_read_allowed": false,
+  "mode": "project_scoped_propose_only",
+  "project_id": "proyecto-uno",
+  "project_learning_root": "project/proyecto-uno/learning",
+  "project_memory_root": "project/proyecto-uno/memory",
+  "sandbox_memory_roots": {
+    "DEV": "project/proyecto-uno/sandboxes/DEV/memory",
+    "QA": "project/proyecto-uno/sandboxes/QA/memory"
+  },
+  "shared_with_factory": false
+}

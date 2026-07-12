@@ -1,0 +1,37 @@
+{
+  "screens": {
+    "documented": 30,
+    "routed": 30,
+    "real": 7,
+    "hybrid": 0,
+    "mock": 0,
+    "partial": 23
+  },
+  "api": {
+    "contract_operations": 98,
+    "operations_used_by_frontend": 32,
+    "operations_not_used_by_frontend": 66,
+    "direct_fetch_calls": [
+      "src/api/client.ts"
+    ],
+    "untyped_calls": []
+  },
+  "tests": {
+    "unit": 4,
+    "component": 0,
+    "integration": 0,
+    "e2e": 0
+  },
+  "coverage": {
+    "lines": 15.52,
+    "statements": 15.52,
+    "functions": 16.27,
+    "branches": 38.29
+  },
+  "findings": [
+    "23 screens remain partial",
+    "VAL-030 and VAL-038 have no implementable backend contract",
+    "No E2E runner is configured",
+    "Frontend coverage is below minimum thresholds"
+  ]
+}

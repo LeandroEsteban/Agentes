@@ -1,0 +1,8 @@
+{
+  "status": "partial",
+  "artifacts": [
+    "e2e-gap-analysis.json",
+    "e2e-execution-report.json",
+    "defect-register.json"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "status": "blocked",
+  "phase5b_status": "blocked",
+  "phase5_status": "blocked",
+  "scope_endpoints": {
+    "total": 21,
+    "implemented": 3,
+    "partial": 18,
+    "smoke_tested": 21,
+    "negative_tested": 17
+  },
+  "authentication": {
+    "internal": "partial",
+    "citizen": "partial",
+    "sessions": "partial"
+  },
+  "rbac": {
+    "verified_permissions": 0,
+    "partial_permissions": 3
+  },
+  "ownership": {
+    "verified_resources": 0,
+    "partial_resources": 4
+  },
+  "rules_in_scope": {
+    "total": 24,
+    "tested": 0,
+    "pending": 24
+  },
+  "validations_in_scope": {
+    "total": 30,
+    "tested": 0,
+    "pending": 30
+  },
+  "coverage": {
+    "lines": 64.43,
+    "functions": 43.02,
+    "branches": 83.15,
+    "statements": 64.43
+  },
+  "gates": [
+    {
+      "gate": "GATE-5B2A-001",
+      "status": "pass",
+      "evidence": "Citizen authentication has no endpoint-specific negative test."
+    },
+    {
+      "gate": "GATE-5B2A-002",
+      "status": "blocked",
+      "evidence": "Administrative RBAC routes lack complete evidence."
+    },
+    {
+      "gate": "GATE-5B2A-003",
+      "status": "blocked",
+      "evidence": "Citizen ownership routes have no API evidence."
+    },
+    {
+      "gate": "GATE-5B2A-004",
+      "status": "pass",
+      "evidence": "Current API and integration evidence uses QA PostgreSQL."
+    },
+    {
+      "gate": "GATE-5B2A-005",
+      "status": "blocked",
+      "evidence": "Only two target endpoints have positive evidence."
+    },
+    {
+      "gate": "GATE-5B2A-006",
+      "status": "blocked",
+      "evidence": "Scope rules and validations lack negative test evidence."
+    },
+    {
+      "gate": "GATE-5B2A-007",
+      "status": "blocked",
+      "evidence": "Security cases for all target modules are not implemented."
+    },
+    {
+      "gate": "GATE-5B2A-008",
+      "status": "pass_with_limitation",
+      "evidence": "No existe manifiesto histórico o copia anterior disponible"
+    }
+  ],
+  "historical_baseline_status": "unverifiable"
+}

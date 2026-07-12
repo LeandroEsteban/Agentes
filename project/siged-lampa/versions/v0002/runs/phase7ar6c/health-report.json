@@ -1,0 +1,28 @@
+﻿{
+    "timestamp":  "2026-07-12T01:02:25.5764696-04:00",
+    "backend":  {
+                    "body":  {
+                                 "status":  "healthy",
+                                 "service":  "siged-lampa-api"
+                             },
+                    "status":  200
+                },
+    "database":  {
+                     "body":  {
+                                  "functional_tables":  40,
+                                  "database":  "postgresql",
+                                  "connection":  "ok",
+                                  "migrations":  "up_to_date",
+                                  "details":  {
+                                                  "migrations_expected":  17,
+                                                  "migrations_applied":  17
+                                              },
+                                  "persistence_mode":  "postgres",
+                                  "status":  "healthy"
+                              },
+                     "status":  200
+                 },
+    "frontend":  {
+                     "status":  200
+                 }
+}

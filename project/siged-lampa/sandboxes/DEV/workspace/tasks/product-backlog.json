@@ -1,0 +1,1712 @@
+[
+  {
+    "acceptance": [
+      "La UI permite ejecutar el flujo principal del modulo.",
+      "El backend expone endpoints trazados al inventario.",
+      "Los estados se reflejan en auditoria y reportes."
+    ],
+    "description": "Gestionar acceso, roles, permisos y preferencias",
+    "endpoints": [
+      "API-001",
+      "API-002",
+      "API-003",
+      "API-004",
+      "API-005"
+    ],
+    "id": "TASK-M01",
+    "module": "M01",
+    "screens": [
+      "P-01",
+      "P-02",
+      "P-03",
+      "P-04",
+      "P-05"
+    ],
+    "source": "Especificacion_Funcional_SIGED_Lampa.md",
+    "title": "Implementar Autenticacion, perfiles y autorizacion",
+    "type": "module"
+  },
+  {
+    "acceptance": [
+      "La UI permite ejecutar el flujo principal del modulo.",
+      "El backend expone endpoints trazados al inventario.",
+      "Los estados se reflejan en auditoria y reportes."
+    ],
+    "description": "Gestionar usuarios, departamentos, tipos documentales y parametros",
+    "endpoints": [
+      "API-006",
+      "API-007",
+      "API-008",
+      "API-009",
+      "API-010",
+      "API-011",
+      "API-012",
+      "API-013",
+      "API-014"
+    ],
+    "id": "TASK-M02",
+    "module": "M02",
+    "screens": [
+      "P-06",
+      "P-07",
+      "P-08",
+      "P-09",
+      "P-10",
+      "P-11"
+    ],
+    "source": "Especificacion_Funcional_SIGED_Lampa.md",
+    "title": "Implementar Administracion organizacional",
+    "type": "module"
+  },
+  {
+    "acceptance": [
+      "La UI permite ejecutar el flujo principal del modulo.",
+      "El backend expone endpoints trazados al inventario.",
+      "Los estados se reflejan en auditoria y reportes."
+    ],
+    "description": "Crear, editar, versionar, numerar y archivar documentos",
+    "endpoints": [
+      "API-015",
+      "API-016",
+      "API-017",
+      "API-018",
+      "API-019",
+      "API-020"
+    ],
+    "id": "TASK-M03",
+    "module": "M03",
+    "screens": [
+      "P-12",
+      "P-13",
+      "P-14",
+      "P-15"
+    ],
+    "source": "Especificacion_Funcional_SIGED_Lampa.md",
+    "title": "Implementar Gestion documental",
+    "type": "module"
+  },
+  {
+    "acceptance": [
+      "La UI permite ejecutar el flujo principal del modulo.",
+      "El backend expone endpoints trazados al inventario.",
+      "Los estados se reflejan en auditoria y reportes."
+    ],
+    "description": "Orquestar revision, aprobacion y firma simulada",
+    "endpoints": [
+      "API-021",
+      "API-022",
+      "API-023",
+      "API-024"
+    ],
+    "id": "TASK-M04",
+    "module": "M04",
+    "screens": [
+      "P-16",
+      "P-17",
+      "P-18"
+    ],
+    "source": "Especificacion_Funcional_SIGED_Lampa.md",
+    "title": "Implementar Revision, visto bueno y firma",
+    "type": "module"
+  },
+  {
+    "acceptance": [
+      "La UI permite ejecutar el flujo principal del modulo.",
+      "El backend expone endpoints trazados al inventario.",
+      "Los estados se reflejan en auditoria y reportes."
+    ],
+    "description": "Agrupar documentos, tramites y auditoria",
+    "endpoints": [
+      "API-025",
+      "API-026",
+      "API-027",
+      "API-028"
+    ],
+    "id": "TASK-M05",
+    "module": "M05",
+    "screens": [
+      "P-19",
+      "P-20"
+    ],
+    "source": "Especificacion_Funcional_SIGED_Lampa.md",
+    "title": "Implementar Expedientes y trazabilidad",
+    "type": "module"
+  },
+  {
+    "acceptance": [
+      "La UI permite ejecutar el flujo principal del modulo.",
+      "El backend expone endpoints trazados al inventario.",
+      "Los estados se reflejan en auditoria y reportes."
+    ],
+    "description": "Registrar, derivar y responder correspondencia",
+    "endpoints": [
+      "API-029",
+      "API-030",
+      "API-031",
+      "API-032"
+    ],
+    "id": "TASK-M06",
+    "module": "M06",
+    "screens": [
+      "P-21",
+      "P-22"
+    ],
+    "source": "Especificacion_Funcional_SIGED_Lampa.md",
+    "title": "Implementar Correspondencia",
+    "type": "module"
+  },
+  {
+    "acceptance": [
+      "La UI permite ejecutar el flujo principal del modulo.",
+      "El backend expone endpoints trazados al inventario.",
+      "Los estados se reflejan en auditoria y reportes."
+    ],
+    "description": "Publicar tramites, noticias, avisos y seguimiento",
+    "endpoints": [
+      "API-033",
+      "API-034",
+      "API-035",
+      "API-036"
+    ],
+    "id": "TASK-M07",
+    "module": "M07",
+    "screens": [
+      "P-23",
+      "P-24",
+      "P-25",
+      "P-26"
+    ],
+    "source": "Especificacion_Funcional_SIGED_Lampa.md",
+    "title": "Implementar Portal ciudadano",
+    "type": "module"
+  },
+  {
+    "acceptance": [
+      "La UI permite ejecutar el flujo principal del modulo.",
+      "El backend expone endpoints trazados al inventario.",
+      "Los estados se reflejan en auditoria y reportes."
+    ],
+    "description": "Gestionar solicitudes, reclamos, sugerencias y respuestas",
+    "endpoints": [
+      "API-037",
+      "API-038"
+    ],
+    "id": "TASK-M08",
+    "module": "M08",
+    "screens": [
+      "P-27",
+      "P-28"
+    ],
+    "source": "Especificacion_Funcional_SIGED_Lampa.md",
+    "title": "Implementar OIRS digital",
+    "type": "module"
+  },
+  {
+    "acceptance": [
+      "La UI permite ejecutar el flujo principal del modulo.",
+      "El backend expone endpoints trazados al inventario.",
+      "Los estados se reflejan en auditoria y reportes."
+    ],
+    "description": "Exponer dashboards y exportaciones",
+    "endpoints": [
+      "API-039"
+    ],
+    "id": "TASK-M09",
+    "module": "M09",
+    "screens": [
+      "P-29"
+    ],
+    "source": "Especificacion_Funcional_SIGED_Lampa.md",
+    "title": "Implementar Reportabilidad",
+    "type": "module"
+  },
+  {
+    "acceptance": [
+      "La UI permite ejecutar el flujo principal del modulo.",
+      "El backend expone endpoints trazados al inventario.",
+      "Los estados se reflejan en auditoria y reportes."
+    ],
+    "description": "Emitir alertas internas y ciudadanas",
+    "endpoints": [
+      "API-040"
+    ],
+    "id": "TASK-M10",
+    "module": "M10",
+    "screens": [
+      "P-30"
+    ],
+    "source": "Especificacion_Funcional_SIGED_Lampa.md",
+    "title": "Implementar Notificaciones",
+    "type": "module"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "funcionario",
+    "id": "TASK-P-01",
+    "module": "M01",
+    "route": "/intranet/login",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Login intranet",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "ciudadano",
+    "id": "TASK-P-02",
+    "module": "M01",
+    "route": "/login",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Login ciudadano",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "usuario",
+    "id": "TASK-P-03",
+    "module": "M01",
+    "route": "/recover",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Recuperacion de acceso",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "usuario interno",
+    "id": "TASK-P-04",
+    "module": "M01",
+    "route": "/intranet/profile",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Perfil de usuario",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "funcionario",
+    "id": "TASK-P-05",
+    "module": "M01",
+    "route": "/intranet/dashboard",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Dashboard intranet",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "administrador",
+    "id": "TASK-P-06",
+    "module": "M02",
+    "route": "/intranet/admin/users",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Gestion de usuarios",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "administrador",
+    "id": "TASK-P-07",
+    "module": "M02",
+    "route": "/intranet/admin/roles",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Gestion de roles y permisos",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "administrador",
+    "id": "TASK-P-08",
+    "module": "M02",
+    "route": "/intranet/admin/departments",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Gestion de departamentos",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "administrador",
+    "id": "TASK-P-09",
+    "module": "M02",
+    "route": "/intranet/admin/document-types",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Tipos documentales",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "administrador",
+    "id": "TASK-P-10",
+    "module": "M02",
+    "route": "/intranet/admin/procedure-types",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Tipos de tramites",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "administrador",
+    "id": "TASK-P-11",
+    "module": "M02",
+    "route": "/intranet/admin/external-entities",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Entidades externas",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "funcionario",
+    "id": "TASK-P-12",
+    "module": "M03",
+    "route": "/intranet/documents",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Bandeja documental",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "funcionario",
+    "id": "TASK-P-13",
+    "module": "M03",
+    "route": "/intranet/documents/new",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Crear documento",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "funcionario",
+    "id": "TASK-P-14",
+    "module": "M03",
+    "route": "/intranet/documents/:id",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Detalle de documento",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "funcionario",
+    "id": "TASK-P-15",
+    "module": "M03",
+    "route": "/intranet/documents/:id/assets",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Versiones y anexos",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "revisor",
+    "id": "TASK-P-16",
+    "module": "M04",
+    "route": "/intranet/reviews/:id",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Revision pendiente",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "jefatura",
+    "id": "TASK-P-17",
+    "module": "M04",
+    "route": "/intranet/documents/:id/approvals",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Flujo de aprobacion",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "firmante",
+    "id": "TASK-P-18",
+    "module": "M04",
+    "route": "/intranet/documents/:id/signature",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Firma simulada",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "funcionario",
+    "id": "TASK-P-19",
+    "module": "M05",
+    "route": "/intranet/expedients",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Bandeja de expedientes",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "funcionario",
+    "id": "TASK-P-20",
+    "module": "M05",
+    "route": "/intranet/expedients/:id",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Detalle de expediente",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "oficina de partes",
+    "id": "TASK-P-21",
+    "module": "M06",
+    "route": "/intranet/correspondence/new",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Registro de correspondencia",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "funcionario",
+    "id": "TASK-P-22",
+    "module": "M06",
+    "route": "/intranet/correspondence",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Seguimiento de correspondencia",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "ciudadano",
+    "id": "TASK-P-23",
+    "module": "M07",
+    "route": "/",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Portal ciudadano home",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "ciudadano",
+    "id": "TASK-P-24",
+    "module": "M07",
+    "route": "/tramites",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Catalogo de tramites",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "ciudadano",
+    "id": "TASK-P-25",
+    "module": "M07",
+    "route": "/tramites/:id/apply",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Formulario de tramite",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "ciudadano",
+    "id": "TASK-P-26",
+    "module": "M07",
+    "route": "/portal/requests",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Mis solicitudes",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "ciudadano",
+    "id": "TASK-P-27",
+    "module": "M08",
+    "route": "/oirs",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Ingreso OIRS",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "operador OIRS",
+    "id": "TASK-P-28",
+    "module": "M08",
+    "route": "/intranet/oirs",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Gestion de OIRS",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "analista",
+    "id": "TASK-P-29",
+    "module": "M09",
+    "route": "/intranet/reports/dashboard",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Dashboard de reportes",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "La pantalla respeta ruta, actor y zona definidos.",
+      "La pantalla no aparece antes de autenticacion si pertenece a intranet o portal privado."
+    ],
+    "actor": "usuario",
+    "id": "TASK-P-30",
+    "module": "M10",
+    "route": "/notifications` o `/intranet/notifications",
+    "source": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "title": "Construir pantalla Bandeja de notificaciones",
+    "type": "screen"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "publica",
+    "id": "TASK-API-001",
+    "module": "M01",
+    "resource": "sesion intranet",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/auth/login",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "publica",
+    "id": "TASK-API-002",
+    "module": "M01",
+    "resource": "sesion ciudadana",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/auth/citizen-login",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "publica",
+    "id": "TASK-API-003",
+    "module": "M01",
+    "resource": "recuperacion",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/auth/recover",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-004",
+    "module": "M01",
+    "resource": "perfil",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/profile/me",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-005",
+    "module": "M01",
+    "resource": "perfil",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "PUT /api/v1/profile/me",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet admin",
+    "id": "TASK-API-006",
+    "module": "M02",
+    "resource": "usuarios",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/users",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet admin",
+    "id": "TASK-API-007",
+    "module": "M02",
+    "resource": "usuarios",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/users",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet admin",
+    "id": "TASK-API-008",
+    "module": "M02",
+    "resource": "usuarios",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "PUT /api/v1/users/{id}",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet admin",
+    "id": "TASK-API-009",
+    "module": "M02",
+    "resource": "roles",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/roles",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet admin",
+    "id": "TASK-API-010",
+    "module": "M02",
+    "resource": "permisos",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "PUT /api/v1/roles/{id}/permissions",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet admin",
+    "id": "TASK-API-011",
+    "module": "M02",
+    "resource": "departamentos",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/departments",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet admin",
+    "id": "TASK-API-012",
+    "module": "M02",
+    "resource": "departamentos",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/departments",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-013",
+    "module": "M02",
+    "resource": "tipos documentales",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/document-types",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet admin",
+    "id": "TASK-API-014",
+    "module": "M02",
+    "resource": "tipos documentales",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/document-types",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-015",
+    "module": "M03",
+    "resource": "documentos",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/documents",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-016",
+    "module": "M03",
+    "resource": "documentos",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/documents",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-017",
+    "module": "M03",
+    "resource": "documentos",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/documents/{id}",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-018",
+    "module": "M03",
+    "resource": "documentos",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "PUT /api/v1/documents/{id}",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-019",
+    "module": "M03",
+    "resource": "anexos",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/documents/{id}/attachments",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-020",
+    "module": "M03",
+    "resource": "versiones",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/documents/{id}/versions",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-021",
+    "module": "M04",
+    "resource": "revisiones",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/documents/{id}/submit-review",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-022",
+    "module": "M04",
+    "resource": "revisiones",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/reviews/{id}/reply",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-023",
+    "module": "M04",
+    "resource": "aprobaciones",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/documents/{id}/approvals",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-024",
+    "module": "M04",
+    "resource": "firmas",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/documents/{id}/signatures",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-025",
+    "module": "M05",
+    "resource": "expedientes",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/expedients",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-026",
+    "module": "M05",
+    "resource": "expedientes",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/expedients",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-027",
+    "module": "M05",
+    "resource": "expedientes",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/expedients/{id}",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-028",
+    "module": "M05",
+    "resource": "vinculos expediente",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/expedients/{id}/documents",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-029",
+    "module": "M06",
+    "resource": "correspondencia",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/correspondence",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-030",
+    "module": "M06",
+    "resource": "correspondencia",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/correspondence",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-031",
+    "module": "M06",
+    "resource": "derivaciones",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/correspondence/{id}/route",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-032",
+    "module": "M06",
+    "resource": "respuestas",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/correspondence/{id}/link-response",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "publica",
+    "id": "TASK-API-033",
+    "module": "M07",
+    "resource": "tramites",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/public/tramites",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "ciudadano",
+    "id": "TASK-API-034",
+    "module": "M07",
+    "resource": "solicitudes",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/public/tramites/{id}/requests",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "ciudadano",
+    "id": "TASK-API-035",
+    "module": "M07",
+    "resource": "solicitudes",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/citizen/requests",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "ciudadano",
+    "id": "TASK-API-036",
+    "module": "M07",
+    "resource": "solicitudes",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/citizen/requests/{id}",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "publica o ciudadano",
+    "id": "TASK-API-037",
+    "module": "M08",
+    "resource": "OIRS",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/public/oirs",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet OIRS",
+    "id": "TASK-API-038",
+    "module": "M08",
+    "resource": "OIRS",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "POST /api/v1/oirs/{id}/reply",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet",
+    "id": "TASK-API-039",
+    "module": "M09",
+    "resource": "reportes",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/reports/dashboard",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "El endpoint responde con formato JSON estandar.",
+      "El endpoint aplica autenticacion/autorizacion segun contrato."
+    ],
+    "auth": "intranet o ciudadano",
+    "id": "TASK-API-040",
+    "module": "M10",
+    "resource": "notificaciones",
+    "source": "Inventario_Endpoints_SIGED_Lampa.md",
+    "title": "GET /api/v1/notifications",
+    "type": "endpoint"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`department_id -> departments.id`",
+    "id": "TASK-DB-users",
+    "key_fields": "`uuid`, `username`, `email`, `password_hash`, `full_name`, `job_title`, `status`, `last_login_at`",
+    "pk": "id",
+    "purpose": "funcionarios y operadores internos",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla users",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "-",
+    "id": "TASK-DB-roles",
+    "key_fields": "`code`, `name`, `description`, `is_system`",
+    "pk": "id",
+    "purpose": "roles de acceso",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla roles",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "-",
+    "id": "TASK-DB-permissions",
+    "key_fields": "`code`, `name`, `module_code`, `description`",
+    "pk": "id",
+    "purpose": "permisos atomicos",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla permissions",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`user_id -> users.id`, `role_id -> roles.id`",
+    "id": "TASK-DB-user_roles",
+    "key_fields": "`assigned_at`, `assigned_by`",
+    "pk": "id",
+    "purpose": "relacion usuario-rol",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla user_roles",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`role_id -> roles.id`, `permission_id -> permissions.id`",
+    "id": "TASK-DB-role_permissions",
+    "key_fields": "`granted_at`, `granted_by`",
+    "pk": "id",
+    "purpose": "relacion rol-permiso",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla role_permissions",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`user_id -> users.id`",
+    "id": "TASK-DB-sessions",
+    "key_fields": "`token_hash`, `ip_address`, `user_agent`, `started_at`, `expires_at`, `revoked_at`",
+    "pk": "id",
+    "purpose": "sesiones activas e historicas",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla sessions",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`user_id -> users.id`",
+    "id": "TASK-DB-two_factor_settings",
+    "key_fields": "`method`, `secret_hash`, `phone_masked`, `enabled_at`, `disabled_at`",
+    "pk": "id",
+    "purpose": "configuracion de 2FA",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla two_factor_settings",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`parent_department_id -> departments.id`, `manager_user_id -> users.id`",
+    "id": "TASK-DB-departments",
+    "key_fields": "`code`, `name`, `description`, `cost_center`, `status`",
+    "pk": "id",
+    "purpose": "unidades municipales",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla departments",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "-",
+    "id": "TASK-DB-external_entities",
+    "key_fields": "`entity_type`, `name`, `tax_id`, `email`, `phone`, `address`, `contact_name`",
+    "pk": "id",
+    "purpose": "personas juridicas u organismos externos",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla external_entities",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "-",
+    "id": "TASK-DB-document_types",
+    "key_fields": "`code`, `name`, `description`, `retention_days`, `requires_signature`",
+    "pk": "id",
+    "purpose": "clasificacion documental",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla document_types",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`document_type_id -> document_types.id`",
+    "id": "TASK-DB-document_templates",
+    "key_fields": "`code`, `name`, `template_path`, `version_label`, `is_active`",
+    "pk": "id",
+    "purpose": "plantillas de documentos",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla document_templates",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "-",
+    "id": "TASK-DB-document_statuses",
+    "key_fields": "`code`, `name`, `sort_order`, `is_terminal`",
+    "pk": "id",
+    "purpose": "estados del documento",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla document_statuses",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`document_type_id -> document_types.id`, `status_id -> document_statuses.id`, `owner_user_id -> users.id`, `department_id -> departments.id`, `current_version_id -> document_versions.id`",
+    "id": "TASK-DB-documents",
+    "key_fields": "`uuid`, `folio`, `title`, `summary`, `confidentiality_level`, `origin_type`, `due_date`, `published_at`",
+    "pk": "id",
+    "purpose": "documento principal",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla documents",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`document_id -> documents.id`, `author_user_id -> users.id`",
+    "id": "TASK-DB-document_versions",
+    "key_fields": "`version_number`, `content_snapshot`, `change_summary`, `is_major`, `generated_at`",
+    "pk": "id",
+    "purpose": "versionado formal",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla document_versions",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`document_id -> documents.id`, `uploaded_by -> users.id`",
+    "id": "TASK-DB-document_attachments",
+    "key_fields": "`file_name`, `mime_type`, `storage_path`, `file_size`, `checksum_sha256`",
+    "pk": "id",
+    "purpose": "anexos binarios",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla document_attachments",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`document_id -> documents.id`, `author_user_id -> users.id`, `version_id -> document_versions.id`",
+    "id": "TASK-DB-document_comments",
+    "key_fields": "`comment_type`, `body`, `is_resolved`, `resolved_at`, `resolved_by`",
+    "pk": "id",
+    "purpose": "comentarios colaborativos",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla document_comments",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`document_id -> documents.id`, `requested_by -> users.id`, `reviewer_user_id -> users.id`",
+    "id": "TASK-DB-document_review_requests",
+    "key_fields": "`review_round`, `instructions`, `status`, `sent_at`, `due_at`",
+    "pk": "id",
+    "purpose": "solicitudes de revision",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla document_review_requests",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`review_request_id -> document_review_requests.id`, `reviewer_user_id -> users.id`",
+    "id": "TASK-DB-document_review_responses",
+    "key_fields": "`decision`, `observations`, `responded_at`, `requires_changes`",
+    "pk": "id",
+    "purpose": "respuesta del revisor",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla document_review_responses",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`document_id -> documents.id`, `approver_user_id -> users.id`, `requested_by -> users.id`",
+    "id": "TASK-DB-document_approvals",
+    "key_fields": "`sequence_order`, `status`, `requested_at`, `decided_at`, `decision_note`",
+    "pk": "id",
+    "purpose": "cadena de visto bueno",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla document_approvals",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`document_id -> documents.id`, `signer_user_id -> users.id`, `signature_profile_id -> signature_profiles.id`",
+    "id": "TASK-DB-document_signatures",
+    "key_fields": "`signature_mode`, `signed_at`, `signature_hash`, `signature_status`",
+    "pk": "id",
+    "purpose": "firma simulada o integrable",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla document_signatures",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`user_id -> users.id`",
+    "id": "TASK-DB-signature_profiles",
+    "key_fields": "`display_name`, `position_label`, `provider`, `certificate_alias`, `is_default`",
+    "pk": "id",
+    "purpose": "perfil de firma",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla signature_profiles",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`department_id -> departments.id`, `owner_user_id -> users.id`",
+    "id": "TASK-DB-expedients",
+    "key_fields": "`uuid`, `code`, `subject`, `description`, `status`, `opened_at`, `closed_at`",
+    "pk": "id",
+    "purpose": "contenedor de caso o tramite interno",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla expedients",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`expedient_id -> expedients.id`, `document_id -> documents.id`, `linked_by -> users.id`",
+    "id": "TASK-DB-expedient_documents",
+    "key_fields": "`relation_type`, `linked_at`, `is_primary`",
+    "pk": "id",
+    "purpose": "relacion expediente-documento",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla expedient_documents",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`expedient_id -> expedients.id`, `actor_user_id -> users.id`, `document_id -> documents.id`",
+    "id": "TASK-DB-expedient_events",
+    "key_fields": "`event_type`, `event_label`, `payload_json`, `occurred_at`",
+    "pk": "id",
+    "purpose": "timeline de trazabilidad",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla expedient_events",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`origin_entity_id -> external_entities.id`, `document_id -> documents.id`, `created_by -> users.id`",
+    "id": "TASK-DB-correspondence",
+    "key_fields": "`tracking_code`, `direction`, `subject`, `received_at`, `sent_at`, `priority`, `status`",
+    "pk": "id",
+    "purpose": "ingreso o salida de correspondencia",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla correspondence",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`correspondence_id -> correspondence.id`, `external_entity_id -> external_entities.id`, `department_id -> departments.id`",
+    "id": "TASK-DB-correspondence_recipients",
+    "key_fields": "`recipient_type`, `delivery_channel`, `delivery_status`",
+    "pk": "id",
+    "purpose": "destinatarios asociados",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla correspondence_recipients",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`correspondence_id -> correspondence.id`, `from_department_id -> departments.id`, `to_department_id -> departments.id`, `assigned_user_id -> users.id`",
+    "id": "TASK-DB-correspondence_routes",
+    "key_fields": "`route_status`, `routed_at`, `accepted_at`, `closed_at`, `instructions`",
+    "pk": "id",
+    "purpose": "derivaciones internas",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla correspondence_routes",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "-",
+    "id": "TASK-DB-citizen_accounts",
+    "key_fields": "`uuid`, `email`, `password_hash`, `status`, `last_login_at`, `email_verified_at`",
+    "pk": "id",
+    "purpose": "acceso del ciudadano",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla citizen_accounts",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`citizen_account_id -> citizen_accounts.id`",
+    "id": "TASK-DB-citizen_profiles",
+    "key_fields": "`national_id`, `full_name`, `birth_date`, `phone`, `address`, `commune`",
+    "pk": "id",
+    "purpose": "datos personales del ciudadano",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla citizen_profiles",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`owner_department_id -> departments.id`",
+    "id": "TASK-DB-procedure_types",
+    "key_fields": "`code`, `name`, `description`, `requires_login`, `estimated_days`",
+    "pk": "id",
+    "purpose": "catalogo base de tramites",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla procedure_types",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`procedure_type_id -> procedure_types.id`, `published_by -> users.id`",
+    "id": "TASK-DB-published_procedures",
+    "key_fields": "`slug`, `title`, `instructions`, `requirements_html`, `is_active`, `published_at`",
+    "pk": "id",
+    "purpose": "version publicada del tramite",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla published_procedures",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`citizen_account_id -> citizen_accounts.id`, `published_procedure_id -> published_procedures.id`, `assigned_department_id -> departments.id`, `expedient_id -> expedients.id`",
+    "id": "TASK-DB-citizen_requests",
+    "key_fields": "`tracking_code`, `status`, `submitted_at`, `resolved_at`, `resolution_summary`",
+    "pk": "id",
+    "purpose": "solicitud ciudadana",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla citizen_requests",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`citizen_request_id -> citizen_requests.id`",
+    "id": "TASK-DB-citizen_request_attachments",
+    "key_fields": "`file_name`, `mime_type`, `storage_path`, `file_size`, `checksum_sha256`",
+    "pk": "id",
+    "purpose": "anexos de solicitud",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla citizen_request_attachments",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`citizen_account_id -> citizen_accounts.id`, `assigned_department_id -> departments.id`, `assigned_user_id -> users.id`",
+    "id": "TASK-DB-oirs_cases",
+    "key_fields": "`tracking_code`, `category`, `channel`, `subject`, `status`, `submitted_at`, `closed_at`",
+    "pk": "id",
+    "purpose": "caso OIRS",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla oirs_cases",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`oirs_case_id -> oirs_cases.id`, `author_user_id -> users.id`, `author_citizen_id -> citizen_accounts.id`",
+    "id": "TASK-DB-oirs_messages",
+    "key_fields": "`message_direction`, `body`, `attachment_path`, `sent_at`, `read_at`",
+    "pk": "id",
+    "purpose": "intercambio de mensajes OIRS",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla oirs_messages",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`author_user_id -> users.id`",
+    "id": "TASK-DB-news_posts",
+    "key_fields": "`slug`, `title`, `summary`, `content_html`, `published_at`, `status`",
+    "pk": "id",
+    "purpose": "noticias municipales",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla news_posts",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`author_user_id -> users.id`",
+    "id": "TASK-DB-public_notices",
+    "key_fields": "`title`, `body_html`, `start_at`, `end_at`, `notice_type`, `status`",
+    "pk": "id",
+    "purpose": "avisos visibles al ciudadano",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla public_notices",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`department_id -> departments.id`, `owner_user_id -> users.id`",
+    "id": "TASK-DB-calendar_events",
+    "key_fields": "`title`, `description`, `start_at`, `end_at`, `audience`, `location`, `status`",
+    "pk": "id",
+    "purpose": "hitos de agenda",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla calendar_events",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`user_id -> users.id`, `citizen_account_id -> citizen_accounts.id`",
+    "id": "TASK-DB-notifications",
+    "key_fields": "`channel`, `title`, `body`, `link_url`, `is_read`, `sent_at`, `read_at`",
+    "pk": "id",
+    "purpose": "mensajes al usuario",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla notifications",
+    "type": "database"
+  },
+  {
+    "acceptance": [
+      "La migracion crea tabla, llaves y restricciones minimas.",
+      "El seed o pruebas cubren al menos un caso operativo de la tabla."
+    ],
+    "fks": "`actor_user_id -> users.id`, `actor_citizen_id -> citizen_accounts.id`",
+    "id": "TASK-DB-audit_events",
+    "key_fields": "`event_name`, `module_code`, `entity_type`, `entity_id`, `ip_address`, `payload_json`, `occurred_at`",
+    "pk": "id",
+    "purpose": "evidencia de acciones del sistema",
+    "source": "Modelo_ER_Detallado_SIGED_Lampa.md",
+    "title": "Modelar tabla audit_events",
+    "type": "database"
+  }
+]

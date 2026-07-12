@@ -1,0 +1,78 @@
+{
+  "phase": "8A",
+  "gates": [
+    {
+      "id": "P8A-GATE-001",
+      "name": "Backend Dockerfile exists",
+      "result": "PASS",
+      "detail": "backend/Dockerfile — multi-stage, Node 24 Alpine production, non-root user, health check"
+    },
+    {
+      "id": "P8A-GATE-002",
+      "name": "Frontend Dockerfile exists",
+      "result": "PASS",
+      "detail": "frontend/Dockerfile — multi-stage, Node 24 build, Nginx 1.27 Alpine production, health check"
+    },
+    {
+      "id": "P8A-GATE-003",
+      "name": "Nginx config for SPA + API proxy",
+      "result": "PASS",
+      "detail": "frontend/nginx.conf — SPA fallback, /api/ proxy_pass to backend, gzip, caching"
+    },
+    {
+      "id": "P8A-GATE-004",
+      "name": "Production docker-compose.yml",
+      "result": "PASS",
+      "detail": "infra/deployment/docker-compose.production.yml — postgres + backend + frontend, health checks, internal network, persistent volume"
+    },
+    {
+      "id": "P8A-GATE-005",
+      "name": "Environment example file",
+      "result": "PASS",
+      "detail": "infra/deployment/.env.production.example — POSTGRES_PASSWORD, JWT_SECRET, JWT_EXPIRES_IN, BODY_LIMIT"
+    },
+    {
+      "id": "P8A-GATE-006",
+      "name": "Deployment scripts exist",
+      "result": "PASS",
+      "detail": "7 scripts: validate-environment, deploy-release, run-migrations, health-check, smoke-test, rollback, cleanup-releases"
+    },
+    {
+      "id": "P8A-GATE-007",
+      "name": "GitHub Actions workflow",
+      "result": "PASS",
+      "detail": ".github/workflows/deploy-ec2.yml — workflow_dispatch, concurrency group, 12 steps, rollback on failure"
+    },
+    {
+      "id": "P8A-GATE-008",
+      "name": "Secret scan",
+      "result": "PASS",
+      "detail": "No deployment secrets leaked in repository files"
+    },
+    {
+      "id": "P8A-GATE-009",
+      "name": "Documentation",
+      "result": "PASS",
+      "detail": "5 docs: DEPLOYMENT, GITHUB_SECRETS, EC2_SETUP, ROLLBACK, RUNBOOK_OPERACIONAL"
+    },
+    {
+      "id": "P8A-GATE-010",
+      "name": "docker-compose config validation",
+      "result": "PASS",
+      "detail": "docker compose config — all services, networks, volumes resolve correctly"
+    },
+    {
+      "id": "P8A-GATE-011",
+      "name": "Backend Docker build",
+      "result": "PASS",
+      "detail": "Build successful — 97 npm packages, 0 vulnerabilities, 4.2s build time"
+    },
+    {
+      "id": "P8A-GATE-012",
+      "name": "Frontend Docker build",
+      "result": "PASS",
+      "detail": "Build successful — tsc --noEmit + vite build, 157 modules, 1.91s build time, 402KB JS bundle"
+    }
+  ],
+  "summary": "12/12 gates PASS"
+}

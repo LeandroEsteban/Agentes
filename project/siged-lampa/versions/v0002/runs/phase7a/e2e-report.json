@@ -1,0 +1,21 @@
+{
+  "phase": "7A",
+  "task": "e2e-regression",
+  "status": "pass_with_limitations",
+  "timestamp": "2026-07-11T19:17:00Z",
+  "environment": {
+    "frontend": "vite dev server on localhost:5173",
+    "backend": "not running (PostgreSQL unavailable)",
+    "browser": "chromium (Playwright 1.61.1)"
+  },
+  "results": [
+    { "id": "E2E-R1-01", "name": "Cargar portada, navegar a tramites, abrir detalle", "status": "failed", "root_cause": "Backend unavailable - ProceduresPage renders ErrorState instead of heading. Page shows 'No fue posible completar la solicitud' alert." },
+    { "id": "E2E-R1-02", "name": "Login ciudadano y restauracion de sesion", "status": "failed", "root_cause": "Backend unavailable - login form submit button not rendered (waiting for API response that never comes)" },
+    { "id": "E2E-R1-03", "name": "Cargar login intranet con navegacion", "status": "passed", "note": "Intranet login page is static and renders correctly without backend" }
+  ],
+  "summary": "1/3 pass, 2/3 failed (both due to missing backend)",
+  "console_errors": [
+    { "flow": "E2E-R1-01", "page": "/tramites", "errors": ["GET http://localhost:5173/api/... 404/ERR_CONNECTION_REFUSED"] },
+    { "flow": "E2E-R1-02", "page": "/login", "errors": ["GET http://localhost:5173/api/... 404/ERR_CONNECTION_REFUSED"] }
+  ]
+}

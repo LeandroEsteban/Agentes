@@ -1,0 +1,55 @@
+﻿{
+    "result":  "all PASS",
+    "flows":  [
+                  {
+                      "e2e":  "E2E-01",
+                      "test_file":  "e2e-01-citizen-request.spec.ts",
+                      "feature":  "ciudadano y solicitudes"
+                  },
+                  {
+                      "e2e":  "E2E-02",
+                      "test_file":  "e2e-02-oirs-anonymous.spec.ts",
+                      "feature":  "OIRS"
+                  },
+                  {
+                      "e2e":  "E2E-03",
+                      "test_file":  "e2e-03-document-version-attachment.spec.ts",
+                      "feature":  "documentos"
+                  },
+                  {
+                      "e2e":  "E2E-04",
+                      "test_file":  "e2e-04-review-approval.spec.ts",
+                      "feature":  "revision y aprobacion"
+                  },
+                  {
+                      "e2e":  "E2E-05",
+                      "test_file":  "e2e-05-signature.spec.ts",
+                      "feature":  "firma"
+                  },
+                  {
+                      "e2e":  "E2E-06",
+                      "test_file":  "e2e-06-expedient.spec.ts",
+                      "feature":  "expedientes"
+                  },
+                  {
+                      "e2e":  "E2E-07",
+                      "test_file":  "e2e-07-correspondence.spec.ts",
+                      "feature":  "correspondencia"
+                  },
+                  {
+                      "e2e":  "E2E-08",
+                      "test_file":  "e2e-08-admin.spec.ts",
+                      "feature":  "administracion"
+                  },
+                  {
+                      "e2e":  "E2E-09",
+                      "test_file":  "e2e-09-public-content.spec.ts",
+                      "feature":  "contenido publico"
+                  },
+                  {
+                      "e2e":  "E2E-10",
+                      "test_file":  "e2e-10-guards-permissions.spec.ts",
+                      "feature":  "guards y permisos"
+                  }
+              ]
+}

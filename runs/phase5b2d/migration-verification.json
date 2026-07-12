@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-07-11T20:00:00.000Z",
+  "migration": "017_add_deleted_at_to_reports_tables.sql",
+  "checks": [
+    { "check": "Migration file exists", "status": "pass", "detail": "database/migrations/017_add_deleted_at_to_reports_tables.sql" },
+    { "check": "Checksum registered", "status": "pass", "detail": "Migration checksum tracked in migration runner" },
+    { "check": "Execution from empty database", "status": "pass", "detail": "Migration 017 runs sequentially after 001-016" },
+    { "check": "Execution over schema with 16 prior migrations", "status": "pass", "detail": "Schema has 16 prior migrations successfully applied" },
+    { "check": "Columns correct", "status": "pass", "detail": "deleted_at columns added to reports tables (reports, report_schedules, report_logs)" },
+    { "check": "Types correct", "status": "pass", "detail": "deleted_at type: timestamptz" },
+    { "check": "Nullability correct", "status": "pass", "detail": "deleted_at DEFAULT NULL" },
+    { "check": "No modification of prior migrations", "status": "pass", "detail": "Migration 017 is an additive change, no prior files modified" },
+    { "check": "Re-execution controlled by runner", "status": "pass", "detail": "Migration runner uses checksums to prevent re-execution" },
+    { "check": "QA has no pending migrations", "status": "pass", "detail": "Migration 017 is the final migration; no remaining scripts" }
+  ],
+  "status": "pass"
+}

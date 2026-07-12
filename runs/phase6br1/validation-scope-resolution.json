@@ -1,0 +1,16 @@
+[
+  {
+    "validation_id": "VAL-030",
+    "resolution_status": "not_applicable_to_frontend",
+    "responsible_phase": "7",
+    "blocks_phase6b": false,
+    "resolution": "No API contract exists for PDF generation or verification. Deferred to Phase 7."
+  },
+  {
+    "validation_id": "VAL-038",
+    "resolution_status": "superseded_by_accepted_architecture",
+    "responsible_phase": "7",
+    "blocks_phase6b": false,
+    "resolution": "Architecture uses academic_simulation signing. No physical-signature field exists. Deferred to Phase 7."
+  }
+]

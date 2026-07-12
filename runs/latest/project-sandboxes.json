@@ -1,0 +1,37 @@
+{
+  "clone_source_hash": "sha256:c062421a834bc2e92dad67b978bd3c1b07884d5969c6010d09ae5218d336f937",
+  "current_version": "v0001",
+  "project_id": "webforge-factory-runtime",
+  "sandboxes": [
+    {
+      "autonomous": "true",
+      "clone_source": "project/webforge-factory-runtime/versions/v0001",
+      "frontend_template": "PLANTILLA_FRONTEND",
+      "frontend_template_hash": "sha256:441588b4a0827b70f2c31dee5aeef7d1410ad6c1525b09876218a2bfc5cc9be8",
+      "frontend_template_required": "true",
+      "frontend_template_source": "PLANTILLA_FRONTEND",
+      "learning_path": "project/webforge-factory-runtime/sandboxes/DEV/learning",
+      "memory_path": "project/webforge-factory-runtime/sandboxes/DEV/memory",
+      "name": "DEV",
+      "path": "project/webforge-factory-runtime/sandboxes/DEV",
+      "sandbox_id": "webforge-factory-runtime-dev-v0001",
+      "shared_with_factory": "false",
+      "version": "v0001"
+    },
+    {
+      "autonomous": "true",
+      "clone_source": "project/webforge-factory-runtime/versions/v0001",
+      "frontend_template": "PLANTILLA_FRONTEND",
+      "frontend_template_hash": "sha256:441588b4a0827b70f2c31dee5aeef7d1410ad6c1525b09876218a2bfc5cc9be8",
+      "frontend_template_required": "true",
+      "frontend_template_source": "PLANTILLA_FRONTEND",
+      "learning_path": "project/webforge-factory-runtime/sandboxes/QA/learning",
+      "memory_path": "project/webforge-factory-runtime/sandboxes/QA/memory",
+      "name": "QA",
+      "path": "project/webforge-factory-runtime/sandboxes/QA",
+      "sandbox_id": "webforge-factory-runtime-qa-v0001",
+      "shared_with_factory": "false",
+      "version": "v0001"
+    }
+  ]
+}

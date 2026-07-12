@@ -1,0 +1,7 @@
+{
+  "catalog_operations": 98,
+  "router_operations": 98,
+  "openapi_operations": 98,
+  "consistent": true,
+  "markdown_inventory": "Inventario_Endpoints_SIGED_Lampa.md contains the 40 original endpoints; supplemental audit is in JSON."
+}

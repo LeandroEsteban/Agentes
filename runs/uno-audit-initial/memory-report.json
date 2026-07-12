@@ -1,0 +1,12 @@
+{
+  "activated_items": [],
+  "factory_learning_write_allowed": false,
+  "factory_memory_read_allowed": false,
+  "persistent_memory_mode": "project_scoped_propose_only",
+  "project_id": "proyecto-uno",
+  "project_learning_root": "/Volumes/KINGSTON/CODEX HD/Nueva Fabrica Software Web/project/proyecto-uno/learning",
+  "project_memory_root": "/Volumes/KINGSTON/CODEX HD/Nueva Fabrica Software Web/project/proyecto-uno/memory",
+  "project_proposals_count": 0,
+  "shared_with_factory": false,
+  "tainted_items": []
+}

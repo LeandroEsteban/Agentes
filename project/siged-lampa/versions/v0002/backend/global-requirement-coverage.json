@@ -1,0 +1,21 @@
+{
+  "business_rules": {
+    "total": 60,
+    "implemented_backend": 20,
+    "implemented_database": 15,
+    "deferred_frontend": 0,
+    "academic_simulation": 0,
+    "pending": 25,
+    "with_positive_evidence": 28,
+    "with_negative_evidence": 6
+  },
+  "validations": {
+    "total": 100,
+    "implemented_backend": 22,
+    "implemented_database": 33,
+    "deferred_frontend": 2,
+    "pending": 43,
+    "with_positive_evidence": 40,
+    "with_negative_evidence": 7
+  }
+}

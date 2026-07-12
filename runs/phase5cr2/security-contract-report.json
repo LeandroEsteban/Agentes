@@ -1,0 +1,10 @@
+{
+  "schemes": [
+    "InternalBearerAuth",
+    "CitizenBearerAuth",
+    "AnonymousOirsTracking"
+  ],
+  "authenticated_operations": 85,
+  "permissioned_operations": 68,
+  "public_operations": 13
+}

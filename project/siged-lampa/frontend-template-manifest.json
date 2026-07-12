@@ -1,0 +1,13 @@
+{
+  "applies_to": "all_projects_all_versions_all_sandboxes",
+  "hash": "sha256:d3ada78b3c20c5961f1ab992a78059450520858f2ad30c01bdcb9dd08857126d",
+  "mandatory": true,
+  "required_files": [
+    "README.md",
+    "AGENTS.md",
+    "HANDOFF-REACT.md",
+    "Intranet Agora.dc.html"
+  ],
+  "source": "PLANTILLA_FRONTEND",
+  "template_name": "PLANTILLA_FRONTEND"
+}

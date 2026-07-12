@@ -1,0 +1,10 @@
+{
+  "historical_baseline_status": "unverifiable",
+  "current_reference_baseline_created": true,
+  "unexpected_changes_since_current_reference": false,
+  "reason": "No existe manifiesto histórico o copia anterior disponible",
+  "reference_snapshot": {
+    "generated_at": "2026-07-11T16:44:33.285Z",
+    "phase5b_baseline_report_sha256": "82038f63b74d2df294097f93057e14dc4dece539ba5b5eb7b25d76490329c62c"
+  }
+}

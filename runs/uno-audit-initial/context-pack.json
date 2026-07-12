@@ -1,0 +1,9 @@
+{
+  "agent_id": "agent.context_rag",
+  "context_pack_hash": "sha256:91e0f7c145d5bbf9bef2e32da5dd750f9ac28d971dd0e9b20a136661b63d9a4a",
+  "context_pack_id": "CTX-CONTEXT",
+  "mode": "minimal_snippets_only",
+  "phase": "context",
+  "source_count": 0,
+  "sources": []
+}

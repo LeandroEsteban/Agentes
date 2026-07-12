@@ -1,0 +1,10 @@
+{
+  "status": "partial",
+  "positive": 1,
+  "negative": 1,
+  "evidence": [
+    "backend/tests/unit/authorization.test.js",
+    "backend/tests/api/auth-api.test.js"
+  ],
+  "gap": "Only the user-list actor boundary is exercised; full permission matrix remains untested."
+}

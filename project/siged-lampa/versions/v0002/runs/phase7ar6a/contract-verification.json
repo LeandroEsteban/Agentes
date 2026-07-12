@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "verified": [
+    "internal login",
+    "profile identity",
+    "document create",
+    "version",
+    "JSON base64 attachment",
+    "review",
+    "approvalId decision",
+    "simulated signature"
+  ]
+}

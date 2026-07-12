@@ -1,0 +1,38 @@
+{
+  "phase": "8A",
+  "file": "infra/deployment/docker-compose.production.yml",
+  "config_validation": "PASS",
+  "services": {
+    "postgres": {
+      "image": "postgres:16-alpine",
+      "persistent_volume": "pgdata_production",
+      "health_check": true,
+      "public_port": "none (internal network only)",
+      "restart": "unless-stopped",
+      "env_source": ".env.production file"
+    },
+    "backend": {
+      "build": {"context": "../..", "dockerfile": "backend/Dockerfile", "target": "production"},
+      "health_check": true,
+      "depends_on": "postgres (condition: service_healthy)",
+      "restart": "unless-stopped",
+      "env_source": ".env.production file + inline overrides",
+      "network": "siged-production-net"
+    },
+    "frontend": {
+      "build": {"context": "../..", "dockerfile": "frontend/Dockerfile", "target": "production"},
+      "health_check": true,
+      "depends_on": "backend (condition: service_healthy)",
+      "ports": ["80:80"],
+      "restart": "unless-stopped",
+      "network": "siged-production-net"
+    }
+  },
+  "networks": {"siged-production-net": "bridge, internal"},
+  "volumes": {"pgdata_production": "persistent, not removed on deploy"},
+  "local_build": {
+    "backend": "PASS (97 packages, 0 vulns)",
+    "frontend": "PASS (157 modules, 402KB JS bundle)",
+    "compose_config": "PASS"
+  }
+}

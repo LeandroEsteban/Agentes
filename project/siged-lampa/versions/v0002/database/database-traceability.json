@@ -1,0 +1,326 @@
+{
+  "schema_version": "webforge.database_traceability.v1",
+  "generated_at": "2026-07-11T04:40:00Z",
+  "traceability": [
+    {
+      "table": "users",
+      "column": "username",
+      "constraint": "UNIQUE",
+      "br": ["BR-001"],
+      "val": ["VAL-001", "VAL-004"],
+      "migration": "003_security.sql",
+      "test": "test_unique_username",
+      "evidence": "username uniqueness enforced at DB level"
+    },
+    {
+      "table": "users",
+      "column": "email",
+      "constraint": "UNIQUE",
+      "br": [],
+      "val": ["VAL-005"],
+      "migration": "003_security.sql",
+      "test": "test_unique_email",
+      "evidence": "email uniqueness enforced at DB level"
+    },
+    {
+      "table": "users",
+      "column": "status",
+      "constraint": "NOT NULL",
+      "br": ["BR-001"],
+      "val": ["VAL-007"],
+      "migration": "003_security.sql",
+      "test": "test_users_columns",
+      "evidence": "status column NOT NULL"
+    },
+    {
+      "table": "roles",
+      "column": "code",
+      "constraint": "UNIQUE",
+      "br": [],
+      "val": [],
+      "migration": "003_security.sql",
+      "test": "test_roles_unique_code",
+      "evidence": "roles code uniqueness enforced"
+    },
+    {
+      "table": "permissions",
+      "column": "code",
+      "constraint": "UNIQUE",
+      "br": ["BR-003"],
+      "val": [],
+      "migration": "003_security.sql",
+      "test": "test_permissions_unique_code",
+      "evidence": "permissions code uniqueness enforced"
+    },
+    {
+      "table": "user_roles",
+      "column": "user_id, role_id",
+      "constraint": "UNIQUE",
+      "br": ["BR-002"],
+      "val": ["VAL-006"],
+      "migration": "003_security.sql",
+      "test": "test_user_roles_unique",
+      "evidence": "user-role combination uniqueness enforced"
+    },
+    {
+      "table": "departments",
+      "column": "code",
+      "constraint": "UNIQUE",
+      "br": ["BR-005"],
+      "val": ["VAL-009"],
+      "migration": "002_organization.sql",
+      "test": "test_department_code_unique",
+      "evidence": "department code enforced at DB level"
+    },
+    {
+      "table": "document_types",
+      "column": "code",
+      "constraint": "UNIQUE",
+      "br": ["BR-006"],
+      "val": [],
+      "migration": "004_document_catalogs.sql",
+      "test": "test_document_types_unique",
+      "evidence": "document types code unique"
+    },
+    {
+      "table": "documents",
+      "column": "document_type_id, document_number",
+      "constraint": "UNIQUE",
+      "br": ["BR-014"],
+      "val": ["VAL-017"],
+      "migration": "005_documents.sql",
+      "test": "test_document_number_unique",
+      "evidence": "unique numbering per document type"
+    },
+    {
+      "table": "documents",
+      "column": "confidentiality_level",
+      "constraint": "CHECK",
+      "br": ["BR-019"],
+      "val": ["VAL-021"],
+      "migration": "005_documents.sql",
+      "test": "test_confidentiality_check",
+      "evidence": "confidentiality levels restricted"
+    },
+    {
+      "table": "document_versions",
+      "column": "version_number",
+      "constraint": "CHECK > 0",
+      "br": ["BR-021"],
+      "val": [],
+      "migration": "005_documents.sql",
+      "test": "test_version_number_check",
+      "evidence": "version number must be positive"
+    },
+    {
+      "table": "document_attachments",
+      "column": "document_version_id",
+      "constraint": "FK",
+      "br": ["BR-017"],
+      "val": [],
+      "migration": "005_documents.sql",
+      "test": "test_attachment_version_fk",
+      "evidence": "attachments associated with version"
+    },
+    {
+      "table": "expedients",
+      "column": "code",
+      "constraint": "UNIQUE",
+      "br": ["BR-037"],
+      "val": ["VAL-046"],
+      "migration": "007_expedients.sql",
+      "test": "test_expedient_code_unique",
+      "evidence": "expedient code unique"
+    },
+    {
+      "table": "expedient_documents",
+      "column": "expedient_id, document_id",
+      "constraint": "UNIQUE",
+      "br": ["BR-038"],
+      "val": ["VAL-050"],
+      "migration": "007_expedients.sql",
+      "test": "test_expedient_document_unique",
+      "evidence": "no duplicate document in expedition"
+    },
+    {
+      "table": "expedients",
+      "column": "closed_at",
+      "constraint": "CHECK >= opened_at",
+      "br": [],
+      "val": ["VAL-097"],
+      "migration": "007_expedients.sql",
+      "test": "test_expedient_closed_at",
+      "evidence": "closed_at after opened_at"
+    },
+    {
+      "table": "correspondence",
+      "column": "tracking_code",
+      "constraint": "UNIQUE",
+      "br": [],
+      "val": [],
+      "migration": "008_correspondence.sql",
+      "test": "test_correspondence_tracking_unique",
+      "evidence": "tracking code unique"
+    },
+    {
+      "table": "correspondence",
+      "column": "direction",
+      "constraint": "CHECK",
+      "br": ["BR-043"],
+      "val": ["VAL-056"],
+      "migration": "008_correspondence.sql",
+      "test": "test_correspondence_direction",
+      "evidence": "direction restricted to INBOUND/OUTBOUND"
+    },
+    {
+      "table": "correspondence_routes",
+      "column": "from_department_id, to_department_id",
+      "constraint": "CHECK <>",
+      "br": [],
+      "val": [],
+      "migration": "008_correspondence.sql",
+      "test": "test_correspondence_routes_diff",
+      "evidence": "from/to department must differ"
+    },
+    {
+      "table": "citizen_accounts",
+      "column": "email",
+      "constraint": "UNIQUE",
+      "br": [],
+      "val": [],
+      "migration": "009_citizen_portal.sql",
+      "test": "test_citizen_account_email_unique",
+      "evidence": "citizen account email unique"
+    },
+    {
+      "table": "citizen_profiles",
+      "column": "national_id",
+      "constraint": "UNIQUE",
+      "br": [],
+      "val": [],
+      "migration": "009_citizen_portal.sql",
+      "test": "test_citizen_profile_national_id_unique",
+      "evidence": "national ID unique"
+    },
+    {
+      "table": "procedure_types",
+      "column": "code",
+      "constraint": "UNIQUE",
+      "br": [],
+      "val": [],
+      "migration": "009_citizen_portal.sql",
+      "test": "test_procedure_types_unique",
+      "evidence": "procedure type code unique"
+    },
+    {
+      "table": "published_procedures",
+      "column": "slug",
+      "constraint": "UNIQUE",
+      "br": [],
+      "val": [],
+      "migration": "009_citizen_portal.sql",
+      "test": "test_published_procedures_slug_unique",
+      "evidence": "published procedure slug unique"
+    },
+    {
+      "table": "citizen_requests",
+      "column": "tracking_code",
+      "constraint": "UNIQUE",
+      "br": ["BR-050"],
+      "val": ["VAL-070"],
+      "migration": "009_citizen_portal.sql",
+      "test": "test_citizen_request_tracking_unique",
+      "evidence": "citizen request tracking code unique"
+    },
+    {
+      "table": "oirs_cases",
+      "column": "tracking_code",
+      "constraint": "UNIQUE",
+      "br": [],
+      "val": [],
+      "migration": "010_oirs.sql",
+      "test": "test_oirs_tracking_unique",
+      "evidence": "oirs tracking code unique"
+    },
+    {
+      "table": "oirs_cases",
+      "column": "anonymous_*",
+      "constraint": "CHECK (auth OR anonymous complete)",
+      "br": [],
+      "val": ["VAL-083"],
+      "migration": "010_oirs.sql",
+      "test": "test_oirs_anonymous_check",
+      "evidence": "oirs auth or anonymous contact validated"
+    },
+    {
+      "table": "oirs_messages",
+      "column": "author_user_id, author_citizen_id",
+      "constraint": "CHECK (one must exist)",
+      "br": [],
+      "val": [],
+      "migration": "010_oirs.sql",
+      "test": "test_oirs_message_author_check",
+      "evidence": "message has internal or citizen author"
+    },
+    {
+      "table": "news_posts",
+      "column": "slug",
+      "constraint": "UNIQUE",
+      "br": [],
+      "val": [],
+      "migration": "011_public_content.sql",
+      "test": "test_news_posts_slug_unique",
+      "evidence": "news posts slug unique"
+    },
+    {
+      "table": "public_notices",
+      "column": "end_at",
+      "constraint": "CHECK >= start_at",
+      "br": ["BR-054"],
+      "val": ["VAL-075"],
+      "migration": "011_public_content.sql",
+      "test": "test_public_notices_date_check",
+      "evidence": "notice end date after start date"
+    },
+    {
+      "table": "calendar_events",
+      "column": "end_at",
+      "constraint": "CHECK >= start_at",
+      "br": [],
+      "val": [],
+      "migration": "011_public_content.sql",
+      "test": "test_calendar_events_date_check",
+      "evidence": "event end date after start date"
+    },
+    {
+      "table": "document_review_requests",
+      "column": "requested_by, reviewer_user_id",
+      "constraint": "CHECK <>",
+      "br": ["BR-026"],
+      "val": [],
+      "migration": "006_document_workflows.sql",
+      "test": "test_review_different_users",
+      "evidence": "reviewer differs from requester"
+    },
+    {
+      "table": "document_attachments",
+      "column": "document_version_id",
+      "constraint": "FK NOT NULL",
+      "br": ["BR-017"],
+      "val": [],
+      "migration": "005_documents.sql",
+      "test": "test_attachment_version_required",
+      "evidence": "ADR-006: attachments linked to version"
+    },
+    {
+      "table": "document_versions",
+      "column": "previous_version_id",
+      "constraint": "FK self",
+      "br": ["BR-021"],
+      "val": [],
+      "migration": "013_deferred_foreign_keys.sql",
+      "test": "test_previous_version_fk",
+      "evidence": "ADR-007: version chain FK"
+    }
+  ]
+}

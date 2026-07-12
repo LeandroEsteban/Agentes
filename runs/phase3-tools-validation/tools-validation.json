@@ -1,0 +1,276 @@
+{
+  "status": "valid",
+  "tools": [
+    {
+      "allowed_agents": [
+        "agent.refinement"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.read_catalog",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.read_catalog",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.refinement"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.validate_findings",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.validate_findings",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.architecture"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.generate_adr",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.generate_adr",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.architecture"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.validate_dag",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.validate_dag",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.architecture"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.validate_tasks",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.validate_tasks",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.architecture"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.validate_handoffs",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.validate_handoffs",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.database"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.generate_migration",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.generate_migration",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.database"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.generate_seed",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.generate_seed",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.database"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.validate_schema",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.validate_schema",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.backend"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.generate_openapi",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.generate_openapi",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.backend"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.generate_controller",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.generate_controller",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.backend"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.validate_api",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.validate_api",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.frontend"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.generate_component",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.generate_component",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.frontend"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.generate_route",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.generate_route",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.frontend"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.validate_frontend",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.validate_frontend",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.qa_release"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.run_tests",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.run_tests",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.qa_release"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.check_coverage",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.check_coverage",
+      "writes_workspace": false
+    },
+    {
+      "allowed_agents": [
+        "agent.qa_release"
+      ],
+      "allowed_operations": [],
+      "description": "Policy for tool.validate_deploy",
+      "max_stderr_bytes": 1048576,
+      "max_stdout_bytes": 1048576,
+      "network_policy": "deny",
+      "requires_approval": false,
+      "requires_snapshot": false,
+      "timeout_seconds": 30,
+      "tool_id": "tool.validate_deploy",
+      "writes_workspace": false
+    }
+  ],
+  "tools_registered": 18
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "webforge.phase6br2_initial_audit.v1",
+  "generated_at": "2026-07-11T18:34:00Z",
+  "screens": {
+    "total": 30,
+    "verified": 30,
+    "verified_with_limitation": 0,
+    "failed": 0
+  },
+  "e2e": {
+    "planned": 10,
+    "implemented": 3,
+    "executed": 0,
+    "passed": 0,
+    "failed": 0
+  },
+  "coverage": {
+    "lines": 83.93,
+    "statements": 83.93,
+    "functions": 61.62,
+    "branches": 77.08,
+    "thresholds_60b_r2": {
+      "lines": { "required": 70, "actual": 83.93, "met": true },
+      "statements": { "required": 70, "actual": 83.93, "met": true },
+      "functions": { "required": 65, "actual": 61.62, "met": false },
+      "branches": { "required": 65, "actual": 77.08, "met": true }
+    }
+  },
+  "remaining_coverage_files": [
+    "src/features/auth/ProfilePage.tsx",
+    "src/auth/require-auth.tsx",
+    "src/auth/require-actor.tsx",
+    "src/auth/require-permission.tsx",
+    "src/api/client.ts",
+    "src/api/endpoints.ts"
+  ],
+  "critical_findings": [
+    "functions coverage 61.62% below 65% threshold — needs +7 covered functions minimum",
+    "ProfilePage: 0% function coverage, 19.11% line coverage — no test file exists",
+    "Auth guards (require-auth, require-actor, require-permission): 0% function coverage — Navigate component causes test hang",
+    "E2E: 3/10 flows implemented, 0 executed — requires QA stack",
+    "Accessibility: not yet verified",
+    "Responsive: not yet verified"
+  ]
+}

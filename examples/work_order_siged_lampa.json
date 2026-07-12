@@ -1,0 +1,52 @@
+{
+  "schema_version": "webforge.work_order.v2",
+  "project_id": "siged-lampa",
+  "project_version": "v0002",
+  "objective": "Normalizar y evolucionar SIGED-Lampa mediante WEBFORGE",
+  "product_type": "administrative_fullstack_web_app",
+  "source_documents": [
+    "Especificacion_Funcional_SIGED_Lampa.md",
+    "Inventario_Endpoints_SIGED_Lampa.md",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "Modelo_ER_Detallado_SIGED_Lampa.md"
+  ],
+  "stack": {
+    "factory": "python",
+    "frontend_current": "vanilla_javascript",
+    "frontend_target": "react",
+    "backend": "node",
+    "database_current": "memory",
+    "database_target": "postgresql",
+    "deployment": "ec2"
+  },
+  "minimum_scope": {
+    "use_cases": 10,
+    "workflows": 30,
+    "tables": 40,
+    "endpoints": 40,
+    "screens": 30,
+    "business_rules": 60,
+    "validations": 100
+  },
+  "quality": {
+    "coverage_threshold": 100,
+    "require_database_validation": true,
+    "require_e2e": true,
+    "require_traceability": true
+  },
+  "scope": "local_artifacts_only",
+  "side_effects": "no_external_writes_no_deploy",
+  "acceptance_criteria": [
+    "Los cuatro documentos se normalizan",
+    "Los codigos originales se conservan",
+    "Los conteos minimos se verifican",
+    "Las inconsistencias criticas bloquean la corrida",
+    "Los hallazgos incluyen evidencia de origen",
+    "El prototipo SIGED existente no se modifica"
+  ],
+  "budget": {
+    "tool_calls": 200,
+    "mcp_calls": 0,
+    "cost_usd": 0
+  }
+}

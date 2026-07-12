@@ -1,0 +1,8 @@
+{
+  "status": "blocked",
+  "blockers": [
+    "E2E-03 through E2E-08 fail.",
+    "E2E-09 and E2E-10 are superficial.",
+    "Infrastructure, backend/frontend regressions, coverage and WebForge were not completed."
+  ]
+}

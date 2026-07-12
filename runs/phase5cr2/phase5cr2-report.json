@@ -1,0 +1,230 @@
+{
+  "schema_version": "webforge.phase5cr2_report.v1",
+  "status": "pass_with_limitations",
+  "phase5cr2_status": "pass_with_limitations",
+  "phase5c_status": "pass_with_limitations",
+  "phase5_status": "pass_with_limitations",
+  "routes": {
+    "audited": 46,
+    "accepted": 55,
+    "internalized": 0,
+    "merged": 0,
+    "removed": 0,
+    "legacy": 1
+  },
+  "operations": {
+    "total": 98,
+    "original": 40,
+    "supplemental": 55,
+    "legacy": 1,
+    "technical": 2
+  },
+  "openapi": {
+    "valid": true,
+    "syntax": {
+      "parser": "python.json (JSON is YAML 1.2 subset)",
+      "errors": []
+    },
+    "openapi_version": "3.0.3",
+    "reference_errors": [],
+    "operation_ids": {
+      "total": 98,
+      "duplicates": []
+    },
+    "endpoint_codes": {
+      "total": 98,
+      "duplicates": []
+    },
+    "security_schemes": [
+      "AnonymousOirsTracking",
+      "CitizenBearerAuth",
+      "InternalBearerAuth"
+    ],
+    "paths": 76,
+    "operations": 98
+  },
+  "router_contract": {
+    "catalog_operations": 98,
+    "router_operations": 98,
+    "openapi_operations": 98,
+    "matched": 98,
+    "missing_in_openapi": [],
+    "missing_in_router": [],
+    "missing_in_catalog": [],
+    "method_mismatches": [],
+    "path_mismatches": [],
+    "security_mismatches": [],
+    "permission_mismatches": [],
+    "duplicate_operation_ids": [],
+    "duplicate_endpoint_codes": []
+  },
+  "rules": {
+    "total": 60,
+    "duplicate_ids": [],
+    "missing_ids": [],
+    "pending": 0,
+    "statuses": {
+      "implemented": 45,
+      "implemented_in_database": 15
+    }
+  },
+  "validations": {
+    "total": 100,
+    "duplicate_ids": [],
+    "missing_ids": [],
+    "pending": 0,
+    "statuses": {
+      "deferred_to_frontend": 2,
+      "implemented": 65,
+      "implemented_in_database": 33
+    }
+  },
+  "regression": {
+    "status": "pass",
+    "runner": "npm test",
+    "postgresql": {
+      "persistence_mode": "postgres",
+      "database_url_configured": true
+    },
+    "exit_code": 0,
+    "suites": [
+      "unit",
+      "api",
+      "integration",
+      "smoke",
+      "5B.2A",
+      "5B.2B",
+      "5B.2C",
+      "5B.2D",
+      "5B.3",
+      "5C-R1",
+      "5C-R2"
+    ]
+  },
+  "coverage": {
+    "current": {
+      "lines": 80.4,
+      "statements": 80.4,
+      "functions": 85.34,
+      "branches": 83.51
+    },
+    "target": {
+      "lines": 85,
+      "statements": 85,
+      "functions": 80,
+      "branches": 80
+    },
+    "status": "accepted_limitation",
+    "critical_modules_without_tests": [],
+    "resolution_phase": "7",
+    "backlog": [
+      "Raise lines and statements coverage from the measured value to 85% with focused tests for services and error paths."
+    ]
+  },
+  "gates": [
+    {
+      "gate": "GATE-R2-001",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-R2-002",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-R2-003",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-R2-004",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-R2-005",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-R2-006",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-R2-007",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-R2-008",
+      "status": "pass_with_limitation"
+    },
+    {
+      "gate": "GATE-R2-009",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-R2-010",
+      "status": "pass_with_limitation"
+    }
+  ],
+  "final_gates": [
+    {
+      "gate": "GATE-API-001",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-002",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-003",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-004",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-005",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-006",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-007",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-008",
+      "status": "pass_with_limitation"
+    },
+    {
+      "gate": "GATE-API-009",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-010",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-011",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-012",
+      "status": "pass_with_limitation"
+    }
+  ],
+  "handoffs": {
+    "frontend": "accepted_with_limitations",
+    "qa": "accepted_with_limitations"
+  },
+  "accepted_limitations": [
+    {
+      "category": "coverage",
+      "resolution_phase": "7"
+    },
+    {
+      "category": "historical_baseline",
+      "resolution_phase": "not_recoverable"
+    }
+  ]
+}

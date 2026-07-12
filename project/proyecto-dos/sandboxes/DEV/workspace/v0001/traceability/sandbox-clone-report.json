@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "sandboxes": [
+    {
+      "sandbox": "DEV",
+      "source": "project/proyecto-dos/versions/v0001",
+      "target": "project/proyecto-dos/sandboxes/DEV/workspace/v0001",
+      "clone_mode": "independent_local_clone",
+      "shared_with_factory": false,
+      "version": "v0001"
+    },
+    {
+      "sandbox": "QA",
+      "source": "project/proyecto-dos/versions/v0001",
+      "target": "project/proyecto-dos/sandboxes/QA/workspace/v0001",
+      "clone_mode": "independent_local_clone",
+      "shared_with_factory": false,
+      "version": "v0001"
+    }
+  ]
+}

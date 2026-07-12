@@ -1,0 +1,23 @@
+{
+    "backend":  {
+                    "status":  200
+                },
+    "database":  {
+                     "body":  {
+                                  "status":  "healthy",
+                                  "database":  "postgresql",
+                                  "connection":  "ok",
+                                  "migrations":  "up_to_date",
+                                  "functional_tables":  40,
+                                  "persistence_mode":  "postgres",
+                                  "details":  {
+                                                  "migrations_applied":  17,
+                                                  "migrations_expected":  17
+                                              }
+                              },
+                     "status":  200
+                 },
+    "frontend":  {
+                     "status":  200
+                 }
+}

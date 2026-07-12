@@ -1,0 +1,19 @@
+{
+  "autonomous": "true",
+  "clone_mode": "independent_local_clone",
+  "clone_source": "project/proyecto-uno/versions/v0002",
+  "factory_learning_write_allowed": "false",
+  "factory_memory_read_allowed": "false",
+  "frontend_template": "PLANTILLA_FRONTEND",
+  "frontend_template_hash": "sha256:441588b4a0827b70f2c31dee5aeef7d1410ad6c1525b09876218a2bfc5cc9be8",
+  "frontend_template_required": "true",
+  "frontend_template_source": "PLANTILLA_FRONTEND",
+  "learning_path": "project/proyecto-uno/sandboxes/DEV/learning",
+  "memory_path": "project/proyecto-uno/sandboxes/DEV/memory",
+  "name": "DEV",
+  "path": "project/proyecto-uno/sandboxes/DEV",
+  "sandbox_id": "proyecto-uno-dev-v0002",
+  "shared_with_factory": "false",
+  "version": "v0002",
+  "workspace_clone": "project/proyecto-uno/sandboxes/DEV/workspace/v0002"
+}

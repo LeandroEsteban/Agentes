@@ -1,0 +1,45 @@
+{
+  "agent_id": "agent.context_rag",
+  "context_pack_hash": "sha256:7b036a74a0ca0a1dd367e1b1bdef586fcc6dce4bcaf7391ddb73a361e48fa8c4",
+  "context_pack_id": "CTX-CONTEXT",
+  "mode": "minimal_snippets_only",
+  "phase": "context",
+  "source_count": 5,
+  "sources": [
+    {
+      "evidence_id": "EV-SRC-001",
+      "path": "CheckList_Implementacio\u0301n_software-2.md",
+      "redactions": 0,
+      "sha256": "sha256:48d6bb22d8b419784f42d16631df7f4844512d41e0c96c7cd983b4deae3f0902",
+      "snippet": "# FILE: CheckList_Implementaci\u00f3n_software.md\n\n## 1. Prop\u00f3sito\n\n| campo | valor |\n|---|---|\n| `artifact` | Checklist de implementaci\u00f3n, doble revisi\u00f3n y readiness de WEBFORGE |\n| `work_order_id` | `WO-WEBFORGE-001` |\n| `status_dise\u00f1o` | `complete` |\n| `fecha_generacion` | `2026-06-30` |\n| `criterio_operativa` | WEBFORGE solo es `operativa` si 100% de checks cr\u00edticos pasan |\n\nEste checklist se usa antes de implementar, antes de abrir PR, antes de deploy y antes de declarar WEBFORGE operativa. Las casillas cr\u00edticas son bloqueantes. Una f\u00e1brica parcialmente implementada puede estar `lista_para_pil"
+    },
+    {
+      "evidence_id": "EV-SRC-002",
+      "path": "Diseno_detallado_agentes_y_skills_software-2.md",
+      "redactions": 0,
+      "sha256": "sha256:6992d9a88abec5e01ea4877aa65de57944645cfe0a60ad467d964e53e42512df",
+      "snippet": "# FILE: Diseno_detallado_agentes_y_skills_software.md\n\n## 1. Prop\u00f3sito\n\n| campo | valor |\n|---|---|\n| `artifact` | Dise\u00f1o detallado de agentes, skills, herramientas y MCP para WEBFORGE |\n| `work_order_id` | `WO-WEBFORGE-001` |\n| `status_dise\u00f1o` | `complete` |\n| `fecha_generacion` | `2026-06-30` |\n| `principio` | Crear agentes solo si separan responsabilidad, permisos, memoria, tools, riesgo o artefacto |\n\nEste archivo define el cat\u00e1logo operativo de agentes, skills determin\u00edsticas, tools, permisos, MCPPolicy y evals de WEBFORGE. El dise\u00f1o evita \u201cun agente gigante\u201d y prefiere una l\u00ednea de produ"
+    },
+    {
+      "evidence_id": "EV-SRC-003",
+      "path": "Diseno_detallado_arnes_dev_legacy-2.md",
+      "redactions": 0,
+      "sha256": "sha256:7294065a69b1830d5b1501eb48d6a1539b0385c392f8ed088eec6597c3c5f4fd",
+      "snippet": "# FILE: Diseno_detallado_arnes_dev_legacy.md\n\n## 1. Prop\u00f3sito del ARNES\n\n| campo | valor |\n|---|---|\n| `artifact` | Dise\u00f1o detallado del ARNES para desarrollo, mantenci\u00f3n e ingenier\u00eda inversa legacy |\n| `factory_name` | `WEBFORGE` |\n| `work_order_id` | `WO-WEBFORGE-001` |\n| `status_dise\u00f1o` | `complete` |\n| `fecha_generacion` | `2026-06-30` |\n| `harness_gate` | `harness.run_agent(agent_id, state)` |\n\nEl ARNES/Harness es la frontera de contenci\u00f3n de WEBFORGE. Ning\u00fan agente, skill, tool, MCP o memoria se invoca fuera de esta puerta. Su objetivo es convertir agentes generativos en operadores acota"
+    },
+    {
+      "evidence_id": "EV-SRC-004",
+      "path": "Diseno_detallado_fabrica_software_SDD-2.md",
+      "redactions": 0,
+      "sha256": "sha256:d13332a4c12638499469dd8c9de2fb24cc69e9d98e19d88252d6bb7c6e284247",
+      "snippet": "# FILE: Diseno_detallado_fabrica_software_SDD.md\n\n## 1. Identidad y prop\u00f3sito\n\n| campo | valor |\n|---|---|\n| `status_dise\u00f1o` | `complete` |\n| `factory_name` | `WEBFORGE` |\n| `work_order_id` | `WO-WEBFORGE-001` |\n| `assistant_version` | `Fabricador 12P / GPT-5.5 Thinking` |\n| `model_snapshot` | `GPT-5.5 Thinking` |\n| `prompt_version` | `fabricador_12p_2026-06-30` |\n| `schema_version` | `sdd_factory_design_v1` |\n| `workflow_version` | `wf.webforge.sdd.v1` |\n| `fecha_generacion` | `2026-06-30` |\n| `tipo` | `desarrollo|mantencion|ingenieria_inversa|modernizacion|mixto` |\n| `arquetipo` | `codigo we"
+    },
+    {
+      "evidence_id": "EV-SRC-005",
+      "path": "Diseno_detallado_orquestador_maestro_SDD-2.md",
+      "redactions": 0,
+      "sha256": "sha256:ef1fd9279eef0dc8ffb83afc8b710324c09a6c64b1c143101813697544aa710e",
+      "snippet": "# FILE: Diseno_detallado_orquestador_maestro_SDD.md\n\n## 1. Prop\u00f3sito\n\n| campo | valor |\n|---|---|\n| `artifact` | Dise\u00f1o detallado del Orquestador Maestro SDD |\n| `factory_name` | `WEBFORGE` |\n| `work_order_id` | `WO-WEBFORGE-001` |\n| `status_dise\u00f1o` | `complete` |\n| `fecha_generacion` | `2026-06-30` |\n| `workflow_version` | `wf.webforge.sdd.v1` |\n| `exit_states` | `complete`, `needs_user_input`, `not_answerable`, `error` |\n\nEl Orquestador Maestro es el \u00fanico componente que decide el flujo de WEBFORGE. No genera contenido libre ni ejecuta herramientas directamente; despacha agentes por ARNES, a"
+    }
+  ]
+}

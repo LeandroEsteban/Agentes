@@ -1,0 +1,21 @@
+﻿{
+    "checksums_valid":  true,
+    "database_name":  "siged_lampa_qa",
+    "persistence_mode":  "postgres",
+    "migrations_applied":  17,
+    "indexes":  182,
+    "primary_keys":  40,
+    "tables":  40,
+    "foreign_keys":  80,
+    "seeds_count":  5,
+    "seeds_applied":  [
+                          "001_catalogs.sql",
+                          "002_roles_permissions.sql",
+                          "003_departments.sql",
+                          "004_demo_data.sql",
+                          "005_procedure_catalogs.sql"
+                      ],
+    "migrations_pending":  0,
+    "database_url_host":  "127.0.0.1:55432",
+    "verification":  "PASS"
+}

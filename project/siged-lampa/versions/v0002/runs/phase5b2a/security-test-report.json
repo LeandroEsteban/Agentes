@@ -1,0 +1,15 @@
+{
+  "status": "partial",
+  "covered": [
+    "tampered token",
+    "mass assignment",
+    "invalid email",
+    "pagination limit"
+  ],
+  "missing": [
+    "SQL injection endpoint evidence",
+    "body limit",
+    "redacted logs",
+    "attachment traversal"
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "gate": "GATE-CONTRACT-001",
+    "status": "pass"
+  },
+  {
+    "gate": "GATE-CONTRACT-002",
+    "status": "pass"
+  },
+  {
+    "gate": "GATE-CONTRACT-003",
+    "status": "pass"
+  },
+  {
+    "gate": "GATE-CONTRACT-004",
+    "status": "pass"
+  },
+  {
+    "gate": "GATE-CONTRACT-005",
+    "status": "pass"
+  },
+  {
+    "gate": "GATE-CONTRACT-006",
+    "status": "pass"
+  },
+  {
+    "gate": "GATE-CONTRACT-007",
+    "status": "pass"
+  },
+  {
+    "gate": "GATE-CONTRACT-008",
+    "status": "pass"
+  }
+]

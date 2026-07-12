@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-07-11T20:00:00.000Z",
+  "endpoints": [
+    {
+      "code": "API-015",
+      "protected": true,
+      "negative_tests": [
+        { "name": "no token returns 401", "file": "phase5b2b-document-management.api.test.js:36", "status": "pass" },
+        { "name": "citizen token returns 403", "file": "phase5b2b-document-management.api.test.js:38", "status": "pass" }
+      ]
+    },
+    {
+      "code": "API-016",
+      "protected": true,
+      "negative_tests": [
+        { "name": "missing document_type_id returns 400", "file": "phase5b2b-document-management.api.test.js:64", "status": "pass" },
+        { "name": "invalid document_type_id returns 400", "file": "phase5b2b-document-management.api.test.js:66", "status": "pass" },
+        { "name": "invalid department_id returns 400", "file": "phase5b2b-document-management.api.test.js:68", "status": "pass" }
+      ]
+    },
+    {
+      "code": "API-017",
+      "protected": true,
+      "negative_tests": [
+        { "name": "missing document returns 404", "file": "phase5b2b-document-management.api.test.js:89", "status": "pass" },
+        { "name": "no token returns 401", "file": "phase5b2b-document-management.api.test.js:91", "status": "pass" },
+        { "name": "citizen token returns 403", "file": "phase5b2b-document-management.api.test.js:93", "status": "pass" }
+      ]
+    },
+    {
+      "code": "API-018",
+      "protected": true,
+      "negative_tests": [
+        { "name": "signed document state returns 409", "file": "phase5b2b-document-management.api.test.js:109", "status": "pass" },
+        { "name": "RBAC: no documents.edit returns 403", "file": "phase5b2b-document-management.api.test.js:352", "status": "pass" }
+      ]
+    },
+    {
+      "code": "API-019",
+      "protected": true,
+      "negative_tests": [
+        { "name": "invalid MIME type returns 400", "file": "phase5b2b-document-management.api.test.js:145", "status": "pass" },
+        { "name": "invalid base64 content returns 400", "file": "phase5b2b-document-management.api.test.js:148", "status": "pass" }
+      ]
+    },
+    {
+      "code": "API-020",
+      "protected": true,
+      "negative_tests": [
+        { "name": "signed document state returns 409", "file": "phase5b2b-document-management.api.test.js:127", "status": "pass" }
+      ]
+    },
+    {
+      "code": "API-021",
+      "protected": true,
+      "negative_tests": [
+        { "name": "self-review returns 400", "file": "phase5b2b-document-management.api.test.js:169", "status": "pass" },
+        { "name": "invalid reviewer returns 400", "file": "phase5b2b-document-management.api.test.js:172", "status": "pass" },
+        { "name": "signed document returns 409", "file": "phase5b2b-document-management.api.test.js:175", "status": "pass" }
+      ]
+    },
+    {
+      "code": "API-022",
+      "protected": true,
+      "negative_tests": [
+        { "name": "wrong reviewer identity returns 403", "file": "phase5b2b-document-management.api.test.js:197", "status": "pass" },
+        { "name": "RBAC: no documents.review returns 403", "file": "phase5b2b-document-management.api.test.js:361", "status": "pass" }
+      ]
+    },
+    {
+      "code": "API-023",
+      "protected": true,
+      "negative_tests": [
+        { "name": "duplicate approvers returns 400", "file": "phase5b2b-document-management.api.test.js:221", "status": "pass" },
+        { "name": "sequence gap returns 400", "file": "phase5b2b-document-management.api.test.js:227", "status": "pass" }
+      ]
+    },
+    {
+      "code": "API-024",
+      "protected": true,
+      "negative_tests": [
+        { "name": "not approved state returns 409", "file": "phase5b2b-document-management.api.test.js:277", "status": "pass" },
+        { "name": "invalid profile returns 400", "file": "phase5b2b-document-management.api.test.js:281", "status": "pass" },
+        { "name": "RBAC: no documents.sign returns 403", "file": "phase5b2b-document-management.api.test.js:368", "status": "pass" }
+      ]
+    }
+  ],
+  "summary": {
+    "protected_endpoints": 10,
+    "total_negative_tests": 22,
+    "pass": 22,
+    "fail": 0
+  }
+}

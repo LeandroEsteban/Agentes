@@ -1,0 +1,34 @@
+{
+  "phase": "8A",
+  "timestamp": "2026-07-12T18:00:00Z",
+  "backend": {
+    "dockerfile": "backend/Dockerfile",
+    "base_image": "node:24-alpine",
+    "target": "production",
+    "user": "appuser (non-root)",
+    "build_success": true,
+    "npm_packages": 97,
+    "vulnerabilities": 0,
+    "health_check": "wget --spider http://127.0.0.1:3000/health",
+    "exposed_port": 3000,
+    "signal_handling": "SIGINT, SIGTERM (from server.js)"
+  },
+  "frontend": {
+    "dockerfile": "frontend/Dockerfile",
+    "build_stage": {"image": "node:24-alpine", "command": "npm run build", "modules": 157},
+    "serve_stage": {"image": "nginx:1.27-alpine", "config": "frontend/nginx.conf"},
+    "build_success": true,
+    "js_bundle": "402.26 KB (gzip: 116.88 KB)",
+    "css_bundle": "2.96 KB (gzip: 1.13 KB)",
+    "health_check": "curl -f http://127.0.0.1/",
+    "exposed_port": 80,
+    "spa_fallback": true,
+    "api_proxy": "/api/ → backend:3000"
+  },
+  "nginx_config": {
+    "gzip": true,
+    "cache_control": "public, max-age=3600",
+    "immutable_assets": "1y",
+    "api_timeout": "60s"
+  }
+}

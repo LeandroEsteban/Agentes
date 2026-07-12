@@ -1,0 +1,21 @@
+[
+  {
+    "defect_id": "QA-DEF-AUTH-001",
+    "classification": "test_defect",
+    "severity": "high",
+    "description": "El helper E2E consideraba /intranet/login como navegación autenticada.",
+    "status": "resolved",
+    "regression_tests": [
+      "E2E-03",
+      "E2E-04",
+      "E2E-05"
+    ]
+  },
+  {
+    "defect_id": "QA-DEF-FE-003",
+    "classification": "test_defect",
+    "severity": "medium",
+    "description": "Pruebas unitarias documentales contienen mocks incompatibles con DTOs contractuales corregidos.",
+    "status": "open"
+  }
+]

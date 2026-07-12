@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-07-11T20:00:00.000Z",
+  "files_covered": [
+    "backend/src/modules/documents/router.js",
+    "backend/src/modules/documents/controller.js",
+    "backend/src/modules/documents/service.js",
+    "backend/src/modules/documents/repository.js",
+    "backend/src/modules/documents/validators.js",
+    "backend/src/modules/document-reviews/router.js",
+    "backend/src/modules/document-reviews/controller.js",
+    "backend/src/modules/document-reviews/service.js",
+    "backend/src/modules/document-reviews/repository.js",
+    "backend/src/modules/document-reviews/validators.js",
+    "backend/src/modules/document-approvals/router.js",
+    "backend/src/modules/document-approvals/controller.js",
+    "backend/src/modules/document-approvals/service.js",
+    "backend/src/modules/document-approvals/repository.js",
+    "backend/src/modules/document-approvals/validators.js",
+    "backend/src/modules/document-signatures/router.js",
+    "backend/src/modules/document-signatures/controller.js",
+    "backend/src/modules/document-signatures/service.js",
+    "backend/src/modules/document-signatures/repository.js",
+    "backend/src/modules/document-signatures/validators.js"
+  ],
+  "overall_coverage": "implemented"
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "webforge.citizen_flow_report.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "flows": {
+    "procedures_list": { "tested": true, "pass": true },
+    "procedure_detail": { "tested": true, "pass": true },
+    "create_request": { "tested": true, "pass": true },
+    "list_requests": { "tested": true, "pass": true },
+    "oirs_anonymous": { "tested": true, "pass": true },
+    "notifications": { "tested": true, "pass": true }
+  },
+  "status": "pass"
+}

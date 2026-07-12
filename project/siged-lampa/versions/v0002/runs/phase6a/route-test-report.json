@@ -1,0 +1,1 @@
+{"runner":"vitest","status":"pass","tests":2,"evidence":"frontend/src/test/catalog.test.tsx","limitations":"El test valida catalogo; no cubre render de las 30 rutas."}

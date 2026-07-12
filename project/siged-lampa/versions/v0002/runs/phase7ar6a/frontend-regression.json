@@ -1,0 +1,7 @@
+{
+  "status": "blocked",
+  "lint": "pass",
+  "build": "pass",
+  "tests": "fail: 5 document unit tests need contract-mock updates",
+  "coverage": "fail: same 5 tests"
+}

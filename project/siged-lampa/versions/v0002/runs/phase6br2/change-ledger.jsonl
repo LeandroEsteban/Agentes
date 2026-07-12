@@ -1,0 +1,5 @@
+{"ts":"2026-07-11T18:46:00Z","type":"test","action":"created","path":"src/test/profile.test.tsx","detail":"ProfilePage tests — 7 tests covering loading, empty, error, update, validation"}
+{"ts":"2026-07-11T18:46:00Z","type":"test","action":"created","path":"src/test/guards.test.tsx","detail":"Auth guard tests — 8 tests covering RequireAuth, RequireActor, RequirePermission"}
+{"ts":"2026-07-11T18:46:00Z","type":"test","action":"extended","path":"src/test/api.test.tsx","detail":"Added request tests — setApiToken, request success, request error 422"}
+{"ts":"2026-07-11T18:46:00Z","type":"config","action":"updated","path":"vitest.config.ts","detail":"Coverage thresholds raised: lines 45→70, statements 45→70, functions 40→65, branches 40→65"}
+{"ts":"2026-07-11T18:46:00Z","type":"report","action":"created","path":"runs/phase6br2/","detail":"Generated 24+ reports"}

@@ -1,0 +1,1144 @@
+[
+  {
+    "endpoint_code": "API-SUP-004",
+    "method": "GET",
+    "path": "/api/v1/admin/external-entities",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-005",
+    "method": "POST",
+    "path": "/api/v1/admin/external-entities",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-006",
+    "method": "PUT",
+    "path": "/api/v1/admin/external-entities/{id}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-001",
+    "method": "GET",
+    "path": "/api/v1/admin/procedure-types",
+    "classification": "supplemental",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-SUP-002",
+    "method": "POST",
+    "path": "/api/v1/admin/procedure-types",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-003",
+    "method": "PUT",
+    "path": "/api/v1/admin/procedure-types/{id}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-010",
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/calendar",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-011",
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/calendar",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-012",
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/calendar/{id}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-013",
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/news",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-014",
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/news",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-015",
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/news/{id}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-016",
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/notices",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-017",
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/notices",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-018",
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/notices/{id}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-019",
+    "method": "POST",
+    "path": "/api/v1/approvals/{id}/decision",
+    "classification": "supplemental",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-002",
+    "method": "POST",
+    "path": "/api/v1/auth/citizen-login",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-020",
+    "method": "POST",
+    "path": "/api/v1/auth/internal-login",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-001",
+    "method": "POST",
+    "path": "/api/v1/auth/login",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-021",
+    "method": "POST",
+    "path": "/api/v1/auth/logout",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-003",
+    "method": "POST",
+    "path": "/api/v1/auth/recover",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-SUP-022",
+    "method": "GET",
+    "path": "/api/v1/citizen/oirs/{id}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-023",
+    "method": "GET",
+    "path": "/api/v1/citizen/oirs/{id}/history",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-024",
+    "method": "POST",
+    "path": "/api/v1/citizen/oirs/{id}/messages",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-035",
+    "method": "GET",
+    "path": "/api/v1/citizen/requests",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-LEG-001",
+    "method": "POST",
+    "path": "/api/v1/citizen/requests",
+    "classification": "legacy",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "legacy_only"
+  },
+  {
+    "endpoint_code": "API-036",
+    "method": "GET",
+    "path": "/api/v1/citizen/requests/{id}",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-025",
+    "method": "POST",
+    "path": "/api/v1/citizen/requests/{id}/cancel",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-026",
+    "method": "GET",
+    "path": "/api/v1/citizen/requests/{id}/history",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-029",
+    "method": "GET",
+    "path": "/api/v1/correspondence",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-030",
+    "method": "POST",
+    "path": "/api/v1/correspondence",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-SUP-027",
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-028",
+    "method": "PATCH",
+    "path": "/api/v1/correspondence/{id}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-029",
+    "method": "POST",
+    "path": "/api/v1/correspondence/{id}/close",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-030",
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}/details",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-031",
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}/history",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-032",
+    "method": "POST",
+    "path": "/api/v1/correspondence/{id}/link-response",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-031",
+    "method": "POST",
+    "path": "/api/v1/correspondence/{id}/route",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-011",
+    "method": "GET",
+    "path": "/api/v1/departments",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-012",
+    "method": "POST",
+    "path": "/api/v1/departments",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-013",
+    "method": "GET",
+    "path": "/api/v1/document-types",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-014",
+    "method": "POST",
+    "path": "/api/v1/document-types",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-015",
+    "method": "GET",
+    "path": "/api/v1/documents",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-016",
+    "method": "POST",
+    "path": "/api/v1/documents",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-017",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-018",
+    "method": "PUT",
+    "path": "/api/v1/documents/{id}",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-032",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/approvals",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-023",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/approvals",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-008",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/attachments",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-019",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/attachments",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-033",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/attachments/{attachmentId}/download",
+    "classification": "supplemental",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-SUP-034",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/comments",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-035",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/comments",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-036",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/history",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-037",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/reviews",
+    "classification": "supplemental",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-SUP-038",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/signatures",
+    "classification": "supplemental",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-024",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/signatures",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-021",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/submit-review",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-007",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/versions",
+    "classification": "supplemental",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-020",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/versions",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-025",
+    "method": "GET",
+    "path": "/api/v1/expedients",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-026",
+    "method": "POST",
+    "path": "/api/v1/expedients",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-027",
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-SUP-039",
+    "method": "PATCH",
+    "path": "/api/v1/expedients/{id}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-040",
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/close",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-041",
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/details",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-028",
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/documents",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-042",
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/events",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-043",
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/events",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-044",
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/history",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-040",
+    "method": "GET",
+    "path": "/api/v1/notifications",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-SUP-045",
+    "method": "PATCH",
+    "path": "/api/v1/notifications/{id}/read",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-046",
+    "method": "GET",
+    "path": "/api/v1/oirs",
+    "classification": "supplemental",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-038",
+    "method": "POST",
+    "path": "/api/v1/oirs/{id}/reply",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-047",
+    "method": "PATCH",
+    "path": "/api/v1/oirs/{id}/route",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-048",
+    "method": "PATCH",
+    "path": "/api/v1/oirs/{id}/status",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-004",
+    "method": "GET",
+    "path": "/api/v1/profile/me",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-005",
+    "method": "PUT",
+    "path": "/api/v1/profile/me",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-SUP-049",
+    "method": "GET",
+    "path": "/api/v1/public/calendar",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-050",
+    "method": "GET",
+    "path": "/api/v1/public/news",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-051",
+    "method": "GET",
+    "path": "/api/v1/public/news/{slug}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-052",
+    "method": "GET",
+    "path": "/api/v1/public/notices",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-037",
+    "method": "POST",
+    "path": "/api/v1/public/oirs",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-SUP-009",
+    "method": "GET",
+    "path": "/api/v1/public/oirs/{id}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-SUP-053",
+    "method": "GET",
+    "path": "/api/v1/public/oirs/{id}/history",
+    "classification": "supplemental",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-SUP-054",
+    "method": "POST",
+    "path": "/api/v1/public/oirs/{id}/messages",
+    "classification": "supplemental",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-033",
+    "method": "GET",
+    "path": "/api/v1/public/tramites",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-SUP-055",
+    "method": "GET",
+    "path": "/api/v1/public/tramites/{id}",
+    "classification": "supplemental",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-034",
+    "method": "POST",
+    "path": "/api/v1/public/tramites/{id}/requests",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-039",
+    "method": "GET",
+    "path": "/api/v1/reports/dashboard",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-022",
+    "method": "POST",
+    "path": "/api/v1/reviews/{id}/reply",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-009",
+    "method": "GET",
+    "path": "/api/v1/roles",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-010",
+    "method": "PUT",
+    "path": "/api/v1/roles/{id}/permissions",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-006",
+    "method": "GET",
+    "path": "/api/v1/users",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-007",
+    "method": "POST",
+    "path": "/api/v1/users",
+    "classification": "original",
+    "consumer_screens": [
+      "screen-catalog integration"
+    ],
+    "api_module": "src/api/generated/operations.ts",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "consumed"
+  },
+  {
+    "endpoint_code": "API-008",
+    "method": "PUT",
+    "path": "/api/v1/users/{id}",
+    "classification": "original",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "not_required_by_ui"
+  },
+  {
+    "endpoint_code": "API-TECH-001",
+    "method": "GET",
+    "path": "/health",
+    "classification": "technical",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "technical"
+  },
+  {
+    "endpoint_code": "API-TECH-002",
+    "method": "GET",
+    "path": "/health/database",
+    "classification": "technical",
+    "consumer_screens": [],
+    "api_module": "",
+    "hooks": [],
+    "tests": [],
+    "consumption_status": "technical"
+  }
+]

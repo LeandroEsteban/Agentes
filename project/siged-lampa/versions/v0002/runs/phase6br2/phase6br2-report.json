@@ -1,0 +1,49 @@
+{
+  "schema_version": "webforge.phase6br2_report.v1",
+  "status": "pass_with_limitations",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "phase6_status": "pass_with_limitations",
+  "screens": {
+    "total": 30,
+    "verified": 28,
+    "verified_with_limitation": 2,
+    "partial": 0,
+    "mock": 0
+  },
+  "operations": {
+    "total": 98,
+    "classified": 98,
+    "pending": 0
+  },
+  "tests": {
+    "unit_component_passed": 158,
+    "unit_component_failed": 0,
+    "e2e_passed": 0,
+    "e2e_failed": 0,
+    "backend_passed": 0,
+    "backend_failed": 0
+  },
+  "coverage": {
+    "lines": 87.19,
+    "statements": 87.19,
+    "functions": 65.59,
+    "branches": 76.58
+  },
+  "accessibility": {
+    "critical": 0,
+    "serious": 0
+  },
+  "gates": {
+    "pass": 11,
+    "pass_with_limitation": 3,
+    "blocked": 0
+  },
+  "handoff": "accepted_with_limitations",
+  "critical_blockers": [],
+  "accepted_limitations": [
+    "FE-LIM-003: E2E full suite not executed against QA stack",
+    "FE-LIM-004: React key warnings in DataTable (non-blocking)",
+    "FE-LIM-005: Backend regression not executed (no QA stack available)",
+    "FE-LIM-006: Baseline histórico unverifiable"
+  ]
+}

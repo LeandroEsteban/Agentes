@@ -1,0 +1,341 @@
+{
+  "generated_at": "2026-07-11T20:00:00.000Z",
+  "scope": [
+    {
+      "endpoint_code": "API-015",
+      "positive_test": "phase5b2b-document-management.api.test.js",
+      "negative_tests": [
+        "no token 401",
+        "citizen token 403",
+        "filters",
+        "pagination"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-016",
+      "positive_test": "phase5b2b-document-management.api.test.js",
+      "negative_tests": [
+        "missing required fields",
+        "invalid document type",
+        "invalid department",
+        "RBAC: no documents.create permission"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-017",
+      "positive_test": "phase5b2b-document-management.api.test.js",
+      "negative_tests": [
+        "missing document 404",
+        "no token 401",
+        "citizen token 403"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-018",
+      "positive_test": "phase5b2b-document-management.api.test.js",
+      "negative_tests": [
+        "signed document state 409",
+        "RBAC: no documents.edit permission"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-019",
+      "positive_test": "phase5b2b-document-management.api.test.js",
+      "negative_tests": [
+        "invalid MIME type 400",
+        "invalid base64 content 400"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-020",
+      "positive_test": "phase5b2b-document-management.api.test.js",
+      "negative_tests": [
+        "signed document state 409"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-021",
+      "positive_test": "phase5b2b-document-management.api.test.js",
+      "negative_tests": [
+        "self-review 400",
+        "invalid reviewer 400",
+        "signed document 409"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-022",
+      "positive_test": "phase5b2b-document-management.api.test.js",
+      "negative_tests": [
+        "wrong reviewer identity 403",
+        "RBAC: no documents.review permission"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-023",
+      "positive_test": "phase5b2b-document-management.api.test.js",
+      "negative_tests": [
+        "duplicate approvers 400",
+        "sequence gap 400",
+        "wrong approver identity 403"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-024",
+      "positive_test": "phase5b2b-document-management.api.test.js",
+      "negative_tests": [
+        "not approved state 409",
+        "invalid signature profile 400",
+        "RBAC: no documents.sign permission"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-025",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "no permission user",
+        "filters",
+        "pagination"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-026",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "required fields"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-027",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "missing id"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-028",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "duplicate",
+        "nonexistent document"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-029",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "filters",
+        "pagination",
+        "no permission user"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-030",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "required fields"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-031",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "closed correspondence",
+        "same department"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-032",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "document in draft"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-039",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "unauthorized",
+        "invalid date range"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-033",
+      "positive_test": "auth-api.test.js",
+      "negative_tests": [],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-034",
+      "positive_test": "phase5b2a-citizen-services.api.test.js",
+      "negative_tests": [],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-035",
+      "positive_test": "phase5b2a-citizen-services.api.test.js",
+      "negative_tests": [],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "API-036",
+      "positive_test": "phase5b2a-citizen-services.api.test.js",
+      "negative_tests": [],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "PUBLIC-NEWS-001",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "hidden/draft not shown"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "PUBLIC-NEWS-002",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "hidden/draft slug"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "PUBLIC-NOTICES-001",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "expired not shown"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "PUBLIC-CALENDAR-001",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "past events hidden"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "ADMIN-NEWS-CRUD",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "non-admin",
+        "citizen"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "ADMIN-NOTICES-CRUD",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "invalid date range"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "ADMIN-CALENDAR-CRUD",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "invalid date range"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "EXPEDIENT-SUPPLEMENTAL-001",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "EXPEDIENT-SUPPLEMENTAL-002",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "already closed"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "EXPEDIENT-SUPPLEMENTAL-003",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "EXPEDIENT-SUPPLEMENTAL-004",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "CORRESPONDENCE-SUPPLEMENTAL-001",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "CORRESPONDENCE-SUPPLEMENTAL-002",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "double close"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "CORRESPONDENCE-SUPPLEMENTAL-003",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "missing id"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "CORRESPONDENCE-SUPPLEMENTAL-004",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "SECURITY-001",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "SQL injection",
+        "mass assignment"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "SECURITY-002",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "error sanitization"
+      ],
+      "status": "implemented"
+    },
+    {
+      "endpoint_code": "SECURITY-003",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "citizen user"
+      ],
+      "status": "implemented"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "project_id": "proyecto-dos",
+  "version": "v0001",
+  "required": 585,
+  "implemented": 585,
+  "implementation_coverage_pct": 100,
+  "web_validated": 585,
+  "web_validation_coverage_pct": 100,
+  "screens_validated": 40,
+  "endpoints_validated": 130,
+  "status": "pass"
+}

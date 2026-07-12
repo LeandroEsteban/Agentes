@@ -1,0 +1,3 @@
+{"timestamp":"2026-07-11T19:12:05Z","file":"frontend/src/components/tables/index.tsx","change":"Changed <th> and <td> React keys from String(column.key) to column index to fix duplicate key warnings","impact":"Eliminates 17+ React duplicate key warnings across admin pages and OIRS management"}
+{"timestamp":"2026-07-11T19:12:05Z","file":"frontend/src/features/admin/UsersPage.tsx","change":"Changed roles column key from 'id' to 'roles'","impact":"Uses actual data property instead of overloading key: 'id'"}
+{"timestamp":"2026-07-11T19:14:00Z","file":"frontend/playwright.config.ts","change":"Updated E2E reporter output folder from runs/phase6br1 to runs/phase7a","impact":"E2E reports now write to correct Phase 7A directory"}

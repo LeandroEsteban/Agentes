@@ -1,0 +1,7 @@
+const { z } = require('zod');
+const { AppError } = require('../../shared/errors');
+const id = z.coerce.number().int().positive();
+const approvalRequest = z.object({ approvers: z.array(z.object({ user_id: id, sequence_order: z.number().int().positive() }).strict()).min(1).max(50) }).strict().superRefine((value, ctx) => { const users = new Set(); const orders = new Set(); value.approvers.forEach((item, index) => { if (users.has(item.user_id)) ctx.addIssue({ code: 'custom', path: ['approvers', index, 'user_id'], message: 'No se permiten aprobadores duplicados' }); if (orders.has(item.sequence_order)) ctx.addIssue({ code: 'custom', path: ['approvers', index, 'sequence_order'], message: 'No se permiten órdenes duplicados' }); users.add(item.user_id); orders.add(item.sequence_order); }); for (let order = 1; order <= orders.size; order += 1) if (!orders.has(order)) ctx.addIssue({ code: 'custom', path: ['approvers'], message: 'La secuencia debe comenzar en 1 y no contener saltos' }); });
+const approvalDecision = z.object({ decision: z.enum(['approved', 'rejected']), decision_note: z.string().trim().max(10000).optional() }).strict();
+function parse(schema, value) { const result = schema.safeParse(value); if (!result.success) throw new AppError(400, 'VALIDATION_ERROR', 'Solicitud inválida', result.error.issues.map((issue) => ({ path: issue.path.join('.'), message: issue.message }))); return result.data; }
+module.exports = { id, approvalRequest, approvalDecision, parse };

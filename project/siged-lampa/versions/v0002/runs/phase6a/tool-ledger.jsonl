@@ -1,0 +1,7 @@
+{"tool":"npm.cmd install","status":"pass"}
+{"tool":"npm.cmd run lint","status":"pass"}
+{"tool":"npm.cmd test","status":"pass","tests":4}
+{"tool":"npm.cmd run test:coverage","status":"pass","coverage_lines":22.41}
+{"tool":"npm.cmd run build","status":"pass"}
+{"tool":"npm.cmd run test:smoke","status":"pass","tests":3,"scope":"QA PostgreSQL backend contracts and auth"}
+{"tool":"manual_smoke","status":"pass","checks":["internal login","citizen login","public procedures","public detail","citizen requests","notifications","OIRS"]}

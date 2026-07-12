@@ -1,0 +1,15 @@
+{
+  "status": "sufficient",
+  "verified_permissions": [
+    "documents.view",
+    "documents.create",
+    "documents.edit",
+    "documents.delete",
+    "documents.archive",
+    "documents.attach",
+    "documents.review",
+    "documents.approve",
+    "documents.sign"
+  ],
+  "gap": "Document management RBAC permissions verified in business-rule-map.json"
+}

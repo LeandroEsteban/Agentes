@@ -1,0 +1,61 @@
+{
+  "endpoints": {
+    "original": 40,
+    "supplemental": 0,
+    "legacy": 0,
+    "technical": 0,
+    "implemented": 40,
+    "partial": 0,
+    "missing": 0
+  },
+  "business_rules": {
+    "source_total": 60,
+    "mapped": 60,
+    "duplicate_ids": [],
+    "missing_ids": [],
+    "invalid_ids": []
+  },
+  "validations": {
+    "source_total": 100,
+    "mapped": 100,
+    "duplicate_ids": [],
+    "missing_ids": [],
+    "invalid_ids": []
+  },
+  "tests": {},
+  "coverage": {},
+  "inconsistencies": [
+    {
+      "id": "BR-5B2D-DOCUMENT-SCOPE",
+      "expected_ids": [
+        "BR-013",
+        "BR-014",
+        "BR-015",
+        "BR-016",
+        "BR-017",
+        "BR-018",
+        "BR-019",
+        "BR-020",
+        "BR-021",
+        "BR-022",
+        "BR-023",
+        "BR-024",
+        "BR-025",
+        "BR-026",
+        "BR-027",
+        "BR-028",
+        "BR-029",
+        "BR-030",
+        "BR-031",
+        "BR-032",
+        "BR-033",
+        "BR-034",
+        "BR-035",
+        "BR-036",
+        "BR-041"
+      ],
+      "total": 25,
+      "finding": "BR-013 through BR-036 is 24 rules; adding BR-041 makes 25 rules."
+    }
+  ]
+}

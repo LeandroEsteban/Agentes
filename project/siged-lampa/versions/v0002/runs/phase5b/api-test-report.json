@@ -1,0 +1,21 @@
+{
+  "suite": "api",
+  "runner": "node:test",
+  "sequential": true,
+  "files": [
+    "C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\project\\siged-lampa\\versions\\v0002\\backend\\tests\\api\\auth-api.test.js",
+    "C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\project\\siged-lampa\\versions\\v0002\\backend\\tests\\api\\phase5b2a-admin-rbac.api.test.js",
+    "C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\project\\siged-lampa\\versions\\v0002\\backend\\tests\\api\\phase5b2a-auth-profile.api.test.js",
+    "C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\project\\siged-lampa\\versions\\v0002\\backend\\tests\\api\\phase5b2a-citizen-services.api.test.js",
+    "C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\project\\siged-lampa\\versions\\v0002\\backend\\tests\\api\\phase5b2a-verification-extended.api.test.js",
+    "C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\project\\siged-lampa\\versions\\v0002\\backend\\tests\\api\\phase5b2b-document-management.api.test.js",
+    "C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\project\\siged-lampa\\versions\\v0002\\backend\\tests\\api\\phase5b2c-expedients-correspondence.api.test.js",
+    "C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\project\\siged-lampa\\versions\\v0002\\backend\\tests\\phase5b2d\\phase5b2d-security.api.test.js"
+  ],
+  "passed": 124,
+  "failed": 0,
+  "skipped": 0,
+  "duration_ms": 0,
+  "exit_code": 0,
+  "generated_at": "2026-07-12T05:09:06.381Z"
+}

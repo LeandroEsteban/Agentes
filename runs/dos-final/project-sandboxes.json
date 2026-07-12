@@ -1,0 +1,37 @@
+{
+  "clone_source_hash": "sha256:d36380a127b4dbd92364b079584caf8cdc38f3f4bd4d4d1ed54c0f40b574cc31",
+  "current_version": "v0001",
+  "project_id": "proyecto-dos",
+  "sandboxes": [
+    {
+      "autonomous": "true",
+      "clone_source": "project/proyecto-dos/versions/v0001",
+      "frontend_template": "PLANTILLA_FRONTEND",
+      "frontend_template_hash": "sha256:441588b4a0827b70f2c31dee5aeef7d1410ad6c1525b09876218a2bfc5cc9be8",
+      "frontend_template_required": "true",
+      "frontend_template_source": "PLANTILLA_FRONTEND",
+      "learning_path": "project/proyecto-dos/sandboxes/DEV/learning",
+      "memory_path": "project/proyecto-dos/sandboxes/DEV/memory",
+      "name": "DEV",
+      "path": "project/proyecto-dos/sandboxes/DEV",
+      "sandbox_id": "proyecto-dos-dev-v0001",
+      "shared_with_factory": "false",
+      "version": "v0001"
+    },
+    {
+      "autonomous": "true",
+      "clone_source": "project/proyecto-dos/versions/v0001",
+      "frontend_template": "PLANTILLA_FRONTEND",
+      "frontend_template_hash": "sha256:441588b4a0827b70f2c31dee5aeef7d1410ad6c1525b09876218a2bfc5cc9be8",
+      "frontend_template_required": "true",
+      "frontend_template_source": "PLANTILLA_FRONTEND",
+      "learning_path": "project/proyecto-dos/sandboxes/QA/learning",
+      "memory_path": "project/proyecto-dos/sandboxes/QA/memory",
+      "name": "QA",
+      "path": "project/proyecto-dos/sandboxes/QA",
+      "sandbox_id": "proyecto-dos-qa-v0001",
+      "shared_with_factory": "false",
+      "version": "v0001"
+    }
+  ]
+}

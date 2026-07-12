@@ -1,0 +1,18 @@
+﻿{
+    "backend":  {
+                    "url":  "http://127.0.0.1:3100",
+                    "healthy":  true
+                },
+    "postgresql":  {
+                       "port":  55432,
+                       "host":  "127.0.0.1",
+                       "healthy":  true
+                   },
+    "demo_fallback":  "false",
+    "data_mode":  "real",
+    "frontend":  {
+                     "url":  "http://127.0.0.1:4173",
+                     "healthy":  true
+                 },
+    "persistence_mode":  "postgres"
+}

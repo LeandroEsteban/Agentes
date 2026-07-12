@@ -1,0 +1,11 @@
+{
+  "project_id": "proyecto-uno",
+  "version": "v0002",
+  "required": 159,
+  "implemented": 159,
+  "implementation_coverage_pct": 100,
+  "web_validated": 159,
+  "web_validation_coverage_pct": 100,
+  "flows_validated": 26,
+  "status": "pass"
+}

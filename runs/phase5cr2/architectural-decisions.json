@@ -1,0 +1,457 @@
+[
+  {
+    "adr_id": "ADR-017",
+    "title": "Extensiones del ciclo documental",
+    "status": "accepted",
+    "context": "5C-R2 audited routes that were implemented and tested but absent from the original 40-endpoint inventory.",
+    "decision": "Expose the listed operations as supplementary contract operations because they complete normalized workflows and retain explicit authorization and test evidence.",
+    "accepted_routes": [
+      {
+        "method": "POST",
+        "path": "/api/v1/approvals/{id}/decision",
+        "endpoint_code": "API-SUP-019"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/documents/{id}/approvals",
+        "endpoint_code": "API-SUP-032"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/documents/{id}/attachments/{attachmentId}/download",
+        "endpoint_code": "API-SUP-033"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/documents/{id}/comments",
+        "endpoint_code": "API-SUP-034"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/documents/{id}/comments",
+        "endpoint_code": "API-SUP-035"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/documents/{id}/history",
+        "endpoint_code": "API-SUP-036"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/documents/{id}/reviews",
+        "endpoint_code": "API-SUP-037"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/documents/{id}/signatures",
+        "endpoint_code": "API-SUP-038"
+      }
+    ],
+    "rejected_alternatives": [
+      "Keep implemented routes publicly exposed without a contract",
+      "Remove functional workflow operations only to reduce endpoint count"
+    ],
+    "source_use_cases": [
+      "UC-09",
+      "UC-10",
+      "UC-11",
+      "UC-12",
+      "UC-13",
+      "UC-14"
+    ],
+    "source_workflows": [
+      "FF-09",
+      "FF-10",
+      "FF-11",
+      "FF-12",
+      "FF-13",
+      "FF-14"
+    ],
+    "source_screens": [
+      "P-09",
+      "P-10",
+      "P-11",
+      "P-12",
+      "P-13",
+      "P-14"
+    ],
+    "consequences": [
+      "OpenAPI, catalog and router inventory remain reconciled",
+      "Permissions and actor separation remain explicit"
+    ],
+    "tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ]
+  },
+  {
+    "adr_id": "ADR-018",
+    "title": "Extensiones de expedientes y correspondencia",
+    "status": "accepted",
+    "context": "5C-R2 audited routes that were implemented and tested but absent from the original 40-endpoint inventory.",
+    "decision": "Expose the listed operations as supplementary contract operations because they complete normalized workflows and retain explicit authorization and test evidence.",
+    "accepted_routes": [
+      {
+        "method": "GET",
+        "path": "/api/v1/correspondence/{id}",
+        "endpoint_code": "API-SUP-027"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/v1/correspondence/{id}",
+        "endpoint_code": "API-SUP-028"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/correspondence/{id}/close",
+        "endpoint_code": "API-SUP-029"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/correspondence/{id}/details",
+        "endpoint_code": "API-SUP-030"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/correspondence/{id}/history",
+        "endpoint_code": "API-SUP-031"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/v1/expedients/{id}",
+        "endpoint_code": "API-SUP-039"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/expedients/{id}/close",
+        "endpoint_code": "API-SUP-040"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/expedients/{id}/details",
+        "endpoint_code": "API-SUP-041"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/expedients/{id}/events",
+        "endpoint_code": "API-SUP-042"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/expedients/{id}/events",
+        "endpoint_code": "API-SUP-043"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/expedients/{id}/history",
+        "endpoint_code": "API-SUP-044"
+      }
+    ],
+    "rejected_alternatives": [
+      "Keep implemented routes publicly exposed without a contract",
+      "Remove functional workflow operations only to reduce endpoint count"
+    ],
+    "source_use_cases": [
+      "UC-17",
+      "UC-18",
+      "UC-19",
+      "UC-20"
+    ],
+    "source_workflows": [
+      "FF-17",
+      "FF-18",
+      "FF-19",
+      "FF-20"
+    ],
+    "source_screens": [
+      "P-17",
+      "P-18",
+      "P-19",
+      "P-20"
+    ],
+    "consequences": [
+      "OpenAPI, catalog and router inventory remain reconciled",
+      "Permissions and actor separation remain explicit"
+    ],
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ]
+  },
+  {
+    "adr_id": "ADR-019",
+    "title": "Extensiones de portal ciudadano y OIRS",
+    "status": "accepted",
+    "context": "5C-R2 audited routes that were implemented and tested but absent from the original 40-endpoint inventory.",
+    "decision": "Expose the listed operations as supplementary contract operations because they complete normalized workflows and retain explicit authorization and test evidence.",
+    "accepted_routes": [
+      {
+        "method": "GET",
+        "path": "/api/v1/citizen/oirs/{id}",
+        "endpoint_code": "API-SUP-022"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/citizen/oirs/{id}/history",
+        "endpoint_code": "API-SUP-023"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/citizen/oirs/{id}/messages",
+        "endpoint_code": "API-SUP-024"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/citizen/requests/{id}/cancel",
+        "endpoint_code": "API-SUP-025"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/citizen/requests/{id}/history",
+        "endpoint_code": "API-SUP-026"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/oirs",
+        "endpoint_code": "API-SUP-046"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/v1/oirs/{id}/route",
+        "endpoint_code": "API-SUP-047"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/v1/oirs/{id}/status",
+        "endpoint_code": "API-SUP-048"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/public/oirs/{id}/history",
+        "endpoint_code": "API-SUP-053"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/public/oirs/{id}/messages",
+        "endpoint_code": "API-SUP-054"
+      }
+    ],
+    "rejected_alternatives": [
+      "Keep implemented routes publicly exposed without a contract",
+      "Remove functional workflow operations only to reduce endpoint count"
+    ],
+    "source_use_cases": [
+      "UC-23",
+      "UC-24",
+      "UC-25",
+      "UC-26"
+    ],
+    "source_workflows": [
+      "FF-23",
+      "FF-24",
+      "FF-25",
+      "FF-26"
+    ],
+    "source_screens": [
+      "P-23",
+      "P-24",
+      "P-25",
+      "P-26"
+    ],
+    "consequences": [
+      "OpenAPI, catalog and router inventory remain reconciled",
+      "Permissions and actor separation remain explicit"
+    ],
+    "tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ]
+  },
+  {
+    "adr_id": "ADR-020",
+    "title": "Administracion y catalogos operativos",
+    "status": "accepted",
+    "context": "5C-R2 audited routes that were implemented and tested but absent from the original 40-endpoint inventory.",
+    "decision": "Expose the listed operations as supplementary contract operations because they complete normalized workflows and retain explicit authorization and test evidence.",
+    "accepted_routes": [
+      {
+        "method": "GET",
+        "path": "/api/v1/public/tramites/{id}",
+        "endpoint_code": "API-SUP-055"
+      }
+    ],
+    "rejected_alternatives": [
+      "Keep implemented routes publicly exposed without a contract",
+      "Remove functional workflow operations only to reduce endpoint count"
+    ],
+    "source_use_cases": [
+      "UC-07",
+      "UC-08"
+    ],
+    "source_workflows": [
+      "FF-07",
+      "FF-08"
+    ],
+    "source_screens": [
+      "P-07",
+      "P-08"
+    ],
+    "consequences": [
+      "OpenAPI, catalog and router inventory remain reconciled",
+      "Permissions and actor separation remain explicit"
+    ],
+    "tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ]
+  },
+  {
+    "adr_id": "ADR-021",
+    "title": "Publicacion, agenda y contenido publico",
+    "status": "accepted",
+    "context": "5C-R2 audited routes that were implemented and tested but absent from the original 40-endpoint inventory.",
+    "decision": "Expose the listed operations as supplementary contract operations because they complete normalized workflows and retain explicit authorization and test evidence.",
+    "accepted_routes": [
+      {
+        "method": "GET",
+        "path": "/api/v1/admin/public-content/calendar",
+        "endpoint_code": "API-SUP-010"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/admin/public-content/calendar",
+        "endpoint_code": "API-SUP-011"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/v1/admin/public-content/calendar/{id}",
+        "endpoint_code": "API-SUP-012"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/admin/public-content/news",
+        "endpoint_code": "API-SUP-013"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/admin/public-content/news",
+        "endpoint_code": "API-SUP-014"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/v1/admin/public-content/news/{id}",
+        "endpoint_code": "API-SUP-015"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/admin/public-content/notices",
+        "endpoint_code": "API-SUP-016"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/admin/public-content/notices",
+        "endpoint_code": "API-SUP-017"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/v1/admin/public-content/notices/{id}",
+        "endpoint_code": "API-SUP-018"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/public/calendar",
+        "endpoint_code": "API-SUP-049"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/public/news",
+        "endpoint_code": "API-SUP-050"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/public/news/{slug}",
+        "endpoint_code": "API-SUP-051"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/public/notices",
+        "endpoint_code": "API-SUP-052"
+      }
+    ],
+    "rejected_alternatives": [
+      "Keep implemented routes publicly exposed without a contract",
+      "Remove functional workflow operations only to reduce endpoint count"
+    ],
+    "source_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "source_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "source_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "consequences": [
+      "OpenAPI, catalog and router inventory remain reconciled",
+      "Permissions and actor separation remain explicit"
+    ],
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ]
+  },
+  {
+    "adr_id": "ADR-023",
+    "title": "Operaciones auxiliares de identidad y notificaciones",
+    "status": "accepted",
+    "context": "5C-R2 audited routes that were implemented and tested but absent from the original 40-endpoint inventory.",
+    "decision": "Expose the listed operations as supplementary contract operations because they complete normalized workflows and retain explicit authorization and test evidence.",
+    "accepted_routes": [
+      {
+        "method": "POST",
+        "path": "/api/v1/auth/internal-login",
+        "endpoint_code": "API-SUP-020"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/auth/logout",
+        "endpoint_code": "API-SUP-021"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/v1/notifications/{id}/read",
+        "endpoint_code": "API-SUP-045"
+      }
+    ],
+    "rejected_alternatives": [
+      "Keep implemented routes publicly exposed without a contract",
+      "Remove functional workflow operations only to reduce endpoint count"
+    ],
+    "source_use_cases": [
+      "UC-01",
+      "UC-02",
+      "UC-03",
+      "UC-29",
+      "UC-30"
+    ],
+    "source_workflows": [
+      "FF-01",
+      "FF-02",
+      "FF-03",
+      "FF-29",
+      "FF-30"
+    ],
+    "source_screens": [
+      "P-01",
+      "P-02",
+      "P-03",
+      "P-29",
+      "P-30"
+    ],
+    "consequences": [
+      "OpenAPI, catalog and router inventory remain reconciled",
+      "Permissions and actor separation remain explicit"
+    ],
+    "tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ]
+  }
+]

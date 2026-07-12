@@ -1,0 +1,33 @@
+{
+  "acceptance_criteria": [
+    "La fabrica debe registrar y hashear las cuatro fuentes SIGED autorizadas.",
+    "La especificacion generada debe cubrir 10 modulos funcionales SIGED.",
+    "El contrato operativo debe cubrir al menos 40 endpoints API.",
+    "El mapa UX debe cubrir al menos 30 pantallas navegables.",
+    "El modelo de datos debe cubrir al menos 40 tablas ER.",
+    "El sandbox DEV debe contener una app web full-stack ejecutable con backend API, frontend, catalogos, trazabilidad y datos semilla.",
+    "El final-report solo puede quedar complete si pasan P01-P12, aislamiento de proyecto, plantilla frontend, seguridad y materializacion DEV."
+  ],
+  "approvals": {},
+  "authorized_sources": [
+    "Especificacion_Funcional_SIGED_Lampa.md",
+    "Inventario_Endpoints_SIGED_Lampa.md",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "Modelo_ER_Detallado_SIGED_Lampa.md"
+  ],
+  "budget": {
+    "cost_usd": 0,
+    "mcp_calls": 0,
+    "tool_calls": 200
+  },
+  "metadata": {
+    "product": "SIGED-Lampa",
+    "source_set": "SIGED functional specification, endpoint inventory, screen map and ER model"
+  },
+  "objective": "Construir SIGED-Lampa como aplicacion web municipal trazable para gestion documental, expedientes, correspondencia, portal ciudadano, OIRS, reportes y notificaciones.",
+  "project_id": "siged-lampa",
+  "project_version": "v0001",
+  "scope": "local_artifacts_only",
+  "side_effects": "no_external_writes_no_deploy",
+  "type": "siged_lampa_web_app"
+}

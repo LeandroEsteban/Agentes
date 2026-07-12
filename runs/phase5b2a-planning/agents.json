@@ -1,0 +1,207 @@
+{
+  "schema": "webforge.agent_spec.v1",
+  "generated_at": "2026-07-11T15:46:22.930927+00:00",
+  "agents": [
+    {
+      "agent_id": "agent.refinement",
+      "name": "Refinement Agent",
+      "responsibility": "Consumir catálogos normalizados, revisar findings, verificar decisiones pendientes, no inventar requisitos, entregar especificación aprobada al arquitecto",
+      "inputs": [
+        "normalization catalogs JSON",
+        "normalization report",
+        "normalization findings",
+        "work order"
+      ],
+      "outputs": [
+        "refined spec",
+        "approved findings resolution",
+        "specification approval"
+      ],
+      "allowed_tools": [
+        "tool.read_catalog",
+        "tool.validate_findings"
+      ],
+      "forbidden_actions": [
+        "invent_requirements",
+        "modify_sources"
+      ],
+      "entry_gate": "GATE-ARCH-001",
+      "exit_gate": "specification_approved",
+      "handoff_targets": [
+        "agent.architecture"
+      ],
+      "failure_policy": "stop",
+      "max_attempts": 1
+    },
+    {
+      "agent_id": "agent.architecture",
+      "name": "Architecture Agent",
+      "responsibility": "Generar arquitectura, crear ADR, generar tareas, generar DAG, validar dependencias, asignar tareas a agentes, definir criterios de finalización",
+      "inputs": [
+        "refined spec",
+        "normalization catalogs",
+        "architecture decisions template"
+      ],
+      "outputs": [
+        "architecture.json",
+        "decisions.json",
+        "tasks.json",
+        "task-dag.json",
+        "agents.json",
+        "contracts.json",
+        "handoff-plan.json"
+      ],
+      "allowed_tools": [
+        "tool.generate_adr",
+        "tool.validate_dag",
+        "tool.validate_tasks",
+        "tool.validate_handoffs"
+      ],
+      "forbidden_actions": [
+        "implement_code",
+        "modify_database"
+      ],
+      "entry_gate": "specification_approved",
+      "exit_gate": "architecture_approved",
+      "handoff_targets": [
+        "agent.database",
+        "agent.backend",
+        "agent.frontend",
+        "agent.qa_release"
+      ],
+      "failure_policy": "stop",
+      "max_attempts": 2
+    },
+    {
+      "agent_id": "agent.database",
+      "name": "Database Agent",
+      "responsibility": "Migraciones, 40 tablas, seeds, restricciones, índices, pruebas DB. En esta fase solo se define el contrato del agente.",
+      "inputs": [
+        "architecture.json",
+        "tasks-db.json",
+        "ER model catalog"
+      ],
+      "outputs": [
+        "database migrations",
+        "seed scripts",
+        "DB tests"
+      ],
+      "allowed_tools": [
+        "tool.generate_migration",
+        "tool.generate_seed",
+        "tool.validate_schema"
+      ],
+      "forbidden_actions": [
+        "modify_frontend",
+        "deploy_to_production"
+      ],
+      "entry_gate": "architecture_approved",
+      "exit_gate": "database_ready",
+      "handoff_targets": [
+        "agent.backend",
+        "agent.qa_release"
+      ],
+      "failure_policy": "retry",
+      "max_attempts": 3
+    },
+    {
+      "agent_id": "agent.backend",
+      "name": "Backend Agent",
+      "responsibility": "OpenAPI, endpoints, autorización, reglas, validaciones, pruebas API. En esta fase solo se define el contrato del agente.",
+      "inputs": [
+        "architecture.json",
+        "tasks-api.json",
+        "endpoints catalog",
+        "business rules catalog"
+      ],
+      "outputs": [
+        "OpenAPI spec",
+        "backend controllers",
+        "API tests"
+      ],
+      "allowed_tools": [
+        "tool.generate_openapi",
+        "tool.generate_controller",
+        "tool.validate_api"
+      ],
+      "forbidden_actions": [
+        "modify_frontend",
+        "modify_database_schema"
+      ],
+      "entry_gate": "architecture_approved",
+      "exit_gate": "backend_ready",
+      "handoff_targets": [
+        "agent.frontend",
+        "agent.qa_release"
+      ],
+      "failure_policy": "retry",
+      "max_attempts": 3
+    },
+    {
+      "agent_id": "agent.frontend",
+      "name": "Frontend Agent",
+      "responsibility": "30 rutas, componentes, guards, conexión API, E2E. En esta fase solo se define el contrato del agente.",
+      "inputs": [
+        "architecture.json",
+        "tasks-ui.json",
+        "screens catalog",
+        "endpoints catalog"
+      ],
+      "outputs": [
+        "React routes",
+        "UI components",
+        "E2E tests"
+      ],
+      "allowed_tools": [
+        "tool.generate_component",
+        "tool.generate_route",
+        "tool.validate_frontend"
+      ],
+      "forbidden_actions": [
+        "modify_database",
+        "modify_backend_business_logic"
+      ],
+      "entry_gate": "backend_ready || architecture_approved",
+      "exit_gate": "frontend_ready",
+      "handoff_targets": [
+        "agent.qa_release"
+      ],
+      "failure_policy": "retry",
+      "max_attempts": 3
+    },
+    {
+      "agent_id": "agent.qa_release",
+      "name": "QA / Release Agent",
+      "responsibility": "Build, lint, pruebas, cobertura, promoción a QA, health check, readiness EC2. En esta fase solo se define el contrato del agente.",
+      "inputs": [
+        "architecture.json",
+        "tasks-qa.json",
+        "backend artifacts",
+        "frontend artifacts"
+      ],
+      "outputs": [
+        "QA report",
+        "coverage report",
+        "deploy readiness",
+        "health check"
+      ],
+      "allowed_tools": [
+        "tool.run_tests",
+        "tool.check_coverage",
+        "tool.validate_deploy"
+      ],
+      "forbidden_actions": [
+        "modify_source_code",
+        "deploy_to_production",
+        "access_credentials"
+      ],
+      "entry_gate": "backend_ready && frontend_ready",
+      "exit_gate": "release_approved",
+      "handoff_targets": [
+        "human_reviewer"
+      ],
+      "failure_policy": "stop",
+      "max_attempts": 2
+    }
+  ]
+}

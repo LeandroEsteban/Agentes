@@ -1,0 +1,27 @@
+services:
+  postgres-qa:
+    image: postgres:16
+    container_name: siged-lampa-qa-db
+    environment:
+      POSTGRES_DB: siged_lampa_qa
+      POSTGRES_USER: siged_qa
+      POSTGRES_PASSWORD: ${QA_POSTGRES_PASSWORD:?QA_POSTGRES_PASSWORD must be set in .env.qa.local}
+    ports:
+      - "55432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U siged_qa -d siged_lampa_qa"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+    volumes:
+      - siged_lampa_qa_data:/var/lib/postgresql/data
+    networks:
+      - siged-lampa-qa-net
+
+networks:
+  siged-lampa-qa-net:
+    driver: bridge
+
+volumes:
+  siged_lampa_qa_data:

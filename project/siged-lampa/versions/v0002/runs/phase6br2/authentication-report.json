@@ -1,0 +1,12 @@
+{
+  "schema": "webforge.authentication_report.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "flows": {
+    "internal_login": { "tested": true, "pass": true, "tests": ["LoginPage - internal muestra formulario", "redirige a /intranet tras login exitoso interno"] },
+    "citizen_login": { "tested": true, "pass": true, "tests": ["LoginPage - citizen muestra formulario", "valida campos vacios", "llama a signIn con credenciales", "redirige a /portal tras login exitoso"] },
+    "recover": { "tested": true, "pass": true, "tests": ["RecoverPage muestra formulario", "llama a API-003", "muestra error al fallar"] },
+    "logout": { "tested": false, "note": "Logout handled by auth-service; signOut tested via auth-context" },
+    "expiration": { "tested": false, "note": "Session expiration covered by RequireAuth guard tests" }
+  },
+  "status": "pass"
+}

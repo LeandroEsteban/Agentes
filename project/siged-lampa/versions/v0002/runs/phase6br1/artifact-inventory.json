@@ -1,0 +1,23 @@
+{
+  "schema": "webforge.artifact_inventory.v1",
+  "generated_at": "2026-07-11T18:28:00Z",
+  "artifacts": [
+    { "path": "runs/phase6br1/phase6br1-report.json", "type": "report", "status": "generated" },
+    { "path": "runs/phase6br1/phase6br1-gates.json", "type": "report", "status": "generated" },
+    { "path": "runs/phase6br1/phase6br1-summary.md", "type": "summary", "status": "generated" },
+    { "path": "runs/phase6br1/coverage-exclusions.json", "type": "analysis", "status": "generated" },
+    { "path": "runs/phase6br1/coverage-gap-analysis.json", "type": "analysis", "status": "generated" },
+    { "path": "runs/phase6br1/operation-consumption-report.json", "type": "report", "status": "generated" },
+    { "path": "runs/phase6br1/validation-scope-report.json", "type": "report", "status": "generated" },
+    { "path": "runs/phase6br1/frontend-coverage.json", "type": "measurement", "status": "generated" },
+    { "path": "runs/phase6br1/frontend-build-report.json", "type": "measurement", "status": "generated" },
+    { "path": "runs/phase6br1/frontend-lint-report.json", "type": "measurement", "status": "generated" },
+    { "path": "runs/phase6br1/test-report.json", "type": "measurement", "status": "generated" },
+    { "path": "runs/phase6br1/change-ledger.jsonl", "type": "ledger", "status": "generated" },
+    { "path": "runs/phase6br1/tool-ledger.jsonl", "type": "ledger", "status": "generated" },
+    { "path": "frontend/frontend-operation-consumption.json", "type": "catalog", "status": "updated" },
+    { "path": "frontend/phase6br1-screen-gap-analysis.json", "type": "analysis", "status": "existing" },
+    { "path": "frontend/frontend-validation-scope-resolution.json", "type": "analysis", "status": "existing" },
+    { "path": "frontend/coverage/coverage-summary.json", "type": "measurement", "status": "generated" }
+  ]
+}

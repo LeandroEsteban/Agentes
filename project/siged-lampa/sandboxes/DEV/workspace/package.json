@@ -1,0 +1,17 @@
+{
+  "dependencies": {},
+  "engines": {
+    "node": ">=18"
+  },
+  "name": "siged-lampa",
+  "private": true,
+  "scripts": {
+    "check:backend": "node --check backend/server.js && node --check backend/src/server.js",
+    "check:frontend": "node --check frontend/assets/app.js",
+    "dev": "node backend/server.js",
+    "start": "node backend/server.js",
+    "verify": "python scripts/verify_siged_bundle.py"
+  },
+  "type": "commonjs",
+  "version": "0.2.0"
+}

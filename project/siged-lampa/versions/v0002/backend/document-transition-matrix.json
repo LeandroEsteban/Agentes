@@ -1,0 +1,115 @@
+{
+  "schema_version": "siged.document_transition_matrix.v1",
+  "generated_at": "2026-07-11T17:00:00Z",
+  "statuses": ["draft", "in_revision", "in_approval", "approved", "signed", "published", "archived", "cancelled"],
+  "transitions": [
+    {
+      "from": "draft",
+      "action": "submit_review",
+      "to": "in_revision",
+      "required_permissions": ["documents.edit"],
+      "positive_tests": ["submit review from draft"],
+      "negative_tests": ["submit from signed", "submit from archived"],
+      "status": "partial"
+    },
+    {
+      "from": "in_revision",
+      "action": "review_approved",
+      "to": "draft",
+      "required_permissions": ["documents.review"],
+      "positive_tests": ["approve review returns to draft"],
+      "negative_tests": ["approve as wrong reviewer"],
+      "status": "partial"
+    },
+    {
+      "from": "in_revision",
+      "action": "review_rejected",
+      "to": "draft",
+      "required_permissions": ["documents.review"],
+      "positive_tests": ["reject review returns to draft"],
+      "negative_tests": ["reject without observations"],
+      "status": "partial"
+    },
+    {
+      "from": "draft",
+      "action": "request_approval",
+      "to": "in_approval",
+      "required_permissions": ["documents.edit"],
+      "positive_tests": ["request approval from draft"],
+      "negative_tests": ["request with no current version", "request with pending reviews"],
+      "status": "partial"
+    },
+    {
+      "from": "in_approval",
+      "action": "approve",
+      "to": "approved",
+      "required_permissions": ["documents.review"],
+      "positive_tests": ["all approvers approve", "sequential approval"],
+      "negative_tests": ["approve out of sequence", "approve as wrong approver"],
+      "status": "partial"
+    },
+    {
+      "from": "in_approval",
+      "action": "reject",
+      "to": "draft",
+      "required_permissions": ["documents.review"],
+      "positive_tests": ["approver rejects"],
+      "negative_tests": ["reject without reason when required"],
+      "status": "partial"
+    },
+    {
+      "from": "approved",
+      "action": "sign",
+      "to": "signed",
+      "required_permissions": ["documents.sign"],
+      "positive_tests": ["sign with valid profile"],
+      "negative_tests": ["sign without profile", "sign without approval"],
+      "status": "partial"
+    },
+    {
+      "from": "draft",
+      "action": "update",
+      "to": "draft",
+      "required_permissions": ["documents.edit"],
+      "positive_tests": ["edit draft document"],
+      "negative_tests": ["edit signed document"],
+      "status": "partial"
+    },
+    {
+      "from": "draft",
+      "action": "create_version",
+      "to": "draft",
+      "required_permissions": ["documents.edit"],
+      "positive_tests": ["create version in draft"],
+      "negative_tests": ["create version in signed", "create version in cancelled"],
+      "status": "partial"
+    },
+    {
+      "from": "any",
+      "action": "cancel",
+      "to": "cancelled",
+      "required_permissions": ["documents.edit"],
+      "positive_tests": ["cancel draft"],
+      "negative_tests": ["cancel signed"],
+      "status": "missing"
+    },
+    {
+      "from": "signed",
+      "action": "publish",
+      "to": "published",
+      "required_permissions": ["documents.edit"],
+      "positive_tests": ["publish signed"],
+      "negative_tests": ["publish draft"],
+      "status": "missing"
+    },
+    {
+      "from": "published",
+      "action": "archive",
+      "to": "archived",
+      "required_permissions": ["documents.edit"],
+      "positive_tests": ["archive published"],
+      "negative_tests": ["archive draft"],
+      "status": "missing"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "phase": "8A",
+  "automatic_rollback": {
+    "triggered_by": ["migration_failure", "backend_health_failure", "database_health_failure", "frontend_health_failure", "smoke_test_failure"],
+    "method": "infra/deployment/scripts/rollback.sh",
+    "steps": [
+      "Stop current release stack (docker compose down --timeout 30)",
+      "Start previous release stack (docker compose up -d --build)",
+      "Update current symlink to previous release",
+      "Verify previous release health"
+    ],
+    "previous_release_tracking": "/opt/siged-lampa/previous_release.txt"
+  },
+  "manual_rollback": {
+    "documented_in": "docs/ROLLBACK.md",
+    "methods": ["symlink restore", "previous release start", "database restore from backup"]
+  },
+  "backup_before_migration": {
+    "enabled": true,
+    "script": "pg_dump via run-migrations.sh",
+    "location": "/opt/siged-lampa/backups/pre-migration-<release>.sql"
+  },
+  "failed_release_preserved": true,
+  "rollback_script": "infra/deployment/scripts/rollback.sh",
+  "notes": [
+    "Database volume (pgdata_production) is NEVER deleted during rollback",
+    ".env.production is shared and NOT modified during rollback",
+    "Rollback is idempotent — can be run multiple times"
+  ]
+}

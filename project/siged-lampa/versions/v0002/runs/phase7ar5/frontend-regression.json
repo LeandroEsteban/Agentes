@@ -1,0 +1,7 @@
+{
+  "status": "partial",
+  "build": "pass",
+  "lint": "not_executed",
+  "tests": "not_executed",
+  "coverage": "not_executed"
+}

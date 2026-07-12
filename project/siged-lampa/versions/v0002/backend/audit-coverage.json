@@ -1,0 +1,24 @@
+{
+  "write_operations": 25,
+  "audited_operations": 8,
+  "missing_audit": [
+    "API-001",
+    "API-002",
+    "API-003",
+    "API-005",
+    "API-007",
+    "API-008",
+    "API-010",
+    "API-012",
+    "API-014",
+    "API-026",
+    "API-028",
+    "API-030",
+    "API-031",
+    "API-032",
+    "API-034",
+    "API-037",
+    "API-038"
+  ],
+  "sensitive_data_findings": []
+}

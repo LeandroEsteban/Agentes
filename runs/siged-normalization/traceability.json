@@ -1,0 +1,2860 @@
+{
+  "generated_at": "2026-07-11T03:33:55Z",
+  "items": [
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 86,
+          "line_start": 86,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-01",
+      "target_code": "API-001"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 87,
+          "line_start": 87,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-02",
+      "target_code": "API-002"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 88,
+          "line_start": 88,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-03",
+      "target_code": "API-003"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 89,
+          "line_start": 89,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-04",
+      "target_code": "API-004"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 89,
+          "line_start": 89,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-04",
+      "target_code": "API-005"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 90,
+          "line_start": 90,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-05",
+      "target_code": "API-039"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 90,
+          "line_start": 90,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-05",
+      "target_code": "API-040"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 91,
+          "line_start": 91,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-06",
+      "target_code": "API-006"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 91,
+          "line_start": 91,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-06",
+      "target_code": "API-007"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 91,
+          "line_start": 91,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-06",
+      "target_code": "API-008"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 92,
+          "line_start": 92,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-07",
+      "target_code": "API-009"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 92,
+          "line_start": 92,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-07",
+      "target_code": "API-010"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 93,
+          "line_start": 93,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-08",
+      "target_code": "API-011"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 93,
+          "line_start": 93,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-08",
+      "target_code": "API-012"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 94,
+          "line_start": 94,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-09",
+      "target_code": "API-013"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 94,
+          "line_start": 94,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-09",
+      "target_code": "API-014"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 97,
+          "line_start": 97,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-12",
+      "target_code": "API-015"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 98,
+          "line_start": 98,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-13",
+      "target_code": "API-016"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 99,
+          "line_start": 99,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-14",
+      "target_code": "API-017"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 99,
+          "line_start": 99,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-14",
+      "target_code": "API-018"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 100,
+          "line_start": 100,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-15",
+      "target_code": "API-019"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 100,
+          "line_start": 100,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-15",
+      "target_code": "API-020"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 101,
+          "line_start": 101,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-16",
+      "target_code": "API-022"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 102,
+          "line_start": 102,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-17",
+      "target_code": "API-023"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 103,
+          "line_start": 103,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-18",
+      "target_code": "API-024"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 104,
+          "line_start": 104,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-19",
+      "target_code": "API-025"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 105,
+          "line_start": 105,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-20",
+      "target_code": "API-027"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 105,
+          "line_start": 105,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-20",
+      "target_code": "API-028"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 106,
+          "line_start": 106,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-21",
+      "target_code": "API-030"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 107,
+          "line_start": 107,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-22",
+      "target_code": "API-029"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 107,
+          "line_start": 107,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-22",
+      "target_code": "API-031"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 107,
+          "line_start": 107,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-22",
+      "target_code": "API-032"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 108,
+          "line_start": 108,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-23",
+      "target_code": "API-033"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 109,
+          "line_start": 109,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-24",
+      "target_code": "API-033"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 110,
+          "line_start": 110,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-25",
+      "target_code": "API-034"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 111,
+          "line_start": 111,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-26",
+      "target_code": "API-035"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 111,
+          "line_start": 111,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-26",
+      "target_code": "API-036"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 112,
+          "line_start": 112,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-27",
+      "target_code": "API-037"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 113,
+          "line_start": 113,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-28",
+      "target_code": "API-038"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 114,
+          "line_start": 114,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-29",
+      "target_code": "API-039"
+    },
+    {
+      "confidence": "explicit",
+      "derivation_rule": "Mapa de Pantallas: Endpoints dominantes",
+      "evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 115,
+          "line_start": 115,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "uses_endpoint",
+      "source_code": "P-30",
+      "target_code": "API-040"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 283,
+          "line_start": 283,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 86,
+          "line_start": 86,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-01",
+      "target_code": "P-01"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 283,
+          "line_start": 283,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 87,
+          "line_start": 87,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-01",
+      "target_code": "P-02"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 283,
+          "line_start": 283,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 88,
+          "line_start": 88,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-01",
+      "target_code": "P-03"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 283,
+          "line_start": 283,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 89,
+          "line_start": 89,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-01",
+      "target_code": "P-04"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 283,
+          "line_start": 283,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 90,
+          "line_start": 90,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-01",
+      "target_code": "P-05"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 284,
+          "line_start": 284,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 86,
+          "line_start": 86,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-02",
+      "target_code": "P-01"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 284,
+          "line_start": 284,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 87,
+          "line_start": 87,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-02",
+      "target_code": "P-02"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 284,
+          "line_start": 284,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 88,
+          "line_start": 88,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-02",
+      "target_code": "P-03"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 284,
+          "line_start": 284,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 89,
+          "line_start": 89,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-02",
+      "target_code": "P-04"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 284,
+          "line_start": 284,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 90,
+          "line_start": 90,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-02",
+      "target_code": "P-05"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 285,
+          "line_start": 285,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 86,
+          "line_start": 86,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-03",
+      "target_code": "P-01"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 285,
+          "line_start": 285,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 87,
+          "line_start": 87,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-03",
+      "target_code": "P-02"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 285,
+          "line_start": 285,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 88,
+          "line_start": 88,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-03",
+      "target_code": "P-03"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 285,
+          "line_start": 285,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 89,
+          "line_start": 89,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-03",
+      "target_code": "P-04"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 285,
+          "line_start": 285,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 90,
+          "line_start": 90,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-03",
+      "target_code": "P-05"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 286,
+          "line_start": 286,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 91,
+          "line_start": 91,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-04",
+      "target_code": "P-06"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 286,
+          "line_start": 286,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 92,
+          "line_start": 92,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-04",
+      "target_code": "P-07"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 286,
+          "line_start": 286,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 93,
+          "line_start": 93,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-04",
+      "target_code": "P-08"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 286,
+          "line_start": 286,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 94,
+          "line_start": 94,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-04",
+      "target_code": "P-09"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 286,
+          "line_start": 286,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 95,
+          "line_start": 95,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-04",
+      "target_code": "P-10"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 286,
+          "line_start": 286,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 96,
+          "line_start": 96,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-04",
+      "target_code": "P-11"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 287,
+          "line_start": 287,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 91,
+          "line_start": 91,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-05",
+      "target_code": "P-06"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 287,
+          "line_start": 287,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 92,
+          "line_start": 92,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-05",
+      "target_code": "P-07"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 287,
+          "line_start": 287,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 93,
+          "line_start": 93,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-05",
+      "target_code": "P-08"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 287,
+          "line_start": 287,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 94,
+          "line_start": 94,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-05",
+      "target_code": "P-09"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 287,
+          "line_start": 287,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 95,
+          "line_start": 95,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-05",
+      "target_code": "P-10"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 287,
+          "line_start": 287,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 96,
+          "line_start": 96,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-05",
+      "target_code": "P-11"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 288,
+          "line_start": 288,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 91,
+          "line_start": 91,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-06",
+      "target_code": "P-06"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 288,
+          "line_start": 288,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 92,
+          "line_start": 92,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-06",
+      "target_code": "P-07"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 288,
+          "line_start": 288,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 93,
+          "line_start": 93,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-06",
+      "target_code": "P-08"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 288,
+          "line_start": 288,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 94,
+          "line_start": 94,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-06",
+      "target_code": "P-09"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 288,
+          "line_start": 288,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 95,
+          "line_start": 95,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-06",
+      "target_code": "P-10"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 288,
+          "line_start": 288,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 96,
+          "line_start": 96,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-06",
+      "target_code": "P-11"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 289,
+          "line_start": 289,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 91,
+          "line_start": 91,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-07",
+      "target_code": "P-06"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 289,
+          "line_start": 289,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 92,
+          "line_start": 92,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-07",
+      "target_code": "P-07"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 289,
+          "line_start": 289,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 93,
+          "line_start": 93,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-07",
+      "target_code": "P-08"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 289,
+          "line_start": 289,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 94,
+          "line_start": 94,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-07",
+      "target_code": "P-09"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 289,
+          "line_start": 289,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 95,
+          "line_start": 95,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-07",
+      "target_code": "P-10"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 289,
+          "line_start": 289,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 96,
+          "line_start": 96,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-07",
+      "target_code": "P-11"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 290,
+          "line_start": 290,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 91,
+          "line_start": 91,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-08",
+      "target_code": "P-06"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 290,
+          "line_start": 290,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 92,
+          "line_start": 92,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-08",
+      "target_code": "P-07"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 290,
+          "line_start": 290,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 93,
+          "line_start": 93,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-08",
+      "target_code": "P-08"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 290,
+          "line_start": 290,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 94,
+          "line_start": 94,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-08",
+      "target_code": "P-09"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 290,
+          "line_start": 290,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 95,
+          "line_start": 95,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-08",
+      "target_code": "P-10"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 290,
+          "line_start": 290,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 96,
+          "line_start": 96,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-08",
+      "target_code": "P-11"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 291,
+          "line_start": 291,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 97,
+          "line_start": 97,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-09",
+      "target_code": "P-12"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 291,
+          "line_start": 291,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 98,
+          "line_start": 98,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-09",
+      "target_code": "P-13"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 291,
+          "line_start": 291,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 99,
+          "line_start": 99,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-09",
+      "target_code": "P-14"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 291,
+          "line_start": 291,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 100,
+          "line_start": 100,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-09",
+      "target_code": "P-15"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 292,
+          "line_start": 292,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 97,
+          "line_start": 97,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-10",
+      "target_code": "P-12"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 292,
+          "line_start": 292,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 98,
+          "line_start": 98,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-10",
+      "target_code": "P-13"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 292,
+          "line_start": 292,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 99,
+          "line_start": 99,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-10",
+      "target_code": "P-14"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 292,
+          "line_start": 292,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 100,
+          "line_start": 100,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-10",
+      "target_code": "P-15"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 293,
+          "line_start": 293,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 97,
+          "line_start": 97,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-11",
+      "target_code": "P-12"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 293,
+          "line_start": 293,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 98,
+          "line_start": 98,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-11",
+      "target_code": "P-13"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 293,
+          "line_start": 293,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 99,
+          "line_start": 99,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-11",
+      "target_code": "P-14"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 293,
+          "line_start": 293,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 100,
+          "line_start": 100,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-11",
+      "target_code": "P-15"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 294,
+          "line_start": 294,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 97,
+          "line_start": 97,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-12",
+      "target_code": "P-12"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 294,
+          "line_start": 294,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 98,
+          "line_start": 98,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-12",
+      "target_code": "P-13"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 294,
+          "line_start": 294,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 99,
+          "line_start": 99,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-12",
+      "target_code": "P-14"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 294,
+          "line_start": 294,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 100,
+          "line_start": 100,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-12",
+      "target_code": "P-15"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 295,
+          "line_start": 295,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 101,
+          "line_start": 101,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-13",
+      "target_code": "P-16"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 295,
+          "line_start": 295,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 102,
+          "line_start": 102,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-13",
+      "target_code": "P-17"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 295,
+          "line_start": 295,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 103,
+          "line_start": 103,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-13",
+      "target_code": "P-18"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 296,
+          "line_start": 296,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 101,
+          "line_start": 101,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-14",
+      "target_code": "P-16"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 296,
+          "line_start": 296,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 102,
+          "line_start": 102,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-14",
+      "target_code": "P-17"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 296,
+          "line_start": 296,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 103,
+          "line_start": 103,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-14",
+      "target_code": "P-18"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 297,
+          "line_start": 297,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 101,
+          "line_start": 101,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-15",
+      "target_code": "P-16"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 297,
+          "line_start": 297,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 102,
+          "line_start": 102,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-15",
+      "target_code": "P-17"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 297,
+          "line_start": 297,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 103,
+          "line_start": 103,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-15",
+      "target_code": "P-18"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 298,
+          "line_start": 298,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 101,
+          "line_start": 101,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-16",
+      "target_code": "P-16"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 298,
+          "line_start": 298,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 102,
+          "line_start": 102,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-16",
+      "target_code": "P-17"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 298,
+          "line_start": 298,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 103,
+          "line_start": 103,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-16",
+      "target_code": "P-18"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 299,
+          "line_start": 299,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 101,
+          "line_start": 101,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-17",
+      "target_code": "P-16"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 299,
+          "line_start": 299,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 102,
+          "line_start": 102,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-17",
+      "target_code": "P-17"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 299,
+          "line_start": 299,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 103,
+          "line_start": 103,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-17",
+      "target_code": "P-18"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 300,
+          "line_start": 300,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 104,
+          "line_start": 104,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-18",
+      "target_code": "P-19"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 300,
+          "line_start": 300,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 105,
+          "line_start": 105,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-18",
+      "target_code": "P-20"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 301,
+          "line_start": 301,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 104,
+          "line_start": 104,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-19",
+      "target_code": "P-19"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 301,
+          "line_start": 301,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 105,
+          "line_start": 105,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-19",
+      "target_code": "P-20"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 302,
+          "line_start": 302,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 104,
+          "line_start": 104,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-20",
+      "target_code": "P-19"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 302,
+          "line_start": 302,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 105,
+          "line_start": 105,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-20",
+      "target_code": "P-20"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 303,
+          "line_start": 303,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 106,
+          "line_start": 106,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-21",
+      "target_code": "P-21"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 303,
+          "line_start": 303,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 107,
+          "line_start": 107,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-21",
+      "target_code": "P-22"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 304,
+          "line_start": 304,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 106,
+          "line_start": 106,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-22",
+      "target_code": "P-21"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 304,
+          "line_start": 304,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 107,
+          "line_start": 107,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-22",
+      "target_code": "P-22"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 305,
+          "line_start": 305,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 106,
+          "line_start": 106,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-23",
+      "target_code": "P-21"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 305,
+          "line_start": 305,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 107,
+          "line_start": 107,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-23",
+      "target_code": "P-22"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 306,
+          "line_start": 306,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 108,
+          "line_start": 108,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-24",
+      "target_code": "P-23"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 306,
+          "line_start": 306,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 109,
+          "line_start": 109,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-24",
+      "target_code": "P-24"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 306,
+          "line_start": 306,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 110,
+          "line_start": 110,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-24",
+      "target_code": "P-25"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 306,
+          "line_start": 306,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 111,
+          "line_start": 111,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-24",
+      "target_code": "P-26"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 307,
+          "line_start": 307,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 108,
+          "line_start": 108,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-25",
+      "target_code": "P-23"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 307,
+          "line_start": 307,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 109,
+          "line_start": 109,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-25",
+      "target_code": "P-24"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 307,
+          "line_start": 307,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 110,
+          "line_start": 110,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-25",
+      "target_code": "P-25"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 307,
+          "line_start": 307,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 111,
+          "line_start": 111,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-25",
+      "target_code": "P-26"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 308,
+          "line_start": 308,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 108,
+          "line_start": 108,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-26",
+      "target_code": "P-23"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 308,
+          "line_start": 308,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 109,
+          "line_start": 109,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-26",
+      "target_code": "P-24"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 308,
+          "line_start": 308,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 110,
+          "line_start": 110,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-26",
+      "target_code": "P-25"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 308,
+          "line_start": 308,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 111,
+          "line_start": 111,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-26",
+      "target_code": "P-26"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 309,
+          "line_start": 309,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 112,
+          "line_start": 112,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-27",
+      "target_code": "P-27"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 309,
+          "line_start": 309,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 113,
+          "line_start": 113,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-27",
+      "target_code": "P-28"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 310,
+          "line_start": 310,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 112,
+          "line_start": 112,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-28",
+      "target_code": "P-27"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 310,
+          "line_start": 310,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 113,
+          "line_start": 113,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-28",
+      "target_code": "P-28"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 311,
+          "line_start": 311,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 114,
+          "line_start": 114,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-29",
+      "target_code": "P-29"
+    },
+    {
+      "confidence": "derived",
+      "derivation_rule": "Workflow y pantalla comparten modulo explicitamente documentado",
+      "evidence": [
+        {
+          "document": "Especificacion_Funcional_SIGED_Lampa.md",
+          "line_end": 312,
+          "line_start": 312,
+          "section": "10. Catalogo de flujos funcionales"
+        },
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 115,
+          "line_start": 115,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "relation_type": "same_module",
+      "source_code": "FF-30",
+      "target_code": "P-30"
+    }
+  ],
+  "project_id": "siged-lampa",
+  "schema_version": "webforge.catalog.traceability.v1",
+  "source_documents": [
+    "Especificacion_Funcional_SIGED_Lampa.md",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "Inventario_Endpoints_SIGED_Lampa.md",
+    "Modelo_ER_Detallado_SIGED_Lampa.md"
+  ],
+  "source_hashes": {
+    "Especificacion_Funcional_SIGED_Lampa.md": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24",
+    "Inventario_Endpoints_SIGED_Lampa.md": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d",
+    "Modelo_ER_Detallado_SIGED_Lampa.md": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282"
+  }
+}

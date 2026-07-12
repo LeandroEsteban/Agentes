@@ -1,0 +1,157 @@
+{
+  "generated_at": "2026-07-11T15:34:54.556Z",
+  "method": "recursive SHA-256 inventory; no prior hash manifest exists, so this establishes an auditable 5B snapshot rather than asserting a historical byte comparison.",
+  "status": "snapshot_created",
+  "targets": {
+    "v0001": {
+      "exists": true,
+      "file_count": 9,
+      "aggregate_sha256": "b85999c4ebfc9d57329ff349f773e3de27e9487811b1a13be1941a5696a50460",
+      "files": {
+        "versions/v0001/frontend/frontend-template-manifest.json": "f9f9873c2f439b6c41032e82a5bbf8467f2f2d2eb39b7689c68bd8bed69dbf1a",
+        "versions/v0001/frontend/PLANTILLA_FRONTEND.md": "18c16212007f7a82b976a8c6b7003d48186611c5f9f31aa9f094d4b493d5df69",
+        "versions/v0001/README.md": "4cebec37e19ca567210b46095c3600ab5f60c6e729fe0ae5b5dfd596540550ef",
+        "versions/v0001/sources/Especificacion_Funcional_SIGED_Lampa.md": "3d8864035f9f4c7a7f682b5af50ea69e208f19666dc7734558affe90e54aaadc",
+        "versions/v0001/sources/Inventario_Endpoints_SIGED_Lampa.md": "39913a985cde558eccdbae3c82005c125f004b13b1e4bd24f6eca7a267bd6cc0",
+        "versions/v0001/sources/Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "c2897946b47563791e933996e30ab5a71ae137a415988645988d1150c6a50147",
+        "versions/v0001/sources/Modelo_ER_Detallado_SIGED_Lampa.md": "431fcc569e5c15fc8ed0975c9fbfd4ade2c974e7306ed6bb233f906549a42ee5",
+        "versions/v0001/sources/sources-manifest.json": "63fad202db6b9c5991b97cb11a659263712a48d46d3e1cb0ddb82b59e0e2c2d8",
+        "versions/v0001/version-manifest.json": "fcd0e772a91624dd42398d75e664b6c211a23899af27b423a47cc0a61b2e1bae"
+      }
+    },
+    "historical_dev": {
+      "exists": true,
+      "file_count": 39,
+      "aggregate_sha256": "f555d545a32e877541689bc3b6952480806710ab5b2b47ec1e754d31db214118",
+      "files": {
+        "sandboxes/DEV/frontend-template-manifest.json": "f9f9873c2f439b6c41032e82a5bbf8467f2f2d2eb39b7689c68bd8bed69dbf1a",
+        "sandboxes/DEV/learning/Aprendizaje.md": "734b43a34d107d6fe0b7994b7960cd08a4334c2db517932bd15df97480e66575",
+        "sandboxes/DEV/memory/README.md": "459d2b970176d8ec5f28c72fe620830d8221ce0a77e4f87acafbd608c3785856",
+        "sandboxes/DEV/sandbox-manifest.json": "4e82cbeba7c70c675680dc7990074fe04c5cac985f91ad5c1df7d19df083553a",
+        "sandboxes/DEV/workspace/.env.example": "5ad39fd7020919e8fd75be9f5ee625231f7f08fb264b4d38ecefea4163379f82",
+        "sandboxes/DEV/workspace/app/assets/app.js": "ecf3c4a484a2792b367e85bd67973805c74fba30e4f5cb44ad445f7e2e559530",
+        "sandboxes/DEV/workspace/app/assets/styles.css": "d4dc0c075e074762c39ef09f802dbd33e146335cd9caf5dda42b13add78c4437",
+        "sandboxes/DEV/workspace/app/data/api-catalog.json": "f82ff472423edd8957279ad4bfabf3add08aa064cdf7f6b7cf687ea314bacc44",
+        "sandboxes/DEV/workspace/app/data/seed.json": "04908d71da34ff67561df7d9369258d78ade315032cbe57080d6f76ec0ef78f8",
+        "sandboxes/DEV/workspace/app/data/traceability.json": "846430ec1f54aa9ec8f0a77a93b7c323660350a770d91235a4a5c5717b0dc9e4",
+        "sandboxes/DEV/workspace/app/index.html": "f2582fd30b33b4e297eb7b1458e8c8b1c57392edda15c22804293bb71cbf3585",
+        "sandboxes/DEV/workspace/backend/server.js": "1c4aa4727d265abbdb10ea2c5f04745c87647f06665c2e77d331c71ae0d44dcf",
+        "sandboxes/DEV/workspace/backend/src/data.js": "3ec982bf4f320cd7abf102c7b827fb425a2fb1be4c010c879fd6427f460d62ef",
+        "sandboxes/DEV/workspace/backend/src/server.js": "c69e98451fd60825d467a407d57bc3861835dd62992efb127725664502525c1b",
+        "sandboxes/DEV/workspace/data/api-catalog.json": "f82ff472423edd8957279ad4bfabf3add08aa064cdf7f6b7cf687ea314bacc44",
+        "sandboxes/DEV/workspace/data/seed.json": "04908d71da34ff67561df7d9369258d78ade315032cbe57080d6f76ec0ef78f8",
+        "sandboxes/DEV/workspace/data/traceability.json": "846430ec1f54aa9ec8f0a77a93b7c323660350a770d91235a4a5c5717b0dc9e4",
+        "sandboxes/DEV/workspace/db/migrations/001_initial.sql": "30a41c77553d7a4045f1e47e818fdc3670079a005d53d70be2283549efb9bdf4",
+        "sandboxes/DEV/workspace/db/schema.sql": "30a41c77553d7a4045f1e47e818fdc3670079a005d53d70be2283549efb9bdf4",
+        "sandboxes/DEV/workspace/db/seeds/001_demo.sql": "62598a3644e15bd1be0d350080bd1cada78a3dcb2472e98a1f7a044ff048e5b6",
+        "sandboxes/DEV/workspace/docker-compose.yml": "35d3f8279be85cadadef1c33a0e2a5dcdd038baf71738d224c5306c98cde9bf3",
+        "sandboxes/DEV/workspace/Dockerfile": "b73244373dfcdf68a77739c433b7cc8c99f1ec88e599582ae9323fffedddee51",
+        "sandboxes/DEV/workspace/docs/SIGED_IMPLEMENTATION_PLAN.md": "87c4c4a1a5744864c21a353d35a6b9ac75ecb53e111e06f5ce6b8dcf07fd0019",
+        "sandboxes/DEV/workspace/frontend/assets/app.js": "ecf3c4a484a2792b367e85bd67973805c74fba30e4f5cb44ad445f7e2e559530",
+        "sandboxes/DEV/workspace/frontend/assets/styles.css": "d4dc0c075e074762c39ef09f802dbd33e146335cd9caf5dda42b13add78c4437",
+        "sandboxes/DEV/workspace/frontend/index.html": "f2582fd30b33b4e297eb7b1458e8c8b1c57392edda15c22804293bb71cbf3585",
+        "sandboxes/DEV/workspace/frontend/src/app.js": "ecf3c4a484a2792b367e85bd67973805c74fba30e4f5cb44ad445f7e2e559530",
+        "sandboxes/DEV/workspace/package.json": "b99423aa56516d9e2cdcc829f21af1fb5f2eeb91db97b93a1d4e1174b204eeb6",
+        "sandboxes/DEV/workspace/PLANTILLA_FRONTEND.md": "78d069cdfbc51efc5d74ec1bf368cdb3a2acfeb72752fb38ea28792f658ce107",
+        "sandboxes/DEV/workspace/README.md": "c6079bce5b45414ffe5cdf6d39cf1343c4fecca63519a5970eae609cc289699d",
+        "sandboxes/DEV/workspace/scripts/verify_siged_bundle.py": "e8df487c82748c126e5274777c96e8bc7015927ba9ba52fe61813905f6344ba9",
+        "sandboxes/DEV/workspace/server.err.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sandboxes/DEV/workspace/server.log": "bfb614bc9f17eee19a442adff0e8b33be46fd3f83cf8143729af652badaed19a",
+        "sandboxes/DEV/workspace/sources/Especificacion_Funcional_SIGED_Lampa.md": "3d8864035f9f4c7a7f682b5af50ea69e208f19666dc7734558affe90e54aaadc",
+        "sandboxes/DEV/workspace/sources/Inventario_Endpoints_SIGED_Lampa.md": "39913a985cde558eccdbae3c82005c125f004b13b1e4bd24f6eca7a267bd6cc0",
+        "sandboxes/DEV/workspace/sources/Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "c2897946b47563791e933996e30ab5a71ae137a415988645988d1150c6a50147",
+        "sandboxes/DEV/workspace/sources/Modelo_ER_Detallado_SIGED_Lampa.md": "431fcc569e5c15fc8ed0975c9fbfd4ade2c974e7306ed6bb233f906549a42ee5",
+        "sandboxes/DEV/workspace/tasks/implementation-tasks.md": "2787fdb3647e365ea7ff867bf01721f3c2499bb052988fc114a8ab2884173269",
+        "sandboxes/DEV/workspace/tasks/product-backlog.json": "434952e04cd47465849a4d5380ccc2327d992d0343be0aad0ea8526ccbbf9c9b"
+      }
+    },
+    "historical_qa": {
+      "exists": true,
+      "file_count": 6,
+      "aggregate_sha256": "c8bcbf9a98fe9af33d2889634a8f464bb72da05848e5f263080ca0719616c111",
+      "files": {
+        "sandboxes/QA/frontend-template-manifest.json": "f9f9873c2f439b6c41032e82a5bbf8467f2f2d2eb39b7689c68bd8bed69dbf1a",
+        "sandboxes/QA/learning/Aprendizaje.md": "07a0d5565970781422669fba8f7b0a7f7502c1993426a55c05aee26db3d29e25",
+        "sandboxes/QA/memory/README.md": "6d485929e4af3b55d38b23374e7833ccfe7ba88bac3c95f8457557a8948433d0",
+        "sandboxes/QA/sandbox-manifest.json": "e0e0f0c4919f79bdaed24458a1c68fdbfb4122a1213d29e423ee70f7c542660c",
+        "sandboxes/QA/workspace/PLANTILLA_FRONTEND.md": "ad1803eda5afe928fabb4becf85ee910d2f1ead21e35a82e42d2653fafe3379a",
+        "sandboxes/QA/workspace/README.md": "dea26fccc8dbaa672356fa2ae28f4b682343efddd017f1e1f35f999b5861f398"
+      }
+    },
+    "source_documents": {
+      "exists": true,
+      "file_count": 5,
+      "aggregate_sha256": "6925d88a97ff69d9b58c904d1fbcd65b7876b85685ca79fc52f0ebc47adfad8d",
+      "files": {
+        "versions/v0001/sources/Especificacion_Funcional_SIGED_Lampa.md": "3d8864035f9f4c7a7f682b5af50ea69e208f19666dc7734558affe90e54aaadc",
+        "versions/v0001/sources/Inventario_Endpoints_SIGED_Lampa.md": "39913a985cde558eccdbae3c82005c125f004b13b1e4bd24f6eca7a267bd6cc0",
+        "versions/v0001/sources/Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "c2897946b47563791e933996e30ab5a71ae137a415988645988d1150c6a50147",
+        "versions/v0001/sources/Modelo_ER_Detallado_SIGED_Lampa.md": "431fcc569e5c15fc8ed0975c9fbfd4ade2c974e7306ed6bb233f906549a42ee5",
+        "versions/v0001/sources/sources-manifest.json": "63fad202db6b9c5991b97cb11a659263712a48d46d3e1cb0ddb82b59e0e2c2d8"
+      }
+    },
+    "normalized_catalogs": {
+      "exists": true,
+      "file_count": 13,
+      "aggregate_sha256": "8e2b57fc9159f23cee03c5aa71e68b57926d60f74ecc9bf80f45b5c95f0bc450",
+      "files": {
+        "spec/actors.json": "ee6cd87007362871f24d3d21c46ccf6fde71cfe62755d0f5606aa840fe6222d5",
+        "spec/business_rules.json": "55087927cbcefe436e4e00fdd7a2e7682526e2073979f9e10ae2a20e18d99f8d",
+        "spec/endpoints.json": "9effeac58d5b64597cc257ce3eeec801f2ec42cee7d3e5a861cba987d039cbbe",
+        "spec/entities.json": "dc3e6e50d9d7ebd5532a61d2304f0bf72c6ce4f567d94c58964d2cdb3605a7c9",
+        "spec/modules.json": "a44b758cfe219a6d1cdfe41fb5c037198b8d734086541d75c508713542ee169a",
+        "spec/normalization-findings.md": "9f72652cd42fbcf2694d3e1dc1efbf96e0997f2bebbca430a54c8f22f5851771",
+        "spec/normalization-report.json": "b7b956ffebb3ec31a5e51ff0354f98ac1795955cc32d6d9a6de76998dfd7a5f9",
+        "spec/product.json": "db2f5d30b4b57867bd68cdbed31e59145a56e04f7aad59ebea6f199606efff78",
+        "spec/screens.json": "4084e6b80181e4a15e8df0975fd3890b9a9243d0b1606b063f669e0191983742",
+        "spec/traceability.json": "69c86eb9a4d87c11dd09cc267272a2f858ec6ae01facf9f6de68a0388e739e0c",
+        "spec/use_cases.json": "dfada6029b99854a6639a6a80cca1a9d904ff60acc20748e2ce9b4ea38b75a4c",
+        "spec/validations.json": "12f86303d2ffef1d5f0e87f95c22b14a8b4724c8dea7ece08413e3a655747b5d",
+        "spec/workflows.json": "bc58f633820da6f6e030a74b8223791dbda1e129d40418a4e0d374747836f048"
+      }
+    },
+    "architecture": {
+      "exists": true,
+      "file_count": 13,
+      "aggregate_sha256": "72aeac1086df395437fab1869a9f1a72d2114eaadacd737ba40be158f2fe307a",
+      "files": {
+        "architecture/agent-ledger.jsonl": "0f3d5bd89a5e2f9c79481a9c9c2201d881924f83898e414a3aa95944c605a854",
+        "architecture/agents.json": "4adc911d893efee8519cf289fbd8f964b11ae0f899d1ddb4e8d1a99aeee0b928",
+        "architecture/architecture.json": "b87e17dfc839156191ae86ee3b83defc46af3c719206b0fff28ef82a2afcebe9",
+        "architecture/contracts.json": "5061d9c39b74505701e0c0b402ec5aaceb83475872ba9991a902374469fcab76",
+        "architecture/decisions.json": "56f4c8f067df552c6c08be13885dc0f9b5dc5eb49b0b71cdbd8c4d3c3944fb95",
+        "architecture/gate-results.json": "748b52c02d088cb70cafbdf1ae4aa99422e5d5f94147484fe49ba68dd2756aa9",
+        "architecture/handoff-ledger.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "architecture/handoff-plan.json": "15ac40b7b42fdec0ce259c1c37b6136d9eed3cbe9d0288a80b7e962fcddcebae",
+        "architecture/planning-ledger.jsonl": "cd8d5d44b5248ee951645b8074a6dbbc4968ca859ab20a8416cfa6d6e0466720",
+        "architecture/planning-report.json": "cc2a5eecb8384f51c9249337610b0d6df05dee48041af80cc7ed40287c81eee9",
+        "architecture/planning-summary.md": "3b470293fc0a11b94b3503ec63c5f0f1a95f73e5cec7f842def41a14c65aa05d",
+        "architecture/task-dag.json": "e38a005deb0b8eb016276f1e5b6f8bb0fbdc9dcc01bb2eed7a925ffffd278927",
+        "architecture/tasks.json": "77098cfbdafd29ec88fe9725e7e6944496cd1f11ffc29a60487535589a391c1d"
+      }
+    },
+    "applied_migrations": {
+      "exists": true,
+      "file_count": 16,
+      "aggregate_sha256": "e730cfd54be77dc76f2cb55ec6d5bb3897fc4bc2e66df71e7d379228ff13d52e",
+      "files": {
+        "versions/v0002/database/migrations/001_extensions.sql": "5a53c126c0f0acf47d02d8312f1eaba47205374fc31cf72eb888785b6e37cdab",
+        "versions/v0002/database/migrations/002_organization.sql": "875822ef319e6f77c1f658ec858306afa6c320dcf309d24e312157af552dfefd",
+        "versions/v0002/database/migrations/003_security.sql": "93a476a43822ff0aad48fc741843e66c1a89ab17f6560fbc54cf2d4f26c237d3",
+        "versions/v0002/database/migrations/004_document_catalogs.sql": "c7e937910530616c27735fdfd8a2df02eaf8f7808ddc523b9f719ea2469f3925",
+        "versions/v0002/database/migrations/005_documents.sql": "a57c9916079786c28e3aaa438b9eba8d3f1202952a619291d1b9e8ad777c8804",
+        "versions/v0002/database/migrations/006_document_workflows.sql": "6eb42834f38f9f2bf17b30d3ee01ba9fb3a27d09465b7a4fe582813fc30c128c",
+        "versions/v0002/database/migrations/007_expedients.sql": "7356497942879836544e864bc08463a7b8071b497fddc585a242c2a29fbd867c",
+        "versions/v0002/database/migrations/008_correspondence.sql": "99dff792acb5e11d1bd47ba16bdf094986d7a602b42b8fac5bb1a2fadd6ac3fa",
+        "versions/v0002/database/migrations/009_citizen_portal.sql": "81db7482d18183ce3d9cbaadd4f7bca265377441c7c9562f7c33344fb3d44aec",
+        "versions/v0002/database/migrations/010_oirs.sql": "70a279c598cde1ab1be6d3b93338c3ede850d05842b601b97671cfc12a4aa983",
+        "versions/v0002/database/migrations/011_public_content.sql": "02eb18505ef0e3860ba682e6f20cd2e76b8fccc42fa3d21dad018dcba7106749",
+        "versions/v0002/database/migrations/012_notifications_audit.sql": "8e704d1a936f6c22eb95f981b660e85130002088897ce2407b3744a744bf8df5",
+        "versions/v0002/database/migrations/013_deferred_foreign_keys.sql": "dedad78c8e12124a0e2b75e1a4271b7a03525667cfe9647b371369ece542c020",
+        "versions/v0002/database/migrations/014_profile_preferences_citizen_sessions.sql": "11a699e191e949a1920998ac7cc74bb44f7bdb5726f3f92000ba12dbb0842ebb",
+        "versions/v0002/database/migrations/015_oirs_anonymous_tracking.sql": "4bd2997bdab31b4716951c19912ca0905598f817944225460547df2898a04625",
+        "versions/v0002/database/migrations/016_correct_demo_password_hashes.sql": "338808b093efdfbaef6d3d277ccb8ca5d2ca8fb62e97a6beb6d61dd1c05a2bfe"
+      }
+    }
+  }
+}

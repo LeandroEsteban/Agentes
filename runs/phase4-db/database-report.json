@@ -1,0 +1,72 @@
+﻿{
+    "gates":  [
+                  {
+                      "gate_id":  "GATE-DB-001",
+                      "name":  "Migrations",
+                      "passed":  true
+                  },
+                  {
+                      "gate_id":  "GATE-DB-002",
+                      "name":  "Alcance (40 tablas funcionales)",
+                      "passed":  true
+                  },
+                  {
+                      "gate_id":  "GATE-DB-003",
+                      "name":  "Integridad (FK, UNIQUE, CHECK, indices)",
+                      "passed":  true
+                  },
+                  {
+                      "gate_id":  "GATE-DB-004",
+                      "name":  "Seeds reproducibles",
+                      "passed":  true
+                  },
+                  {
+                      "gate_id":  "GATE-DB-005",
+                      "name":  "Persistencia PostgreSQL",
+                      "passed":  true
+                  },
+                  {
+                      "gate_id":  "GATE-DB-006",
+                      "name":  "Trazabilidad DB",
+                      "passed":  true
+                  },
+                  {
+                      "gate_id":  "GATE-DB-007",
+                      "name":  "QA Docker Compose",
+                      "passed":  true
+                  },
+                  {
+                      "gate_id":  "GATE-DB-008",
+                      "name":  "Baseline preservado",
+                      "passed":  true
+                  }
+              ],
+    "docker_host":  true,
+    "primary_keys":  41,
+    "database":  "postgresql",
+    "persistence_mode":  "postgres",
+    "health":  "healthy",
+    "baseline_preserved":  true,
+    "technical_tables":  1,
+    "postgresql_running":  true,
+    "migrations":  {
+                       "defined":  13,
+                       "pending":  0,
+                       "applied":  13
+                   },
+    "check_constraints":  362,
+    "foreign_keys":  80,
+    "functional_tables":  40,
+    "seeds":  {
+                  "applied":  4,
+                  "defined":  4
+              },
+    "indexes":  175,
+    "unique_constraints":  20,
+    "tests":  {
+                  "passed":  63,
+                  "failed":  0
+              },
+    "schema_version":  "webforge.database_report.v1",
+    "status":  "pass"
+}

@@ -1,0 +1,234 @@
+[
+  {
+    "agent_id": "agent.intake",
+    "evidence_ids": [
+      "EV-SRC-001"
+    ],
+    "gates": [
+      {
+        "evidence": [
+          "work_order.json"
+        ],
+        "message": "schema pass",
+        "name": "schema",
+        "phase": "intake",
+        "principles": [
+          "P01",
+          "P08"
+        ],
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "billing-ledger.json"
+        ],
+        "message": "local budget initialized",
+        "name": "budget",
+        "phase": "intake",
+        "principles": [
+          "P01",
+          "P12"
+        ],
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "project-isolation-policy.md",
+          "project-manifest.json",
+          "project-sandboxes.json"
+        ],
+        "message": "project root, DEV sandbox and QA sandbox are isolated",
+        "name": "project_isolation",
+        "phase": "intake",
+        "principles": [
+          "P03",
+          "P05",
+          "P08",
+          "P12"
+        ],
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "frontend-template-policy.md",
+          "frontend-template-manifest.json"
+        ],
+        "message": "PLANTILLA_FRONTEND is mandatory and present",
+        "name": "frontend_template",
+        "phase": "intake",
+        "principles": [
+          "P02",
+          "P05",
+          "P08",
+          "P12"
+        ],
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "factory-skill-manifest.json",
+          "factory-tool-manifest.json"
+        ],
+        "message": "Codex skill and tool catalog are present",
+        "name": "factory_skills",
+        "phase": "intake",
+        "principles": [
+          "P05",
+          "P06",
+          "P08"
+        ],
+        "status": "pass"
+      }
+    ],
+    "outputs": {
+      "work_order.json": "Work order normalized."
+    },
+    "phase": "intake",
+    "status": "pass"
+  },
+  {
+    "agent_id": "agent.constitution",
+    "evidence_ids": [
+      "EV-SRC-001"
+    ],
+    "gates": [
+      {
+        "evidence": [
+          "constitution.md"
+        ],
+        "message": "12P complete",
+        "name": "constitution",
+        "phase": "constitution",
+        "principles": [
+          "P05",
+          "P08",
+          "P10"
+        ],
+        "status": "pass"
+      }
+    ],
+    "outputs": {
+      "constitution.md": "P01-P12 instantiated."
+    },
+    "phase": "constitution",
+    "status": "pass"
+  },
+  {
+    "agent_id": "agent.spec_parser",
+    "evidence_ids": [
+      "EV-SRC-001"
+    ],
+    "gates": [
+      {
+        "evidence": [
+          "spec.md"
+        ],
+        "message": "spec is testable",
+        "name": "spec",
+        "phase": "specify",
+        "principles": [
+          "P02",
+          "P08"
+        ],
+        "status": "pass"
+      }
+    ],
+    "outputs": {
+      "spec.md": "Spec generated."
+    },
+    "phase": "specify",
+    "status": "pass"
+  },
+  {
+    "agent_id": "agent.clarifier",
+    "evidence_ids": [
+      "EV-SRC-001"
+    ],
+    "gates": [
+      {
+        "evidence": [
+          "clarifications.md"
+        ],
+        "message": "no critical open questions",
+        "name": "clarification",
+        "phase": "clarify",
+        "principles": [
+          "P02",
+          "P08"
+        ],
+        "status": "pass"
+      }
+    ],
+    "outputs": {
+      "clarifications.md": "Critical runtime decisions closed."
+    },
+    "phase": "clarify",
+    "status": "pass"
+  },
+  {
+    "agent_id": "agent.requirements_qa",
+    "evidence_ids": [
+      "EV-SRC-001"
+    ],
+    "gates": [
+      {
+        "evidence": [
+          "checklist.md"
+        ],
+        "message": "critical checks pass",
+        "name": "checklist",
+        "phase": "checklist",
+        "principles": [
+          "P08"
+        ],
+        "status": "pass"
+      }
+    ],
+    "outputs": {
+      "checklist.md": "Critical checklist passed."
+    },
+    "phase": "checklist",
+    "status": "pass"
+  },
+  {
+    "agent_id": "agent.context_rag",
+    "evidence_ids": [
+      "EV-SRC-001"
+    ],
+    "gates": [
+      {
+        "evidence": [
+          "context-pack.json"
+        ],
+        "message": "authorized context available",
+        "name": "context",
+        "phase": "context",
+        "principles": [
+          "P03",
+          "P04",
+          "P08"
+        ],
+        "status": "fail"
+      },
+      {
+        "evidence": [
+          "evidence-register.md"
+        ],
+        "message": "evidence registry present",
+        "name": "evidence",
+        "phase": "context",
+        "principles": [
+          "P02",
+          "P04"
+        ],
+        "status": "pass"
+      }
+    ],
+    "outputs": {
+      "context-pack.json": "Minimal context pack generated.",
+      "rag-index-manifest.json": "RAG cache manifest generated."
+    },
+    "phase": "context",
+    "status": "error"
+  }
+]

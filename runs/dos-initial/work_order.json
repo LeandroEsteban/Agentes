@@ -1,0 +1,27 @@
+{
+  "acceptance_criteria": [
+    "El proyecto vive bajo project/proyecto-dos con memoria aislada, versiones y sandboxes DEV/QA independientes.",
+    "La version v0001 mantiene vinculacion obligatoria con PLANTILLA_FRONTEND.",
+    "La app ERP web cubre las 40 pantallas P-01 a P-40 descritas en la especificacion.",
+    "La implementacion expone y valida el catalogo de 130 endpoints REST declarados para /api/v1.",
+    "La trazabilidad cubre casos de uso, pantallas, reglas de negocio, validaciones, endpoints, permisos, estados, RNF y criterios de aceptacion por modulo.",
+    "Los scripts locales verifican cobertura estatica, navegacion web, acciones criticas y ausencia de errores de consola.",
+    "DEV y QA contienen clones autonomos de la version validada y evidencias propias."
+  ],
+  "approvals": {},
+  "authorized_sources": [
+    "projects/dos/especificacion_cinco.md"
+  ],
+  "budget": {
+    "cost_usd": 0,
+    "mcp_calls": 0,
+    "tool_calls": 200
+  },
+  "metadata": {},
+  "objective": "Desarrollar PROYECTO_DOS como ERP web pequeno completo, local y verificable desde projects/dos/especificacion_cinco.md.",
+  "project_id": "proyecto-dos",
+  "project_version": "v0001",
+  "scope": "local_artifacts_only",
+  "side_effects": "no_external_writes_no_deploy",
+  "type": "erp_web_small"
+}

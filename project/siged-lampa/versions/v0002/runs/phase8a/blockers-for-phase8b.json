@@ -1,0 +1,35 @@
+{
+  "phase": "8A",
+  "blockers_for_8B": [
+    {
+      "id": "8B-001",
+      "category": "monitoring",
+      "description": "Notificaciones post-deployment (Slack/email) no configuradas en el workflow de GitHub Actions",
+      "priority": "medium"
+    },
+    {
+      "id": "8B-002",
+      "category": "infrastructure",
+      "description": "Análisis de costos EC2 y estimación mensual de infraestructura pendiente",
+      "priority": "low"
+    },
+    {
+      "id": "8B-003",
+      "category": "monitoring",
+      "description": "Monitoreo básico (CloudWatch o similar) no configurado para los servicios Docker",
+      "priority": "medium"
+    },
+    {
+      "id": "8B-004",
+      "category": "testing",
+      "description": "E2E completo (19 casos) no ejecutado en entorno production-like antes de promoción a producción real",
+      "priority": "high"
+    },
+    {
+      "id": "8B-005",
+      "category": "operations",
+      "description": "Política de respaldo automatizado (cron pg_dump) no implementada",
+      "priority": "medium"
+    }
+  ]
+}

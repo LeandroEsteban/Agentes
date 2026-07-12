@@ -1,0 +1,27 @@
+{
+  "project_id": "proyecto-uno",
+  "version": "v0002",
+  "status": "pass",
+  "url": "http://127.0.0.1:65534",
+  "validated_requirements": 159,
+  "validated_flows": 26,
+  "screenshots": [
+    "evidence/screenshots/01-public.png",
+    "evidence/screenshots/02-final-mobile-public.png"
+  ],
+  "console_errors": [],
+  "flow_checks": [
+    "portal_publico",
+    "login_ddu_cancel",
+    "ddu_gateway_cancel_and_complete",
+    "notificaciones_casillaunica",
+    "cambio_contacto_validacion",
+    "segundo_factor_login",
+    "multisesion_anomala",
+    "autorizaciones_aprobar_rechazar_revocar",
+    "expedientes_poderes",
+    "instituciones_integracion",
+    "calidad_accesibilidad",
+    "responsive_mobile"
+  ]
+}

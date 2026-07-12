@@ -1,0 +1,188 @@
+[
+  {
+    "flow_id": "E2E-03",
+    "screens": [
+      "documents",
+      "versions",
+      "attachments",
+      "history"
+    ],
+    "operations": [
+      "create document",
+      "create version",
+      "base64 attachment",
+      "timeline"
+    ],
+    "actors": [],
+    "fixtures": [
+      "QA PostgreSQL"
+    ],
+    "database_assertions": [],
+    "negative_cases": [],
+    "executed": true,
+    "passed": false,
+    "attempts": 1,
+    "defects": [
+      "QA-DEF-E2E-001"
+    ]
+  },
+  {
+    "flow_id": "E2E-04",
+    "screens": [
+      "reviews",
+      "approvals"
+    ],
+    "operations": [
+      "reply review",
+      "approval decision"
+    ],
+    "actors": [],
+    "fixtures": [
+      "QA PostgreSQL"
+    ],
+    "database_assertions": [],
+    "negative_cases": [],
+    "executed": true,
+    "passed": false,
+    "attempts": 1,
+    "defects": [
+      "QA-DEF-E2E-001"
+    ]
+  },
+  {
+    "flow_id": "E2E-05",
+    "screens": [
+      "signature"
+    ],
+    "operations": [
+      "sign approved document"
+    ],
+    "actors": [],
+    "fixtures": [
+      "QA PostgreSQL"
+    ],
+    "database_assertions": [],
+    "negative_cases": [],
+    "executed": true,
+    "passed": false,
+    "attempts": 1,
+    "defects": [
+      "QA-DEF-E2E-001"
+    ]
+  },
+  {
+    "flow_id": "E2E-06",
+    "screens": [
+      "expedients"
+    ],
+    "operations": [
+      "create",
+      "associate document",
+      "close"
+    ],
+    "actors": [],
+    "fixtures": [
+      "QA PostgreSQL"
+    ],
+    "database_assertions": [],
+    "negative_cases": [],
+    "executed": true,
+    "passed": false,
+    "attempts": 1,
+    "defects": [
+      "QA-DEF-E2E-001"
+    ]
+  },
+  {
+    "flow_id": "E2E-07",
+    "screens": [
+      "correspondence"
+    ],
+    "operations": [
+      "create",
+      "route",
+      "history"
+    ],
+    "actors": [],
+    "fixtures": [
+      "QA PostgreSQL"
+    ],
+    "database_assertions": [],
+    "negative_cases": [],
+    "executed": true,
+    "passed": false,
+    "attempts": 1,
+    "defects": [
+      "QA-DEF-E2E-001"
+    ]
+  },
+  {
+    "flow_id": "E2E-08",
+    "screens": [
+      "procedure-types",
+      "external-entities"
+    ],
+    "operations": [
+      "create",
+      "edit"
+    ],
+    "actors": [],
+    "fixtures": [
+      "QA PostgreSQL"
+    ],
+    "database_assertions": [],
+    "negative_cases": [],
+    "executed": true,
+    "passed": false,
+    "attempts": 1,
+    "defects": [
+      "QA-DEF-E2E-001"
+    ]
+  },
+  {
+    "flow_id": "E2E-09",
+    "screens": [
+      "public content"
+    ],
+    "operations": [
+      "draft",
+      "publish",
+      "unpublish"
+    ],
+    "actors": [],
+    "fixtures": [
+      "QA PostgreSQL"
+    ],
+    "database_assertions": [],
+    "negative_cases": [],
+    "executed": true,
+    "passed": false,
+    "attempts": 1,
+    "defects": [
+      "QA-DEF-E2E-001"
+    ]
+  },
+  {
+    "flow_id": "E2E-10",
+    "screens": [
+      "guards"
+    ],
+    "operations": [
+      "actor guard",
+      "permission guard",
+      "expired session"
+    ],
+    "actors": [],
+    "fixtures": [
+      "QA PostgreSQL"
+    ],
+    "database_assertions": [],
+    "negative_cases": [],
+    "executed": true,
+    "passed": false,
+    "attempts": 1,
+    "defects": [
+      "QA-DEF-E2E-001"
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+{"status":"blocked","implemented":["RequireAuth","RequireActor","RequirePermission"],"tested":false,"reason":"Faltan pruebas dirigidas de sesion ausente, expirada, actor incorrecto y permiso ausente."}

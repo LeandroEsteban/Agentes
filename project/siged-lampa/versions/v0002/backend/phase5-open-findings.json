@@ -1,0 +1,11 @@
+[
+  {
+    "finding_id": "F5-COVERAGE-001",
+    "category": "coverage",
+    "description": "Lines/statements coverage is below the 85% target.",
+    "severity": "medium",
+    "status": "open",
+    "resolution_phase": "7",
+    "blocks_phase5_acceptance": false
+  }
+]

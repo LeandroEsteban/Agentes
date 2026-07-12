@@ -1,0 +1,350 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\project\\siged-lampa\\versions\\v0002\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--grep",
+      "@E2E-0[1-5]"
+    ],
+    "configFile": "C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\project\\siged-lampa\\versions\\v0002\\frontend\\playwright.config.ts",
+    "rootDir": "C:/Users/lmata/Documents/Universidad/Agentes/Nueva Fabrica Software Web/project/siged-lampa/versions/v0002/frontend/src/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/lmata/Documents/Universidad/Agentes/Nueva Fabrica Software Web/project/siged-lampa/versions/v0002/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/lmata/Documents/Universidad/Agentes/Nueva Fabrica Software Web/project/siged-lampa/versions/v0002/frontend/src/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "../../runs/phase7ar1/e2e-html-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../../runs/phase7ar1/e2e-raw-report.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "flows\\e2e-01-citizen-request.spec.ts",
+      "file": "flows/e2e-01-citizen-request.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@E2E-01: ciudadano y solicitud",
+          "file": "flows/e2e-01-citizen-request.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "login ciudadano, listar tramites, abrir detalle, crear solicitud, consultar, verificar notificacion, logout",
+              "ok": true,
+              "tags": [
+                "E2E-01:"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1124,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-12T04:07:29.592Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bb0ccf6cb598da0f431a-b742340243bdf41ca2fd",
+              "file": "flows/e2e-01-citizen-request.spec.ts",
+              "line": 4,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows\\e2e-02-oirs-anonymous.spec.ts",
+      "file": "flows/e2e-02-oirs-anonymous.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@E2E-02: OIRS anonima",
+          "file": "flows/e2e-02-oirs-anonymous.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "crear OIRS anonima, consultar tracking y agregar mensaje",
+              "ok": true,
+              "tags": [
+                "E2E-02:"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 741,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-12T04:07:30.835Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "16464c8e4b23adb2af06-4fbe4a1129e14710fe82",
+              "file": "flows/e2e-02-oirs-anonymous.spec.ts",
+              "line": 4,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows\\e2e-03-document-version-attachment.spec.ts",
+      "file": "flows/e2e-03-document-version-attachment.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@E2E-03 documento, version y anexo",
+          "file": "flows/e2e-03-document-version-attachment.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "crea documento, version y anexo mediante UI real",
+              "ok": true,
+              "tags": [
+                "E2E-03"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1628,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-12T04:07:31.603Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6ed0e636fa8984ada290-cf221acade203182d469",
+              "file": "flows/e2e-03-document-version-attachment.spec.ts",
+              "line": 7,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows\\e2e-04-review-approval.spec.ts",
+      "file": "flows/e2e-04-review-approval.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@E2E-04 revision y aprobacion",
+          "file": "flows/e2e-04-review-approval.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "responde revision asignada y aprueba solicitud pendiente",
+              "ok": true,
+              "tags": [
+                "E2E-04"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2231,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-12T04:07:33.263Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5652ff1fad774b8fc125-76558a551d84b91f5820",
+              "file": "flows/e2e-04-review-approval.spec.ts",
+              "line": 6,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows\\e2e-05-signature.spec.ts",
+      "file": "flows/e2e-05-signature.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@E2E-05 firma academica simulada",
+          "file": "flows/e2e-05-signature.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "firma un documento aprobado con perfil academico real",
+              "ok": true,
+              "tags": [
+                "E2E-05"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1603,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-12T04:07:35.524Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "32e88658c7ef488add8f-ece4daa3aa6fba9176f7",
+              "file": "flows/e2e-05-signature.spec.ts",
+              "line": 6,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-12T04:07:28.985Z",
+    "duration": 8257.427,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

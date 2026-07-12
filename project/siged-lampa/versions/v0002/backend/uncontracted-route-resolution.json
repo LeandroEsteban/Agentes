@@ -1,0 +1,1596 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/calendar",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/calendar",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/calendar/{id}",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/news",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/news",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/news/{id}",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/notices",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/notices",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/notices/{id}",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/approvals/{id}/decision",
+    "module": "document-approvals",
+    "router": "modules/document-approvals/router.js",
+    "controller": "modules/document-approvals/controller.js",
+    "service": "modules/document-approvals/service.js",
+    "repository": "modules/document-approvals/repository.js",
+    "related_use_cases": [
+      "UC-13",
+      "UC-14"
+    ],
+    "related_workflows": [
+      "FF-13",
+      "FF-14"
+    ],
+    "related_screens": [
+      "P-13",
+      "P-14"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-017",
+    "tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js",
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/auth/internal-login",
+    "module": "auth",
+    "router": "modules/auth/router.js",
+    "controller": "modules/auth/controller.js",
+    "service": "modules/auth/service.js",
+    "repository": "modules/auth/repository.js",
+    "related_use_cases": [
+      "UC-01",
+      "UC-02",
+      "UC-03"
+    ],
+    "related_workflows": [
+      "FF-01",
+      "FF-02",
+      "FF-03"
+    ],
+    "related_screens": [
+      "P-01",
+      "P-02",
+      "P-03"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-023",
+    "tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js",
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/auth/logout",
+    "module": "auth",
+    "router": "modules/auth/router.js",
+    "controller": "modules/auth/controller.js",
+    "service": "modules/auth/service.js",
+    "repository": "modules/auth/repository.js",
+    "related_use_cases": [
+      "UC-01",
+      "UC-02",
+      "UC-03"
+    ],
+    "related_workflows": [
+      "FF-01",
+      "FF-02",
+      "FF-03"
+    ],
+    "related_screens": [
+      "P-01",
+      "P-02",
+      "P-03"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-023",
+    "tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js",
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/citizen/oirs/{id}",
+    "module": "oirs",
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "related_use_cases": [
+      "UC-25",
+      "UC-26"
+    ],
+    "related_workflows": [
+      "FF-25",
+      "FF-26"
+    ],
+    "related_screens": [
+      "P-25",
+      "P-26"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-019",
+    "tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js",
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/citizen/oirs/{id}/history",
+    "module": "oirs",
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "related_use_cases": [
+      "UC-25",
+      "UC-26"
+    ],
+    "related_workflows": [
+      "FF-25",
+      "FF-26"
+    ],
+    "related_screens": [
+      "P-25",
+      "P-26"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-019",
+    "tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js",
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/citizen/oirs/{id}/messages",
+    "module": "oirs",
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "related_use_cases": [
+      "UC-25",
+      "UC-26"
+    ],
+    "related_workflows": [
+      "FF-25",
+      "FF-26"
+    ],
+    "related_screens": [
+      "P-25",
+      "P-26"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-019",
+    "tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js",
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/citizen/requests/{id}/cancel",
+    "module": "citizen-requests",
+    "router": "modules/citizen-requests/router.js",
+    "controller": "modules/citizen-requests/controller.js",
+    "service": "modules/citizen-requests/service.js",
+    "repository": "modules/citizen-requests/repository.js",
+    "related_use_cases": [
+      "UC-23",
+      "UC-24"
+    ],
+    "related_workflows": [
+      "FF-23",
+      "FF-24"
+    ],
+    "related_screens": [
+      "P-23",
+      "P-24"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-019",
+    "tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js",
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/citizen/requests/{id}/history",
+    "module": "citizen-requests",
+    "router": "modules/citizen-requests/router.js",
+    "controller": "modules/citizen-requests/controller.js",
+    "service": "modules/citizen-requests/service.js",
+    "repository": "modules/citizen-requests/repository.js",
+    "related_use_cases": [
+      "UC-23",
+      "UC-24"
+    ],
+    "related_workflows": [
+      "FF-23",
+      "FF-24"
+    ],
+    "related_screens": [
+      "P-23",
+      "P-24"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-019",
+    "tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js",
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}",
+    "module": "correspondence",
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "related_use_cases": [
+      "UC-19",
+      "UC-20"
+    ],
+    "related_workflows": [
+      "FF-19",
+      "FF-20"
+    ],
+    "related_screens": [
+      "P-19",
+      "P-20"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-018",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/correspondence/{id}",
+    "module": "correspondence",
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "related_use_cases": [
+      "UC-19",
+      "UC-20"
+    ],
+    "related_workflows": [
+      "FF-19",
+      "FF-20"
+    ],
+    "related_screens": [
+      "P-19",
+      "P-20"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-018",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/correspondence/{id}/close",
+    "module": "correspondence",
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "related_use_cases": [
+      "UC-19",
+      "UC-20"
+    ],
+    "related_workflows": [
+      "FF-19",
+      "FF-20"
+    ],
+    "related_screens": [
+      "P-19",
+      "P-20"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-018",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}/details",
+    "module": "correspondence",
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "related_use_cases": [
+      "UC-19",
+      "UC-20"
+    ],
+    "related_workflows": [
+      "FF-19",
+      "FF-20"
+    ],
+    "related_screens": [
+      "P-19",
+      "P-20"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-018",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}/history",
+    "module": "correspondence",
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "related_use_cases": [
+      "UC-19",
+      "UC-20"
+    ],
+    "related_workflows": [
+      "FF-19",
+      "FF-20"
+    ],
+    "related_screens": [
+      "P-19",
+      "P-20"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-018",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/approvals",
+    "module": "document-approvals",
+    "router": "modules/document-approvals/router.js",
+    "controller": "modules/document-approvals/controller.js",
+    "service": "modules/document-approvals/service.js",
+    "repository": "modules/document-approvals/repository.js",
+    "related_use_cases": [
+      "UC-13",
+      "UC-14"
+    ],
+    "related_workflows": [
+      "FF-13",
+      "FF-14"
+    ],
+    "related_screens": [
+      "P-13",
+      "P-14"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-017",
+    "tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js",
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/attachments/{attachmentId}/download",
+    "module": "documents",
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "related_use_cases": [
+      "UC-09",
+      "UC-10",
+      "UC-11",
+      "UC-12"
+    ],
+    "related_workflows": [
+      "FF-09",
+      "FF-10",
+      "FF-11",
+      "FF-12"
+    ],
+    "related_screens": [
+      "P-09",
+      "P-10",
+      "P-11",
+      "P-12"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-017",
+    "tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js",
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/comments",
+    "module": "documents",
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "related_use_cases": [
+      "UC-09",
+      "UC-10",
+      "UC-11",
+      "UC-12"
+    ],
+    "related_workflows": [
+      "FF-09",
+      "FF-10",
+      "FF-11",
+      "FF-12"
+    ],
+    "related_screens": [
+      "P-09",
+      "P-10",
+      "P-11",
+      "P-12"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-017",
+    "tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js",
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/comments",
+    "module": "documents",
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "related_use_cases": [
+      "UC-09",
+      "UC-10",
+      "UC-11",
+      "UC-12"
+    ],
+    "related_workflows": [
+      "FF-09",
+      "FF-10",
+      "FF-11",
+      "FF-12"
+    ],
+    "related_screens": [
+      "P-09",
+      "P-10",
+      "P-11",
+      "P-12"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-017",
+    "tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js",
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/history",
+    "module": "documents",
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "related_use_cases": [
+      "UC-09",
+      "UC-10",
+      "UC-11",
+      "UC-12"
+    ],
+    "related_workflows": [
+      "FF-09",
+      "FF-10",
+      "FF-11",
+      "FF-12"
+    ],
+    "related_screens": [
+      "P-09",
+      "P-10",
+      "P-11",
+      "P-12"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-017",
+    "tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js",
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/reviews",
+    "module": "document-reviews",
+    "router": "modules/document-reviews/router.js",
+    "controller": "modules/document-reviews/controller.js",
+    "service": "modules/document-reviews/service.js",
+    "repository": "modules/document-reviews/repository.js",
+    "related_use_cases": [
+      "UC-13",
+      "UC-14"
+    ],
+    "related_workflows": [
+      "FF-13",
+      "FF-14"
+    ],
+    "related_screens": [
+      "P-13",
+      "P-14"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-017",
+    "tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js",
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/signatures",
+    "module": "document-signatures",
+    "router": "modules/document-signatures/router.js",
+    "controller": "modules/document-signatures/controller.js",
+    "service": "modules/document-signatures/service.js",
+    "repository": "modules/document-signatures/repository.js",
+    "related_use_cases": [
+      "UC-13",
+      "UC-14"
+    ],
+    "related_workflows": [
+      "FF-13",
+      "FF-14"
+    ],
+    "related_screens": [
+      "P-13",
+      "P-14"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-017",
+    "tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js",
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/expedients/{id}",
+    "module": "expedients",
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "related_use_cases": [
+      "UC-17",
+      "UC-18"
+    ],
+    "related_workflows": [
+      "FF-17",
+      "FF-18"
+    ],
+    "related_screens": [
+      "P-17",
+      "P-18"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-018",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/close",
+    "module": "expedients",
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "related_use_cases": [
+      "UC-17",
+      "UC-18"
+    ],
+    "related_workflows": [
+      "FF-17",
+      "FF-18"
+    ],
+    "related_screens": [
+      "P-17",
+      "P-18"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-018",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/details",
+    "module": "expedients",
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "related_use_cases": [
+      "UC-17",
+      "UC-18"
+    ],
+    "related_workflows": [
+      "FF-17",
+      "FF-18"
+    ],
+    "related_screens": [
+      "P-17",
+      "P-18"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-018",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/events",
+    "module": "expedients",
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "related_use_cases": [
+      "UC-17",
+      "UC-18"
+    ],
+    "related_workflows": [
+      "FF-17",
+      "FF-18"
+    ],
+    "related_screens": [
+      "P-17",
+      "P-18"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-018",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/events",
+    "module": "expedients",
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "related_use_cases": [
+      "UC-17",
+      "UC-18"
+    ],
+    "related_workflows": [
+      "FF-17",
+      "FF-18"
+    ],
+    "related_screens": [
+      "P-17",
+      "P-18"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-018",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/history",
+    "module": "expedients",
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "related_use_cases": [
+      "UC-17",
+      "UC-18"
+    ],
+    "related_workflows": [
+      "FF-17",
+      "FF-18"
+    ],
+    "related_screens": [
+      "P-17",
+      "P-18"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-018",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/notifications/{id}/read",
+    "module": "notifications",
+    "router": "modules/notifications/router.js",
+    "controller": "modules/notifications/controller.js",
+    "service": "modules/notifications/service.js",
+    "repository": "modules/notifications/repository.js",
+    "related_use_cases": [
+      "UC-29",
+      "UC-30"
+    ],
+    "related_workflows": [
+      "FF-29",
+      "FF-30"
+    ],
+    "related_screens": [
+      "P-29",
+      "P-30"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-023",
+    "tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js",
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/oirs",
+    "module": "oirs",
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "related_use_cases": [
+      "UC-25",
+      "UC-26"
+    ],
+    "related_workflows": [
+      "FF-25",
+      "FF-26"
+    ],
+    "related_screens": [
+      "P-25",
+      "P-26"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-019",
+    "tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js",
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/oirs/{id}/route",
+    "module": "oirs",
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "related_use_cases": [
+      "UC-25",
+      "UC-26"
+    ],
+    "related_workflows": [
+      "FF-25",
+      "FF-26"
+    ],
+    "related_screens": [
+      "P-25",
+      "P-26"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-019",
+    "tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js",
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/oirs/{id}/status",
+    "module": "oirs",
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "related_use_cases": [
+      "UC-25",
+      "UC-26"
+    ],
+    "related_workflows": [
+      "FF-25",
+      "FF-26"
+    ],
+    "related_screens": [
+      "P-25",
+      "P-26"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-019",
+    "tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js",
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/calendar",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/news",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/news/{slug}",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/notices",
+    "module": "public-content",
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "related_use_cases": [
+      "UC-27",
+      "UC-28"
+    ],
+    "related_workflows": [
+      "FF-27",
+      "FF-28"
+    ],
+    "related_screens": [
+      "P-27",
+      "P-28"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-021",
+    "tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js",
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/oirs/{id}/history",
+    "module": "oirs",
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "related_use_cases": [
+      "UC-25",
+      "UC-26"
+    ],
+    "related_workflows": [
+      "FF-25",
+      "FF-26"
+    ],
+    "related_screens": [
+      "P-25",
+      "P-26"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-019",
+    "tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js",
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/public/oirs/{id}/messages",
+    "module": "oirs",
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "related_use_cases": [
+      "UC-25",
+      "UC-26"
+    ],
+    "related_workflows": [
+      "FF-25",
+      "FF-26"
+    ],
+    "related_screens": [
+      "P-25",
+      "P-26"
+    ],
+    "related_tasks": [
+      "TASK-BACKEND-CONTRACT-R2"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-019",
+    "tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js",
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/public/tramites/{id}",
+    "module": "procedures",
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "related_use_cases": [
+      "UC-07",
+      "UC-08"
+    ],
+    "related_workflows": [
+      "FF-07",
+      "FF-08"
+    ],
+    "related_screens": [
+      "P-07",
+      "P-08"
+    ],
+    "related_tasks": [
+      "TASK-API-ADMIN-001"
+    ],
+    "duplicates_endpoint": "",
+    "classification_decision": "accept_supplemental",
+    "contract_source": "normalized workflow plus implementation and regression evidence",
+    "decision_reference": "ADR-020",
+    "tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js",
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "reason": "The route is an implemented lifecycle/read/action operation required by the domain workflow; it is not a duplicate, helper, diagnostic, or test-only route.",
+    "status": "resolved"
+  }
+]

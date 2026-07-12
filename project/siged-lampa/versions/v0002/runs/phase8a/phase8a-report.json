@@ -1,0 +1,67 @@
+{
+  "phase": "8A",
+  "title": "Deployment Readiness — GitHub Actions to EC2",
+  "status": "PASS_WITH_LIMITATIONS",
+  "timestamp": "2026-07-12T18:00:00Z",
+  "deliverables": {
+    "workflow": ".github/workflows/deploy-ec2.yml",
+    "backend_dockerfile": "backend/Dockerfile",
+    "backend_dockerignore": "backend/.dockerignore",
+    "frontend_dockerfile": "frontend/Dockerfile",
+    "frontend_dockerignore": "frontend/.dockerignore",
+    "nginx_config": "frontend/nginx.conf",
+    "compose": "infra/deployment/docker-compose.production.yml",
+    "env_example": "infra/deployment/.env.production.example",
+    "deployment_scripts": [
+      "infra/deployment/scripts/validate-environment.sh",
+      "infra/deployment/scripts/deploy-release.sh",
+      "infra/deployment/scripts/run-migrations.sh",
+      "infra/deployment/scripts/health-check.sh",
+      "infra/deployment/scripts/smoke-test.sh",
+      "infra/deployment/scripts/rollback.sh",
+      "infra/deployment/scripts/cleanup-releases.sh"
+    ],
+    "documentation": [
+      "docs/DEPLOYMENT_GITHUB_ACTIONS.md",
+      "docs/GITHUB_SECRETS.md",
+      "docs/EC2_INITIAL_SETUP.md",
+      "docs/ROLLBACK.md",
+      "docs/RUNBOOK_OPERACIONAL.md"
+    ],
+    "reports": [
+      "runs/phase8a/initial-deployment-audit.json",
+      "runs/phase8a/workflow-validation.json",
+      "runs/phase8a/docker-build-report.json",
+      "runs/phase8a/compose-validation.json",
+      "runs/phase8a/environment-variable-report.json",
+      "runs/phase8a/secret-scan-report.json",
+      "runs/phase8a/migration-readiness.json",
+      "runs/phase8a/health-smoke-readiness.json",
+      "runs/phase8a/rollback-readiness.json",
+      "runs/phase8a/documentation-report.json",
+      "runs/phase8a/deployment-traceability.json",
+      "runs/phase8a/final-gates.json",
+      "runs/phase8a/phase8a-acceptance-decision.json",
+      "runs/phase8a/blockers-for-phase8b.json",
+      "runs/phase8a/tool-ledger.jsonl",
+      "runs/phase8a/change-ledger.jsonl",
+      "runs/phase8a/phase8a-report.json",
+      "runs/phase8a/phase8a-summary.md"
+    ]
+  },
+  "validation": {
+    "compose_config": "PASS",
+    "backend_build": "PASS",
+    "frontend_build": "PASS",
+    "secret_scan": "PASS",
+    "env_var_audit": "COMPLETE — 16 backend vars + 2 frontend vars, no invented vars"
+  },
+  "gates": {"pass": 11, "pass_with_limitation": 1, "blocked": 0},
+  "limitations": [
+    "GitHub Actions workflow not yet executed (requires git push)",
+    "EC2 not yet validated with this release",
+    "E2E tests excluded from deployment pipeline (documented)",
+    "WebForge CLI not available for load testing (carried from Phase 7A)"
+  ],
+  "next_action": "push_repository_and_execute_workflow"
+}

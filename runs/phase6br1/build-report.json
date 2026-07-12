@@ -1,0 +1,7 @@
+{
+  "lint": "pass",
+  "typescript": "pass",
+  "vite_build": "pass",
+  "unit_tests": { "passed": 26, "failed": 0, "files": 2 },
+  "e2e": { "configured": true, "runner": "playwright", "scripts": ["test:e2e", "test:e2e:headed", "test:e2e:report"] }
+}

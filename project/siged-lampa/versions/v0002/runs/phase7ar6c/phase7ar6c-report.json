@@ -1,0 +1,60 @@
+﻿{
+    "gates":  {
+                  "pass":  10,
+                  "pass_with_limitation":  2,
+                  "blocked":  0
+              },
+    "critical_blockers":  [
+
+                          ],
+    "phase7a_status":  "pass_with_limitations",
+    "schema_version":  "webforge.phase7ar6c_report.v1",
+    "coverage":  {
+                     "frontend":  {
+                                      "functions":  66,
+                                      "lines":  87.72,
+                                      "branches":  76.37,
+                                      "statements":  87.72
+                                  },
+                     "backend":  {
+                                     "functions":  85.81,
+                                     "lines":  80.84,
+                                     "branches":  83.39,
+                                     "statements":  80.84
+                                 }
+                 },
+    "environment":  {
+                        "postgresql":  "pass",
+                        "backend":  "pass",
+                        "frontend":  "pass"
+                    },
+    "contract":  {
+                     "catalog":  98,
+                     "openapi":  98,
+                     "mismatches":  0,
+                     "routers":  98
+                 },
+    "status":  "pass_with_limitations",
+    "phase7_status":  "blocked",
+    "tests":  {
+                  "functional_test_cases_passed":  19,
+                  "functional_flows_planned":  10,
+                  "backend_failed":  0,
+                  "frontend_failed":  0,
+                  "backend_passed":  134,
+                  "frontend_passed":  166,
+                  "infrastructure_tests_passed":  3,
+                  "python_passed":  75,
+                  "functional_flows_passed":  10
+              },
+    "accepted_limitations":  [
+                                 "WebForge CLI no disponible en este entorno",
+                                 "Baseline historico no verificable",
+                                 "Backend legacy repositories/ al 0%"
+                             ],
+    "recommended_next_phase":  "7B",
+    "defects":  {
+                    "open_high":  0,
+                    "open_critical":  0
+                }
+}

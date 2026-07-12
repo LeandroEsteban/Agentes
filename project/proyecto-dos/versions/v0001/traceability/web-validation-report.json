@@ -1,0 +1,27 @@
+{
+  "project_id": "proyecto-dos",
+  "version": "v0001",
+  "status": "pass",
+  "url": "http://127.0.0.1:63784",
+  "validated_requirements": 585,
+  "validated_screens": 40,
+  "validated_endpoints": 130,
+  "screenshots": [
+    "evidence/screenshots/01-dashboard.png",
+    "evidence/screenshots/02-mobile-dashboard.png"
+  ],
+  "console_errors": [],
+  "flow_checks": [
+    "login",
+    "customers",
+    "products_inventory",
+    "sales_quote_dispatch_payment",
+    "returns",
+    "purchases",
+    "production",
+    "billing",
+    "reports_api",
+    "alerts",
+    "responsive_mobile"
+  ]
+}

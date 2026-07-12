@@ -1,0 +1,2 @@
+{"command":"test:e2e --grep @E2E-0[1-5]","result":"5 passed"}
+{"command":"npm test","result":"154 passed, 5 failed"}

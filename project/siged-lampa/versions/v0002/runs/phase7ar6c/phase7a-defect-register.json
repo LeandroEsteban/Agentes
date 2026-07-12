@@ -1,0 +1,63 @@
+﻿{
+    "summary":  {
+                    "accepted_limitations":  [
+                                                 "WebForge CLI not available in this environment",
+                                                 "Backend coverage on legacy repositories/ folder is 0% (files not used by current modules)",
+                                                 "Historical baseline for frontend coverage not available"
+                                             ],
+                    "resolved":  9,
+                    "open_low":  0,
+                    "detected":  9,
+                    "open_medium":  0,
+                    "open_critical":  0,
+                    "open_high":  0
+                },
+    "defects":  [
+                    {
+                        "status":  "resolved",
+                        "description":  "OIRS anonymous audit context",
+                        "id":  "QA-DEF-OIRS-001"
+                    },
+                    {
+                        "status":  "resolved",
+                        "description":  "Auth fixture login 500",
+                        "id":  "QA-DEF-AUTH-001"
+                    },
+                    {
+                        "status":  "resolved",
+                        "description":  "OIRS audit preservation",
+                        "id":  "QA-DEF-OIRS-AUDIT-001"
+                    },
+                    {
+                        "status":  "resolved",
+                        "description":  "Mock document endpoints replaced with real PostgreSQL",
+                        "id":  "QA-DEF-MOCKS-001"
+                    },
+                    {
+                        "status":  "resolved",
+                        "description":  "Expediente frontend-backend mismatches (close/events)",
+                        "id":  "QA-DEF-E2E-06"
+                    },
+                    {
+                        "status":  "resolved",
+                        "description":  "Correspondencia UI fields mismatch",
+                        "id":  "QA-DEF-E2E-07"
+                    },
+                    {
+                        "status":  "resolved",
+                        "description":  "Duplicate admin code 400-\u003e409",
+                        "id":  "QA-DEF-E2E-08"
+                    },
+                    {
+                        "status":  "resolved",
+                        "description":  "Publish/archive full body required",
+                        "id":  "QA-DEF-E2E-09"
+                    },
+                    {
+                        "status":  "resolved",
+                        "description":  "Public portal selector mismatch",
+                        "id":  "QA-DEF-E2E-10"
+                    }
+                ],
+    "schema":  "webforge.defect_register.v1"
+}

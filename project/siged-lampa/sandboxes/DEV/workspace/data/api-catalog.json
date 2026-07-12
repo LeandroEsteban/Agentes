@@ -1,0 +1,325 @@
+{
+  "endpoints": [
+    {
+      "auth": "publica",
+      "code": "API-001",
+      "method": "POST",
+      "module": "M01",
+      "path": "/api/v1/auth/login",
+      "resource": "sesion intranet"
+    },
+    {
+      "auth": "publica",
+      "code": "API-002",
+      "method": "POST",
+      "module": "M01",
+      "path": "/api/v1/auth/citizen-login",
+      "resource": "sesion ciudadana"
+    },
+    {
+      "auth": "publica",
+      "code": "API-003",
+      "method": "POST",
+      "module": "M01",
+      "path": "/api/v1/auth/recover",
+      "resource": "recuperacion"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-004",
+      "method": "GET",
+      "module": "M01",
+      "path": "/api/v1/profile/me",
+      "resource": "perfil"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-005",
+      "method": "PUT",
+      "module": "M01",
+      "path": "/api/v1/profile/me",
+      "resource": "perfil"
+    },
+    {
+      "auth": "intranet admin",
+      "code": "API-006",
+      "method": "GET",
+      "module": "M02",
+      "path": "/api/v1/users",
+      "resource": "usuarios"
+    },
+    {
+      "auth": "intranet admin",
+      "code": "API-007",
+      "method": "POST",
+      "module": "M02",
+      "path": "/api/v1/users",
+      "resource": "usuarios"
+    },
+    {
+      "auth": "intranet admin",
+      "code": "API-008",
+      "method": "PUT",
+      "module": "M02",
+      "path": "/api/v1/users/{id}",
+      "resource": "usuarios"
+    },
+    {
+      "auth": "intranet admin",
+      "code": "API-009",
+      "method": "GET",
+      "module": "M02",
+      "path": "/api/v1/roles",
+      "resource": "roles"
+    },
+    {
+      "auth": "intranet admin",
+      "code": "API-010",
+      "method": "PUT",
+      "module": "M02",
+      "path": "/api/v1/roles/{id}/permissions",
+      "resource": "permisos"
+    },
+    {
+      "auth": "intranet admin",
+      "code": "API-011",
+      "method": "GET",
+      "module": "M02",
+      "path": "/api/v1/departments",
+      "resource": "departamentos"
+    },
+    {
+      "auth": "intranet admin",
+      "code": "API-012",
+      "method": "POST",
+      "module": "M02",
+      "path": "/api/v1/departments",
+      "resource": "departamentos"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-013",
+      "method": "GET",
+      "module": "M02",
+      "path": "/api/v1/document-types",
+      "resource": "tipos documentales"
+    },
+    {
+      "auth": "intranet admin",
+      "code": "API-014",
+      "method": "POST",
+      "module": "M02",
+      "path": "/api/v1/document-types",
+      "resource": "tipos documentales"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-015",
+      "method": "GET",
+      "module": "M03",
+      "path": "/api/v1/documents",
+      "resource": "documentos"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-016",
+      "method": "POST",
+      "module": "M03",
+      "path": "/api/v1/documents",
+      "resource": "documentos"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-017",
+      "method": "GET",
+      "module": "M03",
+      "path": "/api/v1/documents/{id}",
+      "resource": "documentos"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-018",
+      "method": "PUT",
+      "module": "M03",
+      "path": "/api/v1/documents/{id}",
+      "resource": "documentos"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-019",
+      "method": "POST",
+      "module": "M03",
+      "path": "/api/v1/documents/{id}/attachments",
+      "resource": "anexos"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-020",
+      "method": "POST",
+      "module": "M03",
+      "path": "/api/v1/documents/{id}/versions",
+      "resource": "versiones"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-021",
+      "method": "POST",
+      "module": "M04",
+      "path": "/api/v1/documents/{id}/submit-review",
+      "resource": "revisiones"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-022",
+      "method": "POST",
+      "module": "M04",
+      "path": "/api/v1/reviews/{id}/reply",
+      "resource": "revisiones"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-023",
+      "method": "POST",
+      "module": "M04",
+      "path": "/api/v1/documents/{id}/approvals",
+      "resource": "aprobaciones"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-024",
+      "method": "POST",
+      "module": "M04",
+      "path": "/api/v1/documents/{id}/signatures",
+      "resource": "firmas"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-025",
+      "method": "GET",
+      "module": "M05",
+      "path": "/api/v1/expedients",
+      "resource": "expedientes"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-026",
+      "method": "POST",
+      "module": "M05",
+      "path": "/api/v1/expedients",
+      "resource": "expedientes"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-027",
+      "method": "GET",
+      "module": "M05",
+      "path": "/api/v1/expedients/{id}",
+      "resource": "expedientes"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-028",
+      "method": "POST",
+      "module": "M05",
+      "path": "/api/v1/expedients/{id}/documents",
+      "resource": "vinculos expediente"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-029",
+      "method": "GET",
+      "module": "M06",
+      "path": "/api/v1/correspondence",
+      "resource": "correspondencia"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-030",
+      "method": "POST",
+      "module": "M06",
+      "path": "/api/v1/correspondence",
+      "resource": "correspondencia"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-031",
+      "method": "POST",
+      "module": "M06",
+      "path": "/api/v1/correspondence/{id}/route",
+      "resource": "derivaciones"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-032",
+      "method": "POST",
+      "module": "M06",
+      "path": "/api/v1/correspondence/{id}/link-response",
+      "resource": "respuestas"
+    },
+    {
+      "auth": "publica",
+      "code": "API-033",
+      "method": "GET",
+      "module": "M07",
+      "path": "/api/v1/public/tramites",
+      "resource": "tramites"
+    },
+    {
+      "auth": "ciudadano",
+      "code": "API-034",
+      "method": "POST",
+      "module": "M07",
+      "path": "/api/v1/public/tramites/{id}/requests",
+      "resource": "solicitudes"
+    },
+    {
+      "auth": "ciudadano",
+      "code": "API-035",
+      "method": "GET",
+      "module": "M07",
+      "path": "/api/v1/citizen/requests",
+      "resource": "solicitudes"
+    },
+    {
+      "auth": "ciudadano",
+      "code": "API-036",
+      "method": "GET",
+      "module": "M07",
+      "path": "/api/v1/citizen/requests/{id}",
+      "resource": "solicitudes"
+    },
+    {
+      "auth": "publica o ciudadano",
+      "code": "API-037",
+      "method": "POST",
+      "module": "M08",
+      "path": "/api/v1/public/oirs",
+      "resource": "OIRS"
+    },
+    {
+      "auth": "intranet OIRS",
+      "code": "API-038",
+      "method": "POST",
+      "module": "M08",
+      "path": "/api/v1/oirs/{id}/reply",
+      "resource": "OIRS"
+    },
+    {
+      "auth": "intranet",
+      "code": "API-039",
+      "method": "GET",
+      "module": "M09",
+      "path": "/api/v1/reports/dashboard",
+      "resource": "reportes"
+    },
+    {
+      "auth": "intranet o ciudadano",
+      "code": "API-040",
+      "method": "GET",
+      "module": "M10",
+      "path": "/api/v1/notifications",
+      "resource": "notificaciones"
+    }
+  ],
+  "product": "SIGED-Lampa"
+}

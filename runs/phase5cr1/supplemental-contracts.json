@@ -1,0 +1,1626 @@
+[
+  {
+    "endpoint_code": "API-SUP-004",
+    "method": "GET",
+    "path": "/api/v1/admin/external-entities",
+    "name": "list",
+    "module": "external-entities",
+    "classification": "supplemental",
+    "source_decision": "ADR-003",
+    "business_justification": "Accepted administrative capability",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/external-entities/router.js",
+    "controller": "modules/external-entities/controller.js",
+    "service": "modules/external-entities/service.js",
+    "repository": "modules/external-entities/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "accepted",
+    "task_reference": "TASK-API-ADMIN-002"
+  },
+  {
+    "endpoint_code": "API-SUP-005",
+    "method": "POST",
+    "path": "/api/v1/admin/external-entities",
+    "name": "create",
+    "module": "external-entities",
+    "classification": "supplemental",
+    "source_decision": "ADR-003",
+    "business_justification": "Accepted administrative capability",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/external-entities/router.js",
+    "controller": "modules/external-entities/controller.js",
+    "service": "modules/external-entities/service.js",
+    "repository": "modules/external-entities/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "accepted",
+    "task_reference": "TASK-API-ADMIN-002"
+  },
+  {
+    "endpoint_code": "API-SUP-006",
+    "method": "PUT",
+    "path": "/api/v1/admin/external-entities/{id}",
+    "name": "update",
+    "module": "external-entities",
+    "classification": "supplemental",
+    "source_decision": "ADR-003",
+    "business_justification": "Accepted administrative capability",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/external-entities/router.js",
+    "controller": "modules/external-entities/controller.js",
+    "service": "modules/external-entities/service.js",
+    "repository": "modules/external-entities/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "accepted",
+    "task_reference": "TASK-API-ADMIN-002"
+  },
+  {
+    "endpoint_code": "API-SUP-001",
+    "method": "GET",
+    "path": "/api/v1/admin/procedure-types",
+    "name": "listProcedureTypes",
+    "module": "procedures",
+    "classification": "supplemental",
+    "source_decision": "ADR-002",
+    "business_justification": "Accepted administrative capability",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "tramites.edit"
+    ],
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "accepted",
+    "task_reference": "TASK-API-ADMIN-001"
+  },
+  {
+    "endpoint_code": "API-SUP-002",
+    "method": "POST",
+    "path": "/api/v1/admin/procedure-types",
+    "name": "createProcedureType",
+    "module": "procedures",
+    "classification": "supplemental",
+    "source_decision": "ADR-002",
+    "business_justification": "Accepted administrative capability",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "tramites.edit"
+    ],
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "accepted",
+    "task_reference": "TASK-API-ADMIN-001"
+  },
+  {
+    "endpoint_code": "API-SUP-003",
+    "method": "PUT",
+    "path": "/api/v1/admin/procedure-types/{id}",
+    "name": "updateProcedureType",
+    "module": "procedures",
+    "classification": "supplemental",
+    "source_decision": "ADR-002",
+    "business_justification": "Accepted administrative capability",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "tramites.edit"
+    ],
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "accepted",
+    "task_reference": "TASK-API-ADMIN-001"
+  },
+  {
+    "endpoint_code": "API-SUP-010",
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/calendar",
+    "name": "adminList",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-011",
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/calendar",
+    "name": "create",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-012",
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/calendar/{id}",
+    "name": "update",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-013",
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/news",
+    "name": "adminList",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-014",
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/news",
+    "name": "create",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-015",
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/news/{id}",
+    "name": "update",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-016",
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/notices",
+    "name": "adminList",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-017",
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/notices",
+    "name": "create",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-018",
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/notices/{id}",
+    "name": "update",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-019",
+    "method": "POST",
+    "path": "/api/v1/approvals/{id}/decision",
+    "name": "decide",
+    "module": "document-approvals",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.review"
+    ],
+    "router": "modules/document-approvals/router.js",
+    "controller": "modules/document-approvals/controller.js",
+    "service": "modules/document-approvals/service.js",
+    "repository": "modules/document-approvals/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-020",
+    "method": "POST",
+    "path": "/api/v1/auth/internal-login",
+    "name": "login",
+    "module": "auth",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "public"
+    ],
+    "authentication": "public",
+    "permissions": [],
+    "router": "modules/auth/router.js",
+    "controller": "modules/auth/controller.js",
+    "service": "modules/auth/service.js",
+    "repository": "modules/auth/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-021",
+    "method": "POST",
+    "path": "/api/v1/auth/logout",
+    "name": "logout",
+    "module": "auth",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [],
+    "router": "modules/auth/router.js",
+    "controller": "modules/auth/controller.js",
+    "service": "modules/auth/service.js",
+    "repository": "modules/auth/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-022",
+    "method": "GET",
+    "path": "/api/v1/citizen/oirs/{id}",
+    "name": "citizenDetail",
+    "module": "oirs",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "citizen"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-023",
+    "method": "GET",
+    "path": "/api/v1/citizen/oirs/{id}/history",
+    "name": "citizenHistory",
+    "module": "oirs",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "citizen"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-024",
+    "method": "POST",
+    "path": "/api/v1/citizen/oirs/{id}/messages",
+    "name": "citizenMessage",
+    "module": "oirs",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "citizen"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-025",
+    "method": "POST",
+    "path": "/api/v1/citizen/requests/{id}/cancel",
+    "name": "cancel",
+    "module": "citizen-requests",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "citizen"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "router": "modules/citizen-requests/router.js",
+    "controller": "modules/citizen-requests/controller.js",
+    "service": "modules/citizen-requests/service.js",
+    "repository": "modules/citizen-requests/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-026",
+    "method": "GET",
+    "path": "/api/v1/citizen/requests/{id}/history",
+    "name": "history",
+    "module": "citizen-requests",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "citizen"
+    ],
+    "authentication": "citizen",
+    "permissions": [],
+    "router": "modules/citizen-requests/router.js",
+    "controller": "modules/citizen-requests/controller.js",
+    "service": "modules/citizen-requests/service.js",
+    "repository": "modules/citizen-requests/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-027",
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}",
+    "name": "details",
+    "module": "correspondence",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.view"
+    ],
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-028",
+    "method": "PATCH",
+    "path": "/api/v1/correspondence/{id}",
+    "name": "update",
+    "module": "correspondence",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.edit"
+    ],
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-029",
+    "method": "POST",
+    "path": "/api/v1/correspondence/{id}/close",
+    "name": "close",
+    "module": "correspondence",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.edit"
+    ],
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-030",
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}/details",
+    "name": "details",
+    "module": "correspondence",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.view"
+    ],
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-031",
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}/history",
+    "name": "history",
+    "module": "correspondence",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.view"
+    ],
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-032",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/approvals",
+    "name": "list",
+    "module": "document-approvals",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "router": "modules/document-approvals/router.js",
+    "controller": "modules/document-approvals/controller.js",
+    "service": "modules/document-approvals/service.js",
+    "repository": "modules/document-approvals/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-008",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/attachments",
+    "name": "attachments",
+    "module": "documents",
+    "classification": "supplemental",
+    "source_decision": "ADR-006",
+    "business_justification": "Derived read capability required by accepted decision ADR-006",
+    "related_original_endpoints": [
+      "API-019"
+    ],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "accepted",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-033",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/attachments/{attachmentId}/download",
+    "name": "download",
+    "module": "documents",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-034",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/comments",
+    "name": "comments",
+    "module": "documents",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-035",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/comments",
+    "name": "addComment",
+    "module": "documents",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.review"
+    ],
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-036",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/history",
+    "name": "history",
+    "module": "documents",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-037",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/reviews",
+    "name": "list",
+    "module": "document-reviews",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "router": "modules/document-reviews/router.js",
+    "controller": "modules/document-reviews/controller.js",
+    "service": "modules/document-reviews/service.js",
+    "repository": "modules/document-reviews/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-038",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/signatures",
+    "name": "list",
+    "module": "document-signatures",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "router": "modules/document-signatures/router.js",
+    "controller": "modules/document-signatures/controller.js",
+    "service": "modules/document-signatures/service.js",
+    "repository": "modules/document-signatures/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-007",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/versions",
+    "name": "versions",
+    "module": "documents",
+    "classification": "supplemental",
+    "source_decision": "ADR-007",
+    "business_justification": "Derived read capability required by accepted decision ADR-007",
+    "related_original_endpoints": [
+      "API-020"
+    ],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "accepted",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-039",
+    "method": "PATCH",
+    "path": "/api/v1/expedients/{id}",
+    "name": "update",
+    "module": "expedients",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.edit"
+    ],
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-040",
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/close",
+    "name": "close",
+    "module": "expedients",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.edit"
+    ],
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-041",
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/details",
+    "name": "details",
+    "module": "expedients",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-042",
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/events",
+    "name": "events",
+    "module": "expedients",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-043",
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/events",
+    "name": "addEvent",
+    "module": "expedients",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.edit"
+    ],
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-044",
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/history",
+    "name": "events",
+    "module": "expedients",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-045",
+    "method": "PATCH",
+    "path": "/api/v1/notifications/{id}/read",
+    "name": "markRead",
+    "module": "notifications",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal_or_citizen"
+    ],
+    "authentication": "internal_or_citizen",
+    "permissions": [],
+    "router": "modules/notifications/router.js",
+    "controller": "modules/notifications/controller.js",
+    "service": "modules/notifications/service.js",
+    "repository": "modules/notifications/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-046",
+    "method": "GET",
+    "path": "/api/v1/oirs",
+    "name": "list",
+    "module": "oirs",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "oirs.view"
+    ],
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-047",
+    "method": "PATCH",
+    "path": "/api/v1/oirs/{id}/route",
+    "name": "route",
+    "module": "oirs",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "oirs.respond"
+    ],
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-048",
+    "method": "PATCH",
+    "path": "/api/v1/oirs/{id}/status",
+    "name": "status",
+    "module": "oirs",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "internal"
+    ],
+    "authentication": "internal",
+    "permissions": [
+      "oirs.respond"
+    ],
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-049",
+    "method": "GET",
+    "path": "/api/v1/public/calendar",
+    "name": "list",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "public"
+    ],
+    "authentication": "public",
+    "permissions": [],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-050",
+    "method": "GET",
+    "path": "/api/v1/public/news",
+    "name": "list",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "public"
+    ],
+    "authentication": "public",
+    "permissions": [],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-051",
+    "method": "GET",
+    "path": "/api/v1/public/news/{slug}",
+    "name": "news",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "public"
+    ],
+    "authentication": "public",
+    "permissions": [],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-052",
+    "method": "GET",
+    "path": "/api/v1/public/notices",
+    "name": "list",
+    "module": "public-content",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "public"
+    ],
+    "authentication": "public",
+    "permissions": [],
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-009",
+    "method": "GET",
+    "path": "/api/v1/public/oirs/{id}",
+    "name": "publicDetail",
+    "module": "oirs",
+    "classification": "supplemental",
+    "source_decision": "ADR-009",
+    "business_justification": "Derived read capability required by accepted decision ADR-009",
+    "related_original_endpoints": [
+      "API-037"
+    ],
+    "actors": [
+      "anonymous_tracking"
+    ],
+    "authentication": "anonymous_tracking",
+    "permissions": [],
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "accepted",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-053",
+    "method": "GET",
+    "path": "/api/v1/public/oirs/{id}/history",
+    "name": "publicHistory",
+    "module": "oirs",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "anonymous_tracking"
+    ],
+    "authentication": "anonymous_tracking",
+    "permissions": [],
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-054",
+    "method": "POST",
+    "path": "/api/v1/public/oirs/{id}/messages",
+    "name": "publicMessage",
+    "module": "oirs",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "anonymous_tracking"
+    ],
+    "authentication": "anonymous_tracking",
+    "permissions": [],
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  },
+  {
+    "endpoint_code": "API-SUP-055",
+    "method": "GET",
+    "path": "/api/v1/public/tramites/{id}",
+    "name": "getPublished",
+    "module": "procedures",
+    "classification": "supplemental",
+    "source_decision": "",
+    "business_justification": "Implemented route discovered by 5C-R1; no accepted ADR or compatibility contract was found.",
+    "related_original_endpoints": [],
+    "actors": [
+      "public"
+    ],
+    "authentication": "public",
+    "permissions": [],
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "rejected",
+    "task_reference": ""
+  }
+]

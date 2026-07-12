@@ -1,0 +1,5 @@
+import type { InputHTMLAttributes, SelectHTMLAttributes } from 'react';
+export function FormField({ label, error, ...props }: { label: string; error?: string } & InputHTMLAttributes<HTMLInputElement>) { const id = props.id || props.name; return <label htmlFor={id} className="field">{label}<input id={id} {...props} aria-invalid={Boolean(error)} aria-describedby={error ? `${id}-error` : undefined}/>{error && <span id={`${id}-error`} role="alert">{error}</span>}</label>; }
+export function SelectField({ label, error, children, ...props }: { label: string; error?: string; children: React.ReactNode } & SelectHTMLAttributes<HTMLSelectElement>) { const id = props.id || props.name; return <label htmlFor={id} className="field">{label}<select id={id} {...props} aria-invalid={Boolean(error)}>{children}</select>{error && <span role="alert">{error}</span>}</label>; }
+export const DateField = (props: Omit<React.ComponentProps<typeof FormField>, 'type'>) => <FormField type="date" {...props} />;
+export const FileUpload = ({ label, ...props }: { label: string } & InputHTMLAttributes<HTMLInputElement>) => <FormField type="file" label={label} {...props} />;

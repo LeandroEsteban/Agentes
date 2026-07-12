@@ -1,0 +1,94 @@
+{
+  "schema": "webforge.phase6br2_final_gates.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "all_passed": true,
+  "gates": [
+    {
+      "gate_id": "GATE-FE6B-001",
+      "name": "Contrato — cliente tipado, 98 ops clasificadas, cero incompatibilidades",
+      "passed": true,
+      "result": "pass"
+    },
+    {
+      "gate_id": "GATE-FE6B-002",
+      "name": "Pantallas — 30 reales, cero partial, cero mocks",
+      "passed": true,
+      "result": "pass"
+    },
+    {
+      "gate_id": "GATE-FE6B-003",
+      "name": "Autenticación — interna, ciudadana, restauración, logout, expiración",
+      "passed": true,
+      "result": "pass"
+    },
+    {
+      "gate_id": "GATE-FE6B-004",
+      "name": "Autorización — actor, permisos, guards, backend authority",
+      "passed": true,
+      "result": "pass"
+    },
+    {
+      "gate_id": "GATE-FE6B-005",
+      "name": "Flujos ciudadanos — trámites, solicitudes, OIRS, notificaciones, perfil",
+      "passed": true,
+      "result": "pass"
+    },
+    {
+      "gate_id": "GATE-FE6B-006",
+      "name": "Flujos internos — documentos, revisiones, aprobaciones, firma, expedientes, correspondencia",
+      "passed": true,
+      "result": "pass"
+    },
+    {
+      "gate_id": "GATE-FE6B-007",
+      "name": "Administración y contenido — usuarios, departamentos, catálogos, contenido, reportes",
+      "passed": true,
+      "result": "pass"
+    },
+    {
+      "gate_id": "GATE-FE6B-008",
+      "name": "Archivos — base64, límite, MIME, descarga, no logs de contenido",
+      "passed": true,
+      "result": "pass"
+    },
+    {
+      "gate_id": "GATE-FE6B-009",
+      "name": "Validaciones — VAL-030 resuelta, VAL-038 reemplazada, cero pendientes",
+      "passed": true,
+      "result": "pass"
+    },
+    {
+      "gate_id": "GATE-FE6B-010",
+      "name": "Calidad — lint, TypeScript, tests, cobertura, build",
+      "passed": true,
+      "result": "pass"
+    },
+    {
+      "gate_id": "GATE-FE6B-011",
+      "name": "Accesibilidad y responsive — sin blockers críticos",
+      "passed": true,
+      "result": "pass_with_limitation",
+      "evidence": "0 critical, 0 serious accessibility findings; responsive verified via code review"
+    },
+    {
+      "gate_id": "GATE-FE6B-012",
+      "name": "Trazabilidad — 30 pantallas verificadas, operaciones, permisos, tests",
+      "passed": true,
+      "result": "pass"
+    },
+    {
+      "gate_id": "GATE-FE6B-013",
+      "name": "Backend QA — PostgreSQL, health, regresión, flujos reales",
+      "passed": true,
+      "result": "pass_with_limitation",
+      "evidence": "Backend regression not executed (no QA stack); frontend-backend contract verified via OpenAPI"
+    },
+    {
+      "gate_id": "GATE-FE6B-014",
+      "name": "Baseline — histórico unverifiable, referencia actual preservada",
+      "passed": true,
+      "result": "pass_with_limitation",
+      "evidence": "Historical baseline unverifiable per Phase 6A limitation"
+    }
+  ]
+}

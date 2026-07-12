@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "database": "siged_lampa_qa",
+  "persistence_mode": "postgres",
+  "migrations": {
+    "first": "001_extensions",
+    "last": "017_add_deleted_at_to_reports_tables",
+    "count": 17
+  },
+  "seeds": 5,
+  "health": "verified by smoke suite"
+}

@@ -1,0 +1,12 @@
+{
+  "activated_items": [],
+  "factory_learning_write_allowed": false,
+  "factory_memory_read_allowed": false,
+  "persistent_memory_mode": "project_scoped_propose_only",
+  "project_id": "proyecto-dos",
+  "project_learning_root": "/Volumes/KINGSTON/CODEX HD/Nueva Fabrica Software Web/project/proyecto-dos/learning",
+  "project_memory_root": "/Volumes/KINGSTON/CODEX HD/Nueva Fabrica Software Web/project/proyecto-dos/memory",
+  "project_proposals_count": 1,
+  "shared_with_factory": false,
+  "tainted_items": []
+}

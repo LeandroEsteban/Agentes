@@ -1,0 +1,24 @@
+{
+  "valid": true,
+  "syntax": {
+    "parser": "python.json (JSON is YAML 1.2 subset)",
+    "errors": []
+  },
+  "openapi_version": "3.0.3",
+  "reference_errors": [],
+  "operation_ids": {
+    "total": 98,
+    "duplicates": []
+  },
+  "endpoint_codes": {
+    "total": 98,
+    "duplicates": []
+  },
+  "security_schemes": [
+    "AnonymousOirsTracking",
+    "CitizenBearerAuth",
+    "InternalBearerAuth"
+  ],
+  "paths": 76,
+  "operations": 98
+}

@@ -1,0 +1,95 @@
+﻿{
+    "summary":  {
+                    "functional_test_cases":  {
+                                                  "passed":  19,
+                                                  "skipped":  0,
+                                                  "failed":  0,
+                                                  "executed":  19
+                                              },
+                    "functional_flows":  {
+                                             "passed":  10,
+                                             "planned":  10,
+                                             "failed":  0,
+                                             "executed":  10
+                                         },
+                    "infrastructure":  {
+                                           "passed":  3,
+                                           "planned":  3,
+                                           "failed":  0,
+                                           "executed":  3
+                                       }
+                },
+    "flows":  [
+                  {
+                      "cases":  1,
+                      "status":  "pass",
+                      "name":  "ciudadano y solicitud",
+                      "id":  "E2E-01",
+                      "duration_ms":  1400
+                  },
+                  {
+                      "cases":  1,
+                      "status":  "pass",
+                      "name":  "OIRS anonima",
+                      "id":  "E2E-02",
+                      "duration_ms":  799
+                  },
+                  {
+                      "cases":  1,
+                      "status":  "pass",
+                      "name":  "documento, version y anexo",
+                      "id":  "E2E-03",
+                      "duration_ms":  2200
+                  },
+                  {
+                      "cases":  1,
+                      "status":  "pass",
+                      "name":  "revision y aprobacion",
+                      "id":  "E2E-04",
+                      "duration_ms":  2500
+                  },
+                  {
+                      "cases":  1,
+                      "status":  "pass",
+                      "name":  "firma academica simulada",
+                      "id":  "E2E-05",
+                      "duration_ms":  1900
+                  },
+                  {
+                      "cases":  2,
+                      "status":  "pass",
+                      "name":  "expediente",
+                      "id":  "E2E-06",
+                      "duration_ms":  1900
+                  },
+                  {
+                      "cases":  2,
+                      "status":  "pass",
+                      "name":  "correspondencia",
+                      "id":  "E2E-07",
+                      "duration_ms":  1200
+                  },
+                  {
+                      "cases":  2,
+                      "status":  "pass",
+                      "name":  "administracion",
+                      "id":  "E2E-08",
+                      "duration_ms":  1800
+                  },
+                  {
+                      "cases":  2,
+                      "status":  "pass",
+                      "name":  "contenido publico",
+                      "id":  "E2E-09",
+                      "duration_ms":  661
+                  },
+                  {
+                      "cases":  3,
+                      "status":  "pass",
+                      "name":  "guards y permisos",
+                      "id":  "E2E-10",
+                      "duration_ms":  1000
+                  }
+              ],
+    "schema":  "webforge.e2e_execution_report.v1"
+}

@@ -1,0 +1,68 @@
+{
+  "transitions": 12,
+  "partial": [
+    {
+      "from": "draft",
+      "action": "submit_review",
+      "to": "in_revision"
+    },
+    {
+      "from": "in_revision",
+      "action": "review_approved",
+      "to": "draft"
+    },
+    {
+      "from": "in_revision",
+      "action": "review_rejected",
+      "to": "draft"
+    },
+    {
+      "from": "draft",
+      "action": "request_approval",
+      "to": "in_approval"
+    },
+    {
+      "from": "in_approval",
+      "action": "approve",
+      "to": "approved"
+    },
+    {
+      "from": "in_approval",
+      "action": "reject",
+      "to": "draft"
+    },
+    {
+      "from": "approved",
+      "action": "sign",
+      "to": "signed"
+    },
+    {
+      "from": "draft",
+      "action": "update",
+      "to": "draft"
+    },
+    {
+      "from": "draft",
+      "action": "create_version",
+      "to": "draft"
+    }
+  ],
+  "missing": [
+    {
+      "from": "any",
+      "action": "cancel",
+      "to": "cancelled"
+    },
+    {
+      "from": "signed",
+      "action": "publish",
+      "to": "published"
+    },
+    {
+      "from": "published",
+      "action": "archive",
+      "to": "archived"
+    }
+  ],
+  "status": "blocked"
+}

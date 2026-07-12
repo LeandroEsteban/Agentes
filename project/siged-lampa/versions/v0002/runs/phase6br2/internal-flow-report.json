@@ -1,0 +1,18 @@
+{
+  "schema": "webforge.internal_flow_report.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "flows": {
+    "documents_list": { "tested": true, "pass": true },
+    "document_create": { "tested": true, "pass": true },
+    "document_detail": { "tested": true, "pass": true },
+    "document_versions": { "tested": true, "pass": true },
+    "reviews": { "tested": true, "pass": true },
+    "approvals": { "tested": true, "pass": true },
+    "signatures": { "tested": true, "pass": true },
+    "expedients_list": { "tested": true, "pass": true },
+    "expedient_detail": { "tested": true, "pass": true },
+    "correspondence_list": { "tested": true, "pass": true },
+    "correspondence_create": { "tested": true, "pass": true }
+  },
+  "status": "pass"
+}

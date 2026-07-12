@@ -1,0 +1,22 @@
+{
+  "schema": "webforge.authorization_report.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "guards": {
+    "RequireAuth": {
+      "tested": true,
+      "pass": true,
+      "cases": ["loading state", "valid session", "no session (redirect)"]
+    },
+    "RequireActor": {
+      "tested": true,
+      "pass": true,
+      "cases": ["correct actor shows children"]
+    },
+    "RequirePermission": {
+      "tested": true,
+      "pass": true,
+      "cases": ["valid permission", "admin.access fallback", "no permission required", "denied without permission"]
+    }
+  },
+  "status": "pass"
+}

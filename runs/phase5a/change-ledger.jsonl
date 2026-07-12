@@ -1,0 +1,4 @@
+{"change":"modular backend routers/controllers/services/repositories/validators","scope":"versions/v0002/backend/src/modules"}
+{"change":"citizen sessions and profile preferences","migration":"014_profile_preferences_citizen_sessions"}
+{"change":"anonymous OIRS tracking author support","migration":"015_oirs_anonymous_tracking"}
+{"change":"correct QA demo credential hashes","migration":"016_correct_demo_password_hashes"}

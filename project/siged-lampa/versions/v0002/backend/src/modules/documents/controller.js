@@ -1,0 +1,16 @@
+const service = require('./service');
+const storage = require('../storage/service');
+const validators = require('./validators');
+const context = (req) => ({ ip: req.ip, requestId: req.requestId });
+exports.list = async (req, res) => res.json({ data: await service.list(validators.parse(validators.listQuery, req.query), req.actor) });
+exports.create = async (req, res) => res.status(201).json({ data: await service.create(validators.parse(validators.documentCreate, req.body), req.actor, context(req)) });
+exports.detail = async (req, res) => res.json({ data: await service.detail(validators.parse(validators.id, req.params.id), req.actor) });
+exports.update = async (req, res) => res.json({ data: await service.update(validators.parse(validators.id, req.params.id), validators.parse(validators.documentUpdate, req.body), req.actor, context(req)) });
+exports.versions = async (req, res) => res.json({ data: await service.versions(validators.parse(validators.id, req.params.id), req.actor) });
+exports.createVersion = async (req, res) => res.status(201).json({ data: await service.createVersion(validators.parse(validators.id, req.params.id), validators.parse(validators.versionCreate, req.body), req.actor, context(req)) });
+exports.attachments = async (req, res) => res.json({ data: await service.attachments(validators.parse(validators.id, req.params.id), req.actor) });
+exports.addAttachment = async (req, res) => res.status(201).json({ data: await service.addAttachment(validators.parse(validators.id, req.params.id), validators.parse(validators.attachmentCreate, req.body), req.actor, context(req)) });
+exports.download = async (req, res) => { const item = await service.attachment(validators.parse(validators.id, req.params.id), validators.parse(validators.id, req.params.attachmentId), req.actor); res.type(item.mime_type); res.attachment(item.file_name); res.sendFile(storage.resolve(item.storage_path)); };
+exports.comments = async (req, res) => res.json({ data: await service.comments(validators.parse(validators.id, req.params.id), req.actor) });
+exports.addComment = async (req, res) => res.status(201).json({ data: await service.addComment(validators.parse(validators.id, req.params.id), validators.parse(validators.commentCreate, req.body), req.actor, context(req)) });
+exports.history = async (req, res) => res.json({ data: await service.history(validators.parse(validators.id, req.params.id), req.actor) });

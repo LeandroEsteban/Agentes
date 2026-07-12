@@ -1,0 +1,103 @@
+﻿{
+    "flows":  [
+                  {
+                      "status":  "pass",
+                      "e2e":  "E2E-01",
+                      "test_file":  "e2e-01-citizen-request.spec.ts",
+                      "actors":  [
+                                     "ciudadano"
+                                 ],
+                      "feature":  "ciudadano y solicitudes"
+                  },
+                  {
+                      "status":  "pass",
+                      "e2e":  "E2E-02",
+                      "test_file":  "e2e-02-oirs-anonymous.spec.ts",
+                      "actors":  [
+                                     "anonimo"
+                                 ],
+                      "feature":  "OIRS"
+                  },
+                  {
+                      "status":  "pass",
+                      "e2e":  "E2E-03",
+                      "test_file":  "e2e-03-document-version-attachment.spec.ts",
+                      "actors":  [
+                                     "funcionario"
+                                 ],
+                      "feature":  "documentos"
+                  },
+                  {
+                      "status":  "pass",
+                      "e2e":  "E2E-04",
+                      "test_file":  "e2e-04-review-approval.spec.ts",
+                      "actors":  [
+                                     "funcionario",
+                                     "revisor",
+                                     "aprobador"
+                                 ],
+                      "feature":  "revision y aprobacion"
+                  },
+                  {
+                      "status":  "pass",
+                      "e2e":  "E2E-05",
+                      "test_file":  "e2e-05-signature.spec.ts",
+                      "actors":  [
+                                     "funcionario",
+                                     "firmante"
+                                 ],
+                      "feature":  "firma"
+                  },
+                  {
+                      "status":  "pass",
+                      "e2e":  "E2E-06",
+                      "test_file":  "e2e-06-expedient.spec.ts",
+                      "actors":  [
+                                     "funcionario"
+                                 ],
+                      "feature":  "expedientes"
+                  },
+                  {
+                      "status":  "pass",
+                      "e2e":  "E2E-07",
+                      "test_file":  "e2e-07-correspondence.spec.ts",
+                      "actors":  [
+                                     "funcionario",
+                                     "admin"
+                                 ],
+                      "feature":  "correspondencia"
+                  },
+                  {
+                      "status":  "pass",
+                      "e2e":  "E2E-08",
+                      "test_file":  "e2e-08-admin.spec.ts",
+                      "actors":  [
+                                     "admin",
+                                     "funcionario"
+                                 ],
+                      "feature":  "administracion"
+                  },
+                  {
+                      "status":  "pass",
+                      "e2e":  "E2E-09",
+                      "test_file":  "e2e-09-public-content.spec.ts",
+                      "actors":  [
+                                     "admin"
+                                 ],
+                      "feature":  "contenido publico"
+                  },
+                  {
+                      "status":  "pass",
+                      "e2e":  "E2E-10",
+                      "test_file":  "e2e-10-guards-permissions.spec.ts",
+                      "actors":  [
+                                     "visitante",
+                                     "funcionario",
+                                     "ciudadano"
+                                 ],
+                      "feature":  "guards y permisos"
+                  }
+              ],
+    "schema":  "webforge.traceability_report.v1",
+    "result":  "all PASS"
+}

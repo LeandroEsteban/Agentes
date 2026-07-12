@@ -1,0 +1,13 @@
+{
+  "lines": 0.0311,
+  "statements": 0.0311,
+  "functions": 0.2236,
+  "branches": 0.4814,
+  "target_lines_6br1": 0.45,
+  "target_functions_6br1": 0.4,
+  "target_branches_6br1": 0.4,
+  "met_lines": false,
+  "met_functions": false,
+  "met_branches": true,
+  "note": "Coverage computed against all source files. Feature components require API mocking infrastructure for proper measurement. Component library coverage: auth 68-100%, domain 100%, feedback 100%, forms 100%, tables 100%, config 100%."
+}

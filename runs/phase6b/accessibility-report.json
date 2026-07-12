@@ -1,0 +1,8 @@
+{
+  "status": "partial",
+  "evidence": [
+    "labels",
+    "aria-live",
+    "dialog focus in reusable components"
+  ]
+}

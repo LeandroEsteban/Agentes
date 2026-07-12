@@ -1,0 +1,70 @@
+﻿{
+    "gates":  [
+                  {
+                      "status":  "pass",
+                      "name":  "stack QA (PostgreSQL + backend + frontend health)",
+                      "id":  "GATE-7A-FINAL-001"
+                  },
+                  {
+                      "status":  "pass",
+                      "name":  "esquema (40 tablas, 17 migraciones, 5 seeds)",
+                      "id":  "GATE-7A-FINAL-002"
+                  },
+                  {
+                      "status":  "pass",
+                      "name":  "E2E ciudadano (E2E-01, E2E-02)",
+                      "id":  "GATE-7A-FINAL-003"
+                  },
+                  {
+                      "status":  "pass",
+                      "name":  "E2E documental (E2E-03, E2E-04, E2E-05)",
+                      "id":  "GATE-7A-FINAL-004"
+                  },
+                  {
+                      "status":  "pass",
+                      "name":  "E2E operativo (E2E-06, E2E-07)",
+                      "id":  "GATE-7A-FINAL-005"
+                  },
+                  {
+                      "status":  "pass",
+                      "name":  "E2E administracion y permisos (E2E-08, E2E-09, E2E-10)",
+                      "id":  "GATE-7A-FINAL-006"
+                  },
+                  {
+                      "status":  "pass",
+                      "name":  "infraestructura (INFRA-01, INFRA-02, INFRA-03)",
+                      "id":  "GATE-7A-FINAL-007"
+                  },
+                  {
+                      "status":  "pass",
+                      "name":  "frontend regression (lint, tests, coverage, build)",
+                      "id":  "GATE-7A-FINAL-008"
+                  },
+                  {
+                      "status":  "pass",
+                      "name":  "backend regression (PostgreSQL real, suite completa, coverage)",
+                      "id":  "GATE-7A-FINAL-009"
+                  },
+                  {
+                      "status":  "pass",
+                      "name":  "contrato y seguridad (98/98, 0 mismatches, consola limpia)",
+                      "id":  "GATE-7A-FINAL-010"
+                  },
+                  {
+                      "status":  "pass_with_limitation",
+                      "name":  "WebForge y reproducibilidad (pytest 75/75)",
+                      "id":  "GATE-7A-FINAL-011"
+                  },
+                  {
+                      "status":  "pass_with_limitation",
+                      "name":  "baseline historico",
+                      "id":  "GATE-7A-FINAL-012"
+                  }
+              ],
+    "schema":  "webforge.final_gates.v1",
+    "summary":  {
+                    "pass":  10,
+                    "pass_with_limitation":  2,
+                    "blocked":  0
+                }
+}

@@ -1,0 +1,14 @@
+{
+  "command": "npm.cmd run test:coverage",
+  "statements": 83.93,
+  "branches": 77.08,
+  "functions": 61.62,
+  "lines": 83.93,
+  "status": "pass",
+  "thresholds": {
+    "lines": { "required": 45, "actual": 83.93, "pass": true },
+    "statements": { "required": 45, "actual": 83.93, "pass": true },
+    "functions": { "required": 40, "actual": 61.62, "pass": true },
+    "branches": { "required": 40, "actual": 77.08, "pass": true }
+  }
+}

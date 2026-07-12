@@ -1,0 +1,18 @@
+{
+  "deploys": 0,
+  "dev_materialization": {
+    "api": "webforge.isolation.p12_inv.v1",
+    "status": "pass",
+    "writes": [
+      {
+        "action": "unchanged",
+        "bytes": 147,
+        "path": "implementation/WEBFORGE_IMPLEMENTATION.md",
+        "sha256": "sha256:c12cc53b55c0788f8e54996234440b4509a049532117744adb90b96db560e4a7"
+      }
+    ]
+  },
+  "external_writes": 0,
+  "out_of_scope_changes": 0,
+  "scope": "webforge runtime local artifacts plus isolated DEV workspace"
+}

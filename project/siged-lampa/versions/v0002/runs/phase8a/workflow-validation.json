@@ -1,0 +1,32 @@
+{
+  "phase": "8A",
+  "file": ".github/workflows/deploy-ec2.yml",
+  "validated": true,
+  "checks": {
+    "triggers": {
+      "push_main": true,
+      "workflow_dispatch": true
+    },
+    "jobs": {
+      "validate": {"exists": true, "steps": ["checkout", "frontend_lint_test_build", "backend_check_test"]},
+      "package": {"exists": true, "steps": ["checkout", "create_tarball", "upload_artifact"], "depends_on": ["validate"]},
+      "deploy": {"exists": true, "steps": 12, "depends_on": ["package"], "environment": "production"}
+    },
+    "permissions": {"contents": "read"},
+    "concurrency": {"group": "siged-lampa-production", "cancel-in-progress": false},
+    "secrets_required": ["EC2_HOST", "EC2_USER", "EC2_SSH_KEY"],
+    "secrets_exposure": "none — app secrets read from EC2 shared .env.production",
+    "ssh_config": {
+      "known_hosts": "ssh-keyscan",
+      "strict_host_key_checking": false,
+      "temp_key": true
+    },
+    "rollback": {"on_failure": true, "method": "rollback.sh"},
+    "cleanup": {"on_success": true, "keep": 3}
+  },
+  "notes": [
+    "E2E tests not included in validate job (requires Docker, too time-consuming per deployment). Documented in RUNBOOK.",
+    "Smoke tests run on EC2 internally (127.0.0.1), not exposed publicly.",
+    "Workflow does NOT git pull on EC2 — uses scp tarball transfer."
+  ]
+}

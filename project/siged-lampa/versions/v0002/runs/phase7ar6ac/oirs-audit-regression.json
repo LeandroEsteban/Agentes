@@ -1,0 +1,1 @@
+{"status":"pass","test_file":"backend/tests/api/phase5b2a-citizen-services.api.test.js","checks":["anonymous event","null actors","case/entity","request_id","no tracking token","no tracking hash","no sensitive message body","authenticated citizen event remains actor-bound"]}

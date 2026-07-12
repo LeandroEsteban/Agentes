@@ -1,0 +1,32 @@
+{
+  "phase": "8A",
+  "migrations": {
+    "count": 17,
+    "location": "database/migrations/",
+    "existing_files": true,
+    "verified_phase7a": true
+  },
+  "seeds": {
+    "count": 5,
+    "location": "database/seeds/",
+    "idempotent": true,
+    "policy": "executed on each deploy — uses ON CONFLICT DO NOTHING or equivalent patterns"
+  },
+  "migration_script": "database/scripts/migrate.js",
+  "seed_script": "database/scripts/seed.js",
+  "execution_flow": {
+    "1": "backup existing DB (pg_dump to /opt/siged-lampa/backups/)",
+    "2": "run migrate.js (transactional, checksum-verified)",
+    "3": "run seed.js (idempotent)",
+    "4": "on failure: stop workflow, trigger rollback"
+  },
+  "deployment_script": "infra/deployment/scripts/run-migrations.sh",
+  "backup_policy": {
+    "pre_migration": true,
+    "location": "/opt/siged-lampa/backups/pre-migration-<release>.sql",
+    "retention": "manual (preserved until cleanup or explicit removal)",
+    "transfer_to_github": false
+  },
+  "rollback_on_failure": true,
+  "verify_script": "database/scripts/verify-schema.js (available for manual validation)"
+}

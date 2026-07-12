@@ -1,0 +1,18 @@
+{
+  "status": "partial",
+  "evidence": [
+    "mass assignment",
+    "invalid email",
+    "pagination bound",
+    "tampered token",
+    "expired token",
+    "request ID"
+  ],
+  "gap": [
+    "SQL injection",
+    "upload MIME/traversal",
+    "redacted logs",
+    "rate limit",
+    "CORS"
+  ]
+}

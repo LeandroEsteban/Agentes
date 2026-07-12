@@ -1,0 +1,23 @@
+{
+  "current_version": "v0001",
+  "frontend_template": {
+    "applies_to": "all_projects_all_versions_all_sandboxes",
+    "hash": "sha256:d3ada78b3c20c5961f1ab992a78059450520858f2ad30c01bdcb9dd08857126d",
+    "mandatory": true,
+    "required_files": [
+      "README.md",
+      "AGENTS.md",
+      "HANDOFF-REACT.md",
+      "Intranet Agora.dc.html"
+    ],
+    "source": "PLANTILLA_FRONTEND",
+    "template_name": "PLANTILLA_FRONTEND"
+  },
+  "learning_root": "project/webforge-factory-runtime/learning",
+  "memory_root": "project/webforge-factory-runtime/memory",
+  "project_id": "webforge-factory-runtime",
+  "project_root": "project/webforge-factory-runtime",
+  "sandboxes_root": "project/webforge-factory-runtime/sandboxes",
+  "shared_with_factory": false,
+  "versions_root": "project/webforge-factory-runtime/versions"
+}

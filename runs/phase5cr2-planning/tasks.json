@@ -1,0 +1,2018 @@
+{
+  "schema": "webforge.tasks.v1",
+  "generated_at": "2026-07-11T21:20:17.029483+00:00",
+  "task_count": 59,
+  "tasks": [
+    {
+      "task_id": "TASK-REF-001",
+      "title": "Review normalization findings",
+      "description": "Review all normalization findings and resolve blocking vs non-blocking issues",
+      "agent_id": "agent.refinement",
+      "phase": "normalization",
+      "priority": "critical",
+      "inputs": [
+        "normalization_report.json",
+        "findings.json"
+      ],
+      "outputs": [
+        "findings_resolution.json"
+      ],
+      "dependencies": [],
+      "related_codes": [
+        "P-01",
+        "P-02",
+        "P-03",
+        "P-04",
+        "P-05",
+        "P-06",
+        "P-07",
+        "P-08",
+        "P-09",
+        "P-10",
+        "P-11",
+        "P-12",
+        "P-13",
+        "P-14",
+        "P-15",
+        "P-16",
+        "P-17",
+        "P-18",
+        "P-19",
+        "P-20",
+        "P-21",
+        "P-22",
+        "P-23",
+        "P-24",
+        "P-25",
+        "P-26",
+        "P-27",
+        "P-28",
+        "P-29",
+        "P-30"
+      ],
+      "acceptance_criteria": [
+        "All blocking findings have a resolution status",
+        "Findings are categorized as accepted, rejected, or deferred"
+      ],
+      "required_tests": [
+        "test_findings_have_resolution"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-REF-002",
+      "title": "Verify ADR completeness",
+      "description": "Ensure all required ADRs are present and have accepted status",
+      "agent_id": "agent.refinement",
+      "phase": "normalization",
+      "priority": "high",
+      "inputs": [
+        "decisions.json"
+      ],
+      "outputs": [
+        "adr_verification.json"
+      ],
+      "dependencies": [
+        "TASK-REF-001"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "All ADR IDs from REQUIRED_ADR_IDS are present",
+        "No ADR has empty context or decision fields"
+      ],
+      "required_tests": [
+        "test_adrs_all_accepted"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-REF-003",
+      "title": "Approve refined specification",
+      "description": "Final approval of the refined specification after all findings are resolved",
+      "agent_id": "agent.refinement",
+      "phase": "normalization",
+      "priority": "critical",
+      "inputs": [
+        "findings_resolution.json",
+        "adr_verification.json"
+      ],
+      "outputs": [
+        "specification_approval.json"
+      ],
+      "dependencies": [
+        "TASK-REF-002"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "No unresolved blocking findings remain",
+        "Specification is marked as approved",
+        "Exit gate specification_approved is satisfied"
+      ],
+      "required_tests": [
+        "test_spec_approved"
+      ],
+      "required_gates": [
+        "GATE-ARCH-001"
+      ],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-ARCH-001",
+      "title": "Generate architecture decisions",
+      "description": "Create the full set of Architectural Decision Records from DECISION_DEFINITIONS",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "priority": "critical",
+      "inputs": [
+        "refined_spec.json",
+        "catalogs/*.json"
+      ],
+      "outputs": [
+        "decisions.json"
+      ],
+      "dependencies": [
+        "TASK-REF-003"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "All ADR records are populated with context, decision, consequences",
+        "Decisions are serialized to decisions.json"
+      ],
+      "required_tests": [
+        "test_arch_decisions_exist"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-ARCH-002",
+      "title": "Build architecture.json",
+      "description": "Assemble the complete architecture document including components, data flows, and deployment units",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "priority": "critical",
+      "inputs": [
+        "decisions.json",
+        "agents.json"
+      ],
+      "outputs": [
+        "architecture.json"
+      ],
+      "dependencies": [
+        "TASK-ARCH-001"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "Architecture document contains all factory and product components",
+        "Data flows and security boundaries are defined",
+        "Quality gates are listed"
+      ],
+      "required_tests": [
+        "test_architecture_json_valid"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-ARCH-003",
+      "title": "Create agent specifications",
+      "description": "Define specialized agents with responsibilities, tools, handoff targets, and gate conditions",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "priority": "high",
+      "inputs": [
+        "architecture.json"
+      ],
+      "outputs": [
+        "agents.json"
+      ],
+      "dependencies": [
+        "TASK-ARCH-002"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "Each agent has non-empty responsibility, entry_gate, exit_gate",
+        "Handoff targets reference valid agent IDs or human_reviewer",
+        "All agents have at least one allowed tool"
+      ],
+      "required_tests": [
+        "test_agents_spec_valid"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-ARCH-004",
+      "title": "Define contracts",
+      "description": "Generate contract schemas for all agent handoffs specifying input/output data structures",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "agents.json"
+      ],
+      "outputs": [
+        "contracts.json"
+      ],
+      "dependencies": [
+        "TASK-ARCH-003"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "Contracts cover all agent handoff pairs",
+        "Each contract has typed fields with descriptions",
+        "Required fields are properly marked"
+      ],
+      "required_tests": [
+        "test_contracts_defined"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-ARCH-005",
+      "title": "Generate task breakdown",
+      "description": "Decompose the architecture into individual tasks per agent domain",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "priority": "critical",
+      "inputs": [
+        "architecture.json",
+        "agents.json"
+      ],
+      "outputs": [
+        "tasks.json"
+      ],
+      "dependencies": [
+        "TASK-ARCH-004"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "Each agent has at least one assigned task",
+        "Tasks have unique IDs following the TASK-XXX-NNN pattern",
+        "Tasks define dependencies that form a valid DAG"
+      ],
+      "required_tests": [
+        "test_task_breakdown_complete"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-ARCH-006",
+      "title": "Generate DAG and validate",
+      "description": "Build a directed acyclic graph from task dependencies and validate it has no cycles",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "priority": "critical",
+      "inputs": [
+        "tasks.json"
+      ],
+      "outputs": [
+        "task-dag.json"
+      ],
+      "dependencies": [
+        "TASK-ARCH-005"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "DAG contains all task IDs as nodes",
+        "No circular dependencies exist",
+        "Critical path is identifiable"
+      ],
+      "required_tests": [
+        "test_dag_acyclic"
+      ],
+      "required_gates": [
+        "GATE-ARCH-005"
+      ],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-ARCH-007",
+      "title": "Define handoff plan",
+      "description": "Create the handoff plan specifying which artifacts pass between agents and required gates",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "priority": "high",
+      "inputs": [
+        "task-dag.json",
+        "agents.json",
+        "contracts.json"
+      ],
+      "outputs": [
+        "handoff-plan.json"
+      ],
+      "dependencies": [
+        "TASK-ARCH-006"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "All agent transitions are mapped in handoff plan",
+        "Each handoff includes required gates and artifact hashes"
+      ],
+      "required_tests": [
+        "test_handoff_plan_complete"
+      ],
+      "required_gates": [
+        "GATE-ARCH-006"
+      ],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-ARCH-008",
+      "title": "Run planning gates",
+      "description": "Execute all planning quality gates (GATE-ARCH-001 through GATE-ARCH-007) and produce gate report",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "priority": "critical",
+      "inputs": [
+        "architecture.json",
+        "decisions.json",
+        "agents.json",
+        "tasks.json",
+        "task-dag.json",
+        "handoff-plan.json"
+      ],
+      "outputs": [
+        "gate-report.json"
+      ],
+      "dependencies": [
+        "TASK-ARCH-007"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "All seven planning gates pass",
+        "Gate report lists each gate with pass/fail status",
+        "Architecture is marked as approved when all gates pass"
+      ],
+      "required_tests": [
+        "test_planning_gates_pass"
+      ],
+      "required_gates": [
+        "GATE-ARCH-001",
+        "GATE-ARCH-002",
+        "GATE-ARCH-003",
+        "GATE-ARCH-004",
+        "GATE-ARCH-005",
+        "GATE-ARCH-006",
+        "GATE-ARCH-007"
+      ],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-SECURITY-001",
+      "title": "Create users table migration",
+      "description": "Create the users table with id, username, password_hash, email, department_id, role_id, is_active, created_at, updated_at",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "critical",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_users.sql"
+      ],
+      "dependencies": [
+        "TASK-ARCH-008"
+      ],
+      "related_codes": [
+        "users"
+      ],
+      "acceptance_criteria": [
+        "users table is created with all required columns",
+        "Primary key and unique constraints on username and email are defined"
+      ],
+      "required_tests": [
+        "test_users_table_exists",
+        "test_users_columns"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-SECURITY-002",
+      "title": "Create roles & permissions tables",
+      "description": "Create roles, permissions, and role_permissions tables for RBAC",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "critical",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_roles_permissions.sql"
+      ],
+      "dependencies": [
+        "TASK-ARCH-008"
+      ],
+      "related_codes": [
+        "roles"
+      ],
+      "acceptance_criteria": [
+        "roles table has id, name, description columns",
+        "permissions table has id, resource, action columns",
+        "role_permissions junction table is created"
+      ],
+      "required_tests": [
+        "test_roles_table_exists",
+        "test_permissions_table_exists",
+        "test_role_permissions_junction"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-SECURITY-003",
+      "title": "Create departments table",
+      "description": "Create departments table with id, name, code, manager_user_id (nullable initially)",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_departments.sql"
+      ],
+      "dependencies": [
+        "TASK-ARCH-008"
+      ],
+      "related_codes": [
+        "departments"
+      ],
+      "acceptance_criteria": [
+        "departments table is created with id, name, code columns",
+        "manager_user_id is nullable for bootstrap"
+      ],
+      "required_tests": [
+        "test_departments_table_exists"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-SECURITY-004",
+      "title": "Add manager_user_id FK to departments",
+      "description": "Add manager_user_id foreign key referencing users(id) after users table is created (ADR-010 deferred migration)",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "decisions.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_add_manager_fk.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-SECURITY-001",
+        "TASK-DB-SECURITY-003"
+      ],
+      "related_codes": [
+        "departments",
+        "ADR-010"
+      ],
+      "acceptance_criteria": [
+        "manager_user_id FK references users(id)",
+        "Migration runs after both departments and users exist",
+        "Bootstrap script handles null manager_user_id for initial departments"
+      ],
+      "required_tests": [
+        "test_manager_user_id_fk"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "L",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-001",
+      "title": "Create document_types table",
+      "description": "Create document_types table with id, name, code, prefix, description, is_active",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_document_types.sql"
+      ],
+      "dependencies": [
+        "TASK-ARCH-008"
+      ],
+      "related_codes": [
+        "document_types"
+      ],
+      "acceptance_criteria": [
+        "document_types table has all required columns",
+        "Unique constraint on code is defined"
+      ],
+      "required_tests": [
+        "test_document_types_table_exists"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-002",
+      "title": "Create documents table",
+      "description": "Create documents table with id, document_type_id, number, title, description, current_version_id, created_by, created_at, updated_at",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_documents.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-DOCUMENTS-001"
+      ],
+      "related_codes": [
+        "documents"
+      ],
+      "acceptance_criteria": [
+        "documents table has FK to document_types",
+        "current_version_id is nullable initially"
+      ],
+      "required_tests": [
+        "test_documents_table_exists",
+        "test_documents_fk_document_types"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-003",
+      "title": "Create document_versions table",
+      "description": "Create document_versions table with id, document_id, version_number, file_path, file_hash, file_size, mime_type, uploaded_by, created_at",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_document_versions.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-DOCUMENTS-002"
+      ],
+      "related_codes": [
+        "document_versions"
+      ],
+      "acceptance_criteria": [
+        "document_versions table has FK to documents",
+        "Index on (document_id, version_number) is defined",
+        "previous_version_id is nullable for initial migration"
+      ],
+      "required_tests": [
+        "test_document_versions_table_exists",
+        "test_document_versions_fk"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "L",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-004",
+      "title": "Add document_version_id to attachments",
+      "description": "Add document_version_id nullable FK to document_attachments per ADR-006 for version-specific attachments",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "medium",
+      "inputs": [
+        "architecture.json",
+        "decisions.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_add_version_id_to_attachments.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-DOCUMENTS-003"
+      ],
+      "related_codes": [
+        "ADR-006"
+      ],
+      "acceptance_criteria": [
+        "document_version_id column is added to document_attachments",
+        "FK references document_versions(id) as nullable"
+      ],
+      "required_tests": [
+        "test_attachments_have_version_id"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-005",
+      "title": "Add previous_version_id to versions",
+      "description": "Add previous_version_id self-referencing FK to document_versions per ADR-007 for version chain traversal",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "medium",
+      "inputs": [
+        "architecture.json",
+        "decisions.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_add_previous_version_id.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-DOCUMENTS-003"
+      ],
+      "related_codes": [
+        "ADR-007"
+      ],
+      "acceptance_criteria": [
+        "previous_version_id column is added to document_versions",
+        "Self-referencing FK constraint is defined"
+      ],
+      "required_tests": [
+        "test_previous_version_id_fk"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-006",
+      "title": "Add UNIQUE(document_type_id, number) to documents",
+      "description": "Add unique constraint on (document_type_id, document_number) per ADR-008 for document numbering",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "decisions.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_add_unique_doc_type_number.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-DOCUMENTS-002"
+      ],
+      "related_codes": [
+        "ADR-008"
+      ],
+      "acceptance_criteria": [
+        "UNIQUE constraint on (document_type_id, number) is created",
+        "Existing data does not violate the constraint"
+      ],
+      "required_tests": [
+        "test_unique_document_type_number"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-EXPEDIENT-001",
+      "title": "Create expedients table",
+      "description": "Create expedients table with id, number, title, description, status, department_id, created_by, assigned_to, created_at, updated_at",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_expedients.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-SECURITY-003"
+      ],
+      "related_codes": [
+        "expedients"
+      ],
+      "acceptance_criteria": [
+        "expedients table has all required columns",
+        "FK to departments is defined"
+      ],
+      "required_tests": [
+        "test_expedients_table_exists"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-EXPEDIENT-002",
+      "title": "Create expedient_documents table",
+      "description": "Create expedient_documents junction table linking expedients to documents with added_at and notes",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_expedient_documents.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-EXPEDIENT-001",
+        "TASK-DB-DOCUMENTS-002"
+      ],
+      "related_codes": [
+        "expedient_documents"
+      ],
+      "acceptance_criteria": [
+        "Junction table has FKs to both expedients and documents",
+        "Composite primary key is defined"
+      ],
+      "required_tests": [
+        "test_expedient_documents_table_exists"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-CORRESPONDENCE-001",
+      "title": "Create correspondence table",
+      "description": "Create correspondence table with id, number, subject, body, sender_id, recipient_id, document_id, status, sent_at, created_at",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_correspondence.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-SECURITY-001",
+        "TASK-DB-DOCUMENTS-002"
+      ],
+      "related_codes": [
+        "correspondence"
+      ],
+      "acceptance_criteria": [
+        "correspondence table has sender and recipient FKs to users",
+        "FK to documents is nullable"
+      ],
+      "required_tests": [
+        "test_correspondence_table_exists"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-CORRESPONDENCE-002",
+      "title": "Create correspondence_routes table",
+      "description": "Create correspondence_routes table tracking routing history for correspondence items",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "medium",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_correspondence_routes.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-CORRESPONDENCE-001"
+      ],
+      "related_codes": [
+        "correspondence_routes"
+      ],
+      "acceptance_criteria": [
+        "correspondence_routes table tracks from_agent, to_agent, action, timestamp",
+        "FK to correspondence is defined"
+      ],
+      "required_tests": [
+        "test_correspondence_routes_table_exists"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-PORTAL-001",
+      "title": "Create tramites table",
+      "description": "Create tramites table with id, code, name, description, department_id, requirements, estimated_duration, is_active",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_tramites.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-SECURITY-003"
+      ],
+      "related_codes": [
+        "tramites"
+      ],
+      "acceptance_criteria": [
+        "tramites table has all required columns",
+        "FK to departments is defined"
+      ],
+      "required_tests": [
+        "test_tramites_table_exists"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-PORTAL-002",
+      "title": "Create citizen_requests table",
+      "description": "Create citizen_requests table with id, tramite_id, citizen_id, data, status, assigned_to, created_at, updated_at",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_citizen_requests.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-PORTAL-001"
+      ],
+      "related_codes": [
+        "citizen_requests"
+      ],
+      "acceptance_criteria": [
+        "citizen_requests table has FK to tramites",
+        "Status column is indexed for filtering"
+      ],
+      "required_tests": [
+        "test_citizen_requests_table_exists"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-OIRS-001",
+      "title": "Create oirs_cases with contact fields",
+      "description": "Create oirs_cases table with id, number, subject, description, status, contact_name, contact_email, contact_phone, contact_consent, assigned_to, created_at, updated_at per ADR-009",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "decisions.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_oirs_cases.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-SECURITY-001"
+      ],
+      "related_codes": [
+        "ADR-009"
+      ],
+      "acceptance_criteria": [
+        "oirs_cases has contact_name, contact_email, contact_phone, contact_consent nullable fields",
+        "Validation rule for name + (email or phone) + consent documented"
+      ],
+      "required_tests": [
+        "test_oirs_cases_table_exists",
+        "test_oirs_contact_fields"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-REPORT-001",
+      "title": "Create notifications table",
+      "description": "Create notifications table with id, user_id, type, title, body, is_read, sent_at, read_at",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "medium",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_notifications.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-SECURITY-001"
+      ],
+      "related_codes": [
+        "notifications"
+      ],
+      "acceptance_criteria": [
+        "notifications table has FK to users",
+        "Index on (user_id, is_read) for performance"
+      ],
+      "required_tests": [
+        "test_notifications_table_exists"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-DB-AUDIT-001",
+      "title": "Create audit_log table",
+      "description": "Create audit_log table with id, table_name, record_id, action, old_values, new_values, performed_by, performed_at, ip_address",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "er_catalog.json"
+      ],
+      "outputs": [
+        "migrations/XXXX_create_audit_log.sql"
+      ],
+      "dependencies": [
+        "TASK-DB-SECURITY-001"
+      ],
+      "related_codes": [
+        "audit"
+      ],
+      "acceptance_criteria": [
+        "audit_log table captures before and after values as JSON",
+        "Index on (table_name, record_id) for lookup"
+      ],
+      "required_tests": [
+        "test_audit_log_table_exists"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-AUTH-001",
+      "title": "Implement POST /api/v1/auth/login",
+      "description": "Implement internal user login endpoint with JWT token generation (API-001, M01)",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "critical",
+      "inputs": [
+        "architecture.json",
+        "endpoints_catalog.json"
+      ],
+      "outputs": [
+        "backend/controllers/auth/login.js"
+      ],
+      "dependencies": [
+        "TASK-ARCH-008",
+        "TASK-DB-SECURITY-001",
+        "TASK-DB-SECURITY-002"
+      ],
+      "related_codes": [
+        "API-001",
+        "M01"
+      ],
+      "acceptance_criteria": [
+        "POST /api/v1/auth/login returns JWT on valid credentials",
+        "Invalid credentials return 401",
+        "Response includes user profile and permissions"
+      ],
+      "required_tests": [
+        "test_login_success",
+        "test_login_invalid_credentials"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-AUTH-002",
+      "title": "Implement POST /api/v1/auth/citizen-login",
+      "description": "Implement citizen login endpoint with academic simulation per ADR-004 (API-002, M01)",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "critical",
+      "inputs": [
+        "architecture.json",
+        "decisions.json",
+        "endpoints_catalog.json"
+      ],
+      "outputs": [
+        "backend/controllers/auth/citizen-login.js"
+      ],
+      "dependencies": [
+        "TASK-API-AUTH-001"
+      ],
+      "related_codes": [
+        "API-002",
+        "M01",
+        "ADR-004"
+      ],
+      "acceptance_criteria": [
+        "POST /api/v1/auth/citizen-login returns citizen JWT on valid credentials",
+        "Separate token format from internal login",
+        "Simulation mode is clearly documented"
+      ],
+      "required_tests": [
+        "test_citizen_login_success",
+        "test_citizen_login_simulation_mode"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-DOCUMENTS-001",
+      "title": "Implement documents CRUD endpoints",
+      "description": "Implement document CRUD: GET /api/v1/documents, POST, GET /api/v1/documents/{id}, PUT, DELETE plus version management (API-015 through API-020, M03)",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "endpoints_catalog.json",
+        "business_rules_catalog.json"
+      ],
+      "outputs": [
+        "backend/controllers/documents/"
+      ],
+      "dependencies": [
+        "TASK-API-AUTH-001"
+      ],
+      "related_codes": [
+        "API-015",
+        "API-016",
+        "API-017",
+        "API-018",
+        "API-019",
+        "API-020",
+        "M03"
+      ],
+      "acceptance_criteria": [
+        "All six document endpoints return correct HTTP status codes",
+        "Version history is accessible via document versions endpoint",
+        "Attachments include document_version_id per ADR-006"
+      ],
+      "required_tests": [
+        "test_documents_crud",
+        "test_document_versions"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "L",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-EXPEDIENT-001",
+      "title": "Implement expedients CRUD endpoints",
+      "description": "Implement expedient endpoints: GET /api/v1/expedients, POST, GET /api/v1/expedients/{id}, PUT, document association (API-025 through API-028, M05)",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "endpoints_catalog.json"
+      ],
+      "outputs": [
+        "backend/controllers/expedients/"
+      ],
+      "dependencies": [
+        "TASK-API-AUTH-001"
+      ],
+      "related_codes": [
+        "API-025",
+        "API-026",
+        "API-027",
+        "API-028",
+        "M05"
+      ],
+      "acceptance_criteria": [
+        "Expedient CRUD endpoints return correctly structured responses",
+        "Document association endpoint works"
+      ],
+      "required_tests": [
+        "test_expedients_crud",
+        "test_expedient_document_association"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-CORRESPONDENCE-001",
+      "title": "Implement correspondence endpoints",
+      "description": "Implement correspondence: GET /api/v1/correspondence, POST, GET /api/v1/correspondence/{id}, PUT, routing endpoints (API-029 through API-032, M06)",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "endpoints_catalog.json"
+      ],
+      "outputs": [
+        "backend/controllers/correspondence/"
+      ],
+      "dependencies": [
+        "TASK-API-AUTH-001"
+      ],
+      "related_codes": [
+        "API-029",
+        "API-030",
+        "API-031",
+        "API-032",
+        "M06"
+      ],
+      "acceptance_criteria": [
+        "Correspondence CRUD works with sender/recipient validation",
+        "Routing endpoint tracks correspondence history"
+      ],
+      "required_tests": [
+        "test_correspondence_crud",
+        "test_correspondence_routing"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-PORTAL-001",
+      "title": "Implement portal endpoints",
+      "description": "Implement public portal: GET /api/v1/public/tramites, GET /api/v1/public/tramites/{id}, POST /api/v1/public/tramites/{id}/requests, GET /api/v1/public/requests/{id}/status (API-033 through API-036, M07, ADR-005)",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "decisions.json",
+        "endpoints_catalog.json"
+      ],
+      "outputs": [
+        "backend/controllers/portal/"
+      ],
+      "dependencies": [
+        "TASK-API-AUTH-002"
+      ],
+      "related_codes": [
+        "API-033",
+        "API-034",
+        "API-035",
+        "API-036",
+        "M07",
+        "ADR-005"
+      ],
+      "acceptance_criteria": [
+        "Public tramites listing and detail endpoints work without auth",
+        "Request creation validates citizen data",
+        "Canonical route per ADR-005 is implemented"
+      ],
+      "required_tests": [
+        "test_portal_tramites",
+        "test_portal_request_creation"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-OIRS-001",
+      "title": "Implement OIRS endpoints",
+      "description": "Implement OIRS: GET /api/v1/oirs/cases, POST, GET /api/v1/oirs/cases/{id}, PUT with anonymous contact fields per ADR-009 (API-037, API-038, M08)",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "decisions.json",
+        "endpoints_catalog.json"
+      ],
+      "outputs": [
+        "backend/controllers/oirs/"
+      ],
+      "dependencies": [
+        "TASK-API-AUTH-001"
+      ],
+      "related_codes": [
+        "API-037",
+        "API-038",
+        "M08",
+        "ADR-009"
+      ],
+      "acceptance_criteria": [
+        "OIRS endpoints handle both authenticated and anonymous submissions",
+        "Contact fields are required for anonymous submissions",
+        "Anonymous validation enforces name + (email or phone) + consent"
+      ],
+      "required_tests": [
+        "test_oirs_authenticated",
+        "test_oirs_anonymous",
+        "test_oirs_contact_validation"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-REPORT-001",
+      "title": "Implement reports and notifications endpoints",
+      "description": "Implement reporting: GET /api/v1/reports/documents, GET /api/v1/reports/expedients and notifications: GET /api/v1/notifications, PUT /api/v1/notifications/{id}/read (API-039, API-040, M09, M10)",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "endpoints_catalog.json",
+        "business_rules_catalog.json"
+      ],
+      "outputs": [
+        "backend/controllers/reports/",
+        "backend/controllers/notifications/"
+      ],
+      "dependencies": [
+        "TASK-API-AUTH-001"
+      ],
+      "related_codes": [
+        "API-039",
+        "API-040",
+        "M09",
+        "M10"
+      ],
+      "acceptance_criteria": [
+        "Report endpoints return aggregated data",
+        "Notification endpoints support read/unread status"
+      ],
+      "required_tests": [
+        "test_reports_endpoints",
+        "test_notifications_crud"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-ADMIN-001",
+      "title": "Implement admin procedure-types endpoints",
+      "description": "Add GET/POST/PUT /api/v1/admin/procedure-types endpoints per ADR-002 for P-10 screen support",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "decisions.json"
+      ],
+      "outputs": [
+        "backend/controllers/admin/procedure-types.js"
+      ],
+      "dependencies": [
+        "TASK-API-AUTH-001",
+        "TASK-DB-PORTAL-001"
+      ],
+      "related_codes": [
+        "ADR-002"
+      ],
+      "acceptance_criteria": [
+        "Admin can list, create, and update procedure types",
+        "Endpoints require admin role"
+      ],
+      "required_tests": [
+        "test_admin_procedure_types",
+        "test_admin_procedure_types_authorization"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-ADMIN-002",
+      "title": "Implement admin external-entities endpoints",
+      "description": "Add GET/POST/PUT /api/v1/admin/external-entities endpoints per ADR-003 for P-11 screen support",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "decisions.json"
+      ],
+      "outputs": [
+        "backend/controllers/admin/external-entities.js"
+      ],
+      "dependencies": [
+        "TASK-API-AUTH-001"
+      ],
+      "related_codes": [
+        "ADR-003"
+      ],
+      "acceptance_criteria": [
+        "Admin can list, create, and update external entities",
+        "Endpoints require admin role"
+      ],
+      "required_tests": [
+        "test_admin_external_entities",
+        "test_admin_external_entities_authorization"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-SECURITY-001",
+      "title": "Implement RBAC middleware",
+      "description": "Implement role-based access control middleware that validates JWT, extracts roles, and enforces permission checks on all protected routes (M01)",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "critical",
+      "inputs": [
+        "architecture.json"
+      ],
+      "outputs": [
+        "backend/middleware/auth.js",
+        "backend/middleware/rbac.js"
+      ],
+      "dependencies": [
+        "TASK-API-AUTH-001"
+      ],
+      "related_codes": [
+        "M01"
+      ],
+      "acceptance_criteria": [
+        "RBAC middleware extracts user roles from JWT",
+        "Route-level permission checks are enforced",
+        "Unauthorized requests return 403"
+      ],
+      "required_tests": [
+        "test_rbac_middleware_admin",
+        "test_rbac_middleware_unauthorized"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "L",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-API-AUDIT-001",
+      "title": "Implement audit trail middleware",
+      "description": "Implement audit middleware that logs all data-modifying operations to audit_log table",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json"
+      ],
+      "outputs": [
+        "backend/middleware/audit.js"
+      ],
+      "dependencies": [
+        "TASK-API-SECURITY-001",
+        "TASK-DB-AUDIT-001"
+      ],
+      "related_codes": [
+        "audit"
+      ],
+      "acceptance_criteria": [
+        "All POST, PUT, DELETE operations are logged",
+        "Audit records include old_values, new_values, performed_by",
+        "Read operations are not logged"
+      ],
+      "required_tests": [
+        "test_audit_middleware_logs_writes",
+        "test_audit_middleware_skips_reads"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-UI-AUTH-001",
+      "title": "Create login screens P-01, P-02, P-03",
+      "description": "Create internal login (P-01), citizen login (P-02), and password recovery (P-03) screens with form validation",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "priority": "critical",
+      "inputs": [
+        "architecture.json",
+        "screens_catalog.json"
+      ],
+      "outputs": [
+        "frontend/screens/login/",
+        "frontend/screens/citizen-login/",
+        "frontend/screens/password-recovery/"
+      ],
+      "dependencies": [
+        "TASK-ARCH-008"
+      ],
+      "related_codes": [
+        "P-01",
+        "P-02",
+        "P-03"
+      ],
+      "acceptance_criteria": [
+        "P-01 internal login renders with username and password fields",
+        "P-02 citizen login renders with RUT and password fields",
+        "P-03 password recovery renders with email field"
+      ],
+      "required_tests": [
+        "test_login_screen_renders",
+        "test_citizen_login_screen_renders",
+        "test_password_recovery_screen_renders"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-UI-ADMIN-001",
+      "title": "Create admin screens P-06 through P-11",
+      "description": "Create admin panel screens: user management (P-06), role management (P-07), department management (P-08), document types (P-09), procedure types (P-10), external entities (P-11)",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "screens_catalog.json"
+      ],
+      "outputs": [
+        "frontend/screens/admin/"
+      ],
+      "dependencies": [
+        "TASK-UI-AUTH-001"
+      ],
+      "related_codes": [
+        "P-06",
+        "P-07",
+        "P-08",
+        "P-09",
+        "P-10",
+        "P-11"
+      ],
+      "acceptance_criteria": [
+        "All six admin screens render with data tables",
+        "CRUD forms are implemented for each screen",
+        "Admin-only routes are guarded"
+      ],
+      "required_tests": [
+        "test_admin_screens_render",
+        "test_admin_crud_forms"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "L",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-UI-DOCUMENTS-001",
+      "title": "Create document screens P-12 through P-15",
+      "description": "Create document management screens: document list (P-12), document detail (P-13), document upload (P-14), document version history (P-15)",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "screens_catalog.json"
+      ],
+      "outputs": [
+        "frontend/screens/documents/"
+      ],
+      "dependencies": [
+        "TASK-UI-AUTH-001"
+      ],
+      "related_codes": [
+        "P-12",
+        "P-13",
+        "P-14",
+        "P-15"
+      ],
+      "acceptance_criteria": [
+        "P-12 lists documents with type, number, title, status",
+        "P-13 shows full document detail with version selector",
+        "P-14 upload form includes file and metadata",
+        "P-15 shows version timeline"
+      ],
+      "required_tests": [
+        "test_document_list_screen",
+        "test_document_detail_screen",
+        "test_document_upload_screen",
+        "test_document_versions_screen"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-UI-EXPEDIENT-001",
+      "title": "Create expedient screens P-19, P-20",
+      "description": "Create expedient list (P-19) and expedient detail (P-20) screens with document association display",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "screens_catalog.json"
+      ],
+      "outputs": [
+        "frontend/screens/expedients/"
+      ],
+      "dependencies": [
+        "TASK-UI-AUTH-001"
+      ],
+      "related_codes": [
+        "P-19",
+        "P-20"
+      ],
+      "acceptance_criteria": [
+        "P-19 lists expedients with status badges",
+        "P-20 shows expedient detail with associated documents"
+      ],
+      "required_tests": [
+        "test_expedient_list_screen",
+        "test_expedient_detail_screen"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-UI-CORRESPONDENCE-001",
+      "title": "Create correspondence screens P-21, P-22",
+      "description": "Create correspondence list (P-21) and correspondence detail/compose (P-22) screens",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "screens_catalog.json"
+      ],
+      "outputs": [
+        "frontend/screens/correspondence/"
+      ],
+      "dependencies": [
+        "TASK-UI-AUTH-001"
+      ],
+      "related_codes": [
+        "P-21",
+        "P-22"
+      ],
+      "acceptance_criteria": [
+        "P-21 lists correspondence with sender, recipient, date",
+        "P-22 compose form has subject, body, recipient select"
+      ],
+      "required_tests": [
+        "test_correspondence_list_screen",
+        "test_correspondence_compose_screen"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-UI-PORTAL-001",
+      "title": "Create portal screens P-23 through P-26",
+      "description": "Create public portal screens: tramite list (P-23), tramite detail (P-24), request form (P-25), request status (P-26)",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "screens_catalog.json"
+      ],
+      "outputs": [
+        "frontend/screens/portal/"
+      ],
+      "dependencies": [
+        "TASK-UI-AUTH-001"
+      ],
+      "related_codes": [
+        "P-23",
+        "P-24",
+        "P-25",
+        "P-26"
+      ],
+      "acceptance_criteria": [
+        "P-23 lists available tramites for citizens",
+        "P-24 shows tramite detail with requirements",
+        "P-25 request form validates citizen data",
+        "P-26 shows request status with timeline"
+      ],
+      "required_tests": [
+        "test_portal_tramite_list",
+        "test_portal_request_form",
+        "test_portal_status_tracking"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-UI-OIRS-001",
+      "title": "Create OIRS screens P-27, P-28",
+      "description": "Create OIRS case list (P-27) and OIRS case detail (P-28) with contact fields for anonymous submissions per ADR-009",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "priority": "high",
+      "inputs": [
+        "architecture.json",
+        "screens_catalog.json",
+        "decisions.json"
+      ],
+      "outputs": [
+        "frontend/screens/oirs/"
+      ],
+      "dependencies": [
+        "TASK-UI-AUTH-001"
+      ],
+      "related_codes": [
+        "P-27",
+        "P-28",
+        "ADR-009"
+      ],
+      "acceptance_criteria": [
+        "P-27 lists OIRS cases with status and contact info",
+        "P-28 detail shows full case with response thread",
+        "Anonymous submission shows/hides contact fields based on auth"
+      ],
+      "required_tests": [
+        "test_oirs_list_screen",
+        "test_oirs_detail_screen",
+        "test_oirs_anonymous_fields"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-UI-REPORT-001",
+      "title": "Create reports screen P-29",
+      "description": "Create reports dashboard screen (P-29) with charts and export functionality",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "priority": "medium",
+      "inputs": [
+        "architecture.json",
+        "screens_catalog.json"
+      ],
+      "outputs": [
+        "frontend/screens/reports/"
+      ],
+      "dependencies": [
+        "TASK-UI-AUTH-001"
+      ],
+      "related_codes": [
+        "P-29"
+      ],
+      "acceptance_criteria": [
+        "P-29 renders report metrics with charts",
+        "Export to CSV function is available"
+      ],
+      "required_tests": [
+        "test_reports_screen_renders",
+        "test_reports_export"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-UI-NOTIFICATION-001",
+      "title": "Create notification screens P-30",
+      "description": "Create notification inbox screen (P-30) with read/unread toggling, per ADR-001 dual-route design",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "priority": "medium",
+      "inputs": [
+        "architecture.json",
+        "screens_catalog.json",
+        "decisions.json"
+      ],
+      "outputs": [
+        "frontend/screens/notifications/"
+      ],
+      "dependencies": [
+        "TASK-UI-AUTH-001"
+      ],
+      "related_codes": [
+        "P-30",
+        "ADR-001"
+      ],
+      "acceptance_criteria": [
+        "P-30 lists notifications with read/unread styling",
+        "Mark-as-read and mark-as-unread actions work",
+        "Dual route (/intranet/notifications and /portal/notifications) implemented"
+      ],
+      "required_tests": [
+        "test_notifications_screen_renders",
+        "test_notifications_read_toggle"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-UI-ROUTER-001",
+      "title": "Implement canonical 30-route router",
+      "description": "Implement the canonical frontend router with all 30 declared routes, including intranet, portal, and admin sections with auth guards",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "priority": "critical",
+      "inputs": [
+        "architecture.json",
+        "screens_catalog.json"
+      ],
+      "outputs": [
+        "frontend/router.js",
+        "frontend/routes.js"
+      ],
+      "dependencies": [
+        "TASK-UI-AUTH-001",
+        "TASK-UI-ADMIN-001",
+        "TASK-UI-DOCUMENTS-001",
+        "TASK-UI-EXPEDIENT-001",
+        "TASK-UI-CORRESPONDENCE-001",
+        "TASK-UI-PORTAL-001",
+        "TASK-UI-OIRS-001",
+        "TASK-UI-REPORT-001",
+        "TASK-UI-NOTIFICATION-001"
+      ],
+      "related_codes": [
+        "P-01",
+        "P-02",
+        "P-03",
+        "P-04",
+        "P-05",
+        "P-06",
+        "P-07",
+        "P-08",
+        "P-09",
+        "P-10",
+        "P-11",
+        "P-12",
+        "P-13",
+        "P-14",
+        "P-15",
+        "P-16",
+        "P-17",
+        "P-18",
+        "P-19",
+        "P-20",
+        "P-21",
+        "P-22",
+        "P-23",
+        "P-24",
+        "P-25",
+        "P-26",
+        "P-27",
+        "P-28",
+        "P-29",
+        "P-30"
+      ],
+      "acceptance_criteria": [
+        "All 30 routes are registered in the router",
+        "Auth guards redirect unauthenticated users to login",
+        "Admin routes are protected by role check",
+        "404 page is shown for unknown routes"
+      ],
+      "required_tests": [
+        "test_all_routes_defined",
+        "test_auth_guards",
+        "test_admin_route_guards",
+        "test_404_unknown_route"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "L",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-QA-DB-001",
+      "title": "Database migration tests",
+      "description": "Run database migration tests verifying all tables, constraints, indexes, and seeds",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "priority": "high",
+      "inputs": [
+        "tasks.json",
+        "database migrations"
+      ],
+      "outputs": [
+        "qa_report_db.json"
+      ],
+      "dependencies": [
+        "TASK-ARCH-008"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "All migration tests pass",
+        "Seed scripts execute without errors"
+      ],
+      "required_tests": [
+        "test_db_migration_from_zero"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-QA-API-001",
+      "title": "API contract tests",
+      "description": "Run API contract tests validating all endpoints against OpenAPI specification",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "priority": "critical",
+      "inputs": [
+        "tasks.json",
+        "OpenAPI spec",
+        "backend controllers"
+      ],
+      "outputs": [
+        "qa_report_api.json"
+      ],
+      "dependencies": [
+        "TASK-ARCH-008"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "All API endpoints return expected status codes and shapes",
+        "Authentication and authorization are enforced"
+      ],
+      "required_tests": [
+        "test_api_contract_adherence"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-QA-FRONTEND-001",
+      "title": "Frontend render tests",
+      "description": "Run frontend render tests verifying all 30 screens render without errors",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "priority": "high",
+      "inputs": [
+        "tasks.json",
+        "frontend artifacts"
+      ],
+      "outputs": [
+        "qa_report_frontend.json"
+      ],
+      "dependencies": [
+        "TASK-ARCH-008"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "All 30 screens render without console errors",
+        "Navigation between screens works via router"
+      ],
+      "required_tests": [
+        "test_frontend_renders_all_routes"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-QA-E2E-001",
+      "title": "End-to-end flow tests",
+      "description": "Run critical end-to-end flows: login, document creation, expedient tracking, correspondence routing, portal request",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "priority": "critical",
+      "inputs": [
+        "tasks.json",
+        "backend artifacts",
+        "frontend artifacts"
+      ],
+      "outputs": [
+        "qa_report_e2e.json"
+      ],
+      "dependencies": [
+        "TASK-QA-DB-001",
+        "TASK-QA-API-001",
+        "TASK-QA-FRONTEND-001"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "All five critical E2E flows complete successfully",
+        "Error flows (invalid login, permission denied) are tested"
+      ],
+      "required_tests": [
+        "test_e2e_flows_master"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-QA-COVERAGE-001",
+      "title": "Coverage threshold validation",
+      "description": "Validate code coverage meets minimum thresholds for backend (80%) and frontend (70%)",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "priority": "high",
+      "inputs": [
+        "coverage reports"
+      ],
+      "outputs": [
+        "coverage_report.json"
+      ],
+      "dependencies": [
+        "TASK-QA-E2E-001"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "Backend line coverage >= 80%",
+        "Frontend line coverage >= 70%"
+      ],
+      "required_tests": [
+        "test_coverage_threshold_met"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-QA-ACCEPTANCE-001",
+      "title": "Acceptance criteria verification",
+      "description": "Verify all acceptance criteria across every task are met and documented",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "priority": "critical",
+      "inputs": [
+        "tasks.json",
+        "all artifacts"
+      ],
+      "outputs": [
+        "acceptance_report.json"
+      ],
+      "dependencies": [
+        "TASK-QA-E2E-001"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "Every task has all acceptance criteria verified",
+        "Any failed criteria are documented with reasons"
+      ],
+      "required_tests": [
+        "test_acceptance_criteria_verified"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    },
+    {
+      "task_id": "TASK-QA-READINESS-001",
+      "title": "EC2 deploy readiness preparation",
+      "description": "Prepare EC2 deployment readiness: verify build, lint, test, and configuration for production-like environment",
+      "agent_id": "agent.qa_release",
+      "phase": "release",
+      "priority": "medium",
+      "inputs": [
+        "qa_reports",
+        "coverage_report",
+        "acceptance_report"
+      ],
+      "outputs": [
+        "deploy_readiness.json",
+        "health_check.json"
+      ],
+      "dependencies": [
+        "TASK-QA-ACCEPTANCE-001",
+        "TASK-QA-COVERAGE-001"
+      ],
+      "related_codes": [],
+      "acceptance_criteria": [
+        "Build completes without errors",
+        "Lint passes with zero warnings",
+        "All test suites pass",
+        "Deployment checklist is complete"
+      ],
+      "required_tests": [
+        "test_deploy_readiness_checks"
+      ],
+      "required_gates": [],
+      "estimated_complexity": "M",
+      "status": "planned"
+    }
+  ]
+}

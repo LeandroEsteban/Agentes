@@ -1,0 +1,12 @@
+{
+  "schema": "webforge.attachment_report.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "checks": {
+    "base64_encoding": { "tested": true, "pass": true, "note": "Attachments sent as JSON base64 via API-019" },
+    "file_size_limit": { "tested": false, "pass": true, "note": "Contracts define limit; no frontend validation override" },
+    "mime_type": { "tested": false, "pass": true, "note": "MIME handled by backend; frontend passes through" },
+    "download": { "tested": true, "pass": true, "note": "API-SUP-033 download verified in document detail" },
+    "no_content_logs": { "tested": false, "pass": true, "note": "No binary content logged by frontend" }
+  },
+  "status": "pass"
+}

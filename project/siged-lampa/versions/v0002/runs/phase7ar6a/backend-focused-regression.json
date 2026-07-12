@@ -1,0 +1,7 @@
+{
+  "status": "blocked",
+  "command": "npm.cmd run test:api",
+  "passed": 121,
+  "failed": 1,
+  "failure": "pre-existing audit assertion for oirs_anonymous_message_created missing actor"
+}

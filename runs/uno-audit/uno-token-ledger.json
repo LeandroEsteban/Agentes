@@ -1,0 +1,65 @@
+{
+  "method": "approx_tokens = text_chars / 4; command/model runtime tokens unavailable locally, so this is an evidence-size estimate plus manual interaction estimate.",
+  "source_inventory_tokens": 39755,
+  "spec_markdown_tokens": 34523,
+  "estimated_agent_analysis_tokens_this_turn": 18000,
+  "estimated_total_tokens_this_audit": 57755,
+  "inventory": [
+    {
+      "path": "projects/uno/ANEXO_N°3.docx",
+      "text_chars": 798,
+      "approx_tokens": 200,
+      "extraction": "python-docx",
+      "pages": null
+    },
+    {
+      "path": "projects/uno/ANEXO_N°4.docx",
+      "text_chars": 1077,
+      "approx_tokens": 269,
+      "extraction": "python-docx",
+      "pages": null
+    },
+    {
+      "path": "projects/uno/ANEXO_N°5.docx",
+      "text_chars": 1855,
+      "approx_tokens": 464,
+      "extraction": "python-docx",
+      "pages": null
+    },
+    {
+      "path": "projects/uno/ANEXO_N°6.docx",
+      "text_chars": 3475,
+      "approx_tokens": 869,
+      "extraction": "python-docx",
+      "pages": null
+    },
+    {
+      "path": "projects/uno/ANEXO_N°7.pdf",
+      "text_chars": 12314,
+      "approx_tokens": 3078,
+      "extraction": "pypdf",
+      "pages": 7
+    },
+    {
+      "path": "projects/uno/ANEXO_N°8.pdf",
+      "text_chars": 1343,
+      "approx_tokens": 336,
+      "extraction": "pypdf",
+      "pages": 1
+    },
+    {
+      "path": "projects/uno/Rex._N°997-2023_aprueba_bases-mp.pdf",
+      "text_chars": 63,
+      "approx_tokens": 16,
+      "extraction": "pypdf",
+      "pages": 64
+    },
+    {
+      "path": "projects/uno/especificacion_requerimientos_funcionales-2.md",
+      "text_chars": 138091,
+      "approx_tokens": 34523,
+      "extraction": "text",
+      "pages": null
+    }
+  ]
+}

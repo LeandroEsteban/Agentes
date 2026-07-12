@@ -1,0 +1,12 @@
+{
+  "event":"oirs_anonymous_message_created",
+  "operation":"POST /api/v1/public/oirs/{caseId}/messages",
+  "authenticated_actor_expected":false,
+  "current_record":{"event_name":"oirs_anonymous_message_created","entity_type":"oirs_case","actor_user_id":null,"actor_citizen_id":null,"payload":{"anonymous":true,"request_id":"request context"}},
+  "test_expectation":{"actor_user_id":null,"actor_citizen_id":null,"entity_type":"oirs_case","anonymous":true,"request_id":true,"tracking_token_absent":true,"message_body_absent":true},
+  "schema_constraints":{"actor_user_id":"nullable FK users(id)","actor_citizen_id":"nullable FK citizen_accounts(id)","entity_type":"not null","module_code":"not null","payload_json":"JSONB"},
+  "business_rules":["El mensaje publico anonimo se autoriza con x-oirs-tracking-token sin bearer token.","La auditoria conserva caso, evento, request_id y contexto anonymous sin identidad inventada.","El token plano, su hash y el cuerpo sensible no se auditan."],
+  "architectural_decisions":["El servicio OIRS llama audit.event con actor null y payload anonymous:true.","La migracion 012 permite ambos actores nulos."],
+  "classification":"outdated_test",
+  "resolution":"La prueba exige actor nulo y contexto verificable; el servicio ya cumplia el contrato. Se agregó una regresion que crea el mensaje anonimo real en PostgreSQL."
+}

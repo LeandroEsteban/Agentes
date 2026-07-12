@@ -1,0 +1,2 @@
+{"tool":"npm.cmd run qa:verify","result":"pass"}
+{"tool":"npm.cmd run test:e2e","result":"timeout"}

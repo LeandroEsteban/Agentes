@@ -1,0 +1,7 @@
+{
+  "status": "blocked",
+  "blockers": [
+    "Frontend unit/coverage regression: 5 failures.",
+    "Backend focused API regression: 1 failure."
+  ]
+}

@@ -1,0 +1,24 @@
+﻿{
+    "items":  [
+                  {
+                      "priority":  "medium",
+                      "description":  "WebForge CLI integration for normalize/plan/tools validate",
+                      "id":  "7B-001"
+                  },
+                  {
+                      "priority":  "low",
+                      "description":  "Evaluar PATCH parcial o reemplazo por PUT en contenido publico",
+                      "id":  "7B-002"
+                  },
+                  {
+                      "priority":  "low",
+                      "description":  "Backend coverage improvement on legacy repositories",
+                      "id":  "7B-003"
+                  },
+                  {
+                      "priority":  "low",
+                      "description":  "Historical baseline for coverage tracking",
+                      "id":  "7B-004"
+                  }
+              ]
+}

@@ -1,0 +1,1 @@
+{"status":"blocked","blockers":["Docker Desktop daemon unavailable, preventing PostgreSQL QA startup.","Backend focused/full/coverage and E2E-01 to E2E-05 require the PostgreSQL QA stack."]}

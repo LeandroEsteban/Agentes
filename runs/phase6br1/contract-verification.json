@@ -1,0 +1,18 @@
+{
+  "schema_version": "webforge.contract_verification.v1",
+  "phase": "6B-R1",
+  "contract": "contract-api-openapi-v0002.json",
+  "operations_total": 98,
+  "operations_verified": 98,
+  "operations_pending": 0,
+  "consumed": 76,
+  "not_required_by_ui": 20,
+  "technical": 2,
+  "legacy_only": 1,
+  "validation_resolutions": [
+    {"code":"VAL-030","decision":"not_applicable_to_frontend","note":"No API contract for PDF generation/verification exists"},
+    {"code":"VAL-038","decision":"superseded_by_accepted_architecture","note":"Physical signature not in contract; academic_simulation accepted"}
+  ],
+  "false_implementations_detected": 0,
+  "note": "All 98 operations classified in operation-consumption.json. Zero false implementations detected through verification against contract."
+}

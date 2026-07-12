@@ -1,0 +1,13 @@
+{
+  "status": "incomplete",
+  "critical": [],
+  "high": [
+    {
+      "id": "QA-DEF-E2E-001",
+      "summary": "Internal E2E login wait regex matches login route before authentication completes."
+    }
+  ],
+  "unexpected_500_503": [],
+  "cors_errors": [],
+  "note": "Capture was not completed because the final suite timed out."
+}

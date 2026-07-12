@@ -1,0 +1,66 @@
+{
+  "schema_version": "webforge.phase3.partial_state_report.v1",
+  "phase": "phase3-completion",
+  "timestamp": "2026-07-11T00:00:00Z",
+  "execution_files": {
+    "__init__.py": {"exists": true, "size": 414, "importable": true, "status": "complete"},
+    "models.py": {"exists": true, "size": 2502, "importable": true, "status": "incomplete",
+      "missing_types": ["ToolPolicy", "WorkspaceChange", "ChangeSet", "WorkspaceSnapshot", "RollbackResult", "PromotionRequest", "PromotionResult", "RepairCycle", "Phase3GateResult"]},
+    "permissions.py": {"exists": true, "size": 3357, "importable": true, "status": "complete"},
+    "filesystem.py": {"exists": true, "size": 4858, "importable": true, "status": "complete"},
+    "process.py": {"exists": true, "size": 3610, "importable": true, "status": "complete"},
+    "runner.py": {"exists": true, "size": 6052, "importable": true, "status": "complete"},
+    "handoffs.py": {"exists": true, "size": 3270, "importable": true, "status": "complete"},
+    "repair.py": {"exists": true, "size": 3530, "importable": true, "status": "complete"},
+    "gates_phase3.py": {"exists": true, "size": 4706, "importable": true, "status": "complete"},
+    "report.py": {"exists": true, "size": 3490, "importable": true, "status": "complete"},
+    "logs.py": {"exists": false, "status": "missing"}
+  },
+  "workspace_files": {
+    "__init__.py": {"exists": true, "size": 378, "importable": true, "status": "complete"},
+    "editor.py": {"exists": true, "size": 2785, "importable": true, "status": "complete"},
+    "changes.py": {"exists": true, "size": 2240, "importable": true, "status": "complete"},
+    "snapshots.py": {"exists": true, "size": 5598, "importable": true, "status": "complete"},
+    "promotion.py": {"exists": true, "size": 4664, "importable": true, "status": "complete"},
+    "validation.py": {"exists": true, "size": 3253, "importable": true, "status": "complete"}
+  },
+  "test_files": {
+    "test_webforge_runtime.py": {"tests": 9, "status": "complete"},
+    "test_planning.py": {"tests": 55, "status": "complete"},
+    "test_normalization.py": {"tests": 2, "status": "complete"},
+    "test_phase01_safety.py": {"tests": 4, "status": "complete"},
+    "test_execution.py": {"exists": false, "status": "missing"},
+    "test_workspace.py": {"exists": false, "status": "missing"}
+  },
+  "cli_commands": {
+    "run": {"exists": true},
+    "principles": {"exists": true},
+    "skills": {"exists": true},
+    "toolreg": {"exists": true, "alias_for": "tools"},
+    "doctor": {"exists": true},
+    "normalize": {"exists": true},
+    "plan": {"exists": true},
+    "tools": {"exists": true, "subcommands": ["validate"]},
+    "workspace": {"exists": true, "subcommands": ["snapshot", "verify", "rollback"]}
+  },
+  "cli_issues": [
+    "tools command requires validate subcommand but original tools command showed registry",
+    "toolreg is separate command instead of alias",
+    "tools validate exists but no tools list equivalent"
+  ],
+  "missing_components": [
+    "execution/logs.py",
+    "docs/HERRAMIENTAS_Y_GATES.md",
+    "docs/EDITOR_INCREMENTAL_Y_ROLLBACK.md",
+    "docs/EJECUCION_SEGURA.md",
+    "Phase3 comprehensive tests (test_execution.py, test_workspace.py)",
+    "ToolPolicy model type"
+  ],
+  "compatibility_issues": [
+    "tools command missing standalone mode (showing registry)",
+    "toolreg should be alias for tools, not separate command using different logic"
+  ],
+  "total_tests": 70,
+  "tests_passing": 70,
+  "baseline_unchanged": true
+}

@@ -1,0 +1,211 @@
+{
+  "generated_at": "2026-07-11T08:09:44Z",
+  "items": [
+    {
+      "code": "UC-01",
+      "description": "Iniciar sesion en intranet",
+      "module": null,
+      "name": "Iniciar sesion en intranet",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Administrador o Funcionario"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 169,
+        "line_start": 157,
+        "section": "UC-01 Iniciar sesion en intranet"
+      }
+    },
+    {
+      "code": "UC-02",
+      "description": "Crear documento institucional",
+      "module": null,
+      "name": "Crear documento institucional",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Funcionario"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 179,
+        "line_start": 170,
+        "section": "UC-02 Crear documento institucional"
+      }
+    },
+    {
+      "code": "UC-03",
+      "description": "Enviar documento a revision",
+      "module": null,
+      "name": "Enviar documento a revision",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Funcionario"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 189,
+        "line_start": 180,
+        "section": "UC-03 Enviar documento a revision"
+      }
+    },
+    {
+      "code": "UC-04",
+      "description": "Responder revision de documento",
+      "module": null,
+      "name": "Responder revision de documento",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Revisor"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 199,
+        "line_start": 190,
+        "section": "UC-04 Responder revision de documento"
+      }
+    },
+    {
+      "code": "UC-05",
+      "description": "Solicitar visto bueno y firma",
+      "module": null,
+      "name": "Solicitar visto bueno y firma",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Funcionario o Jefatura"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 209,
+        "line_start": 200,
+        "section": "UC-05 Solicitar visto bueno y firma"
+      }
+    },
+    {
+      "code": "UC-06",
+      "description": "Consultar expediente",
+      "module": null,
+      "name": "Consultar expediente",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Funcionario"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 218,
+        "line_start": 210,
+        "section": "UC-06 Consultar expediente"
+      }
+    },
+    {
+      "code": "UC-07",
+      "description": "Registrar correspondencia",
+      "module": null,
+      "name": "Registrar correspondencia",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Oficina de partes"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 228,
+        "line_start": 219,
+        "section": "UC-07 Registrar correspondencia"
+      }
+    },
+    {
+      "code": "UC-08",
+      "description": "Responder correspondencia con documento vinculado",
+      "module": null,
+      "name": "Responder correspondencia con documento vinculado",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Funcionario"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 237,
+        "line_start": 229,
+        "section": "UC-08 Responder correspondencia con documento vinculado"
+      }
+    },
+    {
+      "code": "UC-09",
+      "description": "Iniciar tramite ciudadano",
+      "module": null,
+      "name": "Iniciar tramite ciudadano",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Ciudadano"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 247,
+        "line_start": 238,
+        "section": "UC-09 Iniciar tramite ciudadano"
+      }
+    },
+    {
+      "code": "UC-10",
+      "description": "Consultar estado de solicitud ciudadana",
+      "module": null,
+      "name": "Consultar estado de solicitud ciudadana",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Ciudadano"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 256,
+        "line_start": 248,
+        "section": "UC-10 Consultar estado de solicitud ciudadana"
+      }
+    },
+    {
+      "code": "UC-11",
+      "description": "Ingresar solicitud OIRS",
+      "module": null,
+      "name": "Ingresar solicitud OIRS",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Ciudadano"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 266,
+        "line_start": 257,
+        "section": "UC-11 Ingresar solicitud OIRS"
+      }
+    },
+    {
+      "code": "UC-12",
+      "description": "Gestionar dashboard y reportes",
+      "module": null,
+      "name": "Gestionar dashboard y reportes",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "Administrador o Analista"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 315,
+        "line_start": 267,
+        "section": "UC-12 Gestionar dashboard y reportes"
+      }
+    }
+  ],
+  "project_id": "siged-lampa",
+  "schema_version": "webforge.catalog.use-cases.v1",
+  "source_documents": [
+    "Especificacion_Funcional_SIGED_Lampa.md",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "Inventario_Endpoints_SIGED_Lampa.md",
+    "Modelo_ER_Detallado_SIGED_Lampa.md"
+  ],
+  "source_hashes": {
+    "Especificacion_Funcional_SIGED_Lampa.md": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24",
+    "Inventario_Endpoints_SIGED_Lampa.md": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d",
+    "Modelo_ER_Detallado_SIGED_Lampa.md": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282"
+  }
+}

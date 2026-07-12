@@ -1,0 +1,204 @@
+{
+  "deploys": 0,
+  "dev_materialization": {
+    "api": "webforge.isolation.p12_inv.v1",
+    "status": "pass",
+    "writes": [
+      {
+        "action": "updated",
+        "bytes": 540,
+        "path": "README.md",
+        "sha256": "sha256:5d8cf5cf968948d29810fd3dc25e9fb1219c56be5af6774e0b1743eedd519167"
+      },
+      {
+        "action": "updated",
+        "bytes": 456,
+        "path": "package.json",
+        "sha256": "sha256:9413309305456e39cbed2e60e60d9b2c8de23f6f060f1ec00b644ade6db3f7c4"
+      },
+      {
+        "action": "updated",
+        "bytes": 153,
+        "path": ".env.example",
+        "sha256": "sha256:422bfe5a705747190c4000e8d0bb7ff694c2f7ae41b8bf0b7537e54e282a8ef7"
+      },
+      {
+        "action": "updated",
+        "bytes": 214,
+        "path": "Dockerfile",
+        "sha256": "sha256:0da5cf7a629865508f90c856fb1c13c58ba719d2f32d7fe2f8895ac2f12fc33b"
+      },
+      {
+        "action": "updated",
+        "bytes": 455,
+        "path": "docker-compose.yml",
+        "sha256": "sha256:bb8003ea1377fbb660fb79cdaf8c0e5648662fa62eeb0ed6b55b297df0a5deb8"
+      },
+      {
+        "action": "updated",
+        "bytes": 25,
+        "path": "backend/server.js",
+        "sha256": "sha256:00ca67db577eddf67a4cc861fdd59d4a3d9940fa6f1140e95c3e5520b717b83c"
+      },
+      {
+        "action": "updated",
+        "bytes": 7964,
+        "path": "backend/src/server.js",
+        "sha256": "sha256:5c70651850c496497016c9118ce636dd5cb3ce3f5472073fc606b19e84700f86"
+      },
+      {
+        "action": "updated",
+        "bytes": 63432,
+        "path": "backend/src/data.js",
+        "sha256": "sha256:cd965a0ca7da15c323ce8c8a67769ca8e1df4c460c5e09d66cdd31d290b02721"
+      },
+      {
+        "action": "updated",
+        "bytes": 47417,
+        "path": "data/seed.json",
+        "sha256": "sha256:9a3d6420ac3529c1c1d290e33410db34f2e62470cf0832e15fbb8ec5f02e02f0"
+      },
+      {
+        "action": "updated",
+        "bytes": 7480,
+        "path": "data/api-catalog.json",
+        "sha256": "sha256:2485f00a84c3e3dfa07b85f341eef7f5b7f84041bc03837d8b7e18a7960bd9f1"
+      },
+      {
+        "action": "updated",
+        "bytes": 3965,
+        "path": "data/traceability.json",
+        "sha256": "sha256:c2812861687af46ba10f1be86d901fd96275b6ddced67d0cdde8e79b21af0492"
+      },
+      {
+        "action": "updated",
+        "bytes": 57175,
+        "path": "tasks/product-backlog.json",
+        "sha256": "sha256:be174701aaeeb0cc3d655537939307f9a1846995fcdafd2944b0905301dc9324"
+      },
+      {
+        "action": "updated",
+        "bytes": 13278,
+        "path": "tasks/implementation-tasks.md",
+        "sha256": "sha256:329500519261e965c7c622196033c7f1aba2b85780b8bbb61e83b988eb456efe"
+      },
+      {
+        "action": "updated",
+        "bytes": 325,
+        "path": "frontend/index.html",
+        "sha256": "sha256:96bf817e32a03907b5686b6b94aadd67d1a88702a8094e5e1fffa60f6fffb665"
+      },
+      {
+        "action": "updated",
+        "bytes": 79711,
+        "path": "frontend/src/app.js",
+        "sha256": "sha256:97864aef4b836e1b156b13300ce91454094776eaa238b4af97ea5a240640a3d1"
+      },
+      {
+        "action": "updated",
+        "bytes": 4324,
+        "path": "frontend/assets/styles.css",
+        "sha256": "sha256:b8f0a9c1be81d66b80e39458ef7b15d5d6af7457930573c0d8428d831d5436a2"
+      },
+      {
+        "action": "updated",
+        "bytes": 79711,
+        "path": "frontend/assets/app.js",
+        "sha256": "sha256:97864aef4b836e1b156b13300ce91454094776eaa238b4af97ea5a240640a3d1"
+      },
+      {
+        "action": "updated",
+        "bytes": 325,
+        "path": "app/index.html",
+        "sha256": "sha256:96bf817e32a03907b5686b6b94aadd67d1a88702a8094e5e1fffa60f6fffb665"
+      },
+      {
+        "action": "updated",
+        "bytes": 4324,
+        "path": "app/assets/styles.css",
+        "sha256": "sha256:b8f0a9c1be81d66b80e39458ef7b15d5d6af7457930573c0d8428d831d5436a2"
+      },
+      {
+        "action": "updated",
+        "bytes": 79711,
+        "path": "app/assets/app.js",
+        "sha256": "sha256:97864aef4b836e1b156b13300ce91454094776eaa238b4af97ea5a240640a3d1"
+      },
+      {
+        "action": "updated",
+        "bytes": 47417,
+        "path": "app/data/seed.json",
+        "sha256": "sha256:9a3d6420ac3529c1c1d290e33410db34f2e62470cf0832e15fbb8ec5f02e02f0"
+      },
+      {
+        "action": "updated",
+        "bytes": 7480,
+        "path": "app/data/api-catalog.json",
+        "sha256": "sha256:2485f00a84c3e3dfa07b85f341eef7f5b7f84041bc03837d8b7e18a7960bd9f1"
+      },
+      {
+        "action": "updated",
+        "bytes": 3965,
+        "path": "app/data/traceability.json",
+        "sha256": "sha256:c2812861687af46ba10f1be86d901fd96275b6ddced67d0cdde8e79b21af0492"
+      },
+      {
+        "action": "updated",
+        "bytes": 8793,
+        "path": "db/schema.sql",
+        "sha256": "sha256:f990c63d19be1e1a7d8c050fd01a5897144f99acd4b2c53860d13728040c0f2e"
+      },
+      {
+        "action": "updated",
+        "bytes": 8793,
+        "path": "db/migrations/001_initial.sql",
+        "sha256": "sha256:f990c63d19be1e1a7d8c050fd01a5897144f99acd4b2c53860d13728040c0f2e"
+      },
+      {
+        "action": "updated",
+        "bytes": 1654,
+        "path": "db/seeds/001_demo.sql",
+        "sha256": "sha256:75816bb8bc5e169e23ca9471defad5b5cabb2f55ca823d7076174c591ec740ea"
+      },
+      {
+        "action": "updated",
+        "bytes": 766,
+        "path": "docs/SIGED_IMPLEMENTATION_PLAN.md",
+        "sha256": "sha256:26b2c66899adc56525ba32cf9be069cb10f5f21ff96d89b50aefc819e737d909"
+      },
+      {
+        "action": "updated",
+        "bytes": 2487,
+        "path": "scripts/verify_siged_bundle.py",
+        "sha256": "sha256:cf42383158b96a3dbc262049a826febb463003b56f887bb7827ce1c095c64004"
+      },
+      {
+        "action": "updated",
+        "bytes": 32950,
+        "path": "sources/Especificacion_Funcional_SIGED_Lampa.md",
+        "sha256": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24"
+      },
+      {
+        "action": "updated",
+        "bytes": 19425,
+        "path": "sources/Inventario_Endpoints_SIGED_Lampa.md",
+        "sha256": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245"
+      },
+      {
+        "action": "updated",
+        "bytes": 10539,
+        "path": "sources/Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "sha256": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d"
+      },
+      {
+        "action": "updated",
+        "bytes": 17559,
+        "path": "sources/Modelo_ER_Detallado_SIGED_Lampa.md",
+        "sha256": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282"
+      }
+    ]
+  },
+  "external_writes": 0,
+  "out_of_scope_changes": 0,
+  "scope": "webforge runtime local artifacts plus isolated DEV workspace"
+}

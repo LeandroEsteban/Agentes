@@ -1,0 +1,19 @@
+﻿{
+    "normalize":  {
+                      "status":  "not_available",
+                      "note":  "webforge CLI tool not available in this Python environment"
+                  },
+    "plan":  {
+                 "status":  "not_available"
+             },
+    "pytest":  {
+                   "status":  "pass",
+                   "failed":  0,
+                   "passed":  75
+               },
+    "note":  "75/75 Python tests pass. WebForge CLI (normalize/plan/tools validate) not available in this Python environment - requires dedicated WebForge installation. Documented as limitation for 7B.",
+    "tools_validate":  {
+                           "status":  "not_available"
+                       },
+    "overall":  "pass_with_limitation"
+}

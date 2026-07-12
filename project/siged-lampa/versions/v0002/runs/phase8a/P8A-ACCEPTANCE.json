@@ -1,0 +1,28 @@
+{
+  "phase": "8A",
+  "decision": "ACCEPTED",
+  "basis": "All 12/12 gates PASS. Docker compose config valid. Backend and frontend Docker images build and verify correctly. No secrets leaked. All documentation complete.",
+  "limitations": [
+    "E2E tests are NOT executed as part of the deployment pipeline (documented in RUNBOOK). Requires manual verification or separate CI job.",
+    "Baseline historico not verifiable in this phase (carried from Phase 7A).",
+    "WebForge CLI not available for load testing (carried from Phase 7A)."
+  ],
+  "blockers_for_8B": [
+    {
+      "id": "8B-001",
+      "description": "Agregar notificaciones post-deployment (Slack/email) al workflow de GitHub Actions"
+    },
+    {
+      "id": "8B-002",
+      "description": "Análisis de costos EC2 y estimación mensual de infraestructura"
+    },
+    {
+      "id": "8B-003",
+      "description": "Configurar monitoreo básico (CloudWatch o similar) para los servicios Docker"
+    },
+    {
+      "id": "8B-004",
+      "description": "Ejecutar E2E completo en entorno production-like antes de promoción a producción real"
+    }
+  ]
+}

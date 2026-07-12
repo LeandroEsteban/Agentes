@@ -1,0 +1,8 @@
+{
+  "blockers": [
+    "23 screens remain partial",
+    "VAL-030 and VAL-038 have no implementable backend contract",
+    "No E2E runner is configured",
+    "Frontend coverage is below minimum thresholds"
+  ]
+}

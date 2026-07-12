@@ -1,0 +1,140 @@
+[
+  {
+    "screen_code": "P-03", "route": "/recover", "component": "ScreenPage", "domain": "auth", "actor": "usuario",
+    "permissions": [], "current_status": "partial",
+    "missing_elements": { "query": false, "mutation": true, "form": true, "validation": true, "loading": true, "empty": false, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-003"], "implementation_plan": ["Create RecoverPage with email form, validation, API-003 mutation, success/error states, navigation"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-04", "route": "/intranet/profile", "component": "ProfilePage", "domain": "auth", "actor": "funcionario",
+    "permissions": [], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": true, "loading": true, "empty": false, "error": true, "permission": false, "navigation": false, "tests": true },
+    "required_operations": ["API-004", "API-005"], "implementation_plan": ["Create ProfilePage with GET /profile/me data, editable form, PUT mutation, loading/error states, form validation"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-05", "route": "/intranet", "component": "DashboardPage", "domain": "dashboard", "actor": "funcionario",
+    "permissions": [], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": false, "form": false, "validation": false, "loading": true, "empty": true, "error": true, "permission": false, "navigation": false, "tests": true },
+    "required_operations": ["API-039"], "implementation_plan": ["Create DashboardPage with GET /reports/dashboard, metric cards, loading/empty/error states"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-06", "route": "/intranet/admin/users", "component": "UsersPage", "domain": "admin", "actor": "administrador",
+    "permissions": ["admin.access"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": true, "loading": true, "empty": true, "error": true, "permission": false, "navigation": false, "tests": true },
+    "required_operations": ["API-006", "API-007", "API-008"], "implementation_plan": ["Create UsersPage with list, create form, edit, validation, loading/empty/error states"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-07", "route": "/intranet/admin/roles", "component": "RolesPage", "domain": "admin", "actor": "administrador",
+    "permissions": ["admin.access"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": true, "loading": true, "empty": true, "error": true, "permission": false, "navigation": false, "tests": true },
+    "required_operations": ["API-009", "API-010"], "implementation_plan": ["Create RolesPage with list, role editor with permission checkboxes, PUT permissions mutation"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-08", "route": "/intranet/admin/departments", "component": "DepartmentsPage", "domain": "admin", "actor": "administrador",
+    "permissions": ["departments.view"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": true, "loading": true, "empty": true, "error": true, "permission": false, "navigation": false, "tests": true },
+    "required_operations": ["API-011", "API-012"], "implementation_plan": ["Create DepartmentsPage with list, create/edit form, validation, loading/empty/error states"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-09", "route": "/intranet/admin/document-types", "component": "DocumentTypesPage", "domain": "admin", "actor": "administrador",
+    "permissions": ["admin.access"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": true, "loading": true, "empty": true, "error": true, "permission": false, "navigation": false, "tests": true },
+    "required_operations": ["API-013", "API-014"], "implementation_plan": ["Create DocumentTypesPage with list, create/form, validation, states"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-12", "route": "/intranet/documents", "component": "DocumentsListPage", "domain": "documents", "actor": "funcionario",
+    "permissions": ["documents.view"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": false, "form": false, "validation": false, "loading": true, "empty": true, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-015"], "implementation_plan": ["Create DocumentsListPage with GET /documents, filters, pagination, navigation to detail"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-13", "route": "/intranet/documents/new", "component": "DocumentCreatePage", "domain": "documents", "actor": "funcionario",
+    "permissions": ["documents.create"], "current_status": "partial",
+    "missing_elements": { "query": false, "mutation": true, "form": true, "validation": true, "loading": true, "empty": false, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-016", "API-013", "API-011", "API-SUP-001"], "implementation_plan": ["Create DocumentCreatePage with full form, type/department selectors from real data, POST mutation, validation, navigation after success"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-14", "route": "/intranet/documents/:documentId", "component": "DocumentDetailPage", "domain": "documents", "actor": "funcionario",
+    "permissions": ["documents.view"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": false, "validation": false, "loading": true, "empty": true, "error": true, "permission": false, "navigation": false, "tests": true },
+    "required_operations": ["API-017", "API-018", "API-SUP-036", "API-SUP-008", "API-019", "API-SUP-033", "API-SUP-034", "API-SUP-035"], "implementation_plan": ["Create DocumentDetailPage with GET document, history timeline, attachment list/upload, comments"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-15", "route": "/intranet/documents/:documentId/versions", "component": "DocumentVersionsPage", "domain": "documents", "actor": "funcionario",
+    "permissions": ["documents.view"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": true, "loading": true, "empty": true, "error": true, "permission": false, "navigation": false, "tests": true },
+    "required_operations": ["API-SUP-007", "API-020"], "implementation_plan": ["Create DocumentVersionsPage with versions list, create version form, loading/empty/error"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-16", "route": "/intranet/reviews", "component": "ReviewsPage", "domain": "documents", "actor": "revisor",
+    "permissions": ["documents.review"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": true, "loading": true, "empty": true, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-SUP-037", "API-022"], "implementation_plan": ["Create ReviewsPage with pending review list, review reply form, decision select, loading/empty/error"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-17", "route": "/intranet/approvals", "component": "ApprovalsPage", "domain": "documents", "actor": "jefatura",
+    "permissions": ["documents.approve"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": true, "loading": true, "empty": true, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-SUP-019", "API-023"], "implementation_plan": ["Create ApprovalsPage with pending approvals list, approve/reject decision form, loading/empty/error"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-18", "route": "/intranet/documents/:documentId/signature", "component": "SignaturePage", "domain": "documents", "actor": "firmante",
+    "permissions": ["documents.sign"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": true, "loading": true, "empty": true, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-SUP-038", "API-024"], "implementation_plan": ["Create SignaturePage with signature info display, sign button, academic_simulation indicator, success/error states"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-19", "route": "/intranet/expedients", "component": "ExpedientsListPage", "domain": "expedients", "actor": "funcionario",
+    "permissions": ["expedients.view"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": true, "loading": true, "empty": true, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-025", "API-026"], "implementation_plan": ["Create ExpedientsListPage with list, create form, filters, pagination, navigation"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-20", "route": "/intranet/expedients/:expedientId", "component": "ExpedientDetailPage", "domain": "expedients", "actor": "funcionario",
+    "permissions": ["expedients.view"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": false, "loading": true, "empty": true, "error": true, "permission": false, "navigation": false, "tests": true },
+    "required_operations": ["API-027", "API-SUP-039", "API-028", "API-SUP-040", "API-SUP-042", "API-SUP-044"], "implementation_plan": ["Create ExpedientDetailPage with detail, timeline, documents tab, close action"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-21", "route": "/intranet/correspondence/new", "component": "CorrespondenceCreatePage", "domain": "correspondence", "actor": "oficina de partes",
+    "permissions": ["correspondence.create"], "current_status": "partial",
+    "missing_elements": { "query": false, "mutation": true, "form": true, "validation": true, "loading": true, "empty": false, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-030", "API-SUP-004"], "implementation_plan": ["Create CorrespondenceCreatePage with full form, external entity selector, POST mutation, navigation"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-22", "route": "/intranet/correspondence", "component": "CorrespondenceListPage", "domain": "correspondence", "actor": "funcionario",
+    "permissions": ["correspondence.view"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": false, "form": false, "validation": false, "loading": true, "empty": true, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-029"], "implementation_plan": ["Create CorrespondenceListPage with list, filters, pagination, navigation"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-25", "route": "/portal/requests/new/:procedureId", "component": "RequestFormPage", "domain": "citizen-requests", "actor": "ciudadano",
+    "permissions": [], "current_status": "partial",
+    "missing_elements": { "query": false, "mutation": true, "form": true, "validation": true, "loading": true, "empty": false, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-034", "API-SUP-055"], "implementation_plan": ["Enhance RequestFormPage with procedure detail load, structured form fields, attachments, double-submit prevention, navigation"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-26", "route": "/portal/requests", "component": "CitizenRequestsPage", "domain": "citizen-requests", "actor": "ciudadano",
+    "permissions": [], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": false, "form": false, "validation": false, "loading": true, "empty": true, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-035", "API-036"], "implementation_plan": ["Create CitizenRequestsPage with list, GET /citizen/requests, loading/empty/error, navigation to detail"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-27", "route": "/oirs", "component": "OirsPage", "domain": "oirs", "actor": "ciudadano",
+    "permissions": [], "current_status": "partial",
+    "missing_elements": { "query": false, "mutation": true, "form": true, "validation": true, "loading": true, "empty": false, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-037"], "implementation_plan": ["Enhance OirsPage with loading/error states during submission, navigation after success, full validation"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-28", "route": "/intranet/oirs", "component": "OirsManagementPage", "domain": "oirs", "actor": "operador OIRS",
+    "permissions": ["oirs.view"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": true, "form": true, "validation": true, "loading": true, "empty": true, "error": true, "permission": false, "navigation": true, "tests": true },
+    "required_operations": ["API-SUP-046", "API-038", "API-SUP-047", "API-SUP-048"], "implementation_plan": ["Create OirsManagementPage with case list, detail, reply form, route/status actions"], "target_status": "real"
+  },
+  {
+    "screen_code": "P-29", "route": "/intranet/reports", "component": "ReportsPage", "domain": "reports", "actor": "analista",
+    "permissions": ["reports.view"], "current_status": "partial",
+    "missing_elements": { "query": true, "mutation": false, "form": false, "validation": false, "loading": true, "empty": true, "error": true, "permission": false, "navigation": false, "tests": true },
+    "required_operations": ["API-039"], "implementation_plan": ["Create ReportsPage with dashboard data, metric cards, loading/empty/error states"], "target_status": "real"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "phase": "5",
+  "status": "blocked",
+  "gates": {
+    "pass": 3,
+    "pass_with_limitation": 5,
+    "blocked": 4
+  },
+  "critical_blockers": [
+    "F5-OPEN-001",
+    "F5-OPEN-002",
+    "F5-OPEN-003",
+    "F5-OPEN-004",
+    "F5-OPEN-005"
+  ],
+  "accepted_limitations": [
+    "F5-OPEN-006"
+  ],
+  "deferred_findings": [
+    "F5-OPEN-001",
+    "F5-OPEN-002",
+    "F5-OPEN-003",
+    "F5-OPEN-004",
+    "F5-OPEN-005",
+    "F5-OPEN-006"
+  ],
+  "recommended_next_phase": "5C contractual remediation before 6B"
+}

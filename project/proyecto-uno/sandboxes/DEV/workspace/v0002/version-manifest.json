@@ -1,0 +1,24 @@
+{
+  "project_id": "proyecto-uno",
+  "version": "v0002",
+  "purpose": "incremental product implementation with 159 UNO requirements mapped to web flows",
+  "shared_with_factory": false,
+  "frontend_template": {
+    "template_name": "PLANTILLA_FRONTEND",
+    "source": "PLANTILLA_FRONTEND",
+    "mandatory": true,
+    "applies_to": "this_version_and_DEV_QA_clones"
+  },
+  "app_entry": "app/index.html",
+  "traceability": {
+    "requirements": "traceability/requirements-ledger.json",
+    "verified": "traceability/requirements-verified.json",
+    "web_report": "traceability/web-validation-report.json"
+  },
+  "validation_commands": [
+    "python3 scripts/build_traceability.py",
+    "python3 scripts/verify_requirements.py",
+    "npx --yes --package=playwright node scripts/validate_web_flows.mjs",
+    "python3 scripts/verify_requirements.py --require-web"
+  ]
+}

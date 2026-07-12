@@ -1,0 +1,41 @@
+[
+  {
+    "validation_id": "VAL-030",
+    "source_description": "El PDF final debe existir antes de cierre.",
+    "original_assignment": "deferred_to_frontend",
+    "analysis": "The backend validation-map.json (Phase 5) records VAL-030 as 'deferred_to_frontend' with constraint 'PDF generation is a frontend concern; audit trail confirms document state' and deferred phase 7. The frontend validation-map.json confirms no API contract exists for PDF generation or final-PDF verification. The OpenAPI specification (openapi.yaml) does not expose any endpoint that generates, renders, or verifies a final PDF document. The MVP backend contract produces document metadata, versions, signatures with academic_simulation, and audit-history records, but never a PDF binary. Without a contractual endpoint that returns application/pdf, the frontend cannot implement server-side PDF generation or verification without fabricating backend capability. Client-side PDF generation would produce a document with no legal or audit value, violating the requirement 'El PDF final debe existir antes de cierre' which implies a verifiable, authoritative PDF.",
+    "contract_operations_required": [
+      "GET /api/v1/documents/{id}/pdf (or similar) returning application/pdf"
+    ],
+    "contract_operations_available": [],
+    "architectural_decisions": [
+      "ADR-007: Document storage uses JSON-like metadata; binary PDF not part of MVP contract",
+      "Phase 5 acceptance: pass_with_limitations — coverage gap accepted; PDF generation deferred to Phase 7"
+    ],
+    "resolution": "VAL-030 requires a backend endpoint that generates or verifies a final PDF document. No such endpoint exists in the v0002 OpenAPI contract. The frontend cannot implement this validation without either (a) fabricating a fake PDF (prohibited by 6B-R1 rules) or (b) implementing client-side PDF creation that would have no audit or legal value. The validation is therefore not applicable to the frontend layer under the current contractual scope. The correct resolution is to defer this validation to a future phase (7) where a backend PDF-generation contract can be designed and implemented.",
+    "resolution_status": "not_applicable_to_frontend",
+    "responsible_phase": "7",
+    "blocks_phase6b": false
+  },
+  {
+    "validation_id": "VAL-038",
+    "source_description": "Firma fisica requiere archivo adjunto.",
+    "original_assignment": "deferred_to_frontend",
+    "analysis": "The backend validation-map.json records VAL-038 as 'Not implemented in V2 scope' with constraint 'Out of scope for simulated signature mode; deferred to future phase'. The current contract for document signing (API-024: POST /api/v1/documents/{id}/signatures) uses integration_mode: academic_simulation. This mode records a digital hash-based signature but does not accept, store, or return a physical-signature attachment (scanned image, handwritten capture, etc.). There is no multipart upload endpoint, no base64 field for signature images, and no contract extension that would allow associating a physical-signature file with the academic_simulation flow. The accepted architecture (approved in Phase 5C) defines academic_simulation as the only signing mechanism for v0002.",
+    "contract_operations_required": [
+      "POST /api/v1/documents/{id}/signatures with field attachment (base64 or multipart) for physical signature file"
+    ],
+    "contract_operations_available": [
+      "API-024: POST /api/v1/documents/{id}/signatures (academic_simulation only, no attachment field)"
+    ],
+    "architectural_decisions": [
+      "ADR-013: Document signing uses academic_simulation for v0002",
+      "API-024 response includes integration_mode: academic_simulation",
+      "Phase 5 acceptance: pass_with_limitations — physical signature deferred beyond MVP"
+    ],
+    "resolution": "VAL-038 requires a physical-signature attachment (scanned or handwritten) linked to a document. The approved architecture for v0002 uses academic_simulation signing exclusively, which records a cryptographic hash but does not handle physical-signature files. No backend contract field exists for uploading or associating a physical signature image/document with a signature record. The validation is superseded by the accepted architectural decision to use academic_simulation for the v0002 scope. Physical-signature attachment would require a new contract (potentially a different endpoint or an extended version of API-024) which is out of scope for Phase 6 and has been deferred to Phase 7.",
+    "resolution_status": "superseded_by_accepted_architecture",
+    "responsible_phase": "7",
+    "blocks_phase6b": false
+  }
+]

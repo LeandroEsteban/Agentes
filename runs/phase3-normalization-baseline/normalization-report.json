@@ -1,0 +1,405 @@
+{
+  "baseline_preserved": true,
+  "counts": {
+    "actors": 9,
+    "business_rules": 60,
+    "endpoints": 40,
+    "modules": 10,
+    "screens": 30,
+    "tables": 40,
+    "use_cases": 12,
+    "validations": 100,
+    "workflows": 30
+  },
+  "finding_items": [
+    {
+      "automatically_resolved": false,
+      "category": "SOURCE_ABSOLUTE_WINDOWS_LINK",
+      "codes": [],
+      "finding_id": "NF-001",
+      "message": "Source contains an absolute Windows link; output retains only relative evidence: Especificacion_Funcional_SIGED_Lampa.md",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "SOURCE_ABSOLUTE_WINDOWS_LINK",
+      "codes": [],
+      "finding_id": "NF-002",
+      "message": "Source contains an absolute Windows link; output retains only relative evidence: Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "SOURCE_ABSOLUTE_WINDOWS_LINK",
+      "codes": [],
+      "finding_id": "NF-003",
+      "message": "Source contains an absolute Windows link; output retains only relative evidence: Inventario_Endpoints_SIGED_Lampa.md",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "SOURCE_ABSOLUTE_WINDOWS_LINK",
+      "codes": [],
+      "finding_id": "NF-004",
+      "message": "Source contains an absolute Windows link; output retains only relative evidence: Modelo_ER_Detallado_SIGED_Lampa.md",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "ENDPOINT_WITHOUT_SCREEN",
+      "codes": [],
+      "finding_id": "NF-005",
+      "message": "API-021 is not explicitly associated with a screen",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Inventario_Endpoints_SIGED_Lampa.md",
+          "line_end": 87,
+          "line_start": 87,
+          "section": "4. Matriz resumen de endpoints"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "ENDPOINT_WITHOUT_SCREEN",
+      "codes": [],
+      "finding_id": "NF-006",
+      "message": "API-026 is not explicitly associated with a screen",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Inventario_Endpoints_SIGED_Lampa.md",
+          "line_end": 92,
+          "line_start": 92,
+          "section": "4. Matriz resumen de endpoints"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "SCREEN_WITHOUT_ENDPOINT",
+      "codes": [],
+      "finding_id": "NF-007",
+      "message": "P-10 has no explicit endpoint association",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 95,
+          "line_start": 95,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "SCREEN_WITHOUT_ENDPOINT",
+      "codes": [],
+      "finding_id": "NF-008",
+      "message": "P-11 has no explicit endpoint association",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 96,
+          "line_start": 96,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "SCREEN_ROUTE_AMBIGUOUS",
+      "codes": [],
+      "finding_id": "NF-009",
+      "message": "P-30 has unresolved alternate routes",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 115,
+          "line_start": 115,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "MISSING_ADMIN_ENDPOINT",
+      "codes": [],
+      "finding_id": "NF-010",
+      "message": "P-10 has no concrete administrative endpoint",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 95,
+          "line_start": 95,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "MISSING_ADMIN_ENDPOINT",
+      "codes": [],
+      "finding_id": "NF-011",
+      "message": "P-11 has no concrete administrative endpoint",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 96,
+          "line_start": 96,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "P30_ALTERNATE_ROUTE",
+      "codes": [],
+      "finding_id": "NF-012",
+      "message": "P-30 declares alternate routes",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+          "line_end": 115,
+          "line_start": 115,
+          "section": "5. Catalogo de rutas y pantallas"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "BR017_ATTACHMENT_VERSION_GAP",
+      "codes": [],
+      "finding_id": "NF-013",
+      "message": "BR-017 requires attachment version association, but document_attachments has no version_id",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+          "line_end": 143,
+          "line_start": 143,
+          "section": "6.3 Gestion documental"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "BR021_PREVIOUS_VERSION_GAP",
+      "codes": [],
+      "finding_id": "NF-014",
+      "message": "BR-021 requires explicit previous version, but document_versions has no previous_version_id",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+          "line_end": 142,
+          "line_start": 142,
+          "section": "6.3 Gestion documental"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "DOCUMENT_NUMBERING_MODEL_GAP",
+      "codes": [],
+      "finding_id": "NF-015",
+      "message": "Document numbering rule lacks a dedicated numbering model",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+          "line_end": 141,
+          "line_start": 141,
+          "section": "6.3 Gestion documental"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "OIRS_CONTACT_MODEL_GAP",
+      "codes": [],
+      "finding_id": "NF-016",
+      "message": "Anonymous OIRS contact data is not represented on oirs_cases",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+          "line_end": 215,
+          "line_start": 215,
+          "section": "6.7 OIRS"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "POTENTIAL_RELATIONSHIP_CYCLE",
+      "codes": [],
+      "finding_id": "NF-017",
+      "message": "Departments/users foreign keys can require deferred migration ordering",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "POTENTIAL_DOCUMENT_VERSION_CYCLE",
+      "codes": [],
+      "finding_id": "NF-018",
+      "message": "documents.current_version_id and document_versions.document_id require deferred migration ordering",
+      "severity": "warning",
+      "source_evidence": [
+        {
+          "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+          "line_end": 141,
+          "line_start": 141,
+          "section": "6.3 Gestion documental"
+        }
+      ],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "API002_NOT_IMPLEMENTED",
+      "codes": [],
+      "finding_id": "NF-019",
+      "message": "Frontend/catalog declares API-002 but backend does not expose citizen-login",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "API034_ROUTE_DIFFERENCE",
+      "codes": [],
+      "finding_id": "NF-020",
+      "message": "API-034 documented route differs from the backend request route",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "PARTIAL_ENDPOINT_IMPLEMENTATION",
+      "codes": [],
+      "finding_id": "NF-021",
+      "message": "Only 8 of 40 catalog endpoint paths are implemented by the backend",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "GENERIC_DATABASE_TABLES",
+      "codes": [],
+      "finding_id": "NF-022",
+      "message": "34 materialized tables use only generic audit columns",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "MEMORY_PERSISTENCE_ACTIVE",
+      "codes": [],
+      "finding_id": "NF-023",
+      "message": "Backend persistence is in memory although PostgreSQL is declared by configuration",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "CATALOG_ROUTES_NOT_EXECUTABLE",
+      "codes": [],
+      "finding_id": "NF-024",
+      "message": "Frontend embeds route catalog entries but does not expose the documented routes as server routes",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    },
+    {
+      "automatically_resolved": false,
+      "category": "SURFACE_ROUTE_GROUPING_GAP",
+      "codes": [],
+      "finding_id": "NF-025",
+      "message": "Generated navigation groups administrative and citizen routes together",
+      "severity": "warning",
+      "source_evidence": [],
+      "suggested_resolution": "Revisar en la fase futura indicada por el plan; no resolver automaticamente requisitos criticos."
+    }
+  ],
+  "findings": {
+    "blocking": 0,
+    "info": 0,
+    "warning": 25
+  },
+  "generated_at": "2026-07-11T04:08:51Z",
+  "generated_files": [
+    "product.json",
+    "modules.json",
+    "actors.json",
+    "use_cases.json",
+    "workflows.json",
+    "screens.json",
+    "endpoints.json",
+    "entities.json",
+    "business_rules.json",
+    "validations.json",
+    "traceability.json",
+    "normalization-report.json",
+    "normalization-findings.md"
+  ],
+  "minimum_scope": {
+    "business_rules": 60,
+    "endpoints": 40,
+    "screens": 30,
+    "tables": 40,
+    "use_cases": 10,
+    "validations": 100,
+    "workflows": 30
+  },
+  "minimum_scope_results": {
+    "business_rules": true,
+    "endpoints": true,
+    "screens": true,
+    "tables": true,
+    "use_cases": true,
+    "validations": true,
+    "workflows": true
+  },
+  "project_id": "siged-lampa",
+  "schema_version": "webforge.normalization_report.v1",
+  "source_hashes": {
+    "Especificacion_Funcional_SIGED_Lampa.md": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24",
+    "Inventario_Endpoints_SIGED_Lampa.md": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d",
+    "Modelo_ER_Detallado_SIGED_Lampa.md": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282"
+  },
+  "status": "pass"
+}

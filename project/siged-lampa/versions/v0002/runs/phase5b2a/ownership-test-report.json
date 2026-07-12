@@ -1,0 +1,10 @@
+{
+  "status": "missing",
+  "resources": [
+    "citizen requests",
+    "OIRS authenticated",
+    "OIRS anonymous",
+    "OIRS messages",
+    "notifications"
+  ]
+}

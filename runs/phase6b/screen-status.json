@@ -1,0 +1,10 @@
+{
+  "documented": 30,
+  "routed": 30,
+  "real_data": 7,
+  "mock_data": 0,
+  "hybrid_data": 0,
+  "verified": 7,
+  "verified_with_limitation": 0,
+  "partial": 23
+}

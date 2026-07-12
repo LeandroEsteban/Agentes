@@ -1,0 +1,385 @@
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:23Z", "run_id": "sha256:0c4bd2945", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:23Z", "run_id": "sha256:0c4bd2945", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:23Z", "run_id": "sha256:0c4bd2945", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:23Z", "run_id": "sha256:0c4bd2945", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:23Z", "run_id": "sha256:0c4bd2945", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:23Z", "run_id": "sha256:0c4bd2945", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:23Z", "run_id": "sha256:0c4bd2945", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:23Z", "run_id": "sha256:0c4bd2945", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:23Z", "run_id": "sha256:0c4bd2945", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:23Z", "run_id": "sha256:0c4bd2945", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:23Z", "run_id": "sha256:0c4bd2945", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:36Z", "run_id": "sha256:4bf092c1e", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:36Z", "run_id": "sha256:4bf092c1e", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:36Z", "run_id": "sha256:4bf092c1e", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:36Z", "run_id": "sha256:4bf092c1e", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:36Z", "run_id": "sha256:4bf092c1e", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:36Z", "run_id": "sha256:4bf092c1e", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:36Z", "run_id": "sha256:4bf092c1e", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:36Z", "run_id": "sha256:4bf092c1e", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:36Z", "run_id": "sha256:4bf092c1e", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:36Z", "run_id": "sha256:4bf092c1e", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:01:36Z", "run_id": "sha256:4bf092c1e", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:03Z", "run_id": "sha256:3c728537d", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:03Z", "run_id": "sha256:3c728537d", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:03Z", "run_id": "sha256:3c728537d", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:03Z", "run_id": "sha256:3c728537d", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:03Z", "run_id": "sha256:3c728537d", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:03Z", "run_id": "sha256:3c728537d", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:03Z", "run_id": "sha256:3c728537d", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:03Z", "run_id": "sha256:3c728537d", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:03Z", "run_id": "sha256:3c728537d", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:03Z", "run_id": "sha256:3c728537d", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:03Z", "run_id": "sha256:3c728537d", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:45Z", "run_id": "sha256:c1195760b", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:45Z", "run_id": "sha256:c1195760b", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:45Z", "run_id": "sha256:c1195760b", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:45Z", "run_id": "sha256:c1195760b", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:45Z", "run_id": "sha256:c1195760b", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:45Z", "run_id": "sha256:c1195760b", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:45Z", "run_id": "sha256:c1195760b", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:45Z", "run_id": "sha256:c1195760b", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:45Z", "run_id": "sha256:c1195760b", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:45Z", "run_id": "sha256:c1195760b", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:02:45Z", "run_id": "sha256:c1195760b", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:09Z", "run_id": "sha256:9b47796df", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:09Z", "run_id": "sha256:9b47796df", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:09Z", "run_id": "sha256:9b47796df", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:09Z", "run_id": "sha256:9b47796df", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:09Z", "run_id": "sha256:9b47796df", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:09Z", "run_id": "sha256:9b47796df", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:09Z", "run_id": "sha256:9b47796df", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:09Z", "run_id": "sha256:9b47796df", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:09Z", "run_id": "sha256:9b47796df", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:09Z", "run_id": "sha256:9b47796df", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:09Z", "run_id": "sha256:9b47796df", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:15Z", "run_id": "sha256:9a38b0b52", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:15Z", "run_id": "sha256:9a38b0b52", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:15Z", "run_id": "sha256:9a38b0b52", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:15Z", "run_id": "sha256:9a38b0b52", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:15Z", "run_id": "sha256:9a38b0b52", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:15Z", "run_id": "sha256:9a38b0b52", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:15Z", "run_id": "sha256:9a38b0b52", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:15Z", "run_id": "sha256:9a38b0b52", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:15Z", "run_id": "sha256:9a38b0b52", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:15Z", "run_id": "sha256:9a38b0b52", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:03:15Z", "run_id": "sha256:9a38b0b52", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:08:42Z", "run_id": "sha256:473361fd1", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:08:42Z", "run_id": "sha256:473361fd1", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:08:42Z", "run_id": "sha256:473361fd1", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:08:42Z", "run_id": "sha256:473361fd1", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:08:42Z", "run_id": "sha256:473361fd1", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:08:42Z", "run_id": "sha256:473361fd1", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:08:42Z", "run_id": "sha256:473361fd1", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:08:42Z", "run_id": "sha256:473361fd1", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:08:42Z", "run_id": "sha256:473361fd1", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:08:42Z", "run_id": "sha256:473361fd1", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:08:42Z", "run_id": "sha256:473361fd1", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:29Z", "run_id": "sha256:0d5629af6", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:29Z", "run_id": "sha256:0d5629af6", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:29Z", "run_id": "sha256:0d5629af6", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:29Z", "run_id": "sha256:0d5629af6", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:29Z", "run_id": "sha256:0d5629af6", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:29Z", "run_id": "sha256:0d5629af6", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:29Z", "run_id": "sha256:0d5629af6", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:29Z", "run_id": "sha256:0d5629af6", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:29Z", "run_id": "sha256:0d5629af6", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:29Z", "run_id": "sha256:0d5629af6", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:29Z", "run_id": "sha256:0d5629af6", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:45Z", "run_id": "sha256:77853c65b", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:45Z", "run_id": "sha256:77853c65b", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:45Z", "run_id": "sha256:77853c65b", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:45Z", "run_id": "sha256:77853c65b", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:45Z", "run_id": "sha256:77853c65b", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:45Z", "run_id": "sha256:77853c65b", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:45Z", "run_id": "sha256:77853c65b", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:45Z", "run_id": "sha256:77853c65b", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:45Z", "run_id": "sha256:77853c65b", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:45Z", "run_id": "sha256:77853c65b", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:15:45Z", "run_id": "sha256:77853c65b", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:20:25Z", "run_id": "sha256:8e74c0bcd", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:20:25Z", "run_id": "sha256:8e74c0bcd", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:20:25Z", "run_id": "sha256:8e74c0bcd", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:20:25Z", "run_id": "sha256:8e74c0bcd", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:20:25Z", "run_id": "sha256:8e74c0bcd", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:20:25Z", "run_id": "sha256:8e74c0bcd", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:20:25Z", "run_id": "sha256:8e74c0bcd", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:20:25Z", "run_id": "sha256:8e74c0bcd", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:20:25Z", "run_id": "sha256:8e74c0bcd", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:20:25Z", "run_id": "sha256:8e74c0bcd", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:20:25Z", "run_id": "sha256:8e74c0bcd", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:21:52Z", "run_id": "sha256:37193ff43", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:21:52Z", "run_id": "sha256:37193ff43", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:21:52Z", "run_id": "sha256:37193ff43", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:21:52Z", "run_id": "sha256:37193ff43", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:21:52Z", "run_id": "sha256:37193ff43", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:21:52Z", "run_id": "sha256:37193ff43", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:21:52Z", "run_id": "sha256:37193ff43", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:21:52Z", "run_id": "sha256:37193ff43", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:21:52Z", "run_id": "sha256:37193ff43", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:21:52Z", "run_id": "sha256:37193ff43", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:21:52Z", "run_id": "sha256:37193ff43", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:23:18Z", "run_id": "sha256:4c14a1f89", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:23:18Z", "run_id": "sha256:4c14a1f89", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:23:18Z", "run_id": "sha256:4c14a1f89", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:23:18Z", "run_id": "sha256:4c14a1f89", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:23:18Z", "run_id": "sha256:4c14a1f89", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:23:18Z", "run_id": "sha256:4c14a1f89", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:23:18Z", "run_id": "sha256:4c14a1f89", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:23:18Z", "run_id": "sha256:4c14a1f89", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:23:18Z", "run_id": "sha256:4c14a1f89", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:23:18Z", "run_id": "sha256:4c14a1f89", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:23:18Z", "run_id": "sha256:4c14a1f89", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:25:23Z", "run_id": "sha256:fd1a8a9c2", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:25:23Z", "run_id": "sha256:fd1a8a9c2", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:25:23Z", "run_id": "sha256:fd1a8a9c2", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:25:23Z", "run_id": "sha256:fd1a8a9c2", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:25:23Z", "run_id": "sha256:fd1a8a9c2", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:25:23Z", "run_id": "sha256:fd1a8a9c2", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:25:23Z", "run_id": "sha256:fd1a8a9c2", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:25:23Z", "run_id": "sha256:fd1a8a9c2", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:25:23Z", "run_id": "sha256:fd1a8a9c2", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:25:23Z", "run_id": "sha256:fd1a8a9c2", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:25:23Z", "run_id": "sha256:fd1a8a9c2", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:26:48Z", "run_id": "sha256:99f780a9b", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:26:48Z", "run_id": "sha256:99f780a9b", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:26:48Z", "run_id": "sha256:99f780a9b", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:26:48Z", "run_id": "sha256:99f780a9b", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:26:48Z", "run_id": "sha256:99f780a9b", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:26:48Z", "run_id": "sha256:99f780a9b", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:26:48Z", "run_id": "sha256:99f780a9b", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:26:48Z", "run_id": "sha256:99f780a9b", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:26:48Z", "run_id": "sha256:99f780a9b", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:26:48Z", "run_id": "sha256:99f780a9b", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:26:48Z", "run_id": "sha256:99f780a9b", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:10Z", "run_id": "sha256:0c7a6592d", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:10Z", "run_id": "sha256:0c7a6592d", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:10Z", "run_id": "sha256:0c7a6592d", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:10Z", "run_id": "sha256:0c7a6592d", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:10Z", "run_id": "sha256:0c7a6592d", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:10Z", "run_id": "sha256:0c7a6592d", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:10Z", "run_id": "sha256:0c7a6592d", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:10Z", "run_id": "sha256:0c7a6592d", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:10Z", "run_id": "sha256:0c7a6592d", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:10Z", "run_id": "sha256:0c7a6592d", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:10Z", "run_id": "sha256:0c7a6592d", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:27Z", "run_id": "sha256:76396777e", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:27Z", "run_id": "sha256:76396777e", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:27Z", "run_id": "sha256:76396777e", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:27Z", "run_id": "sha256:76396777e", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:27Z", "run_id": "sha256:76396777e", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:27Z", "run_id": "sha256:76396777e", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:27Z", "run_id": "sha256:76396777e", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:27Z", "run_id": "sha256:76396777e", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:27Z", "run_id": "sha256:76396777e", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:27Z", "run_id": "sha256:76396777e", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:27Z", "run_id": "sha256:76396777e", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:48Z", "run_id": "sha256:9c6f08229", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:48Z", "run_id": "sha256:9c6f08229", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:48Z", "run_id": "sha256:9c6f08229", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:48Z", "run_id": "sha256:9c6f08229", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:48Z", "run_id": "sha256:9c6f08229", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:48Z", "run_id": "sha256:9c6f08229", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:48Z", "run_id": "sha256:9c6f08229", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:48Z", "run_id": "sha256:9c6f08229", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:48Z", "run_id": "sha256:9c6f08229", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:48Z", "run_id": "sha256:9c6f08229", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:27:48Z", "run_id": "sha256:9c6f08229", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:13Z", "run_id": "sha256:0d1fad8ca", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:13Z", "run_id": "sha256:0d1fad8ca", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:13Z", "run_id": "sha256:0d1fad8ca", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:13Z", "run_id": "sha256:0d1fad8ca", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:13Z", "run_id": "sha256:0d1fad8ca", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:13Z", "run_id": "sha256:0d1fad8ca", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:13Z", "run_id": "sha256:0d1fad8ca", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:13Z", "run_id": "sha256:0d1fad8ca", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:13Z", "run_id": "sha256:0d1fad8ca", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:13Z", "run_id": "sha256:0d1fad8ca", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:13Z", "run_id": "sha256:0d1fad8ca", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:27Z", "run_id": "sha256:f8b3dc282", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:27Z", "run_id": "sha256:f8b3dc282", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:27Z", "run_id": "sha256:f8b3dc282", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:27Z", "run_id": "sha256:f8b3dc282", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:27Z", "run_id": "sha256:f8b3dc282", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:27Z", "run_id": "sha256:f8b3dc282", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:27Z", "run_id": "sha256:f8b3dc282", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:27Z", "run_id": "sha256:f8b3dc282", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:27Z", "run_id": "sha256:f8b3dc282", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:27Z", "run_id": "sha256:f8b3dc282", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:29:27Z", "run_id": "sha256:f8b3dc282", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:37:04Z", "run_id": "sha256:ec50ea8a1", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:37:04Z", "run_id": "sha256:ec50ea8a1", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:37:04Z", "run_id": "sha256:ec50ea8a1", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:37:04Z", "run_id": "sha256:ec50ea8a1", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:37:04Z", "run_id": "sha256:ec50ea8a1", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:37:04Z", "run_id": "sha256:ec50ea8a1", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:37:04Z", "run_id": "sha256:ec50ea8a1", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:37:04Z", "run_id": "sha256:ec50ea8a1", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:37:04Z", "run_id": "sha256:ec50ea8a1", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:37:04Z", "run_id": "sha256:ec50ea8a1", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:37:04Z", "run_id": "sha256:ec50ea8a1", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:45:43Z", "run_id": "sha256:2377f7562", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:45:43Z", "run_id": "sha256:2377f7562", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:45:43Z", "run_id": "sha256:2377f7562", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:45:43Z", "run_id": "sha256:2377f7562", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:45:43Z", "run_id": "sha256:2377f7562", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:45:43Z", "run_id": "sha256:2377f7562", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:45:43Z", "run_id": "sha256:2377f7562", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:45:43Z", "run_id": "sha256:2377f7562", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:45:43Z", "run_id": "sha256:2377f7562", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:45:43Z", "run_id": "sha256:2377f7562", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:45:43Z", "run_id": "sha256:2377f7562", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:47:06Z", "run_id": "sha256:c96256eb8", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:47:06Z", "run_id": "sha256:c96256eb8", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:47:06Z", "run_id": "sha256:c96256eb8", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:47:06Z", "run_id": "sha256:c96256eb8", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:47:06Z", "run_id": "sha256:c96256eb8", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:47:06Z", "run_id": "sha256:c96256eb8", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:47:06Z", "run_id": "sha256:c96256eb8", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:47:06Z", "run_id": "sha256:c96256eb8", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:47:06Z", "run_id": "sha256:c96256eb8", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:47:06Z", "run_id": "sha256:c96256eb8", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T04:47:06Z", "run_id": "sha256:c96256eb8", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:01:17Z", "run_id": "sha256:61322de34", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:01:17Z", "run_id": "sha256:61322de34", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:01:17Z", "run_id": "sha256:61322de34", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:01:17Z", "run_id": "sha256:61322de34", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:01:17Z", "run_id": "sha256:61322de34", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:01:17Z", "run_id": "sha256:61322de34", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:01:17Z", "run_id": "sha256:61322de34", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:01:17Z", "run_id": "sha256:61322de34", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:01:17Z", "run_id": "sha256:61322de34", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:01:17Z", "run_id": "sha256:61322de34", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:01:17Z", "run_id": "sha256:61322de34", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:07:17Z", "run_id": "sha256:81bde1ea6", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:07:17Z", "run_id": "sha256:81bde1ea6", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:07:17Z", "run_id": "sha256:81bde1ea6", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:07:17Z", "run_id": "sha256:81bde1ea6", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:07:17Z", "run_id": "sha256:81bde1ea6", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:07:17Z", "run_id": "sha256:81bde1ea6", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:07:17Z", "run_id": "sha256:81bde1ea6", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:07:17Z", "run_id": "sha256:81bde1ea6", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:07:17Z", "run_id": "sha256:81bde1ea6", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:07:17Z", "run_id": "sha256:81bde1ea6", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:07:17Z", "run_id": "sha256:81bde1ea6", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:14:40Z", "run_id": "sha256:5a76919bd", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:14:40Z", "run_id": "sha256:5a76919bd", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:14:40Z", "run_id": "sha256:5a76919bd", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:14:40Z", "run_id": "sha256:5a76919bd", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:14:40Z", "run_id": "sha256:5a76919bd", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:14:40Z", "run_id": "sha256:5a76919bd", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:14:40Z", "run_id": "sha256:5a76919bd", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:14:40Z", "run_id": "sha256:5a76919bd", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:14:40Z", "run_id": "sha256:5a76919bd", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:14:40Z", "run_id": "sha256:5a76919bd", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:14:40Z", "run_id": "sha256:5a76919bd", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:24:55Z", "run_id": "sha256:912d48313", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:24:55Z", "run_id": "sha256:912d48313", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:24:55Z", "run_id": "sha256:912d48313", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:24:55Z", "run_id": "sha256:912d48313", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:24:55Z", "run_id": "sha256:912d48313", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:24:55Z", "run_id": "sha256:912d48313", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:24:55Z", "run_id": "sha256:912d48313", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:24:55Z", "run_id": "sha256:912d48313", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:24:55Z", "run_id": "sha256:912d48313", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:24:55Z", "run_id": "sha256:912d48313", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:24:55Z", "run_id": "sha256:912d48313", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:44:28Z", "run_id": "sha256:f2c42cf2a", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:44:28Z", "run_id": "sha256:f2c42cf2a", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:44:28Z", "run_id": "sha256:f2c42cf2a", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:44:28Z", "run_id": "sha256:f2c42cf2a", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:44:28Z", "run_id": "sha256:f2c42cf2a", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:44:28Z", "run_id": "sha256:f2c42cf2a", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:44:28Z", "run_id": "sha256:f2c42cf2a", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:44:28Z", "run_id": "sha256:f2c42cf2a", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:44:28Z", "run_id": "sha256:f2c42cf2a", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:44:28Z", "run_id": "sha256:f2c42cf2a", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T08:44:28Z", "run_id": "sha256:f2c42cf2a", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:32:48Z", "run_id": "sha256:aea66abbc", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:32:48Z", "run_id": "sha256:aea66abbc", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:32:48Z", "run_id": "sha256:aea66abbc", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:32:48Z", "run_id": "sha256:aea66abbc", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:32:48Z", "run_id": "sha256:aea66abbc", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:32:48Z", "run_id": "sha256:aea66abbc", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:32:48Z", "run_id": "sha256:aea66abbc", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:32:48Z", "run_id": "sha256:aea66abbc", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:32:48Z", "run_id": "sha256:aea66abbc", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:32:48Z", "run_id": "sha256:aea66abbc", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:32:48Z", "run_id": "sha256:aea66abbc", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:46:04Z", "run_id": "sha256:427cc5b59", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:46:04Z", "run_id": "sha256:427cc5b59", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:46:04Z", "run_id": "sha256:427cc5b59", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:46:04Z", "run_id": "sha256:427cc5b59", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:46:04Z", "run_id": "sha256:427cc5b59", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:46:04Z", "run_id": "sha256:427cc5b59", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:46:04Z", "run_id": "sha256:427cc5b59", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:46:04Z", "run_id": "sha256:427cc5b59", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:46:04Z", "run_id": "sha256:427cc5b59", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:46:04Z", "run_id": "sha256:427cc5b59", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T15:46:04Z", "run_id": "sha256:427cc5b59", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:02:45Z", "run_id": "sha256:60fa46d79", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:02:45Z", "run_id": "sha256:60fa46d79", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:02:45Z", "run_id": "sha256:60fa46d79", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:02:45Z", "run_id": "sha256:60fa46d79", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:02:45Z", "run_id": "sha256:60fa46d79", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:02:45Z", "run_id": "sha256:60fa46d79", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:02:45Z", "run_id": "sha256:60fa46d79", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:02:45Z", "run_id": "sha256:60fa46d79", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:02:45Z", "run_id": "sha256:60fa46d79", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:02:45Z", "run_id": "sha256:60fa46d79", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:02:45Z", "run_id": "sha256:60fa46d79", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:44:57Z", "run_id": "sha256:287afaef6", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:44:57Z", "run_id": "sha256:287afaef6", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:44:57Z", "run_id": "sha256:287afaef6", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:44:57Z", "run_id": "sha256:287afaef6", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:44:57Z", "run_id": "sha256:287afaef6", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:44:57Z", "run_id": "sha256:287afaef6", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:44:57Z", "run_id": "sha256:287afaef6", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:44:57Z", "run_id": "sha256:287afaef6", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:44:57Z", "run_id": "sha256:287afaef6", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:44:57Z", "run_id": "sha256:287afaef6", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T16:44:57Z", "run_id": "sha256:287afaef6", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T20:49:09Z", "run_id": "sha256:101474a24", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T20:49:09Z", "run_id": "sha256:101474a24", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T20:49:09Z", "run_id": "sha256:101474a24", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T20:49:09Z", "run_id": "sha256:101474a24", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T20:49:09Z", "run_id": "sha256:101474a24", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T20:49:09Z", "run_id": "sha256:101474a24", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T20:49:09Z", "run_id": "sha256:101474a24", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T20:49:09Z", "run_id": "sha256:101474a24", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T20:49:09Z", "run_id": "sha256:101474a24", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T20:49:09Z", "run_id": "sha256:101474a24", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T20:49:09Z", "run_id": "sha256:101474a24", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:09:08Z", "run_id": "sha256:7de256301", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:09:08Z", "run_id": "sha256:7de256301", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:09:08Z", "run_id": "sha256:7de256301", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:09:08Z", "run_id": "sha256:7de256301", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:09:08Z", "run_id": "sha256:7de256301", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:09:08Z", "run_id": "sha256:7de256301", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:09:08Z", "run_id": "sha256:7de256301", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:09:08Z", "run_id": "sha256:7de256301", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:09:08Z", "run_id": "sha256:7de256301", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:09:08Z", "run_id": "sha256:7de256301", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:09:08Z", "run_id": "sha256:7de256301", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:20:23Z", "run_id": "sha256:ae6aadc87", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:20:23Z", "run_id": "sha256:ae6aadc87", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:20:23Z", "run_id": "sha256:ae6aadc87", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:20:23Z", "run_id": "sha256:ae6aadc87", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:20:23Z", "run_id": "sha256:ae6aadc87", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:20:23Z", "run_id": "sha256:ae6aadc87", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:20:23Z", "run_id": "sha256:ae6aadc87", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:20:23Z", "run_id": "sha256:ae6aadc87", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:20:23Z", "run_id": "sha256:ae6aadc87", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:20:23Z", "run_id": "sha256:ae6aadc87", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:20:23Z", "run_id": "sha256:ae6aadc87", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:33:39Z", "run_id": "sha256:6cf99f4dc", "event": "decisions_created", "detail": "16 ADRs created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:33:39Z", "run_id": "sha256:6cf99f4dc", "event": "tasks_created", "detail": "59 tasks created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:33:39Z", "run_id": "sha256:6cf99f4dc", "event": "dependencies_created", "detail": "76 dependencies created"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:33:39Z", "run_id": "sha256:6cf99f4dc", "event": "dag_validated", "detail": "acyclic=True"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:33:39Z", "run_id": "sha256:6cf99f4dc", "event": "gates", "detail": "GATE-ARCH-001: PASS - All sources normalized with 0 blocking findings"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:33:39Z", "run_id": "sha256:6cf99f4dc", "event": "gates", "detail": "GATE-ARCH-002: PASS - All 16 critical decisions accepted"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:33:39Z", "run_id": "sha256:6cf99f4dc", "event": "gates", "detail": "GATE-ARCH-003: PASS - All 6 agents valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:33:39Z", "run_id": "sha256:6cf99f4dc", "event": "gates", "detail": "GATE-ARCH-004: PASS - All 59 tasks valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:33:39Z", "run_id": "sha256:6cf99f4dc", "event": "gates", "detail": "GATE-ARCH-005: PASS - DAG is acyclic with all dependencies valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:33:39Z", "run_id": "sha256:6cf99f4dc", "event": "gates", "detail": "GATE-ARCH-006: PASS - All 10 handoffs valid"}
+{"schema": "webforge.planning_ledger.v1", "timestamp": "2026-07-11T21:33:39Z", "run_id": "sha256:6cf99f4dc", "event": "gates", "detail": "GATE-ARCH-007: PASS - Baseline preserved"}

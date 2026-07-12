@@ -1,0 +1,9 @@
+{
+  "status": "partial",
+  "runner": "node:test",
+  "database": "PostgreSQL QA",
+  "passed": 1,
+  "failed": 0,
+  "covered": ["GET /health", "GET /health/database", "POST /api/v1/auth/login", "POST /api/v1/auth/citizen-login"],
+  "remaining": "Endpoint-specific smoke coverage is pending."
+}

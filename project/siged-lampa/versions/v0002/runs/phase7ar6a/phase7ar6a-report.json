@@ -1,0 +1,20 @@
+{
+  "schema_version": "webforge.phase7ar6a_report.v1",
+  "status": "blocked",
+  "phase7a_status": "blocked",
+  "phase7_status": "blocked",
+  "e2e": {
+    "E2E_01": "pass",
+    "E2E_02": "pass",
+    "E2E_03": "pass",
+    "E2E_04": "pass",
+    "E2E_05": "pass"
+  },
+  "gates": {
+    "pass": 8,
+    "blocked": 2
+  },
+  "blockers": [
+    "Frontend and backend focused regressions are not clean."
+  ]
+}

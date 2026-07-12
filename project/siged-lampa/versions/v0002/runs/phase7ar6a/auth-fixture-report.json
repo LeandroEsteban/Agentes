@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "actors": [
+    "internalDocumentUser",
+    "reviewer",
+    "approver",
+    "signer",
+    "internalUserWithoutPermission"
+  ],
+  "source": "PostgreSQL QA seeds and real login API"
+}

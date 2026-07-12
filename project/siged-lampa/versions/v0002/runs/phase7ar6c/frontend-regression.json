@@ -1,0 +1,27 @@
+﻿{
+    "build":  {
+                  "status":  "pass"
+              },
+    "tests":  {
+                  "skipped":  0,
+                  "failed":  0,
+                  "passed":  166
+              },
+    "coverage":  {
+                     "functions":  66,
+                     "lines":  87.72,
+                     "branches":  76.37,
+                     "statements":  87.72,
+                     "thresholds":  {
+                                        "lines_ge_70":  true,
+                                        "statements_ge_70":  true,
+                                        "branches_ge_65":  true,
+                                        "functions_ge_65":  true
+                                    }
+                 },
+    "lint":  {
+                 "status":  "pass",
+                 "errors":  0,
+                 "warnings":  0
+             }
+}

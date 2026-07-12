@@ -1,0 +1,38 @@
+{
+  "agent_id": "agent.context_rag",
+  "context_pack_hash": "sha256:4e21ba6bdf7a4dee5c1c79d34c2c37b489428ed478d9effdf7d81529111d9112",
+  "context_pack_id": "CTX-CONTEXT",
+  "mode": "minimal_snippets_only",
+  "phase": "context",
+  "source_count": 4,
+  "sources": [
+    {
+      "evidence_id": "EV-SRC-001",
+      "path": "C:/Users/lmata/Documents/Universidad/Agentes/Especificacion_Funcional_SIGED_Lampa.md",
+      "redactions": 0,
+      "sha256": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24",
+      "snippet": "# Especificacion Funcional\n\n## SIGED-Lampa\n\nVersion: `v0.1`\n\nEstado: `Borrador funcional base`\n\nTipo de producto: `Aplicacion web full stack, exclusivamente web`\n\n## 1. Proposito\n\nEste documento define la especificacion funcional de `SIGED-Lampa`, una aplicacion web de gestion documental municipal con intranet para funcionarios y portal ciudadano. Su objetivo es traducir el alcance priorizado de la licitacion revisada en un sistema construible, verificable y alineado con la rubrica del curso.\n\nEl documento sirve como base para:\n\n- construccion del backlog del producto;\n- modelado de base de da"
+    },
+    {
+      "evidence_id": "EV-SRC-002",
+      "path": "C:/Users/lmata/Documents/Universidad/Agentes/Inventario_Endpoints_SIGED_Lampa.md",
+      "redactions": 0,
+      "sha256": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245",
+      "snippet": "# Inventario de Endpoints\n\n## SIGED-Lampa\n\nVersion: `v0.1`\n\nEstado: `Contrato funcional inicial`\n\nFuentes:\n\n- [Especificacion_Funcional_SIGED_Lampa.md](C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\Especificacion_Funcional_SIGED_Lampa.md:1)\n- [Modelo_ER_Detallado_SIGED_Lampa.md](C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\Modelo_ER_Detallado_SIGED_Lampa.md:1)\n\n## 1. Proposito\n\nEste documento detalla el inventario operativo de los 40 endpoints base de `SIGED-Lampa`, incluyendo autenticacion requerida, payload minimo, respuesta esperada y obs"
+    },
+    {
+      "evidence_id": "EV-SRC-003",
+      "path": "C:/Users/lmata/Documents/Universidad/Agentes/Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+      "redactions": 0,
+      "sha256": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d",
+      "snippet": "# Mapa de Pantallas y Navegacion\n\n## SIGED-Lampa\n\nVersion: `v0.1`\n\nEstado: `Base UX funcional`\n\nFuentes:\n\n- [Especificacion_Funcional_SIGED_Lampa.md](C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\Especificacion_Funcional_SIGED_Lampa.md:416)\n- [Inventario_Endpoints_SIGED_Lampa.md](C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\Inventario_Endpoints_SIGED_Lampa.md:1)\n\n## 1. Proposito\n\nEste documento define la estructura de navegacion de la aplicacion web `SIGED-Lampa`, cubriendo las 30 pantallas base comprometidas en la especificacion funcional. "
+    },
+    {
+      "evidence_id": "EV-SRC-004",
+      "path": "C:/Users/lmata/Documents/Universidad/Agentes/Modelo_ER_Detallado_SIGED_Lampa.md",
+      "redactions": 0,
+      "sha256": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282",
+      "snippet": "# Modelo ER Detallado\n\n## SIGED-Lampa\n\nVersion: `v0.1`\n\nEstado: `Base de implementacion`\n\nFuente principal: [Especificacion_Funcional_SIGED_Lampa.md](C:\\Users\\lmata\\Documents\\Universidad\\Agentes\\Nueva Fabrica Software Web\\Especificacion_Funcional_SIGED_Lampa.md:1)\n\n## 1. Proposito\n\nEste documento detalla el modelo entidad-relacion objetivo para `SIGED-Lampa`, la aplicacion web de gestion documental municipal. Su objetivo es bajar la especificacion funcional a un esquema implementable sobre base de datos relacional.\n\nEste modelo:\n\n- respeta las 40 tablas definidas en la rubrica;\n- ordena las ta"
+    }
+  ]
+}

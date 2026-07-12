@@ -1,0 +1,11 @@
+{
+  "status": "partial",
+  "openapi_operations": 98,
+  "operations_used": 32,
+  "direct_fetch_calls": [
+    "src/api/client.ts"
+  ],
+  "untyped_calls": [],
+  "hardcoded_paths_outside_api": [],
+  "deprecated_operations_used": []
+}

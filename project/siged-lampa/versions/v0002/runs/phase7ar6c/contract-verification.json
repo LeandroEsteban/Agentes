@@ -1,0 +1,45 @@
+﻿{
+    "openapi":  98,
+    "details":  [
+                    {
+                        "status":  "pass",
+                        "check":  "frontend client updated"
+                    },
+                    {
+                        "status":  "pass",
+                        "check":  "98 operations classified"
+                    },
+                    {
+                        "status":  "pass",
+                        "check":  "no deprecated operation used as canonical"
+                    },
+                    {
+                        "status":  "pass",
+                        "check":  "attachments as JSON/base64"
+                    },
+                    {
+                        "status":  "pass",
+                        "check":  "OIRS via x-oirs-tracking-token"
+                    },
+                    {
+                        "status":  "pass",
+                        "check":  "signature academic_simulation"
+                    },
+                    {
+                        "status":  "pass",
+                        "check":  "decisions via approvalId"
+                    },
+                    {
+                        "status":  "pass",
+                        "check":  "administrative duplicates with 409"
+                    },
+                    {
+                        "status":  "pass",
+                        "check":  "content update coherent with schema"
+                    }
+                ],
+    "catalog":  98,
+    "routers":  98,
+    "pending":  0,
+    "mismatches":  0
+}

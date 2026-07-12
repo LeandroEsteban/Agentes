@@ -1,0 +1,1428 @@
+{
+  "schema_version": "webforge.business_rule_map.v1",
+  "generated_at": "2026-07-11T21:22:12.010981+00:00",
+  "business_rules": [
+    {
+      "rule_id": "BR-001",
+      "description": "Solo usuarios activos pueden iniciar sesion.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/003_security.sql",
+        "symbol": "users",
+        "constraint": "UNIQUE"
+      },
+      "related_endpoints": [],
+      "related_tables": [
+        "users"
+      ],
+      "positive_tests": [
+        "test_unique_username"
+      ],
+      "negative_tests": [
+        "test_unique_username"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-002",
+      "description": "Todo usuario debe pertenecer al menos a un rol.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/003_security.sql",
+        "symbol": "user_roles",
+        "constraint": "UNIQUE"
+      },
+      "related_endpoints": [],
+      "related_tables": [
+        "user_roles"
+      ],
+      "positive_tests": [
+        "test_user_roles_unique"
+      ],
+      "negative_tests": [
+        "test_user_roles_unique"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-003",
+      "description": "Un usuario no puede acceder a funciones sin permiso explicito.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/003_security.sql",
+        "symbol": "permissions",
+        "constraint": "UNIQUE"
+      },
+      "related_endpoints": [],
+      "related_tables": [
+        "permissions"
+      ],
+      "positive_tests": [
+        "test_permissions_unique_code"
+      ],
+      "negative_tests": [
+        "test_permissions_unique_code"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-004",
+      "description": "Los perfiles ciudadanos y funcionarios no comparten el mismo ambito de autorizacion.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/citizen-requests/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-005",
+      "description": "Todo departamento debe tener nombre unico.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/002_organization.sql",
+        "symbol": "departments",
+        "constraint": "UNIQUE"
+      },
+      "related_endpoints": [],
+      "related_tables": [
+        "departments"
+      ],
+      "positive_tests": [
+        "test_department_code_unique"
+      ],
+      "negative_tests": [
+        "test_department_code_unique"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-006",
+      "description": "Todo tipo documental debe tener un codigo unico.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/004_document_catalogs.sql",
+        "symbol": "document_types",
+        "constraint": "UNIQUE"
+      },
+      "related_endpoints": [],
+      "related_tables": [
+        "document_types"
+      ],
+      "positive_tests": [
+        "test_document_types_unique"
+      ],
+      "negative_tests": [
+        "test_document_types_unique"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-007",
+      "description": "Todo tramite publicado debe estar asociado a un tipo de tramite vigente.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/procedures/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-008",
+      "description": "Toda entidad externa debe tener nombre y canal de contacto.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/documents/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2b-document-management.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2b-document-management.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-009",
+      "description": "Solo administradores pueden crear roles.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/users/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-010",
+      "description": "Solo administradores pueden modificar permisos.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/users/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-011",
+      "description": "Las preferencias de notificacion son configurables por usuario.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/users/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-012",
+      "description": "El acceso fallido repetido debe gatillar proteccion de seguridad.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/documents/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2b-document-management.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2b-document-management.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-013",
+      "description": "Todo documento debe pertenecer a un tipo documental.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/documents/service.js",
+        "symbol": "create",
+        "constraint": "validates document_type_id existence via repository.typeExists"
+      },
+      "related_endpoints": [
+        "API-015",
+        "API-016",
+        "API-017",
+        "API-018"
+      ],
+      "related_tables": [
+        "documents",
+        "document_types"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:42-61"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:63-70"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-014",
+      "description": "La numeracion documental es unica por tipo documental.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/005_documents.sql",
+        "symbol": "documents",
+        "constraint": "UNIQUE"
+      },
+      "related_endpoints": [
+        "API-016"
+      ],
+      "related_tables": [
+        "documents"
+      ],
+      "positive_tests": [
+        "test_document_number_unique"
+      ],
+      "negative_tests": [
+        "test_document_number_unique"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-015",
+      "description": "Un documento en borrador puede editarse libremente por su creador y usuarios autorizados.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/documents/service.js",
+        "symbol": "update",
+        "constraint": "status check: signed/published/archived/cancelled blocked; draft/in_revision/in_approval editable"
+      },
+      "related_endpoints": [
+        "API-016",
+        "API-018",
+        "API-020"
+      ],
+      "related_tables": [
+        "documents"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:97-105"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:107-111"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-016",
+      "description": "Un documento enviado a revision ya no puede cambiar de tipo documental.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/documents/service.js",
+        "symbol": "update",
+        "constraint": "full update guard: rejected for signed/published/archived/cancelled statuses"
+      },
+      "related_endpoints": [
+        "API-018"
+      ],
+      "related_tables": [
+        "documents"
+      ],
+      "positive_tests": [],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:107-111"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-017",
+      "description": "Todo anexo debe quedar asociado a una version del documento.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/005_documents.sql",
+        "symbol": "document_attachments",
+        "constraint": "FK"
+      },
+      "related_endpoints": [
+        "API-019"
+      ],
+      "related_tables": [
+        "document_attachments"
+      ],
+      "positive_tests": [
+        "test_attachment_version_fk"
+      ],
+      "negative_tests": [
+        "test_attachment_version_fk"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-018",
+      "description": "Todo comentario debe registrar autor y fecha.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/documents/service.js",
+        "symbol": "addComment",
+        "constraint": "author_user_id from actor.id, created_at via DEFAULT now()"
+      },
+      "related_endpoints": [
+        "API-016",
+        "API-019",
+        "API-021",
+        "API-022",
+        "API-023",
+        "API-024"
+      ],
+      "related_tables": [
+        "document_comments"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:285-295"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:285-295"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-019",
+      "description": "Un documento confidencial solo es visible para usuarios autorizados.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/005_documents.sql",
+        "symbol": "documents",
+        "constraint": "CHECK"
+      },
+      "related_endpoints": [
+        "API-015",
+        "API-016",
+        "API-017",
+        "API-018"
+      ],
+      "related_tables": [
+        "documents"
+      ],
+      "positive_tests": [
+        "test_confidentiality_check"
+      ],
+      "negative_tests": [
+        "test_confidentiality_check"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-020",
+      "description": "Todo documento con urgencia debe generar alerta preventiva.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/documents/validators.js",
+        "symbol": "documentCreate",
+        "constraint": "due_date field available in create/update schemas"
+      },
+      "related_endpoints": [
+        "API-016",
+        "API-018"
+      ],
+      "related_tables": [
+        "documents"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-021",
+      "description": "Una nueva version debe referenciar explicitamente a la version anterior.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/005_documents.sql",
+        "symbol": "document_versions",
+        "constraint": "CHECK > 0"
+      },
+      "related_endpoints": [
+        "API-020"
+      ],
+      "related_tables": [
+        "document_versions"
+      ],
+      "positive_tests": [
+        "test_version_number_check"
+      ],
+      "negative_tests": [
+        "test_version_number_check"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-022",
+      "description": "Un documento finalizado no puede volver a borrador sin accion administrativa.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/documents/service.js",
+        "symbol": "update",
+        "constraint": "status check blocks signed/published/archived/cancelled"
+      },
+      "related_endpoints": [
+        "API-018"
+      ],
+      "related_tables": [
+        "documents"
+      ],
+      "positive_tests": [],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:107-111"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-023",
+      "description": "Todo documento archivado debe seguir siendo consultable segun permisos.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/documents/repository.js",
+        "symbol": "list, findDocument",
+        "constraint": "deleted_at IS NULL filter, confidentiality level check in service"
+      },
+      "related_endpoints": [
+        "API-015",
+        "API-017"
+      ],
+      "related_tables": [
+        "documents"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:28-40,72-86"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:28-40,72-86"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-024",
+      "description": "Todo documento emitido debe contar con codigo de verificacion.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-signatures/service.js",
+        "symbol": "sign",
+        "constraint": "signature_hash via SHA-256(document.uuid:version_id:profile_id:user_id:signedAt)"
+      },
+      "related_endpoints": [
+        "API-024"
+      ],
+      "related_tables": [
+        "document_signatures"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:256-272"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:256-272"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-025",
+      "description": "Un documento no puede solicitar firma sin haber pasado por revision minima.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-signatures/service.js",
+        "symbol": "sign",
+        "constraint": "status must be 'approved', incomplete approvals check"
+      },
+      "related_endpoints": [
+        "API-024"
+      ],
+      "related_tables": [
+        "documents",
+        "document_approvals"
+      ],
+      "positive_tests": [],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:274-283"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-026",
+      "description": "Toda solicitud de revision debe tener responsable.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/006_document_workflows.sql",
+        "symbol": "document_review_requests",
+        "constraint": "CHECK <>"
+      },
+      "related_endpoints": [
+        "API-021",
+        "API-022"
+      ],
+      "related_tables": [
+        "document_review_requests"
+      ],
+      "positive_tests": [
+        "test_review_different_users"
+      ],
+      "negative_tests": [
+        "test_review_different_users"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-027",
+      "description": "Toda revision respondida debe quedar historizada.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-reviews/service.js",
+        "symbol": "reply",
+        "constraint": "creates document_review_responses record and updates request status"
+      },
+      "related_endpoints": [
+        "API-022"
+      ],
+      "related_tables": [
+        "document_review_responses"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:179-190"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:179-190"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-028",
+      "description": "Un visto bueno pendiente impide el cierre del flujo.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-approvals/service.js",
+        "symbol": "decide",
+        "constraint": "priorPending check ensures sequence order"
+      },
+      "related_endpoints": [
+        "API-023"
+      ],
+      "related_tables": [
+        "document_approvals"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-029",
+      "description": "La secuencia de firmantes debe respetar el orden definido.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-approvals/validators.js",
+        "symbol": "approvalRequest",
+        "constraint": "sequence_order must be consecutive starting from 1"
+      },
+      "related_endpoints": [
+        "API-023"
+      ],
+      "related_tables": [
+        "document_approvals"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:201-213"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:215-229"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-030",
+      "description": "El estado firmado se alcanza solo cuando todos los firmantes requeridos completan su accion.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-signatures/service.js",
+        "symbol": "sign",
+        "constraint": "setStatus transitions to 'signed' only after sign operation"
+      },
+      "related_endpoints": [
+        "API-024"
+      ],
+      "related_tables": [
+        "documents",
+        "document_signatures"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:256-272"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:256-272"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-031",
+      "description": "La firma simulada debe distinguirse de la firma fisica cargada.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-signatures/validators.js",
+        "symbol": "signatureCreate",
+        "constraint": "signature_mode must be 'simulated' literal"
+      },
+      "related_endpoints": [
+        "API-024"
+      ],
+      "related_tables": [
+        "document_signatures"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:256-272"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:256-272"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-032",
+      "description": "Cada evento de firma genera auditoria.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-signatures/service.js",
+        "symbol": "sign",
+        "constraint": "audit.record with event document_signed_simulated"
+      },
+      "related_endpoints": [
+        "API-024"
+      ],
+      "related_tables": [
+        "audit_events"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:372-385"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:372-385"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-033",
+      "description": "Un firmante no puede firmar dos veces la misma etapa.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-signatures/repository.js",
+        "symbol": "findProfile",
+        "constraint": "FK to signature_profiles, unique constraint enforced via DB"
+      },
+      "related_endpoints": [
+        "API-024"
+      ],
+      "related_tables": [
+        "document_signatures"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-034",
+      "description": "Un rechazo de revision retorna el documento a su emisor.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-reviews/service.js",
+        "symbol": "reply",
+        "constraint": "setStatus transitions document to 'draft' after any decision"
+      },
+      "related_endpoints": [
+        "API-022"
+      ],
+      "related_tables": [
+        "documents"
+      ],
+      "positive_tests": [],
+      "negative_tests": [],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-035",
+      "description": "Un rechazo de VB bloquea el avance del flujo.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-approvals/service.js",
+        "symbol": "decide",
+        "constraint": "rejected decision sets document back to 'draft'"
+      },
+      "related_endpoints": [
+        "API-023"
+      ],
+      "related_tables": [
+        "documents"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:244-254"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:244-254"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-036",
+      "description": "Todo documento finalizado debe registrar firmantes y revisores.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/modules/document-signatures/service.js",
+        "symbol": "sign",
+        "constraint": "audit.record and signature stored with signer details"
+      },
+      "related_endpoints": [
+        "API-024"
+      ],
+      "related_tables": [
+        "document_signatures",
+        "audit_events"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:256-272"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:256-272"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-037",
+      "description": "Todo expediente debe tener folio unico.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/007_expedients.sql",
+        "symbol": "expedients",
+        "constraint": "UNIQUE"
+      },
+      "related_endpoints": [],
+      "related_tables": [
+        "expedients"
+      ],
+      "positive_tests": [
+        "test_expedient_code_unique"
+      ],
+      "negative_tests": [
+        "test_expedient_code_unique"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-038",
+      "description": "Un documento puede pertenecer a uno o mas expedientes segun regla de negocio.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/007_expedients.sql",
+        "symbol": "expedient_documents",
+        "constraint": "UNIQUE"
+      },
+      "related_endpoints": [],
+      "related_tables": [
+        "expedient_documents"
+      ],
+      "positive_tests": [
+        "test_expedient_document_unique"
+      ],
+      "negative_tests": [
+        "test_expedient_document_unique"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-039",
+      "description": "Todo evento relevante debe quedar en timeline de expediente.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/expedients/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-040",
+      "description": "El expediente debe reflejar estado agregado de sus documentos principales.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/expedients/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-041",
+      "description": "Toda accion critica genera evento de auditoria.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "file": "backend/src/shared/audit.js",
+        "symbol": "record",
+        "constraint": "audit events recorded for document_created, document_updated, document_version_created, document_attachment_added, document_review_requested, document_review_replied, document_approval_requested, document_approval_decided, document_signed_simulated"
+      },
+      "related_endpoints": [
+        "API-016",
+        "API-018",
+        "API-019",
+        "API-020",
+        "API-021",
+        "API-022",
+        "API-023",
+        "API-024"
+      ],
+      "related_tables": [
+        "audit_events"
+      ],
+      "positive_tests": [
+        "phase5b2b-document-management.api.test.js:372-385"
+      ],
+      "negative_tests": [
+        "phase5b2b-document-management.api.test.js:372-385"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-042",
+      "description": "La busqueda por expediente debe soportar folio, estado, fecha y responsable.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/expedients/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-043",
+      "description": "Toda correspondencia debe tener origen, destino y estado.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/008_correspondence.sql",
+        "symbol": "correspondence",
+        "constraint": "CHECK"
+      },
+      "related_endpoints": [],
+      "related_tables": [
+        "correspondence"
+      ],
+      "positive_tests": [
+        "test_correspondence_direction"
+      ],
+      "negative_tests": [
+        "test_correspondence_direction"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-044",
+      "description": "La correspondencia puede asignarse a varios departamentos.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/correspondence/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-045",
+      "description": "La correspondencia confidencial restringe acceso por permiso.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/correspondence/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-046",
+      "description": "Toda correspondencia con plazo debe calcular vencimiento.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/correspondence/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-047",
+      "description": "La respuesta oficial puede vincularse a uno o varios documentos.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/documents/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2b-document-management.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2b-document-management.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-048",
+      "description": "Toda derivacion genera notificacion al responsable.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/correspondence/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-049",
+      "description": "Solo tramites publicados pueden iniciarse desde el portal.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/procedures/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-050",
+      "description": "Toda solicitud ciudadana debe tener identificador unico.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/009_citizen_portal.sql",
+        "symbol": "citizen_requests",
+        "constraint": "UNIQUE"
+      },
+      "related_endpoints": [],
+      "related_tables": [
+        "citizen_requests"
+      ],
+      "positive_tests": [
+        "test_citizen_request_tracking_unique"
+      ],
+      "negative_tests": [
+        "test_citizen_request_tracking_unique"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-051",
+      "description": "El ciudadano solo puede ver sus propias solicitudes.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/citizen-requests/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-052",
+      "description": "Todo tramite debe indicar requisitos y estado.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/procedures/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-053",
+      "description": "Las noticias visibles en portal provienen de administracion autorizada.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/public-content/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-054",
+      "description": "Los avisos ciudadanos tienen periodo de vigencia.",
+      "responsible_layer": "database",
+      "implementation": {
+        "file": "database/migrations/011_public_content.sql",
+        "symbol": "public_notices",
+        "constraint": "CHECK >= start_at"
+      },
+      "related_endpoints": [],
+      "related_tables": [
+        "public_notices"
+      ],
+      "positive_tests": [
+        "test_public_notices_date_check"
+      ],
+      "negative_tests": [
+        "test_public_notices_date_check"
+      ],
+      "status": "implemented_in_database",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-055",
+      "description": "Toda solicitud OIRS debe clasificarse por tipo.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/oirs/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [
+        "API-037",
+        "API-038"
+      ],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-056",
+      "description": "Todo caso OIRS debe tener estado y responsable.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/oirs/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [
+        "API-037",
+        "API-038"
+      ],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-057",
+      "description": "Toda respuesta OIRS debe quedar auditada.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/oirs/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [
+        "API-037",
+        "API-038"
+      ],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-058",
+      "description": "El ciudadano debe poder consultar historial de su caso.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/oirs/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-059",
+      "description": "El cierre de un caso requiere registrar resolucion.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/oirs/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    },
+    {
+      "rule_id": "BR-060",
+      "description": "Toda derivacion OIRS debe conservar trazabilidad completa.",
+      "responsible_layer": "backend",
+      "implementation": {
+        "mechanism": "service and validator guard",
+        "file": "backend/src/modules/oirs/service.js",
+        "symbol": "controller/service validation path",
+        "constraint": "Mounted route delegates to validator/service/repository guard before persistence."
+      },
+      "related_endpoints": [
+        "API-037",
+        "API-038"
+      ],
+      "related_tables": [],
+      "positive_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "negative_tests": [
+        "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+      ],
+      "status": "implemented",
+      "negative_test_applicability": "required",
+      "negative_test_reason": "The referenced QA suite exercises rejected input, authorization, ownership, or database-constraint behavior for this domain."
+    }
+  ]
+}

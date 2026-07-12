@@ -1,0 +1,10 @@
+{
+  "data_table": {
+    "row_keys": "stable_resource_id",
+    "column_keys": "index_acceptable_static",
+    "cell_keys": "index_within_row",
+    "id_requirement": "T extends { id: number }"
+  },
+  "key_warnings_detected": 0,
+  "test_verification": "pending"
+}

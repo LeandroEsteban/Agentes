@@ -1,0 +1,110 @@
+{
+  "environment": {
+    "docker": "Docker version 29.5.3, build d1c06ef",
+    "docker_compose_available": true,
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.6"
+  },
+  "generated_at": "2026-07-11T03:34:12Z",
+  "preexisting_limitations": [
+    "No hay medicion de cobertura configurada.",
+    "Las verificaciones Node y Docker son sintacticas/estructurales, no pruebas funcionales."
+  ],
+  "repository": {
+    "git_available": false,
+    "git_reason": "El proyecto fue descargado desde un archivo ZIP sin metadatos Git",
+    "source_type": "zip"
+  },
+  "schema_version": "webforge.baseline.v1",
+  "siged_baseline": {
+    "backend_type": "node_http",
+    "catalogued_endpoints": 40,
+    "declared_tables": 40,
+    "dev_workspace_found": true,
+    "frontend_type": "vanilla_javascript",
+    "implemented_catalogued_endpoints": 8,
+    "persistence_mode": "memory",
+    "qa_application_found": false,
+    "qa_workspace_found": true,
+    "version_v0001_found": true
+  },
+  "tests": [
+    {
+      "command": "python -m pytest",
+      "duration_seconds": 4.156,
+      "exit_code": 0,
+      "failed": 0,
+      "notes": [
+        "Suite de runtime Python."
+      ],
+      "passed": 21,
+      "skipped": 0,
+      "status": "pass",
+      "stderr_summary": "",
+      "stdout_summary": "..................... [100%] 21 passed in 3.48s",
+      "working_directory": "."
+    },
+    {
+      "command": "npm.cmd run verify",
+      "duration_seconds": 0.463,
+      "exit_code": 0,
+      "failed": 0,
+      "notes": [
+        "Verificacion estructural/sintactica cuando aplique; no implica cobertura funcional."
+      ],
+      "passed": 0,
+      "skipped": 0,
+      "status": "pass",
+      "stderr_summary": "",
+      "stdout_summary": "> siged-lampa@0.2.0 verify > python scripts/verify_siged_bundle.py { \"checks\": { \"access_policy_contract\": true, \"backend_entry\": true, \"backend_src\": true, \"backlog_present\": true, \"docker_compose\": true, \"endpoints>=40\": true, \"er_tables>=40\": true, \"frontend_app\": true, \"frontend_entry\": true, \"frontend_src\": true, \"login_endpoint\": true, \"migration\": true, \"modules>=10\": true, \"navigation_contract\": true, \"portal_blocks_internal_labels\": true, \"portal_blocks_internal_view_ids\": true, \"screens>=30\": true, \"seed_sql\": true, \"source_docs>=4\": true, \"sources_present\": true }, \"failed\": [], \"st",
+      "working_directory": "project/siged-lampa/sandboxes/DEV/workspace"
+    },
+    {
+      "command": "npm.cmd run check:backend",
+      "duration_seconds": 0.5,
+      "exit_code": 0,
+      "failed": 0,
+      "notes": [
+        "Verificacion estructural/sintactica cuando aplique; no implica cobertura funcional."
+      ],
+      "passed": 0,
+      "skipped": 0,
+      "status": "pass",
+      "stderr_summary": "",
+      "stdout_summary": "> siged-lampa@0.2.0 check:backend > node --check backend/server.js && node --check backend/src/server.js",
+      "working_directory": "project/siged-lampa/sandboxes/DEV/workspace"
+    },
+    {
+      "command": "npm.cmd run check:frontend",
+      "duration_seconds": 0.46,
+      "exit_code": 0,
+      "failed": 0,
+      "notes": [
+        "Verificacion estructural/sintactica cuando aplique; no implica cobertura funcional."
+      ],
+      "passed": 0,
+      "skipped": 0,
+      "status": "pass",
+      "stderr_summary": "",
+      "stdout_summary": "> siged-lampa@0.2.0 check:frontend > node --check frontend/assets/app.js",
+      "working_directory": "project/siged-lampa/sandboxes/DEV/workspace"
+    },
+    {
+      "command": "docker compose config --quiet",
+      "duration_seconds": 0.316,
+      "exit_code": 0,
+      "failed": 0,
+      "notes": [
+        "Verificacion estructural/sintactica cuando aplique; no implica cobertura funcional."
+      ],
+      "passed": 0,
+      "skipped": 0,
+      "status": "pass",
+      "stderr_summary": "",
+      "stdout_summary": "",
+      "working_directory": "project/siged-lampa/sandboxes/DEV/workspace"
+    }
+  ]
+}

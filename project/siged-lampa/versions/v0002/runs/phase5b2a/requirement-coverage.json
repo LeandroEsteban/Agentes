@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "total": 24,
+    "tested": 0,
+    "pending": 24
+  },
+  "validations": {
+    "total": 30,
+    "tested": 0,
+    "pending": 30
+  }
+}

@@ -1,0 +1,42 @@
+﻿{
+    "rbac":  {
+                 "status":  "pass",
+                 "note":  "RBAC derivado de PostgreSQL, permisos verificados en E2E-08, E2E-10"
+             },
+    "anonymous_audit":  {
+                            "status":  "pass"
+                        },
+    "correspondence":  {
+                           "status":  "pass"
+                       },
+    "expired_session":  {
+                            "status":  "pass"
+                        },
+    "admin":  {
+                  "status":  "pass"
+              },
+    "expedients":  {
+                       "status":  "pass"
+                   },
+    "citizen_ownership":  {
+                              "status":  "pass",
+                              "note":  "Ownership verificado en API tests"
+                          },
+    "error_sanitization":  {
+                               "status":  "pass"
+                           },
+    "oirs_tracking":  {
+                          "status":  "pass",
+                          "note":  "Tracking OIRS via x-oirs-tracking-token"
+                      },
+    "signature":  {
+                      "status":  "pass"
+                  },
+    "regression":  false,
+    "review_approval":  {
+                            "status":  "pass"
+                        },
+    "document_permissions":  {
+                                 "status":  "pass"
+                             }
+}

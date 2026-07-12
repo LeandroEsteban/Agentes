@@ -1,0 +1,60 @@
+{
+  "schema_version": "webforge.phase6b_report.v1",
+  "status": "blocked",
+  "phase5_status": "pass_with_limitations",
+  "phase6_status": "blocked",
+  "screens": {
+    "documented": 30,
+    "routed": 30,
+    "real_data": 7,
+    "mock_data": 0,
+    "hybrid_data": 0,
+    "verified": 7,
+    "verified_with_limitation": 0,
+    "partial": 23
+  },
+  "api": {
+    "contract_operations": 98,
+    "consumed": 32,
+    "not_required_by_ui": 66,
+    "pending": 0
+  },
+  "validations": {
+    "deferred_from_backend": 2,
+    "implemented": 0
+  },
+  "tests": {
+    "unit": {
+      "passed": 4,
+      "failed": 0
+    },
+    "integration": {
+      "passed": 0,
+      "failed": 0
+    },
+    "e2e": {
+      "passed": 0,
+      "failed": 0
+    }
+  },
+  "coverage": {
+    "lines": 15.52,
+    "statements": 15.52,
+    "functions": 16.27,
+    "branches": 38.29
+  },
+  "build": "pass",
+  "gates": {
+    "pass": 0,
+    "pass_with_limitation": 1,
+    "blocked": 10
+  },
+  "handoff": "rejected",
+  "critical_blockers": [
+    "23 screens remain partial",
+    "VAL-030 and VAL-038 have no implementable backend contract",
+    "No E2E runner is configured",
+    "Frontend coverage is below minimum thresholds"
+  ],
+  "accepted_limitations": []
+}

@@ -1,0 +1,12 @@
+{
+  "total": 60,
+  "summary": {
+    "total": 60,
+    "implemented": 15,
+    "tested_positive": 15,
+    "tested_negative": 0,
+    "deferred_frontend": 0,
+    "pending": 45
+  },
+  "status": "partial"
+}

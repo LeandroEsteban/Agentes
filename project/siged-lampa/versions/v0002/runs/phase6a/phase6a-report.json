@@ -1,0 +1,12 @@
+{
+  "schema_version": "webforge.phase6a_report.v1",
+  "status": "blocked",
+  "phase5_status": "blocked",
+  "phase6_status": "blocked",
+  "screens": { "documented": 30, "routed": 30, "implemented": 7, "partial": 23, "real_data": 23, "mock_data": 0, "hybrid_data": 7 },
+  "routes": { "public": 8, "portal": 8, "intranet": 16, "admin": 5 },
+  "tests": { "passed": 4, "failed": 0 },
+  "build": "pass",
+  "baseline_preserved": true,
+  "blockers": ["Fase 5 permanece bloqueada", "Cobertura frontend inicial de 22.41%", "Integracion y evidencia de endpoints parciales no completadas", "No se ejecuta E2E completo"]
+}

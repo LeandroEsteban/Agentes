@@ -1,0 +1,37 @@
+{
+  "factory_audit": {
+    "webforge_status": "complete",
+    "p01_p12_passed": 12,
+    "p01_p12_total": 12,
+    "nested_source_bug_found_and_fixed": true,
+    "skill_present": true,
+    "tool_count": 5
+  },
+  "uno_scope": {
+    "documents_inventory_count": 8,
+    "objectives": 7,
+    "actors": 10,
+    "use_cases": 21,
+    "functionalities": 40,
+    "flows": 26,
+    "business_rules": 27,
+    "checks": 19,
+    "exceptions": 10,
+    "other_specs": 16,
+    "blockers_vac": 10,
+    "images": 14,
+    "implementable_requirements": 159
+  },
+  "implementation": {
+    "implemented_requirements": 0,
+    "implementation_coverage_pct": 0,
+    "app_source_files_detected": 2,
+    "status": "not_started_product_implementation"
+  },
+  "quality": {
+    "requirements_ledger_created": true,
+    "incremental_plan_created": true,
+    "factory_gates_run": true,
+    "external_uno_golden_applicable": false
+  }
+}

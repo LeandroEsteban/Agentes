@@ -1,0 +1,12 @@
+{
+  "schema_version":"webforge.phase7ar6ac_report.v1",
+  "status":"pass",
+  "r6a_status":"pass",
+  "phase7a_status":"blocked",
+  "phase7_status":"blocked",
+  "frontend":{"status":"pass","tests_passed":166,"coverage":"pass","lint":"pass","build":"pass"},
+  "backend":{"status":"pass","tests_passed":134},
+  "e2e":{"status":"pass","passed":5},
+  "gates":{"passed":10,"blocked":0},
+  "pending":"7A-R6B"
+}

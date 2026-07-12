@@ -1,0 +1,182 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Branch, tag, or commit SHA to deploy'
+        required: false
+        default: 'main'
+
+concurrency:
+  group: siged-lampa-production
+  cancel-in-progress: false
+
+env:
+  EC2_DIR: /opt/siged-lampa
+  RELEASE_ID: ${{ format('{0}-{1}', github.run_number, github.sha) }}
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate frontend
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run lint
+          npm test
+          npm run build
+
+      - name: Validate backend
+        run: |
+          npm ci
+          npm run check
+          npm test
+
+  package:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create release tarball
+        run: |
+          RELEASE_ID="${{ github.run_number }}-$(echo ${{ github.sha }} | cut -c1-7)"
+          echo "RELEASE_ID=$RELEASE_ID" >> $GITHUB_ENV
+          tar czf /tmp/siged-lampa-${RELEASE_ID}.tar.gz \
+            --exclude='.git' \
+            --exclude='node_modules' \
+            --exclude='.env' \
+            --exclude='.env.*' \
+            --exclude='coverage' \
+            --exclude='tests' \
+            --exclude='backend/tests' \
+            --exclude='frontend/tests' \
+            --exclude='playwright-report' \
+            --exclude='test-results' \
+            --exclude='runs' \
+            --exclude='*.log' \
+            .
+
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: siged-lampa-release-${{ github.run_number }}
+          path: /tmp/siged-lampa-${{ env.RELEASE_ID }}.tar.gz
+          retention-days: 7
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: package
+    environment: production
+    timeout-minutes: 30
+    steps:
+      - name: Download release artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: siged-lampa-release-${{ github.run_number }}
+          path: /tmp/
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/ec2_key
+          chmod 600 ~/.ssh/ec2_key
+          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Verify shared .env.production exists on EC2
+        run: |
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
+            "if [ ! -f $EC2_DIR/shared/.env.production ]; then
+               echo 'FATAL: Missing $EC2_DIR/shared/.env.production — create it before deploying'
+               exit 1
+             fi"
+
+      - name: Create release directory on EC2
+        run: |
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
+            "sudo mkdir -p $EC2_DIR/releases/${{ env.RELEASE_ID }}"
+
+      - name: Transfer release to EC2
+        run: |
+          scp -i ~/.ssh/ec2_key /tmp/siged-lampa-*.tar.gz \
+            ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
+            "sudo tar xzf /tmp/siged-lampa-*.tar.gz \
+               -C $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
+             sudo rm /tmp/siged-lampa-*.tar.gz && \
+             sudo chown -R root:root $EC2_DIR/releases/${{ env.RELEASE_ID }}"
+
+      - name: Copy shared env into release
+        run: |
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
+            "sudo cp $EC2_DIR/shared/.env.production \
+                    $EC2_DIR/releases/${{ env.RELEASE_ID }}/infra/deployment/.env.production"
+
+      - name: Validate environment
+        run: |
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
+            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
+             RELEASE_ID=${{ env.RELEASE_ID }} \
+             bash infra/deployment/scripts/validate-environment.sh"
+
+      - name: Deploy release (build + start)
+        run: |
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
+            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
+             RELEASE_ID=${{ env.RELEASE_ID }} \
+             bash infra/deployment/scripts/deploy-release.sh"
+
+      - name: Run database migrations
+        run: |
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
+            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
+             RELEASE_ID=${{ env.RELEASE_ID }} \
+             bash infra/deployment/scripts/run-migrations.sh"
+
+      - name: Health check
+        run: |
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
+            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
+             RELEASE_ID=${{ env.RELEASE_ID }} \
+             bash infra/deployment/scripts/health-check.sh"
+
+      - name: Smoke test
+        run: |
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
+            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
+             RELEASE_ID=${{ env.RELEASE_ID }} \
+             SMOKE_BASE_URL=http://127.0.0.1 \
+             bash infra/deployment/scripts/smoke-test.sh"
+
+      - name: Finalize (symlink + cleanup)
+        if: success()
+        run: |
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
+            "PREVIOUS=\$(readlink -f $EC2_DIR/current 2>/dev/null || true) && \
+             echo \"\${PREVIOUS##*/}\" | sudo tee $EC2_DIR/previous_release.txt > /dev/null && \
+             sudo ln -sfn $EC2_DIR/releases/${{ env.RELEASE_ID }} $EC2_DIR/current && \
+             RELEASE_ID=${{ env.RELEASE_ID }} CLEANUP_KEEP=3 \
+             bash $EC2_DIR/releases/${{ env.RELEASE_ID }}/infra/deployment/scripts/cleanup-releases.sh"
+
+      - name: Rollback on failure
+        if: failure()
+        run: |
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
+            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
+             PREVIOUS_ID=\$(cat $EC2_DIR/previous_release.txt 2>/dev/null || true) && \
+             if [ -n \"\$PREVIOUS_ID\" ]; then \
+               RELEASE_ID=${{ env.RELEASE_ID }} \
+               bash infra/deployment/scripts/rollback.sh; \
+             else \
+               echo 'WARN: No previous release recorded. Manual intervention required.'; \
+             fi"

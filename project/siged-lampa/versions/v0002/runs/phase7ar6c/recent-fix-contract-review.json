@@ -1,0 +1,26 @@
+﻿{
+    "schema_version":  "webforge.recent_fix_contract_review.v1",
+    "patch_public_content":  {
+                                 "openapi":  "PATCH requiere cuerpo completo segun schema",
+                                 "verdict":  "PATCH implementado como actualizacion completa contractual",
+                                 "zod_schema":  "strict() con slug, title, content_html, status todos obligatorios",
+                                 "backend_implementation":  "update() handler usa schema completo, no partial",
+                                 "fixture":  "Envia cuerpo completo",
+                                 "technical_debt":  "Evaluar PATCH parcial real o reemplazo por PUT en Fase 7B"
+                             },
+    "selectores_publicos":  {
+                                "verdict":  "CORRECT - Selectores semanticos usados",
+                                "semantic_selectors":  [
+                                                           "getByRole(\u0027heading\u0027,...)",
+                                                           "getByRole(\u0027link\u0027,...)"
+                                                       ]
+                            },
+    "administrativos_duplicados":  {
+                                       "frontend_presentation":  "Muestra error de conflicto del servidor",
+                                       "verdict":  "CORRECT",
+                                       "postgresql_dependency":  "No se depende del texto especifico de PostgreSQL",
+                                       "e2e_expectation":  "409",
+                                       "backend_response":  "409 Conflict",
+                                       "openapi_documentation":  true
+                                   }
+}

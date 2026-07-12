@@ -1,0 +1,35 @@
+{
+  "blockers": [
+    {
+      "id": "B-6BR2-001",
+      "description": "Coverage below final minimum thresholds (target: lines >=70%, statements >=70%, functions >=65%, branches >=65%)",
+      "current": { "lines": 3.11, "statements": 3.11, "functions": 22.36, "branches": 48.14 },
+      "type": "test_coverage",
+      "requires": "Add API mocking infrastructure and integration tests for all 23 feature components"
+    },
+    {
+      "id": "B-6BR2-002",
+      "description": "Full E2E infrastructure tests not executed",
+      "type": "e2e",
+      "requires": "Running backend QA environment to execute E2E-R1-01, E2E-R1-02, E2E-R1-03 and full flow tests"
+    },
+    {
+      "id": "B-6BR2-003",
+      "description": "Feature component tests need API mocking",
+      "type": "test_infrastructure",
+      "requires": "Configure vitest mock service worker or similar for API mocking in feature component unit tests"
+    },
+    {
+      "id": "B-6BR2-004",
+      "description": "Handoff Frontend to QA not yet prepared",
+      "type": "process",
+      "requires": "Coverage minimum, E2E green, all gates pass"
+    },
+    {
+      "id": "B-6BR2-005",
+      "description": "VAL-030 and VAL-038 formal acceptance by project stakeholders needed",
+      "type": "governance",
+      "requires": "Stakeholder sign-off on deferred-to-Phase-7 resolution for PDF generation and physical signature"
+    }
+  ]
+}

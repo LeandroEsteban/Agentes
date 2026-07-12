@@ -1,0 +1,37 @@
+[
+  {
+    "defect_id": "QA-DEF-E2E-001",
+    "flow": "E2E-03..E2E-08",
+    "classification": "test_defect",
+    "severity": "high",
+    "reproduction": [
+      "Run npm.cmd run test:e2e -- --grep @E2E-03.",
+      "waitForURL(/\\/intranet/) matches /intranet/login and the test continues unauthenticated."
+    ],
+    "root_cause": "Non-specific URL assertion.",
+    "changed_files": [
+      "frontend/src/e2e/flows/e2e-03-document-version-attachment.spec.ts"
+    ],
+    "regression_tests": [],
+    "status": "open"
+  },
+  {
+    "defect_id": "QA-DEF-FE-002",
+    "flow": "E2E-03",
+    "classification": "frontend_defect",
+    "severity": "high",
+    "reproduction": [
+      "Create a document through the prior UI."
+    ],
+    "root_cause": "UI payload omitted required content and used non-contract field names.",
+    "changed_files": [
+      "frontend/src/features/documents/DocumentCreatePage.tsx",
+      "frontend/src/features/documents/DocumentDetailPage.tsx",
+      "frontend/src/features/documents/DocumentVersionsPage.tsx"
+    ],
+    "regression_tests": [
+      "npm.cmd run build"
+    ],
+    "status": "resolved"
+  }
+]

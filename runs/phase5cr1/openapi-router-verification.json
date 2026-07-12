@@ -1,0 +1,15 @@
+{
+  "catalog_operations": 98,
+  "router_operations": 98,
+  "openapi_operations": 98,
+  "matched": 98,
+  "missing_in_openapi": [],
+  "missing_in_router": [],
+  "missing_in_catalog": [],
+  "method_mismatches": [],
+  "path_mismatches": [],
+  "security_mismatches": [],
+  "permission_mismatches": [],
+  "duplicate_operation_ids": [],
+  "duplicate_endpoint_codes": []
+}

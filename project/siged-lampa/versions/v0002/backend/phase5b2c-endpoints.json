@@ -1,0 +1,653 @@
+{
+  "generated_at": "2026-07-11T19:53:28.480Z",
+  "scope": [
+    {
+      "endpoint_code": "API-025",
+      "method": "GET",
+      "path": "/api/v1/expedients",
+      "classification": "original",
+      "module": "expedients",
+      "authentication": "internal",
+      "required_permissions": [
+        "expedients.view"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "no permission user",
+        "filters",
+        "pagination"
+      ],
+      "database_assertions": [
+        "expedients"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "API-026",
+      "method": "POST",
+      "path": "/api/v1/expedients",
+      "classification": "original",
+      "module": "expedients",
+      "authentication": "internal",
+      "required_permissions": [
+        "expedients.create"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "required fields"
+      ],
+      "database_assertions": [
+        "expedients",
+        "audit_events"
+      ],
+      "audit_assertions": [
+        "expedient_created"
+      ],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "API-027",
+      "method": "GET",
+      "path": "/api/v1/expedients/{id}",
+      "classification": "original",
+      "module": "expedients",
+      "authentication": "internal",
+      "required_permissions": [
+        "expedients.view"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "missing id"
+      ],
+      "database_assertions": [
+        "expedients",
+        "expedient_documents",
+        "expedient_events"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "API-028",
+      "method": "POST",
+      "path": "/api/v1/expedients/{id}/documents",
+      "classification": "original",
+      "module": "expedients",
+      "authentication": "internal",
+      "required_permissions": [
+        "expedients.edit"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "duplicate",
+        "nonexistent document"
+      ],
+      "database_assertions": [
+        "expedient_documents",
+        "audit_events"
+      ],
+      "audit_assertions": [
+        "expedient_document_linked"
+      ],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "API-029",
+      "method": "GET",
+      "path": "/api/v1/correspondence",
+      "classification": "original",
+      "module": "correspondence",
+      "authentication": "internal",
+      "required_permissions": [
+        "correspondence.view"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "filters",
+        "pagination",
+        "no permission user"
+      ],
+      "database_assertions": [
+        "correspondence"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "API-030",
+      "method": "POST",
+      "path": "/api/v1/correspondence",
+      "classification": "original",
+      "module": "correspondence",
+      "authentication": "internal",
+      "required_permissions": [
+        "correspondence.create"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "required fields"
+      ],
+      "database_assertions": [
+        "correspondence",
+        "correspondence_recipients",
+        "audit_events"
+      ],
+      "audit_assertions": [
+        "correspondence_created"
+      ],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "API-031",
+      "method": "POST",
+      "path": "/api/v1/correspondence/{id}/route",
+      "classification": "original",
+      "module": "correspondence",
+      "authentication": "internal",
+      "required_permissions": [
+        "correspondence.edit"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "closed correspondence",
+        "same department"
+      ],
+      "database_assertions": [
+        "correspondence_routes",
+        "audit_events"
+      ],
+      "audit_assertions": [
+        "correspondence_routed"
+      ],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "API-032",
+      "method": "POST",
+      "path": "/api/v1/correspondence/{id}/link-response",
+      "classification": "original",
+      "module": "correspondence",
+      "authentication": "internal",
+      "required_permissions": [
+        "correspondence.edit"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "document in draft"
+      ],
+      "database_assertions": [
+        "correspondence"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "API-039",
+      "method": "GET",
+      "path": "/api/v1/reports/dashboard",
+      "classification": "original",
+      "module": "reports",
+      "authentication": "internal",
+      "required_permissions": [
+        "reports.view"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "unauthorized",
+        "invalid date range"
+      ],
+      "database_assertions": [
+        "documents",
+        "expedients",
+        "oirs_cases",
+        "citizen_requests"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "PUBLIC-NEWS-001",
+      "method": "GET",
+      "path": "/api/v1/public/news",
+      "classification": "supplemental",
+      "module": "public-content",
+      "authentication": "public",
+      "required_permissions": [],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "hidden/draft not shown"
+      ],
+      "database_assertions": [
+        "news_posts"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "PUBLIC-NEWS-002",
+      "method": "GET",
+      "path": "/api/v1/public/news/{slug}",
+      "classification": "supplemental",
+      "module": "public-content",
+      "authentication": "public",
+      "required_permissions": [],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "hidden/draft slug"
+      ],
+      "database_assertions": [
+        "news_posts"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "PUBLIC-NOTICES-001",
+      "method": "GET",
+      "path": "/api/v1/public/notices",
+      "classification": "supplemental",
+      "module": "public-content",
+      "authentication": "public",
+      "required_permissions": [],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "expired not shown"
+      ],
+      "database_assertions": [
+        "public_notices"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "PUBLIC-CALENDAR-001",
+      "method": "GET",
+      "path": "/api/v1/public/calendar",
+      "classification": "supplemental",
+      "module": "public-content",
+      "authentication": "public",
+      "required_permissions": [],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "past events hidden"
+      ],
+      "database_assertions": [
+        "calendar_events"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "ADMIN-NEWS-CRUD",
+      "method": "POST|PATCH|DELETE",
+      "path": "/api/v1/admin/public-content/news[/{id}]",
+      "classification": "supplemental",
+      "module": "public-content",
+      "authentication": "internal",
+      "required_permissions": [
+        "admin.access"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "non-admin",
+        "citizen"
+      ],
+      "database_assertions": [
+        "news_posts",
+        "audit_events"
+      ],
+      "audit_assertions": [
+        "public_content_created",
+        "public_content_updated"
+      ],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "ADMIN-NOTICES-CRUD",
+      "method": "POST|PATCH|DELETE",
+      "path": "/api/v1/admin/public-content/notices[/{id}]",
+      "classification": "supplemental",
+      "module": "public-content",
+      "authentication": "internal",
+      "required_permissions": [
+        "admin.access"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "invalid date range"
+      ],
+      "database_assertions": [
+        "public_notices",
+        "audit_events"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "ADMIN-CALENDAR-CRUD",
+      "method": "POST|PATCH|DELETE",
+      "path": "/api/v1/admin/public-content/calendar[/{id}]",
+      "classification": "supplemental",
+      "module": "public-content",
+      "authentication": "internal",
+      "required_permissions": [
+        "admin.access"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "invalid date range"
+      ],
+      "database_assertions": [
+        "calendar_events",
+        "audit_events"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "EXPEDIENT-SUPPLEMENTAL-001",
+      "method": "PATCH",
+      "path": "/api/v1/expedients/{id}",
+      "classification": "supplemental",
+      "module": "expedients",
+      "authentication": "internal",
+      "required_permissions": [
+        "expedients.edit"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [],
+      "database_assertions": [
+        "expedients",
+        "audit_events"
+      ],
+      "audit_assertions": [
+        "expedient_updated"
+      ],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "EXPEDIENT-SUPPLEMENTAL-002",
+      "method": "POST",
+      "path": "/api/v1/expedients/{id}/close",
+      "classification": "supplemental",
+      "module": "expedients",
+      "authentication": "internal",
+      "required_permissions": [
+        "expedients.edit"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "already closed"
+      ],
+      "database_assertions": [
+        "expedients",
+        "audit_events"
+      ],
+      "audit_assertions": [
+        "expedient_closed"
+      ],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "EXPEDIENT-SUPPLEMENTAL-003",
+      "method": "GET",
+      "path": "/api/v1/expedients/{id}/timeline",
+      "classification": "supplemental",
+      "module": "expedients",
+      "authentication": "internal",
+      "required_permissions": [
+        "expedients.view"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [],
+      "database_assertions": [
+        "expedient_events"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "EXPEDIENT-SUPPLEMENTAL-004",
+      "method": "POST",
+      "path": "/api/v1/expedients/{id}/events",
+      "classification": "supplemental",
+      "module": "expedients",
+      "authentication": "internal",
+      "required_permissions": [
+        "expedients.edit"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [],
+      "database_assertions": [
+        "expedient_events",
+        "audit_events"
+      ],
+      "audit_assertions": [
+        "expedient_event_created"
+      ],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "CORRESPONDENCE-SUPPLEMENTAL-001",
+      "method": "PATCH",
+      "path": "/api/v1/correspondence/{id}",
+      "classification": "supplemental",
+      "module": "correspondence",
+      "authentication": "internal",
+      "required_permissions": [
+        "correspondence.edit"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [],
+      "database_assertions": [
+        "correspondence",
+        "audit_events"
+      ],
+      "audit_assertions": [
+        "correspondence_updated"
+      ],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "CORRESPONDENCE-SUPPLEMENTAL-002",
+      "method": "POST",
+      "path": "/api/v1/correspondence/{id}/close",
+      "classification": "supplemental",
+      "module": "correspondence",
+      "authentication": "internal",
+      "required_permissions": [
+        "correspondence.edit"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "double close"
+      ],
+      "database_assertions": [
+        "correspondence",
+        "audit_events"
+      ],
+      "audit_assertions": [
+        "correspondence_closed"
+      ],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "CORRESPONDENCE-SUPPLEMENTAL-003",
+      "method": "GET",
+      "path": "/api/v1/correspondence/{id}",
+      "classification": "supplemental",
+      "module": "correspondence",
+      "authentication": "internal",
+      "required_permissions": [
+        "correspondence.view"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "missing id"
+      ],
+      "database_assertions": [
+        "correspondence",
+        "correspondence_recipients",
+        "correspondence_routes"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "CORRESPONDENCE-SUPPLEMENTAL-004",
+      "method": "GET",
+      "path": "/api/v1/correspondence/{id}/history",
+      "classification": "supplemental",
+      "module": "correspondence",
+      "authentication": "internal",
+      "required_permissions": [
+        "correspondence.view"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [],
+      "database_assertions": [
+        "audit_events"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "SECURITY-001",
+      "method": "ANY",
+      "path": "ALL",
+      "classification": "supplemental",
+      "module": "-",
+      "authentication": "-",
+      "required_permissions": [],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "SQL injection",
+        "mass assignment"
+      ],
+      "database_assertions": [
+        "error responses"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "SECURITY-002",
+      "method": "ANY",
+      "path": "ALL",
+      "classification": "supplemental",
+      "module": "-",
+      "authentication": "-",
+      "required_permissions": [],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "error sanitization"
+      ],
+      "database_assertions": [
+        "error responses"
+      ],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    },
+    {
+      "endpoint_code": "SECURITY-003",
+      "method": "ANY",
+      "path": "/api/v1/admin/public-content/*",
+      "classification": "supplemental",
+      "module": "public-content",
+      "authentication": "internal",
+      "required_permissions": [
+        "admin.access"
+      ],
+      "ownership_resource": "",
+      "positive_test": "phase5b2c-expedients-correspondence.api.test.js",
+      "negative_tests": [
+        "citizen user"
+      ],
+      "database_assertions": [],
+      "audit_assertions": [],
+      "status": "verified",
+      "current_status": "implemented",
+      "target_status": "verified"
+    }
+  ],
+  "excluded_reason": "8 original expedients/correspondence/reports + 17 supplemental public-content, lifecycle, security routes"
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-07-11T20:00:00.000Z",
+  "suite": "phase5b2d-endpoint-tests",
+  "test_files": [
+    "backend/tests/api/phase5b2b-document-management.api.test.js",
+    "backend/tests/phase5b2d/phase5b2d-security.api.test.js",
+    "backend/tests/phase5b2d/phase5b2d-lifecycle.integration.test.js"
+  ],
+  "endpoints": [
+    { "code": "API-015", "positive": "phase5b2b-document-management.api.test.js:28", "status": "implemented", "result": "pass" },
+    { "code": "API-016", "positive": "phase5b2b-document-management.api.test.js:42", "status": "implemented", "result": "pass" },
+    { "code": "API-017", "positive": "phase5b2b-document-management.api.test.js:72", "status": "implemented", "result": "pass" },
+    { "code": "API-018", "positive": "phase5b2b-document-management.api.test.js:97", "status": "implemented", "result": "pass" },
+    { "code": "API-019", "positive": "phase5b2b-document-management.api.test.js:131", "status": "implemented", "result": "pass" },
+    { "code": "API-020", "positive": "phase5b2b-document-management.api.test.js:113", "status": "implemented", "result": "pass" },
+    { "code": "API-021", "positive": "phase5b2b-document-management.api.test.js:152", "status": "implemented", "result": "pass" },
+    { "code": "API-022", "positive": "phase5b2b-document-management.api.test.js:179", "status": "implemented", "result": "pass" },
+    { "code": "API-023", "positive": "phase5b2b-document-management.api.test.js:201", "status": "implemented", "result": "pass" },
+    { "code": "API-024", "positive": "phase5b2b-document-management.api.test.js:256", "status": "implemented", "result": "pass" }
+  ],
+  "total": 10,
+  "pass": 10,
+  "fail": 0
+}

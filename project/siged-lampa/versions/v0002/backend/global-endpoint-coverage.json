@@ -1,0 +1,28 @@
+{
+  "original": {
+    "total": 40,
+    "implemented": 40,
+    "positive_tested": 23,
+    "negative_tested": 19,
+    "smoke_tested": 23
+  },
+  "supplemental": {
+    "total": 0,
+    "implemented": 0,
+    "positive_tested": 0,
+    "negative_tested": 0
+  },
+  "legacy": {
+    "total": 0,
+    "implemented": 0,
+    "tested": 0,
+    "deprecated": 0
+  },
+  "technical": {
+    "total": 0,
+    "implemented": 0,
+    "tested": 0
+  },
+  "partial": [],
+  "missing": []
+}

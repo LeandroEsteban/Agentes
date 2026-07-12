@@ -1,0 +1,209 @@
+[
+  {
+    "flow_id": "E2E-03",
+    "test_file": "src/e2e/flows/e2e-03-document-version-attachment.spec.ts",
+    "ui_routes": [
+      "documents",
+      "versions",
+      "attachments",
+      "history"
+    ],
+    "required_operations": [
+      "create document",
+      "create version",
+      "base64 attachment",
+      "timeline"
+    ],
+    "current_steps": [
+      "navigation only"
+    ],
+    "missing_steps": [
+      "create document",
+      "create version",
+      "base64 attachment",
+      "timeline"
+    ],
+    "fixture_dependencies": [
+      "QA PostgreSQL"
+    ],
+    "expected_transitions": [],
+    "negative_cases": [],
+    "status": "superficial"
+  },
+  {
+    "flow_id": "E2E-04",
+    "test_file": "src/e2e/flows/e2e-04-review-approval.spec.ts",
+    "ui_routes": [
+      "reviews",
+      "approvals"
+    ],
+    "required_operations": [
+      "reply review",
+      "approval decision"
+    ],
+    "current_steps": [
+      "navigation only"
+    ],
+    "missing_steps": [
+      "reply review",
+      "approval decision"
+    ],
+    "fixture_dependencies": [
+      "QA PostgreSQL"
+    ],
+    "expected_transitions": [],
+    "negative_cases": [],
+    "status": "superficial"
+  },
+  {
+    "flow_id": "E2E-05",
+    "test_file": "src/e2e/flows/e2e-05-signature.spec.ts",
+    "ui_routes": [
+      "signature"
+    ],
+    "required_operations": [
+      "sign approved document"
+    ],
+    "current_steps": [
+      "navigation only"
+    ],
+    "missing_steps": [
+      "sign approved document"
+    ],
+    "fixture_dependencies": [
+      "QA PostgreSQL"
+    ],
+    "expected_transitions": [],
+    "negative_cases": [],
+    "status": "superficial"
+  },
+  {
+    "flow_id": "E2E-06",
+    "test_file": "src/e2e/flows/e2e-06-expedient.spec.ts",
+    "ui_routes": [
+      "expedients"
+    ],
+    "required_operations": [
+      "create",
+      "associate document",
+      "close"
+    ],
+    "current_steps": [
+      "navigation only"
+    ],
+    "missing_steps": [
+      "create",
+      "associate document",
+      "close"
+    ],
+    "fixture_dependencies": [
+      "QA PostgreSQL"
+    ],
+    "expected_transitions": [],
+    "negative_cases": [],
+    "status": "superficial"
+  },
+  {
+    "flow_id": "E2E-07",
+    "test_file": "src/e2e/flows/e2e-07-correspondence.spec.ts",
+    "ui_routes": [
+      "correspondence"
+    ],
+    "required_operations": [
+      "create",
+      "route",
+      "history"
+    ],
+    "current_steps": [
+      "navigation only"
+    ],
+    "missing_steps": [
+      "create",
+      "route",
+      "history"
+    ],
+    "fixture_dependencies": [
+      "QA PostgreSQL"
+    ],
+    "expected_transitions": [],
+    "negative_cases": [],
+    "status": "superficial"
+  },
+  {
+    "flow_id": "E2E-08",
+    "test_file": "src/e2e/flows/e2e-08-admin.spec.ts",
+    "ui_routes": [
+      "procedure-types",
+      "external-entities"
+    ],
+    "required_operations": [
+      "create",
+      "edit"
+    ],
+    "current_steps": [
+      "navigation only"
+    ],
+    "missing_steps": [
+      "create",
+      "edit"
+    ],
+    "fixture_dependencies": [
+      "QA PostgreSQL"
+    ],
+    "expected_transitions": [],
+    "negative_cases": [],
+    "status": "superficial"
+  },
+  {
+    "flow_id": "E2E-09",
+    "test_file": "src/e2e/flows/e2e-09-public-content.spec.ts",
+    "ui_routes": [
+      "public content"
+    ],
+    "required_operations": [
+      "draft",
+      "publish",
+      "unpublish"
+    ],
+    "current_steps": [
+      "navigation only"
+    ],
+    "missing_steps": [
+      "draft",
+      "publish",
+      "unpublish"
+    ],
+    "fixture_dependencies": [
+      "QA PostgreSQL"
+    ],
+    "expected_transitions": [],
+    "negative_cases": [],
+    "status": "superficial"
+  },
+  {
+    "flow_id": "E2E-10",
+    "test_file": "src/e2e/flows/e2e-10-guards-permissions.spec.ts",
+    "ui_routes": [
+      "guards"
+    ],
+    "required_operations": [
+      "actor guard",
+      "permission guard",
+      "expired session"
+    ],
+    "current_steps": [
+      "navigation only"
+    ],
+    "missing_steps": [
+      "actor guard",
+      "permission guard",
+      "expired session"
+    ],
+    "fixture_dependencies": [
+      "QA PostgreSQL"
+    ],
+    "expected_transitions": [],
+    "negative_cases": [],
+    "status": "superficial"
+  }
+]

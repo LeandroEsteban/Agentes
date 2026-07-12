@@ -1,0 +1,29 @@
+{
+  "acceptance_criteria": [
+    "El catalogo P01-P12 existe con gates y evidencia.",
+    "El workflow SDD completo produce artefactos locales.",
+    "Policy, MCP, memoria, tools y seguridad quedan default-deny o allowlisted.",
+    "Cada proyecto queda aislado en project/<project_id> con memoria propia y sandboxes DEV/QA independientes.",
+    "El final-report solo declara complete si la cobertura critica es 100 percent."
+  ],
+  "approvals": {},
+  "authorized_sources": [
+    "CheckList_Implementacio\u0301n_software-2.md",
+    "Diseno_detallado_agentes_y_skills_software-2.md",
+    "Diseno_detallado_arnes_dev_legacy-2.md",
+    "Diseno_detallado_fabrica_software_SDD-2.md",
+    "Diseno_detallado_orquestador_maestro_SDD-2.md"
+  ],
+  "budget": {
+    "cost_usd": 0,
+    "mcp_calls": 0,
+    "tool_calls": 200
+  },
+  "metadata": {},
+  "objective": "Implementar WEBFORGE como fabrica agentica SDD local con P01-P12 operativos al 100 percent.",
+  "project_id": "webforge-factory-runtime",
+  "project_version": "v0001",
+  "scope": "local_artifacts_only",
+  "side_effects": "no_external_writes_no_deploy",
+  "type": "factory_runtime"
+}

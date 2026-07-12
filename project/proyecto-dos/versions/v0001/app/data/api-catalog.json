@@ -1,0 +1,1047 @@
+{
+  "project_id": "proyecto-dos",
+  "base_path": "/api/v1",
+  "endpoint_count": 130,
+  "endpoints": [
+    {
+      "id": "EP_001",
+      "source_id": "EP-001",
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "description": "iniciar sesión.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_002",
+      "source_id": "EP-002",
+      "method": "POST",
+      "path": "/api/v1/auth/refresh",
+      "description": "renovar token.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_003",
+      "source_id": "EP-003",
+      "method": "POST",
+      "path": "/api/v1/auth/logout",
+      "description": "cerrar sesión.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_004",
+      "source_id": "EP-004",
+      "method": "GET",
+      "path": "/api/v1/auth/me",
+      "description": "obtener usuario autenticado.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_005",
+      "source_id": "EP-005",
+      "method": "POST",
+      "path": "/api/v1/auth/change-password",
+      "description": "cambiar contraseña.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_006",
+      "source_id": "EP-006",
+      "method": "GET",
+      "path": "/api/v1/users",
+      "description": "listar usuarios.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_007",
+      "source_id": "EP-007",
+      "method": "POST",
+      "path": "/api/v1/users",
+      "description": "crear usuario.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_008",
+      "source_id": "EP-008",
+      "method": "GET",
+      "path": "/api/v1/users/{id}",
+      "description": "obtener usuario.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_009",
+      "source_id": "EP-009",
+      "method": "PATCH",
+      "path": "/api/v1/users/{id}",
+      "description": "actualizar usuario.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_010",
+      "source_id": "EP-010",
+      "method": "DELETE",
+      "path": "/api/v1/users/{id}",
+      "description": "inactivar usuario.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_011",
+      "source_id": "EP-011",
+      "method": "GET",
+      "path": "/api/v1/roles",
+      "description": "listar roles.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_012",
+      "source_id": "EP-012",
+      "method": "POST",
+      "path": "/api/v1/roles",
+      "description": "crear rol.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_013",
+      "source_id": "EP-013",
+      "method": "PATCH",
+      "path": "/api/v1/roles/{id}",
+      "description": "actualizar rol.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_014",
+      "source_id": "EP-014",
+      "method": "GET",
+      "path": "/api/v1/permissions",
+      "description": "listar permisos.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_015",
+      "source_id": "EP-015",
+      "method": "PUT",
+      "path": "/api/v1/roles/{id}/permissions",
+      "description": "asignar permisos a rol.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_016",
+      "source_id": "EP-016",
+      "method": "GET",
+      "path": "/api/v1/customers",
+      "description": "listar clientes.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_017",
+      "source_id": "EP-017",
+      "method": "POST",
+      "path": "/api/v1/customers",
+      "description": "crear cliente.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_018",
+      "source_id": "EP-018",
+      "method": "GET",
+      "path": "/api/v1/customers/{id}",
+      "description": "obtener cliente.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_019",
+      "source_id": "EP-019",
+      "method": "PATCH",
+      "path": "/api/v1/customers/{id}",
+      "description": "actualizar cliente.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_020",
+      "source_id": "EP-020",
+      "method": "DELETE",
+      "path": "/api/v1/customers/{id}",
+      "description": "inactivar cliente.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_021",
+      "source_id": "EP-021",
+      "method": "GET",
+      "path": "/api/v1/customers/{id}/contacts",
+      "description": "listar contactos.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_022",
+      "source_id": "EP-022",
+      "method": "POST",
+      "path": "/api/v1/customers/{id}/contacts",
+      "description": "crear contacto.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_023",
+      "source_id": "EP-023",
+      "method": "PATCH",
+      "path": "/api/v1/customer-contacts/{id}",
+      "description": "actualizar contacto.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_024",
+      "source_id": "EP-024",
+      "method": "DELETE",
+      "path": "/api/v1/customer-contacts/{id}",
+      "description": "eliminar contacto.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_025",
+      "source_id": "EP-025",
+      "method": "GET",
+      "path": "/api/v1/customers/{id}/credit",
+      "description": "consultar crédito.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_026",
+      "source_id": "EP-026",
+      "method": "PATCH",
+      "path": "/api/v1/customers/{id}/credit",
+      "description": "actualizar crédito.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_027",
+      "source_id": "EP-027",
+      "method": "GET",
+      "path": "/api/v1/customers/{id}/statement",
+      "description": "estado de cuenta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_028",
+      "source_id": "EP-028",
+      "method": "GET",
+      "path": "/api/v1/suppliers",
+      "description": "listar proveedores.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_029",
+      "source_id": "EP-029",
+      "method": "POST",
+      "path": "/api/v1/suppliers",
+      "description": "crear proveedor.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_030",
+      "source_id": "EP-030",
+      "method": "GET",
+      "path": "/api/v1/suppliers/{id}",
+      "description": "obtener proveedor.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_031",
+      "source_id": "EP-031",
+      "method": "PATCH",
+      "path": "/api/v1/suppliers/{id}",
+      "description": "actualizar proveedor.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_032",
+      "source_id": "EP-032",
+      "method": "DELETE",
+      "path": "/api/v1/suppliers/{id}",
+      "description": "inactivar proveedor.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_033",
+      "source_id": "EP-033",
+      "method": "GET",
+      "path": "/api/v1/suppliers/{id}/contacts",
+      "description": "listar contactos de proveedor.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_034",
+      "source_id": "EP-034",
+      "method": "POST",
+      "path": "/api/v1/suppliers/{id}/contacts",
+      "description": "crear contacto proveedor.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_035",
+      "source_id": "EP-035",
+      "method": "GET",
+      "path": "/api/v1/products",
+      "description": "listar productos.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_036",
+      "source_id": "EP-036",
+      "method": "POST",
+      "path": "/api/v1/products",
+      "description": "crear producto.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_037",
+      "source_id": "EP-037",
+      "method": "GET",
+      "path": "/api/v1/products/{id}",
+      "description": "obtener producto.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_038",
+      "source_id": "EP-038",
+      "method": "PATCH",
+      "path": "/api/v1/products/{id}",
+      "description": "actualizar producto.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_039",
+      "source_id": "EP-039",
+      "method": "DELETE",
+      "path": "/api/v1/products/{id}",
+      "description": "inactivar producto.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_040",
+      "source_id": "EP-040",
+      "method": "GET",
+      "path": "/api/v1/product-categories",
+      "description": "listar categorías.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_041",
+      "source_id": "EP-041",
+      "method": "POST",
+      "path": "/api/v1/product-categories",
+      "description": "crear categoría.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_042",
+      "source_id": "EP-042",
+      "method": "GET",
+      "path": "/api/v1/units",
+      "description": "listar unidades.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_043",
+      "source_id": "EP-043",
+      "method": "POST",
+      "path": "/api/v1/units",
+      "description": "crear unidad.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_044",
+      "source_id": "EP-044",
+      "method": "GET",
+      "path": "/api/v1/warehouses",
+      "description": "listar bodegas.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_045",
+      "source_id": "EP-045",
+      "method": "POST",
+      "path": "/api/v1/warehouses",
+      "description": "crear bodega.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_046",
+      "source_id": "EP-046",
+      "method": "PATCH",
+      "path": "/api/v1/warehouses/{id}",
+      "description": "actualizar bodega.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_047",
+      "source_id": "EP-047",
+      "method": "GET",
+      "path": "/api/v1/warehouses/{id}/locations",
+      "description": "listar ubicaciones.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_048",
+      "source_id": "EP-048",
+      "method": "POST",
+      "path": "/api/v1/warehouses/{id}/locations",
+      "description": "crear ubicación.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_049",
+      "source_id": "EP-049",
+      "method": "GET",
+      "path": "/api/v1/inventory/stocks",
+      "description": "consultar stock.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_050",
+      "source_id": "EP-050",
+      "method": "GET",
+      "path": "/api/v1/inventory/movements",
+      "description": "consultar movimientos.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_051",
+      "source_id": "EP-051",
+      "method": "POST",
+      "path": "/api/v1/inventory/adjustments",
+      "description": "crear ajuste.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_052",
+      "source_id": "EP-052",
+      "method": "POST",
+      "path": "/api/v1/inventory/transfers",
+      "description": "transferir stock.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_053",
+      "source_id": "EP-053",
+      "method": "POST",
+      "path": "/api/v1/inventory/counts",
+      "description": "iniciar conteo físico.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_054",
+      "source_id": "EP-054",
+      "method": "GET",
+      "path": "/api/v1/inventory/counts/{id}",
+      "description": "obtener conteo.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_055",
+      "source_id": "EP-055",
+      "method": "PUT",
+      "path": "/api/v1/inventory/counts/{id}/lines",
+      "description": "cargar líneas de conteo.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_056",
+      "source_id": "EP-056",
+      "method": "POST",
+      "path": "/api/v1/inventory/counts/{id}/approve",
+      "description": "aprobar conteo.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_057",
+      "source_id": "EP-057",
+      "method": "POST",
+      "path": "/api/v1/inventory/counts/{id}/close",
+      "description": "cerrar conteo.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_058",
+      "source_id": "EP-058",
+      "method": "GET",
+      "path": "/api/v1/sales-orders",
+      "description": "listar ventas.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_059",
+      "source_id": "EP-059",
+      "method": "POST",
+      "path": "/api/v1/sales-orders",
+      "description": "crear venta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_060",
+      "source_id": "EP-060",
+      "method": "GET",
+      "path": "/api/v1/sales-orders/{id}",
+      "description": "obtener venta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_061",
+      "source_id": "EP-061",
+      "method": "PATCH",
+      "path": "/api/v1/sales-orders/{id}",
+      "description": "actualizar venta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_062",
+      "source_id": "EP-062",
+      "method": "POST",
+      "path": "/api/v1/sales-orders/{id}/confirm",
+      "description": "confirmar venta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_063",
+      "source_id": "EP-063",
+      "method": "POST",
+      "path": "/api/v1/sales-orders/{id}/cancel",
+      "description": "anular venta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_064",
+      "source_id": "EP-064",
+      "method": "POST",
+      "path": "/api/v1/sales-orders/{id}/reserve-stock",
+      "description": "reservar stock.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_065",
+      "source_id": "EP-065",
+      "method": "POST",
+      "path": "/api/v1/sales-orders/{id}/release-stock",
+      "description": "liberar reserva.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_066",
+      "source_id": "EP-066",
+      "method": "GET",
+      "path": "/api/v1/quotations",
+      "description": "listar cotizaciones.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_067",
+      "source_id": "EP-067",
+      "method": "POST",
+      "path": "/api/v1/quotations",
+      "description": "crear cotización.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_068",
+      "source_id": "EP-068",
+      "method": "POST",
+      "path": "/api/v1/quotations/{id}/convert-to-sales-order",
+      "description": "convertir cotización a venta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_069",
+      "source_id": "EP-069",
+      "method": "POST",
+      "path": "/api/v1/sales-dispatches",
+      "description": "crear despacho.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_070",
+      "source_id": "EP-070",
+      "method": "GET",
+      "path": "/api/v1/sales-dispatches/{id}",
+      "description": "obtener despacho.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_071",
+      "source_id": "EP-071",
+      "method": "POST",
+      "path": "/api/v1/sales-dispatches/{id}/cancel",
+      "description": "anular despacho.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_072",
+      "source_id": "EP-072",
+      "method": "GET",
+      "path": "/api/v1/sales-returns",
+      "description": "listar devoluciones.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_073",
+      "source_id": "EP-073",
+      "method": "POST",
+      "path": "/api/v1/sales-returns",
+      "description": "crear devolución.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_074",
+      "source_id": "EP-074",
+      "method": "GET",
+      "path": "/api/v1/sales-returns/{id}",
+      "description": "obtener devolución.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_075",
+      "source_id": "EP-075",
+      "method": "POST",
+      "path": "/api/v1/sales-returns/{id}/approve",
+      "description": "aprobar devolución.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_076",
+      "source_id": "EP-076",
+      "method": "POST",
+      "path": "/api/v1/sales-returns/{id}/reject",
+      "description": "rechazar devolución.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_077",
+      "source_id": "EP-077",
+      "method": "POST",
+      "path": "/api/v1/sales-returns/{id}/receive",
+      "description": "recibir productos devueltos.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_078",
+      "source_id": "EP-078",
+      "method": "POST",
+      "path": "/api/v1/sales-returns/{id}/create-credit-note",
+      "description": "crear nota de crédito.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_079",
+      "source_id": "EP-079",
+      "method": "GET",
+      "path": "/api/v1/purchase-orders",
+      "description": "listar órdenes de compra.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_080",
+      "source_id": "EP-080",
+      "method": "POST",
+      "path": "/api/v1/purchase-orders",
+      "description": "crear orden de compra.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_081",
+      "source_id": "EP-081",
+      "method": "GET",
+      "path": "/api/v1/purchase-orders/{id}",
+      "description": "obtener orden de compra.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_082",
+      "source_id": "EP-082",
+      "method": "PATCH",
+      "path": "/api/v1/purchase-orders/{id}",
+      "description": "actualizar orden de compra.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_083",
+      "source_id": "EP-083",
+      "method": "POST",
+      "path": "/api/v1/purchase-orders/{id}/approve",
+      "description": "aprobar orden de compra.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_084",
+      "source_id": "EP-084",
+      "method": "POST",
+      "path": "/api/v1/purchase-orders/{id}/cancel",
+      "description": "anular orden de compra.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_085",
+      "source_id": "EP-085",
+      "method": "POST",
+      "path": "/api/v1/goods-receipts",
+      "description": "registrar recepción.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_086",
+      "source_id": "EP-086",
+      "method": "GET",
+      "path": "/api/v1/goods-receipts/{id}",
+      "description": "obtener recepción.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_087",
+      "source_id": "EP-087",
+      "method": "POST",
+      "path": "/api/v1/goods-receipts/{id}/cancel",
+      "description": "anular recepción.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_088",
+      "source_id": "EP-088",
+      "method": "GET",
+      "path": "/api/v1/supplier-invoices",
+      "description": "listar facturas de compra.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_089",
+      "source_id": "EP-089",
+      "method": "POST",
+      "path": "/api/v1/supplier-invoices",
+      "description": "registrar factura de compra.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_090",
+      "source_id": "EP-090",
+      "method": "GET",
+      "path": "/api/v1/supplier-invoices/{id}",
+      "description": "obtener factura de compra.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_091",
+      "source_id": "EP-091",
+      "method": "GET",
+      "path": "/api/v1/production/boms",
+      "description": "listar recetas.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_092",
+      "source_id": "EP-092",
+      "method": "POST",
+      "path": "/api/v1/production/boms",
+      "description": "crear receta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_093",
+      "source_id": "EP-093",
+      "method": "GET",
+      "path": "/api/v1/production/boms/{id}",
+      "description": "obtener receta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_094",
+      "source_id": "EP-094",
+      "method": "PATCH",
+      "path": "/api/v1/production/boms/{id}",
+      "description": "actualizar receta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_095",
+      "source_id": "EP-095",
+      "method": "POST",
+      "path": "/api/v1/production/boms/{id}/activate",
+      "description": "activar receta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_096",
+      "source_id": "EP-096",
+      "method": "GET",
+      "path": "/api/v1/production/orders",
+      "description": "listar órdenes de producción.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_097",
+      "source_id": "EP-097",
+      "method": "POST",
+      "path": "/api/v1/production/orders",
+      "description": "crear orden de producción.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_098",
+      "source_id": "EP-098",
+      "method": "GET",
+      "path": "/api/v1/production/orders/{id}",
+      "description": "obtener orden de producción.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_099",
+      "source_id": "EP-099",
+      "method": "POST",
+      "path": "/api/v1/production/orders/{id}/release-materials",
+      "description": "liberar insumos.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_100",
+      "source_id": "EP-100",
+      "method": "POST",
+      "path": "/api/v1/production/orders/{id}/report-output",
+      "description": "reportar producción.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_101",
+      "source_id": "EP-101",
+      "method": "POST",
+      "path": "/api/v1/production/orders/{id}/close",
+      "description": "cerrar orden.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_102",
+      "source_id": "EP-102",
+      "method": "POST",
+      "path": "/api/v1/production/orders/{id}/cancel",
+      "description": "anular orden.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_103",
+      "source_id": "EP-103",
+      "method": "GET",
+      "path": "/api/v1/invoices",
+      "description": "listar facturas.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_104",
+      "source_id": "EP-104",
+      "method": "POST",
+      "path": "/api/v1/invoices",
+      "description": "emitir factura.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_105",
+      "source_id": "EP-105",
+      "method": "GET",
+      "path": "/api/v1/invoices/{id}",
+      "description": "obtener factura.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_106",
+      "source_id": "EP-106",
+      "method": "POST",
+      "path": "/api/v1/invoices/{id}/cancel",
+      "description": "anular factura.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_107",
+      "source_id": "EP-107",
+      "method": "POST",
+      "path": "/api/v1/invoices/{id}/send-email",
+      "description": "enviar factura por correo.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_108",
+      "source_id": "EP-108",
+      "method": "POST",
+      "path": "/api/v1/credit-notes",
+      "description": "emitir nota de crédito.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_109",
+      "source_id": "EP-109",
+      "method": "POST",
+      "path": "/api/v1/debit-notes",
+      "description": "emitir nota de débito.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_110",
+      "source_id": "EP-110",
+      "method": "GET",
+      "path": "/api/v1/payments",
+      "description": "listar pagos.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_111",
+      "source_id": "EP-111",
+      "method": "POST",
+      "path": "/api/v1/payments",
+      "description": "registrar pago.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_112",
+      "source_id": "EP-112",
+      "method": "POST",
+      "path": "/api/v1/payments/{id}/cancel",
+      "description": "anular pago.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_113",
+      "source_id": "EP-113",
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary",
+      "description": "resumen general.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_114",
+      "source_id": "EP-114",
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales",
+      "description": "indicadores de ventas.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_115",
+      "source_id": "EP-115",
+      "method": "GET",
+      "path": "/api/v1/dashboard/inventory",
+      "description": "indicadores de inventario.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_116",
+      "source_id": "EP-116",
+      "method": "GET",
+      "path": "/api/v1/dashboard/production",
+      "description": "indicadores de producción.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_117",
+      "source_id": "EP-117",
+      "method": "GET",
+      "path": "/api/v1/reports/sales",
+      "description": "reporte de ventas.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_118",
+      "source_id": "EP-118",
+      "method": "GET",
+      "path": "/api/v1/reports/inventory",
+      "description": "reporte de inventario.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_119",
+      "source_id": "EP-119",
+      "method": "GET",
+      "path": "/api/v1/reports/purchases",
+      "description": "reporte de compras.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_120",
+      "source_id": "EP-120",
+      "method": "GET",
+      "path": "/api/v1/reports/production",
+      "description": "reporte de producción.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_121",
+      "source_id": "EP-121",
+      "method": "GET",
+      "path": "/api/v1/reports/billing",
+      "description": "reporte de facturación.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_122",
+      "source_id": "EP-122",
+      "method": "POST",
+      "path": "/api/v1/reports/export",
+      "description": "exportar reporte.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_123",
+      "source_id": "EP-123",
+      "method": "GET",
+      "path": "/api/v1/alerts",
+      "description": "listar alertas.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_124",
+      "source_id": "EP-124",
+      "method": "POST",
+      "path": "/api/v1/alerts",
+      "description": "crear alerta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_125",
+      "source_id": "EP-125",
+      "method": "GET",
+      "path": "/api/v1/alerts/{id}",
+      "description": "obtener alerta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_126",
+      "source_id": "EP-126",
+      "method": "PATCH",
+      "path": "/api/v1/alerts/{id}",
+      "description": "actualizar alerta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_127",
+      "source_id": "EP-127",
+      "method": "POST",
+      "path": "/api/v1/alerts/{id}/activate",
+      "description": "activar alerta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_128",
+      "source_id": "EP-128",
+      "method": "POST",
+      "path": "/api/v1/alerts/{id}/pause",
+      "description": "pausar alerta.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_129",
+      "source_id": "EP-129",
+      "method": "GET",
+      "path": "/api/v1/email-logs",
+      "description": "consultar correos enviados.",
+      "selector": "#api-coverage"
+    },
+    {
+      "id": "EP_130",
+      "source_id": "EP-130",
+      "method": "POST",
+      "path": "/api/v1/email-logs/{id}/retry",
+      "description": "reintentar correo fallido.",
+      "selector": "#api-coverage"
+    }
+  ]
+}

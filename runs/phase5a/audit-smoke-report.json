@@ -1,0 +1,5 @@
+{
+  "status": "partial",
+  "verified": ["login audit event", "citizen login audit event"],
+  "missing": ["write audit verification per endpoint", "secret redaction verification"]
+}

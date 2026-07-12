@@ -1,0 +1,255 @@
+{
+  "files": [
+    {
+      "path": "Especificacion_Funcional_SIGED_Lampa.md",
+      "sha256": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24",
+      "size_bytes": 32950
+    },
+    {
+      "path": "Inventario_Endpoints_SIGED_Lampa.md",
+      "sha256": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245",
+      "size_bytes": 19425
+    },
+    {
+      "path": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+      "sha256": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d",
+      "size_bytes": 10539
+    },
+    {
+      "path": "Modelo_ER_Detallado_SIGED_Lampa.md",
+      "sha256": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282",
+      "size_bytes": 17559
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/.env.example",
+      "sha256": "sha256:5ad39fd7020919e8fd75be9f5ee625231f7f08fb264b4d38ecefea4163379f82",
+      "size_bytes": 158
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/Dockerfile",
+      "sha256": "sha256:b73244373dfcdf68a77739c433b7cc8c99f1ec88e599582ae9323fffedddee51",
+      "size_bytes": 225
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/PLANTILLA_FRONTEND.md",
+      "sha256": "sha256:78d069cdfbc51efc5d74ec1bf368cdb3a2acfeb72752fb38ea28792f658ce107",
+      "size_bytes": 168
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/README.md",
+      "sha256": "sha256:c6079bce5b45414ffe5cdf6d39cf1343c4fecca63519a5970eae609cc289699d",
+      "size_bytes": 554
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/app/assets/app.js",
+      "sha256": "sha256:ecf3c4a484a2792b367e85bd67973805c74fba30e4f5cb44ad445f7e2e559530",
+      "size_bytes": 82375
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/app/assets/styles.css",
+      "sha256": "sha256:d4dc0c075e074762c39ef09f802dbd33e146335cd9caf5dda42b13add78c4437",
+      "size_bytes": 4329
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/app/data/api-catalog.json",
+      "sha256": "sha256:f82ff472423edd8957279ad4bfabf3add08aa064cdf7f6b7cf687ea314bacc44",
+      "size_bytes": 7805
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/app/data/seed.json",
+      "sha256": "sha256:04908d71da34ff67561df7d9369258d78ade315032cbe57080d6f76ec0ef78f8",
+      "size_bytes": 49163
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/app/data/traceability.json",
+      "sha256": "sha256:846430ec1f54aa9ec8f0a77a93b7c323660350a770d91235a4a5c5717b0dc9e4",
+      "size_bytes": 4155
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/app/index.html",
+      "sha256": "sha256:f2582fd30b33b4e297eb7b1458e8c8b1c57392edda15c22804293bb71cbf3585",
+      "size_bytes": 338
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/backend/server.js",
+      "sha256": "sha256:1c4aa4727d265abbdb10ea2c5f04745c87647f06665c2e77d331c71ae0d44dcf",
+      "size_bytes": 26
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/backend/src/data.js",
+      "sha256": "sha256:3ec982bf4f320cd7abf102c7b827fb425a2fb1be4c010c879fd6427f460d62ef",
+      "size_bytes": 65695
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/backend/src/server.js",
+      "sha256": "sha256:c69e98451fd60825d467a407d57bc3861835dd62992efb127725664502525c1b",
+      "size_bytes": 8155
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/data/api-catalog.json",
+      "sha256": "sha256:f82ff472423edd8957279ad4bfabf3add08aa064cdf7f6b7cf687ea314bacc44",
+      "size_bytes": 7805
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/data/seed.json",
+      "sha256": "sha256:04908d71da34ff67561df7d9369258d78ade315032cbe57080d6f76ec0ef78f8",
+      "size_bytes": 49163
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/data/traceability.json",
+      "sha256": "sha256:846430ec1f54aa9ec8f0a77a93b7c323660350a770d91235a4a5c5717b0dc9e4",
+      "size_bytes": 4155
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/db/migrations/001_initial.sql",
+      "sha256": "sha256:30a41c77553d7a4045f1e47e818fdc3670079a005d53d70be2283549efb9bdf4",
+      "size_bytes": 8861
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/db/schema.sql",
+      "sha256": "sha256:30a41c77553d7a4045f1e47e818fdc3670079a005d53d70be2283549efb9bdf4",
+      "size_bytes": 8861
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/db/seeds/001_demo.sql",
+      "sha256": "sha256:62598a3644e15bd1be0d350080bd1cada78a3dcb2472e98a1f7a044ff048e5b6",
+      "size_bytes": 1678
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/docker-compose.yml",
+      "sha256": "sha256:35d3f8279be85cadadef1c33a0e2a5dcdd038baf71738d224c5306c98cde9bf3",
+      "size_bytes": 477
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/docs/SIGED_IMPLEMENTATION_PLAN.md",
+      "sha256": "sha256:87c4c4a1a5744864c21a353d35a6b9ac75ecb53e111e06f5ce6b8dcf07fd0019",
+      "size_bytes": 788
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/frontend/assets/app.js",
+      "sha256": "sha256:ecf3c4a484a2792b367e85bd67973805c74fba30e4f5cb44ad445f7e2e559530",
+      "size_bytes": 82375
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/frontend/assets/styles.css",
+      "sha256": "sha256:d4dc0c075e074762c39ef09f802dbd33e146335cd9caf5dda42b13add78c4437",
+      "size_bytes": 4329
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/frontend/index.html",
+      "sha256": "sha256:f2582fd30b33b4e297eb7b1458e8c8b1c57392edda15c22804293bb71cbf3585",
+      "size_bytes": 338
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/frontend/src/app.js",
+      "sha256": "sha256:ecf3c4a484a2792b367e85bd67973805c74fba30e4f5cb44ad445f7e2e559530",
+      "size_bytes": 82375
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/package.json",
+      "sha256": "sha256:b99423aa56516d9e2cdcc829f21af1fb5f2eeb91db97b93a1d4e1174b204eeb6",
+      "size_bytes": 473
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/scripts/verify_siged_bundle.py",
+      "sha256": "sha256:e8df487c82748c126e5274777c96e8bc7015927ba9ba52fe61813905f6344ba9",
+      "size_bytes": 2536
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/sources/Especificacion_Funcional_SIGED_Lampa.md",
+      "sha256": "sha256:3d8864035f9f4c7a7f682b5af50ea69e208f19666dc7734558affe90e54aaadc",
+      "size_bytes": 33853
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/sources/Inventario_Endpoints_SIGED_Lampa.md",
+      "sha256": "sha256:39913a985cde558eccdbae3c82005c125f004b13b1e4bd24f6eca7a267bd6cc0",
+      "size_bytes": 20253
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/sources/Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+      "sha256": "sha256:c2897946b47563791e933996e30ab5a71ae137a415988645988d1150c6a50147",
+      "size_bytes": 10785
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/sources/Modelo_ER_Detallado_SIGED_Lampa.md",
+      "sha256": "sha256:431fcc569e5c15fc8ed0975c9fbfd4ade2c974e7306ed6bb233f906549a42ee5",
+      "size_bytes": 17881
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/tasks/implementation-tasks.md",
+      "sha256": "sha256:2787fdb3647e365ea7ff867bf01721f3c2499bb052988fc114a8ab2884173269",
+      "size_bytes": 13404
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/DEV/workspace/tasks/product-backlog.json",
+      "sha256": "sha256:434952e04cd47465849a4d5380ccc2327d992d0343be0aad0ea8526ccbbf9c9b",
+      "size_bytes": 58887
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/QA/workspace/PLANTILLA_FRONTEND.md",
+      "sha256": "sha256:ad1803eda5afe928fabb4becf85ee910d2f1ead21e35a82e42d2653fafe3379a",
+      "size_bytes": 167
+    },
+    {
+      "path": "project/siged-lampa/sandboxes/QA/workspace/README.md",
+      "sha256": "sha256:dea26fccc8dbaa672356fa2ae28f4b682343efddd017f1e1f35f999b5861f398",
+      "size_bytes": 58
+    },
+    {
+      "path": "project/siged-lampa/versions/v0001/README.md",
+      "sha256": "sha256:4cebec37e19ca567210b46095c3600ab5f60c6e729fe0ae5b5dfd596540550ef",
+      "size_bytes": 96
+    },
+    {
+      "path": "project/siged-lampa/versions/v0001/frontend/PLANTILLA_FRONTEND.md",
+      "sha256": "sha256:18c16212007f7a82b976a8c6b7003d48186611c5f9f31aa9f094d4b493d5df69",
+      "size_bytes": 176
+    },
+    {
+      "path": "project/siged-lampa/versions/v0001/frontend/frontend-template-manifest.json",
+      "sha256": "sha256:f9f9873c2f439b6c41032e82a5bbf8467f2f2d2eb39b7689c68bd8bed69dbf1a",
+      "size_bytes": 370
+    },
+    {
+      "path": "project/siged-lampa/versions/v0001/sources/Especificacion_Funcional_SIGED_Lampa.md",
+      "sha256": "sha256:3d8864035f9f4c7a7f682b5af50ea69e208f19666dc7734558affe90e54aaadc",
+      "size_bytes": 33853
+    },
+    {
+      "path": "project/siged-lampa/versions/v0001/sources/Inventario_Endpoints_SIGED_Lampa.md",
+      "sha256": "sha256:39913a985cde558eccdbae3c82005c125f004b13b1e4bd24f6eca7a267bd6cc0",
+      "size_bytes": 20253
+    },
+    {
+      "path": "project/siged-lampa/versions/v0001/sources/Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+      "sha256": "sha256:c2897946b47563791e933996e30ab5a71ae137a415988645988d1150c6a50147",
+      "size_bytes": 10785
+    },
+    {
+      "path": "project/siged-lampa/versions/v0001/sources/Modelo_ER_Detallado_SIGED_Lampa.md",
+      "sha256": "sha256:431fcc569e5c15fc8ed0975c9fbfd4ade2c974e7306ed6bb233f906549a42ee5",
+      "size_bytes": 17881
+    },
+    {
+      "path": "project/siged-lampa/versions/v0001/sources/sources-manifest.json",
+      "sha256": "sha256:63fad202db6b9c5991b97cb11a659263712a48d46d3e1cb0ddb82b59e0e2c2d8",
+      "size_bytes": 2060
+    },
+    {
+      "path": "project/siged-lampa/versions/v0001/version-manifest.json",
+      "sha256": "sha256:fcd0e772a91624dd42398d75e664b6c211a23899af27b423a47cc0a61b2e1bae",
+      "size_bytes": 158
+    }
+  ],
+  "generated_at": "2026-07-11T03:30:55Z",
+  "roots": [
+    "project/siged-lampa/sandboxes/DEV/workspace",
+    "project/siged-lampa/sandboxes/QA/workspace",
+    "project/siged-lampa/versions/v0001",
+    "Especificacion_Funcional_SIGED_Lampa.md",
+    "Inventario_Endpoints_SIGED_Lampa.md",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "Modelo_ER_Detallado_SIGED_Lampa.md"
+  ],
+  "schema_version": "webforge.baseline_files.v1"
+}

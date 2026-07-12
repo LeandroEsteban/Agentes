@@ -1,0 +1,3 @@
+{"change":"Replaced untyped documentary mock literals with reusable typed document, review, approval and signature factories.","status":"implemented"}
+{"change":"Added contractual JSON/base64 attachment assertion, 10 MiB guard, approvalId assertion, and academic_simulation signature fixture.","status":"implemented"}
+{"change":"Added real anonymous OIRS message audit regression requiring null actors, request_id and absence of credentials/sensitive body.","status":"implemented_not_executed"}

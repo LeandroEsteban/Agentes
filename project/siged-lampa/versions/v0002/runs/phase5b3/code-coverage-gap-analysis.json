@@ -1,0 +1,17 @@
+{
+  "thresholds": {
+    "lines": 85,
+    "statements": 85,
+    "functions": 80,
+    "branches": 80
+  },
+  "coverage": {
+    "lines": 80.35,
+    "statements": 80.35,
+    "functions": 85.34,
+    "branches": 83.5
+  },
+  "functional_files": [],
+  "uncovered_critical_files": [],
+  "status": "blocked"
+}

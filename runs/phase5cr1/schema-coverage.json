@@ -1,0 +1,13 @@
+{
+  "schemas": 40,
+  "empty_schemas": [],
+  "sensitive_fields_excluded": [
+    "password_hash",
+    "session_token",
+    "anonymous_tracking_hash",
+    "storage_path",
+    "audit_internal_metadata"
+  ],
+  "multipart_supported": false,
+  "attachment_contract": "application/json content_base64; maximum 10 MiB; binary download response"
+}

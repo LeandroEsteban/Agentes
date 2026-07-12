@@ -1,0 +1,6 @@
+{
+  "deploys": 0,
+  "external_writes": 0,
+  "out_of_scope_changes": 0,
+  "scope": "webforge runtime local artifacts"
+}

@@ -1,0 +1,106 @@
+{
+  "phase": "8A",
+  "files_created": [
+    {
+      "path": ".github/workflows/deploy-ec2.yml",
+      "action": "created",
+      "purpose": "GitHub Actions deployment workflow to EC2"
+    },
+    {
+      "path": "backend/Dockerfile",
+      "action": "created",
+      "purpose": "Production Docker image for backend API"
+    },
+    {
+      "path": "backend/.dockerignore",
+      "action": "created",
+      "purpose": "Build context exclusions for backend"
+    },
+    {
+      "path": "frontend/Dockerfile",
+      "action": "created",
+      "purpose": "Production Docker image for frontend (multi-stage)"
+    },
+    {
+      "path": "frontend/.dockerignore",
+      "action": "created",
+      "purpose": "Build context exclusions for frontend"
+    },
+    {
+      "path": "frontend/nginx.conf",
+      "action": "created",
+      "purpose": "Nginx config with SPA fallback and /api/ proxy"
+    },
+    {
+      "path": "infra/deployment/docker-compose.production.yml",
+      "action": "created",
+      "purpose": "Production Compose file with postgres + backend + frontend"
+    },
+    {
+      "path": "infra/deployment/.env.production.example",
+      "action": "created",
+      "purpose": "Example production environment variables"
+    },
+    {
+      "path": "infra/deployment/scripts/validate-environment.sh",
+      "action": "created",
+      "purpose": "Pre-deployment environment validation"
+    },
+    {
+      "path": "infra/deployment/scripts/deploy-release.sh",
+      "action": "created",
+      "purpose": "Pull images, build, start stack"
+    },
+    {
+      "path": "infra/deployment/scripts/run-migrations.sh",
+      "action": "created",
+      "purpose": "Backup DB, apply migrations, run seeds"
+    },
+    {
+      "path": "infra/deployment/scripts/health-check.sh",
+      "action": "created",
+      "purpose": "Verify all services healthy"
+    },
+    {
+      "path": "infra/deployment/scripts/smoke-test.sh",
+      "action": "created",
+      "purpose": "HTTP smoke tests on frontend and API"
+    },
+    {
+      "path": "infra/deployment/scripts/rollback.sh",
+      "action": "created",
+      "purpose": "Automatic rollback to previous release"
+    },
+    {
+      "path": "infra/deployment/scripts/cleanup-releases.sh",
+      "action": "created",
+      "purpose": "Remove old releases, keep N newest"
+    },
+    {
+      "path": "docs/DEPLOYMENT_GITHUB_ACTIONS.md",
+      "action": "created",
+      "purpose": "Deployment pipeline architecture and process"
+    },
+    {
+      "path": "docs/GITHUB_SECRETS.md",
+      "action": "created",
+      "purpose": "GitHub Secrets vs application secrets documentation"
+    },
+    {
+      "path": "docs/EC2_INITIAL_SETUP.md",
+      "action": "created",
+      "purpose": "One-time EC2 setup instructions"
+    },
+    {
+      "path": "docs/ROLLBACK.md",
+      "action": "created",
+      "purpose": "Rollback procedures (automatic and manual)"
+    },
+    {
+      "path": "docs/RUNBOOK_OPERACIONAL.md",
+      "action": "created",
+      "purpose": "Operational runbook for day-to-day management"
+    }
+  ],
+  "total": 21
+}

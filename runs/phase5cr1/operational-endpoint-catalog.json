@@ -1,0 +1,2588 @@
+[
+  {
+    "endpoint_code": "API-SUP-004",
+    "method": "GET",
+    "path": "/api/v1/admin/external-entities",
+    "classification": "supplemental",
+    "source": "accepted_adr",
+    "source_reference": "ADR-003",
+    "module": "external-entities",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/external-entities/router.js",
+    "controller": "modules/external-entities/controller.js",
+    "validator": "modules/external-entities/validator.js",
+    "service": "modules/external-entities/service.js",
+    "repository": "modules/external-entities/repository.js",
+    "openapi_operation_id": "api_sup_004_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-005",
+    "method": "POST",
+    "path": "/api/v1/admin/external-entities",
+    "classification": "supplemental",
+    "source": "accepted_adr",
+    "source_reference": "ADR-003",
+    "module": "external-entities",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/external-entities/router.js",
+    "controller": "modules/external-entities/controller.js",
+    "validator": "modules/external-entities/validator.js",
+    "service": "modules/external-entities/service.js",
+    "repository": "modules/external-entities/repository.js",
+    "openapi_operation_id": "api_sup_005_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-006",
+    "method": "PUT",
+    "path": "/api/v1/admin/external-entities/{id}",
+    "classification": "supplemental",
+    "source": "accepted_adr",
+    "source_reference": "ADR-003",
+    "module": "external-entities",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/external-entities/router.js",
+    "controller": "modules/external-entities/controller.js",
+    "validator": "modules/external-entities/validator.js",
+    "service": "modules/external-entities/service.js",
+    "repository": "modules/external-entities/repository.js",
+    "openapi_operation_id": "api_sup_006_put",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-001",
+    "method": "GET",
+    "path": "/api/v1/admin/procedure-types",
+    "classification": "supplemental",
+    "source": "accepted_adr",
+    "source_reference": "ADR-002",
+    "module": "procedures",
+    "authentication": "internal",
+    "permissions": [
+      "tramites.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "validator": "modules/procedures/validator.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "openapi_operation_id": "api_sup_001_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-002",
+    "method": "POST",
+    "path": "/api/v1/admin/procedure-types",
+    "classification": "supplemental",
+    "source": "accepted_adr",
+    "source_reference": "ADR-002",
+    "module": "procedures",
+    "authentication": "internal",
+    "permissions": [
+      "tramites.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "validator": "modules/procedures/validator.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "openapi_operation_id": "api_sup_002_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-003",
+    "method": "PUT",
+    "path": "/api/v1/admin/procedure-types/{id}",
+    "classification": "supplemental",
+    "source": "accepted_adr",
+    "source_reference": "ADR-002",
+    "module": "procedures",
+    "authentication": "internal",
+    "permissions": [
+      "tramites.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "validator": "modules/procedures/validator.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "openapi_operation_id": "api_sup_003_put",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-010",
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/calendar",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_010_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-011",
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/calendar",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_011_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-012",
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/calendar/{id}",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_012_patch",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-013",
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/news",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_013_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-014",
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/news",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_014_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-015",
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/news/{id}",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_015_patch",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-016",
+    "method": "GET",
+    "path": "/api/v1/admin/public-content/notices",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_016_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-017",
+    "method": "POST",
+    "path": "/api/v1/admin/public-content/notices",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_017_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-018",
+    "method": "PATCH",
+    "path": "/api/v1/admin/public-content/notices/{id}",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_018_patch",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-019",
+    "method": "POST",
+    "path": "/api/v1/approvals/{id}/decision",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "document-approvals",
+    "authentication": "internal",
+    "permissions": [
+      "documents.review"
+    ],
+    "deprecated": false,
+    "router": "modules/document-approvals/router.js",
+    "controller": "modules/document-approvals/controller.js",
+    "validator": "modules/document-approvals/validator.js",
+    "service": "modules/document-approvals/service.js",
+    "repository": "modules/document-approvals/repository.js",
+    "openapi_operation_id": "api_sup_019_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-002",
+    "method": "POST",
+    "path": "/api/v1/auth/citizen-login",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "auth",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/auth/router.js",
+    "controller": "modules/auth/controller.js",
+    "validator": "modules/auth/validator.js",
+    "service": "modules/auth/service.js",
+    "repository": "modules/auth/repository.js",
+    "openapi_operation_id": "api_002_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-020",
+    "method": "POST",
+    "path": "/api/v1/auth/internal-login",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "auth",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/auth/router.js",
+    "controller": "modules/auth/controller.js",
+    "validator": "modules/auth/validator.js",
+    "service": "modules/auth/service.js",
+    "repository": "modules/auth/repository.js",
+    "openapi_operation_id": "api_sup_020_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-001",
+    "method": "POST",
+    "path": "/api/v1/auth/login",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "auth",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/auth/router.js",
+    "controller": "modules/auth/controller.js",
+    "validator": "modules/auth/validator.js",
+    "service": "modules/auth/service.js",
+    "repository": "modules/auth/repository.js",
+    "openapi_operation_id": "api_001_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-021",
+    "method": "POST",
+    "path": "/api/v1/auth/logout",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "auth",
+    "authentication": "internal",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/auth/router.js",
+    "controller": "modules/auth/controller.js",
+    "validator": "modules/auth/validator.js",
+    "service": "modules/auth/service.js",
+    "repository": "modules/auth/repository.js",
+    "openapi_operation_id": "api_sup_021_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-003",
+    "method": "POST",
+    "path": "/api/v1/auth/recover",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "auth",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/auth/router.js",
+    "controller": "modules/auth/controller.js",
+    "validator": "modules/auth/validator.js",
+    "service": "modules/auth/service.js",
+    "repository": "modules/auth/repository.js",
+    "openapi_operation_id": "api_003_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-022",
+    "method": "GET",
+    "path": "/api/v1/citizen/oirs/{id}",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "oirs",
+    "authentication": "citizen",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "validator": "modules/oirs/validator.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "openapi_operation_id": "api_sup_022_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-023",
+    "method": "GET",
+    "path": "/api/v1/citizen/oirs/{id}/history",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "oirs",
+    "authentication": "citizen",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "validator": "modules/oirs/validator.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "openapi_operation_id": "api_sup_023_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-024",
+    "method": "POST",
+    "path": "/api/v1/citizen/oirs/{id}/messages",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "oirs",
+    "authentication": "citizen",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "validator": "modules/oirs/validator.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "openapi_operation_id": "api_sup_024_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-035",
+    "method": "GET",
+    "path": "/api/v1/citizen/requests",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "citizen-requests",
+    "authentication": "citizen",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/citizen-requests/router.js",
+    "controller": "modules/citizen-requests/controller.js",
+    "validator": "modules/citizen-requests/validator.js",
+    "service": "modules/citizen-requests/service.js",
+    "repository": "modules/citizen-requests/repository.js",
+    "openapi_operation_id": "api_035_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-LEG-001",
+    "method": "POST",
+    "path": "/api/v1/citizen/requests",
+    "classification": "legacy",
+    "source": "compatibility",
+    "source_reference": "ADR-005",
+    "module": "citizen-requests",
+    "authentication": "citizen",
+    "permissions": [],
+    "deprecated": true,
+    "router": "modules/citizen-requests/router.js",
+    "controller": "",
+    "validator": "modules/citizen-requests/validator.js",
+    "service": "modules/citizen-requests/service.js",
+    "repository": "modules/citizen-requests/repository.js",
+    "openapi_operation_id": "api_leg_001_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-036",
+    "method": "GET",
+    "path": "/api/v1/citizen/requests/{id}",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "citizen-requests",
+    "authentication": "citizen",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/citizen-requests/router.js",
+    "controller": "modules/citizen-requests/controller.js",
+    "validator": "modules/citizen-requests/validator.js",
+    "service": "modules/citizen-requests/service.js",
+    "repository": "modules/citizen-requests/repository.js",
+    "openapi_operation_id": "api_036_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-025",
+    "method": "POST",
+    "path": "/api/v1/citizen/requests/{id}/cancel",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "citizen-requests",
+    "authentication": "citizen",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/citizen-requests/router.js",
+    "controller": "modules/citizen-requests/controller.js",
+    "validator": "modules/citizen-requests/validator.js",
+    "service": "modules/citizen-requests/service.js",
+    "repository": "modules/citizen-requests/repository.js",
+    "openapi_operation_id": "api_sup_025_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-026",
+    "method": "GET",
+    "path": "/api/v1/citizen/requests/{id}/history",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "citizen-requests",
+    "authentication": "citizen",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/citizen-requests/router.js",
+    "controller": "modules/citizen-requests/controller.js",
+    "validator": "modules/citizen-requests/validator.js",
+    "service": "modules/citizen-requests/service.js",
+    "repository": "modules/citizen-requests/repository.js",
+    "openapi_operation_id": "api_sup_026_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-029",
+    "method": "GET",
+    "path": "/api/v1/correspondence",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "correspondence",
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.view"
+    ],
+    "deprecated": false,
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "validator": "modules/correspondence/validator.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "openapi_operation_id": "api_029_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-030",
+    "method": "POST",
+    "path": "/api/v1/correspondence",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "correspondence",
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.create"
+    ],
+    "deprecated": false,
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "validator": "modules/correspondence/validator.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "openapi_operation_id": "api_030_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-027",
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "correspondence",
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.view"
+    ],
+    "deprecated": false,
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "validator": "modules/correspondence/validator.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "openapi_operation_id": "api_sup_027_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-028",
+    "method": "PATCH",
+    "path": "/api/v1/correspondence/{id}",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "correspondence",
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "validator": "modules/correspondence/validator.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "openapi_operation_id": "api_sup_028_patch",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-029",
+    "method": "POST",
+    "path": "/api/v1/correspondence/{id}/close",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "correspondence",
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "validator": "modules/correspondence/validator.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "openapi_operation_id": "api_sup_029_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-030",
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}/details",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "correspondence",
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.view"
+    ],
+    "deprecated": false,
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "validator": "modules/correspondence/validator.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "openapi_operation_id": "api_sup_030_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-031",
+    "method": "GET",
+    "path": "/api/v1/correspondence/{id}/history",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "correspondence",
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.view"
+    ],
+    "deprecated": false,
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "validator": "modules/correspondence/validator.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "openapi_operation_id": "api_sup_031_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-032",
+    "method": "POST",
+    "path": "/api/v1/correspondence/{id}/link-response",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "correspondence",
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "validator": "modules/correspondence/validator.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "openapi_operation_id": "api_032_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-031",
+    "method": "POST",
+    "path": "/api/v1/correspondence/{id}/route",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "correspondence",
+    "authentication": "internal",
+    "permissions": [
+      "correspondence.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/correspondence/router.js",
+    "controller": "modules/correspondence/controller.js",
+    "validator": "modules/correspondence/validator.js",
+    "service": "modules/correspondence/service.js",
+    "repository": "modules/correspondence/repository.js",
+    "openapi_operation_id": "api_031_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-011",
+    "method": "GET",
+    "path": "/api/v1/departments",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "departments",
+    "authentication": "internal",
+    "permissions": [
+      "departments.view"
+    ],
+    "deprecated": false,
+    "router": "modules/departments/router.js",
+    "controller": "modules/departments/controller.js",
+    "validator": "modules/departments/validator.js",
+    "service": "modules/departments/service.js",
+    "repository": "modules/departments/repository.js",
+    "openapi_operation_id": "api_011_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-012",
+    "method": "POST",
+    "path": "/api/v1/departments",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "departments",
+    "authentication": "internal",
+    "permissions": [
+      "departments.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/departments/router.js",
+    "controller": "modules/departments/controller.js",
+    "validator": "modules/departments/validator.js",
+    "service": "modules/departments/service.js",
+    "repository": "modules/departments/repository.js",
+    "openapi_operation_id": "api_012_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-013",
+    "method": "GET",
+    "path": "/api/v1/document-types",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "procedures",
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "deprecated": false,
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "validator": "modules/procedures/validator.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "openapi_operation_id": "api_013_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-014",
+    "method": "POST",
+    "path": "/api/v1/document-types",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "procedures",
+    "authentication": "internal",
+    "permissions": [
+      "admin.access"
+    ],
+    "deprecated": false,
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "validator": "modules/procedures/validator.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "openapi_operation_id": "api_014_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-015",
+    "method": "GET",
+    "path": "/api/v1/documents",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_015_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-016",
+    "method": "POST",
+    "path": "/api/v1/documents",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.create"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_016_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-017",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_017_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-018",
+    "method": "PUT",
+    "path": "/api/v1/documents/{id}",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_018_put",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-032",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/approvals",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "document-approvals",
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "deprecated": false,
+    "router": "modules/document-approvals/router.js",
+    "controller": "modules/document-approvals/controller.js",
+    "validator": "modules/document-approvals/validator.js",
+    "service": "modules/document-approvals/service.js",
+    "repository": "modules/document-approvals/repository.js",
+    "openapi_operation_id": "api_sup_032_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-023",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/approvals",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "document-approvals",
+    "authentication": "internal",
+    "permissions": [
+      "documents.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/document-approvals/router.js",
+    "controller": "modules/document-approvals/controller.js",
+    "validator": "modules/document-approvals/validator.js",
+    "service": "modules/document-approvals/service.js",
+    "repository": "modules/document-approvals/repository.js",
+    "openapi_operation_id": "api_023_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-008",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/attachments",
+    "classification": "supplemental",
+    "source": "accepted_adr",
+    "source_reference": "ADR-006",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_sup_008_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-019",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/attachments",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_019_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-033",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/attachments/{attachmentId}/download",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_sup_033_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-034",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/comments",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_sup_034_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-035",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/comments",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.review"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_sup_035_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-036",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/history",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_sup_036_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-037",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/reviews",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "document-reviews",
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "deprecated": false,
+    "router": "modules/document-reviews/router.js",
+    "controller": "modules/document-reviews/controller.js",
+    "validator": "modules/document-reviews/validator.js",
+    "service": "modules/document-reviews/service.js",
+    "repository": "modules/document-reviews/repository.js",
+    "openapi_operation_id": "api_sup_037_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-038",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/signatures",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "document-signatures",
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "deprecated": false,
+    "router": "modules/document-signatures/router.js",
+    "controller": "modules/document-signatures/controller.js",
+    "validator": "modules/document-signatures/validator.js",
+    "service": "modules/document-signatures/service.js",
+    "repository": "modules/document-signatures/repository.js",
+    "openapi_operation_id": "api_sup_038_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-024",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/signatures",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "document-signatures",
+    "authentication": "internal",
+    "permissions": [
+      "documents.sign"
+    ],
+    "deprecated": false,
+    "router": "modules/document-signatures/router.js",
+    "controller": "modules/document-signatures/controller.js",
+    "validator": "modules/document-signatures/validator.js",
+    "service": "modules/document-signatures/service.js",
+    "repository": "modules/document-signatures/repository.js",
+    "openapi_operation_id": "api_024_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-021",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/submit-review",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "document-reviews",
+    "authentication": "internal",
+    "permissions": [
+      "documents.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/document-reviews/router.js",
+    "controller": "modules/document-reviews/controller.js",
+    "validator": "modules/document-reviews/validator.js",
+    "service": "modules/document-reviews/service.js",
+    "repository": "modules/document-reviews/repository.js",
+    "openapi_operation_id": "api_021_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-007",
+    "method": "GET",
+    "path": "/api/v1/documents/{id}/versions",
+    "classification": "supplemental",
+    "source": "accepted_adr",
+    "source_reference": "ADR-007",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.view"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_sup_007_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-020",
+    "method": "POST",
+    "path": "/api/v1/documents/{id}/versions",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "documents",
+    "authentication": "internal",
+    "permissions": [
+      "documents.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/documents/router.js",
+    "controller": "modules/documents/controller.js",
+    "validator": "modules/documents/validator.js",
+    "service": "modules/documents/service.js",
+    "repository": "modules/documents/repository.js",
+    "openapi_operation_id": "api_020_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-025",
+    "method": "GET",
+    "path": "/api/v1/expedients",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "expedients",
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "deprecated": false,
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "validator": "modules/expedients/validator.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "openapi_operation_id": "api_025_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-026",
+    "method": "POST",
+    "path": "/api/v1/expedients",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "expedients",
+    "authentication": "internal",
+    "permissions": [
+      "expedients.create"
+    ],
+    "deprecated": false,
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "validator": "modules/expedients/validator.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "openapi_operation_id": "api_026_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-027",
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "expedients",
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "deprecated": false,
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "validator": "modules/expedients/validator.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "openapi_operation_id": "api_027_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-039",
+    "method": "PATCH",
+    "path": "/api/v1/expedients/{id}",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "expedients",
+    "authentication": "internal",
+    "permissions": [
+      "expedients.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "validator": "modules/expedients/validator.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "openapi_operation_id": "api_sup_039_patch",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-040",
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/close",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "expedients",
+    "authentication": "internal",
+    "permissions": [
+      "expedients.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "validator": "modules/expedients/validator.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "openapi_operation_id": "api_sup_040_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-041",
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/details",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "expedients",
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "deprecated": false,
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "validator": "modules/expedients/validator.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "openapi_operation_id": "api_sup_041_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-028",
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/documents",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "expedients",
+    "authentication": "internal",
+    "permissions": [
+      "expedients.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "validator": "modules/expedients/validator.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "openapi_operation_id": "api_028_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-042",
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/events",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "expedients",
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "deprecated": false,
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "validator": "modules/expedients/validator.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "openapi_operation_id": "api_sup_042_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-043",
+    "method": "POST",
+    "path": "/api/v1/expedients/{id}/events",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "expedients",
+    "authentication": "internal",
+    "permissions": [
+      "expedients.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "validator": "modules/expedients/validator.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "openapi_operation_id": "api_sup_043_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-044",
+    "method": "GET",
+    "path": "/api/v1/expedients/{id}/history",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "expedients",
+    "authentication": "internal",
+    "permissions": [
+      "expedients.view"
+    ],
+    "deprecated": false,
+    "router": "modules/expedients/router.js",
+    "controller": "modules/expedients/controller.js",
+    "validator": "modules/expedients/validator.js",
+    "service": "modules/expedients/service.js",
+    "repository": "modules/expedients/repository.js",
+    "openapi_operation_id": "api_sup_044_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-040",
+    "method": "GET",
+    "path": "/api/v1/notifications",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "notifications",
+    "authentication": "internal_or_citizen",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/notifications/router.js",
+    "controller": "modules/notifications/controller.js",
+    "validator": "modules/notifications/validator.js",
+    "service": "modules/notifications/service.js",
+    "repository": "modules/notifications/repository.js",
+    "openapi_operation_id": "api_040_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-045",
+    "method": "PATCH",
+    "path": "/api/v1/notifications/{id}/read",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "notifications",
+    "authentication": "internal_or_citizen",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/notifications/router.js",
+    "controller": "modules/notifications/controller.js",
+    "validator": "modules/notifications/validator.js",
+    "service": "modules/notifications/service.js",
+    "repository": "modules/notifications/repository.js",
+    "openapi_operation_id": "api_sup_045_patch",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-046",
+    "method": "GET",
+    "path": "/api/v1/oirs",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "oirs",
+    "authentication": "internal",
+    "permissions": [
+      "oirs.view"
+    ],
+    "deprecated": false,
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "validator": "modules/oirs/validator.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "openapi_operation_id": "api_sup_046_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-038",
+    "method": "POST",
+    "path": "/api/v1/oirs/{id}/reply",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "oirs",
+    "authentication": "internal",
+    "permissions": [
+      "oirs.respond"
+    ],
+    "deprecated": false,
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "validator": "modules/oirs/validator.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "openapi_operation_id": "api_038_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-047",
+    "method": "PATCH",
+    "path": "/api/v1/oirs/{id}/route",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "oirs",
+    "authentication": "internal",
+    "permissions": [
+      "oirs.respond"
+    ],
+    "deprecated": false,
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "validator": "modules/oirs/validator.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "openapi_operation_id": "api_sup_047_patch",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-048",
+    "method": "PATCH",
+    "path": "/api/v1/oirs/{id}/status",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "oirs",
+    "authentication": "internal",
+    "permissions": [
+      "oirs.respond"
+    ],
+    "deprecated": false,
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "validator": "modules/oirs/validator.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "openapi_operation_id": "api_sup_048_patch",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-004",
+    "method": "GET",
+    "path": "/api/v1/profile/me",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "auth",
+    "authentication": "internal",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/auth/router.js",
+    "controller": "modules/auth/controller.js",
+    "validator": "modules/auth/validator.js",
+    "service": "modules/auth/service.js",
+    "repository": "modules/auth/repository.js",
+    "openapi_operation_id": "api_004_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-005",
+    "method": "PUT",
+    "path": "/api/v1/profile/me",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "auth",
+    "authentication": "internal",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/auth/router.js",
+    "controller": "modules/auth/controller.js",
+    "validator": "modules/auth/validator.js",
+    "service": "modules/auth/service.js",
+    "repository": "modules/auth/repository.js",
+    "openapi_operation_id": "api_005_put",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-auth-profile.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-049",
+    "method": "GET",
+    "path": "/api/v1/public/calendar",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_049_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-050",
+    "method": "GET",
+    "path": "/api/v1/public/news",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_050_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-051",
+    "method": "GET",
+    "path": "/api/v1/public/news/{slug}",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_051_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-052",
+    "method": "GET",
+    "path": "/api/v1/public/notices",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "public-content",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/public-content/router.js",
+    "controller": "modules/public-content/controller.js",
+    "validator": "modules/public-content/validator.js",
+    "service": "modules/public-content/service.js",
+    "repository": "modules/public-content/repository.js",
+    "openapi_operation_id": "api_sup_052_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2c-expedients-correspondence.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-037",
+    "method": "POST",
+    "path": "/api/v1/public/oirs",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "oirs",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "validator": "modules/oirs/validator.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "openapi_operation_id": "api_037_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-009",
+    "method": "GET",
+    "path": "/api/v1/public/oirs/{id}",
+    "classification": "supplemental",
+    "source": "accepted_adr",
+    "source_reference": "ADR-009",
+    "module": "oirs",
+    "authentication": "anonymous_tracking",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "validator": "modules/oirs/validator.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "openapi_operation_id": "api_sup_009_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-053",
+    "method": "GET",
+    "path": "/api/v1/public/oirs/{id}/history",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "oirs",
+    "authentication": "anonymous_tracking",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "validator": "modules/oirs/validator.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "openapi_operation_id": "api_sup_053_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-SUP-054",
+    "method": "POST",
+    "path": "/api/v1/public/oirs/{id}/messages",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "oirs",
+    "authentication": "anonymous_tracking",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/oirs/router.js",
+    "controller": "modules/oirs/controller.js",
+    "validator": "modules/oirs/validator.js",
+    "service": "modules/oirs/service.js",
+    "repository": "modules/oirs/repository.js",
+    "openapi_operation_id": "api_sup_054_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-033",
+    "method": "GET",
+    "path": "/api/v1/public/tramites",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "procedures",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "validator": "modules/procedures/validator.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "openapi_operation_id": "api_033_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-SUP-055",
+    "method": "GET",
+    "path": "/api/v1/public/tramites/{id}",
+    "classification": "supplemental",
+    "source": "router_audit",
+    "source_reference": "5C-R1 router inventory",
+    "module": "procedures",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/procedures/router.js",
+    "controller": "modules/procedures/controller.js",
+    "validator": "modules/procedures/validator.js",
+    "service": "modules/procedures/service.js",
+    "repository": "modules/procedures/repository.js",
+    "openapi_operation_id": "api_sup_055_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "partial"
+  },
+  {
+    "endpoint_code": "API-034",
+    "method": "POST",
+    "path": "/api/v1/public/tramites/{id}/requests",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "citizen-requests",
+    "authentication": "citizen",
+    "permissions": [],
+    "deprecated": false,
+    "router": "modules/citizen-requests/router.js",
+    "controller": "modules/citizen-requests/controller.js",
+    "validator": "modules/citizen-requests/validator.js",
+    "service": "modules/citizen-requests/service.js",
+    "repository": "modules/citizen-requests/repository.js",
+    "openapi_operation_id": "api_034_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-citizen-services.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-039",
+    "method": "GET",
+    "path": "/api/v1/reports/dashboard",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "reports",
+    "authentication": "internal",
+    "permissions": [
+      "reports.view"
+    ],
+    "deprecated": false,
+    "router": "modules/reports/router.js",
+    "controller": "modules/reports/controller.js",
+    "validator": "modules/reports/validator.js",
+    "service": "modules/reports/service.js",
+    "repository": "modules/reports/repository.js",
+    "openapi_operation_id": "api_039_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-verification-extended.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-verification-extended.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-022",
+    "method": "POST",
+    "path": "/api/v1/reviews/{id}/reply",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "document-reviews",
+    "authentication": "internal",
+    "permissions": [
+      "documents.review"
+    ],
+    "deprecated": false,
+    "router": "modules/document-reviews/router.js",
+    "controller": "modules/document-reviews/controller.js",
+    "validator": "modules/document-reviews/validator.js",
+    "service": "modules/document-reviews/service.js",
+    "repository": "modules/document-reviews/repository.js",
+    "openapi_operation_id": "api_022_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2b-document-management.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-009",
+    "method": "GET",
+    "path": "/api/v1/roles",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "users",
+    "authentication": "internal",
+    "permissions": [
+      "roles.view"
+    ],
+    "deprecated": false,
+    "router": "modules/users/router.js",
+    "controller": "modules/users/controller.js",
+    "validator": "modules/users/validator.js",
+    "service": "modules/users/service.js",
+    "repository": "modules/users/repository.js",
+    "openapi_operation_id": "api_009_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-010",
+    "method": "PUT",
+    "path": "/api/v1/roles/{id}/permissions",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "users",
+    "authentication": "internal",
+    "permissions": [
+      "roles.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/users/router.js",
+    "controller": "modules/users/controller.js",
+    "validator": "modules/users/validator.js",
+    "service": "modules/users/service.js",
+    "repository": "modules/users/repository.js",
+    "openapi_operation_id": "api_010_put",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-006",
+    "method": "GET",
+    "path": "/api/v1/users",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "users",
+    "authentication": "internal",
+    "permissions": [
+      "users.view"
+    ],
+    "deprecated": false,
+    "router": "modules/users/router.js",
+    "controller": "modules/users/controller.js",
+    "validator": "modules/users/validator.js",
+    "service": "modules/users/service.js",
+    "repository": "modules/users/repository.js",
+    "openapi_operation_id": "api_006_get",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-007",
+    "method": "POST",
+    "path": "/api/v1/users",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "users",
+    "authentication": "internal",
+    "permissions": [
+      "users.create"
+    ],
+    "deprecated": false,
+    "router": "modules/users/router.js",
+    "controller": "modules/users/controller.js",
+    "validator": "modules/users/validator.js",
+    "service": "modules/users/service.js",
+    "repository": "modules/users/repository.js",
+    "openapi_operation_id": "api_007_post",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-008",
+    "method": "PUT",
+    "path": "/api/v1/users/{id}",
+    "classification": "original",
+    "source": "normalized_catalog",
+    "source_reference": "project/siged-lampa/spec/endpoints.json",
+    "module": "users",
+    "authentication": "internal",
+    "permissions": [
+      "users.edit"
+    ],
+    "deprecated": false,
+    "router": "modules/users/router.js",
+    "controller": "modules/users/controller.js",
+    "validator": "modules/users/validator.js",
+    "service": "modules/users/service.js",
+    "repository": "modules/users/repository.js",
+    "openapi_operation_id": "api_008_put",
+    "positive_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/api/phase5b2a-admin-rbac.api.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-TECH-001",
+    "method": "GET",
+    "path": "/health",
+    "classification": "technical",
+    "source": "technical",
+    "source_reference": "backend/src/routes/index.js",
+    "module": "health",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "routes/index.js",
+    "controller": "",
+    "validator": "modules/health/validator.js",
+    "service": "modules/health/service.js",
+    "repository": "modules/health/repository.js",
+    "openapi_operation_id": "api_tech_001_get",
+    "positive_tests": [
+      "backend/tests/smoke/qa-health-auth.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/smoke/qa-health-auth.test.js"
+    ],
+    "status": "implemented"
+  },
+  {
+    "endpoint_code": "API-TECH-002",
+    "method": "GET",
+    "path": "/health/database",
+    "classification": "technical",
+    "source": "technical",
+    "source_reference": "backend/src/routes/index.js",
+    "module": "health",
+    "authentication": "public",
+    "permissions": [],
+    "deprecated": false,
+    "router": "routes/index.js",
+    "controller": "",
+    "validator": "modules/health/validator.js",
+    "service": "modules/health/service.js",
+    "repository": "modules/health/repository.js",
+    "openapi_operation_id": "api_tech_002_get",
+    "positive_tests": [
+      "backend/tests/smoke/qa-health-auth.test.js"
+    ],
+    "negative_tests": [
+      "backend/tests/smoke/qa-health-auth.test.js"
+    ],
+    "status": "implemented"
+  }
+]

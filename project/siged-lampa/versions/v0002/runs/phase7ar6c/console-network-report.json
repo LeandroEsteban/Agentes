@@ -1,0 +1,16 @@
+﻿{
+    "high_findings":  0,
+    "unexpected_500":  0,
+    "critical_findings":  0,
+    "unexpected_503":  0,
+    "note":  "No console errors captured during E2E runs. Expected negative responses handled correctly.",
+    "cors_errors":  0,
+    "expected_negatives":  [
+                               "400",
+                               "401",
+                               "403",
+                               "404",
+                               "409",
+                               "422"
+                           ]
+}

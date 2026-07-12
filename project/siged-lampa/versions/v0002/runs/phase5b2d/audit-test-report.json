@@ -1,0 +1,16 @@
+{
+  "status": "sufficient",
+  "covered": [
+    "document_created",
+    "document_updated",
+    "document_version_created",
+    "document_attachment_created",
+    "document_comment_created",
+    "document_review_requested",
+    "document_review_replied",
+    "document_approval_created",
+    "document_approval_decided",
+    "document_signed"
+  ],
+  "missing": []
+}

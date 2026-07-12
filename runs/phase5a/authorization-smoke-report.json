@@ -1,0 +1,5 @@
+{
+  "status": "blocked",
+  "verified": ["internal JWT", "citizen JWT", "citizen session revocation lookup"],
+  "missing": ["request foreign-owner rejection smoke", "notification foreign-owner rejection smoke", "RBAC matrix smoke"]
+}

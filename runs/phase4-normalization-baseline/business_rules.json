@@ -1,0 +1,979 @@
+{
+  "generated_at": "2026-07-11T04:37:24Z",
+  "items": [
+    {
+      "code": "BR-001",
+      "description": "Solo usuarios activos pueden iniciar sesion.",
+      "module": null,
+      "name": "Solo usuarios activos pueden iniciar sesion.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 553,
+        "line_start": 553,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-002",
+      "description": "Todo usuario debe pertenecer al menos a un rol.",
+      "module": null,
+      "name": "Todo usuario debe pertenecer al menos a un rol.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 554,
+        "line_start": 554,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-003",
+      "description": "Un usuario no puede acceder a funciones sin permiso explicito.",
+      "module": null,
+      "name": "Un usuario no puede acceder a funciones sin permiso explicito.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 555,
+        "line_start": 555,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-004",
+      "description": "Los perfiles ciudadanos y funcionarios no comparten el mismo ambito de autorizacion.",
+      "module": null,
+      "name": "Los perfiles ciudadanos y funcionarios no comparten el mismo ambito de autorizacion.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 556,
+        "line_start": 556,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-005",
+      "description": "Todo departamento debe tener nombre unico.",
+      "module": null,
+      "name": "Todo departamento debe tener nombre unico.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 557,
+        "line_start": 557,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-006",
+      "description": "Todo tipo documental debe tener un codigo unico.",
+      "module": null,
+      "name": "Todo tipo documental debe tener un codigo unico.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 558,
+        "line_start": 558,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-007",
+      "description": "Todo tramite publicado debe estar asociado a un tipo de tramite vigente.",
+      "module": null,
+      "name": "Todo tramite publicado debe estar asociado a un tipo de tramite vigente.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 559,
+        "line_start": 559,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-008",
+      "description": "Toda entidad externa debe tener nombre y canal de contacto.",
+      "module": null,
+      "name": "Toda entidad externa debe tener nombre y canal de contacto.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 560,
+        "line_start": 560,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-009",
+      "description": "Solo administradores pueden crear roles.",
+      "module": null,
+      "name": "Solo administradores pueden crear roles.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 561,
+        "line_start": 561,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-010",
+      "description": "Solo administradores pueden modificar permisos.",
+      "module": null,
+      "name": "Solo administradores pueden modificar permisos.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 562,
+        "line_start": 562,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-011",
+      "description": "Las preferencias de notificacion son configurables por usuario.",
+      "module": null,
+      "name": "Las preferencias de notificacion son configurables por usuario.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 563,
+        "line_start": 563,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-012",
+      "description": "El acceso fallido repetido debe gatillar proteccion de seguridad.",
+      "module": null,
+      "name": "El acceso fallido repetido debe gatillar proteccion de seguridad.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 564,
+        "line_start": 564,
+        "section": "15.1 Reglas M01 y M02"
+      }
+    },
+    {
+      "code": "BR-013",
+      "description": "Todo documento debe pertenecer a un tipo documental.",
+      "module": null,
+      "name": "Todo documento debe pertenecer a un tipo documental.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 568,
+        "line_start": 568,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-014",
+      "description": "La numeracion documental es unica por tipo documental.",
+      "module": null,
+      "name": "La numeracion documental es unica por tipo documental.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 569,
+        "line_start": 569,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-015",
+      "description": "Un documento en borrador puede editarse libremente por su creador y usuarios autorizados.",
+      "module": null,
+      "name": "Un documento en borrador puede editarse libremente por su creador y usuarios autorizados.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 570,
+        "line_start": 570,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-016",
+      "description": "Un documento enviado a revision ya no puede cambiar de tipo documental.",
+      "module": null,
+      "name": "Un documento enviado a revision ya no puede cambiar de tipo documental.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 571,
+        "line_start": 571,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-017",
+      "description": "Todo anexo debe quedar asociado a una version del documento.",
+      "module": null,
+      "name": "Todo anexo debe quedar asociado a una version del documento.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 572,
+        "line_start": 572,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-018",
+      "description": "Todo comentario debe registrar autor y fecha.",
+      "module": null,
+      "name": "Todo comentario debe registrar autor y fecha.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 573,
+        "line_start": 573,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-019",
+      "description": "Un documento confidencial solo es visible para usuarios autorizados.",
+      "module": null,
+      "name": "Un documento confidencial solo es visible para usuarios autorizados.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 574,
+        "line_start": 574,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-020",
+      "description": "Todo documento con urgencia debe generar alerta preventiva.",
+      "module": null,
+      "name": "Todo documento con urgencia debe generar alerta preventiva.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 575,
+        "line_start": 575,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-021",
+      "description": "Una nueva version debe referenciar explicitamente a la version anterior.",
+      "module": null,
+      "name": "Una nueva version debe referenciar explicitamente a la version anterior.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 576,
+        "line_start": 576,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-022",
+      "description": "Un documento finalizado no puede volver a borrador sin accion administrativa.",
+      "module": null,
+      "name": "Un documento finalizado no puede volver a borrador sin accion administrativa.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 577,
+        "line_start": 577,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-023",
+      "description": "Todo documento archivado debe seguir siendo consultable segun permisos.",
+      "module": null,
+      "name": "Todo documento archivado debe seguir siendo consultable segun permisos.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 578,
+        "line_start": 578,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-024",
+      "description": "Todo documento emitido debe contar con codigo de verificacion.",
+      "module": null,
+      "name": "Todo documento emitido debe contar con codigo de verificacion.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 579,
+        "line_start": 579,
+        "section": "15.2 Reglas M03 Gestion documental"
+      }
+    },
+    {
+      "code": "BR-025",
+      "description": "Un documento no puede solicitar firma sin haber pasado por revision minima.",
+      "module": null,
+      "name": "Un documento no puede solicitar firma sin haber pasado por revision minima.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 583,
+        "line_start": 583,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-026",
+      "description": "Toda solicitud de revision debe tener responsable.",
+      "module": null,
+      "name": "Toda solicitud de revision debe tener responsable.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 584,
+        "line_start": 584,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-027",
+      "description": "Toda revision respondida debe quedar historizada.",
+      "module": null,
+      "name": "Toda revision respondida debe quedar historizada.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 585,
+        "line_start": 585,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-028",
+      "description": "Un visto bueno pendiente impide el cierre del flujo.",
+      "module": null,
+      "name": "Un visto bueno pendiente impide el cierre del flujo.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 586,
+        "line_start": 586,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-029",
+      "description": "La secuencia de firmantes debe respetar el orden definido.",
+      "module": null,
+      "name": "La secuencia de firmantes debe respetar el orden definido.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 587,
+        "line_start": 587,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-030",
+      "description": "El estado firmado se alcanza solo cuando todos los firmantes requeridos completan su accion.",
+      "module": null,
+      "name": "El estado firmado se alcanza solo cuando todos los firmantes requeridos completan su accion.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 588,
+        "line_start": 588,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-031",
+      "description": "La firma simulada debe distinguirse de la firma fisica cargada.",
+      "module": null,
+      "name": "La firma simulada debe distinguirse de la firma fisica cargada.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 589,
+        "line_start": 589,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-032",
+      "description": "Cada evento de firma genera auditoria.",
+      "module": null,
+      "name": "Cada evento de firma genera auditoria.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 590,
+        "line_start": 590,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-033",
+      "description": "Un firmante no puede firmar dos veces la misma etapa.",
+      "module": null,
+      "name": "Un firmante no puede firmar dos veces la misma etapa.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 591,
+        "line_start": 591,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-034",
+      "description": "Un rechazo de revision retorna el documento a su emisor.",
+      "module": null,
+      "name": "Un rechazo de revision retorna el documento a su emisor.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 592,
+        "line_start": 592,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-035",
+      "description": "Un rechazo de VB bloquea el avance del flujo.",
+      "module": null,
+      "name": "Un rechazo de VB bloquea el avance del flujo.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 593,
+        "line_start": 593,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-036",
+      "description": "Todo documento finalizado debe registrar firmantes y revisores.",
+      "module": null,
+      "name": "Todo documento finalizado debe registrar firmantes y revisores.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 594,
+        "line_start": 594,
+        "section": "15.3 Reglas M04 Revision, VB y firma"
+      }
+    },
+    {
+      "code": "BR-037",
+      "description": "Todo expediente debe tener folio unico.",
+      "module": null,
+      "name": "Todo expediente debe tener folio unico.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 598,
+        "line_start": 598,
+        "section": "15.4 Reglas M05 Expedientes y trazabilidad"
+      }
+    },
+    {
+      "code": "BR-038",
+      "description": "Un documento puede pertenecer a uno o mas expedientes segun regla de negocio.",
+      "module": null,
+      "name": "Un documento puede pertenecer a uno o mas expedientes segun regla de negocio.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 599,
+        "line_start": 599,
+        "section": "15.4 Reglas M05 Expedientes y trazabilidad"
+      }
+    },
+    {
+      "code": "BR-039",
+      "description": "Todo evento relevante debe quedar en timeline de expediente.",
+      "module": null,
+      "name": "Todo evento relevante debe quedar en timeline de expediente.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 600,
+        "line_start": 600,
+        "section": "15.4 Reglas M05 Expedientes y trazabilidad"
+      }
+    },
+    {
+      "code": "BR-040",
+      "description": "El expediente debe reflejar estado agregado de sus documentos principales.",
+      "module": null,
+      "name": "El expediente debe reflejar estado agregado de sus documentos principales.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 601,
+        "line_start": 601,
+        "section": "15.4 Reglas M05 Expedientes y trazabilidad"
+      }
+    },
+    {
+      "code": "BR-041",
+      "description": "Toda accion critica genera evento de auditoria.",
+      "module": null,
+      "name": "Toda accion critica genera evento de auditoria.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 602,
+        "line_start": 602,
+        "section": "15.4 Reglas M05 Expedientes y trazabilidad"
+      }
+    },
+    {
+      "code": "BR-042",
+      "description": "La busqueda por expediente debe soportar folio, estado, fecha y responsable.",
+      "module": null,
+      "name": "La busqueda por expediente debe soportar folio, estado, fecha y responsable.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 603,
+        "line_start": 603,
+        "section": "15.4 Reglas M05 Expedientes y trazabilidad"
+      }
+    },
+    {
+      "code": "BR-043",
+      "description": "Toda correspondencia debe tener origen, destino y estado.",
+      "module": null,
+      "name": "Toda correspondencia debe tener origen, destino y estado.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 607,
+        "line_start": 607,
+        "section": "15.5 Reglas M06 Correspondencia"
+      }
+    },
+    {
+      "code": "BR-044",
+      "description": "La correspondencia puede asignarse a varios departamentos.",
+      "module": null,
+      "name": "La correspondencia puede asignarse a varios departamentos.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 608,
+        "line_start": 608,
+        "section": "15.5 Reglas M06 Correspondencia"
+      }
+    },
+    {
+      "code": "BR-045",
+      "description": "La correspondencia confidencial restringe acceso por permiso.",
+      "module": null,
+      "name": "La correspondencia confidencial restringe acceso por permiso.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 609,
+        "line_start": 609,
+        "section": "15.5 Reglas M06 Correspondencia"
+      }
+    },
+    {
+      "code": "BR-046",
+      "description": "Toda correspondencia con plazo debe calcular vencimiento.",
+      "module": null,
+      "name": "Toda correspondencia con plazo debe calcular vencimiento.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 610,
+        "line_start": 610,
+        "section": "15.5 Reglas M06 Correspondencia"
+      }
+    },
+    {
+      "code": "BR-047",
+      "description": "La respuesta oficial puede vincularse a uno o varios documentos.",
+      "module": null,
+      "name": "La respuesta oficial puede vincularse a uno o varios documentos.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 611,
+        "line_start": 611,
+        "section": "15.5 Reglas M06 Correspondencia"
+      }
+    },
+    {
+      "code": "BR-048",
+      "description": "Toda derivacion genera notificacion al responsable.",
+      "module": null,
+      "name": "Toda derivacion genera notificacion al responsable.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 612,
+        "line_start": 612,
+        "section": "15.5 Reglas M06 Correspondencia"
+      }
+    },
+    {
+      "code": "BR-049",
+      "description": "Solo tramites publicados pueden iniciarse desde el portal.",
+      "module": null,
+      "name": "Solo tramites publicados pueden iniciarse desde el portal.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 616,
+        "line_start": 616,
+        "section": "15.6 Reglas M07 Portal ciudadano"
+      }
+    },
+    {
+      "code": "BR-050",
+      "description": "Toda solicitud ciudadana debe tener identificador unico.",
+      "module": null,
+      "name": "Toda solicitud ciudadana debe tener identificador unico.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 617,
+        "line_start": 617,
+        "section": "15.6 Reglas M07 Portal ciudadano"
+      }
+    },
+    {
+      "code": "BR-051",
+      "description": "El ciudadano solo puede ver sus propias solicitudes.",
+      "module": null,
+      "name": "El ciudadano solo puede ver sus propias solicitudes.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 618,
+        "line_start": 618,
+        "section": "15.6 Reglas M07 Portal ciudadano"
+      }
+    },
+    {
+      "code": "BR-052",
+      "description": "Todo tramite debe indicar requisitos y estado.",
+      "module": null,
+      "name": "Todo tramite debe indicar requisitos y estado.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 619,
+        "line_start": 619,
+        "section": "15.6 Reglas M07 Portal ciudadano"
+      }
+    },
+    {
+      "code": "BR-053",
+      "description": "Las noticias visibles en portal provienen de administracion autorizada.",
+      "module": null,
+      "name": "Las noticias visibles en portal provienen de administracion autorizada.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 620,
+        "line_start": 620,
+        "section": "15.6 Reglas M07 Portal ciudadano"
+      }
+    },
+    {
+      "code": "BR-054",
+      "description": "Los avisos ciudadanos tienen periodo de vigencia.",
+      "module": null,
+      "name": "Los avisos ciudadanos tienen periodo de vigencia.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 621,
+        "line_start": 621,
+        "section": "15.6 Reglas M07 Portal ciudadano"
+      }
+    },
+    {
+      "code": "BR-055",
+      "description": "Toda solicitud OIRS debe clasificarse por tipo.",
+      "module": null,
+      "name": "Toda solicitud OIRS debe clasificarse por tipo.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 625,
+        "line_start": 625,
+        "section": "15.7 Reglas M08 OIRS"
+      }
+    },
+    {
+      "code": "BR-056",
+      "description": "Todo caso OIRS debe tener estado y responsable.",
+      "module": null,
+      "name": "Todo caso OIRS debe tener estado y responsable.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 626,
+        "line_start": 626,
+        "section": "15.7 Reglas M08 OIRS"
+      }
+    },
+    {
+      "code": "BR-057",
+      "description": "Toda respuesta OIRS debe quedar auditada.",
+      "module": null,
+      "name": "Toda respuesta OIRS debe quedar auditada.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 627,
+        "line_start": 627,
+        "section": "15.7 Reglas M08 OIRS"
+      }
+    },
+    {
+      "code": "BR-058",
+      "description": "El ciudadano debe poder consultar historial de su caso.",
+      "module": null,
+      "name": "El ciudadano debe poder consultar historial de su caso.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 628,
+        "line_start": 628,
+        "section": "15.7 Reglas M08 OIRS"
+      }
+    },
+    {
+      "code": "BR-059",
+      "description": "El cierre de un caso requiere registrar resolucion.",
+      "module": null,
+      "name": "El cierre de un caso requiere registrar resolucion.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 629,
+        "line_start": 629,
+        "section": "15.7 Reglas M08 OIRS"
+      }
+    },
+    {
+      "code": "BR-060",
+      "description": "Toda derivacion OIRS debe conservar trazabilidad completa.",
+      "module": null,
+      "name": "Toda derivacion OIRS debe conservar trazabilidad completa.",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "business_rule"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 630,
+        "line_start": 630,
+        "section": "15.7 Reglas M08 OIRS"
+      }
+    }
+  ],
+  "project_id": "siged-lampa",
+  "schema_version": "webforge.catalog.business-rules.v1",
+  "source_documents": [
+    "Especificacion_Funcional_SIGED_Lampa.md",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "Inventario_Endpoints_SIGED_Lampa.md",
+    "Modelo_ER_Detallado_SIGED_Lampa.md"
+  ],
+  "source_hashes": {
+    "Especificacion_Funcional_SIGED_Lampa.md": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24",
+    "Inventario_Endpoints_SIGED_Lampa.md": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d",
+    "Modelo_ER_Detallado_SIGED_Lampa.md": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282"
+  }
+}

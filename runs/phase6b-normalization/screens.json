@@ -1,0 +1,748 @@
+{
+  "generated_at": "2026-07-11T21:33:32Z",
+  "items": [
+    {
+      "code": "P-01",
+      "description": "Login intranet",
+      "module": "M01",
+      "name": "Login intranet",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "funcionario",
+        "actor_principal": "funcionario",
+        "endpoints": [
+          "API-001"
+        ],
+        "route": "/intranet/login",
+        "ruta_sugerida": "/intranet/login",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 86,
+        "line_start": 86,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-02",
+      "description": "Login ciudadano",
+      "module": "M01",
+      "name": "Login ciudadano",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "ciudadano",
+        "actor_principal": "ciudadano",
+        "endpoints": [
+          "API-002"
+        ],
+        "route": "/login",
+        "ruta_sugerida": "/login",
+        "zona": "portal",
+        "zone": "portal"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 87,
+        "line_start": 87,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-03",
+      "description": "Recuperacion de acceso",
+      "module": "M01",
+      "name": "Recuperacion de acceso",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "usuario",
+        "actor_principal": "usuario",
+        "endpoints": [
+          "API-003"
+        ],
+        "route": "/recover",
+        "ruta_sugerida": "/recover",
+        "zona": "compartida",
+        "zone": "compartida"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 88,
+        "line_start": 88,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-04",
+      "description": "Perfil de usuario",
+      "module": "M01",
+      "name": "Perfil de usuario",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "usuario interno",
+        "actor_principal": "usuario interno",
+        "endpoints": [
+          "API-004",
+          "API-005"
+        ],
+        "route": "/intranet/profile",
+        "ruta_sugerida": "/intranet/profile",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 89,
+        "line_start": 89,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-05",
+      "description": "Dashboard intranet",
+      "module": "M01",
+      "name": "Dashboard intranet",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "funcionario",
+        "actor_principal": "funcionario",
+        "endpoints": [
+          "API-039",
+          "API-040"
+        ],
+        "route": "/intranet/dashboard",
+        "ruta_sugerida": "/intranet/dashboard",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 90,
+        "line_start": 90,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-06",
+      "description": "Gestion de usuarios",
+      "module": "M02",
+      "name": "Gestion de usuarios",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "administrador",
+        "actor_principal": "administrador",
+        "endpoints": [
+          "API-006",
+          "API-007",
+          "API-008"
+        ],
+        "route": "/intranet/admin/users",
+        "ruta_sugerida": "/intranet/admin/users",
+        "zona": "administracion",
+        "zone": "administracion"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 91,
+        "line_start": 91,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-07",
+      "description": "Gestion de roles y permisos",
+      "module": "M02",
+      "name": "Gestion de roles y permisos",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "administrador",
+        "actor_principal": "administrador",
+        "endpoints": [
+          "API-009",
+          "API-010"
+        ],
+        "route": "/intranet/admin/roles",
+        "ruta_sugerida": "/intranet/admin/roles",
+        "zona": "administracion",
+        "zone": "administracion"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 92,
+        "line_start": 92,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-08",
+      "description": "Gestion de departamentos",
+      "module": "M02",
+      "name": "Gestion de departamentos",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "administrador",
+        "actor_principal": "administrador",
+        "endpoints": [
+          "API-011",
+          "API-012"
+        ],
+        "route": "/intranet/admin/departments",
+        "ruta_sugerida": "/intranet/admin/departments",
+        "zona": "administracion",
+        "zone": "administracion"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 93,
+        "line_start": 93,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-09",
+      "description": "Tipos documentales",
+      "module": "M02",
+      "name": "Tipos documentales",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "administrador",
+        "actor_principal": "administrador",
+        "endpoints": [
+          "API-013",
+          "API-014"
+        ],
+        "route": "/intranet/admin/document-types",
+        "ruta_sugerida": "/intranet/admin/document-types",
+        "zona": "administracion",
+        "zone": "administracion"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 94,
+        "line_start": 94,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-10",
+      "description": "Tipos de tramites",
+      "module": "M02",
+      "name": "Tipos de tramites",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "administrador",
+        "actor_principal": "administrador",
+        "endpoints": [],
+        "route": "/intranet/admin/procedure-types",
+        "ruta_sugerida": "/intranet/admin/procedure-types",
+        "zona": "administracion",
+        "zone": "administracion"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 95,
+        "line_start": 95,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-11",
+      "description": "Entidades externas",
+      "module": "M02",
+      "name": "Entidades externas",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "administrador",
+        "actor_principal": "administrador",
+        "endpoints": [],
+        "route": "/intranet/admin/external-entities",
+        "ruta_sugerida": "/intranet/admin/external-entities",
+        "zona": "administracion",
+        "zone": "administracion"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 96,
+        "line_start": 96,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-12",
+      "description": "Bandeja documental",
+      "module": "M03",
+      "name": "Bandeja documental",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "funcionario",
+        "actor_principal": "funcionario",
+        "endpoints": [
+          "API-015"
+        ],
+        "route": "/intranet/documents",
+        "ruta_sugerida": "/intranet/documents",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 97,
+        "line_start": 97,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-13",
+      "description": "Crear documento",
+      "module": "M03",
+      "name": "Crear documento",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "funcionario",
+        "actor_principal": "funcionario",
+        "endpoints": [
+          "API-016"
+        ],
+        "route": "/intranet/documents/new",
+        "ruta_sugerida": "/intranet/documents/new",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 98,
+        "line_start": 98,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-14",
+      "description": "Detalle de documento",
+      "module": "M03",
+      "name": "Detalle de documento",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "funcionario",
+        "actor_principal": "funcionario",
+        "endpoints": [
+          "API-017",
+          "API-018"
+        ],
+        "route": "/intranet/documents/:id",
+        "ruta_sugerida": "/intranet/documents/:id",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 99,
+        "line_start": 99,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-15",
+      "description": "Versiones y anexos",
+      "module": "M03",
+      "name": "Versiones y anexos",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "funcionario",
+        "actor_principal": "funcionario",
+        "endpoints": [
+          "API-019",
+          "API-020"
+        ],
+        "route": "/intranet/documents/:id/assets",
+        "ruta_sugerida": "/intranet/documents/:id/assets",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 100,
+        "line_start": 100,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-16",
+      "description": "Revision pendiente",
+      "module": "M04",
+      "name": "Revision pendiente",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "revisor",
+        "actor_principal": "revisor",
+        "endpoints": [
+          "API-022"
+        ],
+        "route": "/intranet/reviews/:id",
+        "ruta_sugerida": "/intranet/reviews/:id",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 101,
+        "line_start": 101,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-17",
+      "description": "Flujo de aprobacion",
+      "module": "M04",
+      "name": "Flujo de aprobacion",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "jefatura",
+        "actor_principal": "jefatura",
+        "endpoints": [
+          "API-023"
+        ],
+        "route": "/intranet/documents/:id/approvals",
+        "ruta_sugerida": "/intranet/documents/:id/approvals",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 102,
+        "line_start": 102,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-18",
+      "description": "Firma simulada",
+      "module": "M04",
+      "name": "Firma simulada",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "firmante",
+        "actor_principal": "firmante",
+        "endpoints": [
+          "API-024"
+        ],
+        "route": "/intranet/documents/:id/signature",
+        "ruta_sugerida": "/intranet/documents/:id/signature",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 103,
+        "line_start": 103,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-19",
+      "description": "Bandeja de expedientes",
+      "module": "M05",
+      "name": "Bandeja de expedientes",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "funcionario",
+        "actor_principal": "funcionario",
+        "endpoints": [
+          "API-025"
+        ],
+        "route": "/intranet/expedients",
+        "ruta_sugerida": "/intranet/expedients",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 104,
+        "line_start": 104,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-20",
+      "description": "Detalle de expediente",
+      "module": "M05",
+      "name": "Detalle de expediente",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "funcionario",
+        "actor_principal": "funcionario",
+        "endpoints": [
+          "API-027",
+          "API-028"
+        ],
+        "route": "/intranet/expedients/:id",
+        "ruta_sugerida": "/intranet/expedients/:id",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 105,
+        "line_start": 105,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-21",
+      "description": "Registro de correspondencia",
+      "module": "M06",
+      "name": "Registro de correspondencia",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "oficina de partes",
+        "actor_principal": "oficina de partes",
+        "endpoints": [
+          "API-030"
+        ],
+        "route": "/intranet/correspondence/new",
+        "ruta_sugerida": "/intranet/correspondence/new",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 106,
+        "line_start": 106,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-22",
+      "description": "Seguimiento de correspondencia",
+      "module": "M06",
+      "name": "Seguimiento de correspondencia",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "funcionario",
+        "actor_principal": "funcionario",
+        "endpoints": [
+          "API-029",
+          "API-031",
+          "API-032"
+        ],
+        "route": "/intranet/correspondence",
+        "ruta_sugerida": "/intranet/correspondence",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 107,
+        "line_start": 107,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-23",
+      "description": "Portal ciudadano home",
+      "module": "M07",
+      "name": "Portal ciudadano home",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "ciudadano",
+        "actor_principal": "ciudadano",
+        "endpoints": [
+          "API-033"
+        ],
+        "route": "/",
+        "ruta_sugerida": "/",
+        "zona": "portal",
+        "zone": "portal"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 108,
+        "line_start": 108,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-24",
+      "description": "Catalogo de tramites",
+      "module": "M07",
+      "name": "Catalogo de tramites",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "ciudadano",
+        "actor_principal": "ciudadano",
+        "endpoints": [
+          "API-033"
+        ],
+        "route": "/tramites",
+        "ruta_sugerida": "/tramites",
+        "zona": "portal",
+        "zone": "portal"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 109,
+        "line_start": 109,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-25",
+      "description": "Formulario de tramite",
+      "module": "M07",
+      "name": "Formulario de tramite",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "ciudadano",
+        "actor_principal": "ciudadano",
+        "endpoints": [
+          "API-034"
+        ],
+        "route": "/tramites/:id/apply",
+        "ruta_sugerida": "/tramites/:id/apply",
+        "zona": "portal",
+        "zone": "portal"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 110,
+        "line_start": 110,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-26",
+      "description": "Mis solicitudes",
+      "module": "M07",
+      "name": "Mis solicitudes",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "ciudadano",
+        "actor_principal": "ciudadano",
+        "endpoints": [
+          "API-035",
+          "API-036"
+        ],
+        "route": "/portal/requests",
+        "ruta_sugerida": "/portal/requests",
+        "zona": "portal autenticado",
+        "zone": "portal autenticado"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 111,
+        "line_start": 111,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-27",
+      "description": "Ingreso OIRS",
+      "module": "M08",
+      "name": "Ingreso OIRS",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "ciudadano",
+        "actor_principal": "ciudadano",
+        "endpoints": [
+          "API-037"
+        ],
+        "route": "/oirs",
+        "ruta_sugerida": "/oirs",
+        "zona": "portal",
+        "zone": "portal"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 112,
+        "line_start": 112,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-28",
+      "description": "Gestion de OIRS",
+      "module": "M08",
+      "name": "Gestion de OIRS",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "operador OIRS",
+        "actor_principal": "operador OIRS",
+        "endpoints": [
+          "API-038"
+        ],
+        "route": "/intranet/oirs",
+        "ruta_sugerida": "/intranet/oirs",
+        "zona": "intranet",
+        "zone": "intranet"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 113,
+        "line_start": 113,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-29",
+      "description": "Dashboard de reportes",
+      "module": "M09",
+      "name": "Dashboard de reportes",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "analista",
+        "actor_principal": "analista",
+        "endpoints": [
+          "API-039"
+        ],
+        "route": "/intranet/reports/dashboard",
+        "ruta_sugerida": "/intranet/reports/dashboard",
+        "zona": "reportes",
+        "zone": "reportes"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 114,
+        "line_start": 114,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    },
+    {
+      "code": "P-30",
+      "description": "Bandeja de notificaciones",
+      "module": "M10",
+      "name": "Bandeja de notificaciones",
+      "normalization_status": "parsed",
+      "relations": {
+        "actor": "usuario",
+        "actor_principal": "usuario",
+        "endpoints": [
+          "API-040"
+        ],
+        "route": "/notifications` o `/intranet/notifications",
+        "ruta_sugerida": "/notifications` o `/intranet/notifications",
+        "zona": "compartida",
+        "zone": "compartida"
+      },
+      "source": {
+        "document": "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+        "line_end": 115,
+        "line_start": 115,
+        "section": "5. Catalogo de rutas y pantallas"
+      }
+    }
+  ],
+  "project_id": "siged-lampa",
+  "schema_version": "webforge.catalog.screens.v1",
+  "source_documents": [
+    "Especificacion_Funcional_SIGED_Lampa.md",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "Inventario_Endpoints_SIGED_Lampa.md",
+    "Modelo_ER_Detallado_SIGED_Lampa.md"
+  ],
+  "source_hashes": {
+    "Especificacion_Funcional_SIGED_Lampa.md": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24",
+    "Inventario_Endpoints_SIGED_Lampa.md": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d",
+    "Modelo_ER_Detallado_SIGED_Lampa.md": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282"
+  }
+}

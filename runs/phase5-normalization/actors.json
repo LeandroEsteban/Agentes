@@ -1,0 +1,163 @@
+{
+  "generated_at": "2026-07-11T08:09:44Z",
+  "items": [
+    {
+      "code": "ACT-ADM",
+      "description": "Administrador del sistema",
+      "module": null,
+      "name": "Administrador del sistema",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "actor"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 106,
+        "line_start": 106,
+        "section": "6.2 Actores internos"
+      }
+    },
+    {
+      "code": "ACT-FUN",
+      "description": "Funcionario municipal",
+      "module": null,
+      "name": "Funcionario municipal",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "actor"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 107,
+        "line_start": 107,
+        "section": "6.2 Actores internos"
+      }
+    },
+    {
+      "code": "ACT-OPA",
+      "description": "Oficina de partes",
+      "module": null,
+      "name": "Oficina de partes",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "actor"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 108,
+        "line_start": 108,
+        "section": "6.2 Actores internos"
+      }
+    },
+    {
+      "code": "ACT-REV",
+      "description": "Revisor o jefatura",
+      "module": null,
+      "name": "Revisor o jefatura",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "actor"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 109,
+        "line_start": 109,
+        "section": "6.2 Actores internos"
+      }
+    },
+    {
+      "code": "ACT-OIR",
+      "description": "Operador OIRS",
+      "module": null,
+      "name": "Operador OIRS",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "actor"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 110,
+        "line_start": 110,
+        "section": "6.2 Actores internos"
+      }
+    },
+    {
+      "code": "ACT-REP",
+      "description": "Analista de reportes",
+      "module": null,
+      "name": "Analista de reportes",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "actor"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 111,
+        "line_start": 111,
+        "section": "6.2 Actores internos"
+      }
+    },
+    {
+      "code": "ACT-CIU",
+      "description": "Ciudadano autenticado",
+      "module": null,
+      "name": "Ciudadano autenticado",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "actor"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 115,
+        "line_start": 115,
+        "section": "6.3 Actores externos"
+      }
+    },
+    {
+      "code": "ACT-VIS",
+      "description": "Ciudadano visitante",
+      "module": null,
+      "name": "Ciudadano visitante",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "actor"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 116,
+        "line_start": 116,
+        "section": "6.3 Actores externos"
+      }
+    },
+    {
+      "code": "ACT-EXT",
+      "description": "Entidad externa receptora",
+      "module": null,
+      "name": "Entidad externa receptora",
+      "normalization_status": "parsed",
+      "relations": {
+        "kind": "actor"
+      },
+      "source": {
+        "document": "Especificacion_Funcional_SIGED_Lampa.md",
+        "line_end": 117,
+        "line_start": 117,
+        "section": "6.3 Actores externos"
+      }
+    }
+  ],
+  "project_id": "siged-lampa",
+  "schema_version": "webforge.catalog.actors.v1",
+  "source_documents": [
+    "Especificacion_Funcional_SIGED_Lampa.md",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "Inventario_Endpoints_SIGED_Lampa.md",
+    "Modelo_ER_Detallado_SIGED_Lampa.md"
+  ],
+  "source_hashes": {
+    "Especificacion_Funcional_SIGED_Lampa.md": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24",
+    "Inventario_Endpoints_SIGED_Lampa.md": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d",
+    "Modelo_ER_Detallado_SIGED_Lampa.md": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282"
+  }
+}

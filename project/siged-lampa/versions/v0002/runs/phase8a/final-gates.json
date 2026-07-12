@@ -1,0 +1,18 @@
+{
+  "phase": "8A",
+  "gates": [
+    {"id": "P8A-GATE-001", "name": "Workflow syntax and triggers", "status": "PASS", "evidence": "push → main + workflow_dispatch, permissions: contents:read, concurrency group, 3 jobs"},
+    {"id": "P8A-GATE-002", "name": "SSH configuration", "status": "PASS", "evidence": "3 secrets used, ssh-keyscan, temp key, no StrictHostKeyChecking=no, no key exposure"},
+    {"id": "P8A-GATE-003", "name": "Release packaging", "status": "PASS", "evidence": "tar czf with exclusions, release ID = run_number-sha, 0 secrets in package"},
+    {"id": "P8A-GATE-004", "name": "Docker build", "status": "PASS", "evidence": "Frontend build PASS (157 modules, 402KB), Backend build PASS (97 packages, 0 vulns)"},
+    {"id": "P8A-GATE-005", "name": "PostgreSQL configuration", "status": "PASS", "evidence": "Persistent volume pgdata_production, no public port, 17 migrations automated, 5 seeds idempotent"},
+    {"id": "P8A-GATE-006", "name": "Environment configuration", "status": "PASS", "evidence": ".env.production.example created with 18 real vars, /opt/siged-lampa/shared/.env.production expected on EC2"},
+    {"id": "P8A-GATE-007", "name": "Health and smoke tests", "status": "PASS", "evidence": "Health checks for postgres/backend/frontend, 5 smoke tests, failure stops workflow"},
+    {"id": "P8A-GATE-008", "name": "Rollback capability", "status": "PASS", "evidence": "Automated on failure (previous release restored + health verified), backup pg_dump before migration"},
+    {"id": "P8A-GATE-009", "name": "Security", "status": "PASS", "evidence": "0 secrets committed, non-root backend user, postgres private, workflow permissions minimal"},
+    {"id": "P8A-GATE-010", "name": "Documentation", "status": "PASS", "evidence": "5 docs complete (DEPLOYMENT, SECRETS, EC2_SETUP, ROLLBACK, RUNBOOK)"},
+    {"id": "P8A-GATE-011", "name": "Local validation", "status": "PASS", "evidence": "Compose config PASS, backend build PASS, frontend build PASS, scripts reviewed"},
+    {"id": "P8A-GATE-012", "name": "Execution pending", "status": "PASS_WITH_LIMITATION", "evidence": "GitHub Actions not executed yet, EC2 not validated with this release"}
+  ],
+  "summary": {"pass": 11, "pass_with_limitation": 1, "blocked": 0}
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "webforge.blockers_for_phase7.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "blockers": [
+    {
+      "id": "BLK-7-001",
+      "title": "Full E2E execution against QA stack",
+      "description": "Execute 10 E2E flows (E2E-01 through E2E-10) against PostgreSQL QA stack",
+      "depends_on": ["PostgreSQL QA", "backend QA", "frontend QA"],
+      "effort": "medium"
+    },
+    {
+      "id": "BLK-7-002",
+      "title": "Backend regression",
+      "description": "Run npm run check, npm test, npm run test:coverage against backend QA",
+      "depends_on": ["PostgreSQL QA", "backend QA"],
+      "effort": "medium"
+    },
+    {
+      "id": "BLK-7-003",
+      "title": "VAL-030 PDF generation endpoint",
+      "description": "Backend endpoint for PDF generation/verification required before frontend can implement",
+      "depends_on": ["backend contract extension"],
+      "effort": "high"
+    },
+    {
+      "id": "BLK-7-004",
+      "title": "VAL-038 physical signature contract extension",
+      "description": "Backend contract field for physical-signature attachment required",
+      "depends_on": ["backend contract extension"],
+      "effort": "high"
+    },
+    {
+      "id": "BLK-7-005",
+      "title": "WebForge regression",
+      "description": "Execute python -m pytest, webforge normalize, plan, tools validate",
+      "depends_on": ["Python environment", "webforge installed"],
+      "effort": "small"
+    }
+  ]
+}

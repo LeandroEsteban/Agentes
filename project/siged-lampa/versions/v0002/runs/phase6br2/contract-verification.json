@@ -1,0 +1,16 @@
+{
+  "schema": "webforge.contract_verification.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "status": "PASS",
+  "checks": {
+    "operations_classified": { "total": 98, "classified": 98, "pass": true },
+    "consumed_operations_exist": { "consumed": 32, "verified": 32, "pass": true },
+    "dto_updated": { "pass": true },
+    "zero_direct_urls_outside_api": { "pass": true },
+    "zero_canonical_legacy_usage": { "pass": true },
+    "attachments_as_json_base64": { "pass": true },
+    "zero_multipart": { "pass": true },
+    "zero_fallback_qa": { "pass": true },
+    "zero_mock_runtime": { "pass": true }
+  }
+}

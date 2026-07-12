@@ -1,0 +1,10 @@
+{
+  "project_id": "proyecto-uno",
+  "version": "v0002",
+  "required": 159,
+  "implemented": 159,
+  "selectors": 10,
+  "web_required": true,
+  "errors": [],
+  "status": "pass"
+}

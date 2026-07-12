@@ -1,0 +1,18 @@
+{
+  "business_rules": {
+    "total": 60,
+    "implemented": 15,
+    "tested_positive": 15,
+    "tested_negative": 0,
+    "deferred_frontend": 0,
+    "pending": 45
+  },
+  "validations": {
+    "total": 100,
+    "implemented": 32,
+    "tested_positive": 32,
+    "tested_negative": 0,
+    "deferred_frontend": 0,
+    "pending": 68
+  }
+}

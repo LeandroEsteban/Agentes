@@ -1,0 +1,32 @@
+﻿{
+    "summary":  {
+                    "passed":  3,
+                    "planned":  3,
+                    "failed":  0,
+                    "executed":  3
+                },
+    "schema":  "webforge.infrastructure_test_report.v1",
+    "tests":  [
+                  {
+                      "detail":  "Frontend carga portada, navega a tramites, abre detalle",
+                      "status":  "pass",
+                      "name":  "frontend / 200",
+                      "id":  "INFRA-01",
+                      "file":  "infrastructure.spec.ts:4"
+                  },
+                  {
+                      "detail":  "Login ciudadano falla con credenciales invalidas",
+                      "status":  "pass",
+                      "name":  "backend auth rejection",
+                      "id":  "INFRA-02",
+                      "file":  "infrastructure.spec.ts:11"
+                  },
+                  {
+                      "detail":  "Login funcionario navegacion - confirma backend operativo",
+                      "status":  "pass",
+                      "name":  "backend health / database health",
+                      "id":  "INFRA-03",
+                      "file":  "infrastructure.spec.ts:22"
+                  }
+              ]
+}

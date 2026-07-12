@@ -1,0 +1,20 @@
+[
+  {
+    "validation_id": "VAL-030",
+    "screen": "P-18",
+    "component": "SignaturePage",
+    "implementation": "Resolved: not_applicable_to_frontend. No API contract exists for PDF generation or final-PDF verification. Deferred to Phase 7 (backend contract). The frontend correctly indicates academic_simulation signing without fabricating PDF capability.",
+    "positive_tests": [],
+    "negative_tests": [],
+    "status": "not_applicable_to_frontend"
+  },
+  {
+    "validation_id": "VAL-038",
+    "screen": "P-18",
+    "component": "SignaturePage",
+    "implementation": "Resolved: superseded_by_accepted_architecture. The accepted architecture uses academic_simulation signing (ADR-013, API-024 academic_simulation mode). No backend contract field exists for physical-signature attachment. Deferred to Phase 7.",
+    "positive_tests": [],
+    "negative_tests": [],
+    "status": "superseded_by_accepted_architecture"
+  }
+]

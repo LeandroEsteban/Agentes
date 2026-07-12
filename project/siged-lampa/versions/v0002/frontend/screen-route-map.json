@@ -1,0 +1,11 @@
+{
+  "schema_version": "siged.screen_route_map.v1",
+  "documented_screens": 30,
+  "p30_decision": { "citizen": "/portal/notifications", "internal": "/intranet/notifications" },
+  "routes": [
+    { "screen_code": "P-01", "route": "/intranet/login" }, { "screen_code": "P-02", "route": "/login" }, { "screen_code": "P-03", "route": "/recover" }, { "screen_code": "P-04", "route": "/intranet/profile" }, { "screen_code": "P-05", "route": "/intranet" },
+    { "screen_code": "P-06", "route": "/intranet/admin/users" }, { "screen_code": "P-07", "route": "/intranet/admin/roles" }, { "screen_code": "P-08", "route": "/intranet/admin/departments" }, { "screen_code": "P-09", "route": "/intranet/admin/document-types" }, { "screen_code": "P-10", "route": "/intranet/admin/procedure-types" }, { "screen_code": "P-11", "route": "/intranet/admin/external-entities" },
+    { "screen_code": "P-12", "route": "/intranet/documents" }, { "screen_code": "P-13", "route": "/intranet/documents/new" }, { "screen_code": "P-14", "route": "/intranet/documents/:documentId" }, { "screen_code": "P-15", "route": "/intranet/documents/:documentId/versions" }, { "screen_code": "P-16", "route": "/intranet/reviews" }, { "screen_code": "P-17", "route": "/intranet/approvals" }, { "screen_code": "P-18", "route": "/intranet/documents/:documentId/signature" }, { "screen_code": "P-19", "route": "/intranet/expedients" }, { "screen_code": "P-20", "route": "/intranet/expedients/:expedientId" },
+    { "screen_code": "P-21", "route": "/intranet/correspondence/new" }, { "screen_code": "P-22", "route": "/intranet/correspondence" }, { "screen_code": "P-23", "route": "/" }, { "screen_code": "P-24", "route": "/tramites" }, { "screen_code": "P-25", "route": "/portal/requests/new/:procedureId" }, { "screen_code": "P-26", "route": "/portal/requests" }, { "screen_code": "P-27", "route": "/oirs" }, { "screen_code": "P-28", "route": "/intranet/oirs" }, { "screen_code": "P-29", "route": "/intranet/reports" }, { "screen_code": "P-30", "routes": ["/portal/notifications", "/intranet/notifications"] }
+  ]
+}

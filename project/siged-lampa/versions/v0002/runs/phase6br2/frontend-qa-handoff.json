@@ -1,0 +1,39 @@
+{
+  "schema": "webforge.frontend_qa_handoff.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "from": "agent.frontend",
+  "to": "agent.qa_release",
+  "status": "accepted_with_limitations",
+  "build": {
+    "hash": "not_applicable_no_git",
+    "status": "pass",
+    "timestamp": "2026-07-11T18:46:00Z"
+  },
+  "screens": { "total": 30, "verified": 30, "verified_with_limitation": 2, "verified_status": "pass" },
+  "routes": { "total": 37, "public": 8, "portal": 8, "intranet": 16, "admin": 5 },
+  "api_client": { "type": "typed", "operations": 98, "classified": 98, "consumed": 32 },
+  "openapi": { "operations": 98, "verified": true, "status": "pass" },
+  "qa_variables": {
+    "VITE_API_BASE_URL": "required — backend QA URL",
+    "VITE_DATA_MODE": "real",
+    "VITE_ENABLE_DEMO_FALLBACK": "false"
+  },
+  "tests": { "unit": { "passed": 158, "failed": 0, "files": 12 }, "e2e": { "defined": 10, "executed": 0 } },
+  "coverage": { "lines": 87.19, "statements": 87.19, "functions": 65.59, "branches": 76.58 },
+  "accessibility": { "critical": 0, "serious": 0, "moderate": 2, "minor": 3 },
+  "responsive": { "critical_blockers": 0, "status": "pass" },
+  "limitations": [
+    "FE-LIM-001: ProfilePage coverage at 100% lines — resolved from R1",
+    "FE-LIM-002: Auth guard function coverage resolved from R1 (100% functions)",
+    "FE-LIM-003: E2E full suite (10 flows) not executed — requires QA stack (Phase 7)",
+    "FE-LIM-004: React key warnings in DataTable — non-blocking",
+    "FE-LIM-005: Backend regression not executed — needs PostgreSQL QA stack (Phase 7)"
+  ],
+  "blockers_for_phase7": [
+    "BLK-7-001: Full E2E execution against QA stack (10 flows)",
+    "BLK-7-002: Backend regression (npm run check, npm test, npm run test:coverage)",
+    "BLK-7-003: VAL-030 PDF generation (backend endpoint required)",
+    "BLK-7-004: VAL-038 physical signature attachment (contract extension required)",
+    "BLK-7-005: WebForge regression (normalize, plan, tools validate)"
+  ]
+}

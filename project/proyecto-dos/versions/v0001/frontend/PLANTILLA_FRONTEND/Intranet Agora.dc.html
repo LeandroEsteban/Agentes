@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="16" fill="#1E5BC6"/>
+<polygon points="50,28 67,38 67,58 50,68 33,58 33,38" fill="#fff"/>
+</svg>
+</template>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;}
+  body{font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  :root{
+    --bg:#F1F4FA; --surface:#FFFFFF; --surface-2:#F7F9FD; --surface-3:#EDF1F8;
+    --border:#E5EAF3; --border-2:#D6DEEC;
+    --text:#141C2B; --text-2:#465065; --muted:#7C879B;
+    --brand:#1E5BC6; --brand-2:#1747A0; --brand-soft:#E7F0FD;
+    --accent:#0E9F8E; --accent-soft:#E0F4F1;
+    --warn:#D98A2B; --warn-soft:#FAF0DD;
+    --danger:#D44C4C; --danger-soft:#FBE8E8;
+    --success:#1E9E5C; --success-soft:#E2F4EA;
+    --shadow:0 1px 2px rgba(20,30,55,.04),0 6px 20px rgba(20,30,55,.05);
+    --shadow-lg:0 8px 30px rgba(20,30,55,.12);
+  }
+  [data-theme="dark"]{
+    --bg:#0C1220; --surface:#141C2C; --surface-2:#1A2334; --surface-3:#212C42;
+    --border:#27314A; --border-2:#323E5A;
+    --text:#EAF0F8; --text-2:#AEB9CC; --muted:#7B8699;
+    --brand:#4E8BEE; --brand-2:#6BA1F1; --brand-soft:#172A47;
+    --accent:#2BC0AC; --accent-soft:#10302C;
+    --warn:#E6A24A; --warn-soft:#2E2415;
+    --danger:#EC6A6A; --danger-soft:#321A1A;
+    --success:#34B873; --success-soft:#13301F;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+    --shadow-lg:0 10px 34px rgba(0,0,0,.5);
+  }
+  @keyframes fadeInUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+  @keyframes popIn{from{opacity:0;transform:translateY(-8px) scale(.97);}to{opacity:1;transform:none;}}
+  ::-webkit-scrollbar{width:10px;height:10px;}
+  ::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:8px;}
+  ::-webkit-scrollbar-thumb:hover{background:var(--muted);}
+  ::-webkit-scrollbar-track{background:transparent;}
+  input::placeholder{color:var(--muted);}
+  [data-role="backdrop"]{display:none;}
+  @media (max-width:900px){
+    [data-role="sidebar"]{position:fixed!important;z-index:80;height:100vh;top:0;left:0;width:264px!important;transform:translateX(-100%);transition:transform .3s cubic-bezier(.2,.7,.2,1);box-shadow:var(--shadow-lg);}
+    [data-role="sidebar"][data-mobile-open="1"]{transform:translateX(0);}
+    [data-role="backdrop"][data-open="1"]{display:block!important;}
+    [data-role="search"]{display:none!important;}
+  }
+  @media (max-width:560px){
+    [data-role="page-sub"]{display:none!important;}
+  }
+</style>
+</helmet>
+
+<div data-theme="{{ theme }}" style="display:flex;height:100vh;width:100%;overflow:hidden;background:var(--bg);color:var(--text);">
+
+  <aside data-role="sidebar" data-mobile-open="{{ mobileOpenAttr }}" style="width:{{ sidebarWidth }};flex-shrink:0;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;transition:width .26s cubic-bezier(.2,.7,.2,1);overflow:hidden;">
+    <div style="height:64px;flex-shrink:0;display:flex;align-items:center;gap:12px;padding:0 18px;border-bottom:1px solid var(--border);">
+      <div style="width:34px;height:34px;flex-shrink:0;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:flex;align-items:center;justify-content:center;color:#fff;font-size:17px;box-shadow:0 4px 12px rgba(30,91,198,.35);"><i class="bi bi-hexagon-fill"></i></div>
+      <sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}">
+        <div style="overflow:hidden;white-space:nowrap;">
+          <div style="font-size:17px;font-weight:800;letter-spacing:.02em;color:var(--text);line-height:1;">ÁGORA</div>
+          <div style="font-size:10px;font-family:'IBM Plex Mono',monospace;letter-spacing:.06em;color:var(--muted);margin-top:3px;">INTRANET DEL SERVICIO</div>
+        </div>
+      </sc-if>
+    </div>
+
+    <nav style="flex:1;overflow-y:auto;overflow-x:hidden;padding:14px 12px;display:flex;flex-direction:column;gap:6px;">
+      <sc-for list="{{ navGroups }}" as="group" hint-placeholder-count="3">
+        <div style="margin-bottom:8px;">
+          <sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:6px 12px 8px;">{{ group.label }}</div>
+          </sc-if>
+          <div style="display:flex;flex-direction:column;gap:3px;">
+            <sc-for list="{{ group.items }}" as="item" hint-placeholder-count="3">
+              <button onClick="{{ item.onClick }}" title="{{ item.label }}" style="position:relative;display:flex;align-items:center;gap:13px;width:100%;border:none;cursor:pointer;padding:10px 12px;border-radius:11px;font-family:inherit;font-size:14px;font-weight:600;background:{{ item.bg }};color:{{ item.fg }};transition:background .18s,color .18s;" style-hover="background:var(--surface-3);color:var(--text);">
+                <span style="position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:18px;border-radius:0 4px 4px 0;background:var(--brand);opacity:{{ item.ind }};transition:opacity .2s;"></span>
+                <i class="bi {{ item.icon }}" style="font-size:18px;flex-shrink:0;width:20px;text-align:center;"></i>
+                <sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}">
+                  <span style="flex:1;text-align:left;white-space:nowrap;overflow:hidden;">{{ item.label }}</span>
+                </sc-if>
+                <sc-if value="{{ item.showBadge }}" hint-placeholder-val="{{ false }}">
+                  <span style="flex-shrink:0;min-width:19px;height:19px;padding:0 5px;border-radius:10px;background:var(--brand);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;">{{ item.badge }}</span>
+                </sc-if>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </nav>
+
+    <div style="flex-shrink:0;padding:12px;border-top:1px solid var(--border);">
+      <div style="display:flex;align-items:center;gap:11px;padding:8px 10px;border-radius:12px;background:var(--surface-2);">
+        <div style="width:36px;height:36px;flex-shrink:0;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">MR</div>
+        <sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}">
+          <div style="overflow:hidden;flex:1;">
+            <div style="font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">María F. Rivas</div>
+            <div style="font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Coordinadora Op.</div>
+          </div>
+          <i class="bi bi-gear" style="font-size:15px;color:var(--muted);cursor:pointer;"></i>
+        </sc-if>
+      </div>
+    </div>
+  </aside>
+
+  <div style="flex:1;display:flex;flex-direction:column;min-width:0;">
+    <header style="height:64px;flex-shrink:0;display:flex;align-items:center;gap:14px;padding:0 clamp(14px,2.5vw,26px);background:var(--surface);border-bottom:1px solid var(--border);position:relative;z-index:40;">
+      <button onClick="{{ toggleCollapse }}" style="width:38px;height:38px;flex-shrink:0;border:1px solid var(--border);background:var(--surface);border-radius:10px;cursor:pointer;color:var(--text-2);display:flex;align-items:center;justify-content:center;font-size:17px;transition:background .18s;" style-hover="background:var(--surface-3);">
+        <i class="bi bi-list"></i>
+      </button>
+      <div style="min-width:0;">
+        <h1 style="margin:0;font-size:clamp(15px,2vw,19px);font-weight:800;color:var(--text);letter-spacing:-.01em;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ pageTitle }}</h1>
+        <div data-role="page-sub" style="font-size:12px;color:var(--muted);margin-top:2px;white-space:nowrap;">{{ pageSub }}</div>
+      </div>
+
+      <div data-role="search" style="flex:1;max-width:430px;margin:0 auto;position:relative;">
+        <i class="bi bi-search" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:14px;"></i>
+        <input placeholder="Buscar personas, documentos, trámites…" style="width:100%;height:42px;border:1px solid var(--border);background:var(--surface-2);border-radius:12px;padding:0 14px 0 38px;font-family:inherit;font-size:13.5px;color:var(--text);outline:none;transition:border .18s,background .18s;" style-focus="border-color:var(--brand);background:var(--surface);" />
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0;">
+        <button onClick="{{ toggleTheme }}" title="Cambiar tema" style="width:40px;height:40px;border:1px solid var(--border);background:var(--surface);border-radius:11px;cursor:pointer;color:var(--text-2);display:flex;align-items:center;justify-content:center;font-size:16px;transition:background .18s,color .18s;" style-hover="background:var(--surface-3);color:var(--text);">
+          <i class="bi {{ themeIcon }}"></i>
+        </button>
+        <div style="position:relative;">
+          <button onClick="{{ toggleNotif }}" style="width:40px;height:40px;border:1px solid var(--border);background:var(--surface);border-radius:11px;cursor:pointer;color:var(--text-2);display:flex;align-items:center;justify-content:center;font-size:16px;position:relative;transition:background .18s,color .18s;" style-hover="background:var(--surface-3);color:var(--text);">
+            <i class="bi bi-bell"></i>
+            <span style="position:absolute;top:8px;right:9px;width:7px;height:7px;border-radius:50%;background:var(--danger);border:1.5px solid var(--surface);"></span>
+          </button>
+          <sc-if value="{{ notifOpen }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;top:50px;right:0;width:330px;background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden;animation:popIn .18s ease;z-index:50;">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--border);">
+                <span style="font-weight:700;font-size:14px;color:var(--text);">Notificaciones</span>
+                <span style="font-size:11px;font-weight:600;color:var(--brand);cursor:pointer;">Marcar leídas</span>
+              </div>
+              <div style="max-height:330px;overflow-y:auto;">
+                <sc-for list="{{ notifs }}" as="nf" hint-placeholder-count="4">
+                  <div style="display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;" style-hover="background:var(--surface-2);">
+                    <div style="width:34px;height:34px;flex-shrink:0;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;background:{{ nf.tintBg }};color:{{ nf.tint }};"><i class="bi {{ nf.icon }}"></i></div>
+                    <div style="min-width:0;">
+                      <div style="font-size:13px;color:var(--text);line-height:1.35;">{{ nf.text }}</div>
+                      <div style="font-size:11px;color:var(--muted);margin-top:3px;">{{ nf.time }}</div>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+        <div style="width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;cursor:pointer;">MR</div>
+      </div>
+    </header>
+
+    <main data-role="main" style="flex:1;overflow-y:auto;background:var(--bg);">
+      <div style="padding:clamp(16px,2.4vw,30px);max-width:1440px;margin:0 auto;">
+
+        <!-- ============ INICIO ============ -->
+        <sc-if value="{{ isInicio }}" hint-placeholder-val="{{ true }}">
+          <div style="animation:fadeInUp .45s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;gap:22px;">
+
+            <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;background:linear-gradient(120deg,var(--brand),var(--brand-2));border-radius:20px;padding:clamp(20px,3vw,30px);color:#fff;box-shadow:0 12px 30px rgba(30,91,198,.28);position:relative;overflow:hidden;">
+              <div style="position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.08);"></div>
+              <div style="position:absolute;right:60px;bottom:-70px;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.06);"></div>
+              <div style="position:relative;">
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;opacity:.85;">{{ today }}</div>
+                <h2 style="margin:10px 0 6px;font-size:clamp(22px,3.4vw,30px);font-weight:800;letter-spacing:-.02em;">{{ greeting }}, María Fernanda 👋</h2>
+                <p style="margin:0;opacity:.9;font-size:14.5px;max-width:520px;line-height:1.5;">Tienes <strong>12 tareas</strong> activas y <strong>2 solicitudes</strong> esperando tu aprobación hoy.</p>
+              </div>
+              <button onClick="{{ goSolicitudes }}" style="position:relative;display:inline-flex;align-items:center;gap:9px;background:#fff;color:var(--brand);border:none;border-radius:12px;padding:12px 20px;font-family:inherit;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.16);transition:transform .18s;" style-hover="transform:translateY(-2px);">
+                <i class="bi bi-plus-lg"></i>Nueva solicitud
+              </button>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;">
+              <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+                <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:18px 20px;display:flex;flex-direction:column;gap:16px;transition:transform .2s,box-shadow .2s;" style-hover="transform:translateY(-3px);box-shadow:var(--shadow-lg);">
+                  <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <div style="width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:21px;background:{{ k.tintBg }};color:{{ k.tint }};"><i class="bi {{ k.icon }}"></i></div>
+                    <span style="display:inline-flex;align-items:center;gap:3px;font-size:12px;font-weight:700;color:{{ k.deltaColor }};background:{{ k.deltaBg }};padding:4px 9px;border-radius:20px;"><i class="bi {{ k.deltaIcon }}" style="font-size:10px;"></i>{{ k.delta }}</span>
+                  </div>
+                  <div>
+                    <div style="font-size:31px;font-weight:800;color:var(--text);line-height:1;letter-spacing:-.02em;">{{ k.value }}</div>
+                    <div style="font-size:13px;color:var(--muted);margin-top:7px;">{{ k.label }}</div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;">
+              <div style="flex:2 1 380px;min-width:0;display:flex;flex-direction:column;gap:20px;">
+
+                <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:20px 22px;">
+                  <h3 style="margin:0 0 16px;font-size:16px;font-weight:700;color:var(--text);">Accesos rápidos</h3>
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(124px,1fr));gap:12px;">
+                    <sc-for list="{{ quickActions }}" as="q" hint-placeholder-count="6">
+                      <button onClick="{{ q.onClick }}" style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px 10px;border:1px solid var(--border);background:var(--surface-2);border-radius:14px;cursor:pointer;font-family:inherit;transition:transform .18s,border-color .18s,background .18s;" style-hover="transform:translateY(-3px);border-color:var(--brand);background:var(--surface);">
+                        <div style="width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:20px;background:{{ q.tintBg }};color:{{ q.tint }};"><i class="bi {{ q.icon }}"></i></div>
+                        <span style="font-size:12.5px;font-weight:600;color:var(--text);text-align:center;line-height:1.25;">{{ q.label }}</span>
+                      </button>
+                    </sc-for>
+                  </div>
+                </div>
+
+                <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:20px 22px;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                    <h3 style="margin:0;font-size:16px;font-weight:700;color:var(--text);">Documentos recientes</h3>
+                    <button onClick="{{ goDocumentos }}" style="background:none;border:none;color:var(--brand);font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;">Ver todo</button>
+                  </div>
+                  <div style="display:flex;flex-direction:column;">
+                    <sc-for list="{{ recentDocs }}" as="d" hint-placeholder-count="5">
+                      <div style="display:flex;align-items:center;gap:14px;padding:11px 8px;border-radius:10px;cursor:pointer;transition:background .15s;" style-hover="background:var(--surface-2);">
+                        <div style="width:38px;height:38px;flex-shrink:0;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;background:{{ d.tintBg }};color:{{ d.tint }};"><i class="bi {{ d.icon }}"></i></div>
+                        <div style="flex:1;min-width:0;">
+                          <div style="font-size:13.5px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ d.name }}</div>
+                          <div style="font-size:12px;color:var(--muted);margin-top:2px;">{{ d.meta }}</div>
+                        </div>
+                        <span style="font-size:12px;color:var(--muted);font-family:'IBM Plex Mono',monospace;white-space:nowrap;">{{ d.time }}</span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+
+              </div>
+
+              <div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:20px;">
+
+                <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:20px 22px;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+                    <h3 style="margin:0;font-size:16px;font-weight:700;color:var(--text);">Próximos eventos</h3>
+                    <button onClick="{{ goCalendario }}" style="background:none;border:none;color:var(--brand);font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;">Agenda</button>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:12px;">
+                    <sc-for list="{{ homeEvents }}" as="e" hint-placeholder-count="3">
+                      <div style="display:flex;gap:13px;align-items:center;">
+                        <div style="width:48px;height:52px;flex-shrink:0;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:{{ e.tintBg }};color:{{ e.tint }};">
+                          <span style="font-size:18px;font-weight:800;line-height:1;">{{ e.day }}</span>
+                          <span style="font-size:10px;font-weight:600;text-transform:uppercase;margin-top:2px;">{{ e.month }}</span>
+                        </div>
+                        <div style="min-width:0;">
+                          <div style="font-size:13.5px;font-weight:600;color:var(--text);line-height:1.3;">{{ e.title }}</div>
+                          <div style="font-size:12px;color:var(--muted);margin-top:3px;display:flex;align-items:center;gap:5px;"><i class="bi bi-clock" style="font-size:11px;"></i>{{ e.time }} · {{ e.place }}</div>
+                        </div>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+
+                <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:20px 22px;">
+                  <h3 style="margin:0 0 14px;font-size:16px;font-weight:700;color:var(--text);">Mis tareas de hoy</h3>
+                  <div style="display:flex;flex-direction:column;gap:11px;">
+                    <sc-for list="{{ miniTasks }}" as="t" hint-placeholder-count="4">
+                      <div style="display:flex;align-items:center;gap:11px;">
+                        <span style="width:19px;height:19px;flex-shrink:0;border-radius:6px;border:2px solid {{ t.boxBorder }};background:{{ t.boxBg }};color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;"><i class="bi {{ t.check }}"></i></span>
+                        <span style="flex:1;font-size:13.5px;color:{{ t.textColor }};text-decoration:{{ t.deco }};">{{ t.label }}</span>
+                        <span style="font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:6px;background:{{ t.prioBg }};color:{{ t.prioColor }};">{{ t.prio }}</span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+
+                <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:20px 22px;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+                    <h3 style="margin:0;font-size:16px;font-weight:700;color:var(--text);">Equipo en línea</h3>
+                    <span style="font-size:12px;color:var(--success);font-weight:600;display:flex;align-items:center;gap:5px;"><span style="width:7px;height:7px;border-radius:50%;background:var(--success);"></span>6 activos</span>
+                  </div>
+                  <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <sc-for list="{{ onlineTeam }}" as="p" hint-placeholder-count="6">
+                      <div title="{{ p.name }}" style="width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff;background:{{ p.color }};position:relative;cursor:pointer;">
+                        {{ p.initials }}
+                        <span style="position:absolute;bottom:0;right:0;width:11px;height:11px;border-radius:50%;background:var(--success);border:2px solid var(--surface);"></span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- ============ NOTICIAS ============ -->
+        <sc-if value="{{ isNoticias }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:fadeInUp .45s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;gap:20px;">
+            <div style="display:flex;flex-wrap:wrap;gap:10px;">
+              <sc-for list="{{ newsCats }}" as="cat" hint-placeholder-count="5">
+                <button style="padding:8px 16px;border-radius:20px;border:1px solid {{ cat.border }};background:{{ cat.bg }};color:{{ cat.fg }};font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:all .18s;" style-hover="border-color:var(--brand);">{{ cat.label }}</button>
+              </sc-for>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:stretch;">
+              <div style="flex:2 1 420px;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;">
+                <div style="height:230px;background:repeating-linear-gradient(135deg,var(--surface-3),var(--surface-3) 14px,var(--surface-2) 14px,var(--surface-2) 28px);position:relative;display:flex;align-items:center;justify-content:center;">
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);background:var(--surface);padding:5px 12px;border-radius:8px;border:1px solid var(--border);">imagen destacada</span>
+                  <span style="position:absolute;top:16px;left:16px;background:var(--brand);color:#fff;font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;">Institucional</span>
+                </div>
+                <div style="padding:22px 24px;flex:1;">
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-bottom:10px;">22 JUN 2026 · Dirección Nacional</div>
+                  <h2 style="margin:0 0 10px;font-size:22px;font-weight:800;color:var(--text);letter-spacing:-.01em;line-height:1.2;">El Servicio lanza la nueva plataforma de atención ciudadana digital</h2>
+                  <p style="margin:0;color:var(--text-2);font-size:14.5px;line-height:1.6;">A partir del próximo mes, todas las unidades regionales contarán con el sistema unificado de gestión de trámites, reduciendo los tiempos de respuesta en un 40%.</p>
+                </div>
+              </div>
+
+              <div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:16px;">
+                <sc-for list="{{ newsItems }}" as="n" hint-placeholder-count="3">
+                  <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:16px 18px;cursor:pointer;transition:transform .18s,box-shadow .18s;" style-hover="transform:translateY(-3px);box-shadow:var(--shadow-lg);">
+                    <span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:14px;background:{{ n.tintBg }};color:{{ n.tint }};margin-bottom:10px;">{{ n.cat }}</span>
+                    <h4 style="margin:0 0 6px;font-size:15px;font-weight:700;color:var(--text);line-height:1.3;">{{ n.title }}</h4>
+                    <p style="margin:0 0 10px;font-size:13px;color:var(--text-2);line-height:1.5;">{{ n.excerpt }}</p>
+                    <div style="font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;"><i class="bi bi-calendar3" style="font-size:11px;"></i>{{ n.date }} · {{ n.author }}</div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- ============ CALENDARIO ============ -->
+        <sc-if value="{{ isCalendario }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:fadeInUp .45s cubic-bezier(.2,.7,.2,1);display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;">
+            <div style="flex:2 1 460px;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px 24px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+                <div style="display:flex;align-items:center;gap:14px;">
+                  <h2 style="margin:0;font-size:20px;font-weight:800;color:var(--text);">Junio 2026</h2>
+                  <div style="display:flex;gap:6px;">
+                    <button style="width:32px;height:32px;border:1px solid var(--border);background:var(--surface);border-radius:9px;cursor:pointer;color:var(--text-2);display:flex;align-items:center;justify-content:center;" style-hover="background:var(--surface-3);"><i class="bi bi-chevron-left"></i></button>
+                    <button style="width:32px;height:32px;border:1px solid var(--border);background:var(--surface);border-radius:9px;cursor:pointer;color:var(--text-2);display:flex;align-items:center;justify-content:center;" style-hover="background:var(--surface-3);"><i class="bi bi-chevron-right"></i></button>
+                  </div>
+                </div>
+                <button style="display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fff;border:none;border-radius:10px;padding:9px 16px;font-family:inherit;font-weight:600;font-size:13px;cursor:pointer;" style-hover="background:var(--brand-2);"><i class="bi bi-plus-lg"></i>Evento</button>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:8px;">
+                <sc-for list="{{ calWeekdays }}" as="w" hint-placeholder-count="7">
+                  <div style="text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:var(--muted);padding:6px 0;">{{ w }}</div>
+                </sc-for>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;">
+                <sc-for list="{{ calCells }}" as="c" hint-placeholder-count="30">
+                  <div style="aspect-ratio:1;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;background:{{ c.bg }};color:{{ c.fg }};border:1px solid {{ c.border }};transition:background .15s;position:relative;" style-hover="background:var(--surface-3);">
+                    <span style="font-size:14px;font-weight:{{ c.weight }};">{{ c.day }}</span>
+                    <span style="width:5px;height:5px;border-radius:50%;background:{{ c.dot }};"></span>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+
+            <div style="flex:1 1 280px;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px 24px;">
+              <h3 style="margin:0 0 4px;font-size:16px;font-weight:700;color:var(--text);">Agenda</h3>
+              <p style="margin:0 0 18px;font-size:12.5px;color:var(--muted);">Miércoles 24 de junio</p>
+              <div style="display:flex;flex-direction:column;gap:4px;">
+                <sc-for list="{{ agendaEvents }}" as="e" hint-placeholder-count="4">
+                  <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--border);">
+                    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:var(--muted);width:46px;flex-shrink:0;padding-top:1px;">{{ e.time }}</div>
+                    <div style="flex:1;min-width:0;border-left:3px solid {{ e.color }};padding-left:12px;">
+                      <div style="font-size:13.5px;font-weight:600;color:var(--text);line-height:1.3;">{{ e.title }}</div>
+                      <div style="font-size:12px;color:var(--muted);margin-top:3px;">{{ e.place }}</div>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- ============ TAREAS ============ -->
+        <sc-if value="{{ isTareas }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:fadeInUp .45s cubic-bezier(.2,.7,.2,1);">
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:20px;">
+              <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <span style="display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:10px;background:var(--surface);border:1px solid var(--border);font-size:13px;font-weight:600;color:var(--text);"><i class="bi bi-kanban" style="color:var(--brand);"></i>Plan Operativo 2026</span>
+                <span style="display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:10px;background:var(--surface-2);border:1px solid var(--border);font-size:13px;color:var(--muted);">Modernización TI</span>
+              </div>
+              <button style="display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fff;border:none;border-radius:10px;padding:9px 16px;font-family:inherit;font-weight:600;font-size:13px;cursor:pointer;" style-hover="background:var(--brand-2);"><i class="bi bi-plus-lg"></i>Nueva tarea</button>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:16px;align-items:start;">
+              <sc-for list="{{ kanban }}" as="col" hint-placeholder-count="4">
+                <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:12px;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:2px 4px;">
+                    <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--text);"><span style="width:9px;height:9px;border-radius:50%;background:{{ col.accent }};"></span>{{ col.title }}<span style="color:var(--muted);font-weight:600;">{{ col.count }}</span></div>
+                    <i class="bi bi-plus" style="color:var(--muted);cursor:pointer;font-size:16px;"></i>
+                  </div>
+                  <sc-for list="{{ col.cards }}" as="card" hint-placeholder-count="2">
+                    <div style="background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:14px;box-shadow:var(--shadow);cursor:grab;transition:transform .15s,box-shadow .15s;" style-hover="transform:translateY(-2px);box-shadow:var(--shadow-lg);">
+                      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+                        <sc-for list="{{ card.tags }}" as="tag" hint-placeholder-count="2">
+                          <span style="font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:7px;background:{{ tag.bg }};color:{{ tag.fg }};">{{ tag.label }}</span>
+                        </sc-for>
+                      </div>
+                      <div style="font-size:13.5px;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:12px;">{{ card.title }}</div>
+                      <div style="height:6px;border-radius:4px;background:var(--surface-3);overflow:hidden;margin-bottom:12px;"><div style="height:100%;width:{{ card.progress }};background:{{ card.accent }};border-radius:4px;"></div></div>
+                      <div style="display:flex;align-items:center;justify-content:space-between;">
+                        <div style="width:28px;height:28px;border-radius:50%;background:{{ card.aColor }};color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;">{{ card.assignee }}</div>
+                        <span style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;color:var(--muted);"><i class="bi bi-clock"></i>{{ card.due }}</span>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- ============ DOCUMENTOS ============ -->
+        <sc-if value="{{ isDocumentos }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:fadeInUp .45s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;gap:20px;">
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;">
+              <div style="font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;font-weight:600;"><i class="bi bi-house-door"></i>Inicio<i class="bi bi-chevron-right" style="font-size:10px;"></i><span style="color:var(--text);">Documentos</span></div>
+              <div style="display:flex;gap:8px;align-items:center;">
+                <div style="display:flex;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:3px;">
+                  <button onClick="{{ setGrid }}" style="width:34px;height:30px;border:none;border-radius:7px;cursor:pointer;background:{{ gridBtnBg }};color:{{ gridBtnFg }};display:flex;align-items:center;justify-content:center;"><i class="bi bi-grid-3x3-gap-fill"></i></button>
+                  <button onClick="{{ setList }}" style="width:34px;height:30px;border:none;border-radius:7px;cursor:pointer;background:{{ listBtnBg }};color:{{ listBtnFg }};display:flex;align-items:center;justify-content:center;"><i class="bi bi-list-ul"></i></button>
+                </div>
+                <button style="display:inline-flex;align-items:center;gap:7px;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:9px 14px;font-family:inherit;font-weight:600;font-size:13px;cursor:pointer;" style-hover="background:var(--surface-3);"><i class="bi bi-folder-plus"></i>Carpeta</button>
+                <button style="display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fff;border:none;border-radius:10px;padding:9px 16px;font-family:inherit;font-weight:600;font-size:13px;cursor:pointer;" style-hover="background:var(--brand-2);"><i class="bi bi-upload"></i>Subir</button>
+              </div>
+            </div>
+
+            <div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Carpetas</div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;">
+                <sc-for list="{{ docFolders }}" as="f" hint-placeholder-count="4">
+                  <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:16px 18px;display:flex;align-items:center;gap:13px;cursor:pointer;transition:transform .18s,border-color .18s;" style-hover="transform:translateY(-3px);border-color:var(--brand);">
+                    <i class="bi bi-folder-fill" style="font-size:30px;color:{{ f.color }};"></i>
+                    <div style="min-width:0;">
+                      <div style="font-size:14px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ f.name }}</div>
+                      <div style="font-size:12px;color:var(--muted);margin-top:2px;">{{ f.count }} archivos</div>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+
+            <div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Archivos</div>
+              <sc-if value="{{ isGridView }}" hint-placeholder-val="{{ true }}">
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;">
+                  <sc-for list="{{ docFiles }}" as="file" hint-placeholder-count="6">
+                    <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;cursor:pointer;transition:transform .18s,box-shadow .18s;" style-hover="transform:translateY(-3px);box-shadow:var(--shadow-lg);">
+                      <div style="height:100px;background:{{ file.tintBg }};display:flex;align-items:center;justify-content:center;"><i class="bi {{ file.icon }}" style="font-size:34px;color:{{ file.tint }};"></i></div>
+                      <div style="padding:13px 14px;">
+                        <div style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ file.name }}</div>
+                        <div style="font-size:11.5px;color:var(--muted);margin-top:4px;">{{ file.size }} · {{ file.modified }}</div>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-if>
+              <sc-if value="{{ isListView }}" hint-placeholder-val="{{ false }}">
+                <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;">
+                  <sc-for list="{{ docFiles }}" as="file" hint-placeholder-count="6">
+                    <div style="display:flex;align-items:center;gap:14px;padding:13px 18px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;" style-hover="background:var(--surface-2);">
+                      <i class="bi {{ file.icon }}" style="font-size:21px;color:{{ file.tint }};width:26px;text-align:center;"></i>
+                      <div style="flex:1;min-width:0;font-size:13.5px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ file.name }}</div>
+                      <div style="width:70px;font-size:12px;color:var(--muted);text-align:right;">{{ file.size }}</div>
+                      <div style="width:110px;font-size:12px;color:var(--muted);text-align:right;display:flex;align-items:center;gap:7px;justify-content:flex-end;"><span style="width:24px;height:24px;border-radius:50%;background:{{ file.ownerColor }};color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;">{{ file.owner }}</span>{{ file.modified }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- ============ SOLICITUDES RRHH ============ -->
+        <sc-if value="{{ isSolicitudes }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:fadeInUp .45s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;gap:24px;">
+            <div>
+              <h3 style="margin:0 0 14px;font-size:16px;font-weight:700;color:var(--text);">Crear nueva solicitud</h3>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;">
+                <sc-for list="{{ reqTypes }}" as="r" hint-placeholder-count="5">
+                  <button style="background:var(--surface);border:1px solid var(--border);border-radius:15px;box-shadow:var(--shadow);padding:20px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:14px;cursor:pointer;font-family:inherit;transition:transform .18s,border-color .18s;" style-hover="transform:translateY(-3px);border-color:var(--brand);">
+                    <div style="width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:21px;background:{{ r.tintBg }};color:{{ r.tint }};"><i class="bi {{ r.icon }}"></i></div>
+                    <div style="text-align:left;">
+                      <div style="font-size:14px;font-weight:700;color:var(--text);">{{ r.label }}</div>
+                      <div style="font-size:11.5px;color:var(--muted);margin-top:3px;">{{ r.sub }}</div>
+                    </div>
+                  </button>
+                </sc-for>
+              </div>
+            </div>
+
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid var(--border);">
+                <h3 style="margin:0;font-size:16px;font-weight:700;color:var(--text);">Mis solicitudes</h3>
+                <span style="font-size:12px;color:var(--muted);">5 registros</span>
+              </div>
+              <sc-for list="{{ reqList }}" as="rq" hint-placeholder-count="5">
+                <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:16px 22px;border-bottom:1px solid var(--border);transition:background .15s;" style-hover="background:var(--surface-2);">
+                  <div style="width:42px;height:42px;flex-shrink:0;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;background:{{ rq.tintBg }};color:{{ rq.tint }};"><i class="bi {{ rq.icon }}"></i></div>
+                  <div style="flex:1 1 180px;min-width:0;">
+                    <div style="font-size:14px;font-weight:700;color:var(--text);">{{ rq.type }}</div>
+                    <div style="font-size:12.5px;color:var(--muted);margin-top:2px;">{{ rq.range }} · {{ rq.id }}</div>
+                  </div>
+                  <div style="flex:1 1 140px;min-width:120px;">
+                    <div style="display:flex;gap:4px;margin-bottom:6px;">
+                      <sc-for list="{{ rq.stepsArr }}" as="st" hint-placeholder-count="3">
+                        <div style="flex:1;height:5px;border-radius:3px;background:{{ st.color }};"></div>
+                      </sc-for>
+                    </div>
+                    <div style="font-size:11px;color:var(--muted);">{{ rq.stage }}</div>
+                  </div>
+                  <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:6px 13px;border-radius:20px;background:{{ rq.statusBg }};color:{{ rq.statusColor }};"><i class="bi {{ rq.statusIcon }}" style="font-size:11px;"></i>{{ rq.status }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- ============ DIRECTORIO ============ -->
+        <sc-if value="{{ isDirectorio }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:fadeInUp .45s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;gap:18px;">
+            <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;">
+              <div style="position:relative;flex:1 1 280px;max-width:380px;">
+                <i class="bi bi-search" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:14px;"></i>
+                <input value="{{ dirQuery }}" onInput="{{ setDir }}" placeholder="Buscar por nombre o cargo…" style="width:100%;height:44px;border:1px solid var(--border);background:var(--surface);border-radius:12px;padding:0 14px 0 38px;font-family:inherit;font-size:14px;color:var(--text);outline:none;transition:border .18s;" style-focus="border-color:var(--brand);" />
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <sc-for list="{{ deptChips }}" as="dp" hint-placeholder-count="5">
+                  <button onClick="{{ dp.onClick }}" style="padding:8px 15px;border-radius:20px;border:1px solid {{ dp.border }};background:{{ dp.bg }};color:{{ dp.fg }};font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;">{{ dp.label }}</button>
+                </sc-for>
+              </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:16px;">
+              <sc-for list="{{ filteredPeople }}" as="p" hint-placeholder-count="6">
+                <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;transition:transform .18s,box-shadow .18s;" style-hover="transform:translateY(-4px);box-shadow:var(--shadow-lg);">
+                  <div style="width:62px;height:62px;border-radius:50%;background:{{ p.color }};color:#fff;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:700;">{{ p.initials }}</div>
+                  <div>
+                    <div style="font-size:15px;font-weight:700;color:var(--text);">{{ p.name }}</div>
+                    <div style="font-size:12.5px;color:var(--text-2);margin-top:3px;">{{ p.role }}</div>
+                    <span style="display:inline-block;margin-top:9px;font-size:11px;font-weight:600;padding:3px 11px;border-radius:14px;background:var(--surface-3);color:var(--text-2);">{{ p.dept }}</span>
+                  </div>
+                  <div style="display:flex;gap:8px;margin-top:2px;">
+                    <span style="width:34px;height:34px;border-radius:10px;background:var(--surface-2);color:var(--brand);display:flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--border);" style-hover="background:var(--brand-soft);"><i class="bi bi-envelope"></i></span>
+                    <span style="width:34px;height:34px;border-radius:10px;background:var(--surface-2);color:var(--accent);display:flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--border);" style-hover="background:var(--accent-soft);"><i class="bi bi-telephone"></i></span>
+                    <span style="width:34px;height:34px;border-radius:10px;background:var(--surface-2);color:var(--text-2);display:flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--border);" style-hover="background:var(--surface-3);"><i class="bi bi-chat-dots"></i></span>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+            <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+              <div style="text-align:center;padding:50px 20px;color:var(--muted);"><i class="bi bi-person-x" style="font-size:38px;display:block;margin-bottom:12px;"></i>No se encontraron personas para "{{ dirQuery }}"</div>
+            </sc-if>
+          </div>
+        </sc-if>
+
+        <!-- ============ REPORTES / INDICADORES ============ -->
+        <sc-if value="{{ isReportes }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:fadeInUp .45s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;gap:20px;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+              <sc-for list="{{ repKpis }}" as="k" hint-placeholder-count="4">
+                <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:18px 20px;">
+                  <div style="font-size:12.5px;color:var(--muted);margin-bottom:10px;">{{ k.label }}</div>
+                  <div style="display:flex;align-items:flex-end;gap:8px;"><span style="font-size:28px;font-weight:800;color:var(--text);letter-spacing:-.02em;">{{ k.value }}</span><span style="font-size:12px;font-weight:700;color:{{ k.deltaColor }};margin-bottom:5px;">{{ k.delta }}</span></div>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:stretch;">
+              <div style="flex:2 1 420px;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px 24px;">
+                <h3 style="margin:0 0 4px;font-size:16px;font-weight:700;color:var(--text);">Solicitudes gestionadas</h3>
+                <p style="margin:0 0 24px;font-size:12.5px;color:var(--muted);">Últimos 6 meses</p>
+                <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:14px;height:200px;">
+                  <sc-for list="{{ repBars }}" as="b" hint-placeholder-count="6">
+                    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;height:100%;justify-content:flex-end;">
+                      <span style="font-size:12px;font-weight:700;color:var(--text);">{{ b.val }}</span>
+                      <div style="width:100%;max-width:46px;height:{{ b.h }};background:linear-gradient(180deg,var(--brand),var(--brand-2));border-radius:8px 8px 0 0;transition:height .4s;"></div>
+                      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);">{{ b.label }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+
+              <div style="flex:1 1 280px;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px 24px;display:flex;flex-direction:column;">
+                <h3 style="margin:0 0 20px;font-size:16px;font-weight:700;color:var(--text);">Distribución por área</h3>
+                <div style="display:flex;align-items:center;justify-content:center;margin-bottom:22px;">
+                  <div style="width:150px;height:150px;border-radius:50%;background:conic-gradient(var(--brand) 0 42%,var(--accent) 42% 68%,var(--warn) 68% 86%,var(--border-2) 86% 100%);display:flex;align-items:center;justify-content:center;">
+                    <div style="width:92px;height:92px;border-radius:50%;background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-size:22px;font-weight:800;color:var(--text);">1.2k</span><span style="font-size:10.5px;color:var(--muted);">total</span></div>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:10px;">
+                  <sc-for list="{{ donutLegend }}" as="lg" hint-placeholder-count="4">
+                    <div style="display:flex;align-items:center;gap:10px;">
+                      <span style="width:11px;height:11px;border-radius:3px;background:{{ lg.color }};flex-shrink:0;"></span>
+                      <span style="flex:1;font-size:13px;color:var(--text-2);">{{ lg.label }}</span>
+                      <span style="font-size:13px;font-weight:700;color:var(--text);">{{ lg.pct }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px 24px;">
+              <h3 style="margin:0 0 18px;font-size:16px;font-weight:700;color:var(--text);">Cumplimiento por unidad</h3>
+              <div style="display:flex;flex-direction:column;gap:16px;">
+                <sc-for list="{{ repUnits }}" as="u" hint-placeholder-count="4">
+                  <div>
+                    <div style="display:flex;justify-content:space-between;margin-bottom:7px;"><span style="font-size:13.5px;font-weight:600;color:var(--text);">{{ u.name }}</span><span style="font-size:13px;font-weight:700;color:{{ u.color }};">{{ u.pct }}</span></div>
+                    <div style="height:9px;border-radius:5px;background:var(--surface-3);overflow:hidden;"><div style="height:100%;width:{{ u.pct }};background:{{ u.color }};border-radius:5px;transition:width .5s;"></div></div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+      </div>
+    </main>
+  </div>
+
+  <div data-role="backdrop" data-open="{{ mobileOpenAttr }}" onClick="{{ closeMobile }}" style="position:fixed;inset:0;background:rgba(8,12,22,.45);z-index:70;animation:fadeIn .2s ease;"></div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;}}">
+class Component extends DCLogic {
+  state = { active:'inicio', collapsed:false, theme:'light', dirQuery:'', activeDept:'Todos', docView:'grid', notifOpen:false, mobileOpen:false };
+
+  nav(id){ this.setState({ active:id, mobileOpen:false, notifOpen:false }); const m=document.querySelector('[data-role="main"]'); if(m) m.scrollTop=0; }
+  toggleCollapse(){ if(window.innerWidth<=900){ this.setState(s=>({mobileOpen:!s.mobileOpen})); } else { this.setState(s=>({collapsed:!s.collapsed})); } }
+  toggleTheme(){ this.setState(s=>({theme:s.theme==='light'?'dark':'light'})); }
+  toggleNotif(){ this.setState(s=>({notifOpen:!s.notifOpen})); }
+  closeMobile(){ this.setState({mobileOpen:false}); }
+  setDir(e){ this.setState({dirQuery:e.target.value}); }
+  setDept(d){ this.setState({activeDept:d}); }
+  setDocView(v){ this.setState({docView:v}); }
+
+  initials(n){ return n.split(' ').slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
+
+  renderVals(){
+    const A = this.state.active;
+    const dark = this.state.theme==='dark';
+    const showLabels = !this.state.collapsed;
+
+    const navDef = [
+      { label:'Principal', items:[
+        {id:'inicio', icon:'bi-grid-1x2-fill', label:'Inicio'},
+        {id:'noticias', icon:'bi-megaphone-fill', label:'Noticias', badge:3},
+        {id:'calendario', icon:'bi-calendar-event-fill', label:'Calendario'},
+      ]},
+      { label:'Trabajo', items:[
+        {id:'tareas', icon:'bi-kanban-fill', label:'Tareas y proyectos'},
+        {id:'documentos', icon:'bi-folder-fill', label:'Documentos'},
+        {id:'solicitudes', icon:'bi-file-earmark-medical-fill', label:'Solicitudes RRHH', badge:2},
+      ]},
+      { label:'Organización', items:[
+        {id:'directorio', icon:'bi-people-fill', label:'Directorio'},
+        {id:'reportes', icon:'bi-graph-up-arrow', label:'Indicadores'},
+      ]},
+    ];
+    const navGroups = navDef.map(g=>({ label:g.label, items:g.items.map(it=>{
+      const active = A===it.id;
+      return { icon:it.icon, label:it.label, badge:it.badge, showBadge:!!it.badge,
+        bg: active?'var(--brand-soft)':'transparent', fg: active?'var(--brand)':'var(--text-2)',
+        ind: active?1:0, onClick:()=>this.nav(it.id) };
+    })}));
+
+    const titles = {
+      inicio:['Inicio','Tu resumen de hoy'],
+      noticias:['Noticias y comunicados','Lo último del Servicio'],
+      calendario:['Calendario','Agenda y eventos institucionales'],
+      tareas:['Tareas y proyectos','Tablero de trabajo del equipo'],
+      documentos:['Documentos','Gestión documental'],
+      solicitudes:['Solicitudes de RRHH','Trámites, permisos y reembolsos'],
+      directorio:['Directorio','Personas del Servicio'],
+      reportes:['Indicadores','Métricas institucionales'],
+    };
+    const [pageTitle,pageSub] = titles[A];
+
+    // ---- Inicio ----
+    const hr = new Date().getHours();
+    const greeting = hr<12?'Buenos días':hr<19?'Buenas tardes':'Buenas noches';
+    const kpis = [
+      {icon:'bi-check2-square', label:'Tareas pendientes', value:'12', delta:'+3', deltaIcon:'bi-arrow-up', tint:'var(--brand)', tintBg:'var(--brand-soft)', deltaColor:'var(--brand)', deltaBg:'var(--brand-soft)'},
+      {icon:'bi-file-earmark-text', label:'Solicitudes en curso', value:'5', delta:'+1', deltaIcon:'bi-arrow-up', tint:'var(--warn)', tintBg:'var(--warn-soft)', deltaColor:'var(--warn)', deltaBg:'var(--warn-soft)'},
+      {icon:'bi-folder', label:'Documentos nuevos', value:'28', delta:'+12', deltaIcon:'bi-arrow-up', tint:'var(--accent)', tintBg:'var(--accent-soft)', deltaColor:'var(--success)', deltaBg:'var(--success-soft)'},
+      {icon:'bi-calendar-week', label:'Eventos esta semana', value:'4', delta:'Hoy: 2', deltaIcon:'bi-clock', tint:'var(--success)', tintBg:'var(--success-soft)', deltaColor:'var(--success)', deltaBg:'var(--success-soft)'},
+    ];
+    const quickActions = [
+      {icon:'bi-file-earmark-plus', label:'Nueva solicitud', tint:'var(--brand)', tintBg:'var(--brand-soft)', onClick:()=>this.nav('solicitudes')},
+      {icon:'bi-cloud-upload', label:'Subir documento', tint:'var(--accent)', tintBg:'var(--accent-soft)', onClick:()=>this.nav('documentos')},
+      {icon:'bi-calendar-plus', label:'Reservar sala', tint:'var(--warn)', tintBg:'var(--warn-soft)', onClick:()=>this.nav('calendario')},
+      {icon:'bi-list-check', label:'Crear tarea', tint:'var(--success)', tintBg:'var(--success-soft)', onClick:()=>this.nav('tareas')},
+      {icon:'bi-person-vcard', label:'Directorio', tint:'var(--brand)', tintBg:'var(--brand-soft)', onClick:()=>this.nav('directorio')},
+      {icon:'bi-bar-chart', label:'Ver indicadores', tint:'var(--accent)', tintBg:'var(--accent-soft)', onClick:()=>this.nav('reportes')},
+    ];
+    const recentDocs = [
+      {icon:'bi-file-earmark-pdf', name:'Informe de gestión trimestral Q2.pdf', meta:'Carpeta Operaciones · 2.4 MB', time:'hace 12 min', tint:'var(--danger)', tintBg:'var(--danger-soft)'},
+      {icon:'bi-file-earmark-spreadsheet', name:'Presupuesto regional 2026.xlsx', meta:'Carpeta Finanzas · 880 KB', time:'hace 1 h', tint:'var(--success)', tintBg:'var(--success-soft)'},
+      {icon:'bi-file-earmark-word', name:'Acta sesión Comité Directivo.docx', meta:'Carpeta Dirección · 320 KB', time:'hace 3 h', tint:'var(--brand)', tintBg:'var(--brand-soft)'},
+      {icon:'bi-file-earmark-slides', name:'Plan de modernización TI.pptx', meta:'Carpeta TI · 5.1 MB', time:'ayer', tint:'var(--warn)', tintBg:'var(--warn-soft)'},
+      {icon:'bi-file-earmark-image', name:'Manual de marca institucional.png', meta:'Carpeta Comunicaciones · 1.2 MB', time:'ayer', tint:'var(--accent)', tintBg:'var(--accent-soft)'},
+    ];
+    const miniTasks = [
+      {done:true,  label:'Revisar solicitudes de vacaciones', prio:'Alta'},
+      {done:false, label:'Aprobar reembolso de C. Aguilera', prio:'Alta'},
+      {done:false, label:'Preparar minuta Comité Directivo', prio:'Media'},
+      {done:false, label:'Actualizar tablero del Plan Operativo', prio:'Baja'},
+    ].map(t=>({
+      label:t.label, prio:t.prio,
+      check:t.done?'bi-check-lg':'bi-x',
+      boxBg:t.done?'var(--success)':'transparent',
+      boxBorder:t.done?'var(--success)':'var(--border-2)',
+      textColor:t.done?'var(--muted)':'var(--text)',
+      deco:t.done?'line-through':'none',
+      prioBg: t.prio==='Alta'?'var(--danger-soft)':t.prio==='Media'?'var(--warn-soft)':'var(--surface-3)',
+      prioColor: t.prio==='Alta'?'var(--danger)':t.prio==='Media'?'var(--warn)':'var(--muted)',
+    }));
+    const peopleRaw = [
+      {n:'Carlos Aguilera', r:'Analista de Sistemas', d:'TI', c:'#0E9F8E'},
+      {n:'Paula Sánchez', r:'Jefa de Comunicaciones', d:'Comunicaciones', c:'#8A5CF0'},
+      {n:'Roberto Núñez', r:'Encargado de Finanzas', d:'Finanzas', c:'#D98A2B'},
+      {n:'Daniela Cortés', r:'Asesora Jurídica', d:'Legal', c:'#D44C77'},
+      {n:'Francisco Díaz', r:'Soporte de Plataformas', d:'TI', c:'#1E5BC6'},
+      {n:'Valentina Soto', r:'Gestora de Personas', d:'RRHH', c:'#1E9E5C'},
+      {n:'Andrés Morales', r:'Coordinador Regional', d:'Operaciones', c:'#3D9BD4'},
+      {n:'Camila Reyes', r:'Diseñadora UX', d:'Comunicaciones', c:'#E0696B'},
+      {n:'Jorge Fuentes', r:'Analista de Datos', d:'Operaciones', c:'#6366E0'},
+    ].map(p=>({ name:p.n, role:p.r, dept:p.d, color:p.c, initials:this.initials(p.n) }));
+    const onlineTeam = peopleRaw.slice(0,7);
+
+    const homeEvents = [
+      {day:'24', month:'JUN', title:'Comité Directivo mensual', time:'10:00', place:'Sala A', tint:'var(--brand)', tintBg:'var(--brand-soft)'},
+      {day:'24', month:'JUN', title:'Capacitación nueva plataforma', time:'15:30', place:'Auditorio', tint:'var(--accent)', tintBg:'var(--accent-soft)'},
+      {day:'27', month:'JUN', title:'Cierre de presupuesto Q2', time:'12:00', place:'Finanzas', tint:'var(--warn)', tintBg:'var(--warn-soft)'},
+    ];
+
+    // ---- Noticias ----
+    const newsCats = ['Todas','Institucional','RRHH','Tecnología','Eventos'].map((l,i)=>({
+      label:l, bg:i===0?'var(--brand)':'var(--surface)', fg:i===0?'#fff':'var(--text-2)', border:i===0?'var(--brand)':'var(--border)'
+    }));
+    const newsItems = [
+      {cat:'RRHH', title:'Nuevo proceso de teletrabajo flexible', excerpt:'Las jefaturas ya pueden gestionar solicitudes desde el portal.', date:'21 jun', author:'Personas', tint:'var(--success)', tintBg:'var(--success-soft)'},
+      {cat:'Tecnología', title:'Mantención programada de sistemas', excerpt:'El sábado 28 entre 22:00 y 02:00 hrs.', date:'20 jun', author:'TI', tint:'var(--brand)', tintBg:'var(--brand-soft)'},
+      {cat:'Eventos', title:'Jornada de bienestar institucional', excerpt:'Inscripciones abiertas hasta el 30 de junio.', date:'18 jun', author:'RRHH', tint:'var(--warn)', tintBg:'var(--warn-soft)'},
+    ];
+
+    // ---- Calendario ----
+    const calWeekdays = ['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'];
+    const eventDays = {3:'var(--accent)',9:'var(--warn)',16:'var(--brand)',24:'var(--brand)',27:'var(--warn)'};
+    const today = 24;
+    const calCells = [];
+    for(let d=1; d<=30; d++){
+      const isToday = d===today;
+      const ev = eventDays[d];
+      calCells.push({
+        day:d, weight:isToday?'800':'500',
+        bg:isToday?'var(--brand)':'transparent',
+        fg:isToday?'#fff':'var(--text)',
+        border:isToday?'var(--brand)':'var(--border)',
+        dot: ev? (isToday?'#fff':ev) : 'transparent',
+      });
+    }
+    const agendaEvents = [
+      {time:'09:00', title:'Revisión de pendientes', place:'Oficina · Operaciones', color:'var(--accent)'},
+      {time:'10:00', title:'Comité Directivo mensual', place:'Sala A · Piso 4', color:'var(--brand)'},
+      {time:'13:00', title:'Almuerzo equipo regional', place:'Casino institucional', color:'var(--success)'},
+      {time:'15:30', title:'Capacitación nueva plataforma', place:'Auditorio principal', color:'var(--warn)'},
+    ];
+
+    // ---- Tareas (kanban) ----
+    const av=(n,c)=>({assignee:this.initials(n), aColor:c});
+    const kanban = [
+      {title:'Por hacer', accent:'var(--muted)', count:3, cards:[
+        {title:'Definir indicadores del Plan Operativo 2026', tags:[{label:'Planificación',bg:'var(--brand-soft)',fg:'var(--brand)'}], progress:'15%', accent:'var(--brand)', due:'30 jun', ...av('Andrés Morales','#3D9BD4')},
+        {title:'Recopilar requerimientos de unidades regionales', tags:[{label:'Operaciones',bg:'var(--accent-soft)',fg:'var(--accent)'}], progress:'0%', accent:'var(--accent)', due:'02 jul', ...av('Jorge Fuentes','#6366E0')},
+      ]},
+      {title:'En progreso', accent:'var(--brand)', count:2, cards:[
+        {title:'Migración del sistema de gestión documental', tags:[{label:'TI',bg:'var(--brand-soft)',fg:'var(--brand)'},{label:'Urgente',bg:'var(--danger-soft)',fg:'var(--danger)'}], progress:'55%', accent:'var(--brand)', due:'26 jun', ...av('Carlos Aguilera','#0E9F8E')},
+        {title:'Campaña interna de bienestar', tags:[{label:'Comunicaciones',bg:'var(--accent-soft)',fg:'var(--accent)'}], progress:'40%', accent:'var(--accent)', due:'28 jun', ...av('Paula Sánchez','#8A5CF0')},
+      ]},
+      {title:'En revisión', accent:'var(--warn)', count:2, cards:[
+        {title:'Manual de procedimientos de RRHH', tags:[{label:'RRHH',bg:'var(--success-soft)',fg:'var(--success)'}], progress:'80%', accent:'var(--warn)', due:'25 jun', ...av('Valentina Soto','#1E9E5C')},
+        {title:'Política de seguridad de la información', tags:[{label:'Legal',bg:'var(--warn-soft)',fg:'var(--warn)'}], progress:'75%', accent:'var(--warn)', due:'27 jun', ...av('Daniela Cortés','#D44C77')},
+      ]},
+      {title:'Hecho', accent:'var(--success)', count:2, cards:[
+        {title:'Presupuesto regional 2026 aprobado', tags:[{label:'Finanzas',bg:'var(--warn-soft)',fg:'var(--warn)'}], progress:'100%', accent:'var(--success)', due:'20 jun', ...av('Roberto Núñez','#D98A2B')},
+        {title:'Lanzamiento portal de atención ciudadana', tags:[{label:'Institucional',bg:'var(--brand-soft)',fg:'var(--brand)'}], progress:'100%', accent:'var(--success)', due:'18 jun', ...av('Andrés Morales','#3D9BD4')},
+      ]},
+    ].map(c=>({...c}));
+
+    // ---- Documentos ----
+    const docFolders = [
+      {name:'Operaciones', count:42, color:'var(--brand)'},
+      {name:'Finanzas', count:28, color:'var(--success)'},
+      {name:'Recursos Humanos', count:35, color:'var(--warn)'},
+      {name:'Comunicaciones', count:19, color:'var(--accent)'},
+    ];
+    const docFiles = [
+      {name:'Informe gestión Q2.pdf', icon:'bi-file-earmark-pdf', tint:'var(--danger)', tintBg:'var(--danger-soft)', size:'2.4 MB', modified:'hoy', owner:'MR', ownerColor:'#1E5BC6'},
+      {name:'Presupuesto 2026.xlsx', icon:'bi-file-earmark-spreadsheet', tint:'var(--success)', tintBg:'var(--success-soft)', size:'880 KB', modified:'hoy', owner:'RN', ownerColor:'#D98A2B'},
+      {name:'Acta Comité.docx', icon:'bi-file-earmark-word', tint:'var(--brand)', tintBg:'var(--brand-soft)', size:'320 KB', modified:'ayer', owner:'PA', ownerColor:'#8A5CF0'},
+      {name:'Plan TI 2026.pptx', icon:'bi-file-earmark-slides', tint:'var(--warn)', tintBg:'var(--warn-soft)', size:'5.1 MB', modified:'ayer', owner:'CA', ownerColor:'#0E9F8E'},
+      {name:'Manual de marca.png', icon:'bi-file-earmark-image', tint:'var(--accent)', tintBg:'var(--accent-soft)', size:'1.2 MB', modified:'2 días', owner:'CR', ownerColor:'#E0696B'},
+      {name:'Contrato proveedor.pdf', icon:'bi-file-earmark-pdf', tint:'var(--danger)', tintBg:'var(--danger-soft)', size:'640 KB', modified:'3 días', owner:'DC', ownerColor:'#D44C77'},
+    ];
+
+    // ---- Solicitudes ----
+    const reqTypes = [
+      {icon:'bi-airplane', label:'Vacaciones', sub:'Solicitar días', tint:'var(--brand)', tintBg:'var(--brand-soft)'},
+      {icon:'bi-clock-history', label:'Permiso', sub:'Administrativo', tint:'var(--accent)', tintBg:'var(--accent-soft)'},
+      {icon:'bi-patch-check', label:'Certificado', sub:'Antigüedad / renta', tint:'var(--success)', tintBg:'var(--success-soft)'},
+      {icon:'bi-cash-coin', label:'Reembolso', sub:'Gastos y viáticos', tint:'var(--warn)', tintBg:'var(--warn-soft)'},
+      {icon:'bi-mortarboard', label:'Capacitación', sub:'Cursos y becas', tint:'var(--brand)', tintBg:'var(--brand-soft)'},
+    ];
+    const stepC=(done,total,colorDone)=>Array.from({length:total},(_,i)=>({color:i<done?colorDone:'var(--surface-3)'}));
+    const reqList = [
+      {type:'Vacaciones', icon:'bi-airplane', range:'15–26 jul 2026', id:'SOL-2041', tint:'var(--brand)', tintBg:'var(--brand-soft)', status:'Aprobada', statusIcon:'bi-check-circle-fill', statusColor:'var(--success)', statusBg:'var(--success-soft)', stage:'Finalizada', stepsArr:stepC(3,3,'var(--success)')},
+      {type:'Reembolso de viáticos', icon:'bi-cash-coin', range:'Viaje regional · jun', id:'SOL-2038', tint:'var(--warn)', tintBg:'var(--warn-soft)', status:'En revisión', statusIcon:'bi-hourglass-split', statusColor:'var(--warn)', statusBg:'var(--warn-soft)', stage:'Revisión de jefatura', stepsArr:stepC(2,3,'var(--warn)')},
+      {type:'Certificado de antigüedad', icon:'bi-patch-check', range:'Emisión inmediata', id:'SOL-2035', tint:'var(--success)', tintBg:'var(--success-soft)', status:'Aprobada', statusIcon:'bi-check-circle-fill', statusColor:'var(--success)', statusBg:'var(--success-soft)', stage:'Documento disponible', stepsArr:stepC(3,3,'var(--success)')},
+      {type:'Permiso administrativo', icon:'bi-clock-history', range:'05 jul 2026', id:'SOL-2030', tint:'var(--accent)', tintBg:'var(--accent-soft)', status:'Pendiente', statusIcon:'bi-three-dots', statusColor:'var(--brand)', statusBg:'var(--brand-soft)', stage:'Esperando aprobación', stepsArr:stepC(1,3,'var(--brand)')},
+      {type:'Capacitación externa', icon:'bi-mortarboard', range:'Diplomado gestión', id:'SOL-2027', tint:'var(--brand)', tintBg:'var(--brand-soft)', status:'Rechazada', statusIcon:'bi-x-circle-fill', statusColor:'var(--danger)', statusBg:'var(--danger-soft)', stage:'No aprobada por presupuesto', stepsArr:[{color:'var(--danger)'},{color:'var(--danger)'},{color:'var(--surface-3)'}]},
+    ];
+
+    // ---- Directorio (filtrado) ----
+    const q = this.state.dirQuery.trim().toLowerCase();
+    const dept = this.state.activeDept;
+    const filteredPeople = peopleRaw.filter(p=>{
+      const okDept = dept==='Todos' || p.dept===dept;
+      const okQ = !q || (p.name+' '+p.role+' '+p.dept).toLowerCase().includes(q);
+      return okDept && okQ;
+    });
+    const deptChips = ['Todos','Operaciones','TI','Comunicaciones','RRHH','Finanzas','Legal'].map(d=>{
+      const active = d===dept;
+      return { label:d, bg:active?'var(--brand)':'var(--surface)', fg:active?'#fff':'var(--text-2)', border:active?'var(--brand)':'var(--border)', onClick:()=>this.setDept(d) };
+    });
+
+    // ---- Reportes ----
+    const repKpis = [
+      {label:'Trámites resueltos', value:'1.247', delta:'+8%', deltaColor:'var(--success)'},
+      {label:'Tiempo prom. respuesta', value:'2.4d', delta:'-12%', deltaColor:'var(--success)'},
+      {label:'Satisfacción interna', value:'92%', delta:'+3%', deltaColor:'var(--success)'},
+      {label:'Funcionarios activos', value:'318', delta:'+5', deltaColor:'var(--brand)'},
+    ];
+    const barVals = [{label:'Ene',v:142},{label:'Feb',v:168},{label:'Mar',v:155},{label:'Abr',v:201},{label:'May',v:188},{label:'Jun',v:224}];
+    const maxBar = Math.max(...barVals.map(b=>b.v));
+    const repBars = barVals.map(b=>({label:b.label, val:b.v, h:(b.v/maxBar*100)+'%'}));
+    const donutLegend = [
+      {label:'Operaciones', pct:'42%', color:'var(--brand)'},
+      {label:'Recursos Humanos', pct:'26%', color:'var(--accent)'},
+      {label:'Finanzas', pct:'18%', color:'var(--warn)'},
+      {label:'Otras áreas', pct:'14%', color:'var(--border-2)'},
+    ];
+    const repUnits = [
+      {name:'Dirección Nacional', pct:'96%', color:'var(--success)'},
+      {name:'Operaciones', pct:'88%', color:'var(--brand)'},
+      {name:'Tecnologías de la Información', pct:'74%', color:'var(--warn)'},
+      {name:'Atención regional', pct:'61%', color:'var(--accent)'},
+    ];
+
+    const notifs = [
+      {icon:'bi-check-circle-fill', text:'Tu solicitud de vacaciones fue aprobada', time:'hace 8 min', tint:'var(--success)', tintBg:'var(--success-soft)'},
+      {icon:'bi-chat-left-text-fill', text:'Carlos Aguilera te mencionó en una tarea', time:'hace 40 min', tint:'var(--brand)', tintBg:'var(--brand-soft)'},
+      {icon:'bi-calendar-event-fill', text:'Recordatorio: Comité Directivo a las 10:00', time:'hace 1 h', tint:'var(--warn)', tintBg:'var(--warn-soft)'},
+      {icon:'bi-file-earmark-arrow-up-fill', text:'Nuevo documento en carpeta Finanzas', time:'hace 2 h', tint:'var(--accent)', tintBg:'var(--accent-soft)'},
+    ];
+
+    return {
+      theme:this.state.theme, themeIcon: dark?'bi-brightness-high-fill':'bi-moon-stars-fill',
+      sidebarWidth: this.state.collapsed?'76px':'262px', showLabels, navGroups,
+      mobileOpenAttr: this.state.mobileOpen?'1':'0',
+      pageTitle, pageSub,
+      toggleCollapse:()=>this.toggleCollapse(), toggleTheme:()=>this.toggleTheme(),
+      toggleNotif:()=>this.toggleNotif(), closeMobile:()=>this.closeMobile(),
+      notifOpen:this.state.notifOpen, notifs,
+      goSolicitudes:()=>this.nav('solicitudes'), goDocumentos:()=>this.nav('documentos'),
+      goCalendario:()=>this.nav('calendario'),
+      isInicio:A==='inicio', isNoticias:A==='noticias', isCalendario:A==='calendario',
+      isTareas:A==='tareas', isDocumentos:A==='documentos', isSolicitudes:A==='solicitudes',
+      isDirectorio:A==='directorio', isReportes:A==='reportes',
+      greeting, today:'Miércoles, 24 de junio de 2026',
+      kpis, quickActions, recentDocs, miniTasks, onlineTeam, homeEvents,
+      newsCats, newsItems,
+      calWeekdays, calCells, agendaEvents,
+      kanban,
+      docFolders, docFiles, isGridView:this.state.docView==='grid', isListView:this.state.docView==='list',
+      setGrid:()=>this.setDocView('grid'), setList:()=>this.setDocView('list'),
+      gridBtnBg:this.state.docView==='grid'?'var(--brand)':'transparent', gridBtnFg:this.state.docView==='grid'?'#fff':'var(--muted)',
+      listBtnBg:this.state.docView==='list'?'var(--brand)':'transparent', listBtnFg:this.state.docView==='list'?'#fff':'var(--muted)',
+      reqTypes, reqList,
+      dirQuery:this.state.dirQuery, setDir:(e)=>this.setDir(e), deptChips, filteredPeople, noResults:filteredPeople.length===0,
+      repKpis, repBars, donutLegend, repUnits,
+    };
+  }
+}
+</script>
+</body>
+</html>

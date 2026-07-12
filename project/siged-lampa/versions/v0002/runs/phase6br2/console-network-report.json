@@ -1,0 +1,15 @@
+{
+  "schema": "webforge.console_network_report.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "methodology": "Console error monitoring performed during unit test execution. E2E console monitoring deferred to QA stack execution (Phase 7).",
+  "unit_test_errors": {
+    "console.error": 0,
+    "unhandled_rejections": 0,
+    "react_warnings": "Known: DataTable duplicate key `id` warnings in admin/reports tests (non-critical)"
+  },
+  "e2e_errors": {
+    "status": "not_executed",
+    "note": "E2E console monitoring requires QA stack (Phase 7)"
+  },
+  "critical_errors": 0
+}

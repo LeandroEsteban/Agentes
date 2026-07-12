@@ -1,0 +1,6 @@
+{"command":"npm.cmd test -- documents.test.tsx","result":"13 passed"}
+{"command":"npm.cmd run lint","result":"pass; 0 errors; 0 warnings"}
+{"command":"npm.cmd test","result":"166 passed; 0 failed"}
+{"command":"npm.cmd run test:coverage","result":"166 passed; lines 87.72; statements 87.72; functions 66; branches 76.37"}
+{"command":"npm.cmd run build","result":"pass"}
+{"command":"npm.cmd run qa:stack:start","result":"blocked: Docker Desktop daemon unavailable"}

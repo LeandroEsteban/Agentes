@@ -1,0 +1,39 @@
+{
+  "phase": "7A",
+  "task": "react-key-warning-resolution",
+  "status": "resolved",
+  "timestamp": "2026-07-11T19:12:00Z",
+  "root_cause": "Duplicate column keys in DataTable consumers: two columns with `key: 'id'` in the same table caused sibling `<th>` and `<td>` elements to share `key=\"id\"`",
+  "affected_files": [
+    {
+      "file": "src/components/tables/index.tsx",
+      "change": "Replaced `key={String(column.key)}` with `key={i}` (column index) for both `<th>` and `<td>` elements to guarantee unique React keys regardless of duplicate string keys in column definitions"
+    },
+    {
+      "file": "src/features/admin/UsersPage.tsx",
+      "change": "Changed roles column from `key: 'id'` to `key: 'roles'` to use the actual data property and avoid key collision with the actions column"
+    }
+  ],
+  "consumers_verified": [
+    "src/pages/public.tsx (ProceduresPage)",
+    "src/pages/intranet.tsx (ExternalEntitiesPage)",
+    "src/features/admin/UsersPage.tsx",
+    "src/features/admin/RolesPage.tsx",
+    "src/features/admin/ProcedureTypesPage.tsx",
+    "src/features/admin/DocumentTypesPage.tsx",
+    "src/features/admin/DepartmentsPage.tsx",
+    "src/features/citizen-requests/CitizenRequestsPage.tsx",
+    "src/features/expedients/ExpedientDetailPage.tsx",
+    "src/features/expedients/ExpedientsListPage.tsx",
+    "src/features/oirs/OirsManagementPage.tsx",
+    "src/features/documents/DocumentsListPage.tsx",
+    "src/features/documents/ReviewsPage.tsx",
+    "src/features/correspondence/CorrespondenceListPage.tsx"
+  ],
+  "verification": {
+    "tests_passed": 158,
+    "test_files_passed": 12,
+    "tsc_noEmit": "pass",
+    "react_key_warnings": 0
+  }
+}

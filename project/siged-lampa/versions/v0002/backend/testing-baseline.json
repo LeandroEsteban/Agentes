@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-07-11T15:34:54.556Z",
+  "measurement": "pre-5B audit recorded before the new test files were added",
+  "unit_tests": 0,
+  "api_tests": 0,
+  "integration_tests": 0,
+  "smoke_tests": 1,
+  "endpoints_with_positive_test": 2,
+  "endpoints_with_negative_test": 0,
+  "rules_with_tests": 0,
+  "validations_with_tests": 31,
+  "line_coverage": 0,
+  "function_coverage": 0,
+  "branch_coverage": 0
+}

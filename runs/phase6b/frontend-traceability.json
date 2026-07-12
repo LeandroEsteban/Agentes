@@ -1,0 +1,288 @@
+{
+  "schema_version": "siged.frontend_traceability.v1",
+  "source": "src/config/screen-catalog.ts",
+  "tests": [
+    "src/test/catalog.test.tsx"
+  ],
+  "screens": [
+    [
+      "P-01",
+      "/intranet/login",
+      "LoginPage",
+      "funcionario",
+      "real",
+      "POST /api/v1/auth/internal-login",
+      "implemented"
+    ],
+    [
+      "P-02",
+      "/login",
+      "LoginPage",
+      "ciudadano",
+      "real",
+      "POST /api/v1/auth/citizen-login",
+      "implemented"
+    ],
+    [
+      "P-03",
+      "/recover",
+      "ScreenPage",
+      "usuario",
+      "real",
+      "POST /api/v1/auth/recover",
+      "partial"
+    ],
+    [
+      "P-04",
+      "/intranet/profile",
+      "ScreenPage",
+      "funcionario",
+      "real",
+      "GET /api/v1/profile/me",
+      "partial"
+    ],
+    [
+      "P-05",
+      "/intranet",
+      "ScreenPage",
+      "funcionario",
+      "hybrid",
+      "GET /api/v1/reports/dashboard",
+      "partial"
+    ],
+    [
+      "P-06",
+      "/intranet/admin/users",
+      "ScreenPage",
+      "administrador",
+      "real",
+      "GET /api/v1/users",
+      "partial"
+    ],
+    [
+      "P-07",
+      "/intranet/admin/roles",
+      "ScreenPage",
+      "administrador",
+      "hybrid",
+      "GET /api/v1/roles",
+      "partial"
+    ],
+    [
+      "P-08",
+      "/intranet/admin/departments",
+      "ScreenPage",
+      "administrador",
+      "real",
+      "GET /api/v1/departments",
+      "partial"
+    ],
+    [
+      "P-09",
+      "/intranet/admin/document-types",
+      "ScreenPage",
+      "administrador",
+      "real",
+      "GET /api/v1/document-types",
+      "partial"
+    ],
+    [
+      "P-10",
+      "/intranet/admin/procedure-types",
+      "ScreenPage",
+      "administrador",
+      "real",
+      "GET /api/v1/admin/procedure-types",
+      "implemented"
+    ],
+    [
+      "P-11",
+      "/intranet/admin/external-entities",
+      "ExternalEntitiesPage",
+      "administrador",
+      "real",
+      "GET /api/v1/admin/external-entities",
+      "implemented"
+    ],
+    [
+      "P-12",
+      "/intranet/documents",
+      "ScreenPage",
+      "funcionario",
+      "real",
+      "GET /api/v1/documents",
+      "partial"
+    ],
+    [
+      "P-13",
+      "/intranet/documents/new",
+      "ScreenPage",
+      "funcionario",
+      "real",
+      "POST /api/v1/documents",
+      "partial"
+    ],
+    [
+      "P-14",
+      "/intranet/documents/:documentId",
+      "ScreenPage",
+      "funcionario",
+      "real",
+      "GET /api/v1/documents/:id",
+      "partial"
+    ],
+    [
+      "P-15",
+      "/intranet/documents/:documentId/versions",
+      "ScreenPage",
+      "funcionario",
+      "hybrid",
+      "GET /api/v1/documents/:id/versions",
+      "partial"
+    ],
+    [
+      "P-16",
+      "/intranet/reviews",
+      "ScreenPage",
+      "revisor",
+      "hybrid",
+      "GET /api/v1/reviews",
+      "partial"
+    ],
+    [
+      "P-17",
+      "/intranet/approvals",
+      "ScreenPage",
+      "jefatura",
+      "hybrid",
+      "GET /api/v1/approvals",
+      "partial"
+    ],
+    [
+      "P-18",
+      "/intranet/documents/:documentId/signature",
+      "ScreenPage",
+      "firmante",
+      "hybrid",
+      "POST /api/v1/documents/:id/signature",
+      "partial"
+    ],
+    [
+      "P-19",
+      "/intranet/expedients",
+      "ScreenPage",
+      "funcionario",
+      "real",
+      "GET /api/v1/expedients",
+      "partial"
+    ],
+    [
+      "P-20",
+      "/intranet/expedients/:expedientId",
+      "ScreenPage",
+      "funcionario",
+      "real",
+      "GET /api/v1/expedients/:id",
+      "partial"
+    ],
+    [
+      "P-21",
+      "/intranet/correspondence/new",
+      "ScreenPage",
+      "oficina de partes",
+      "real",
+      "POST /api/v1/correspondence",
+      "partial"
+    ],
+    [
+      "P-22",
+      "/intranet/correspondence",
+      "ScreenPage",
+      "funcionario",
+      "real",
+      "GET /api/v1/correspondence",
+      "partial"
+    ],
+    [
+      "P-23",
+      "/",
+      "HomePage",
+      "ciudadano",
+      "real",
+      "GET /api/v1/public/tramites",
+      "implemented"
+    ],
+    [
+      "P-24",
+      "/tramites",
+      "ProceduresPage",
+      "ciudadano",
+      "real",
+      "GET /api/v1/public/tramites",
+      "implemented"
+    ],
+    [
+      "P-25",
+      "/portal/requests/new/:procedureId",
+      "RequestFormPage",
+      "ciudadano",
+      "real",
+      "POST /api/v1/public/tramites/:id/requests",
+      "partial"
+    ],
+    [
+      "P-26",
+      "/portal/requests",
+      "ScreenPage",
+      "ciudadano",
+      "real",
+      "GET /api/v1/citizen/requests",
+      "partial"
+    ],
+    [
+      "P-27",
+      "/oirs",
+      "OirsPage",
+      "ciudadano",
+      "real",
+      "POST /api/v1/public/oirs",
+      "partial"
+    ],
+    [
+      "P-28",
+      "/intranet/oirs",
+      "ScreenPage",
+      "operador OIRS",
+      "real",
+      "GET /api/v1/oirs",
+      "partial"
+    ],
+    [
+      "P-29",
+      "/intranet/reports",
+      "ScreenPage",
+      "analista",
+      "hybrid",
+      "GET /api/v1/reports/dashboard",
+      "partial"
+    ],
+    [
+      "P-30",
+      "/portal/notifications | /intranet/notifications",
+      "NotificationsPage",
+      "ciudadano|funcionario",
+      "real",
+      "GET /api/v1/notifications",
+      "implemented"
+    ]
+  ],
+  "tuple_format": [
+    "screen_code",
+    "route",
+    "component",
+    "actor",
+    "data_mode",
+    "endpoint",
+    "status"
+  ]
+}

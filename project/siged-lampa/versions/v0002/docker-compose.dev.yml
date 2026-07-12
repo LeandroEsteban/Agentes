@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: siged-db-dev
+    environment:
+      POSTGRES_DB: siged_lampa_dev
+      POSTGRES_USER: siged_dev
+      POSTGRES_PASSWORD: siged_dev_2026
+    ports:
+      - "5432:5432"
+    tmpfs:
+      - /var/lib/postgresql/data:rw,noexec,nosuid,size=512M
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U siged_dev -d siged_lampa_dev"]
+      interval: 5s
+      timeout: 3s
+      retries: 5

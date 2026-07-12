@@ -1,0 +1,10 @@
+const express = require('express');
+const authenticate = require('../../middleware/authentication');
+const authorize = require('../../middleware/authorization');
+const controller = require('./controller');
+const wrap = (fn) => (req, res, next) => Promise.resolve(fn(req, res)).catch(next);
+const router = express.Router();
+router.post('/api/v1/documents/:id/submit-review', authenticate, authorize('documents.edit'), wrap(controller.submit));
+router.get('/api/v1/documents/:id/reviews', authenticate, authorize('documents.view'), wrap(controller.list));
+router.post('/api/v1/reviews/:id/reply', authenticate, authorize('documents.review'), wrap(controller.reply));
+module.exports = router;

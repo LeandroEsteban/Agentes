@@ -1,0 +1,66 @@
+{
+  "phase": "5",
+  "status": "pass_with_limitations",
+  "critical_blockers": [],
+  "accepted_limitations": [
+    {
+      "category": "coverage",
+      "resolution_phase": "7"
+    },
+    {
+      "category": "historical_baseline",
+      "resolution_phase": "not_recoverable"
+    }
+  ],
+  "recommended_next_phase": "6B",
+  "gates": [
+    {
+      "gate": "GATE-API-001",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-002",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-003",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-004",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-005",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-006",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-007",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-008",
+      "status": "pass_with_limitation"
+    },
+    {
+      "gate": "GATE-API-009",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-010",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-011",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-API-012",
+      "status": "pass_with_limitation"
+    }
+  ]
+}

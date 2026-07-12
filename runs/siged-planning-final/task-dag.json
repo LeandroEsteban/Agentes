@@ -1,0 +1,809 @@
+{
+  "schema_version": "webforge.task_dag.v1",
+  "project_id": "siged-lampa",
+  "nodes": [
+    {
+      "task_id": "TASK-REF-001",
+      "agent_id": "agent.refinement",
+      "phase": "normalization",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-REF-002",
+      "agent_id": "agent.refinement",
+      "phase": "normalization",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-REF-003",
+      "agent_id": "agent.refinement",
+      "phase": "normalization",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-ARCH-001",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-ARCH-002",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-ARCH-003",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-ARCH-004",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-ARCH-005",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-ARCH-006",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-ARCH-007",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-ARCH-008",
+      "agent_id": "agent.architecture",
+      "phase": "architecture",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-SECURITY-001",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-SECURITY-002",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-SECURITY-003",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-SECURITY-004",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "L"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-001",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-002",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-003",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "L"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-004",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-005",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-DOCUMENTS-006",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-EXPEDIENT-001",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-EXPEDIENT-002",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-CORRESPONDENCE-001",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-CORRESPONDENCE-002",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-PORTAL-001",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-PORTAL-002",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-OIRS-001",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-REPORT-001",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-DB-AUDIT-001",
+      "agent_id": "agent.database",
+      "phase": "database",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-API-AUTH-001",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-API-AUTH-002",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-API-DOCUMENTS-001",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "L"
+    },
+    {
+      "task_id": "TASK-API-EXPEDIENT-001",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-API-CORRESPONDENCE-001",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-API-PORTAL-001",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-API-OIRS-001",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-API-REPORT-001",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-API-ADMIN-001",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-API-ADMIN-002",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-API-SECURITY-001",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "L"
+    },
+    {
+      "task_id": "TASK-API-AUDIT-001",
+      "agent_id": "agent.backend",
+      "phase": "backend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-UI-AUTH-001",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-UI-ADMIN-001",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "estimated_complexity": "L"
+    },
+    {
+      "task_id": "TASK-UI-DOCUMENTS-001",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-UI-EXPEDIENT-001",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-UI-CORRESPONDENCE-001",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-UI-PORTAL-001",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-UI-OIRS-001",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-UI-REPORT-001",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-UI-NOTIFICATION-001",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-UI-ROUTER-001",
+      "agent_id": "agent.frontend",
+      "phase": "frontend",
+      "estimated_complexity": "L"
+    },
+    {
+      "task_id": "TASK-QA-DB-001",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-QA-API-001",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-QA-FRONTEND-001",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-QA-E2E-001",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-QA-COVERAGE-001",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-QA-ACCEPTANCE-001",
+      "agent_id": "agent.qa_release",
+      "phase": "qa",
+      "estimated_complexity": "M"
+    },
+    {
+      "task_id": "TASK-QA-READINESS-001",
+      "agent_id": "agent.qa_release",
+      "phase": "release",
+      "estimated_complexity": "M"
+    }
+  ],
+  "edges": [
+    {
+      "from": "TASK-REF-001",
+      "to": "TASK-REF-002",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-REF-002",
+      "to": "TASK-REF-003",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-REF-003",
+      "to": "TASK-ARCH-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-001",
+      "to": "TASK-ARCH-002",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-002",
+      "to": "TASK-ARCH-003",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-003",
+      "to": "TASK-ARCH-004",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-004",
+      "to": "TASK-ARCH-005",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-005",
+      "to": "TASK-ARCH-006",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-006",
+      "to": "TASK-ARCH-007",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-007",
+      "to": "TASK-ARCH-008",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-008",
+      "to": "TASK-DB-SECURITY-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-008",
+      "to": "TASK-DB-SECURITY-002",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-008",
+      "to": "TASK-DB-SECURITY-003",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-SECURITY-001",
+      "to": "TASK-DB-SECURITY-004",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-SECURITY-003",
+      "to": "TASK-DB-SECURITY-004",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-008",
+      "to": "TASK-DB-DOCUMENTS-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-DOCUMENTS-001",
+      "to": "TASK-DB-DOCUMENTS-002",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-DOCUMENTS-002",
+      "to": "TASK-DB-DOCUMENTS-003",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-DOCUMENTS-003",
+      "to": "TASK-DB-DOCUMENTS-004",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-DOCUMENTS-003",
+      "to": "TASK-DB-DOCUMENTS-005",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-DOCUMENTS-002",
+      "to": "TASK-DB-DOCUMENTS-006",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-SECURITY-003",
+      "to": "TASK-DB-EXPEDIENT-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-EXPEDIENT-001",
+      "to": "TASK-DB-EXPEDIENT-002",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-DOCUMENTS-002",
+      "to": "TASK-DB-EXPEDIENT-002",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-SECURITY-001",
+      "to": "TASK-DB-CORRESPONDENCE-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-DOCUMENTS-002",
+      "to": "TASK-DB-CORRESPONDENCE-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-CORRESPONDENCE-001",
+      "to": "TASK-DB-CORRESPONDENCE-002",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-SECURITY-003",
+      "to": "TASK-DB-PORTAL-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-PORTAL-001",
+      "to": "TASK-DB-PORTAL-002",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-SECURITY-001",
+      "to": "TASK-DB-OIRS-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-SECURITY-001",
+      "to": "TASK-DB-REPORT-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-SECURITY-001",
+      "to": "TASK-DB-AUDIT-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-008",
+      "to": "TASK-API-AUTH-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-SECURITY-001",
+      "to": "TASK-API-AUTH-001",
+      "type": "provides_schema"
+    },
+    {
+      "from": "TASK-DB-SECURITY-002",
+      "to": "TASK-API-AUTH-001",
+      "type": "provides_schema"
+    },
+    {
+      "from": "TASK-API-AUTH-001",
+      "to": "TASK-API-AUTH-002",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-API-AUTH-001",
+      "to": "TASK-API-DOCUMENTS-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-API-AUTH-001",
+      "to": "TASK-API-EXPEDIENT-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-API-AUTH-001",
+      "to": "TASK-API-CORRESPONDENCE-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-API-AUTH-002",
+      "to": "TASK-API-PORTAL-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-API-AUTH-001",
+      "to": "TASK-API-OIRS-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-API-AUTH-001",
+      "to": "TASK-API-REPORT-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-API-AUTH-001",
+      "to": "TASK-API-ADMIN-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-PORTAL-001",
+      "to": "TASK-API-ADMIN-001",
+      "type": "provides_schema"
+    },
+    {
+      "from": "TASK-API-AUTH-001",
+      "to": "TASK-API-ADMIN-002",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-API-AUTH-001",
+      "to": "TASK-API-SECURITY-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-API-SECURITY-001",
+      "to": "TASK-API-AUDIT-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-DB-AUDIT-001",
+      "to": "TASK-API-AUDIT-001",
+      "type": "provides_schema"
+    },
+    {
+      "from": "TASK-ARCH-008",
+      "to": "TASK-UI-AUTH-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-AUTH-001",
+      "to": "TASK-UI-ADMIN-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-AUTH-001",
+      "to": "TASK-UI-DOCUMENTS-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-AUTH-001",
+      "to": "TASK-UI-EXPEDIENT-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-AUTH-001",
+      "to": "TASK-UI-CORRESPONDENCE-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-AUTH-001",
+      "to": "TASK-UI-PORTAL-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-AUTH-001",
+      "to": "TASK-UI-OIRS-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-AUTH-001",
+      "to": "TASK-UI-REPORT-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-AUTH-001",
+      "to": "TASK-UI-NOTIFICATION-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-AUTH-001",
+      "to": "TASK-UI-ROUTER-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-ADMIN-001",
+      "to": "TASK-UI-ROUTER-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-DOCUMENTS-001",
+      "to": "TASK-UI-ROUTER-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-EXPEDIENT-001",
+      "to": "TASK-UI-ROUTER-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-CORRESPONDENCE-001",
+      "to": "TASK-UI-ROUTER-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-PORTAL-001",
+      "to": "TASK-UI-ROUTER-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-OIRS-001",
+      "to": "TASK-UI-ROUTER-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-REPORT-001",
+      "to": "TASK-UI-ROUTER-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-UI-NOTIFICATION-001",
+      "to": "TASK-UI-ROUTER-001",
+      "type": "blocks"
+    },
+    {
+      "from": "TASK-ARCH-008",
+      "to": "TASK-QA-DB-001",
+      "type": "requires_validation"
+    },
+    {
+      "from": "TASK-ARCH-008",
+      "to": "TASK-QA-API-001",
+      "type": "requires_validation"
+    },
+    {
+      "from": "TASK-ARCH-008",
+      "to": "TASK-QA-FRONTEND-001",
+      "type": "requires_validation"
+    },
+    {
+      "from": "TASK-QA-DB-001",
+      "to": "TASK-QA-E2E-001",
+      "type": "requires_validation"
+    },
+    {
+      "from": "TASK-QA-API-001",
+      "to": "TASK-QA-E2E-001",
+      "type": "requires_validation"
+    },
+    {
+      "from": "TASK-QA-FRONTEND-001",
+      "to": "TASK-QA-E2E-001",
+      "type": "requires_validation"
+    },
+    {
+      "from": "TASK-QA-E2E-001",
+      "to": "TASK-QA-COVERAGE-001",
+      "type": "requires_validation"
+    },
+    {
+      "from": "TASK-QA-E2E-001",
+      "to": "TASK-QA-ACCEPTANCE-001",
+      "type": "requires_validation"
+    },
+    {
+      "from": "TASK-QA-ACCEPTANCE-001",
+      "to": "TASK-QA-READINESS-001",
+      "type": "requires_validation"
+    },
+    {
+      "from": "TASK-QA-COVERAGE-001",
+      "to": "TASK-QA-READINESS-001",
+      "type": "requires_validation"
+    }
+  ],
+  "topological_order": [
+    "TASK-REF-001",
+    "TASK-REF-002",
+    "TASK-REF-003",
+    "TASK-ARCH-001",
+    "TASK-ARCH-002",
+    "TASK-ARCH-003",
+    "TASK-ARCH-004",
+    "TASK-ARCH-005",
+    "TASK-ARCH-006",
+    "TASK-ARCH-007",
+    "TASK-ARCH-008",
+    "TASK-DB-SECURITY-001",
+    "TASK-DB-SECURITY-002",
+    "TASK-DB-SECURITY-003",
+    "TASK-DB-DOCUMENTS-001",
+    "TASK-UI-AUTH-001",
+    "TASK-QA-DB-001",
+    "TASK-QA-API-001",
+    "TASK-QA-FRONTEND-001",
+    "TASK-DB-OIRS-001",
+    "TASK-DB-REPORT-001",
+    "TASK-DB-AUDIT-001",
+    "TASK-API-AUTH-001",
+    "TASK-DB-SECURITY-004",
+    "TASK-DB-EXPEDIENT-001",
+    "TASK-DB-PORTAL-001",
+    "TASK-DB-DOCUMENTS-002",
+    "TASK-UI-ADMIN-001",
+    "TASK-UI-DOCUMENTS-001",
+    "TASK-UI-EXPEDIENT-001",
+    "TASK-UI-CORRESPONDENCE-001",
+    "TASK-UI-PORTAL-001",
+    "TASK-UI-OIRS-001",
+    "TASK-UI-REPORT-001",
+    "TASK-UI-NOTIFICATION-001",
+    "TASK-QA-E2E-001",
+    "TASK-API-AUTH-002",
+    "TASK-API-DOCUMENTS-001",
+    "TASK-API-EXPEDIENT-001",
+    "TASK-API-CORRESPONDENCE-001",
+    "TASK-API-OIRS-001",
+    "TASK-API-REPORT-001",
+    "TASK-API-ADMIN-002",
+    "TASK-API-SECURITY-001",
+    "TASK-DB-PORTAL-002",
+    "TASK-API-ADMIN-001",
+    "TASK-DB-DOCUMENTS-003",
+    "TASK-DB-DOCUMENTS-006",
+    "TASK-DB-EXPEDIENT-002",
+    "TASK-DB-CORRESPONDENCE-001",
+    "TASK-UI-ROUTER-001",
+    "TASK-QA-COVERAGE-001",
+    "TASK-QA-ACCEPTANCE-001",
+    "TASK-API-PORTAL-001",
+    "TASK-API-AUDIT-001",
+    "TASK-DB-DOCUMENTS-004",
+    "TASK-DB-DOCUMENTS-005",
+    "TASK-DB-CORRESPONDENCE-002",
+    "TASK-QA-READINESS-001"
+  ],
+  "validation": {
+    "acyclic": true,
+    "orphan_nodes": [],
+    "missing_dependencies": [],
+    "invalid_agents": []
+  }
+}

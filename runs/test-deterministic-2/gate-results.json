@@ -1,0 +1,49 @@
+{
+  "schema": "webforge.gate_results.v1",
+  "generated_at": "2026-07-11T21:33:39.897915+00:00",
+  "all_passed": true,
+  "gates": [
+    {
+      "gate_id": "GATE-ARCH-001",
+      "name": "Sources Normalized",
+      "passed": true,
+      "message": "All sources normalized with 0 blocking findings"
+    },
+    {
+      "gate_id": "GATE-ARCH-002",
+      "name": "Critical Decisions Accepted",
+      "passed": true,
+      "message": "All 16 critical decisions accepted"
+    },
+    {
+      "gate_id": "GATE-ARCH-003",
+      "name": "Agents Valid",
+      "passed": true,
+      "message": "All 6 agents valid"
+    },
+    {
+      "gate_id": "GATE-ARCH-004",
+      "name": "Tasks Valid",
+      "passed": true,
+      "message": "All 59 tasks valid"
+    },
+    {
+      "gate_id": "GATE-ARCH-005",
+      "name": "DAG Acyclic",
+      "passed": true,
+      "message": "DAG is acyclic with all dependencies valid"
+    },
+    {
+      "gate_id": "GATE-ARCH-006",
+      "name": "Handoffs Valid",
+      "passed": true,
+      "message": "All 10 handoffs valid"
+    },
+    {
+      "gate_id": "GATE-ARCH-007",
+      "name": "Baseline Preserved",
+      "passed": true,
+      "message": "Baseline preserved"
+    }
+  ]
+}

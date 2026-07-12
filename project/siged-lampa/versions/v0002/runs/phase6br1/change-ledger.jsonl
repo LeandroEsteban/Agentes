@@ -1,0 +1,15 @@
+{"ts":"2026-07-11T18:28:00Z","type":"report","action":"created","path":"runs/phase6br1/phase6br1-report.json"}
+{"ts":"2026-07-11T18:28:00Z","type":"report","action":"created","path":"runs/phase6br1/phase6br1-gates.json"}
+{"ts":"2026-07-11T18:28:00Z","type":"summary","action":"created","path":"runs/phase6br1/phase6br1-summary.md"}
+{"ts":"2026-07-11T18:28:00Z","type":"analysis","action":"created","path":"runs/phase6br1/coverage-exclusions.json"}
+{"ts":"2026-07-11T18:28:00Z","type":"analysis","action":"created","path":"runs/phase6br1/coverage-gap-analysis.json"}
+{"ts":"2026-07-11T18:28:00Z","type":"report","action":"created","path":"runs/phase6br1/operation-consumption-report.json"}
+{"ts":"2026-07-11T18:28:00Z","type":"report","action":"created","path":"runs/phase6br1/validation-scope-report.json"}
+{"ts":"2026-07-11T18:28:00Z","type":"measurement","action":"created","path":"runs/phase6br1/frontend-coverage.json"}
+{"ts":"2026-07-11T18:28:00Z","type":"measurement","action":"created","path":"runs/phase6br1/frontend-build-report.json"}
+{"ts":"2026-07-11T18:28:00Z","type":"measurement","action":"created","path":"runs/phase6br1/frontend-lint-report.json"}
+{"ts":"2026-07-11T18:28:00Z","type":"measurement","action":"created","path":"runs/phase6br1/test-report.json"}
+{"ts":"2026-07-11T18:28:00Z","type":"ledger","action":"created","path":"runs/phase6br1/change-ledger.jsonl"}
+{"ts":"2026-07-11T18:28:00Z","type":"ledger","action":"created","path":"runs/phase6br1/tool-ledger.jsonl"}
+{"ts":"2026-07-11T18:28:00Z","type":"fix","action":"lint_errors_resolved","path":"src/test/admin.test.tsx","detail":"Removed unused mutateResource import"}
+{"ts":"2026-07-11T18:28:00Z","type":"fix","action":"lint_errors_resolved","path":"src/test/auth.test.tsx","detail":"Removed unused MockAuthProvider and ReactNode"}

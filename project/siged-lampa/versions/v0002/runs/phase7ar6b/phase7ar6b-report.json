@@ -1,0 +1,52 @@
+﻿{
+    "schema_version":  "webforge.phase7ar6b_report.v1",
+    "gates_r6b":  {
+                      "fail":  0,
+                      "pass":  11
+                  },
+    "environment":  {
+                        "postgresql":  "running",
+                        "backend":  "running",
+                        "persistence_mode":  "postgres",
+                        "frontend":  "running",
+                        "data_mode":  "real"
+                    },
+    "functional_flows":  {
+                             "passed":  10,
+                             "planned":  10,
+                             "failed":  0,
+                             "executed":  10
+                         },
+    "functional_test_cases":  {
+                                  "passed":  19,
+                                  "skipped":  0,
+                                  "failed":  0,
+                                  "executed":  19
+                              },
+    "blockers_for_r6c":  [
+                             "infrastructure - final INFRA-01/02/03",
+                             "regression final frontend + backend",
+                             "WebForge validation",
+                             "acceptance decision"
+                         ],
+    "r6b_close":  "confirmed",
+    "next_step":  "7A-R6C: cierre integral mediante infraestructura, regresiones, WebForge y gates finales",
+    "status":  "pass",
+    "recent_corrections":  [
+                               {
+                                   "status":  "resolved",
+                                   "description":  "duplicados administrativos esperan 409 en lugar de 400",
+                                   "id":  "QA-DEF-E2E-08"
+                               },
+                               {
+                                   "status":  "resolved",
+                                   "description":  "publicacion/archivado envian cuerpo completo exigido por Zod",
+                                   "id":  "QA-DEF-E2E-09"
+                               },
+                               {
+                                   "status":  "resolved",
+                                   "description":  "selectores publicos corregidos segun UI real (link/heading text)",
+                                   "id":  "QA-DEF-E2E-10"
+                               }
+                           ]
+}

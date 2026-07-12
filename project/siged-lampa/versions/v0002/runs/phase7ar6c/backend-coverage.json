@@ -1,0 +1,15 @@
+﻿{
+    "coverage":  {
+                     "functions":  85.81,
+                     "lines":  80.84,
+                     "branches":  83.39,
+                     "statements":  80.84
+                 },
+    "critical_modules_without_tests":  [
+                                           {
+                                               "module":  "repositories/*",
+                                               "note":  "legacy files not used by current architecture"
+                                           }
+                                       ],
+    "tests_passed":  134
+}

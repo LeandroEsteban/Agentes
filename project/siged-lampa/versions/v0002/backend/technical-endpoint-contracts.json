@@ -1,0 +1,28 @@
+[
+  {
+    "endpoint_code": "API-TECH-001",
+    "method": "GET",
+    "path": "/health",
+    "purpose": "service health",
+    "exposure": "public",
+    "authentication": "public",
+    "implementation": "routes/index.js",
+    "tests": [
+      "backend/tests/smoke/qa-health-auth.test.js"
+    ],
+    "functional_count_excluded": true
+  },
+  {
+    "endpoint_code": "API-TECH-002",
+    "method": "GET",
+    "path": "/health/database",
+    "purpose": "database health",
+    "exposure": "public",
+    "authentication": "public",
+    "implementation": "routes/index.js",
+    "tests": [
+      "backend/tests/smoke/qa-health-auth.test.js"
+    ],
+    "functional_count_excluded": true
+  }
+]

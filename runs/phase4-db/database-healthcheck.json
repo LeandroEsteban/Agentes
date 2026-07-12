@@ -1,0 +1,9 @@
+﻿{
+    "functional_tables":  40,
+    "database":  "postgresql",
+    "connection":  "ok",
+    "migrations":  "up_to_date",
+    "persistence_mode":  "postgres",
+    "checked_at":  "2026-07-11T00:46:30.7873898-04:00",
+    "status":  "healthy"
+}

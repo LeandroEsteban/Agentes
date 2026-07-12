@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-07-11T20:00:00.000Z",
+  "suite": "phase5b2d-security",
+  "tests": [
+    { "name": "SEC-5B2D-001 SQL injection on document list", "status": "pass" },
+    { "name": "SEC-5B2D-002 Mass assignment on document create", "status": "pass" },
+    { "name": "SEC-5B2D-003 Invalid JSON body handling", "status": "pass" },
+    { "name": "SEC-5B2D-004 Error response sanitization (no stack/sql/password)", "status": "pass" },
+    { "name": "SEC-5B2D-005 Path traversal on attachment download", "status": "pass" },
+    { "name": "SEC-5B2D-006 Invalid state transitions on approved document", "status": "pass" },
+    { "name": "SEC-5B2D-007 Duplicate document creation", "status": "pass" }
+  ],
+  "total": 7,
+  "pass": 7,
+  "fail": 0
+}

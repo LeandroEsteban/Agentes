@@ -1,0 +1,9 @@
+{
+  "status": "partial",
+  "positive": 1,
+  "negative": 1,
+  "evidence": [
+    "backend/tests/unit/authorization.test.js"
+  ],
+  "gap": "No citizen request, OIRS, notification, or attachment ownership API proof exists yet."
+}

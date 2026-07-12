@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClaveUnica - Portal ciudadano</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell" data-ready="false">
+      <aside class="sidebar" aria-label="Navegacion principal">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">CU</span>
+          <div>
+            <strong>ClaveUnica</strong>
+            <small>Portal ciudadano</small>
+          </div>
+        </div>
+        <nav class="nav-list" aria-label="Secciones">
+          <button data-nav="publico" class="is-active">Portal publico</button>
+          <button data-nav="acceso">Ingreso seguro</button>
+          <button data-nav="privado">Mi portal</button>
+          <button data-nav="notificaciones">DDU y notificaciones</button>
+          <button data-nav="autorizaciones">Datos sensibles</button>
+          <button data-nav="servicios">Expedientes y poderes</button>
+          <button data-nav="instituciones">Instituciones</button>
+          <button data-nav="calidad">Calidad</button>
+        </nav>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <button id="mobile-menu" class="icon-button" aria-label="Abrir navegacion">☰</button>
+          <div>
+            <p class="kicker">Portal unificado</p>
+            <h1 id="screen-title">Portal publico</h1>
+          </div>
+          <div class="status-strip" aria-label="Estado de sesion">
+            <span id="session-status" class="pill">Sesion publica</span>
+            <span id="ddu-status" class="pill warn">DDU pendiente</span>
+            <button id="logout-button" class="secondary hidden">Cerrar sesion</button>
+          </div>
+        </header>
+
+        <main>
+          <section id="publico" class="screen is-active" aria-labelledby="publico-title">
+            <div id="public-portal" class="screen-grid">
+              <div class="panel span-2">
+                <p class="kicker">Servicios principales</p>
+                <h2 id="publico-title">Accesos publicos de ClaveUnica</h2>
+                <p class="lead">Activa, ingresa o recupera tu ClaveUnica con informacion clara, ayuda disponible y contenidos de orientacion ciudadana.</p>
+                <div class="action-row">
+                  <button id="activate-button" class="primary">Activar ClaveUnica</button>
+                  <button id="login-entry-button" class="primary subtle" data-nav-target="acceso">Autenticarse</button>
+                  <button id="recover-button" class="secondary">Recuperar acceso</button>
+                </div>
+              </div>
+              <div class="panel">
+                <p class="kicker">Novedades</p>
+                <ul id="news-list" class="stack-list">
+                  <li>Nuevo centro de ayuda para usuarios e instituciones.</li>
+                  <li>Mejoras de accesibilidad en flujos de datos personales.</li>
+                  <li>Portal de notificaciones con DDU integrado.</li>
+                </ul>
+              </div>
+              <div class="panel">
+                <p class="kicker">Ayuda publica</p>
+                <div class="tile-grid compact">
+                  <button class="tile-button" data-open-help="faq">Preguntas frecuentes</button>
+                  <button class="tile-button" data-open-help="contacto">Contacto</button>
+                  <button class="tile-button" data-open-help="emergencia">Atencion de emergencia</button>
+                  <button class="tile-button" data-open-help="tramites">Informacion de tramites</button>
+                </div>
+              </div>
+              <div class="panel span-2">
+                <p class="kicker">Contenido publico</p>
+                <div class="info-grid">
+                  <article>
+                    <h3>Transparencia</h3>
+                    <p>Informacion publica, estados de servicios y criterios de atencion.</p>
+                  </article>
+                  <article>
+                    <h3>Participacion ciudadana</h3>
+                    <p>Canales de consulta y mejora continua del portal.</p>
+                  </article>
+                  <article>
+                    <h3>Guia de tramites</h3>
+                    <p>Orientacion para activar, recuperar y usar servicios asociados.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="acceso" class="screen" aria-labelledby="acceso-title">
+            <div class="screen-grid">
+              <form id="login-form" class="panel" autocomplete="off">
+                <p class="kicker">Autenticacion</p>
+                <h2 id="acceso-title">Ingreso seguro</h2>
+                <label>RUN
+                  <input id="run-input" name="run" value="12345678-9" />
+                </label>
+                <label>Clave
+                  <input id="password-input" name="password" type="password" value="clave-segura" />
+                </label>
+                <div id="second-factor-login" class="callout hidden">
+                  <strong>Segundo factor requerido</strong>
+                  <p>Ingresa el codigo temporal para completar el acceso.</p>
+                  <input id="otp-input" inputmode="numeric" placeholder="123456" />
+                </div>
+                <button id="login-submit" class="primary" type="submit">Ingresar</button>
+                <p id="login-message" class="form-message" role="status"></p>
+              </form>
+
+              <div id="second-factor" class="panel">
+                <p class="kicker">Configuracion inicial</p>
+                <h2>Segundo factor</h2>
+                <p>El usuario puede activar el segundo factor al configurar la cuenta o administrarlo posteriormente.</p>
+                <label class="switch-row">
+                  <input id="twofactor-toggle" type="checkbox" />
+                  <span>Exigir segundo factor en cada login</span>
+                </label>
+                <p id="twofactor-state" class="pill">2FA inactivo</p>
+              </div>
+
+              <div id="session-security" class="panel span-2">
+                <p class="kicker">Sesion segura</p>
+                <h2>Politica multisesion aprobada</h2>
+                <div class="decision-grid">
+                  <article>
+                    <h3>Decision aplicada</h3>
+                    <p>Permitir una sesion principal y mantener sesiones secundarias en modo observacion. Si aparece actividad anomala, se alerta al usuario y se ofrece cerrar las otras sesiones.</p>
+                  </article>
+                  <article>
+                    <h3>Pros</h3>
+                    <p>Evita bloqueos innecesarios, reduce riesgo de secuestro y mantiene trazabilidad visible.</p>
+                  </article>
+                  <article>
+                    <h3>Contras mitigados</h3>
+                    <p>La multisesion no se bloquea por defecto, pero las alertas y cierre remoto reducen uso indebido.</p>
+                  </article>
+                </div>
+                <div class="action-row">
+                  <button id="simulate-anomaly" class="secondary">Simular uso anomalo</button>
+                  <button id="close-secondary-sessions" class="secondary">Cerrar sesiones secundarias</button>
+                </div>
+                <p id="session-alert" class="alert hidden" role="alert"></p>
+              </div>
+            </div>
+          </section>
+
+          <section id="privado" class="screen" aria-labelledby="privado-title">
+            <div class="screen-grid">
+              <div id="contact-security" class="panel">
+                <p class="kicker">Datos personales</p>
+                <h2 id="privado-title">Cambio con validacion personal</h2>
+                <label>Telefono
+                  <input id="phone-input" value="+56 9 5555 0000" />
+                </label>
+                <label>Correo
+                  <input id="email-input" value="persona@claveunica.gob.cl" />
+                </label>
+                <label>Pregunta personal: comuna de nacimiento
+                  <input id="personal-answer" placeholder="Respuesta" />
+                </label>
+                <button id="save-contact" class="primary">Guardar datos</button>
+                <p id="contact-message" class="form-message" role="status"></p>
+              </div>
+
+              <div id="personal-sections" class="panel span-2">
+                <p class="kicker">Secciones privadas</p>
+                <h2>Configuracion, historial e informacion personal</h2>
+                <div class="tab-row" role="tablist">
+                  <button class="tab is-active" data-private-tab="configuracion">Configuracion</button>
+                  <button class="tab" data-private-tab="historial">Historial de acciones</button>
+                  <button class="tab" data-private-tab="estado">Informacion del Estado</button>
+                  <button class="tab" data-private-tab="borde">Estados y errores</button>
+                </div>
+                <div id="private-tab-panel" class="tab-panel"></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="notificaciones" class="screen" aria-labelledby="notificaciones-title">
+            <div id="ddu-notifications" class="screen-grid">
+              <div class="panel">
+                <p class="kicker">Domicilio Digital Unico</p>
+                <h2 id="notificaciones-title">DDU y CasillaUnica</h2>
+                <p id="ddu-explanation">El comportamiento cambia segun el estado DDU del usuario.</p>
+                <div class="action-row">
+                  <button id="start-ddu-from-section" class="primary">Configurar DDU</button>
+                  <button id="reset-ddu" class="secondary">Marcar DDU pendiente</button>
+                </div>
+                <p id="ddu-alert" class="alert" role="status">DDU pendiente: configura tu domicilio para consultar notificaciones.</p>
+              </div>
+              <div class="panel span-2">
+                <p class="kicker">Notificaciones pendientes</p>
+                <div id="notification-empty" class="empty-state hidden">No hay notificaciones pendientes de lectura.</div>
+                <table id="notifications-table" class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Fecha recepcion</th>
+                      <th>Institucion remitente</th>
+                      <th>Titulo</th>
+                      <th>Accion</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div id="casilla-detail" class="panel span-2 hidden">
+                <p class="kicker">CasillaUnica</p>
+                <h2>Detalle de notificacion</h2>
+                <p id="notification-detail-text"></p>
+                <button id="back-notifications" class="secondary">Volver a ClaveUnica</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="autorizaciones" class="screen" aria-labelledby="autorizaciones-title">
+            <div id="sensitive-authorizations" class="screen-grid">
+              <div class="panel span-2">
+                <p class="kicker">Datos sensibles</p>
+                <h2 id="autorizaciones-title">Gestion e historial de autorizaciones</h2>
+                <div class="status-tabs" id="authorization-filters"></div>
+                <table id="authorizations-table" class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Estado</th>
+                      <th>Solicitud</th>
+                      <th>Instituciones</th>
+                      <th>Fechas</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div class="panel span-2">
+                <p class="kicker">Historial compartido</p>
+                <h2>Datos previamente autorizados</h2>
+                <table id="shared-data-table" class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Proveedor</th>
+                      <th>Solicitante</th>
+                      <th>Fecha y hora</th>
+                      <th>Procedimiento</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section id="servicios" class="screen" aria-labelledby="servicios-title">
+            <div id="expanded-services" class="screen-grid">
+              <div class="panel">
+                <p class="kicker">Expedientes</p>
+                <h2 id="servicios-title">Expedientes electronicos</h2>
+                <div id="files-list" class="stack-list"></div>
+              </div>
+              <div class="panel">
+                <p class="kicker">Poderes</p>
+                <h2>Poderes y representaciones</h2>
+                <div id="powers-list" class="stack-list"></div>
+              </div>
+              <div class="panel span-2">
+                <p class="kicker">Casos de borde</p>
+                <h2>Estados vacios, falta de informacion y errores</h2>
+                <div class="edge-grid">
+                  <article class="empty-state">Sin expedientes: se informa explicitamente y no se muestran datos inventados.</article>
+                  <article class="empty-state">Falta de informacion: se indica fuente no disponible y accion recomendada.</article>
+                  <article class="empty-state">Error de carga: se evita guardar estados inconsistentes y se permite reintentar.</article>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="instituciones" class="screen" aria-labelledby="instituciones-title">
+            <div id="institutional-help" class="screen-grid">
+              <div class="panel">
+                <p class="kicker">Ayuda institucional</p>
+                <h2 id="instituciones-title">Soporte publico y privado</h2>
+                <p>Centro de ayuda renovado para instituciones integradas, con orientacion publica y mesa privada para usuarios autorizados.</p>
+              </div>
+              <div class="panel">
+                <p class="kicker">Credenciales</p>
+                <h2>Gestion de acceso institucional</h2>
+                <label>Codigo institucional
+                  <input id="institution-code" value="MDSF-001" />
+                </label>
+                <button id="issue-credential" class="primary">Emitir credencial de prueba</button>
+                <p id="credential-message" class="form-message"></p>
+              </div>
+              <div class="panel span-2">
+                <p class="kicker">Integracion</p>
+                <h2>Estado de solicitudes</h2>
+                <div id="integration-list" class="info-grid"></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="calidad" class="screen" aria-labelledby="calidad-title">
+            <div id="quality-assurance" class="screen-grid">
+              <div class="panel span-2">
+                <p class="kicker">Aseguramiento</p>
+                <h2 id="calidad-title">Investigacion, prototipos y pruebas</h2>
+                <div class="timeline">
+                  <article><strong>Investigacion</strong><span>Perfiles, necesidades, metricas y evidencia cualitativa/cuantitativa.</span></article>
+                  <article><strong>Arquitectura</strong><span>Flujos de usuario, mapa de navegacion y prototipos de baja fidelidad.</span></article>
+                  <article><strong>Alta fidelidad</strong><span>Prototipos navegables, pruebas moderadas/no moderadas y correcciones.</span></article>
+                  <article><strong>Implementacion priorizada</strong><span>Prioridades 1 y 2 implementadas, componentes probados y accesibilidad revisada.</span></article>
+                </div>
+              </div>
+              <div class="panel">
+                <p class="kicker">Versiones</p>
+                <h2>Plan corto, mediano y largo plazo</h2>
+                <ul class="stack-list">
+                  <li>Corto plazo: portal publico, login, datos personales y DDU.</li>
+                  <li>Mediano plazo: autorizaciones, expedientes y poderes.</li>
+                  <li>Largo plazo: integraciones institucionales y mejoras continuas.</li>
+                </ul>
+              </div>
+              <div class="panel">
+                <p class="kicker">Garantia</p>
+                <h2>Garantia funcional</h2>
+                <p>Soporte funcional minimo de 6 meses, canal de comunicacion y correccion de defectos asociados a cumplimiento funcional.</p>
+              </div>
+              <div id="accessibility-card" class="panel span-2">
+                <p class="kicker">Accesibilidad</p>
+                <h2>Validacion de interfaz</h2>
+                <div class="quality-grid">
+                  <span>Tipografia legible</span>
+                  <span>Contraste revisado</span>
+                  <span>Texto alternativo considerado</span>
+                  <span>Navegacion adaptable</span>
+                  <span>Componentes reutilizables</span>
+                  <span>Plan de pruebas evidenciado</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div id="modal-backdrop" class="modal-backdrop hidden"></div>
+    <dialog id="flow-modal" class="modal">
+      <form method="dialog">
+        <p id="modal-kicker" class="kicker">Flujo</p>
+        <h2 id="modal-title"></h2>
+        <p id="modal-body"></p>
+        <div id="modal-actions" class="action-row"></div>
+      </form>
+    </dialog>
+
+    <div id="requirement-evidence-index" hidden></div>
+    <script type="module" src="./assets/app.js"></script>
+  </body>
+</html>

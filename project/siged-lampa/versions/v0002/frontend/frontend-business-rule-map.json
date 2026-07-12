@@ -1,0 +1,7 @@
+[
+  {
+    "rule": "permission_visibility",
+    "implementation": "Screen catalog and RequirePermission hide actions while backend remains authority.",
+    "status": "implemented"
+  }
+]

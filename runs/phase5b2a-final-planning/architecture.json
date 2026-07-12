@@ -1,0 +1,1087 @@
+{
+  "schema_version": "webforge.architecture.v1",
+  "project_id": "siged-lampa",
+  "project_version": "v0002",
+  "generated_at": "2026-07-11T16:44:49.967845+00:00",
+  "source_hashes": {
+    "Especificacion_Funcional_SIGED_Lampa.md": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24",
+    "Inventario_Endpoints_SIGED_Lampa.md": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d",
+    "Modelo_ER_Detallado_SIGED_Lampa.md": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282"
+  },
+  "product": {
+    "status": "partial",
+    "coverage": 0,
+    "endpoints_implemented": 8,
+    "endpoints_documented": 40,
+    "screens_implemented": 3,
+    "screens_documented": 30,
+    "tables_implemented": 6,
+    "tables_documented": 40
+  },
+  "factory": {
+    "status": "complete",
+    "components": 13,
+    "agents": 6
+  },
+  "components": [
+    {
+      "component_id": "comp.cli",
+      "name": "CLI",
+      "type": "factory",
+      "responsibility": "Entry point for agent orchestration via command line",
+      "inputs": [
+        "user_commands"
+      ],
+      "outputs": [
+        "work_orders"
+      ],
+      "dependencies": [],
+      "owned_by_agent": "agent.entrypoint",
+      "related_modules": [
+        "webforge.cli"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.work_order_loader",
+      "name": "WorkOrderLoader",
+      "type": "factory",
+      "responsibility": "Loads and deserializes work orders from intake sources",
+      "inputs": [
+        "work_orders"
+      ],
+      "outputs": [
+        "parsed_work_orders"
+      ],
+      "dependencies": [],
+      "owned_by_agent": "agent.intake",
+      "related_modules": [
+        "webforge.intake"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.normalizer",
+      "name": "Normalizer",
+      "type": "factory",
+      "responsibility": "Parses and normalises raw specification documents into a structured spec tree",
+      "inputs": [
+        "parsed_work_orders",
+        "raw_specs"
+      ],
+      "outputs": [
+        "normalised_specs"
+      ],
+      "dependencies": [],
+      "owned_by_agent": "agent.spec_parser",
+      "related_modules": [
+        "webforge.spec_parser"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.planner",
+      "name": "Planner",
+      "type": "factory",
+      "responsibility": "Generates architecture plans and decomposes work into tasks",
+      "inputs": [
+        "normalised_specs"
+      ],
+      "outputs": [
+        "architecture_plan",
+        "task_list"
+      ],
+      "dependencies": [
+        "comp.normalizer"
+      ],
+      "owned_by_agent": "agent.architect_planner",
+      "related_modules": [
+        "webforge.architect_planner"
+      ],
+      "related_codes": [],
+      "implementation_status": "planned"
+    },
+    {
+      "component_id": "comp.dag_scheduler",
+      "name": "DAGScheduler",
+      "type": "factory",
+      "responsibility": "Arranges tasks into a DAG respecting dependencies and critical path",
+      "inputs": [
+        "task_list"
+      ],
+      "outputs": [
+        "dag"
+      ],
+      "dependencies": [
+        "comp.planner"
+      ],
+      "owned_by_agent": "agent.task_planner",
+      "related_modules": [
+        "webforge.task_planner"
+      ],
+      "related_codes": [],
+      "implementation_status": "planned"
+    },
+    {
+      "component_id": "comp.harness_runner",
+      "name": "HarnessRunner",
+      "type": "factory",
+      "responsibility": "Executes tasks in the DAG and verifies consistency of outputs",
+      "inputs": [
+        "dag",
+        "task_artifacts"
+      ],
+      "outputs": [
+        "validated_artifacts",
+        "review_reports"
+      ],
+      "dependencies": [
+        "comp.dag_scheduler"
+      ],
+      "owned_by_agent": "agent.consistency_reviewer",
+      "related_modules": [
+        "webforge.consistency_reviewer"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.policy_engine",
+      "name": "PolicyEngine",
+      "type": "factory",
+      "responsibility": "Enforces governance policies and rules across the pipeline",
+      "inputs": [
+        "policy_definitions"
+      ],
+      "outputs": [
+        "policy_decisions"
+      ],
+      "dependencies": [],
+      "owned_by_agent": "governance",
+      "related_modules": [
+        "webforge.governance"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.budget_manager",
+      "name": "BudgetManager",
+      "type": "factory",
+      "responsibility": "Tracks token and resource budgets for agentic runs",
+      "inputs": [
+        "budget_config"
+      ],
+      "outputs": [
+        "budget_reports"
+      ],
+      "dependencies": [],
+      "owned_by_agent": "governance",
+      "related_modules": [
+        "webforge.governance"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.tool_registry",
+      "name": "ToolRegistry",
+      "type": "factory",
+      "responsibility": "Registry of available tools that agents can invoke",
+      "inputs": [
+        "tool_definitions"
+      ],
+      "outputs": [
+        "tool_catalog"
+      ],
+      "dependencies": [],
+      "owned_by_agent": "tool_registry",
+      "related_modules": [
+        "webforge.tool_registry"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.evidence_registry",
+      "name": "EvidenceRegistry",
+      "type": "factory",
+      "responsibility": "Stores and indexes evidence produced during pipeline execution",
+      "inputs": [
+        "evidence_artifacts"
+      ],
+      "outputs": [
+        "evidence_index"
+      ],
+      "dependencies": [],
+      "owned_by_agent": "evidence",
+      "related_modules": [
+        "webforge.evidence"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.workspace_dev",
+      "name": "WorkspaceDEV",
+      "type": "factory",
+      "responsibility": "Isolated development workspace for code generation and testing",
+      "inputs": [
+        "task_artifacts"
+      ],
+      "outputs": [
+        "generated_code",
+        "test_reports"
+      ],
+      "dependencies": [],
+      "owned_by_agent": "workspace",
+      "related_modules": [
+        "webforge.workspace"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.workspace_qa",
+      "name": "WorkspaceQA",
+      "type": "factory",
+      "responsibility": "Isolated QA workspace for validation and review",
+      "inputs": [
+        "generated_code",
+        "test_reports"
+      ],
+      "outputs": [
+        "qa_reports"
+      ],
+      "dependencies": [
+        "comp.workspace_dev"
+      ],
+      "owned_by_agent": "workspace",
+      "related_modules": [
+        "webforge.workspace"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.agent_qa_release",
+      "name": "AgentQARelease",
+      "type": "factory",
+      "responsibility": "Coordinates QA signoff and release approval gate",
+      "inputs": [
+        "qa_reports"
+      ],
+      "outputs": [
+        "release_approval"
+      ],
+      "dependencies": [
+        "comp.workspace_qa"
+      ],
+      "owned_by_agent": "qa_release",
+      "related_modules": [
+        "webforge.qa_release"
+      ],
+      "related_codes": [],
+      "implementation_status": "planned"
+    },
+    {
+      "component_id": "comp.frontend_web",
+      "name": "FrontendWeb",
+      "type": "product",
+      "responsibility": "Vanilla JS single-page application serving the municipal interface",
+      "inputs": [
+        "api_responses"
+      ],
+      "outputs": [
+        "http_requests",
+        "ui_events"
+      ],
+      "dependencies": [
+        "comp.backend_api"
+      ],
+      "owned_by_agent": "frontend",
+      "related_modules": [
+        "frontend"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.backend_api",
+      "name": "BackendAPI",
+      "type": "product",
+      "responsibility": "Node HTTP API gateway that routes requests to domain services",
+      "inputs": [
+        "http_requests"
+      ],
+      "outputs": [
+        "api_responses",
+        "service_calls"
+      ],
+      "dependencies": [
+        "comp.servicio_autenticacion_academica",
+        "comp.servicio_documental",
+        "comp.servicio_expedientes",
+        "comp.repositorio_postgresql"
+      ],
+      "owned_by_agent": "backend",
+      "related_modules": [
+        "backend"
+      ],
+      "related_codes": [],
+      "implementation_status": "existing"
+    },
+    {
+      "component_id": "comp.servicio_autenticacion_academica",
+      "name": "ServicioAutenticacionAcademica",
+      "type": "product",
+      "responsibility": "Academic authentication and identity management service",
+      "inputs": [
+        "auth_requests"
+      ],
+      "outputs": [
+        "auth_tokens",
+        "identity_data"
+      ],
+      "dependencies": [
+        "comp.repositorio_postgresql"
+      ],
+      "owned_by_agent": "auth",
+      "related_modules": [
+        "backend.services.autenticacion"
+      ],
+      "related_codes": [],
+      "implementation_status": "partial"
+    },
+    {
+      "component_id": "comp.servicio_documental",
+      "name": "ServicioDocumental",
+      "type": "product",
+      "responsibility": "Document management and archival service",
+      "inputs": [
+        "document_requests"
+      ],
+      "outputs": [
+        "document_data",
+        "file_references"
+      ],
+      "dependencies": [
+        "comp.repositorio_postgresql",
+        "comp.almacenamiento_archivos_simulado"
+      ],
+      "owned_by_agent": "document",
+      "related_modules": [
+        "backend.services.documental"
+      ],
+      "related_codes": [],
+      "implementation_status": "partial"
+    },
+    {
+      "component_id": "comp.servicio_expedientes",
+      "name": "ServicioExpedientes",
+      "type": "product",
+      "responsibility": "Expedient (case file) tracking and management service",
+      "inputs": [
+        "expedient_requests"
+      ],
+      "outputs": [
+        "expedient_data"
+      ],
+      "dependencies": [
+        "comp.repositorio_postgresql"
+      ],
+      "owned_by_agent": "expedient",
+      "related_modules": [
+        "backend.services.expedientes"
+      ],
+      "related_codes": [],
+      "implementation_status": "partial"
+    },
+    {
+      "component_id": "comp.servicio_correspondencia",
+      "name": "ServicioCorrespondencia",
+      "type": "product",
+      "responsibility": "Internal and external correspondence tracking service",
+      "inputs": [
+        "correspondence_requests"
+      ],
+      "outputs": [
+        "correspondence_data"
+      ],
+      "dependencies": [
+        "comp.repositorio_postgresql",
+        "comp.servicio_documental"
+      ],
+      "owned_by_agent": "correspondence",
+      "related_modules": [
+        "backend.services.correspondencia"
+      ],
+      "related_codes": [],
+      "implementation_status": "partial"
+    },
+    {
+      "component_id": "comp.servicio_ciudadano",
+      "name": "ServicioCiudadano",
+      "type": "product",
+      "responsibility": "Citizen profile and relationship management service",
+      "inputs": [
+        "citizen_requests"
+      ],
+      "outputs": [
+        "citizen_data"
+      ],
+      "dependencies": [
+        "comp.repositorio_postgresql"
+      ],
+      "owned_by_agent": "citizen",
+      "related_modules": [
+        "backend.services.ciudadano"
+      ],
+      "related_codes": [],
+      "implementation_status": "partial"
+    },
+    {
+      "component_id": "comp.servicio_oirs",
+      "name": "ServicioOIRS",
+      "type": "product",
+      "responsibility": "OIRS (citizen complaints and requests) service",
+      "inputs": [
+        "oirs_requests"
+      ],
+      "outputs": [
+        "oirs_data",
+        "notifications"
+      ],
+      "dependencies": [
+        "comp.repositorio_postgresql",
+        "comp.servicio_notificaciones"
+      ],
+      "owned_by_agent": "oirs",
+      "related_modules": [
+        "backend.services.oirs"
+      ],
+      "related_codes": [],
+      "implementation_status": "partial"
+    },
+    {
+      "component_id": "comp.servicio_notificaciones",
+      "name": "ServicioNotificaciones",
+      "type": "product",
+      "responsibility": "Notification dispatch service (email, SMS, in-app)",
+      "inputs": [
+        "notification_requests"
+      ],
+      "outputs": [
+        "notifications_sent"
+      ],
+      "dependencies": [],
+      "owned_by_agent": "notification",
+      "related_modules": [
+        "backend.services.notificaciones"
+      ],
+      "related_codes": [],
+      "implementation_status": "planned"
+    },
+    {
+      "component_id": "comp.servicio_reportabilidad",
+      "name": "ServicioReportabilidad",
+      "type": "product",
+      "responsibility": "Reporting and analytics service for generating structured reports",
+      "inputs": [
+        "report_requests"
+      ],
+      "outputs": [
+        "reports"
+      ],
+      "dependencies": [
+        "comp.repositorio_postgresql"
+      ],
+      "owned_by_agent": "reporting",
+      "related_modules": [
+        "backend.services.reportabilidad"
+      ],
+      "related_codes": [],
+      "implementation_status": "partial"
+    },
+    {
+      "component_id": "comp.repositorio_postgresql",
+      "name": "RepositorioPostgreSQL",
+      "type": "product",
+      "responsibility": "Central PostgreSQL database repository for all domain data",
+      "inputs": [
+        "queries",
+        "mutations"
+      ],
+      "outputs": [
+        "result_sets",
+        "acknowledgements"
+      ],
+      "dependencies": [],
+      "owned_by_agent": "database",
+      "related_modules": [
+        "backend.database"
+      ],
+      "related_codes": [],
+      "implementation_status": "planned"
+    },
+    {
+      "component_id": "comp.almacenamiento_archivos_simulado",
+      "name": "AlmacenamientoArchivosSimulado",
+      "type": "product",
+      "responsibility": "Simulated file storage service for development and testing",
+      "inputs": [
+        "file_operations"
+      ],
+      "outputs": [
+        "file_handles",
+        "storage_events"
+      ],
+      "dependencies": [],
+      "owned_by_agent": "storage",
+      "related_modules": [
+        "backend.storage"
+      ],
+      "related_codes": [],
+      "implementation_status": "partial"
+    },
+    {
+      "component_id": "comp.auditoria",
+      "name": "Auditoria",
+      "type": "product",
+      "responsibility": "Audit logging and traceability service for all domain operations",
+      "inputs": [
+        "audit_events"
+      ],
+      "outputs": [
+        "audit_trail"
+      ],
+      "dependencies": [
+        "comp.repositorio_postgresql"
+      ],
+      "owned_by_agent": "audit",
+      "related_modules": [
+        "backend.services.auditoria"
+      ],
+      "related_codes": [],
+      "implementation_status": "partial"
+    }
+  ],
+  "data_flows": [
+    {
+      "from": "FrontendWeb",
+      "to": "BackendAPI",
+      "protocol": "HTTP",
+      "auth": "simulated_jwt"
+    },
+    {
+      "from": "BackendAPI",
+      "to": "RepositorioPostgreSQL",
+      "protocol": "postgresql",
+      "auth": "password",
+      "status": "planned"
+    }
+  ],
+  "deployment_units": [
+    {
+      "name": "frontend",
+      "type": "static",
+      "target": "node_http",
+      "status": "existing"
+    },
+    {
+      "name": "backend",
+      "type": "node",
+      "target": "node_http",
+      "status": "existing"
+    },
+    {
+      "name": "database",
+      "type": "postgresql",
+      "target": "rds_ec2",
+      "status": "planned"
+    }
+  ],
+  "security_boundaries": [
+    {
+      "name": "intranet",
+      "type": "authenticated",
+      "actors": [
+        "ACT-ADM",
+        "ACT-FUN",
+        "ACT-OPA",
+        "ACT-REV",
+        "ACT-OIR",
+        "ACT-REP"
+      ]
+    },
+    {
+      "name": "portal",
+      "type": "public_or_authenticated",
+      "actors": [
+        "ACT-CIU",
+        "ACT-VIS"
+      ]
+    },
+    {
+      "name": "admin",
+      "type": "admin_only",
+      "actors": [
+        "ACT-ADM"
+      ]
+    },
+    {
+      "name": "external",
+      "type": "unauthenticated_limited",
+      "actors": [
+        "ACT-EXT"
+      ]
+    }
+  ],
+  "quality_gates": [
+    {
+      "name": "GATE-ARCH-001",
+      "description": "Sources normalized with 0 blocking",
+      "phase": "planning"
+    },
+    {
+      "name": "GATE-ARCH-002",
+      "description": "Critical decisions accepted",
+      "phase": "planning"
+    },
+    {
+      "name": "GATE-ARCH-003",
+      "description": "Agents valid",
+      "phase": "planning"
+    },
+    {
+      "name": "GATE-ARCH-004",
+      "description": "Tasks valid",
+      "phase": "planning"
+    },
+    {
+      "name": "GATE-ARCH-005",
+      "description": "DAG acyclic",
+      "phase": "planning"
+    },
+    {
+      "name": "GATE-ARCH-006",
+      "description": "Handoffs valid",
+      "phase": "planning"
+    },
+    {
+      "name": "GATE-ARCH-007",
+      "description": "Baseline preserved",
+      "phase": "planning"
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "ADR-001",
+      "title": "Ruta canónica de notificaciones",
+      "status": "accepted",
+      "context": "P-30 declares alternate routes /notifications or /intranet/notifications",
+      "decision": "Use /intranet/notifications for internal users, /portal/notifications for authenticated citizens",
+      "alternatives": [
+        "Single route /notifications for all",
+        "Keep both routes as declared"
+      ],
+      "consequences": [
+        "Frontend must implement two distinct route entries",
+        "Backend API-040 must serve both surfaces",
+        "Navigation menus must differentiate by actor"
+      ],
+      "affected_codes": [
+        "P-30",
+        "API-040",
+        "M10"
+      ],
+      "source_findings": [
+        "SCREEN_ROUTE_AMBIGUOUS",
+        "P30_ALTERNATE_ROUTE"
+      ],
+      "implementation_phase": "Incremento D",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-002",
+      "title": "Administración de tipos de trámite",
+      "status": "accepted",
+      "context": "P-10 has no concrete administrative endpoint association",
+      "decision": "Add GET/POST/PUT /api/v1/admin/procedure-types endpoints",
+      "alternatives": [
+        "Embed CRUD in existing document-types endpoint"
+      ],
+      "consequences": [
+        "3 new endpoints added beyond the original 40",
+        "Frontend P-10 screen connects to these endpoints"
+      ],
+      "affected_codes": [
+        "P-10",
+        "M02"
+      ],
+      "source_findings": [
+        "MISSING_ADMIN_ENDPOINT",
+        "SCREEN_WITHOUT_ENDPOINT"
+      ],
+      "implementation_phase": "Incremento D",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-003",
+      "title": "Administración de entidades externas",
+      "status": "accepted",
+      "context": "P-11 has no concrete administrative endpoint association",
+      "decision": "Add GET/POST/PUT /api/v1/admin/external-entities endpoints",
+      "alternatives": [
+        "Manage external entities through generic admin endpoint"
+      ],
+      "consequences": [
+        "3 new endpoints added beyond the original 40",
+        "Frontend P-11 screen connects to these endpoints"
+      ],
+      "affected_codes": [
+        "P-11",
+        "M02"
+      ],
+      "source_findings": [
+        "MISSING_ADMIN_ENDPOINT",
+        "SCREEN_WITHOUT_ENDPOINT"
+      ],
+      "implementation_phase": "Incremento D",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-004",
+      "title": "Login ciudadano",
+      "status": "accepted",
+      "context": "API-002 (/api/v1/auth/citizen-login) documented but not implemented; frontend declares it",
+      "decision": "Keep POST /api/v1/auth/citizen-login as mandatory endpoint; implement as academic simulation initially",
+      "alternatives": [
+        "Merge with internal login using role parameter",
+        "Remove citizen-login and use only internal login"
+      ],
+      "consequences": [
+        "Separate auth flow for citizens",
+        "Must differentiate from internal login in backend",
+        "Simulation acceptable for v0002"
+      ],
+      "affected_codes": [
+        "API-002",
+        "P-02",
+        "M01"
+      ],
+      "source_findings": [
+        "API002_NOT_IMPLEMENTED"
+      ],
+      "implementation_phase": "Incremento A",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-005",
+      "title": "Creación de solicitud ciudadana",
+      "status": "accepted",
+      "context": "API-034 documented as POST /api/v1/public/tramites/{id}/requests; backend implements POST /api/v1/citizen/requests",
+      "decision": "Define POST /api/v1/public/tramites/{id}/requests as canonical contract; register POST /api/v1/citizen/requests as legacy compatibility endpoint",
+      "alternatives": [
+        "Accept citizen/requests as canonical",
+        "Remove public/tramites variant"
+      ],
+      "consequences": [
+        "Backend must implement both during migration",
+        "Frontend P-25 must use canonical route",
+        "Legacy endpoint can be deprecated in v0003"
+      ],
+      "affected_codes": [
+        "API-034",
+        "P-25",
+        "M07"
+      ],
+      "source_findings": [
+        "API034_ROUTE_DIFFERENCE"
+      ],
+      "implementation_phase": "Incremento D",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-006",
+      "title": "Anexos asociados a versiones",
+      "status": "accepted",
+      "context": "BR-017 requires attachment version association; document_attachments lacks version_id",
+      "decision": "Add document_version_id (nullable FK to document_versions) to document_attachments",
+      "alternatives": [
+        "Keep attachments at document level only",
+        "Add separate attachment_version table"
+      ],
+      "consequences": [
+        "Schema migration required for document_attachments",
+        "New attachments must include version_id",
+        "Null allowed for legacy migration"
+      ],
+      "affected_codes": [
+        "BR-017",
+        "document_attachments",
+        "API-019"
+      ],
+      "source_findings": [
+        "BR017_ATTACHMENT_VERSION_GAP"
+      ],
+      "implementation_phase": "Incremento B",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-007",
+      "title": "Referencia a versión anterior",
+      "status": "accepted",
+      "context": "BR-021 requires explicit previous version reference; document_versions has no previous_version_id",
+      "decision": "Add previous_version_id (nullable self-referencing FK) to document_versions",
+      "alternatives": [
+        "Use created_at ordering to determine previous version",
+        "Add sequence number instead of FK"
+      ],
+      "consequences": [
+        "Schema migration required",
+        "First version has null previous_version_id",
+        "Enables version chain traversal"
+      ],
+      "affected_codes": [
+        "BR-021",
+        "document_versions",
+        "API-020"
+      ],
+      "source_findings": [
+        "BR021_PREVIOUS_VERSION_GAP"
+      ],
+      "implementation_phase": "Incremento B",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-008",
+      "title": "Numeración documental",
+      "status": "accepted",
+      "context": "Document numbering rule lacks dedicated model",
+      "decision": "Add UNIQUE(document_type_id, document_number) constraint; numbering managed by service layer with sequence per document type",
+      "alternatives": [
+        "Global auto-increment across all types",
+        "UUID-based numbering"
+      ],
+      "consequences": [
+        "Unique constraint required at DB level",
+        "Service must generate next number per type",
+        "Migration needed for existing documents"
+      ],
+      "affected_codes": [
+        "documents",
+        "M03"
+      ],
+      "source_findings": [
+        "DOCUMENT_NUMBERING_MODEL_GAP"
+      ],
+      "implementation_phase": "Incremento B",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-009",
+      "title": "OIRS anónima",
+      "status": "accepted",
+      "context": "Anonymous OIRS contact data not represented on oirs_cases",
+      "decision": "Add contact_name, contact_email, contact_phone, contact_consent (nullable) to oirs_cases; enforce name + (email or phone) + consent for anonymous submissions",
+      "alternatives": [
+        "Require registration for all OIRS",
+        "Keep OIRS authentication-only"
+      ],
+      "consequences": [
+        "Schema migration needed for oirs_cases",
+        "Validation service must check anonymous vs authenticated",
+        "Frontend P-27 must show/hide contact fields based on auth status"
+      ],
+      "affected_codes": [
+        "oirs_cases",
+        "API-037",
+        "P-27",
+        "M08"
+      ],
+      "source_findings": [
+        "OIRS_CONTACT_MODEL_GAP"
+      ],
+      "implementation_phase": "Incremento D",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-010",
+      "title": "Relación circular usuarios-departamentos",
+      "status": "accepted",
+      "context": "Departments/users foreign keys require deferred migration ordering",
+      "decision": "Create departments without manager; create users with department_id; add manager_user_id via migration; keep both FK nullable during bootstrap",
+      "alternatives": [
+        "Single migration with circular FK deferred",
+        "Remove manager from departments"
+      ],
+      "consequences": [
+        "Three-step migration required",
+        "Service layer must validate manager belongs to department",
+        "Bootstrap script needed for initial data"
+      ],
+      "affected_codes": [
+        "departments",
+        "users",
+        "M02"
+      ],
+      "source_findings": [
+        "POTENTIAL_RELATIONSHIP_CYCLE"
+      ],
+      "implementation_phase": "Incremento A",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-011",
+      "title": "Relación circular documentos-versiones",
+      "status": "accepted",
+      "context": "documents.current_version_id and document_versions.document_id require deferred migration ordering",
+      "decision": "Create documents without current_version_id; create document_versions; add current_version_id FK via migration",
+      "alternatives": [
+        "Single migration with deferred FK",
+        "Derive current version from MAX(version_number)"
+      ],
+      "consequences": [
+        "Three-step migration required",
+        "Document service must update current_version_id on each version creation",
+        "Query performance better with explicit FK"
+      ],
+      "affected_codes": [
+        "documents",
+        "document_versions",
+        "M03"
+      ],
+      "source_findings": [
+        "POTENTIAL_DOCUMENT_VERSION_CYCLE"
+      ],
+      "implementation_phase": "Incremento B",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-012",
+      "title": "Cantidad de actores",
+      "status": "accepted",
+      "context": "Normalizer found 9 actors; previous expectation was 8",
+      "decision": "Keep 9 actors. ACT-007 appears twice in source (as two separate table rows) with distinct descriptions; both are valid entries.",
+      "alternatives": [
+        "Merge into 8 by deduplication",
+        "Reduce to 7 by combining visitor and citizen"
+      ],
+      "consequences": [
+        "Actor count is 9, not 8",
+        "WorkOrder minimum_scope may need updating in future",
+        "Traceability must reference all 9"
+      ],
+      "affected_codes": [
+        "actors"
+      ],
+      "source_findings": [],
+      "implementation_phase": "base",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-013",
+      "title": "Frontend objetivo",
+      "status": "accepted",
+      "context": "Current frontend is vanilla JavaScript served by Node HTTP",
+      "decision": "Keep vanilla JS as baseline compatibility for v0001; define React as target architecture for v0002; do not implement React in this phase",
+      "alternatives": [
+        "Rewrite immediately in React",
+        "Keep vanilla JS permanently"
+      ],
+      "consequences": [
+        "Frontend must remain functional during transition",
+        "React implementation is planned but not executed",
+        "Current frontend remains the executable baseline"
+      ],
+      "affected_codes": [
+        "frontend"
+      ],
+      "source_findings": [
+        "CATALOG_ROUTES_NOT_EXECUTABLE",
+        "SURFACE_ROUTE_GROUPING_GAP"
+      ],
+      "implementation_phase": "base",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-014",
+      "title": "Persistencia",
+      "status": "accepted",
+      "context": "Backend uses in-memory storage; PostgreSQL is declared but not used",
+      "decision": "Keep memory as v0001 compatibility; define PostgreSQL as mandatory persistence for QA and v0002 target",
+      "alternatives": [
+        "Migrate immediately to PostgreSQL",
+        "Use SQLite as intermediate"
+      ],
+      "consequences": [
+        "Backend must support both persistence modes during migration",
+        "PostgreSQL migration is planned but not executed in this phase",
+        "Current in-memory backend remains the executable baseline"
+      ],
+      "affected_codes": [
+        "backend",
+        "database"
+      ],
+      "source_findings": [
+        "MEMORY_PERSISTENCE_ACTIVE",
+        "GENERIC_DATABASE_TABLES"
+      ],
+      "implementation_phase": "base",
+      "requires_human_approval": false
+    },
+    {
+      "decision_id": "ADR-015",
+      "title": "Autenticación e integraciones externas",
+      "status": "accepted",
+      "context": "Institutional auth, Clave Unica, FirmaGob, SII are referenced but not implemented",
+      "decision": "Define all external integrations as academic simulations; do not present as production integrations",
+      "alternatives": [
+        "Implement real integration",
+        "Remove references entirely"
+      ],
+      "consequences": [
+        "Auth flows are simulated with test credentials",
+        "No real external API calls are made",
+        "Documentation must clearly label simulations"
+      ],
+      "affected_codes": [
+        "M01",
+        "auth"
+      ],
+      "source_findings": [],
+      "implementation_phase": "base",
+      "requires_human_approval": true
+    },
+    {
+      "decision_id": "ADR-016",
+      "title": "Conteo de endpoints",
+      "status": "accepted",
+      "context": "Original catalog has 40 endpoints; ADR-002 and ADR-003 add 6 more",
+      "decision": "Target contract may exceed 40 endpoints. Track 40 original + additional + legacy + technical endpoints separately.",
+      "alternatives": [
+        "Force exactly 40 endpoints",
+        "Remove ADR-002/003 endpoints"
+      ],
+      "consequences": [
+        "Endpoint count in planning report > 40",
+        "Technical endpoints (health, metrics) are not counted in functional total",
+        "Traceability must differentiate original vs added"
+      ],
+      "affected_codes": [
+        "endpoints"
+      ],
+      "source_findings": [
+        "PARTIAL_ENDPOINT_IMPLEMENTATION"
+      ],
+      "implementation_phase": "base",
+      "requires_human_approval": false
+    }
+  ],
+  "status": "planned"
+}

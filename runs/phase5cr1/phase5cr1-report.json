@@ -1,0 +1,93 @@
+{
+  "schema_version": "webforge.phase5cr1_report.v1",
+  "status": "blocked",
+  "phase5c_status": "blocked",
+  "phase5_status": "blocked",
+  "endpoints": {
+    "original": 40,
+    "supplemental_accepted": 9,
+    "supplemental_rejected": 46,
+    "legacy": 1,
+    "technical": 2,
+    "catalog_total": 98
+  },
+  "openapi": {
+    "valid": true,
+    "operations": 98
+  },
+  "router": {
+    "operations": 98
+  },
+  "verification": {
+    "catalog_operations": 98,
+    "router_operations": 98,
+    "openapi_operations": 98,
+    "matched": 98,
+    "missing_in_openapi": [],
+    "missing_in_router": [],
+    "missing_in_catalog": [],
+    "method_mismatches": [],
+    "path_mismatches": [],
+    "security_mismatches": [],
+    "permission_mismatches": [],
+    "duplicate_operation_ids": [],
+    "duplicate_endpoint_codes": []
+  },
+  "rules": {
+    "total": 60,
+    "implemented": 35,
+    "deferred": 0,
+    "pending": 25
+  },
+  "validations": {
+    "total": 100,
+    "implemented": 55,
+    "deferred": 2,
+    "pending": 43
+  },
+  "coverage": {
+    "lines": 80.35,
+    "statements": 80.35,
+    "functions": 85.34,
+    "branches": 83.5
+  },
+  "gates": [
+    {
+      "gate": "GATE-CONTRACT-001",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-CONTRACT-002",
+      "status": "blocked"
+    },
+    {
+      "gate": "GATE-CONTRACT-003",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-CONTRACT-004",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-CONTRACT-005",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-CONTRACT-006",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-CONTRACT-007",
+      "status": "pass"
+    },
+    {
+      "gate": "GATE-CONTRACT-008",
+      "status": "pass"
+    }
+  ],
+  "blockers": [
+    "F5-RULE-001",
+    "F5-VALIDATION-001",
+    "F5-CONTRACT-002"
+  ]
+}

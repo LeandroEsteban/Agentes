@@ -1,0 +1,106 @@
+{
+  "schema": "webforge.phase6br2_e2e_flow_matrix.v1",
+  "generated_at": "2026-07-11T18:46:00Z",
+  "flows": [
+    {
+      "flow_id": "E2E-01",
+      "name": "Flujo ciudadano",
+      "screens": ["P-02","P-23","P-24","P-25","P-26","P-30"],
+      "operations": ["API-001","API-033","API-034","API-035","API-040"],
+      "actors": ["ciudadano"],
+      "tests": ["unit: 14 citizen tests"],
+      "passed": true,
+      "e2e_executed": false
+    },
+    {
+      "flow_id": "E2E-02",
+      "name": "OIRS anónima",
+      "screens": ["P-27"],
+      "operations": ["API-037"],
+      "actors": ["anónimo"],
+      "tests": ["unit: 4 OIRS tests"],
+      "passed": true,
+      "e2e_executed": false
+    },
+    {
+      "flow_id": "E2E-03",
+      "name": "Gestión documental",
+      "screens": ["P-12","P-13","P-14","P-15"],
+      "operations": ["API-015","API-016","API-017","API-SUP-007","API-020"],
+      "actors": ["funcionario"],
+      "tests": ["unit: 11 document tests"],
+      "passed": true,
+      "e2e_executed": false
+    },
+    {
+      "flow_id": "E2E-04",
+      "name": "Revisión y aprobación",
+      "screens": ["P-16","P-17"],
+      "operations": ["API-SUP-037","API-022","API-SUP-019","API-023"],
+      "actors": ["revisor","jefatura"],
+      "tests": ["unit: reviews + approvals tests"],
+      "passed": true,
+      "e2e_executed": false
+    },
+    {
+      "flow_id": "E2E-05",
+      "name": "Firma académica simulada",
+      "screens": ["P-18"],
+      "operations": ["API-SUP-038","API-024"],
+      "actors": ["firmante"],
+      "tests": ["unit: 1 signature test"],
+      "passed": true,
+      "e2e_executed": false
+    },
+    {
+      "flow_id": "E2E-06",
+      "name": "Expediente",
+      "screens": ["P-19","P-20"],
+      "operations": ["API-025","API-026","API-027"],
+      "actors": ["funcionario"],
+      "tests": ["unit: 9 expedient tests"],
+      "passed": true,
+      "e2e_executed": false
+    },
+    {
+      "flow_id": "E2E-07",
+      "name": "Correspondencia",
+      "screens": ["P-21","P-22"],
+      "operations": ["API-029","API-030"],
+      "actors": ["oficina de partes","funcionario"],
+      "tests": ["unit: 9 correspondence tests"],
+      "passed": true,
+      "e2e_executed": false
+    },
+    {
+      "flow_id": "E2E-08",
+      "name": "Administración",
+      "screens": ["P-06","P-07","P-08","P-09","P-10","P-11"],
+      "operations": ["API-006","API-007","API-009","API-011","API-013"],
+      "actors": ["administrador"],
+      "tests": ["unit: 19 admin tests"],
+      "passed": true,
+      "e2e_executed": false
+    },
+    {
+      "flow_id": "E2E-09",
+      "name": "Contenido público",
+      "screens": ["P-23","P-24"],
+      "operations": ["API-033"],
+      "actors": ["ciudadano"],
+      "tests": ["unit: 3 public page tests"],
+      "passed": true,
+      "e2e_executed": false
+    },
+    {
+      "flow_id": "E2E-10",
+      "name": "Guards y permisos",
+      "screens": [],
+      "operations": [],
+      "actors": ["visitante","ciudadano","funcionario"],
+      "tests": ["unit: 8 guard tests"],
+      "passed": true,
+      "e2e_executed": false
+    }
+  ]
+}

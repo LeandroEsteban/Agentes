@@ -1,0 +1,7 @@
+import { useEffect, useRef, type ReactNode } from 'react';
+export const LoadingState = () => <p role="status" aria-live="polite" className="state">Cargando informacion...</p>;
+export const EmptyState = ({ message = 'No hay registros para mostrar.' }: { message?: string }) => <p className="state">{message}</p>;
+export const ErrorState = ({ error, onRetry }: { error: Error; onRetry?: () => void }) => <div role="alert" className="state error">{error.message}{onRetry && <button onClick={onRetry}>Reintentar</button>}</div>;
+export const PermissionDenied = () => <main className="state error"><h1>Acceso restringido</h1><p>No cuenta con el permiso requerido para esta accion.</p></main>;
+export const DemoModeBanner = ({ enabled }: { enabled: boolean }) => enabled ? <aside className="demo" role="status">Modo demostracion</aside> : null;
+export function ConfirmDialog({ open, title, children, onConfirm, onClose }: { open: boolean; title: string; children: ReactNode; onConfirm: () => void; onClose: () => void }) { const ref = useRef<HTMLButtonElement>(null); useEffect(() => { if (open) ref.current?.focus(); }, [open]); if (!open) return null; return <div className="modal" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><section><h2 id="dialog-title">{title}</h2>{children}<button ref={ref} onClick={onConfirm}>Confirmar</button><button onClick={onClose}>Cancelar</button></section></div>; }

@@ -1,0 +1,989 @@
+{
+  "generated_at": "2026-07-11T20:49:20Z",
+  "items": [
+    {
+      "code": "users",
+      "description": "funcionarios y operadores internos",
+      "module": null,
+      "name": "funcionarios y operadores internos",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "uuid",
+          "username",
+          "email",
+          "password_hash",
+          "full_name",
+          "job_title",
+          "status",
+          "last_login_at"
+        ],
+        "foreign_keys": "department_id -> departments.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 103,
+        "line_start": 103,
+        "section": "6.1 Seguridad"
+      }
+    },
+    {
+      "code": "roles",
+      "description": "roles de acceso",
+      "module": null,
+      "name": "roles de acceso",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "is_system"
+        ],
+        "foreign_keys": "-",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 104,
+        "line_start": 104,
+        "section": "6.1 Seguridad"
+      }
+    },
+    {
+      "code": "permissions",
+      "description": "permisos atomicos",
+      "module": null,
+      "name": "permisos atomicos",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "code",
+          "name",
+          "module_code",
+          "description"
+        ],
+        "foreign_keys": "-",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 105,
+        "line_start": 105,
+        "section": "6.1 Seguridad"
+      }
+    },
+    {
+      "code": "user_roles",
+      "description": "relacion usuario-rol",
+      "module": null,
+      "name": "relacion usuario-rol",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "assigned_at",
+          "assigned_by"
+        ],
+        "foreign_keys": "user_id -> users.id`, `role_id -> roles.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 106,
+        "line_start": 106,
+        "section": "6.1 Seguridad"
+      }
+    },
+    {
+      "code": "role_permissions",
+      "description": "relacion rol-permiso",
+      "module": null,
+      "name": "relacion rol-permiso",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "granted_at",
+          "granted_by"
+        ],
+        "foreign_keys": "role_id -> roles.id`, `permission_id -> permissions.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 107,
+        "line_start": 107,
+        "section": "6.1 Seguridad"
+      }
+    },
+    {
+      "code": "sessions",
+      "description": "sesiones activas e historicas",
+      "module": null,
+      "name": "sesiones activas e historicas",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "token_hash",
+          "ip_address",
+          "user_agent",
+          "started_at",
+          "expires_at",
+          "revoked_at"
+        ],
+        "foreign_keys": "user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 108,
+        "line_start": 108,
+        "section": "6.1 Seguridad"
+      }
+    },
+    {
+      "code": "two_factor_settings",
+      "description": "configuracion de 2FA",
+      "module": null,
+      "name": "configuracion de 2FA",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "method",
+          "secret_hash",
+          "phone_masked",
+          "enabled_at",
+          "disabled_at"
+        ],
+        "foreign_keys": "user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 109,
+        "line_start": 109,
+        "section": "6.1 Seguridad"
+      }
+    },
+    {
+      "code": "departments",
+      "description": "unidades municipales",
+      "module": null,
+      "name": "unidades municipales",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "cost_center",
+          "status"
+        ],
+        "foreign_keys": "parent_department_id -> departments.id`, `manager_user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 125,
+        "line_start": 125,
+        "section": "6.2 Organizacion"
+      }
+    },
+    {
+      "code": "external_entities",
+      "description": "personas juridicas u organismos externos",
+      "module": null,
+      "name": "personas juridicas u organismos externos",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "entity_type",
+          "name",
+          "tax_id",
+          "email",
+          "phone",
+          "address",
+          "contact_name"
+        ],
+        "foreign_keys": "-",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 126,
+        "line_start": 126,
+        "section": "6.2 Organizacion"
+      }
+    },
+    {
+      "code": "document_types",
+      "description": "clasificacion documental",
+      "module": null,
+      "name": "clasificacion documental",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "retention_days",
+          "requires_signature"
+        ],
+        "foreign_keys": "-",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 138,
+        "line_start": 138,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "document_templates",
+      "description": "plantillas de documentos",
+      "module": null,
+      "name": "plantillas de documentos",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "code",
+          "name",
+          "template_path",
+          "version_label",
+          "is_active"
+        ],
+        "foreign_keys": "document_type_id -> document_types.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 139,
+        "line_start": 139,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "document_statuses",
+      "description": "estados del documento",
+      "module": null,
+      "name": "estados del documento",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "code",
+          "name",
+          "sort_order",
+          "is_terminal"
+        ],
+        "foreign_keys": "-",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 140,
+        "line_start": 140,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "documents",
+      "description": "documento principal",
+      "module": null,
+      "name": "documento principal",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "uuid",
+          "folio",
+          "title",
+          "summary",
+          "confidentiality_level",
+          "origin_type",
+          "due_date",
+          "published_at"
+        ],
+        "foreign_keys": "document_type_id -> document_types.id`, `status_id -> document_statuses.id`, `owner_user_id -> users.id`, `department_id -> departments.id`, `current_version_id -> document_versions.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 141,
+        "line_start": 141,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "document_versions",
+      "description": "versionado formal",
+      "module": null,
+      "name": "versionado formal",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "version_number",
+          "content_snapshot",
+          "change_summary",
+          "is_major",
+          "generated_at"
+        ],
+        "foreign_keys": "document_id -> documents.id`, `author_user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 142,
+        "line_start": 142,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "document_attachments",
+      "description": "anexos binarios",
+      "module": null,
+      "name": "anexos binarios",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "file_name",
+          "mime_type",
+          "storage_path",
+          "file_size",
+          "checksum_sha256"
+        ],
+        "foreign_keys": "document_id -> documents.id`, `uploaded_by -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 143,
+        "line_start": 143,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "document_comments",
+      "description": "comentarios colaborativos",
+      "module": null,
+      "name": "comentarios colaborativos",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "comment_type",
+          "body",
+          "is_resolved",
+          "resolved_at",
+          "resolved_by"
+        ],
+        "foreign_keys": "document_id -> documents.id`, `author_user_id -> users.id`, `version_id -> document_versions.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 144,
+        "line_start": 144,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "document_review_requests",
+      "description": "solicitudes de revision",
+      "module": null,
+      "name": "solicitudes de revision",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "review_round",
+          "instructions",
+          "status",
+          "sent_at",
+          "due_at"
+        ],
+        "foreign_keys": "document_id -> documents.id`, `requested_by -> users.id`, `reviewer_user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 145,
+        "line_start": 145,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "document_review_responses",
+      "description": "respuesta del revisor",
+      "module": null,
+      "name": "respuesta del revisor",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "decision",
+          "observations",
+          "responded_at",
+          "requires_changes"
+        ],
+        "foreign_keys": "review_request_id -> document_review_requests.id`, `reviewer_user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 146,
+        "line_start": 146,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "document_approvals",
+      "description": "cadena de visto bueno",
+      "module": null,
+      "name": "cadena de visto bueno",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "sequence_order",
+          "status",
+          "requested_at",
+          "decided_at",
+          "decision_note"
+        ],
+        "foreign_keys": "document_id -> documents.id`, `approver_user_id -> users.id`, `requested_by -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 147,
+        "line_start": 147,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "document_signatures",
+      "description": "firma simulada o integrable",
+      "module": null,
+      "name": "firma simulada o integrable",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "signature_mode",
+          "signed_at",
+          "signature_hash",
+          "signature_status"
+        ],
+        "foreign_keys": "document_id -> documents.id`, `signer_user_id -> users.id`, `signature_profile_id -> signature_profiles.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 148,
+        "line_start": 148,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "signature_profiles",
+      "description": "perfil de firma",
+      "module": null,
+      "name": "perfil de firma",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "display_name",
+          "position_label",
+          "provider",
+          "certificate_alias",
+          "is_default"
+        ],
+        "foreign_keys": "user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 149,
+        "line_start": 149,
+        "section": "6.3 Gestion documental"
+      }
+    },
+    {
+      "code": "expedients",
+      "description": "contenedor de caso o tramite interno",
+      "module": null,
+      "name": "contenedor de caso o tramite interno",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "uuid",
+          "code",
+          "subject",
+          "description",
+          "status",
+          "opened_at",
+          "closed_at"
+        ],
+        "foreign_keys": "department_id -> departments.id`, `owner_user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 166,
+        "line_start": 166,
+        "section": "6.4 Expedientes"
+      }
+    },
+    {
+      "code": "expedient_documents",
+      "description": "relacion expediente-documento",
+      "module": null,
+      "name": "relacion expediente-documento",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "relation_type",
+          "linked_at",
+          "is_primary"
+        ],
+        "foreign_keys": "expedient_id -> expedients.id`, `document_id -> documents.id`, `linked_by -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 167,
+        "line_start": 167,
+        "section": "6.4 Expedientes"
+      }
+    },
+    {
+      "code": "expedient_events",
+      "description": "timeline de trazabilidad",
+      "module": null,
+      "name": "timeline de trazabilidad",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "event_type",
+          "event_label",
+          "payload_json",
+          "occurred_at"
+        ],
+        "foreign_keys": "expedient_id -> expedients.id`, `actor_user_id -> users.id`, `document_id -> documents.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 168,
+        "line_start": 168,
+        "section": "6.4 Expedientes"
+      }
+    },
+    {
+      "code": "correspondence",
+      "description": "ingreso o salida de correspondencia",
+      "module": null,
+      "name": "ingreso o salida de correspondencia",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "tracking_code",
+          "direction",
+          "subject",
+          "received_at",
+          "sent_at",
+          "priority",
+          "status"
+        ],
+        "foreign_keys": "origin_entity_id -> external_entities.id`, `document_id -> documents.id`, `created_by -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 181,
+        "line_start": 181,
+        "section": "6.5 Correspondencia"
+      }
+    },
+    {
+      "code": "correspondence_recipients",
+      "description": "destinatarios asociados",
+      "module": null,
+      "name": "destinatarios asociados",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "recipient_type",
+          "delivery_channel",
+          "delivery_status"
+        ],
+        "foreign_keys": "correspondence_id -> correspondence.id`, `external_entity_id -> external_entities.id`, `department_id -> departments.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 182,
+        "line_start": 182,
+        "section": "6.5 Correspondencia"
+      }
+    },
+    {
+      "code": "correspondence_routes",
+      "description": "derivaciones internas",
+      "module": null,
+      "name": "derivaciones internas",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "route_status",
+          "routed_at",
+          "accepted_at",
+          "closed_at",
+          "instructions"
+        ],
+        "foreign_keys": "correspondence_id -> correspondence.id`, `from_department_id -> departments.id`, `to_department_id -> departments.id`, `assigned_user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 183,
+        "line_start": 183,
+        "section": "6.5 Correspondencia"
+      }
+    },
+    {
+      "code": "citizen_accounts",
+      "description": "acceso del ciudadano",
+      "module": null,
+      "name": "acceso del ciudadano",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "uuid",
+          "email",
+          "password_hash",
+          "status",
+          "last_login_at",
+          "email_verified_at"
+        ],
+        "foreign_keys": "-",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 195,
+        "line_start": 195,
+        "section": "6.6 Portal ciudadano"
+      }
+    },
+    {
+      "code": "citizen_profiles",
+      "description": "datos personales del ciudadano",
+      "module": null,
+      "name": "datos personales del ciudadano",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "national_id",
+          "full_name",
+          "birth_date",
+          "phone",
+          "address",
+          "commune"
+        ],
+        "foreign_keys": "citizen_account_id -> citizen_accounts.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 196,
+        "line_start": 196,
+        "section": "6.6 Portal ciudadano"
+      }
+    },
+    {
+      "code": "procedure_types",
+      "description": "catalogo base de tramites",
+      "module": null,
+      "name": "catalogo base de tramites",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "requires_login",
+          "estimated_days"
+        ],
+        "foreign_keys": "owner_department_id -> departments.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 197,
+        "line_start": 197,
+        "section": "6.6 Portal ciudadano"
+      }
+    },
+    {
+      "code": "published_procedures",
+      "description": "version publicada del tramite",
+      "module": null,
+      "name": "version publicada del tramite",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "slug",
+          "title",
+          "instructions",
+          "requirements_html",
+          "is_active",
+          "published_at"
+        ],
+        "foreign_keys": "procedure_type_id -> procedure_types.id`, `published_by -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 198,
+        "line_start": 198,
+        "section": "6.6 Portal ciudadano"
+      }
+    },
+    {
+      "code": "citizen_requests",
+      "description": "solicitud ciudadana",
+      "module": null,
+      "name": "solicitud ciudadana",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "tracking_code",
+          "status",
+          "submitted_at",
+          "resolved_at",
+          "resolution_summary"
+        ],
+        "foreign_keys": "citizen_account_id -> citizen_accounts.id`, `published_procedure_id -> published_procedures.id`, `assigned_department_id -> departments.id`, `expedient_id -> expedients.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 199,
+        "line_start": 199,
+        "section": "6.6 Portal ciudadano"
+      }
+    },
+    {
+      "code": "citizen_request_attachments",
+      "description": "anexos de solicitud",
+      "module": null,
+      "name": "anexos de solicitud",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "file_name",
+          "mime_type",
+          "storage_path",
+          "file_size",
+          "checksum_sha256"
+        ],
+        "foreign_keys": "citizen_request_id -> citizen_requests.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 200,
+        "line_start": 200,
+        "section": "6.6 Portal ciudadano"
+      }
+    },
+    {
+      "code": "oirs_cases",
+      "description": "caso OIRS",
+      "module": null,
+      "name": "caso OIRS",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "tracking_code",
+          "category",
+          "channel",
+          "subject",
+          "status",
+          "submitted_at",
+          "closed_at"
+        ],
+        "foreign_keys": "citizen_account_id -> citizen_accounts.id`, `assigned_department_id -> departments.id`, `assigned_user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 215,
+        "line_start": 215,
+        "section": "6.7 OIRS"
+      }
+    },
+    {
+      "code": "oirs_messages",
+      "description": "intercambio de mensajes OIRS",
+      "module": null,
+      "name": "intercambio de mensajes OIRS",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "message_direction",
+          "body",
+          "attachment_path",
+          "sent_at",
+          "read_at"
+        ],
+        "foreign_keys": "oirs_case_id -> oirs_cases.id`, `author_user_id -> users.id`, `author_citizen_id -> citizen_accounts.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 216,
+        "line_start": 216,
+        "section": "6.7 OIRS"
+      }
+    },
+    {
+      "code": "news_posts",
+      "description": "noticias municipales",
+      "module": null,
+      "name": "noticias municipales",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "slug",
+          "title",
+          "summary",
+          "content_html",
+          "published_at",
+          "status"
+        ],
+        "foreign_keys": "author_user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 228,
+        "line_start": 228,
+        "section": "6.8 Publicacion y agenda"
+      }
+    },
+    {
+      "code": "public_notices",
+      "description": "avisos visibles al ciudadano",
+      "module": null,
+      "name": "avisos visibles al ciudadano",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "title",
+          "body_html",
+          "start_at",
+          "end_at",
+          "notice_type",
+          "status"
+        ],
+        "foreign_keys": "author_user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 229,
+        "line_start": 229,
+        "section": "6.8 Publicacion y agenda"
+      }
+    },
+    {
+      "code": "calendar_events",
+      "description": "hitos de agenda",
+      "module": null,
+      "name": "hitos de agenda",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "title",
+          "description",
+          "start_at",
+          "end_at",
+          "audience",
+          "location",
+          "status"
+        ],
+        "foreign_keys": "department_id -> departments.id`, `owner_user_id -> users.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 230,
+        "line_start": 230,
+        "section": "6.8 Publicacion y agenda"
+      }
+    },
+    {
+      "code": "notifications",
+      "description": "mensajes al usuario",
+      "module": null,
+      "name": "mensajes al usuario",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "channel",
+          "title",
+          "body",
+          "link_url",
+          "is_read",
+          "sent_at",
+          "read_at"
+        ],
+        "foreign_keys": "user_id -> users.id`, `citizen_account_id -> citizen_accounts.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 241,
+        "line_start": 241,
+        "section": "6.9 Notificaciones y auditoria"
+      }
+    },
+    {
+      "code": "audit_events",
+      "description": "evidencia de acciones del sistema",
+      "module": null,
+      "name": "evidencia de acciones del sistema",
+      "normalization_status": "parsed",
+      "relations": {
+        "fields": [
+          "event_name",
+          "module_code",
+          "entity_type",
+          "entity_id",
+          "ip_address",
+          "payload_json",
+          "occurred_at"
+        ],
+        "foreign_keys": "actor_user_id -> users.id`, `actor_citizen_id -> citizen_accounts.id",
+        "primary_key": "id"
+      },
+      "source": {
+        "document": "Modelo_ER_Detallado_SIGED_Lampa.md",
+        "line_end": 242,
+        "line_start": 242,
+        "section": "6.9 Notificaciones y auditoria"
+      }
+    }
+  ],
+  "project_id": "siged-lampa",
+  "schema_version": "webforge.catalog.entities.v1",
+  "source_documents": [
+    "Especificacion_Funcional_SIGED_Lampa.md",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md",
+    "Inventario_Endpoints_SIGED_Lampa.md",
+    "Modelo_ER_Detallado_SIGED_Lampa.md"
+  ],
+  "source_hashes": {
+    "Especificacion_Funcional_SIGED_Lampa.md": "sha256:14f43714ae53d3dd49ce130569919467c2d68d50c203350cc747f3e036269a24",
+    "Inventario_Endpoints_SIGED_Lampa.md": "sha256:e453f402bb04d4c1e7cb71c16375c0ea562c34f284b1d1fe038838beb535a245",
+    "Mapa_Pantallas_Navegacion_SIGED_Lampa.md": "sha256:dd399054204dfd1a31dde7f9b890ad2868dd53dab631e4da53a9a65dec24268d",
+    "Modelo_ER_Detallado_SIGED_Lampa.md": "sha256:ba8340353bf20345bf5b1f1e40d7db26906ca32898f8100a6cc4974fa88f3282"
+  }
+}

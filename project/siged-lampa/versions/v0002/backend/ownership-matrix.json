@@ -1,0 +1,11 @@
+{
+  "schema_version":"siged.ownership_matrix.v1",
+  "resources":[
+    {"resource":"citizen_requests","identity_source":"JWT/session citizen id","enforcement":"repository.findMine/listMine filters citizen_account_id","positive_test":"phase5b2a-citizen-services.api.test.js","horizontal_negative":"citizen B receives 404","status":"verified"},
+    {"resource":"citizen_request_attachments","identity_source":"JWT/session citizen id","enforcement":"not exposed by an in-scope upload/download route","positive_test":"","horizontal_negative":"","status":"blocked"},
+    {"resource":"oirs_authenticated","identity_source":"JWT/session citizen id","enforcement":"repository.findCitizenCase filters citizen_account_id","positive_test":"phase5b2a-citizen-services.api.test.js","horizontal_negative":"citizen B receives 404","status":"verified"},
+    {"resource":"oirs_anonymous","identity_source":"tracking token hash","enforcement":"anonymous_tracking_hash comparison","positive_test":"phase5b2a-citizen-services.api.test.js","horizontal_negative":"tampered token receives 401","status":"verified"},
+    {"resource":"oirs_messages","identity_source":"citizen id or anonymous tracking hash","enforcement":"service ownership validation","positive_test":"","horizontal_negative":"","status":"partial"},
+    {"resource":"notifications","identity_source":"JWT/session actor id","enforcement":"recipient-specific UPDATE/SELECT","positive_test":"phase5b2a-citizen-services.api.test.js","horizontal_negative":"foreign read receives 404","status":"verified"}
+  ]
+}

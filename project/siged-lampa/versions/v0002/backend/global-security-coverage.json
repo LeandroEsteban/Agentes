@@ -1,0 +1,126 @@
+{
+  "controls": [
+    {
+      "control": "SQL injection",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "mass assignment",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "path traversal",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "MIME",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "file sizes",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "body limit",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "sort allowlist",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "pagination",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "CSV injection",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "JWT manipulation",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "revoked sessions",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "horizontal access",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "safe errors",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "redaction",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "request ID",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "concurrency",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    },
+    {
+      "control": "transactions and rollback",
+      "affected_modules": [],
+      "tests": [],
+      "status": "missing"
+    }
+  ],
+  "critical_missing": [
+    "SQL injection",
+    "mass assignment",
+    "path traversal",
+    "MIME",
+    "file sizes",
+    "body limit",
+    "sort allowlist",
+    "pagination",
+    "CSV injection",
+    "JWT manipulation",
+    "revoked sessions",
+    "horizontal access",
+    "safe errors",
+    "redaction",
+    "request ID",
+    "concurrency",
+    "transactions and rollback"
+  ],
+  "status": "blocked"
+}

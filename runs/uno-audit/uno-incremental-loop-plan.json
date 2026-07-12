@@ -1,0 +1,112 @@
+{
+  "loop_name": "WEBFORGE_UNO_INCREMENTAL_LOOP",
+  "per_increment_steps": [
+    "select requirement slice",
+    "sync version manifest",
+    "implement in DEV sandbox",
+    "run unit/integration/e2e/security gates",
+    "clone/promote to QA sandbox",
+    "run QA evidence and traceability",
+    "update ledger implemented/not_implemented",
+    "repeat until 159/159 implemented or blocked by VAC"
+  ],
+  "increments": [
+    {
+      "increment": "I00",
+      "name": "Foundation factory lane",
+      "objective": "Crear esqueleto de app en project/proyecto-uno versions/v0001 y DEV/QA con PLANTILLA_FRONTEND, CI local, traceability catalog y tests base.",
+      "scope": [
+        "factory",
+        "workspace",
+        "frontend-template",
+        "traceability",
+        "test harness"
+      ],
+      "exit": "Build/lint/tests base pass; requirements ledger imported; 0 product CU claimed implemented."
+    },
+    {
+      "increment": "I01",
+      "name": "Portal publico y ayuda",
+      "objective": "Implementar portal publico, activacion/autenticacion/recuperacion accesibles, ayuda publica e institucional.",
+      "scope": [
+        "CU_001",
+        "CU_020",
+        "CU_021",
+        "FUN_001-FUN_003",
+        "FUN_036-FUN_040"
+      ],
+      "exit": "CUs publicos con pruebas unitarias/e2e y evidencia visual DEV->QA."
+    },
+    {
+      "increment": "I02",
+      "name": "Identidad privada y seguridad",
+      "objective": "Implementar datos personales, 2FA, configuracion, historial, informacion personal y decision de multisesion.",
+      "scope": [
+        "CU_002",
+        "CU_003",
+        "CU_004",
+        "CU_017",
+        "FUN_004-FUN_009",
+        "FUN_031-FUN_033",
+        "VAC_002"
+      ],
+      "exit": "Politica multisesion aprobada; flujos seguridad con tests negativos."
+    },
+    {
+      "increment": "I03",
+      "name": "DDU y notificaciones",
+      "objective": "Implementar derivacion DDU, cancelaciones, retornos, listado y detalle de notificaciones/CasillaUnica.",
+      "scope": [
+        "CU_005-CU_012",
+        "FUN_010-FUN_024"
+      ],
+      "exit": "Todos los flujos DDU con mocks de plataforma externa y tests contrato."
+    },
+    {
+      "increment": "I04",
+      "name": "Autorizaciones datos sensibles",
+      "objective": "Implementar historial, aprobacion/rechazo, revocacion y trazabilidad de datos sensibles.",
+      "scope": [
+        "CU_013-CU_016",
+        "FUN_025-FUN_030"
+      ],
+      "exit": "Estados aprobada/rechazada/pendiente/revocada probados con reglas RN asociadas."
+    },
+    {
+      "increment": "I05",
+      "name": "Expedientes, poderes y representaciones",
+      "objective": "Implementar secciones privadas para expedientes electronicos, poderes y representaciones con estados vacios y alcance parametrizable.",
+      "scope": [
+        "CU_018",
+        "CU_019",
+        "FUN_034-FUN_035",
+        "VAC_005",
+        "VAC_006"
+      ],
+      "exit": "Secciones navegables con pruebas y decisiones pendientes cerradas o marcadas not_answerable."
+    },
+    {
+      "increment": "I06",
+      "name": "Prototipos, prioridades y accesibilidad",
+      "objective": "Materializar prioridades 1 y 2, pruebas de componentes/interfaz, accesibilidad y plan corto/mediano/largo plazo.",
+      "scope": [
+        "FT_023-FT_026",
+        "CH_019",
+        "OT_001-OT_016",
+        "IMG_001-IMG_014"
+      ],
+      "exit": "Prioridades 1 y 2 implementadas, reportes visuales y accesibilidad sin bloqueantes."
+    },
+    {
+      "increment": "I07",
+      "name": "Hardening y cierre contractual",
+      "objective": "Completar RN/CH/EX, seguridad, performance, trazabilidad 100%, regresion completa DEV/QA.",
+      "scope": [
+        "RN_001-RN_027",
+        "CH_001-CH_019",
+        "EX_001-EX_010"
+      ],
+      "exit": "159/159 requisitos implementables con tests; 0 VAC criticos abiertos; final-report complete."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "proyecto-dos-v0001",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build:traceability": "python3 scripts/build_traceability.py",
+    "verify:static": "python3 scripts/verify_requirements.py",
+    "verify:web": "node scripts/validate_web_flows.mjs",
+    "verify": "npm run build:traceability && npm run verify:static && npm run verify:web && python3 scripts/verify_requirements.py --require-web",
+    "serve": "python3 -m http.server 4174 --directory app"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  }
+}

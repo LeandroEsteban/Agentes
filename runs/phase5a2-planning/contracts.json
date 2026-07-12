@@ -1,0 +1,371 @@
+[
+  {
+    "title": "RefinementInput",
+    "type": "object",
+    "properties": {
+      "source_documents": {
+        "type": "list[str]",
+        "description": "Source documents to refine"
+      },
+      "work_order": {
+        "type": "dict",
+        "description": "Work order details"
+      },
+      "normalization_report": {
+        "type": "dict",
+        "description": "Normalization report data"
+      },
+      "catalogs": {
+        "type": "dict[str, Any]",
+        "description": "Reference catalogs"
+      }
+    },
+    "required": [
+      "source_documents",
+      "work_order",
+      "normalization_report",
+      "catalogs"
+    ]
+  },
+  {
+    "title": "RefinementOutput",
+    "type": "object",
+    "properties": {
+      "approved": {
+        "type": "bool",
+        "description": "Whether refinement was approved"
+      },
+      "findings_resolved": {
+        "type": "list[str]",
+        "description": "List of resolved findings"
+      },
+      "rejected_findings": {
+        "type": "list[str]",
+        "description": "List of rejected findings"
+      }
+    },
+    "required": [
+      "approved",
+      "findings_resolved",
+      "rejected_findings"
+    ]
+  },
+  {
+    "title": "ArchitectureInput",
+    "type": "object",
+    "properties": {
+      "refinement_output": {
+        "type": "dict",
+        "description": "Output from refinement stage"
+      },
+      "catalogs": {
+        "type": "dict[str, Any]",
+        "description": "Architecture catalogs"
+      },
+      "work_order": {
+        "type": "dict",
+        "description": "Work order details"
+      }
+    },
+    "required": [
+      "refinement_output",
+      "catalogs",
+      "work_order"
+    ]
+  },
+  {
+    "title": "ArchitectureOutput",
+    "type": "object",
+    "properties": {
+      "decisions": {
+        "type": "list[dict]",
+        "description": "Architectural decisions made"
+      },
+      "architecture": {
+        "type": "dict",
+        "description": "Final architecture definition"
+      },
+      "tasks": {
+        "type": "list[dict]",
+        "description": "Generated tasks"
+      },
+      "dag": {
+        "type": "dict",
+        "description": "DAG representation of pipeline"
+      },
+      "agents": {
+        "type": "list[dict]",
+        "description": "Agent definitions"
+      },
+      "contracts": {
+        "type": "dict",
+        "description": "Contract definitions"
+      },
+      "handoffs": {
+        "type": "list[dict]",
+        "description": "Handoff definitions"
+      }
+    },
+    "required": [
+      "decisions",
+      "architecture",
+      "tasks",
+      "dag",
+      "agents",
+      "contracts",
+      "handoffs"
+    ]
+  },
+  {
+    "title": "DatabaseTaskInput",
+    "type": "object",
+    "properties": {
+      "architecture": {
+        "type": "dict",
+        "description": "Architecture definition"
+      },
+      "er_catalog": {
+        "type": "dict",
+        "description": "Entity-relationship catalog"
+      },
+      "tasks": {
+        "type": "list[dict]",
+        "description": "Database tasks to execute"
+      }
+    },
+    "required": [
+      "architecture",
+      "er_catalog",
+      "tasks"
+    ]
+  },
+  {
+    "title": "DatabaseTaskOutput",
+    "type": "object",
+    "properties": {
+      "migrations": {
+        "type": "list[str]",
+        "description": "Generated migration files"
+      },
+      "seeds": {
+        "type": "list[str]",
+        "description": "Generated seed files"
+      },
+      "db_tests": {
+        "type": "list[str]",
+        "description": "Database test files"
+      }
+    },
+    "required": [
+      "migrations",
+      "seeds",
+      "db_tests"
+    ]
+  },
+  {
+    "title": "BackendTaskInput",
+    "type": "object",
+    "properties": {
+      "architecture": {
+        "type": "dict",
+        "description": "Architecture definition"
+      },
+      "endpoints_catalog": {
+        "type": "dict",
+        "description": "API endpoints catalog"
+      },
+      "business_rules_catalog": {
+        "type": "dict",
+        "description": "Business rules catalog"
+      },
+      "tasks": {
+        "type": "list[dict]",
+        "description": "Backend tasks to execute"
+      }
+    },
+    "required": [
+      "architecture",
+      "endpoints_catalog",
+      "business_rules_catalog",
+      "tasks"
+    ]
+  },
+  {
+    "title": "BackendTaskOutput",
+    "type": "object",
+    "properties": {
+      "openapi_spec": {
+        "type": "str",
+        "description": "OpenAPI specification string"
+      },
+      "controllers": {
+        "type": "list[str]",
+        "description": "Generated controller files"
+      },
+      "api_tests": {
+        "type": "list[str]",
+        "description": "API test files"
+      }
+    },
+    "required": [
+      "openapi_spec",
+      "controllers",
+      "api_tests"
+    ]
+  },
+  {
+    "title": "FrontendTaskInput",
+    "type": "object",
+    "properties": {
+      "architecture": {
+        "type": "dict",
+        "description": "Architecture definition"
+      },
+      "screens_catalog": {
+        "type": "dict",
+        "description": "UI screens catalog"
+      },
+      "endpoints_catalog": {
+        "type": "dict",
+        "description": "API endpoints catalog"
+      },
+      "tasks": {
+        "type": "list[dict]",
+        "description": "Frontend tasks to execute"
+      }
+    },
+    "required": [
+      "architecture",
+      "screens_catalog",
+      "endpoints_catalog",
+      "tasks"
+    ]
+  },
+  {
+    "title": "FrontendTaskOutput",
+    "type": "object",
+    "properties": {
+      "routes": {
+        "type": "list[str]",
+        "description": "Generated route files"
+      },
+      "components": {
+        "type": "list[str]",
+        "description": "Generated component files"
+      },
+      "e2e_tests": {
+        "type": "list[str]",
+        "description": "End-to-end test files"
+      }
+    },
+    "required": [
+      "routes",
+      "components",
+      "e2e_tests"
+    ]
+  },
+  {
+    "title": "QATaskInput",
+    "type": "object",
+    "properties": {
+      "architecture": {
+        "type": "dict",
+        "description": "Architecture definition"
+      },
+      "backend_artifacts": {
+        "type": "list[str]",
+        "description": "Backend artifact paths"
+      },
+      "frontend_artifacts": {
+        "type": "list[str]",
+        "description": "Frontend artifact paths"
+      }
+    },
+    "required": [
+      "architecture",
+      "backend_artifacts",
+      "frontend_artifacts"
+    ]
+  },
+  {
+    "title": "QATaskOutput",
+    "type": "object",
+    "properties": {
+      "qa_report": {
+        "type": "str",
+        "description": "QA report string"
+      },
+      "coverage_report": {
+        "type": "str",
+        "description": "Coverage report string"
+      },
+      "deploy_readiness": {
+        "type": "dict",
+        "description": "Deployment readiness assessment"
+      }
+    },
+    "required": [
+      "qa_report",
+      "coverage_report",
+      "deploy_readiness"
+    ]
+  },
+  {
+    "title": "HandoffEnvelope",
+    "type": "object",
+    "properties": {
+      "schema_version": {
+        "type": "str",
+        "description": "Schema version identifier"
+      },
+      "handoff_id": {
+        "type": "str",
+        "description": "Unique handoff identifier"
+      },
+      "run_id": {
+        "type": "str",
+        "description": "Run identifier"
+      },
+      "cycle_id": {
+        "type": "str",
+        "description": "Cycle identifier"
+      },
+      "task_id": {
+        "type": "str",
+        "description": "Task identifier"
+      },
+      "from_agent": {
+        "type": "str",
+        "description": "Source agent name"
+      },
+      "to_agent": {
+        "type": "str",
+        "description": "Target agent name"
+      },
+      "input_hashes": {
+        "type": "dict",
+        "description": "Hashes of input data"
+      },
+      "artifacts": {
+        "type": "list[str]",
+        "description": "List of artifact paths"
+      },
+      "required_gates": {
+        "type": "list[str]",
+        "description": "Required gate checks"
+      },
+      "status": {
+        "type": "str",
+        "description": "Handoff status"
+      },
+      "rejection_reasons": {
+        "type": "list[str]",
+        "description": "Rejection reasons"
+      },
+      "created_at": {
+        "type": "str",
+        "description": "Creation timestamp"
+      }
+    }
+  }
+]

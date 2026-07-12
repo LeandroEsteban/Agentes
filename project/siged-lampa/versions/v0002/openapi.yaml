@@ -1,0 +1,6955 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "SIGED-Lampa API",
+    "version": "v0002",
+    "description": "Academic API contract generated from mounted Express routers."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "DEV"
+    },
+    {
+      "url": "http://localhost:3001",
+      "description": "QA"
+    }
+  ],
+  "paths": {
+    "/api/v1/admin/external-entities": {
+      "get": {
+        "operationId": "api_sup_004_get",
+        "x-endpoint-code": "API-SUP-004",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-003",
+        "tags": [
+          "external-entities"
+        ],
+        "summary": "GET /api/v1/admin/external-entities",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_sup_005_post",
+        "x-endpoint-code": "API-SUP-005",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-003",
+        "tags": [
+          "external-entities"
+        ],
+        "summary": "POST /api/v1/admin/external-entities",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/external-entities/{id}": {
+      "put": {
+        "operationId": "api_sup_006_put",
+        "x-endpoint-code": "API-SUP-006",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-003",
+        "tags": [
+          "external-entities"
+        ],
+        "summary": "PUT /api/v1/admin/external-entities/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/procedure-types": {
+      "get": {
+        "operationId": "api_sup_001_get",
+        "x-endpoint-code": "API-SUP-001",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-002",
+        "tags": [
+          "procedures"
+        ],
+        "summary": "GET /api/v1/admin/procedure-types",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "tramites.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_sup_002_post",
+        "x-endpoint-code": "API-SUP-002",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-002",
+        "tags": [
+          "procedures"
+        ],
+        "summary": "POST /api/v1/admin/procedure-types",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "tramites.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/procedure-types/{id}": {
+      "put": {
+        "operationId": "api_sup_003_put",
+        "x-endpoint-code": "API-SUP-003",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-002",
+        "tags": [
+          "procedures"
+        ],
+        "summary": "PUT /api/v1/admin/procedure-types/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "tramites.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/public-content/calendar": {
+      "get": {
+        "operationId": "api_sup_010_get",
+        "x-endpoint-code": "API-SUP-010",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "GET /api/v1/admin/public-content/calendar",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_sup_011_post",
+        "x-endpoint-code": "API-SUP-011",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "POST /api/v1/admin/public-content/calendar",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/public-content/calendar/{id}": {
+      "patch": {
+        "operationId": "api_sup_012_patch",
+        "x-endpoint-code": "API-SUP-012",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "PATCH /api/v1/admin/public-content/calendar/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/public-content/news": {
+      "get": {
+        "operationId": "api_sup_013_get",
+        "x-endpoint-code": "API-SUP-013",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "GET /api/v1/admin/public-content/news",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_sup_014_post",
+        "x-endpoint-code": "API-SUP-014",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "POST /api/v1/admin/public-content/news",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/public-content/news/{id}": {
+      "patch": {
+        "operationId": "api_sup_015_patch",
+        "x-endpoint-code": "API-SUP-015",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "PATCH /api/v1/admin/public-content/news/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/public-content/notices": {
+      "get": {
+        "operationId": "api_sup_016_get",
+        "x-endpoint-code": "API-SUP-016",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "GET /api/v1/admin/public-content/notices",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_sup_017_post",
+        "x-endpoint-code": "API-SUP-017",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "POST /api/v1/admin/public-content/notices",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/public-content/notices/{id}": {
+      "patch": {
+        "operationId": "api_sup_018_patch",
+        "x-endpoint-code": "API-SUP-018",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "PATCH /api/v1/admin/public-content/notices/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/approvals/{id}/decision": {
+      "post": {
+        "operationId": "api_sup_019_post",
+        "x-endpoint-code": "API-SUP-019",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-017",
+        "tags": [
+          "document-approvals"
+        ],
+        "summary": "POST /api/v1/approvals/{id}/decision",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.review"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/citizen-login": {
+      "post": {
+        "operationId": "api_002_post",
+        "x-endpoint-code": "API-002",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "auth"
+        ],
+        "summary": "POST /api/v1/auth/citizen-login",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitizenLoginRequest"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/internal-login": {
+      "post": {
+        "operationId": "api_sup_020_post",
+        "x-endpoint-code": "API-SUP-020",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-023",
+        "tags": [
+          "auth"
+        ],
+        "summary": "POST /api/v1/auth/internal-login",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InternalLoginRequest"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/login": {
+      "post": {
+        "operationId": "api_001_post",
+        "x-endpoint-code": "API-001",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "auth"
+        ],
+        "summary": "POST /api/v1/auth/login",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InternalLoginRequest"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/logout": {
+      "post": {
+        "operationId": "api_sup_021_post",
+        "x-endpoint-code": "API-SUP-021",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-023",
+        "tags": [
+          "auth"
+        ],
+        "summary": "POST /api/v1/auth/logout",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/recover": {
+      "post": {
+        "operationId": "api_003_post",
+        "x-endpoint-code": "API-003",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "auth"
+        ],
+        "summary": "POST /api/v1/auth/recover",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/citizen/oirs/{id}": {
+      "get": {
+        "operationId": "api_sup_022_get",
+        "x-endpoint-code": "API-SUP-022",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-019",
+        "tags": [
+          "oirs"
+        ],
+        "summary": "GET /api/v1/citizen/oirs/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "CitizenBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/citizen/oirs/{id}/history": {
+      "get": {
+        "operationId": "api_sup_023_get",
+        "x-endpoint-code": "API-SUP-023",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-019",
+        "tags": [
+          "oirs"
+        ],
+        "summary": "GET /api/v1/citizen/oirs/{id}/history",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "CitizenBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/citizen/oirs/{id}/messages": {
+      "post": {
+        "operationId": "api_sup_024_post",
+        "x-endpoint-code": "API-SUP-024",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-019",
+        "tags": [
+          "oirs"
+        ],
+        "summary": "POST /api/v1/citizen/oirs/{id}/messages",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "CitizenBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/citizen/requests": {
+      "get": {
+        "operationId": "api_035_get",
+        "x-endpoint-code": "API-035",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "citizen-requests"
+        ],
+        "summary": "GET /api/v1/citizen/requests",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "CitizenBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_leg_001_post",
+        "x-endpoint-code": "API-LEG-001",
+        "x-classification": "legacy",
+        "x-contract-source": "ADR-005",
+        "tags": [
+          "citizen-requests"
+        ],
+        "summary": "POST /api/v1/citizen/requests",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "CitizenBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "deprecated": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitizenRequestInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/citizen/requests/{id}": {
+      "get": {
+        "operationId": "api_036_get",
+        "x-endpoint-code": "API-036",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "citizen-requests"
+        ],
+        "summary": "GET /api/v1/citizen/requests/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "CitizenBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/citizen/requests/{id}/cancel": {
+      "post": {
+        "operationId": "api_sup_025_post",
+        "x-endpoint-code": "API-SUP-025",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-019",
+        "tags": [
+          "citizen-requests"
+        ],
+        "summary": "POST /api/v1/citizen/requests/{id}/cancel",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "CitizenBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitizenRequestInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/citizen/requests/{id}/history": {
+      "get": {
+        "operationId": "api_sup_026_get",
+        "x-endpoint-code": "API-SUP-026",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-019",
+        "tags": [
+          "citizen-requests"
+        ],
+        "summary": "GET /api/v1/citizen/requests/{id}/history",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "CitizenBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/correspondence": {
+      "get": {
+        "operationId": "api_029_get",
+        "x-endpoint-code": "API-029",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "correspondence"
+        ],
+        "summary": "GET /api/v1/correspondence",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "correspondence.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_030_post",
+        "x-endpoint-code": "API-030",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "correspondence"
+        ],
+        "summary": "POST /api/v1/correspondence",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "correspondence.create"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/correspondence/{id}": {
+      "get": {
+        "operationId": "api_sup_027_get",
+        "x-endpoint-code": "API-SUP-027",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-018",
+        "tags": [
+          "correspondence"
+        ],
+        "summary": "GET /api/v1/correspondence/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "correspondence.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "patch": {
+        "operationId": "api_sup_028_patch",
+        "x-endpoint-code": "API-SUP-028",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-018",
+        "tags": [
+          "correspondence"
+        ],
+        "summary": "PATCH /api/v1/correspondence/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "correspondence.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/correspondence/{id}/close": {
+      "post": {
+        "operationId": "api_sup_029_post",
+        "x-endpoint-code": "API-SUP-029",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-018",
+        "tags": [
+          "correspondence"
+        ],
+        "summary": "POST /api/v1/correspondence/{id}/close",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "correspondence.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/correspondence/{id}/details": {
+      "get": {
+        "operationId": "api_sup_030_get",
+        "x-endpoint-code": "API-SUP-030",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-018",
+        "tags": [
+          "correspondence"
+        ],
+        "summary": "GET /api/v1/correspondence/{id}/details",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "correspondence.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/correspondence/{id}/history": {
+      "get": {
+        "operationId": "api_sup_031_get",
+        "x-endpoint-code": "API-SUP-031",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-018",
+        "tags": [
+          "correspondence"
+        ],
+        "summary": "GET /api/v1/correspondence/{id}/history",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "correspondence.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/correspondence/{id}/link-response": {
+      "post": {
+        "operationId": "api_032_post",
+        "x-endpoint-code": "API-032",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "correspondence"
+        ],
+        "summary": "POST /api/v1/correspondence/{id}/link-response",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "correspondence.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/correspondence/{id}/route": {
+      "post": {
+        "operationId": "api_031_post",
+        "x-endpoint-code": "API-031",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "correspondence"
+        ],
+        "summary": "POST /api/v1/correspondence/{id}/route",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "correspondence.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/departments": {
+      "get": {
+        "operationId": "api_011_get",
+        "x-endpoint-code": "API-011",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "departments"
+        ],
+        "summary": "GET /api/v1/departments",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "departments.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_012_post",
+        "x-endpoint-code": "API-012",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "departments"
+        ],
+        "summary": "POST /api/v1/departments",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "departments.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/document-types": {
+      "get": {
+        "operationId": "api_013_get",
+        "x-endpoint-code": "API-013",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "procedures"
+        ],
+        "summary": "GET /api/v1/document-types",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_014_post",
+        "x-endpoint-code": "API-014",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "procedures"
+        ],
+        "summary": "POST /api/v1/document-types",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "admin.access"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/documents": {
+      "get": {
+        "operationId": "api_015_get",
+        "x-endpoint-code": "API-015",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "documents"
+        ],
+        "summary": "GET /api/v1/documents",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_016_post",
+        "x-endpoint-code": "API-016",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "documents"
+        ],
+        "summary": "POST /api/v1/documents",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.create"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{id}": {
+      "get": {
+        "operationId": "api_017_get",
+        "x-endpoint-code": "API-017",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "documents"
+        ],
+        "summary": "GET /api/v1/documents/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "put": {
+        "operationId": "api_018_put",
+        "x-endpoint-code": "API-018",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "documents"
+        ],
+        "summary": "PUT /api/v1/documents/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{id}/approvals": {
+      "get": {
+        "operationId": "api_sup_032_get",
+        "x-endpoint-code": "API-SUP-032",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-017",
+        "tags": [
+          "document-approvals"
+        ],
+        "summary": "GET /api/v1/documents/{id}/approvals",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_023_post",
+        "x-endpoint-code": "API-023",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "document-approvals"
+        ],
+        "summary": "POST /api/v1/documents/{id}/approvals",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{id}/attachments": {
+      "get": {
+        "operationId": "api_sup_008_get",
+        "x-endpoint-code": "API-SUP-008",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-006",
+        "tags": [
+          "documents"
+        ],
+        "summary": "GET /api/v1/documents/{id}/attachments",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_019_post",
+        "x-endpoint-code": "API-019",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "documents"
+        ],
+        "summary": "POST /api/v1/documents/{id}/attachments",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DocumentAttachmentInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{id}/attachments/{attachmentId}/download": {
+      "get": {
+        "operationId": "api_sup_033_get",
+        "x-endpoint-code": "API-SUP-033",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-017",
+        "tags": [
+          "documents"
+        ],
+        "summary": "GET /api/v1/documents/{id}/attachments/{attachmentId}/download",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "attachmentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Stored attachment stream",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{id}/comments": {
+      "get": {
+        "operationId": "api_sup_034_get",
+        "x-endpoint-code": "API-SUP-034",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-017",
+        "tags": [
+          "documents"
+        ],
+        "summary": "GET /api/v1/documents/{id}/comments",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_sup_035_post",
+        "x-endpoint-code": "API-SUP-035",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-017",
+        "tags": [
+          "documents"
+        ],
+        "summary": "POST /api/v1/documents/{id}/comments",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.review"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{id}/history": {
+      "get": {
+        "operationId": "api_sup_036_get",
+        "x-endpoint-code": "API-SUP-036",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-017",
+        "tags": [
+          "documents"
+        ],
+        "summary": "GET /api/v1/documents/{id}/history",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{id}/reviews": {
+      "get": {
+        "operationId": "api_sup_037_get",
+        "x-endpoint-code": "API-SUP-037",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-017",
+        "tags": [
+          "document-reviews"
+        ],
+        "summary": "GET /api/v1/documents/{id}/reviews",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{id}/signatures": {
+      "get": {
+        "operationId": "api_sup_038_get",
+        "x-endpoint-code": "API-SUP-038",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-017",
+        "tags": [
+          "document-signatures"
+        ],
+        "summary": "GET /api/v1/documents/{id}/signatures",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "x-integration-mode": "academic_simulation"
+      },
+      "post": {
+        "operationId": "api_024_post",
+        "x-endpoint-code": "API-024",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "document-signatures"
+        ],
+        "summary": "POST /api/v1/documents/{id}/signatures",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.sign"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "x-integration-mode": "academic_simulation",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{id}/submit-review": {
+      "post": {
+        "operationId": "api_021_post",
+        "x-endpoint-code": "API-021",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "document-reviews"
+        ],
+        "summary": "POST /api/v1/documents/{id}/submit-review",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{id}/versions": {
+      "get": {
+        "operationId": "api_sup_007_get",
+        "x-endpoint-code": "API-SUP-007",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-007",
+        "tags": [
+          "documents"
+        ],
+        "summary": "GET /api/v1/documents/{id}/versions",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_020_post",
+        "x-endpoint-code": "API-020",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "documents"
+        ],
+        "summary": "POST /api/v1/documents/{id}/versions",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/expedients": {
+      "get": {
+        "operationId": "api_025_get",
+        "x-endpoint-code": "API-025",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "expedients"
+        ],
+        "summary": "GET /api/v1/expedients",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "expedients.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_026_post",
+        "x-endpoint-code": "API-026",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "expedients"
+        ],
+        "summary": "POST /api/v1/expedients",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "expedients.create"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/expedients/{id}": {
+      "get": {
+        "operationId": "api_027_get",
+        "x-endpoint-code": "API-027",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "expedients"
+        ],
+        "summary": "GET /api/v1/expedients/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "expedients.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "patch": {
+        "operationId": "api_sup_039_patch",
+        "x-endpoint-code": "API-SUP-039",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-018",
+        "tags": [
+          "expedients"
+        ],
+        "summary": "PATCH /api/v1/expedients/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "expedients.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/expedients/{id}/close": {
+      "post": {
+        "operationId": "api_sup_040_post",
+        "x-endpoint-code": "API-SUP-040",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-018",
+        "tags": [
+          "expedients"
+        ],
+        "summary": "POST /api/v1/expedients/{id}/close",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "expedients.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/expedients/{id}/details": {
+      "get": {
+        "operationId": "api_sup_041_get",
+        "x-endpoint-code": "API-SUP-041",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-018",
+        "tags": [
+          "expedients"
+        ],
+        "summary": "GET /api/v1/expedients/{id}/details",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "expedients.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/expedients/{id}/documents": {
+      "post": {
+        "operationId": "api_028_post",
+        "x-endpoint-code": "API-028",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "expedients"
+        ],
+        "summary": "POST /api/v1/expedients/{id}/documents",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "expedients.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/expedients/{id}/events": {
+      "get": {
+        "operationId": "api_sup_042_get",
+        "x-endpoint-code": "API-SUP-042",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-018",
+        "tags": [
+          "expedients"
+        ],
+        "summary": "GET /api/v1/expedients/{id}/events",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "expedients.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_sup_043_post",
+        "x-endpoint-code": "API-SUP-043",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-018",
+        "tags": [
+          "expedients"
+        ],
+        "summary": "POST /api/v1/expedients/{id}/events",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "expedients.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/expedients/{id}/history": {
+      "get": {
+        "operationId": "api_sup_044_get",
+        "x-endpoint-code": "API-SUP-044",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-018",
+        "tags": [
+          "expedients"
+        ],
+        "summary": "GET /api/v1/expedients/{id}/history",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "expedients.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/notifications": {
+      "get": {
+        "operationId": "api_040_get",
+        "x-endpoint-code": "API-040",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "notifications"
+        ],
+        "summary": "GET /api/v1/notifications",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          },
+          {
+            "CitizenBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/notifications/{id}/read": {
+      "patch": {
+        "operationId": "api_sup_045_patch",
+        "x-endpoint-code": "API-SUP-045",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-023",
+        "tags": [
+          "notifications"
+        ],
+        "summary": "PATCH /api/v1/notifications/{id}/read",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          },
+          {
+            "CitizenBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/oirs": {
+      "get": {
+        "operationId": "api_sup_046_get",
+        "x-endpoint-code": "API-SUP-046",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-019",
+        "tags": [
+          "oirs"
+        ],
+        "summary": "GET /api/v1/oirs",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "oirs.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      }
+    },
+    "/api/v1/oirs/{id}/reply": {
+      "post": {
+        "operationId": "api_038_post",
+        "x-endpoint-code": "API-038",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "oirs"
+        ],
+        "summary": "POST /api/v1/oirs/{id}/reply",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "oirs.respond"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/oirs/{id}/route": {
+      "patch": {
+        "operationId": "api_sup_047_patch",
+        "x-endpoint-code": "API-SUP-047",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-019",
+        "tags": [
+          "oirs"
+        ],
+        "summary": "PATCH /api/v1/oirs/{id}/route",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "oirs.respond"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/oirs/{id}/status": {
+      "patch": {
+        "operationId": "api_sup_048_patch",
+        "x-endpoint-code": "API-SUP-048",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-019",
+        "tags": [
+          "oirs"
+        ],
+        "summary": "PATCH /api/v1/oirs/{id}/status",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "oirs.respond"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/profile/me": {
+      "get": {
+        "operationId": "api_004_get",
+        "x-endpoint-code": "API-004",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "auth"
+        ],
+        "summary": "GET /api/v1/profile/me",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "operationId": "api_005_put",
+        "x-endpoint-code": "API-005",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "auth"
+        ],
+        "summary": "PUT /api/v1/profile/me",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/public/calendar": {
+      "get": {
+        "operationId": "api_sup_049_get",
+        "x-endpoint-code": "API-SUP-049",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "GET /api/v1/public/calendar",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/public/news": {
+      "get": {
+        "operationId": "api_sup_050_get",
+        "x-endpoint-code": "API-SUP-050",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "GET /api/v1/public/news",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/public/news/{slug}": {
+      "get": {
+        "operationId": "api_sup_051_get",
+        "x-endpoint-code": "API-SUP-051",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "GET /api/v1/public/news/{slug}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/public/notices": {
+      "get": {
+        "operationId": "api_sup_052_get",
+        "x-endpoint-code": "API-SUP-052",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-021",
+        "tags": [
+          "public-content"
+        ],
+        "summary": "GET /api/v1/public/notices",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/public/oirs": {
+      "post": {
+        "operationId": "api_037_post",
+        "x-endpoint-code": "API-037",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "oirs"
+        ],
+        "summary": "POST /api/v1/public/oirs",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/public/oirs/{id}": {
+      "get": {
+        "operationId": "api_sup_009_get",
+        "x-endpoint-code": "API-SUP-009",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-009",
+        "tags": [
+          "oirs"
+        ],
+        "summary": "GET /api/v1/public/oirs/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "AnonymousOirsTracking": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/public/oirs/{id}/history": {
+      "get": {
+        "operationId": "api_sup_053_get",
+        "x-endpoint-code": "API-SUP-053",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-019",
+        "tags": [
+          "oirs"
+        ],
+        "summary": "GET /api/v1/public/oirs/{id}/history",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "AnonymousOirsTracking": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/public/oirs/{id}/messages": {
+      "post": {
+        "operationId": "api_sup_054_post",
+        "x-endpoint-code": "API-SUP-054",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-019",
+        "tags": [
+          "oirs"
+        ],
+        "summary": "POST /api/v1/public/oirs/{id}/messages",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "AnonymousOirsTracking": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/public/tramites": {
+      "get": {
+        "operationId": "api_033_get",
+        "x-endpoint-code": "API-033",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "procedures"
+        ],
+        "summary": "GET /api/v1/public/tramites",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/public/tramites/{id}": {
+      "get": {
+        "operationId": "api_sup_055_get",
+        "x-endpoint-code": "API-SUP-055",
+        "x-classification": "supplemental",
+        "x-contract-source": "ADR-020",
+        "tags": [
+          "procedures"
+        ],
+        "summary": "GET /api/v1/public/tramites/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/public/tramites/{id}/requests": {
+      "post": {
+        "operationId": "api_034_post",
+        "x-endpoint-code": "API-034",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "citizen-requests"
+        ],
+        "summary": "POST /api/v1/public/tramites/{id}/requests",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [
+          {
+            "CitizenBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitizenRequestInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/reports/dashboard": {
+      "get": {
+        "operationId": "api_039_get",
+        "x-endpoint-code": "API-039",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "reports"
+        ],
+        "summary": "GET /api/v1/reports/dashboard",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "reports.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      }
+    },
+    "/api/v1/reviews/{id}/reply": {
+      "post": {
+        "operationId": "api_022_post",
+        "x-endpoint-code": "API-022",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "document-reviews"
+        ],
+        "summary": "POST /api/v1/reviews/{id}/reply",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "documents.review"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/roles": {
+      "get": {
+        "operationId": "api_009_get",
+        "x-endpoint-code": "API-009",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "users"
+        ],
+        "summary": "GET /api/v1/roles",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "roles.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      }
+    },
+    "/api/v1/roles/{id}/permissions": {
+      "put": {
+        "operationId": "api_010_put",
+        "x-endpoint-code": "API-010",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "users"
+        ],
+        "summary": "PUT /api/v1/roles/{id}/permissions",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "roles.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/users": {
+      "get": {
+        "operationId": "api_006_get",
+        "x-endpoint-code": "API-006",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "users"
+        ],
+        "summary": "GET /api/v1/users",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "users.view"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      },
+      "post": {
+        "operationId": "api_007_post",
+        "x-endpoint-code": "API-007",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "users"
+        ],
+        "summary": "POST /api/v1/users",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "users.create"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/users/{id}": {
+      "put": {
+        "operationId": "api_008_put",
+        "x-endpoint-code": "API-008",
+        "x-classification": "original",
+        "x-contract-source": "project/siged-lampa/spec/endpoints.json",
+        "tags": [
+          "users"
+        ],
+        "summary": "PUT /api/v1/users/{id}",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [
+          "users.edit"
+        ],
+        "security": [
+          {
+            "InternalBearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationInput"
+              },
+              "example": {
+                "title": "Example"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "operationId": "api_tech_001_get",
+        "x-endpoint-code": "API-TECH-001",
+        "x-classification": "technical",
+        "x-contract-source": "backend/src/routes/index.js",
+        "tags": [
+          "health"
+        ],
+        "summary": "GET /health",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health/database": {
+      "get": {
+        "operationId": "api_tech_002_get",
+        "x-endpoint-code": "API-TECH-002",
+        "x-classification": "technical",
+        "x-contract-source": "backend/src/routes/index.js",
+        "tags": [
+          "health"
+        ],
+        "summary": "GET /health/database",
+        "description": "Implementation-derived HTTP contract. External integrations, including signatures, are academic simulations.",
+        "x-required-permissions": [],
+        "security": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "ok": true,
+                      "data": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Database dependency unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "InternalBearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
+      "CitizenBearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
+      "AnonymousOirsTracking": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-oirs-tracking-token"
+      }
+    },
+    "parameters": {
+      "page": {
+        "name": "page",
+        "in": "query",
+        "schema": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "page_size": {
+        "name": "size",
+        "in": "query",
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        }
+      },
+      "search": {
+        "name": "q",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "status": {
+        "name": "status",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "sort": {
+        "name": "sort",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "order": {
+        "name": "order",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "asc",
+            "desc"
+          ]
+        }
+      },
+      "from": {
+        "name": "from",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "to": {
+        "name": "to",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "responses": {
+      "Unauthorized": {
+        "description": "Unauthorized",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UnauthorizedErrorResponse"
+            }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "Forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ForbiddenErrorResponse"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "NotFound",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/NotFoundErrorResponse"
+            }
+          }
+        }
+      },
+      "ValidationError": {
+        "description": "ValidationError",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ValidationErrorResponse"
+            }
+          }
+        }
+      },
+      "Conflict": {
+        "description": "Conflict",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ConflictErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "details": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "ValidationErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          }
+        ]
+      },
+      "ConflictErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          }
+        ]
+      },
+      "UnauthorizedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          }
+        ]
+      },
+      "ForbiddenErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          }
+        ]
+      },
+      "NotFoundErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          }
+        ]
+      },
+      "Pagination": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "OperationInput": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "form_data": {
+            "type": "object",
+            "properties": {}
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Attachment"
+            }
+          },
+          "file_name": {
+            "type": "string"
+          },
+          "mime_type": {
+            "type": "string"
+          },
+          "content_base64": {
+            "type": "string",
+            "format": "byte"
+          }
+        }
+      },
+      "InternalLoginRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "password": {
+            "type": "string",
+            "format": "password",
+            "minLength": 8,
+            "maxLength": 200
+          },
+          "otp_code": {
+            "type": "string",
+            "pattern": "^[0-9]{6}$"
+          }
+        },
+        "required": [
+          "username",
+          "password"
+        ]
+      },
+      "CitizenLoginRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "type": "string",
+            "format": "password",
+            "minLength": 8,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ]
+      },
+      "DocumentAttachmentInput": {
+        "type": "object",
+        "properties": {
+          "file_name": {
+            "type": "string"
+          },
+          "mime_type": {
+            "type": "string",
+            "enum": [
+              "application/pdf",
+              "text/plain",
+              "text/csv",
+              "image/jpeg",
+              "image/png",
+              "application/msword",
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "application/vnd.ms-excel",
+              "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            ]
+          },
+          "content_base64": {
+            "type": "string",
+            "format": "byte",
+            "description": "JSON base64 content, maximum 10 MiB; multipart/form-data is not implemented."
+          },
+          "checksum_sha256": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          },
+          "document_version_id": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "file_name",
+          "mime_type",
+          "content_base64"
+        ]
+      },
+      "CitizenRequestInput": {
+        "type": "object",
+        "properties": {
+          "form_data": {
+            "type": "object",
+            "properties": {}
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "published_procedure_id": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "form_data",
+          "attachments"
+        ]
+      },
+      "Attachment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "file_name": {
+            "type": "string"
+          },
+          "mime_type": {
+            "type": "string"
+          },
+          "size_bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "document_version_id": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        }
+      },
+      "ApiResponse": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              }
+            }
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        }
+      },
+      "AuthSession": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Usuario": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "username": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "full_name": {
+            "type": "string"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Rol"
+            }
+          }
+        }
+      },
+      "Ciudadano": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "full_name": {
+            "type": "string"
+          }
+        }
+      },
+      "Departamento": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Rol": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Permiso": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Documento": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "title": {
+            "type": "string"
+          },
+          "document_number": {
+            "type": "string"
+          },
+          "confidentiality": {
+            "type": "string",
+            "enum": [
+              "public",
+              "internal",
+              "confidential",
+              "secret"
+            ]
+          }
+        }
+      },
+      "Version": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Anexo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Comentario": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Revision": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Aprobacion": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Firma": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Expediente": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Correspondencia": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Procedimiento": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "SolicitudCiudadana": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Oirs": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Notificacion": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Noticia": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Aviso": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Calendario": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Reporte": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "AuditEvent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ExternalEntity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ProcedureType": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}

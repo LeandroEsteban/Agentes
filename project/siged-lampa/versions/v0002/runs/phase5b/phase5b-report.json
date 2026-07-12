@@ -1,0 +1,106 @@
+{
+  "schema_version": "webforge.phase5b_report.v1",
+  "status": "blocked",
+  "phase5_status": "blocked",
+  "tests": {
+    "unit": {
+      "passed": 5,
+      "failed": 0
+    },
+    "api": {
+      "passed": 1,
+      "failed": 0
+    },
+    "integration": {
+      "passed": 1,
+      "failed": 0
+    },
+    "smoke": {
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "endpoints": {
+    "original_total": 40,
+    "smoke_tested": 2,
+    "positive_tested": 2,
+    "negative_tested": 1
+  },
+  "rules": {
+    "total": 60,
+    "implemented": 15,
+    "tested": 15,
+    "deferred": 0,
+    "pending": 45
+  },
+  "validations": {
+    "total": 100,
+    "implemented": 32,
+    "tested": 32,
+    "deferred": 0,
+    "pending": 68
+  },
+  "coverage": {
+    "lines": 51.8,
+    "functions": 15.49,
+    "branches": 82.66,
+    "statements": 51.8,
+    "source": "c8",
+    "gap": "Coverage is real but below the final academic 100% gate."
+  },
+  "gates": [
+    {
+      "gate": "GATE-API-TEST-001",
+      "status": "pass",
+      "evidence": "Runner has real unit tests and teardown."
+    },
+    {
+      "gate": "GATE-API-TEST-002",
+      "status": "blocked",
+      "evidence": "Only two original and two technical routes have smoke proof."
+    },
+    {
+      "gate": "GATE-API-TEST-003",
+      "status": "blocked",
+      "evidence": "RBAC and citizen ownership matrices are incomplete."
+    },
+    {
+      "gate": "GATE-API-TEST-004",
+      "status": "blocked",
+      "evidence": "Backend rule evidence is incomplete."
+    },
+    {
+      "gate": "GATE-API-TEST-005",
+      "status": "blocked",
+      "evidence": "Backend validation evidence is incomplete."
+    },
+    {
+      "gate": "GATE-API-TEST-006",
+      "status": "pass",
+      "evidence": "QA PostgreSQL authentication/session integration passed."
+    },
+    {
+      "gate": "GATE-API-TEST-007",
+      "status": "blocked",
+      "evidence": "Security suite is only partial."
+    },
+    {
+      "gate": "GATE-API-TEST-008",
+      "status": "pass",
+      "evidence": "c8 generated numeric JSON, LCOV and HTML coverage."
+    },
+    {
+      "gate": "GATE-API-TEST-009",
+      "status": "blocked",
+      "evidence": "A recursive baseline snapshot was produced, but no prior hash manifest exists for a preservation comparison."
+    }
+  ],
+  "baseline_preserved": false,
+  "pending_for_phase5c": [
+    "Complete 40/40 endpoint smoke and protected-negative tests.",
+    "Complete RBAC and citizen ownership API matrix.",
+    "Map and test remaining backend rules and validations.",
+    "Add LCOV/HTML coverage conversion and numeric coverage.",
+    "Re-run baseline against a prior immutable hash manifest before final acceptance."
+  ]
+}

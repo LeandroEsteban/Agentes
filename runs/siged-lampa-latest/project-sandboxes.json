@@ -1,0 +1,37 @@
+{
+  "clone_source_hash": "sha256:2467bd3a45c15d1ae76d16f0a4f33199b9ca592541c316038d0afa8cc9f17435",
+  "current_version": "v0001",
+  "project_id": "siged-lampa",
+  "sandboxes": [
+    {
+      "autonomous": "true",
+      "clone_source": "project/siged-lampa/versions/v0001",
+      "frontend_template": "PLANTILLA_FRONTEND",
+      "frontend_template_hash": "sha256:d3ada78b3c20c5961f1ab992a78059450520858f2ad30c01bdcb9dd08857126d",
+      "frontend_template_required": "true",
+      "frontend_template_source": "PLANTILLA_FRONTEND",
+      "learning_path": "project/siged-lampa/sandboxes/DEV/learning",
+      "memory_path": "project/siged-lampa/sandboxes/DEV/memory",
+      "name": "DEV",
+      "path": "project/siged-lampa/sandboxes/DEV",
+      "sandbox_id": "siged-lampa-dev-v0001",
+      "shared_with_factory": "false",
+      "version": "v0001"
+    },
+    {
+      "autonomous": "true",
+      "clone_source": "project/siged-lampa/versions/v0001",
+      "frontend_template": "PLANTILLA_FRONTEND",
+      "frontend_template_hash": "sha256:d3ada78b3c20c5961f1ab992a78059450520858f2ad30c01bdcb9dd08857126d",
+      "frontend_template_required": "true",
+      "frontend_template_source": "PLANTILLA_FRONTEND",
+      "learning_path": "project/siged-lampa/sandboxes/QA/learning",
+      "memory_path": "project/siged-lampa/sandboxes/QA/memory",
+      "name": "QA",
+      "path": "project/siged-lampa/sandboxes/QA",
+      "sandbox_id": "siged-lampa-qa-v0001",
+      "shared_with_factory": "false",
+      "version": "v0001"
+    }
+  ]
+}

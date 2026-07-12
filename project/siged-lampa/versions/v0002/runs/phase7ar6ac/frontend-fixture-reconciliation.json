@@ -1,0 +1,1 @@
+{"status":"pass","factories":["documents.fixture.ts","reviews.fixture.ts","approvals.fixture.ts","signatures.fixture.ts"],"typed_overrides":true,"attachment_transport":"JSON base64","attachment_limit_bytes":10485760,"approval_identifier":"approvalId","signature_integration_mode":"academic_simulation"}

@@ -5,31 +5,41 @@ on:
     branches:
       - main
   workflow_dispatch:
-    inputs:
-      ref:
-        description: 'Branch, tag, or commit SHA to deploy'
-        required: false
-        default: 'main'
 
 concurrency:
   group: siged-lampa-production
   cancel-in-progress: false
 
-env:
-  EC2_DIR: /opt/siged-lampa
-  RELEASE_ID: ${{ format('{0}-{1}', github.run_number, github.sha) }}
-
 permissions:
   contents: read
 
+env:
+  PROJECT_DIR: project/siged-lampa/versions/v0002
+  EC2_DIR: /opt/siged-lampa
+  RELEASE_ID: ${{ github.run_number }}-${{ github.sha }}
+  ARTIFACT_NAME: siged-lampa-release-${{ github.run_number }}
+  ARCHIVE_NAME: siged-lampa-release-${{ github.run_number }}.tar.gz
+
 jobs:
   validate:
+    name: Validate application
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            project/siged-lampa/versions/v0002/frontend/package-lock.json
+            project/siged-lampa/versions/v0002/backend/package-lock.json
 
       - name: Validate frontend
-        working-directory: frontend
+        working-directory: project/siged-lampa/versions/v0002/frontend
         run: |
           npm ci
           npm run lint
@@ -37,146 +47,360 @@ jobs:
           npm run build
 
       - name: Validate backend
+        working-directory: project/siged-lampa/versions/v0002/backend
         run: |
           npm ci
           npm run check
           npm test
 
+      - name: Validate deployment files
+        working-directory: project/siged-lampa/versions/v0002/infra/deployment
+        run: |
+          test -f docker-compose.production.yml
+          test -f scripts/validate-environment.sh
+          test -f scripts/deploy-release.sh
+          test -f scripts/run-migrations.sh
+          test -f scripts/health-check.sh
+          test -f scripts/smoke-test.sh
+          test -f scripts/rollback.sh
+          test -f scripts/cleanup-releases.sh
+
+          bash -n scripts/validate-environment.sh
+          bash -n scripts/deploy-release.sh
+          bash -n scripts/run-migrations.sh
+          bash -n scripts/health-check.sh
+          bash -n scripts/smoke-test.sh
+          bash -n scripts/rollback.sh
+          bash -n scripts/cleanup-releases.sh
+
   package:
+    name: Package release
     runs-on: ubuntu-latest
     needs: validate
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Create release tarball
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create V2 release tarball
         run: |
-          RELEASE_ID="${{ github.run_number }}-$(echo ${{ github.sha }} | cut -c1-7)"
-          echo "RELEASE_ID=$RELEASE_ID" >> $GITHUB_ENV
-          tar czf /tmp/siged-lampa-${RELEASE_ID}.tar.gz \
+          set -Eeuo pipefail
+
+          test -d "${PROJECT_DIR}/backend"
+          test -d "${PROJECT_DIR}/frontend"
+          test -d "${PROJECT_DIR}/infra"
+
+          tar \
             --exclude='.git' \
+            --exclude='.github' \
             --exclude='node_modules' \
             --exclude='.env' \
-            --exclude='.env.*' \
+            --exclude='.env.local' \
+            --exclude='.env.production' \
+            --exclude='.env.qa.local' \
             --exclude='coverage' \
-            --exclude='tests' \
-            --exclude='backend/tests' \
-            --exclude='frontend/tests' \
             --exclude='playwright-report' \
             --exclude='test-results' \
             --exclude='runs' \
             --exclude='*.log' \
+            -czf "/tmp/${ARCHIVE_NAME}" \
+            -C "${PROJECT_DIR}" \
             .
+
+          test -s "/tmp/${ARCHIVE_NAME}"
+
+          echo "Release archive created:"
+          ls -lh "/tmp/${ARCHIVE_NAME}"
+
+      - name: Verify release structure
+        run: |
+          set -Eeuo pipefail
+
+          tar -tzf "/tmp/${ARCHIVE_NAME}" > /tmp/release-files.txt
+
+          grep -q '^\./backend/' /tmp/release-files.txt
+          grep -q '^\./frontend/' /tmp/release-files.txt
+          grep -q '^\./infra/deployment/' /tmp/release-files.txt
+
+          if grep -Eq '(^|/)\.env\.production$|\.pem$|\.key$' /tmp/release-files.txt; then
+            echo "FATAL: Release contains a secret or private-key file"
+            exit 1
+          fi
 
       - name: Upload release artifact
         uses: actions/upload-artifact@v4
         with:
-          name: siged-lampa-release-${{ github.run_number }}
-          path: /tmp/siged-lampa-${{ env.RELEASE_ID }}.tar.gz
+          name: ${{ env.ARTIFACT_NAME }}
+          path: /tmp/${{ env.ARCHIVE_NAME }}
           retention-days: 7
+          if-no-files-found: error
 
   deploy:
+    name: Deploy release to EC2
     runs-on: ubuntu-latest
     needs: package
     environment: production
     timeout-minutes: 30
+
     steps:
       - name: Download release artifact
         uses: actions/download-artifact@v4
         with:
-          name: siged-lampa-release-${{ github.run_number }}
-          path: /tmp/
+          name: ${{ env.ARTIFACT_NAME }}
+          path: /tmp
+
+      - name: Verify downloaded artifact
+        run: |
+          set -Eeuo pipefail
+          test -s "/tmp/${ARCHIVE_NAME}"
+          ls -lh "/tmp/${ARCHIVE_NAME}"
 
       - name: Setup SSH
         run: |
+          set -Eeuo pipefail
+
           mkdir -p ~/.ssh
-          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/ec2_key
+
+          printf '%s' "${{ secrets.EC2_SSH_KEY }}" \
+            | tr -d '\r' \
+            > ~/.ssh/ec2_key
+
           chmod 600 ~/.ssh/ec2_key
-          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
 
-      - name: Verify shared .env.production exists on EC2
-        run: |
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "if [ ! -f $EC2_DIR/shared/.env.production ]; then
-               echo 'FATAL: Missing $EC2_DIR/shared/.env.production — create it before deploying'
-               exit 1
-             fi"
+          ssh-keyscan -T 15 -H "${{ secrets.EC2_HOST }}" \
+            >> ~/.ssh/known_hosts 2>/dev/null
 
-      - name: Create release directory on EC2
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Verify EC2 environment
         run: |
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "sudo mkdir -p $EC2_DIR/releases/${{ env.RELEASE_ID }}"
+          set -Eeuo pipefail
+
+          ssh -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "
+              set -Eeuo pipefail
+
+              test -f '${EC2_DIR}/shared/.env.production' || {
+                echo 'FATAL: Missing ${EC2_DIR}/shared/.env.production'
+                exit 1
+              }
+
+              docker --version
+              docker compose version
+              docker ps >/dev/null
+
+              mkdir -p \
+                '${EC2_DIR}/releases' \
+                '${EC2_DIR}/backups' \
+                '${EC2_DIR}/logs'
+
+              test -w '${EC2_DIR}/releases' || {
+                echo 'FATAL: EC2 user cannot write to ${EC2_DIR}/releases'
+                exit 1
+              }
+            "
+
+      - name: Record current release and prepare directory
+        run: |
+          set -Eeuo pipefail
+
+          ssh -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "
+              set -Eeuo pipefail
+
+              CURRENT_RELEASE=\$(readlink -f '${EC2_DIR}/current' 2>/dev/null || true)
+
+              if [ -n \"\$CURRENT_RELEASE\" ]; then
+                basename \"\$CURRENT_RELEASE\" \
+                  > '${EC2_DIR}/previous_release.txt'
+              else
+                rm -f '${EC2_DIR}/previous_release.txt'
+              fi
+
+              rm -rf '${EC2_DIR}/releases/${RELEASE_ID}'
+              mkdir -p '${EC2_DIR}/releases/${RELEASE_ID}'
+            "
 
       - name: Transfer release to EC2
         run: |
-          scp -i ~/.ssh/ec2_key /tmp/siged-lampa-*.tar.gz \
-            ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "sudo tar xzf /tmp/siged-lampa-*.tar.gz \
-               -C $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
-             sudo rm /tmp/siged-lampa-*.tar.gz && \
-             sudo chown -R root:root $EC2_DIR/releases/${{ env.RELEASE_ID }}"
+          set -Eeuo pipefail
 
-      - name: Copy shared env into release
+          scp -i ~/.ssh/ec2_key \
+            "/tmp/${ARCHIVE_NAME}" \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/${ARCHIVE_NAME}"
+
+          ssh -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "
+              set -Eeuo pipefail
+
+              tar -xzf '/tmp/${ARCHIVE_NAME}' \
+                -C '${EC2_DIR}/releases/${RELEASE_ID}'
+
+              rm -f '/tmp/${ARCHIVE_NAME}'
+
+              test -d '${EC2_DIR}/releases/${RELEASE_ID}/backend'
+              test -d '${EC2_DIR}/releases/${RELEASE_ID}/frontend'
+              test -d '${EC2_DIR}/releases/${RELEASE_ID}/infra/deployment'
+            "
+
+      - name: Link shared production environment
         run: |
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "sudo cp $EC2_DIR/shared/.env.production \
-                    $EC2_DIR/releases/${{ env.RELEASE_ID }}/infra/deployment/.env.production"
+          set -Eeuo pipefail
+
+          ssh -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "
+              set -Eeuo pipefail
+
+              ln -sfn \
+                '${EC2_DIR}/shared/.env.production' \
+                '${EC2_DIR}/releases/${RELEASE_ID}/infra/deployment/.env.production'
+
+              test -L \
+                '${EC2_DIR}/releases/${RELEASE_ID}/infra/deployment/.env.production'
+            "
 
       - name: Validate environment
         run: |
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
-             RELEASE_ID=${{ env.RELEASE_ID }} \
-             bash infra/deployment/scripts/validate-environment.sh"
+          set -Eeuo pipefail
 
-      - name: Deploy release (build + start)
+          ssh -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "
+              set -Eeuo pipefail
+
+              cd '${EC2_DIR}/releases/${RELEASE_ID}'
+
+              RELEASE_ID='${RELEASE_ID}' \
+              COMPOSE_PROJECT_NAME='siged-lampa' \
+              bash infra/deployment/scripts/validate-environment.sh
+            "
+
+      - name: Deploy release
         run: |
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
-             RELEASE_ID=${{ env.RELEASE_ID }} \
-             bash infra/deployment/scripts/deploy-release.sh"
+          set -Eeuo pipefail
+
+          ssh -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "
+              set -Eeuo pipefail
+
+              cd '${EC2_DIR}/releases/${RELEASE_ID}'
+
+              RELEASE_ID='${RELEASE_ID}' \
+              COMPOSE_PROJECT_NAME='siged-lampa' \
+              bash infra/deployment/scripts/deploy-release.sh
+            "
 
       - name: Run database migrations
         run: |
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
-             RELEASE_ID=${{ env.RELEASE_ID }} \
-             bash infra/deployment/scripts/run-migrations.sh"
+          set -Eeuo pipefail
+
+          ssh -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "
+              set -Eeuo pipefail
+
+              cd '${EC2_DIR}/releases/${RELEASE_ID}'
+
+              RELEASE_ID='${RELEASE_ID}' \
+              COMPOSE_PROJECT_NAME='siged-lampa' \
+              bash infra/deployment/scripts/run-migrations.sh
+            "
 
       - name: Health check
         run: |
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
-             RELEASE_ID=${{ env.RELEASE_ID }} \
-             bash infra/deployment/scripts/health-check.sh"
+          set -Eeuo pipefail
+
+          ssh -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "
+              set -Eeuo pipefail
+
+              cd '${EC2_DIR}/releases/${RELEASE_ID}'
+
+              RELEASE_ID='${RELEASE_ID}' \
+              COMPOSE_PROJECT_NAME='siged-lampa' \
+              bash infra/deployment/scripts/health-check.sh
+            "
 
       - name: Smoke test
         run: |
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
-             RELEASE_ID=${{ env.RELEASE_ID }} \
-             SMOKE_BASE_URL=http://127.0.0.1 \
-             bash infra/deployment/scripts/smoke-test.sh"
+          set -Eeuo pipefail
 
-      - name: Finalize (symlink + cleanup)
+          ssh -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "
+              set -Eeuo pipefail
+
+              cd '${EC2_DIR}/releases/${RELEASE_ID}'
+
+              RELEASE_ID='${RELEASE_ID}' \
+              COMPOSE_PROJECT_NAME='siged-lampa' \
+              SMOKE_BASE_URL='http://127.0.0.1' \
+              bash infra/deployment/scripts/smoke-test.sh
+            "
+
+      - name: Finalize release
         if: success()
         run: |
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "PREVIOUS=\$(readlink -f $EC2_DIR/current 2>/dev/null || true) && \
-             echo \"\${PREVIOUS##*/}\" | sudo tee $EC2_DIR/previous_release.txt > /dev/null && \
-             sudo ln -sfn $EC2_DIR/releases/${{ env.RELEASE_ID }} $EC2_DIR/current && \
-             RELEASE_ID=${{ env.RELEASE_ID }} CLEANUP_KEEP=3 \
-             bash $EC2_DIR/releases/${{ env.RELEASE_ID }}/infra/deployment/scripts/cleanup-releases.sh"
+          set -Eeuo pipefail
+
+          ssh -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "
+              set -Eeuo pipefail
+
+              ln -sfn \
+                '${EC2_DIR}/releases/${RELEASE_ID}' \
+                '${EC2_DIR}/current'
+
+              RELEASE_ID='${RELEASE_ID}' \
+              CLEANUP_KEEP='3' \
+              bash '${EC2_DIR}/releases/${RELEASE_ID}/infra/deployment/scripts/cleanup-releases.sh'
+
+              echo 'Active release:'
+              readlink -f '${EC2_DIR}/current'
+            "
 
       - name: Rollback on failure
         if: failure()
         run: |
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "cd $EC2_DIR/releases/${{ env.RELEASE_ID }} && \
-             PREVIOUS_ID=\$(cat $EC2_DIR/previous_release.txt 2>/dev/null || true) && \
-             if [ -n \"\$PREVIOUS_ID\" ]; then \
-               RELEASE_ID=${{ env.RELEASE_ID }} \
-               bash infra/deployment/scripts/rollback.sh; \
-             else \
-               echo 'WARN: No previous release recorded. Manual intervention required.'; \
-             fi"
+          ssh -i ~/.ssh/ec2_key \
+            "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
+            "
+              set -u
+
+              RELEASE_DIR='${EC2_DIR}/releases/${RELEASE_ID}'
+              PREVIOUS_ID=\$(cat '${EC2_DIR}/previous_release.txt' 2>/dev/null || true)
+
+              if [ -z \"\$PREVIOUS_ID\" ]; then
+                echo 'WARN: No previous release is available for rollback.'
+                exit 0
+              fi
+
+              if [ ! -d \"\$RELEASE_DIR\" ]; then
+                echo 'WARN: Failed release directory does not exist.'
+                exit 0
+              fi
+
+              if [ ! -f \"\$RELEASE_DIR/infra/deployment/scripts/rollback.sh\" ]; then
+                echo 'WARN: Rollback script is unavailable.'
+                exit 0
+              fi
+
+              cd \"\$RELEASE_DIR\"
+
+              RELEASE_ID='${RELEASE_ID}' \
+              PREVIOUS_ID=\"\$PREVIOUS_ID\" \
+              COMPOSE_PROJECT_NAME='siged-lampa' \
+              bash infra/deployment/scripts/rollback.sh
+            "
+
+      - name: Remove temporary SSH key
+        if: always()
+        run: |
+          rm -f ~/.ssh/ec2_key

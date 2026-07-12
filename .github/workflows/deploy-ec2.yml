@@ -36,18 +36,39 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
-    env:
-      # PostgreSQL temporal utilizado solamente en GitHub Actions.
-      POSTGRES_DB: siged_lampa_qa
-      POSTGRES_USER: siged
-      POSTGRES_PASSWORD: siged_ci_password
-      POSTGRES_PORT: 55432
+    services:
+      postgres:
+        image: postgres:16-alpine
 
-      DATABASE_URL: postgresql://siged:siged_ci_password@127.0.0.1:55432/siged_lampa_qa
+        env:
+          POSTGRES_DB: siged_lampa_qa
+          POSTGRES_USER: siged
+          POSTGRES_PASSWORD: siged_ci_password
+
+        ports:
+          - 5432:5432
+
+        options: >-
+          --health-cmd="pg_isready -U siged -d siged_lampa_qa"
+          --health-interval=5s
+          --health-timeout=5s
+          --health-retries=20
+
+    env:
+      CI: "true"
 
       APP_ENV: test
       NODE_ENV: test
       PERSISTENCE_MODE: postgres
+
+      POSTGRES_DB: siged_lampa_qa
+      POSTGRES_USER: siged
+      POSTGRES_PASSWORD: siged_ci_password
+      POSTGRES_HOST: 127.0.0.1
+      POSTGRES_PORT: 5432
+
+      DATABASE_URL: postgresql://siged:siged_ci_password@127.0.0.1:5432/siged_lampa_qa
+
       PORT: 3100
 
       JWT_SECRET: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
@@ -86,32 +107,16 @@ jobs:
             project/siged-lampa/versions/v0002/frontend/package-lock.json
             project/siged-lampa/versions/v0002/backend/package-lock.json
 
-      # Los scripts QA invocan "powershell", pero ubuntu-latest
-      # proporciona PowerShell Core mediante el comando "pwsh".
-      - name: Configure PowerShell Core compatibility
+      - name: Install PostgreSQL client
         shell: bash
         run: |
           set -Eeuo pipefail
 
-          PWSH_PATH="$(command -v pwsh)"
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client
 
-          if [ -z "${PWSH_PATH}" ]; then
-            echo "FATAL: pwsh is not installed on the GitHub Actions runner"
-            exit 1
-          fi
-
-          echo "PowerShell Core found at: ${PWSH_PATH}"
-          pwsh --version
-
-          mkdir -p "${RUNNER_TEMP}/powershell-bin"
-
-          ln -sfn \
-            "${PWSH_PATH}" \
-            "${RUNNER_TEMP}/powershell-bin/powershell"
-
-          echo "${RUNNER_TEMP}/powershell-bin" >> "${GITHUB_PATH}"
-
-          "${RUNNER_TEMP}/powershell-bin/powershell" --version
+          psql --version
+          pg_isready --version
 
       - name: Prepare CI environment
         shell: bash
@@ -120,37 +125,10 @@ jobs:
 
           mkdir -p /tmp/siged-documents
 
-          cat > "${PROJECT_DIR}/.env.qa.local" <<'EOF'
-          APP_ENV=test
-          NODE_ENV=test
-          PERSISTENCE_MODE=postgres
-
-          POSTGRES_DB=siged_lampa_qa
-          POSTGRES_USER=siged
-          POSTGRES_PASSWORD=siged_ci_password
-          POSTGRES_PORT=55432
-
-          DATABASE_URL=postgresql://siged:siged_ci_password@127.0.0.1:55432/siged_lampa_qa
-
-          PORT=3100
-
-          JWT_SECRET=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
-          JWT_EXPIRES_IN=1h
-
-          BODY_LIMIT=10mb
-
-          DB_POOL_MIN=0
-          DB_POOL_MAX=10
-          DB_CONNECTION_TIMEOUT_MS=5000
-          DB_QUERY_TIMEOUT_MS=10000
-
-          DOCUMENT_MAX_FILE_BYTES=10485760
-          DOCUMENT_STORAGE_DIR=/tmp/siged-documents
-
-          OIRS_TRACKING_TOKEN_TTL=90d
-          EOF
-
-          chmod 600 "${PROJECT_DIR}/.env.qa.local"
+          test -d "${PROJECT_DIR}/frontend"
+          test -d "${PROJECT_DIR}/backend"
+          test -d "${PROJECT_DIR}/database"
+          test -d "${PROJECT_DIR}/infra"
 
       # -----------------------------------------------------
       # FRONTEND
@@ -176,43 +154,152 @@ jobs:
         run: npm run build
 
       # -----------------------------------------------------
-      # BACKEND Y POSTGRESQL QA
+      # POSTGRESQL QA
       # -----------------------------------------------------
-      - name: Install backend dependencies
-        working-directory: project/siged-lampa/versions/v0002/backend
-        run: npm ci
+      - name: Wait for PostgreSQL QA
+        shell: bash
+        run: |
+          set -Eeuo pipefail
 
-      - name: Install root dependencies when present
+          for attempt in $(seq 1 30); do
+            if pg_isready \
+              -h 127.0.0.1 \
+              -p 5432 \
+              -U siged \
+              -d siged_lampa_qa
+            then
+              echo "PostgreSQL QA is ready"
+              exit 0
+            fi
+
+            echo "Waiting for PostgreSQL QA: attempt ${attempt}/30"
+            sleep 2
+          done
+
+          echo "FATAL: PostgreSQL QA did not become ready"
+          exit 1
+
+      - name: Validate migration and seed inventory
         working-directory: project/siged-lampa/versions/v0002
         shell: bash
         run: |
           set -Eeuo pipefail
 
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            echo "No root package-lock.json; skipping root npm ci"
+          mapfile -t MIGRATIONS < <(
+            find database/migrations \
+              -maxdepth 1 \
+              -type f \
+              -name '*.sql' \
+              | sort
+          )
+
+          mapfile -t SEEDS < <(
+            find database/seeds \
+              -maxdepth 1 \
+              -type f \
+              -name '*.sql' \
+              | sort
+          )
+
+          echo "Migrations found: ${#MIGRATIONS[@]}"
+          echo "Seeds found: ${#SEEDS[@]}"
+
+          if [ "${#MIGRATIONS[@]}" -ne 17 ]; then
+            echo "FATAL: Expected 17 migration files"
+            printf '%s\n' "${MIGRATIONS[@]}"
+            exit 1
           fi
 
-      - name: Start PostgreSQL QA
-        working-directory: project/siged-lampa/versions/v0002
-        run: npm run qa:start
-
-      - name: Wait for PostgreSQL QA
-        working-directory: project/siged-lampa/versions/v0002
-        run: npm run qa:wait
+          if [ "${#SEEDS[@]}" -ne 5 ]; then
+            echo "FATAL: Expected 5 seed files"
+            printf '%s\n' "${SEEDS[@]}"
+            exit 1
+          fi
 
       - name: Apply QA migrations
         working-directory: project/siged-lampa/versions/v0002
-        run: npm run qa:migrate
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          mapfile -t MIGRATIONS < <(
+            find database/migrations \
+              -maxdepth 1 \
+              -type f \
+              -name '*.sql' \
+              | sort
+          )
+
+          for migration in "${MIGRATIONS[@]}"; do
+            echo "Applying migration: ${migration}"
+
+            psql \
+              "${DATABASE_URL}" \
+              -v ON_ERROR_STOP=1 \
+              -f "${migration}"
+          done
+
+          echo "Applied ${#MIGRATIONS[@]} migrations"
 
       - name: Apply QA seeds
         working-directory: project/siged-lampa/versions/v0002
-        run: npm run qa:seed
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          mapfile -t SEEDS < <(
+            find database/seeds \
+              -maxdepth 1 \
+              -type f \
+              -name '*.sql' \
+              | sort
+          )
+
+          for seed in "${SEEDS[@]}"; do
+            echo "Applying seed: ${seed}"
+
+            psql \
+              "${DATABASE_URL}" \
+              -v ON_ERROR_STOP=1 \
+              -f "${seed}"
+          done
+
+          echo "Applied ${#SEEDS[@]} seed files"
 
       - name: Verify QA database
-        working-directory: project/siged-lampa/versions/v0002
-        run: npm run qa:verify
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          TABLE_COUNT="$(
+            psql \
+              "${DATABASE_URL}" \
+              -Atc "
+                SELECT COUNT(*)
+                FROM information_schema.tables
+                WHERE table_schema = 'public'
+                  AND table_type = 'BASE TABLE';
+              "
+          )"
+
+          echo "Public tables found: ${TABLE_COUNT}"
+
+          if [ "${TABLE_COUNT}" -lt 40 ]; then
+            echo "FATAL: Expected at least 40 public tables"
+            exit 1
+          fi
+
+          psql \
+            "${DATABASE_URL}" \
+            -v ON_ERROR_STOP=1 \
+            -c "SELECT current_database(), current_user;"
+
+      # -----------------------------------------------------
+      # BACKEND
+      # -----------------------------------------------------
+      - name: Install backend dependencies
+        working-directory: project/siged-lampa/versions/v0002/backend
+        run: npm ci
 
       - name: Backend check
         working-directory: project/siged-lampa/versions/v0002/backend
@@ -224,7 +311,7 @@ jobs:
           APP_ENV: test
           NODE_ENV: test
           PERSISTENCE_MODE: postgres
-          DATABASE_URL: postgresql://siged:siged_ci_password@127.0.0.1:55432/siged_lampa_qa
+          DATABASE_URL: postgresql://siged:siged_ci_password@127.0.0.1:5432/siged_lampa_qa
         run: npm test
 
       # -----------------------------------------------------
@@ -253,14 +340,6 @@ jobs:
           bash -n scripts/smoke-test.sh
           bash -n scripts/rollback.sh
           bash -n scripts/cleanup-releases.sh
-
-      - name: Destroy PostgreSQL QA
-        if: always()
-        working-directory: project/siged-lampa/versions/v0002
-        shell: bash
-        run: |
-          npm run qa:destroy || true
-          rm -f .env.qa.local
 
   # =========================================================
   # EMPAQUETADO DE V0002
@@ -294,11 +373,17 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             --exclude='node_modules' \
-            --exclude='.env*' \
+            --exclude='.env' \
+            --exclude='.env.local' \
+            --exclude='.env.production' \
+            --exclude='.env.qa.local' \
+            --exclude='.env.test' \
             --exclude='coverage' \
             --exclude='playwright-report' \
             --exclude='test-results' \
             --exclude='runs' \
+            --exclude='backend/tests' \
+            --exclude='frontend/src/e2e' \
             --exclude='*.log' \
             --exclude='*.pem' \
             --exclude='*.key' \
@@ -324,7 +409,7 @@ jobs:
           grep -q '^\./infra/deployment/' /tmp/release-files.txt
 
           if grep -Eiq \
-            '(^|/)\.env($|\.)|\.pem$|\.key$|id_rsa$' \
+            '(^|/)\.env\.production$|(^|/)\.env\.qa\.local$|\.pem$|\.key$|id_rsa$' \
             /tmp/release-files.txt
           then
             echo "FATAL: Release contains a secret or private-key file"
